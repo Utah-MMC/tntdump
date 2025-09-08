@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Phone, MessageSquare, Star, Clock, Mail, MapPin, Share2 } from 'lucide-react'
+import { Phone, MessageSquare, Star, Clock, Mail, MapPin, Share2, Calculator } from 'lucide-react'
 
 const StickySidebar = () => {
   const [hoveredButton, setHoveredButton] = useState<string | null>(null)
@@ -27,6 +27,13 @@ const StickySidebar = () => {
       label: 'Read Reviews',
       action: () => window.location.href = '/reviews',
       color: 'bg-yellow-500 hover:bg-yellow-600'
+    },
+    {
+      id: 'calculator',
+      icon: Calculator,
+      label: 'Size Calculator',
+      action: () => window.location.href = '/calculator',
+      color: 'bg-purple-500 hover:bg-purple-600'
     },
     {
       id: 'callback',

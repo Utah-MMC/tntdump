@@ -1,13 +1,66 @@
-import { Metadata } from 'next'
+'use client'
+
+import { useState } from 'react'
 import HeroSection from '@/components/HeroSection'
 
-export const metadata: Metadata = {
-  title: 'Get Free Dumpster Rental Quote | T&T Dumpsters | (801) 209-9013',
-  description: 'Get a free same-day dumpster rental quote from T&T Dumpsters. Fast, competitive pricing for all dumpster sizes. Call (801) 209-9013 or fill out our quote form.',
-  keywords: 'dumpster rental quote, free dumpster quote, dumpster pricing, dumpster rental estimate, utah dumpster rental',
-}
-
 export default function QuotePage() {
+  const [formData, setFormData] = useState({
+    firstName: '',
+    lastName: '',
+    phone: '',
+    email: '',
+    serviceType: '',
+    dumpsterSize: '',
+    projectDescription: '',
+    preferredDate: ''
+  })
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    })
+  }
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault()
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        console.error('API Error:', result)
+        throw new Error(result.error || 'Failed to submit quote request')
+      }
+      
+      // Reset form
+      setFormData({
+        firstName: '',
+        lastName: '',
+        phone: '',
+        email: '',
+        serviceType: '',
+        dumpsterSize: '',
+        projectDescription: '',
+        preferredDate: ''
+      })
+      
+      alert('Thank you! Your quote request has been submitted successfully. We will contact you soon with your free estimate.')
+    } catch (error) {
+      console.error('Error submitting quote request:', error)
+      alert('There was an error submitting your quote request. Please try again or call us directly at (801) 209-9013.')
+    } finally {
+      setIsSubmitting(false)
+    }
+  }
   return (
     <main className="min-h-screen">
       <HeroSection
@@ -34,12 +87,15 @@ export default function QuotePage() {
               <h2 className="text-3xl font-bold text-gray-900 mb-6">
                 Request Your Free Quote
               </h2>
-              <form className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
                     <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
                     <input 
                       type="text" 
+                      name="firstName"
+                      value={formData.firstName}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -48,6 +104,9 @@ export default function QuotePage() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
                     <input 
                       type="text" 
+                      name="lastName"
+                      value={formData.lastName}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -59,6 +118,9 @@ export default function QuotePage() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                     <input 
                       type="tel" 
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
                       required
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
@@ -67,6 +129,9 @@ export default function QuotePage() {
                     <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                     <input 
                       type="email" 
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>
@@ -75,37 +140,48 @@ export default function QuotePage() {
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
                   <select 
+                    name="serviceType"
+                    value={formData.serviceType}
+                    onChange={handleChange}
                     required
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   >
                     <option value="">Select a service</option>
-                    <option value="residential">Residential Dumpster Rental</option>
-                    <option value="commercial">Commercial Dumpster Rental</option>
-                    <option value="industrial">Industrial Dumpster Rental</option>
-                    <option value="short-term">Short-Term Dumpster Rental</option>
-                    <option value="long-term">Long-Term Dumpster Rental</option>
-                    <option value="vendor">Vendor Dumpster Rental</option>
-                    <option value="concrete">Concrete Dumpsters</option>
-                    <option value="estate-cleanout">Estate Cleanout Services</option>
+                    <option value="Residential Dumpster Rental">Residential Dumpster Rental</option>
+                    <option value="Commercial Dumpster Rental">Commercial Dumpster Rental</option>
+                    <option value="Industrial Dumpster Rental">Industrial Dumpster Rental</option>
+                    <option value="Short-Term Dumpster Rental">Short-Term Dumpster Rental</option>
+                    <option value="Long-Term Dumpster Rental">Long-Term Dumpster Rental</option>
+                    <option value="Vendor Dumpster Rental">Vendor Dumpster Rental</option>
+                    <option value="Concrete Dumpsters">Concrete Dumpsters</option>
+                    <option value="Estate Cleanout Services">Estate Cleanout Services</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Dumpster Size</label>
-                  <select className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                  <select 
+                    name="dumpsterSize"
+                    value={formData.dumpsterSize}
+                    onChange={handleChange}
+                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                  >
                     <option value="">Select size (optional)</option>
-                    <option value="10-yard">10 Yard - Small projects</option>
-                    <option value="15-yard">15 Yard - Renovations</option>
-                    <option value="20-yard">20 Yard - Most popular</option>
-                    <option value="30-yard">30 Yard - Large projects</option>
-                    <option value="40-yard">40 Yard - Commercial</option>
-                    <option value="not-sure">Not sure - Need recommendation</option>
+                    <option value="10 Yard - Small projects">10 Yard - Small projects</option>
+                    <option value="15 Yard - Renovations">15 Yard - Renovations</option>
+                    <option value="20 Yard - Most popular">20 Yard - Most popular</option>
+                    <option value="30 Yard - Large projects">30 Yard - Large projects</option>
+                    <option value="40 Yard - Commercial">40 Yard - Commercial</option>
+                    <option value="Not sure - Need recommendation">Not sure - Need recommendation</option>
                   </select>
                 </div>
 
                 <div>
                   <label className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
                   <textarea 
+                    name="projectDescription"
+                    value={formData.projectDescription}
+                    onChange={handleChange}
                     rows={4}
                     placeholder="Tell us about your project, timeline, and any special requirements..."
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
@@ -116,15 +192,19 @@ export default function QuotePage() {
                   <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Delivery Date</label>
                   <input 
                     type="date" 
+                    name="preferredDate"
+                    value={formData.preferredDate}
+                    onChange={handleChange}
                     className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                   />
                 </div>
 
                 <button 
                   type="submit" 
-                  className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors"
+                  disabled={isSubmitting}
+                  className="w-full bg-blue-600 text-white py-4 px-6 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Get Free Quote
+                  {isSubmitting ? 'Submitting...' : 'Get Free Quote'}
                 </button>
               </form>
             </div>

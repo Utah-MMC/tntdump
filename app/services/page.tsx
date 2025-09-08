@@ -12,7 +12,7 @@ const services = [
   {
     title: 'Residential Dumpster Rental',
     description: 'Perfect for home renovations, cleanouts, and DIY projects. Available in various sizes to fit your specific needs.',
-    image: '/images/residential-dumpster-rental.jpg',
+    image: '/images/pexels-cottonbro-4551310.jpg',
     slug: 'residential',
     features: ['Home renovations', 'Estate cleanouts', 'Yard waste removal', 'Moving cleanouts'],
     price: '$299'
@@ -20,7 +20,7 @@ const services = [
   {
     title: 'Commercial Dumpster Rental',
     description: 'Reliable waste management solutions for businesses, offices, and commercial properties.',
-    image: '/images/commercial-dumpster-rental.jpg',
+    image: '/images/construction-site-3688262_1280.jpg',
     slug: 'commercial',
     features: ['Office cleanouts', 'Retail renovations', 'Business waste', 'Regular service'],
     price: '$399'
@@ -28,7 +28,7 @@ const services = [
   {
     title: 'Industrial Dumpster Rental',
     description: 'Heavy-duty dumpsters for large-scale industrial projects and construction sites.',
-    image: '/images/industrial-dumpster-rental.jpg',
+    image: '/images/demolition-167738_1280.jpg',
     slug: 'industrial',
     features: ['Construction waste', 'Heavy materials', 'Large capacity', 'Extended rentals'],
     price: '$599'
@@ -36,7 +36,7 @@ const services = [
   {
     title: 'Short-Term Dumpster Rental',
     description: 'Flexible rental options for quick projects and temporary waste management needs.',
-    image: '/images/short-term-dumpster-rental.jpg',
+    image: '/images/pexels-olly-3760529.jpg',
     slug: 'short-term',
     features: ['Quick projects', 'Event cleanup', 'Temporary needs', 'Flexible scheduling'],
     price: '$199'
@@ -44,7 +44,7 @@ const services = [
   {
     title: 'Long-Term Dumpster Rental',
     description: 'Extended rental solutions for ongoing projects and continuous waste management.',
-    image: '/images/long-term-dumpster-rental.jpg',
+    image: '/images/pexels-olly-3771111.jpg',
     slug: 'long-term',
     features: ['Ongoing projects', 'Monthly service', 'Cost savings', 'Regular pickup'],
     price: '$299/month'
@@ -52,7 +52,7 @@ const services = [
   {
     title: 'Vendor Dumpster Rental',
     description: 'Specialized dumpster services for contractors, vendors, and service providers.',
-    image: '/images/vendor-dumpster-rental.jpg',
+    image: '/images/pexels-jplenio-2566826.jpg',
     slug: 'vendor',
     features: ['Contractor support', 'Vendor partnerships', 'Project coordination', 'Bulk pricing'],
     price: '$349'
@@ -60,7 +60,7 @@ const services = [
   {
     title: 'Concrete Dumpsters',
     description: 'Heavy-duty dumpsters specifically designed for concrete, asphalt, and construction debris.',
-    image: '/images/concrete-dumpsters.jpg',
+    image: '/images/construction-site-3688252_1280.jpg',
     slug: 'concrete',
     features: ['Concrete disposal', 'Asphalt removal', 'Construction debris', 'Heavy materials'],
     price: '$499'
@@ -68,7 +68,7 @@ const services = [
   {
     title: 'Estate Cleanout Services',
     description: 'Comprehensive estate cleanout services with professional dumpster rental and removal.',
-    image: '/images/estate-cleanout-services.jpg',
+    image: '/images/pexels-cottonbro-4551310.jpg',
     slug: 'estate-cleanout',
     features: ['Full estate cleanout', 'Professional service', 'Sensitive handling', 'Complete removal'],
     price: 'Custom Quote'

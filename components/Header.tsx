@@ -7,26 +7,43 @@ import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isDumpstersOpen, setIsDumpstersOpen] = useState(false)
+  const [isToolsOpen, setIsToolsOpen] = useState(false)
+  const [isAboutOpen, setIsAboutOpen] = useState(false)
   const [isContactOpen, setIsContactOpen] = useState(false)
   
   // Timeout refs for dropdown delays
+  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const dumpstersTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const toolsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
+  const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const contactTimeoutRef = useRef<NodeJS.Timeout | null>(null)
 
   const navigation = [
     { name: 'Home', href: '/', hasDropdown: false },
-    { name: 'Services', href: '/services', hasDropdown: false },
+    { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Cities', href: '/cities', hasDropdown: false },
     { name: 'Dumpsters', href: '/dumpsters', hasDropdown: true },
-    { name: 'Estate Cleanouts', href: '/estate-cleanouts', hasDropdown: false },
-    { name: 'Reviews', href: '/reviews', hasDropdown: false },
-    { name: 'About', href: '/about', hasDropdown: false },
-    { name: 'FAQs', href: '/faqs', hasDropdown: false },
+    { name: 'Tools', href: '#', hasDropdown: true },
+    { name: 'About', href: '/about', hasDropdown: true },
     { name: 'Contact', href: '/contact', hasDropdown: true },
   ]
 
+  const serviceTypes = [
+    { name: 'All Services', href: '/services' },
+    { name: 'Residential Dumpster Rental', href: '/services' },
+    { name: 'Commercial Dumpster Rental', href: '/services' },
+    { name: 'Industrial Dumpster Rental', href: '/services' },
+    { name: 'Short-Term Dumpster Rental', href: '/services' },
+    { name: 'Long-Term Dumpster Rental', href: '/services' },
+    { name: 'Vendor Dumpster Rental', href: '/services' },
+    { name: 'Concrete Dumpsters', href: '/services' },
+    { name: 'Estate Cleanout Services', href: '/estate-cleanouts' },
+  ]
+
   const dumpsterServices = [
+    { name: 'All Dumpster Types', href: '/dumpsters' },
     { name: 'Residential Dumpster Service', href: '/dumpsters/residential' },
     { name: 'Commercial Dumpster Service', href: '/dumpsters/commercial' },
     { name: 'Industrial Dumpster Service', href: '/dumpsters/industrial' },
@@ -36,21 +53,50 @@ const Header = () => {
     { name: 'Concrete Dumpsters', href: '/dumpsters/concrete' },
   ]
 
-  const contactServices = [
-    { name: 'Request Quote', href: '/contact' },
+  const toolsServices = [
+    { name: 'Size Calculator', href: '/calculator' },
+    { name: 'Get Free Quote', href: '/quote' },
+    { name: 'Request Call Back', href: '/quote' },
     { name: 'Schedule Pickup', href: '/contact' },
+  ]
+
+  const aboutServices = [
+    { name: 'About Us', href: '/about' },
+    { name: 'Reviews', href: '/reviews' },
+    { name: 'FAQs', href: '/faqs' },
+    { name: 'Our Story', href: '/about' },
+  ]
+
+  const contactServices = [
+    { name: 'Contact Us', href: '/contact' },
+    { name: 'Request Quote', href: '/quote' },
     { name: 'Emergency Service', href: '/contact' },
+    { name: 'Schedule Pickup', href: '/contact' },
   ]
 
   // Clear timeout on unmount
   useEffect(() => {
     return () => {
+      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
       if (dumpstersTimeoutRef.current) clearTimeout(dumpstersTimeoutRef.current)
+      if (toolsTimeoutRef.current) clearTimeout(toolsTimeoutRef.current)
+      if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current)
       if (contactTimeoutRef.current) clearTimeout(contactTimeoutRef.current)
     }
   }, [])
 
   // Helper functions for dropdown management
+  const handleServicesMouseEnter = () => {
+    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
+    setIsServicesOpen(true)
+  }
+
+  const handleServicesMouseLeave = () => {
+    servicesTimeoutRef.current = setTimeout(() => {
+      setIsServicesOpen(false)
+    }, 150)
+  }
+
   const handleDumpstersMouseEnter = () => {
     if (dumpstersTimeoutRef.current) clearTimeout(dumpstersTimeoutRef.current)
     setIsDumpstersOpen(true)
@@ -59,7 +105,29 @@ const Header = () => {
   const handleDumpstersMouseLeave = () => {
     dumpstersTimeoutRef.current = setTimeout(() => {
       setIsDumpstersOpen(false)
-    }, 150) // 150ms delay
+    }, 150)
+  }
+
+  const handleToolsMouseEnter = () => {
+    if (toolsTimeoutRef.current) clearTimeout(toolsTimeoutRef.current)
+    setIsToolsOpen(true)
+  }
+
+  const handleToolsMouseLeave = () => {
+    toolsTimeoutRef.current = setTimeout(() => {
+      setIsToolsOpen(false)
+    }, 150)
+  }
+
+  const handleAboutMouseEnter = () => {
+    if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current)
+    setIsAboutOpen(true)
+  }
+
+  const handleAboutMouseLeave = () => {
+    aboutTimeoutRef.current = setTimeout(() => {
+      setIsAboutOpen(false)
+    }, 150)
   }
 
   const handleContactMouseEnter = () => {
@@ -70,7 +138,7 @@ const Header = () => {
   const handleContactMouseLeave = () => {
     contactTimeoutRef.current = setTimeout(() => {
       setIsContactOpen(false)
-    }, 150) // 150ms delay
+    }, 150)
   }
 
         return (
@@ -115,12 +183,18 @@ const Header = () => {
                       className={`flex items-center space-x-1 text-white hover:text-yellow-400 font-medium transition-colors ${item.name === 'Home' ? 'underline' : ''}`}
                       onMouseEnter={() => {
                         if (item.hasDropdown) {
+                          if (item.name === 'Services') handleServicesMouseEnter()
                           if (item.name === 'Dumpsters') handleDumpstersMouseEnter()
+                          if (item.name === 'Tools') handleToolsMouseEnter()
+                          if (item.name === 'About') handleAboutMouseEnter()
                           if (item.name === 'Contact') handleContactMouseEnter()
                         }
                       }}
                       onMouseLeave={() => {
+                        if (item.name === 'Services') handleServicesMouseLeave()
                         if (item.name === 'Dumpsters') handleDumpstersMouseLeave()
+                        if (item.name === 'Tools') handleToolsMouseLeave()
+                        if (item.name === 'About') handleAboutMouseLeave()
                         if (item.name === 'Contact') handleContactMouseLeave()
                       }}
                     >
@@ -129,6 +203,24 @@ const Header = () => {
                    </Link>
 
                   {/* Dropdown Menus */}
+                  {item.name === 'Services' && isServicesOpen && (
+                    <div 
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
+                      onMouseEnter={handleServicesMouseEnter}
+                      onMouseLeave={handleServicesMouseLeave}
+                    >
+                      {serviceTypes.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-4 py-2 text-gray-800 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
                   {item.name === 'Dumpsters' && isDumpstersOpen && (
                     <div 
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
@@ -136,6 +228,42 @@ const Header = () => {
                       onMouseLeave={handleDumpstersMouseLeave}
                     >
                       {dumpsterServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-4 py-2 text-gray-800 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {item.name === 'Tools' && isToolsOpen && (
+                    <div 
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
+                      onMouseEnter={handleToolsMouseEnter}
+                      onMouseLeave={handleToolsMouseLeave}
+                    >
+                      {toolsServices.map((service) => (
+                        <Link
+                          key={service.name}
+                          href={service.href}
+                          className="block px-4 py-2 text-gray-800 hover:bg-primary-50 hover:text-primary-600 transition-colors"
+                        >
+                          {service.name}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+
+                  {item.name === 'About' && isAboutOpen && (
+                    <div 
+                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
+                      onMouseEnter={handleAboutMouseEnter}
+                      onMouseLeave={handleAboutMouseLeave}
+                    >
+                      {aboutServices.map((service) => (
                         <Link
                           key={service.name}
                           href={service.href}

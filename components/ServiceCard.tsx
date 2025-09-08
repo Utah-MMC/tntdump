@@ -1,5 +1,7 @@
+'use client'
 import Link from 'next/link'
 import Image from 'next/image'
+import { useState } from 'react'
 
 interface ServiceCardProps {
   title: string
@@ -11,16 +13,44 @@ interface ServiceCardProps {
 }
 
 const ServiceCard = ({ title, description, image, slug, features = [], price }: ServiceCardProps) => {
+  const [imageError, setImageError] = useState(false)
+  const [imageLoading, setImageLoading] = useState(true)
+
+  const handleImageError = () => {
+    setImageError(true)
+    setImageLoading(false)
+  }
+
+  const handleImageLoad = () => {
+    setImageLoading(false)
+  }
+
   return (
     <Link href={`/services/${slug}`} className="group">
       <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-        <div className="relative h-48 overflow-hidden">
-          <Image
-            src={image}
-            alt={`${title} dumpster rental services`}
-            fill
-            className="object-cover group-hover:scale-105 transition-transform duration-300"
-          />
+        <div className="relative h-48 overflow-hidden bg-gray-200">
+          {!imageError ? (
+            <Image
+              src={image}
+              alt={`${title} dumpster rental services`}
+              fill
+              className={`object-cover group-hover:scale-105 transition-transform duration-300 ${imageLoading ? 'opacity-0' : 'opacity-100'}`}
+              onError={handleImageError}
+              onLoad={handleImageLoad}
+            />
+          ) : (
+            <div className="w-full h-full bg-gradient-to-br from-blue-100 to-blue-200 flex items-center justify-center">
+              <div className="text-center text-blue-600">
+                <div className="text-4xl mb-2">🚛</div>
+                <div className="text-sm font-semibold">{title}</div>
+              </div>
+            </div>
+          )}
+          {imageLoading && !imageError && (
+            <div className="absolute inset-0 bg-gray-200 animate-pulse flex items-center justify-center">
+              <div className="text-gray-400">Loading...</div>
+            </div>
+          )}
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
           <div className="absolute bottom-4 left-4">
             <h3 className="text-xl font-bold text-white">

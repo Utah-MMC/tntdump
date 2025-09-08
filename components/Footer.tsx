@@ -39,9 +39,10 @@ const Footer = () => {
                <Image
                  src="/images/t-and-t-dumpsters-logo-176w.webp"
                  alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                 width={100}
-                 height={28}
-                 className="filter brightness-0 invert sm:w-[120px] sm:h-[34px]"
+                 width={88}
+                 height={25}
+                 className="sm:w-[100px] sm:h-[28px]"
+                 priority
                />
              </div>
              <h3 className="text-lg sm:text-xl font-bold text-primary-400">T&T Dumpsters</h3>
@@ -142,6 +143,7 @@ const Footer = () => {
 }
 
 export default Footer
+
 
 
 

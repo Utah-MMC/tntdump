@@ -14,10 +14,42 @@ export default function ContactPage() {
     message: ''
   })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false)
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
-    // Handle form submission
-    console.log('Form submitted:', formData)
+    setIsSubmitting(true)
+    
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
+      })
+
+      const result = await response.json()
+
+      if (!response.ok) {
+        console.error('API Error:', result)
+        throw new Error(result.error || 'Failed to submit form')
+      }
+      
+      // Reset form
+      setFormData({
+        name: '',
+        phone: '',
+        email: '',
+        service: 'Residential Dumpster Rentals',
+        message: ''
+      })
+      
+      alert('Thank you! Your request has been submitted successfully. We will contact you soon.')
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      alert('There was an error submitting your request. Please try again or call us directly at (801) 209-9013.')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -217,9 +249,10 @@ export default function ContactPage() {
 
                 <button
                   type="submit"
-                  className="w-full btn-primary"
+                  disabled={isSubmitting}
+                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Submit Request
+                  {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
               </form>
             </div>

@@ -5,6 +5,7 @@ import WhyChooseUs from '@/components/WhyChooseUs'
 import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
 import CityCard from '@/components/CityCard'
+import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export default function Home() {
   return (
@@ -116,6 +117,9 @@ export default function Home() {
       
       <Services />
       
+      {/* Dumpster Calculator Section */}
+      <DumpsterCalculator />
+      
       {/* Cities Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
@@ -134,7 +138,7 @@ export default function Home() {
               city="West Jordan"
               state="UT"
               description="Professional dumpster rental services in West Jordan, Utah. Fast delivery, competitive pricing, and reliable service for all your waste management needs."
-              image="/images/west-jordan-dumpster-rental.jpg"
+              image="/images/pexels-cottonbro-4551310.jpg"
               slug="west-jordan"
               services={['Residential', 'Commercial', 'Construction', 'Estate Cleanout']}
             />
@@ -142,7 +146,7 @@ export default function Home() {
               city="Salt Lake City"
               state="UT"
               description="Comprehensive dumpster rental solutions in Salt Lake City. From residential cleanouts to large commercial projects, we have the right dumpster for you."
-              image="/images/salt-lake-city-dumpster-rental.jpg"
+              image="/images/pexels-cottonbro-4888489.jpg"
               slug="salt-lake-city"
               services={['Residential', 'Commercial', 'Industrial', 'Short-term']}
             />
@@ -150,7 +154,7 @@ export default function Home() {
               city="Murray"
               state="UT"
               description="Reliable dumpster rental services in Murray, Utah. Quick turnaround times, competitive pricing, and exceptional customer service for all projects."
-              image="/images/murray-dumpster-rental.jpg"
+              image="/images/pexels-cristian-rojas-8447756.jpg"
               slug="murray"
               services={['Residential', 'Commercial', 'Vendor Services', 'Concrete']}
             />

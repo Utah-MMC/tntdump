@@ -17,14 +17,16 @@ const createTransporter = () => {
   })
 }
 
-// Email notification function
-async function sendEmailNotification(formData: {
-  name: string
+// Email notification function for quotes
+async function sendQuoteEmail(formData: {
+  firstName: string
+  lastName: string
   phone: string
   email?: string
-  service: string
-  message?: string
-  formType: string
+  serviceType: string
+  dumpsterSize?: string
+  projectDescription?: string
+  preferredDate?: string
 }) {
   try {
     const transporter = createTransporter()
@@ -33,25 +35,31 @@ async function sendEmailNotification(formData: {
       from: 'jeremyuwg@gmail.com',
       to: 'jeremyuwg@gmail.com',
       cc: 'admin@tntdump.com, icondumpsters@gmail.com',
-      subject: `New ${formData.formType} Submission - ${formData.name}`,
+      subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
           <h2 style="color: #1e40af; border-bottom: 2px solid #1e40af; padding-bottom: 10px;">
-            New ${formData.formType} Submission
+            New Quote Request
           </h2>
           
           <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #374151; margin-top: 0;">Contact Information</h3>
-            <p><strong>Name:</strong> ${formData.name}</p>
+            <h3 style="color: #374151; margin-top: 0;">Customer Information</h3>
+            <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
             <p><strong>Phone:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
             ${formData.email ? `<p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>` : ''}
-            <p><strong>Service:</strong> ${formData.service}</p>
           </div>
           
-          ${formData.message ? `
           <div style="background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #374151; margin-top: 0;">Message</h3>
-            <p style="white-space: pre-wrap;">${formData.message}</p>
+            <h3 style="color: #374151; margin-top: 0;">Service Details</h3>
+            <p><strong>Service Type:</strong> ${formData.serviceType}</p>
+            ${formData.dumpsterSize ? `<p><strong>Dumpster Size:</strong> ${formData.dumpsterSize}</p>` : ''}
+            ${formData.preferredDate ? `<p><strong>Preferred Delivery Date:</strong> ${formData.preferredDate}</p>` : ''}
+          </div>
+          
+          ${formData.projectDescription ? `
+          <div style="background-color: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+            <h3 style="color: #374151; margin-top: 0;">Project Description</h3>
+            <p style="white-space: pre-wrap;">${formData.projectDescription}</p>
           </div>
           ` : ''}
           
@@ -63,7 +71,7 @@ async function sendEmailNotification(formData: {
           
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
-            This email was sent from the T&T Dumpsters website contact form.<br>
+            This quote request was sent from the T&T Dumpsters website quote form.<br>
             Sent to: jeremyuwg@gmail.com | CC: admin@tntdump.com, icondumpsters@gmail.com
           </p>
         </div>
@@ -71,23 +79,33 @@ async function sendEmailNotification(formData: {
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Email sent successfully to admin@tntdump.com')
+    console.log('Quote email sent successfully to admin@tntdump.com')
   } catch (error) {
-    console.error('Error sending email:', error)
+    console.error('Error sending quote email:', error)
     throw error
   }
 }
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('API endpoint called')
+    console.log('Quote API endpoint called')
     const body = await request.json()
-    console.log('Request body:', body)
-    const { name, phone, email, service, message, captchaToken } = body
+    console.log('Quote request body:', body)
+    
+    const { 
+      firstName, 
+      lastName, 
+      phone, 
+      email, 
+      serviceType, 
+      dumpsterSize, 
+      projectDescription, 
+      preferredDate 
+    } = body
 
     // Validate required fields
-    if (!name || !phone || !service) {
-      console.log('Missing required fields:', { name, phone, service })
+    if (!firstName || !lastName || !phone || !serviceType) {
+      console.log('Missing required fields:', { firstName, lastName, phone, serviceType })
       return NextResponse.json(
         { error: 'Missing required fields' },
         { status: 400 }
@@ -98,41 +116,41 @@ export async function POST(request: NextRequest) {
     console.log('Skipping reCAPTCHA validation for development')
 
     // Log form data first
-    console.log('=== FORM SUBMISSION RECEIVED ===')
-    console.log('Name:', name)
+    console.log('=== QUOTE REQUEST RECEIVED ===')
+    console.log('Name:', `${firstName} ${lastName}`)
     console.log('Phone:', phone)
     console.log('Email:', email || 'Not provided')
-    console.log('Service:', service)
-    console.log('Message:', message || 'No message provided')
+    console.log('Service:', serviceType)
+    console.log('Size:', dumpsterSize || 'Not specified')
+    console.log('Date:', preferredDate || 'Not specified')
+    console.log('Description:', projectDescription || 'No description provided')
     console.log('================================')
 
     // Try to send email
     try {
-      await sendEmailNotification({
-        name,
+      await sendQuoteEmail({
+        firstName,
+        lastName,
         phone,
         email,
-        service,
-        message,
-        formType: 'Contact Form'
+        serviceType,
+        dumpsterSize,
+        projectDescription,
+        preferredDate
       })
-      console.log('Email sent successfully!')
+      console.log('Quote email sent successfully!')
     } catch (emailError) {
-      console.error('Email sending failed:', emailError)
+      console.error('Quote email sending failed:', emailError)
       // Continue anyway - don't fail the form submission
     }
 
     return NextResponse.json(
-      { message: 'Form submitted successfully' },
+      { message: 'Quote request submitted successfully' },
       { status: 200 }
     )
 
   } catch (error) {
-    console.error('Error processing contact form:', error)
-    console.error('Error details:', {
-      message: error instanceof Error ? error.message : 'Unknown error',
-      stack: error instanceof Error ? error.stack : undefined
-    })
+    console.error('Error processing quote request:', error)
     return NextResponse.json(
       { error: `Internal server error: ${error instanceof Error ? error.message : 'Unknown error'}` },
       { status: 500 }
