@@ -325,27 +325,27 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">West Jordan</span>
+                  <a href="/cities/west-jordan" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">West Jordan</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">Salt Lake City</span>
+                  <a href="/cities/salt-lake-city" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Salt Lake City</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">Murray</span>
+                  <a href="/cities/murray" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Murray</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">Sandy</span>
+                  <a href="/cities/sandy" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Sandy</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">Draper</span>
+                  <a href="/cities/draper" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Draper</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">Riverton</span>
+                  <a href="/cities/riverton" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Riverton</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
