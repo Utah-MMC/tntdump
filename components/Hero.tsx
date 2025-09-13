@@ -200,12 +200,15 @@ const Hero = () => {
             {/* Right Column - Enhanced Contact Form */}
             <div className="relative">
               {/* Form Background with enhanced styling */}
-              <div className="bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl p-8 lg:p-10 border border-white/20">
+              <div className="bg-gradient-to-br from-blue-50 via-white to-yellow-50 backdrop-blur-xl rounded-2xl shadow-2xl p-8 lg:p-10 border border-blue-200/30">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-2">
+                  <div className="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-r from-yellow-400 to-orange-500 rounded-full mb-4 mx-auto">
+                    <span className="text-2xl">📋</span>
+                  </div>
+                  <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-blue-600 to-blue-800 bg-clip-text text-transparent mb-2">
                     Get Your Free Quote
                   </h3>
-                  <p className="text-gray-600">
+                  <p className="text-blue-600 font-medium">
                     Fill out the form below and we'll call you within 15 minutes
                   </p>
                 </div>
@@ -213,7 +216,7 @@ const Hero = () => {
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
-                      <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="name" className="block text-sm font-semibold text-blue-700 mb-2">
                         Full Name *
                       </label>
                       <input
@@ -222,14 +225,14 @@ const Hero = () => {
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-200 bg-blue-50/50"
                         placeholder="Enter your name"
                         required
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+                      <label htmlFor="phone" className="block text-sm font-semibold text-blue-700 mb-2">
                         Phone Number *
                       </label>
                       <input
@@ -238,7 +241,7 @@ const Hero = () => {
                         name="phone"
                         value={formData.phone}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200"
+                        className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-200 bg-blue-50/50"
                         placeholder="(801) 555-0123"
                         required
                       />
@@ -246,7 +249,7 @@ const Hero = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-semibold text-blue-700 mb-2">
                       Email Address
                     </label>
                     <input
@@ -261,7 +264,7 @@ const Hero = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="service" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="service" className="block text-sm font-semibold text-blue-700 mb-2">
                       Service Needed *
                     </label>
                     <select
@@ -284,7 +287,7 @@ const Hero = () => {
                   </div>
 
                   <div>
-                    <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+                    <label htmlFor="message" className="block text-sm font-semibold text-blue-700 mb-2">
                       Project Details
                     </label>
                     <textarea
@@ -293,7 +296,7 @@ const Hero = () => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
-                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-transparent transition-all duration-200 resize-none"
+                      className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-yellow-400 focus:border-yellow-400 transition-all duration-200 resize-none bg-blue-50/50"
                       placeholder="Tell us about your project, timeline, and any special requirements..."
                     />
                   </div>
@@ -332,15 +335,15 @@ const Hero = () => {
                 </form>
 
                 {/* Trust indicators */}
-                <div className="mt-6 pt-6 border-t border-gray-200">
-                  <div className="flex items-center justify-center space-x-6 text-sm text-gray-500">
+                <div className="mt-6 pt-6 border-t border-blue-200">
+                  <div className="flex items-center justify-center space-x-6 text-sm text-blue-600">
                     <div className="flex items-center space-x-1">
-                      <Shield className="h-4 w-4" />
-                      <span>Secure & Private</span>
+                      <Shield className="h-4 w-4 text-green-500" />
+                      <span className="font-medium">Secure & Private</span>
                     </div>
                     <div className="flex items-center space-x-1">
-                      <Clock className="h-4 w-4" />
-                      <span>15min Response</span>
+                      <Clock className="h-4 w-4 text-yellow-500" />
+                      <span className="font-medium">15min Response</span>
                     </div>
                   </div>
                 </div>
