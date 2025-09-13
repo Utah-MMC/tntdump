@@ -1,179 +1,97 @@
-import Hero from '@/components/Hero'
-import Services from '@/components/Services'
-import About from '@/components/About'
-import WhyChooseUs from '@/components/WhyChooseUs'
-import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
-import CityCard from '@/components/CityCard'
-import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <Hero />
-      
-      {/* Discover T&T Dumpsters Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              Discover T&T Dumpsters: Your Reliable Partner in Waste Management
-            </h2>
-            
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                T&T Dumpsters, a family-owned business established in 1965, has been providing exceptional dumps and garbage services in West Jordan, UT for over 55 years. Our longevity in the industry is a testament to our commitment to quality service, customer satisfaction, and environmental responsibility.
-              </p>
-              
-              <p>
-                We offer a wide range of services, including residential, commercial, and industrial dumpster services, as well as short-term and long-term dumpster services. We also provide vendor dumpster rental services and concrete dumpsters. Our team is dedicated to delivering fast and efficient service, with free same-day estimates, quick turnaround times, and competitive pricing. We are proud to be locally owned, ensuring that we understand and cater to the unique needs of our community.
-              </p>
-            </div>
-          </div>
+      {/* Under Construction Section */}
+      <section className="min-h-screen bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 flex items-center justify-center relative overflow-hidden">
+        {/* Background Pattern */}
+        <div className="absolute inset-0 opacity-10">
+          <div className="absolute inset-0" style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
+          }} />
         </div>
-      </section>
-
-      {/* Why T&T Dumpsters Section */}
-      <section className="py-16 bg-[#0003d5] text-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
-              Why T&T Dumpsters is Your Best Choice
-            </h2>
-            <p className="text-xl text-blue-100">
-              for Waste Management
-            </p>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column - Text */}
-            <div className="space-y-6 text-lg leading-relaxed">
-              <p>
-                Choosing T&T Dumpsters for your waste management needs means choosing a company with a proven track record of reliability and excellence. Our 55 years of experience in the industry, coupled with our commitment to fast delivery and quick turnaround times, ensures that we can handle any job, big or small.
-              </p>
-              
-              <p>
-                We offer free same-day estimates, allowing you to make informed decisions quickly. Our competitive pricing ensures value for money without compromising on service quality. As a family-owned, locally owned business, we understand the needs of our community and are committed to providing personalized service.
-              </p>
+        
+        <div className="container-custom text-center relative z-10">
+          <div className="max-w-4xl mx-auto">
+            {/* Construction Icon */}
+            <div className="mb-8">
+              <div className="inline-flex items-center justify-center w-24 h-24 bg-yellow-400 rounded-full mb-6">
+                <svg className="w-12 h-12 text-blue-900" fill="currentColor" viewBox="0 0 24 24">
+                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+                </svg>
+              </div>
             </div>
             
-            {/* Right Column - Benefits List */}
-            <div className="space-y-4">
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">★★★</span>
-                </div>
-                <span className="text-lg font-semibold">Over 55 Years of Experience</span>
-              </div>
+            {/* Main Heading */}
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-6">
+              Under Construction
+            </h1>
+            
+            {/* Subheading */}
+            <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-blue-200 mb-8">
+              T&T Dumpsters
+            </h2>
+            
+            {/* Description */}
+            <p className="text-xl text-blue-100 mb-12 max-w-2xl mx-auto leading-relaxed">
+              We're working hard to improve your experience. Our website is currently under construction, 
+              but we're still here to serve you with over 55 years of reliable dumpster rental services.
+            </p>
+            
+            {/* Contact Information */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 mb-12 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-white mb-6">Still Need a Dumpster?</h3>
               
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">$</span>
+              <div className="space-y-4 text-lg">
+                <div className="flex items-center justify-center space-x-3">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                  </svg>
+                  <span className="text-white font-semibold">Call or Text: (801) 209-9013</span>
                 </div>
-                <span className="text-lg font-semibold">Free Same-Day Estimates</span>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">$</span>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                  </svg>
+                  <span className="text-white">Mon - Fri: 7:00 am - 9:00 pm</span>
                 </div>
-                <span className="text-lg font-semibold">Competitive Prices</span>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">📍</span>
+                
+                <div className="flex items-center justify-center space-x-3">
+                  <svg className="w-6 h-6 text-yellow-400" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                  </svg>
+                  <span className="text-white">Serving the Wasatch Front Area</span>
                 </div>
-                <span className="text-lg font-semibold">Locally Owned</span>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">⏰</span>
-                </div>
-                <span className="text-lg font-semibold">Quick Turnaround Times</span>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <span className="text-white text-lg">🚚</span>
-                </div>
-                <span className="text-lg font-semibold">Fast Delivery</span>
               </div>
             </div>
-          </div>
-          
-          {/* Call to Action Button */}
-          <div className="text-center mt-12">
-            <a 
-              href="#contact" 
-              className="inline-block bg-white text-[#0003d5] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
-            >
-              Request Call Back
-            </a>
-          </div>
-        </div>
-      </section>
-      
-      <Services />
-      
-      {/* Dumpster Calculator Section */}
-      <DumpsterCalculator />
-      
-      {/* Cities Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Cities We Serve
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              T&T Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
-              Click on your city below to learn more about our local services and pricing.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <CityCard
-              city="West Jordan"
-              state="UT"
-              description="Professional dumpster rental services in West Jordan, Utah. Fast delivery, competitive pricing, and reliable service for all your waste management needs."
-              image="/images/pexels-cottonbro-4551310.jpg"
-              slug="west-jordan"
-              services={['Residential', 'Commercial', 'Construction', 'Estate Cleanout']}
-            />
-            <CityCard
-              city="Salt Lake City"
-              state="UT"
-              description="Comprehensive dumpster rental solutions in Salt Lake City. From residential cleanouts to large commercial projects, we have the right dumpster for you."
-              image="/images/pexels-cottonbro-4888489.jpg"
-              slug="salt-lake-city"
-              services={['Residential', 'Commercial', 'Industrial', 'Short-term']}
-            />
-            <CityCard
-              city="Murray"
-              state="UT"
-              description="Reliable dumpster rental services in Murray, Utah. Quick turnaround times, competitive pricing, and exceptional customer service for all projects."
-              image="/images/pexels-cristian-rojas-8447756.jpg"
-              slug="murray"
-              services={['Residential', 'Commercial', 'Vendor Services', 'Concrete']}
-            />
-          </div>
-
-          <div className="text-center">
-            <a 
-              href="/cities" 
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              View All Cities
-            </a>
+            
+            {/* Call to Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <a 
+                href="tel:8012099013" 
+                className="inline-block bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
+              >
+                Call Now
+              </a>
+              <a 
+                href="mailto:info@tntdump.com" 
+                className="inline-block bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
+              >
+                Email Us
+              </a>
+            </div>
+            
+            {/* Coming Soon Message */}
+            <div className="mt-12 text-blue-200">
+              <p className="text-lg">We'll be back online soon with an improved experience!</p>
+            </div>
           </div>
         </div>
       </section>
       
-      <About />
-      <WhyChooseUs />
-      <Reviews />
+      {/* Keep Contact Section for Additional Contact Options */}
       <Contact />
     </main>
   )
