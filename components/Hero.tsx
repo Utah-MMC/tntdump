@@ -110,7 +110,10 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center" style={{backgroundImage: "url('/images/tand-t-dumpsters-hero-home-1920w.webp')"}}>
+    <section 
+      className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center" 
+      style={{backgroundImage: "url('/images/tand-t-dumpsters-hero-home-1920w.webp')"}}
+    >
       {/* Enhanced gradient overlay */}
       <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-700/70 to-primary-600/80"></div>
       
