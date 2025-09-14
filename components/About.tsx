@@ -84,7 +84,7 @@ const About = () => {
               <div className="space-y-4">
                 <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/dumpster-rental-utah.jpg"
+                    src="/images/dumpster2-500x500-2.jpeg"
                     alt="Professional dumpster rental service in Utah with blue Icon Dumpsters branding"
                     fill
                     className="object-cover"
@@ -93,7 +93,7 @@ const About = () => {
                 </div>
                 <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/roll-off-dumpster.jpg"
+                    src="/images/dumpster3-500x500-1.jpeg"
                     alt="Roll-off dumpster ready for delivery with Icon Dumpsters logo"
                     fill
                     className="object-cover"
@@ -103,7 +103,7 @@ const About = () => {
               <div className="space-y-4 pt-8">
                 <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/dumpster-rental-near-me.jpg"
+                    src="/images/construction-site-3688252_1280.jpg"
                     alt="Local dumpster rental service near you with fast delivery"
                     fill
                     className="object-cover"
@@ -111,7 +111,7 @@ const About = () => {
                 </div>
                 <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
                   <Image
-                    src="/images/utah-dumpster-rental.jpg"
+                    src="/images/construction-site-3688262_1280.jpg"
                     alt="Utah dumpster rental company serving residential and commercial customers"
                     fill
                     className="object-cover"

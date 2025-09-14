@@ -197,7 +197,6 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <StickySidebar />
       </body>
     </html>
   )

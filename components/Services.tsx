@@ -6,7 +6,7 @@ const Services = () => {
     {
       title: 'Residential Dumpster Service',
       description: 'Our residential dumpster service is designed to meet the waste disposal needs of homeowners. Whether you\'re renovating, cleaning out a garage, or simply need a reliable waste management solution, our residential dumpster service is the perfect fit.',
-      image: '/images/dumpster500x500-2.jpeg',
+      image: '/images/dumpster2-500x500-2.jpeg',
       href: '/dumpsters/residential',
       alt: 'Residential dumpster rental service for homeowners'
     },
