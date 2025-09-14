@@ -178,8 +178,8 @@ export default function RootLayout({
                 const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
                 phoneLinks.forEach(link => {
                   link.addEventListener('click', function() {
-                    if (typeof window !== 'undefined' && window.gtag) {
-                      window.gtag('event', 'phone_call', {
+                    if (typeof window !== 'undefined' && (window as any).gtag) {
+                      (window as any).gtag('event', 'phone_call', {
                         event_category: 'engagement',
                         event_label: 'phone_click',
                         value: 1
