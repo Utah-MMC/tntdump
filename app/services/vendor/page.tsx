@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Handshake } from 'lucide-react'
+import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Shield } from 'lucide-react'
 
 export default function VendorServicePage() {
   const features = [
@@ -176,7 +176,7 @@ export default function VendorServicePage() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Handshake className="w-8 h-8 text-white" />
+                <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Partnership Focus</h3>
               <p className="text-blue-100">Built for vendor relationships</p>
