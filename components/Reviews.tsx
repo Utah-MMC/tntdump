@@ -6,37 +6,64 @@ const Reviews = () => {
       name: 'John Smith',
       rating: 5,
       text: 'Excellent service! T&T Dumpsters delivered our dumpster right on time and picked it up when we were done. Very professional and competitive pricing.',
-      location: 'West Jordan, UT'
+      location: 'West Jordan, UT',
+      service: 'Residential Renovation'
     },
     {
       name: 'Sarah Johnson',
       rating: 5,
       text: 'Great experience with T&T Dumpsters. They helped us with our home renovation project and made the waste disposal process so easy.',
-      location: 'Salt Lake City, UT'
+      location: 'Salt Lake City, UT',
+      service: 'Home Renovation'
     },
     {
       name: 'Mike Davis',
       rating: 5,
       text: 'Highly recommend! Fast delivery, great customer service, and fair prices. Will definitely use them again for our next project.',
-      location: 'Murray, UT'
+      location: 'Murray, UT',
+      service: 'Garage Cleanout'
     },
     {
       name: 'Lisa Wilson',
       rating: 5,
       text: 'Professional, reliable, and affordable. T&T Dumpsters exceeded our expectations for our commercial project.',
-      location: 'Sandy, UT'
+      location: 'Sandy, UT',
+      service: 'Commercial Project'
     },
     {
       name: 'Robert Brown',
       rating: 5,
       text: 'Outstanding service from start to finish. The team was helpful, punctual, and made our estate cleanout much easier.',
-      location: 'Draper, UT'
+      location: 'Draper, UT',
+      service: 'Estate Cleanout'
     },
     {
       name: 'Jennifer Garcia',
       rating: 5,
       text: 'Best dumpster rental company in the area! Quick turnaround, excellent communication, and very reasonable rates.',
-      location: 'Riverton, UT'
+      location: 'Riverton, UT',
+      service: 'Construction Project'
+    },
+    {
+      name: 'David Martinez',
+      rating: 5,
+      text: 'T&T Dumpsters made our office renovation so much easier. Professional service, on-time delivery, and great pricing.',
+      location: 'South Jordan, UT',
+      service: 'Office Renovation'
+    },
+    {
+      name: 'Amanda Thompson',
+      rating: 5,
+      text: 'Used T&T Dumpsters for our restaurant remodel. They were flexible with scheduling and handled everything professionally.',
+      location: 'Taylorsville, UT',
+      service: 'Restaurant Renovation'
+    },
+    {
+      name: 'Mark Anderson',
+      rating: 5,
+      text: 'Family-owned business with excellent customer service. They helped us choose the right size dumpster for our project.',
+      location: 'Midvale, UT',
+      service: 'Home Improvement'
     }
   ]
 
@@ -67,6 +94,7 @@ const Reviews = () => {
                 <div>
                   <p className="font-semibold text-gray-900">{review.name}</p>
                   <p className="text-sm text-gray-500">{review.location}</p>
+                  <p className="text-xs text-blue-600 mt-1">{review.service}</p>
                 </div>
               </div>
             </div>

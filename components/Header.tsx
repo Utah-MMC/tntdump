@@ -25,6 +25,7 @@ const Header = () => {
     { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Cities', href: '/cities', hasDropdown: false },
     { name: 'Dumpsters', href: '/dumpsters', hasDropdown: true },
+    { name: 'Blog', href: '/blog', hasDropdown: false },
     { name: 'Tools', href: '#', hasDropdown: true },
     { name: 'About', href: '/about', hasDropdown: true },
     { name: 'Contact', href: '/contact', hasDropdown: true },

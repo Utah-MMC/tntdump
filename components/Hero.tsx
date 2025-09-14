@@ -15,6 +15,8 @@ const Hero = () => {
   })
   const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
+  const [errorMessage, setErrorMessage] = useState('')
   const recaptchaRef = useRef<ReCAPTCHA>(null)
 
      // Debug reCAPTCHA loading
@@ -25,8 +27,26 @@ const Hero = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     
+    // Reset status
+    setSubmitStatus('idle')
+    setErrorMessage('')
+    
+    // Validate required fields
+    if (!formData.name.trim()) {
+      setErrorMessage('Please enter your name')
+      setSubmitStatus('error')
+      return
+    }
+    
+    if (!formData.phone.trim()) {
+      setErrorMessage('Please enter your phone number')
+      setSubmitStatus('error')
+      return
+    }
+    
     if (!captchaToken) {
-      alert('Please complete the reCAPTCHA verification')
+      setErrorMessage('Please complete the reCAPTCHA verification')
+      setSubmitStatus('error')
       return
     }
 
@@ -47,6 +67,15 @@ const Hero = () => {
         throw new Error(result.error || 'Failed to submit form')
       }
       
+      // Track successful form submission
+      if (typeof window !== 'undefined' && window.gtag) {
+        window.gtag('event', 'form_submit', {
+          event_category: 'engagement',
+          event_label: 'contact_form',
+          value: 1
+        })
+      }
+      
       // Reset form
       setFormData({
         name: '',
@@ -57,11 +86,12 @@ const Hero = () => {
       })
       setCaptchaToken(null)
       recaptchaRef.current?.reset()
+      setSubmitStatus('success')
       
-      alert('Thank you! Your request has been submitted successfully. We will contact you soon.')
     } catch (error) {
       console.error('Error submitting form:', error)
-      alert('There was an error submitting your request. Please try again.')
+      setErrorMessage('There was an error submitting your request. Please try again.')
+      setSubmitStatus('error')
     } finally {
       setIsSubmitting(false)
     }
@@ -237,6 +267,22 @@ const Hero = () => {
                    size="normal"
                  />
                </div>
+
+               {/* Status Messages */}
+               {submitStatus === 'success' && (
+                 <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+                   <div className="flex items-center">
+                     <CheckCircle className="w-5 h-5 mr-2" />
+                     <span>Thank you! Your request has been submitted successfully. We will contact you soon.</span>
+                   </div>
+                 </div>
+               )}
+               
+               {submitStatus === 'error' && errorMessage && (
+                 <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+                   <span>{errorMessage}</span>
+                 </div>
+               )}
 
                <button
                  type="submit"
