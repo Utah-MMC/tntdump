@@ -10,6 +10,10 @@ import DumpsterCalculator from '@/components/DumpsterCalculator'
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Under Construction Banner */}
+      <div className="bg-orange-500 text-white py-3 px-4 text-center font-bold text-lg shadow-lg">
+        🚧 UNDER CONSTRUCTION - We're making improvements to better serve you! 🚧
+      </div>
       <Hero />
       
       {/* Discover T&T Dumpsters Section */}
