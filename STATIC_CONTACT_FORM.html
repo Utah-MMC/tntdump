@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact TNT Dumpsters</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .form-container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        input, textarea, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+        }
+        textarea {
+            height: 120px;
+            resize: vertical;
+        }
+        .btn {
+            background-color: #3b82f6;
+            color: white;
+            padding: 12px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .btn:hover {
+            background-color: #2563eb;
+        }
+        .phone-section {
+            background-color: #f0f9ff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .phone-number {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1e40af;
+            margin: 10px 0;
+        }
+        .response-time {
+            color: #059669;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h1>Contact TNT Dumpsters</h1>
+        
+        <!-- Phone Contact Section -->
+        <div class="phone-section">
+            <h2>📞 Call Us Now</h2>
+            <div class="phone-number">
+                <a href="tel:+18012099013">(801) 209-9013</a>
+            </div>
+            <p class="response-time">⚡ 15-minute response time</p>
+            <p>Available 7 days a week for immediate assistance</p>
+        </div>
+
+        <!-- Contact Form -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+            <div class="form-group">
+                <label for="name">Name *</label>
+                <input type="text" id="name" name="name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number *</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email (Optional)</label>
+                <input type="email" id="email" name="email">
+            </div>
+
+            <div class="form-group">
+                <label for="service">Service Needed</label>
+                <select id="service" name="service">
+                    <option value="Residential Dumpster Rentals">Residential Dumpster Rentals</option>
+                    <option value="Commercial Dumpster Rentals">Commercial Dumpster Rentals</option>
+                    <option value="Industrial Dumpster Rentals">Industrial Dumpster Rentals</option>
+                    <option value="Short-Term Dumpster Rentals">Short-Term Dumpster Rentals</option>
+                    <option value="Long-Term Dumpster Rentals">Long-Term Dumpster Rentals</option>
+                    <option value="Vendor Dumpster Rentals">Vendor Dumpster Rentals</option>
+                    <option value="Concrete Dumpsters">Concrete Dumpsters</option>
+                    <option value="Estate Cleanout Services">Estate Cleanout Services</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" placeholder="Tell us about your project..."></textarea>
+            </div>
+
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+
+        <div style="margin-top: 30px; text-align: center; color: #666;">
+            <p><strong>Or call us directly:</strong></p>
+            <p style="font-size: 20px; color: #1e40af;">
+                <a href="tel:+18012099013">(801) 209-9013</a>
+            </p>
+        </div>
+    </div>
+</body>
+</html>

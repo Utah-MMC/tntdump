@@ -1,6 +1,8 @@
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import About from '@/components/About'
+import WhyChooseUs from '@/components/WhyChooseUs'
+import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
 import CityCard from '@/components/CityCard'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
@@ -31,6 +33,87 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Why T&T Dumpsters Section */}
+      <section className="py-16 bg-[#0003d5] text-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-2">
+              Why T&T Dumpsters is Your Best Choice
+            </h2>
+            <p className="text-xl text-blue-100">
+              for Waste Management
+            </p>
+          </div>
+          
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left Column - Text */}
+            <div className="space-y-6 text-lg leading-relaxed">
+              <p>
+                Choosing T&T Dumpsters for your waste management needs means choosing a company with a proven track record of reliability and excellence. Our 55 years of experience in the industry, coupled with our commitment to fast delivery and quick turnaround times, ensures that we can handle any job, big or small.
+              </p>
+              
+              <p>
+                We offer free same-day estimates, allowing you to make informed decisions quickly. Our competitive pricing ensures value for money without compromising on service quality. As a family-owned, locally owned business, we understand the needs of our community and are committed to providing personalized service.
+              </p>
+            </div>
+            
+            {/* Right Column - Benefits List */}
+            <div className="space-y-4">
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">★★★</span>
+                </div>
+                <span className="text-lg font-semibold">Over 55 Years of Experience</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">$</span>
+                </div>
+                <span className="text-lg font-semibold">Free Same-Day Estimates</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">$</span>
+                </div>
+                <span className="text-lg font-semibold">Competitive Prices</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">📍</span>
+                </div>
+                <span className="text-lg font-semibold">Locally Owned</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">⏰</span>
+                </div>
+                <span className="text-lg font-semibold">Quick Turnaround Times</span>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
+                  <span className="text-white text-lg">🚚</span>
+                </div>
+                <span className="text-lg font-semibold">Fast Delivery</span>
+              </div>
+            </div>
+          </div>
+          
+          {/* Call to Action Button */}
+          <div className="text-center mt-12">
+            <a 
+              href="#contact" 
+              className="inline-block bg-white text-[#0003d5] px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition-colors"
+            >
+              Request Call Back
+            </a>
+          </div>
+        </div>
+      </section>
       
       <Services />
       
@@ -89,6 +172,8 @@ export default function Home() {
       </section>
       
       <About />
+      <WhyChooseUs />
+      <Reviews />
       <Contact />
     </main>
   )
