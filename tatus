@@ -1,0 +1,5 @@
+[33m66b56e19[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Add under construction page with contact information
+[33m13f58909[m Set canonical URL to tntdump.com and redirect www to non-www
+[33mb1462f2e[m Add Ahrefs analytics script to site layout
+[33m815d9082[m Update components: Contact, Reviews, and WhyChooseUs
+[33m644ee3bf[m Add TypeScript declaration for react-google-recaptcha
