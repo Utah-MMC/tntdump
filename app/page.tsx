@@ -11,6 +11,8 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       
+      <Services />
+      
       {/* Discover T&T Dumpsters Section */}
       <section className="py-16 bg-white">
         <div className="container-custom">
@@ -31,9 +33,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      
-      <Services />
       
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
