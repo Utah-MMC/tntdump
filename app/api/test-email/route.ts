@@ -70,21 +70,41 @@ export async function POST(request: NextRequest) {
       html: emailContent
     }
 
-    // Send to icondumpsters@gmail.com
+    // Send to icondumpsters@gmail.com with different headers
     const iconMailOptions = {
-      from: 'admin@tntdump.com',
+      from: '"T&T Dumpsters" <admin@tntdump.com>',
       to: 'icondumpsters@gmail.com',
       subject: 'Test Email from T&T Dumpsters Website',
-      html: emailContent
+      html: emailContent,
+      headers: {
+        'Reply-To': 'admin@tntdump.com'
+      }
     }
 
     console.log('Attempting to send test emails...')
     
-    await transporter.sendMail(adminMailOptions)
-    console.log('✅ Test email sent successfully to admin@tntdump.com')
+    let adminSuccess = false
+    let iconSuccess = false
     
-    await transporter.sendMail(iconMailOptions)
-    console.log('✅ Test email sent successfully to icondumpsters@gmail.com')
+    try {
+      await transporter.sendMail(adminMailOptions)
+      console.log('✅ Test email sent successfully to admin@tntdump.com')
+      adminSuccess = true
+    } catch (adminError) {
+      console.error('❌ Error sending email to admin@tntdump.com:', adminError)
+    }
+    
+    try {
+      await transporter.sendMail(iconMailOptions)
+      console.log('✅ Test email sent successfully to icondumpsters@gmail.com')
+      iconSuccess = true
+    } catch (iconError) {
+      console.error('❌ Error sending email to icondumpsters@gmail.com:', iconError)
+    }
+    
+    if (!adminSuccess && !iconSuccess) {
+      throw new Error('Failed to send emails to both addresses')
+    }
 
     return NextResponse.json({
       success: true,

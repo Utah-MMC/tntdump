@@ -80,20 +80,34 @@ async function sendQuoteEmail(formData: {
       html: emailContent
     }
 
-    // Send to icondumpsters@gmail.com
+    // Send to icondumpsters@gmail.com with different headers
     const iconMailOptions = {
-      from: 'admin@tntdump.com',
+      from: '"T&T Dumpsters" <admin@tntdump.com>',
       to: 'icondumpsters@gmail.com',
       subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
-      html: emailContent
+      html: emailContent,
+      headers: {
+        'Reply-To': 'admin@tntdump.com'
+      }
     }
 
     // Send both emails
-    await transporter.sendMail(adminMailOptions)
-    console.log('Quote email sent successfully to admin@tntdump.com')
+    try {
+      await transporter.sendMail(adminMailOptions)
+      console.log('✅ Quote email sent successfully to admin@tntdump.com')
+    } catch (adminError) {
+      console.error('❌ Error sending email to admin@tntdump.com:', adminError)
+      throw adminError
+    }
     
-    await transporter.sendMail(iconMailOptions)
-    console.log('Quote email sent successfully to icondumpsters@gmail.com')
+    try {
+      await transporter.sendMail(iconMailOptions)
+      console.log('✅ Quote email sent successfully to icondumpsters@gmail.com')
+    } catch (iconError) {
+      console.error('❌ Error sending email to icondumpsters@gmail.com:', iconError)
+      // Don't throw here - we want the admin email to still work even if Gmail fails
+      console.log('⚠️ Continuing despite Gmail delivery failure')
+    }
     
   } catch (error) {
     console.error('Error sending quote email:', error)
