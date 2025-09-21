@@ -11,8 +11,6 @@ const nextConfig = {
   poweredByHeader: false,
   generateEtags: false,
   trailingSlash: true,
-  output: 'export',
-  distDir: 'out',
 }
 
 module.exports = nextConfig
