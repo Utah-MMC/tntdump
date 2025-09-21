@@ -4,12 +4,12 @@ import nodemailer from 'nodemailer'
 // Email configuration for T&T Dumpsters
 const createTransporter = () => {
   return nodemailer.createTransport({
-    host: 'vixen.websitewelcome.com',
-    port: 465,
+    host: process.env.EMAIL_HOST || 'vixen.websitewelcome.com',
+    port: parseInt(process.env.EMAIL_PORT || '465'),
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'admin@tntdump.com',
-      pass: 'Uwg2025!'
+      user: process.env.EMAIL_USER || 'admin@tntdump.com',
+      pass: process.env.EMAIL_PASS || 'Uwg2025!'
     },
     tls: {
       rejectUnauthorized: false
@@ -28,6 +28,14 @@ async function sendEmailNotification(formData: {
 }) {
   try {
     const transporter = createTransporter()
+    
+    // Debug logging
+    console.log('=== EMAIL DEBUG INFO ===')
+    console.log('Host:', process.env.EMAIL_HOST || 'vixen.websitewelcome.com')
+    console.log('Port:', process.env.EMAIL_PORT || '465')
+    console.log('User:', process.env.EMAIL_USER || 'admin@tntdump.com')
+    console.log('Password set:', !!process.env.EMAIL_PASS)
+    console.log('========================')
     
     const mailOptions = {
       from: 'admin@tntdump.com',

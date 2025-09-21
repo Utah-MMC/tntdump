@@ -4,12 +4,12 @@ import nodemailer from 'nodemailer'
 // Email configuration for T&T Dumpsters
 const createTransporter = () => {
   return nodemailer.createTransport({
-    host: 'vixen.websitewelcome.com',
-    port: 465,
+    host: process.env.EMAIL_HOST || 'vixen.websitewelcome.com',
+    port: parseInt(process.env.EMAIL_PORT || '465'),
     secure: true, // true for 465, false for other ports
     auth: {
-      user: 'admin@tntdump.com',
-      pass: 'Uwg2025!'
+      user: process.env.EMAIL_USER || 'admin@tntdump.com',
+      pass: process.env.EMAIL_PASS || 'Uwg2025!'
     },
     tls: {
       rejectUnauthorized: false
