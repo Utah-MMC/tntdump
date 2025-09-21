@@ -25,7 +25,8 @@ export async function POST(request: NextRequest) {
     
     const mailOptions = {
       from: 'admin@tntdump.com',
-      to: 'icondumpsters@gmail.com',
+      to: 'admin@tntdump.com',
+      cc: 'icondumpsters@gmail.com',
       subject: 'Test Email from T&T Dumpsters Website',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -36,7 +37,8 @@ export async function POST(request: NextRequest) {
           <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
             <h3 style="color: #374151; margin-top: 0;">Email Configuration Test</h3>
             <p><strong>From:</strong> admin@tntdump.com</p>
-            <p><strong>To:</strong> icondumpsters@gmail.com</p>
+            <p><strong>To:</strong> admin@tntdump.com</p>
+            <p><strong>CC:</strong> icondumpsters@gmail.com</p>
             <p><strong>Sent:</strong> ${new Date().toLocaleString()}</p>
           </div>
           
@@ -51,7 +53,8 @@ export async function POST(request: NextRequest) {
             <p>This is a test email to verify that:</p>
             <ul>
               <li>✅ Email authentication is working</li>
-              <li>✅ Primary recipient (icondumpsters@gmail.com) receives emails</li>
+              <li>✅ Primary recipient (admin@tntdump.com) receives emails</li>
+              <li>✅ CC recipients receive copies</li>
               <li>✅ Email formatting is correct</li>
               <li>✅ SMTP configuration is valid</li>
             </ul>
@@ -72,7 +75,7 @@ export async function POST(request: NextRequest) {
 
     return NextResponse.json({
       success: true,
-      message: 'Test email sent successfully to icondumpsters@gmail.com',
+      message: 'Test email sent successfully to admin@tntdump.com (CC: icondumpsters@gmail.com)',
       timestamp: new Date().toISOString()
     })
 
