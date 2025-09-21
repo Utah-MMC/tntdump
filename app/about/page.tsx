@@ -1,6 +1,49 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Users, Award } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About T&T Dumpsters - Family-Owned Since 1965 | Utah Dumpster Rental',
+  description: 'Learn about T&T Dumpsters, a family-owned dumpster rental business serving Utah for over 55 years. Discover our history, values, and commitment to quality service.',
+  keywords: 'about T&T Dumpsters, family-owned dumpster rental, utah dumpster company history, wasatch front dumpster service',
+  alternates: {
+    canonical: 'https://tntdump.com/about',
+  },
+  openGraph: {
+    title: 'About T&T Dumpsters - Family-Owned Since 1965',
+    description: 'Learn about T&T Dumpsters, a family-owned dumpster rental business serving Utah for over 55 years. Discover our history, values, and commitment to quality service.',
+    url: 'https://tntdump.com/about',
+    siteName: 'T&T Dumpsters',
+    images: [
+      {
+        url: 'https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp',
+        width: 1200,
+        height: 630,
+        alt: 'T&T Dumpsters - Family-owned dumpster rental business since 1965',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About T&T Dumpsters - Family-Owned Since 1965',
+    description: 'Learn about T&T Dumpsters, a family-owned dumpster rental business serving Utah for over 55 years. Discover our history, values, and commitment to quality service.',
+    images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
+}
 
 export default function AboutPage() {
   const values = [

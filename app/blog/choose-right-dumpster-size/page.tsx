@@ -7,6 +7,44 @@ export const metadata: Metadata = {
   title: 'How to Choose the Right Dumpster Size for Your Project | T&T Dumpsters',
   description: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout. Our comprehensive guide covers all dumpster sizes and their best uses.',
   keywords: 'dumpster size guide, choose dumpster size, dumpster rental planning, project dumpster size, waste management planning',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/choose-right-dumpster-size',
+  },
+  openGraph: {
+    title: 'How to Choose the Right Dumpster Size for Your Project | T&T Dumpsters',
+    description: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout. Our comprehensive guide covers all dumpster sizes and their best uses.',
+    url: 'https://tntdump.com/blog/choose-right-dumpster-size',
+    siteName: 'T&T Dumpsters',
+    images: [
+      {
+        url: 'https://tntdump.com/images/dumpster500x500-2.jpeg',
+        width: 1200,
+        height: 630,
+        alt: 'How to choose the right dumpster size for your project',
+      },
+    ],
+    locale: 'en_US',
+    type: 'article',
+    publishedTime: '2025-01-15T00:00:00.000Z',
+    authors: ['T&T Dumpsters Team'],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'How to Choose the Right Dumpster Size for Your Project',
+    description: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout.',
+    images: ['https://tntdump.com/images/dumpster500x500-2.jpeg'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 export default function ChooseRightDumpsterSizePage() {

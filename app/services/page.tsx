@@ -6,6 +6,42 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Services - T&T Dumpsters | Utah',
   description: 'Professional dumpster rental services in Utah. Residential, commercial, industrial, and specialty dumpster rentals with fast delivery and competitive pricing.',
   keywords: 'dumpster rental services, residential dumpster, commercial dumpster, industrial dumpster, roll-off dumpster, utah dumpster rental',
+  alternates: {
+    canonical: 'https://tntdump.com/services',
+  },
+  openGraph: {
+    title: 'Dumpster Rental Services - T&T Dumpsters | Utah',
+    description: 'Professional dumpster rental services in Utah. Residential, commercial, industrial, and specialty dumpster rentals with fast delivery and competitive pricing.',
+    url: 'https://tntdump.com/services',
+    siteName: 'T&T Dumpsters',
+    images: [
+      {
+        url: 'https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp',
+        width: 1200,
+        height: 630,
+        alt: 'T&T Dumpsters - Professional dumpster rental services in Utah',
+      },
+    ],
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Dumpster Rental Services - T&T Dumpsters | Utah',
+    description: 'Professional dumpster rental services in Utah. Residential, commercial, industrial, and specialty dumpster rentals with fast delivery and competitive pricing.',
+    images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 }
 
 const services = [
