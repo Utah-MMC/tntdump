@@ -33,8 +33,7 @@ async function sendQuoteEmail(formData: {
     
     const mailOptions = {
       from: 'admin@tntdump.com',
-      to: 'admin@tntdump.com',
-      cc: 'icondumpsters@gmail.com',
+      to: 'icondumpsters@gmail.com',
       subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -72,14 +71,14 @@ async function sendQuoteEmail(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This quote request was sent from the T&T Dumpsters website quote form.<br>
-            Sent to: admin@tntdump.com | CC: icondumpsters@gmail.com
+            Sent from: admin@tntdump.com | To: icondumpsters@gmail.com
           </p>
         </div>
       `
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Quote email sent successfully to admin@tntdump.com')
+    console.log('Quote email sent successfully to icondumpsters@gmail.com')
   } catch (error) {
     console.error('Error sending quote email:', error)
     throw error
