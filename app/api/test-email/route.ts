@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration
-const createTransporter = () => {
+// Email configuration for T&T Dumpsters (HostGator)
+const createHostGatorTransporter = () => {
   return nodemailer.createTransport({
     host: process.env.EMAIL_HOST || 'vixen.websitewelcome.com',
     port: parseInt(process.env.EMAIL_PORT || '465'),
@@ -17,11 +17,23 @@ const createTransporter = () => {
   })
 }
 
+// Email configuration for Gmail (for external delivery)
+const createGmailTransporter = () => {
+  return nodemailer.createTransport({
+    service: 'gmail',
+    auth: {
+      user: process.env.GMAIL_USER || 'icondumpsters@gmail.com',
+      pass: process.env.GMAIL_APP_PASSWORD || ''
+    }
+  })
+}
+
 export async function POST(request: NextRequest) {
   try {
     console.log('=== TEST EMAIL API CALLED ===')
     
-    const transporter = createTransporter()
+    const hostGatorTransporter = createHostGatorTransporter()
+    const gmailTransporter = createGmailTransporter()
     
     const emailContent = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -86,17 +98,19 @@ export async function POST(request: NextRequest) {
     let adminSuccess = false
     let iconSuccess = false
     
+    // Send to admin@tntdump.com using HostGator SMTP
     try {
-      await transporter.sendMail(adminMailOptions)
-      console.log('✅ Test email sent successfully to admin@tntdump.com')
+      await hostGatorTransporter.sendMail(adminMailOptions)
+      console.log('✅ Test email sent successfully to admin@tntdump.com via HostGator')
       adminSuccess = true
     } catch (adminError) {
       console.error('❌ Error sending email to admin@tntdump.com:', adminError)
     }
     
+    // Send to icondumpsters@gmail.com using Gmail SMTP
     try {
-      await transporter.sendMail(iconMailOptions)
-      console.log('✅ Test email sent successfully to icondumpsters@gmail.com')
+      await gmailTransporter.sendMail(iconMailOptions)
+      console.log('✅ Test email sent successfully to icondumpsters@gmail.com via Gmail SMTP')
       iconSuccess = true
     } catch (iconError) {
       console.error('❌ Error sending email to icondumpsters@gmail.com:', iconError)
