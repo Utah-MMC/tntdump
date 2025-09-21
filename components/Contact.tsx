@@ -61,8 +61,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h3 className="font-semibold text-gray-900">Email</h3>
-                  <a href="mailto:info@tntdump.com" className="text-primary-600 hover:text-primary-700">
-                    info@tntdump.com
+                  <a href="mailto:admin@tntdump.com" className="text-primary-600 hover:text-primary-700">
+                    admin@tntdump.com
                   </a>
                 </div>
               </div>

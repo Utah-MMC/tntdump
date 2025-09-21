@@ -86,7 +86,7 @@
   - Updated in README.md documentation
 
 - [x] **Email Address Updates**
-  - Updated to `jeremyuwg@gmail.com` across all components
+  - Updated to `admin@tntdump.com` across all components
   - Updated in StickySidebar and contact forms
 
 ### 🔧 Technical Features

@@ -1,5 +1,6 @@
 import { Metadata } from 'next'
-import CityPageTemplate, { generateCityMetadata } from '@/components/CityPageTemplate'
+import CityPageTemplate from '@/components/CityPageTemplate'
+import { generateCityMetadata } from '@/lib/cityMetadata'
 
 export const metadata: Metadata = generateCityMetadata('West Point', 'UT')
 

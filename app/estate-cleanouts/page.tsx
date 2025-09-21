@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart } from 'lucide-react'
+import QuickContactForm from '@/components/QuickContactForm'
 
 export default function EstateCleanoutsPage() {
   const services = [
@@ -342,6 +343,18 @@ export default function EstateCleanoutsPage() {
               <MapPin className="h-5 w-5" />
               <span>Serving the Wasatch Front</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Form */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-md mx-auto">
+            <QuickContactForm 
+              serviceType="Estate Cleanout"
+              buttonText="Get Free Estimate"
+            />
           </div>
         </div>
       </section>

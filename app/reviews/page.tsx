@@ -1,5 +1,6 @@
 import { Star } from 'lucide-react'
 import Image from 'next/image'
+import QuickContactForm from '@/components/QuickContactForm'
 
 export default function ReviewsPage() {
   const reviews = [
@@ -297,6 +298,18 @@ export default function ReviewsPage() {
               <Star className="h-5 w-5" />
               <span>55+ Years of Experience</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Quick Contact Form */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-md mx-auto">
+            <QuickContactForm 
+              serviceType="General Inquiry"
+              buttonText="Get Free Estimate"
+            />
           </div>
         </div>
       </section>

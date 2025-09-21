@@ -1,15 +1,15 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration for Gmail
+// Email configuration for T&T Dumpsters
 const createTransporter = () => {
   return nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 587,
-    secure: false, // true for 465, false for other ports
+    host: 'vixen.websitewelcome.com',
+    port: 465,
+    secure: true, // true for 465, false for other ports
     auth: {
-      user: 'jeremyuwg@gmail.com',
-      pass: 'vkjt crgp pjwc bhor' // Gmail app password with spaces
+      user: 'admin@tntdump.com',
+      pass: 'Uwg2025!'
     },
     tls: {
       rejectUnauthorized: false
@@ -30,8 +30,8 @@ async function sendEmailNotification(formData: {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: 'jeremyuwg@gmail.com',
-      to: 'jeremyuwg@gmail.com',
+      from: 'admin@tntdump.com',
+      to: 'admin@tntdump.com',
       cc: 'admin@tntdump.com, icondumpsters@gmail.com',
       subject: `New ${formData.formType} Submission - ${formData.name}`,
       html: `
@@ -64,7 +64,7 @@ async function sendEmailNotification(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This email was sent from the T&T Dumpsters website contact form.<br>
-            Sent to: jeremyuwg@gmail.com | CC: admin@tntdump.com, icondumpsters@gmail.com
+            Sent to: admin@tntdump.com | CC: admin@tntdump.com, icondumpsters@gmail.com
           </p>
         </div>
       `
@@ -80,7 +80,9 @@ async function sendEmailNotification(formData: {
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('API endpoint called')
+    console.log('=== CONTACT API ENDPOINT CALLED ===')
+    console.log('Request URL:', request.url)
+    console.log('Request method:', request.method)
     const body = await request.json()
     console.log('Request body:', body)
     const { name, phone, email, service, message, captchaToken } = body

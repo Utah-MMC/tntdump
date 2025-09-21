@@ -70,3 +70,4 @@ Replace the contact form with a simple HTML version that uses `mailto:` links or
 4. Monitor analytics
 
 Your site will be fully functional except for the contact form!
+
