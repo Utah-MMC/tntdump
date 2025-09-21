@@ -31,55 +31,70 @@ async function sendQuoteEmail(formData: {
   try {
     const transporter = createTransporter()
     
-    const mailOptions = {
-      from: 'admin@tntdump.com',
-      to: 'admin@tntdump.com',
-      cc: 'icondumpsters@gmail.com',
-      subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
-      html: `
-        <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-          <h2 style="color: #1e40af; border-bottom: 2px solid #1e40af; padding-bottom: 10px;">
-            New Quote Request
-          </h2>
-          
-          <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #374151; margin-top: 0;">Customer Information</h3>
-            <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
-            <p><strong>Phone:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
-            ${formData.email ? `<p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>` : ''}
-          </div>
-          
-          <div style="background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #374151; margin-top: 0;">Service Details</h3>
-            <p><strong>Service Type:</strong> ${formData.serviceType}</p>
-            ${formData.dumpsterSize ? `<p><strong>Dumpster Size:</strong> ${formData.dumpsterSize}</p>` : ''}
-            ${formData.preferredDate ? `<p><strong>Preferred Delivery Date:</strong> ${formData.preferredDate}</p>` : ''}
-          </div>
-          
-          ${formData.projectDescription ? `
-          <div style="background-color: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
-            <h3 style="color: #374151; margin-top: 0;">Project Description</h3>
-            <p style="white-space: pre-wrap;">${formData.projectDescription}</p>
-          </div>
-          ` : ''}
-          
-          <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px; margin: 20px 0;">
-            <p style="margin: 0; color: #1e40af; font-weight: bold;">
-              📞 Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
-            </p>
-          </div>
-          
-          <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
-          <p style="color: #6b7280; font-size: 12px; text-align: center;">
-            This quote request was sent from the T&T Dumpsters website quote form.<br>
-            Sent to: admin@tntdump.com | CC: icondumpsters@gmail.com
+    const emailContent = `
+      <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
+        <h2 style="color: #1e40af; border-bottom: 2px solid #1e40af; padding-bottom: 10px;">
+          New Quote Request
+        </h2>
+        
+        <div style="background-color: #f8fafc; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #374151; margin-top: 0;">Customer Information</h3>
+          <p><strong>Name:</strong> ${formData.firstName} ${formData.lastName}</p>
+          <p><strong>Phone:</strong> <a href="tel:${formData.phone}">${formData.phone}</a></p>
+          ${formData.email ? `<p><strong>Email:</strong> <a href="mailto:${formData.email}">${formData.email}</a></p>` : ''}
+        </div>
+        
+        <div style="background-color: #f1f5f9; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #374151; margin-top: 0;">Service Details</h3>
+          <p><strong>Service Type:</strong> ${formData.serviceType}</p>
+          ${formData.dumpsterSize ? `<p><strong>Dumpster Size:</strong> ${formData.dumpsterSize}</p>` : ''}
+          ${formData.preferredDate ? `<p><strong>Preferred Delivery Date:</strong> ${formData.preferredDate}</p>` : ''}
+        </div>
+        
+        ${formData.projectDescription ? `
+        <div style="background-color: #fef3c7; padding: 20px; border-radius: 8px; margin: 20px 0;">
+          <h3 style="color: #374151; margin-top: 0;">Project Description</h3>
+          <p style="white-space: pre-wrap;">${formData.projectDescription}</p>
+        </div>
+        ` : ''}
+        
+        <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px; margin: 20px 0;">
+          <p style="margin: 0; color: #1e40af; font-weight: bold;">
+            📞 Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
           </p>
         </div>
-      `
+        
+        <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
+        <p style="color: #6b7280; font-size: 12px; text-align: center;">
+          This quote request was sent from the T&T Dumpsters website quote form.<br>
+          Sent to: admin@tntdump.com and icondumpsters@gmail.com
+        </p>
+      </div>
+    `
+
+    // Send to admin@tntdump.com
+    const adminMailOptions = {
+      from: 'admin@tntdump.com',
+      to: 'admin@tntdump.com',
+      subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
+      html: emailContent
     }
 
-    await transporter.sendMail(mailOptions)
-    console.log('Quote email sent successfully to admin@tntdump.com (CC: icondumpsters@gmail.com)')
+    // Send to icondumpsters@gmail.com
+    const iconMailOptions = {
+      from: 'admin@tntdump.com',
+      to: 'icondumpsters@gmail.com',
+      subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
+      html: emailContent
+    }
+
+    // Send both emails
+    await transporter.sendMail(adminMailOptions)
+    console.log('Quote email sent successfully to admin@tntdump.com')
+    
+    await transporter.sendMail(iconMailOptions)
+    console.log('Quote email sent successfully to icondumpsters@gmail.com')
+    
   } catch (error) {
     console.error('Error sending quote email:', error)
     throw error

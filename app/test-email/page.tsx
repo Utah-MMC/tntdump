@@ -46,8 +46,8 @@ export default function TestEmailPage() {
           <div className="bg-gray-100 p-4 rounded-lg">
             <ul className="space-y-2">
               <li><strong>From:</strong> admin@tntdump.com</li>
-              <li><strong>To:</strong> admin@tntdump.com</li>
-              <li><strong>CC:</strong> icondumpsters@gmail.com</li>
+              <li><strong>To:</strong> admin@tntdump.com and icondumpsters@gmail.com</li>
+              <li><strong>Method:</strong> Separate emails (not CC)</li>
               <li><strong>SMTP:</strong> vixen.websitewelcome.com:465</li>
             </ul>
           </div>
@@ -67,7 +67,7 @@ export default function TestEmailPage() {
           <div className="mt-6 p-4 bg-green-50 border border-green-200 rounded-lg">
             <p className="text-green-800 font-medium">{result}</p>
             <p className="text-green-600 text-sm mt-2">
-              Check your email at admin@tntdump.com (and CC to icondumpsters@gmail.com) for the test email!
+              Check both email accounts: admin@tntdump.com and icondumpsters@gmail.com for the test emails!
             </p>
           </div>
         )}
@@ -84,10 +84,10 @@ export default function TestEmailPage() {
         <div className="mt-8 p-4 bg-blue-50 border border-blue-200 rounded-lg">
           <h3 className="font-semibold text-blue-800 mb-2">What this test does:</h3>
           <ul className="text-blue-700 text-sm space-y-1">
-            <li>• Sends a test email from admin@tntdump.com to admin@tntdump.com</li>
-            <li>• CC's icondumpsters@gmail.com for backup delivery</li>
+            <li>• Sends separate emails to admin@tntdump.com and icondumpsters@gmail.com</li>
+            <li>• Bypasses CC issues by sending individual emails</li>
             <li>• Verifies SMTP authentication is working</li>
-            <li>• Tests email formatting and delivery</li>
+            <li>• Tests email formatting and delivery to both accounts</li>
           </ul>
         </div>
       </div>
