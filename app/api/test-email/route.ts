@@ -26,7 +26,7 @@ export async function POST(request: NextRequest) {
     const mailOptions = {
       from: 'admin@tntdump.com',
       to: 'admin@tntdump.com',
-      cc: 'admin@tntdump.com, icondumpsters@gmail.com',
+      cc: 'icondumpsters@gmail.com',
       subject: 'Test Email from T&T Dumpsters Website',
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -38,7 +38,7 @@ export async function POST(request: NextRequest) {
             <h3 style="color: #374151; margin-top: 0;">Email Configuration Test</h3>
             <p><strong>From:</strong> admin@tntdump.com</p>
             <p><strong>To:</strong> admin@tntdump.com</p>
-            <p><strong>CC:</strong> admin@tntdump.com, icondumpsters@gmail.com</p>
+            <p><strong>CC:</strong> icondumpsters@gmail.com</p>
             <p><strong>Sent:</strong> ${new Date().toLocaleString()}</p>
           </div>
           
