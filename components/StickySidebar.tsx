@@ -46,7 +46,7 @@ const StickySidebar = () => {
       id: 'email',
       icon: Mail,
       label: 'Email Us',
-      action: () => window.location.href = 'mailto:jeremyuwg@gmail.com',
+      action: () => window.location.href = 'mailto:admin@tntdump.com',
       color: 'bg-red-500 hover:bg-red-600'
     },
     {

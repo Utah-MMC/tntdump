@@ -773,6 +773,16 @@ export function getRandomServiceFeatures(serviceType: 'residential' | 'commercia
   return getRandomVariation(cityContentVariations.serviceFeatures[serviceType])
 }
 
+// Deterministic versions to avoid hydration mismatches
+export function getDeterministicServiceFeatures(serviceType: 'residential' | 'commercial' | 'industrial', city: string): string[] {
+  const cityHash = city.split('').reduce((a, b) => {
+    a = ((a << 5) - a) + b.charCodeAt(0)
+    return a & a
+  }, 0)
+  const features = cityContentVariations.serviceFeatures[serviceType]
+  return features[Math.abs(cityHash) % features.length]
+}
+
 export function getCitySpecificContent(city: string, contentType: 'heroDescriptions' | 'serviceDescriptions' | 'whyChooseDescriptions') {
   const cityData = cityContentVariations.citySpecific[city as keyof typeof cityContentVariations.citySpecific]
   if (cityData && cityData[contentType]) {
@@ -780,6 +790,23 @@ export function getCitySpecificContent(city: string, contentType: 'heroDescripti
   }
   // Fallback to generic content if city-specific content doesn't exist
   return getRandomVariation(cityContentVariations[contentType] as any[])
+}
+
+// Deterministic version to avoid hydration mismatches
+export function getDeterministicCityContent(city: string, contentType: 'heroDescriptions' | 'serviceDescriptions' | 'whyChooseDescriptions') {
+  const cityHash = city.split('').reduce((a, b) => {
+    a = ((a << 5) - a) + b.charCodeAt(0)
+    return a & a
+  }, 0)
+  
+  const cityData = cityContentVariations.citySpecific[city as keyof typeof cityContentVariations.citySpecific]
+  if (cityData && cityData[contentType]) {
+    const contentArray = cityData[contentType] as any[]
+    return contentArray[Math.abs(cityHash) % contentArray.length]
+  }
+  // Fallback to generic content if city-specific content doesn't exist
+  const fallbackArray = cityContentVariations[contentType] as any[]
+  return fallbackArray[Math.abs(cityHash) % fallbackArray.length]
 }
 
 export function getCityLocalFeatures(city: string): string[] {

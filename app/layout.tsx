@@ -66,14 +66,14 @@ export default function RootLayout({
       <head>
         <script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" async></script>
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17574419412"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB"></script>
         <script
           dangerouslySetInnerHTML={{
             __html: `
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'AW-17574419412');
+              gtag('config', 'G-PRG0NC3ZHB');
             `,
           }}
         />
@@ -87,7 +87,7 @@ export default function RootLayout({
               "description": "Professional dumpster rental services serving the Wasatch Front area for over 55 years. Residential, commercial, and industrial waste management solutions.",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
-              "email": "info@tntdump.com",
+              "email": "admin@tntdump.com",
               "address": {
                 "@type": "PostalAddress",
                 "addressLocality": "West Jordan",
