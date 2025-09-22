@@ -1,301 +1,205 @@
-'use client'
+'use client';
 
-import { useState } from 'react'
-import { Calculator, Home, Building, Wrench, Trash2, Info } from 'lucide-react'
+import React, { useState } from 'react';
 
-interface ProjectType {
-  id: string
-  name: string
-  icon: React.ComponentType<any>
-  description: string
-  recommendedSizes: string[]
-}
+export default function DumpsterCalculator() {
+  const [zipCode, setZipCode] = useState('');
+  const [selectedSize, setSelectedSize] = useState('');
+  const [selectedDuration, setSelectedDuration] = useState('');
+  const [isVeteran, setIsVeteran] = useState(false);
+  const [result, setResult] = useState('');
 
-interface DumpsterSize {
-  size: string
-  capacity: string
-  dimensions: string
-  price: string
-  description: string
-  suitableFor: string[]
-}
+  const handleCalculate = () => {
+    if (!zipCode || !selectedSize || !selectedDuration) {
+      alert('Please fill in all required fields');
+      return;
+    }
 
-const projectTypes: ProjectType[] = [
-  {
-    id: 'residential',
-    name: 'Residential',
-    icon: Home,
-    description: 'Home renovations, cleanouts, and DIY projects',
-    recommendedSizes: ['10-yard', '15-yard', '20-yard']
-  },
-  {
-    id: 'commercial',
-    name: 'Commercial',
-    icon: Building,
-    description: 'Business renovations, office cleanouts',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
-  },
-  {
-    id: 'construction',
-    name: 'Construction',
-    icon: Wrench,
-    description: 'Construction debris, demolition projects',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
-  },
-  {
-    id: 'cleanout',
-    name: 'Estate Cleanout',
-    icon: Trash2,
-    description: 'Moving, estate cleanouts, large cleanups',
-    recommendedSizes: ['15-yard', '20-yard', '30-yard']
-  }
-]
+    // T&T Dumpsters pricing
+    const basePrices = {
+      '10': 299,
+      '15': 399,
+      '20': 499,
+      '30': 699,
+      '40': 899
+    };
 
-const dumpsterSizes: DumpsterSize[] = [
-  {
-    size: '10-yard',
-    capacity: '10 cubic yards',
-    dimensions: '12\' x 8\' x 3.5\'',
-    price: '$299',
-    description: 'Perfect for small projects and cleanouts',
-    suitableFor: ['Small home cleanouts', 'Garage organization', 'Small renovations', 'Yard waste removal']
-  },
-  {
-    size: '15-yard',
-    capacity: '15 cubic yards',
-    dimensions: '16\' x 8\' x 3.5\'',
-    price: '$399',
-    description: 'Great for medium-sized projects',
-    suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
-  },
-  {
-    size: '20-yard',
-    capacity: '20 cubic yards',
-    dimensions: '20\' x 8\' x 3.5\'',
-    price: '$499',
-    description: 'Most popular size for most projects',
-    suitableFor: ['Large renovations', 'Estate cleanouts', 'Construction debris', 'Commercial projects']
-  },
-  {
-    size: '30-yard',
-    capacity: '30 cubic yards',
-    dimensions: '20\' x 8\' x 6\'',
-    price: '$699',
-    description: 'Ideal for large construction projects',
-    suitableFor: ['Large construction', 'Commercial cleanouts', 'Industrial projects', 'Major renovations']
-  },
-  {
-    size: '40-yard',
-    capacity: '40 cubic yards',
-    dimensions: '20\' x 8\' x 8\'',
-    price: '$899',
-    description: 'Maximum capacity for heavy-duty projects',
-    suitableFor: ['Large construction sites', 'Major demolition', 'Industrial waste', 'Large commercial projects']
-  }
-]
+    const basePrice = basePrices[selectedSize as keyof typeof basePrices] || 399;
+    const days = parseInt(selectedDuration);
+    let totalEstimate = basePrice;
 
-const DumpsterCalculator = () => {
-  const [selectedProject, setSelectedProject] = useState<string>('')
-  const [selectedSize, setSelectedSize] = useState<string>('')
-  const [showResults, setShowResults] = useState(false)
+    if (days === 1) {
+      totalEstimate = basePrice * 0.7; // 30% discount for 1 day
+    } else if (days <= 7) {
+      totalEstimate = basePrice;
+    } else if (days === 14) {
+      totalEstimate = basePrice * 1.5;
+    } else if (days === 30) {
+      totalEstimate = basePrice * 2;
+    }
 
-  const handleProjectSelect = (projectId: string) => {
-    setSelectedProject(projectId)
-    setSelectedSize('')
-    setShowResults(false)
-  }
+    const veteranDiscount = isVeteran ? totalEstimate * 0.10 : 0;
+    const finalPrice = totalEstimate - veteranDiscount;
 
-  const handleSizeSelect = (size: string) => {
-    setSelectedSize(size)
-    setShowResults(true)
-  }
-
-  const selectedProjectData = projectTypes.find(p => p.id === selectedProject)
-  const selectedSizeData = dumpsterSizes.find(s => s.size === selectedSize)
-  const recommendedSizes = selectedProjectData?.recommendedSizes || []
+    setResult(`
+      <div class="bg-gradient-to-br from-blue-50 to-blue-100 p-6 rounded-lg border-2 border-blue-200 shadow-md">
+        <h4 class="text-lg font-bold text-blue-600 mb-3">💰 Estimated Cost</h4>
+        <div class="text-3xl font-bold text-blue-600 mb-2">$${finalPrice.toLocaleString()}</div>
+        <p class="text-gray-600 mb-3">For ${selectedSize}-yard dumpster, ${selectedDuration} day${selectedDuration === '1' ? '' : 's'} in ${zipCode}</p>
+        ${isVeteran ? `<div class="text-blue-600 font-semibold">Veteran discount (10%): -$${veteranDiscount.toLocaleString()}</div>` : ''}
+        <div class="mt-4">
+          <button onclick="window.location.href='tel:801-209-9013'" class="bg-blue-600 text-white px-6 py-2 rounded-lg font-semibold hover:bg-blue-700 transition-colors">
+            Call (801) 209-9013 for Exact Quote
+          </button>
+        </div>
+      </div>
+    `);
+  };
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Calculator className="h-8 w-8 text-blue-600 mr-3" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              Dumpster Size Calculator
-            </h2>
-          </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
-            Get instant recommendations and pricing.
-          </p>
+    <div className="max-w-4xl mx-auto px-4 py-8">
+      <div className="text-center mb-8">
+        <h2 className="text-3xl font-bold text-gray-900 mb-2">T&T Dumpsters Cost Calculator</h2>
+        <p className="text-lg text-gray-600">Get an instant price estimate for your dumpster rental</p>
+      </div>
+      
+      <div className="bg-white rounded-2xl shadow-xl border border-gray-200 p-8">
+        {/* Zip Code Input */}
+        <div className="mb-6">
+          <label htmlFor="zipCode" className="block text-sm font-semibold text-gray-700 mb-2">
+            📍 Zip Code
+          </label>
+          <input
+            type="text"
+            id="zipCode"
+            value={zipCode}
+            onChange={(e) => setZipCode(e.target.value)}
+            placeholder="Enter zip code"
+            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+            maxLength={5}
+          />
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          {/* Step 1: Project Type Selection */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Step 1: What type of project are you working on?</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {projectTypes.map((project) => {
-                const Icon = project.icon
-                return (
-                  <button
-                    key={project.id}
-                    onClick={() => handleProjectSelect(project.id)}
-                    className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
-                      selectedProject === project.id
-                        ? 'border-blue-500 bg-blue-50 shadow-md'
-                        : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
-                    }`}
-                  >
-                    <div className="flex items-center mb-3">
-                      <Icon className={`h-6 w-6 mr-2 ${
-                        selectedProject === project.id ? 'text-blue-600' : 'text-gray-600'
-                      }`} />
-                      <h4 className="font-semibold text-gray-900">{project.name}</h4>
-                    </div>
-                    <p className="text-sm text-gray-600">{project.description}</p>
-                  </button>
-                )
-              })}
-            </div>
+        {/* Dumpster Size Selection */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold text-gray-700 mb-3">📦 Choose Your Dumpster Size</label>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { size: '10', price: '$299', description: 'Small projects' },
+              { size: '15', price: '$399', description: 'Renovations' },
+              { size: '20', price: '$499', description: 'Most popular' },
+              { size: '30', price: '$699', description: 'Large projects' },
+              { size: '40', price: '$899', description: 'Commercial' }
+            ].map((option) => (
+              <label
+                key={option.size}
+                className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                  selectedSize === option.size 
+                    ? 'border-blue-600 bg-blue-50' 
+                    : 'border-gray-200 hover:border-blue-300'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="dumpsterSize"
+                  value={option.size}
+                  checked={selectedSize === option.size}
+                  onChange={(e) => setSelectedSize(e.target.value)}
+                  className="sr-only"
+                />
+                <div className="text-center">
+                  <div className="text-2xl font-bold text-gray-900 mb-1">{option.size} Yard</div>
+                  <div className="text-sm text-gray-600 mb-1">{option.description}</div>
+                  <div className="text-sm font-semibold text-blue-600">{option.price}</div>
+                </div>
+              </label>
+            ))}
           </div>
-
-          {/* Step 2: Size Selection */}
-          {selectedProject && (
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                Step 2: Choose your dumpster size
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {dumpsterSizes
-                  .filter(size => recommendedSizes.includes(size.size))
-                  .map((size) => (
-                    <button
-                      key={size.size}
-                      onClick={() => handleSizeSelect(size.size)}
-                      className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
-                        selectedSize === size.size
-                          ? 'border-blue-500 bg-blue-50 shadow-md'
-                          : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
-                      }`}
-                    >
-                      <div className="flex justify-between items-start mb-3">
-                        <h4 className="font-bold text-lg text-gray-900">{size.size}</h4>
-                        <span className="text-2xl font-bold text-blue-600">{size.price}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{size.capacity}</p>
-                      <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
-                      <p className="text-sm text-gray-700">{size.description}</p>
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
-
-          {/* Results */}
-          {showResults && selectedSizeData && (
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Perfect! Here's your recommendation:
-                </h3>
-                <p className="text-gray-600">
-                  Based on your {selectedProjectData?.name.toLowerCase()} project, we recommend the {selectedSizeData.size} dumpster.
-                </p>
-              </div>
-
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Dumpster Details */}
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Dumpster Details</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Size:</span>
-                      <span className="font-semibold">{selectedSizeData.size}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Capacity:</span>
-                      <span className="font-semibold">{selectedSizeData.capacity}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Dimensions:</span>
-                      <span className="font-semibold">{selectedSizeData.dimensions}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Price:</span>
-                      <span className="font-bold text-2xl text-blue-600">{selectedSizeData.price}</span>
-                    </div>
-                  </div>
+        </div>
+        
+        {/* Duration Selection */}
+        <div className="mb-6">
+          <label className="block text-sm font-semibold text-gray-700 mb-3">⏱️ Select Rental Duration</label>
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-3">
+            {[
+              { duration: '1', description: 'Same day pickup' },
+              { duration: '3', description: 'Short term' },
+              { duration: '7', description: 'Standard rental' },
+              { duration: '14', description: 'Extended rental' },
+              { duration: '30', description: 'Long term rental' }
+            ].map((option) => (
+              <label
+                key={option.duration}
+                className={`p-4 border rounded-lg cursor-pointer transition-all ${
+                  selectedDuration === option.duration 
+                    ? 'border-blue-600 bg-blue-50' 
+                    : 'border-gray-200 hover:border-blue-300'
+                }`}
+              >
+                <input
+                  type="radio"
+                  name="duration"
+                  value={option.duration}
+                  checked={selectedDuration === option.duration}
+                  onChange={(e) => setSelectedDuration(e.target.value)}
+                  className="sr-only"
+                />
+                <div className="text-center">
+                  <div className="text-lg font-bold text-gray-900 mb-1">{option.duration} Day{option.duration === '1' ? '' : 's'}</div>
+                  <div className="text-xs text-gray-600">{option.description}</div>
                 </div>
+              </label>
+            ))}
+          </div>
+        </div>
+            
+        {/* Veteran Discount */}
+        <div className="mb-6">
+          <label className="flex items-center">
+            <input
+              type="checkbox"
+              checked={isVeteran}
+              onChange={(e) => setIsVeteran(e.target.checked)}
+              className="w-4 h-4 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
+            />
+            <span className="ml-2 text-sm font-semibold text-gray-700">
+              🎖️ Veteran Discount (10%) - Thank you for your service!
+            </span>
+          </label>
+        </div>
+          
+        {/* Calculate Button */}
+        <div className="text-center mb-6">
+          <button
+            className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            onClick={handleCalculate}
+          >
+            Calculate Estimate
+          </button>
+        </div>
+          
+        {/* Results Section */}
+        {result && (
+          <div dangerouslySetInnerHTML={{ __html: result }} />
+        )}
 
-                {/* Suitable For */}
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Perfect for:</h4>
-                  <ul className="space-y-2">
-                    {selectedSizeData.suitableFor.map((item, index) => (
-                      <li key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                        <span className="text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Call to Action */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/quote"
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
-                  >
-                    Get Free Quote
-                  </a>
-                  <a
-                    href="tel:+18012099013"
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-50 transition-colors"
-                  >
-                    Call (801) 209-9013
-                  </a>
-                </div>
-                <p className="text-center text-sm text-gray-500 mt-4">
-                  Free same-day estimates • Fast delivery • Competitive pricing
-                </p>
-              </div>
-            </div>
-          )}
-
-          {/* Help Section */}
-          <div className="mt-12 bg-blue-50 rounded-lg p-6">
-            <div className="flex items-start">
-              <Info className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Need Help Choosing?</h4>
-                <p className="text-gray-700 mb-4">
-                  Our experienced team can help you choose the right dumpster size for your specific project. 
-                  We offer free consultations and same-day estimates.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="tel:+18012099013"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    📞 Call (801) 209-9013
-                  </a>
-                  <a
-                    href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    💬 Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
+        {/* How It Works Section */}
+        <div className="bg-blue-50 rounded-lg p-6 mt-6">
+          <h4 className="font-bold text-blue-600 mb-4">💡 How Our Calculator Works</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-blue-600">
+            <ul className="space-y-2">
+              <li>• <strong>Utah Service:</strong> We serve the entire Wasatch Front area</li>
+              <li>• <strong>1-Day Special:</strong> 30% discount for same-day pickup</li>
+              <li>• <strong>Flexible Pricing:</strong> Competitive rates based on duration</li>
+            </ul>
+            <ul className="space-y-2">
+              <li>• <strong>Veteran Discount:</strong> 10% off for all veterans</li>
+              <li>• <strong>Weight-Based:</strong> Additional charges for heavy materials</li>
+              <li>• <strong>Family Owned:</strong> Serving Utah since 1965</li>
+            </ul>
           </div>
         </div>
       </div>
-    </section>
-  )
+    </div>
+  );
 }
-
-export default DumpsterCalculator
