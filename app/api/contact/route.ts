@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration for T&T Dumpsters (HostGator)
-const createHostGatorTransporter = () => {
+// Email configuration for T&T Dumpsters
+const createTransporter = () => {
   return nodemailer.createTransport({
     host: process.env.EMAIL_HOST || 'vixen.websitewelcome.com',
     port: parseInt(process.env.EMAIL_PORT || '465'),
@@ -17,17 +17,6 @@ const createHostGatorTransporter = () => {
   })
 }
 
-// Email configuration for Gmail (for external delivery)
-const createGmailTransporter = () => {
-  return nodemailer.createTransporter({
-    service: 'gmail',
-    auth: {
-      user: process.env.GMAIL_USER || 'icondumpsters@gmail.com',
-      pass: process.env.GMAIL_APP_PASSWORD || ''
-    }
-  })
-}
-
 // Email notification function
 async function sendEmailNotification(formData: {
   name: string
@@ -38,8 +27,7 @@ async function sendEmailNotification(formData: {
   formType: string
 }) {
   try {
-    const hostGatorTransporter = createHostGatorTransporter()
-    const gmailTransporter = createGmailTransporter()
+    const transporter = createTransporter()
     
     // Debug logging
     console.log('=== EMAIL DEBUG INFO ===')
@@ -103,19 +91,18 @@ async function sendEmailNotification(formData: {
       }
     }
 
-    // Send to admin@tntdump.com using HostGator SMTP
+    // Send both emails
     try {
-      await hostGatorTransporter.sendMail(adminMailOptions)
-      console.log('✅ Contact email sent successfully to admin@tntdump.com via HostGator')
+      await transporter.sendMail(adminMailOptions)
+      console.log('✅ Contact email sent successfully to admin@tntdump.com')
     } catch (adminError) {
       console.error('❌ Error sending email to admin@tntdump.com:', adminError)
       throw adminError
     }
     
-    // Send to icondumpsters@gmail.com using Gmail SMTP
     try {
-      await gmailTransporter.sendMail(iconMailOptions)
-      console.log('✅ Contact email sent successfully to icondumpsters@gmail.com via Gmail SMTP')
+      await transporter.sendMail(iconMailOptions)
+      console.log('✅ Contact email sent successfully to icondumpsters@gmail.com')
     } catch (iconError) {
       console.error('❌ Error sending email to icondumpsters@gmail.com:', iconError)
       // Don't throw here - we want the admin email to still work even if Gmail fails
