@@ -1,7 +1,6 @@
 import Hero from '@/components/Hero'
 import Services from '@/components/Services'
 import About from '@/components/About'
-import Reviews from '@/components/Reviews'
 import Contact from '@/components/Contact'
 import CityCard from '@/components/CityCard'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
@@ -89,7 +88,6 @@ export default function Home() {
       </section>
       
       <About />
-      <Reviews />
       <Contact />
     </main>
   )
