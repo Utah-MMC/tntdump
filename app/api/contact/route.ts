@@ -96,8 +96,30 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Skip reCAPTCHA validation for development/testing
-    console.log('Skipping reCAPTCHA validation for development')
+    // Optional reCAPTCHA verification if secret is configured
+    const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
+    if (recaptchaSecret) {
+      try {
+        if (!captchaToken) {
+          return NextResponse.json({ error: 'reCAPTCHA validation failed' }, { status: 400 })
+        }
+        const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams({ secret: recaptchaSecret, response: captchaToken })
+        })
+        const verifyJson = await verifyRes.json()
+        if (!verifyJson.success) {
+          console.log('reCAPTCHA verification failed:', verifyJson)
+          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 })
+        }
+      } catch (e) {
+        console.error('reCAPTCHA verification error:', e)
+        return NextResponse.json({ error: 'reCAPTCHA verification error' }, { status: 400 })
+      }
+    } else {
+      console.log('reCAPTCHA secret not set; skipping verification')
+    }
 
     // Log form data first
     console.log('=== FORM SUBMISSION RECEIVED ===')

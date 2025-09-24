@@ -145,9 +145,9 @@ const Header = () => {
         return (
      <>
        {/* Single Blue Header */}
-       <header className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
+      <header className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
          <div className="container-custom">
-                       <div className="flex items-center justify-between h-[130px]">
+                      <div className="flex items-center justify-between h-[80px]">
               {/* Left Side - Contact Info */}
               <div className="flex items-center space-x-8">
                 <div className="text-white">
@@ -169,7 +169,7 @@ const Header = () => {
                    alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
                    width={176}
                    height={50}
-                   style={{ width: 'auto', height: 'auto' }}
+                   className="h-8 w-auto sm:h-10"
                    priority
                  />
                 </Link>

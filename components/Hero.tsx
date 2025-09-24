@@ -19,10 +19,7 @@ const Hero = () => {
   const [errorMessage, setErrorMessage] = useState('')
   const recaptchaRef = useRef<ReCAPTCHA>(null)
 
-  // Debug reCAPTCHA loading
-  React.useEffect(() => {
-    console.log('reCAPTCHA site key:', "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI")
-  }, [])
+  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -44,7 +41,7 @@ const Hero = () => {
       return
     }
     
-    if (!captchaToken) {
+    if (recaptchaSiteKey && !captchaToken) {
       setErrorMessage('Please complete the reCAPTCHA verification')
       setSubmitStatus('error')
       return
@@ -84,8 +81,10 @@ const Hero = () => {
         service: 'Residential Dumpster Rentals',
         message: ''
       })
-      setCaptchaToken(null)
-      recaptchaRef.current?.reset()
+      if (recaptchaSiteKey) {
+        setCaptchaToken(null)
+        recaptchaRef.current?.reset()
+      }
       setSubmitStatus('success')
       
     } catch (error) {
@@ -122,73 +121,73 @@ const Hero = () => {
 
       <div className="relative z-10 w-full">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center">
             {/* Left Column - Content */}
             <div className="text-white">
-              <div className="mb-8">
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <div className="mb-6">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                   Professional Dumpster Rental Services
                 </h1>
-                <p className="text-xl lg:text-2xl text-blue-100 mb-8 leading-relaxed">
+                <p className="text-lg lg:text-xl text-blue-100 mb-6 leading-relaxed">
                   Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
                 </p>
               </div>
 
               {/* Key Features */}
-              <div className="grid sm:grid-cols-2 gap-6 mb-8">
+              <div className="grid sm:grid-cols-2 gap-4 mb-6">
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                    <Truck className="h-6 w-6 text-yellow-400" />
+                  <div className="w-10 h-10 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                    <Truck className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Fast Delivery</h3>
-                    <p className="text-blue-100 text-sm">Same-day service available</p>
+                    <h3 className="font-bold text-base">Fast Delivery</h3>
+                    <p className="text-blue-100 text-xs">Same-day service available</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                    <Shield className="h-6 w-6 text-yellow-400" />
+                  <div className="w-10 h-10 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                    <Shield className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Reliable Service</h3>
-                    <p className="text-blue-100 text-sm">55+ years experience</p>
+                    <h3 className="font-bold text-base">Reliable Service</h3>
+                    <p className="text-blue-100 text-xs">55+ years experience</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                    <Star className="h-6 w-6 text-yellow-400" />
+                  <div className="w-10 h-10 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                    <Star className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">5-Star Rated</h3>
-                    <p className="text-blue-100 text-sm">Customer satisfaction</p>
+                    <h3 className="font-bold text-base">5-Star Rated</h3>
+                    <p className="text-blue-100 text-xs">Customer satisfaction</p>
                   </div>
                 </div>
                 
                 <div className="flex items-center space-x-3">
-                  <div className="w-12 h-12 bg-yellow-400/20 rounded-full flex items-center justify-center">
-                    <Zap className="h-6 w-6 text-yellow-400" />
+                  <div className="w-10 h-10 bg-yellow-400/20 rounded-full flex items-center justify-center">
+                    <Zap className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg">Quick Response</h3>
-                    <p className="text-blue-100 text-sm">15min response time</p>
+                    <h3 className="font-bold text-base">Quick Response</h3>
+                    <p className="text-blue-100 text-xs">15min response time</p>
                   </div>
                 </div>
               </div>
 
               {/* CTA Buttons */}
-              <div className="flex flex-col sm:flex-row gap-4 mb-8">
+              <div className="flex flex-col sm:flex-row gap-3 mb-6">
                 <a 
                   href="tel:+18012099013" 
-                  className="inline-flex items-center justify-center bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors"
+                  className="inline-flex items-center justify-center bg-yellow-400 text-blue-900 px-6 py-3 rounded-lg font-bold text-base hover:bg-yellow-300 transition-colors"
                 >
                   <Phone className="w-5 h-5 mr-2" />
                   Call (801) 209-9013
                 </a>
                 <a 
                   href="/quote" 
-                  className="inline-flex items-center justify-center bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
+                  className="inline-flex items-center justify-center bg-white/20 text-white border-2 border-white px-6 py-3 rounded-lg font-bold text-base hover:bg-white/30 transition-colors"
                 >
                   Get Free Quote
                 </a>
@@ -204,100 +203,98 @@ const Hero = () => {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl p-6 sm:p-8">
-              <h3 className="text-xl sm:text-2xl font-bold text-white mb-4 sm:mb-6">Request Call Back</h3>
-              
+            <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Request Call Back</h3>
+
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    NAME
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-3 sm:px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-base"
-                    required
-                  />
+                {/* Row 1: Name + Phone */}
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">NAME</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">PHONE</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                      required
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    PHONE
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    required
-                  />
+                {/* Row 2: Email + Service */}
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">EMAIL (Optional)</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">SERVICE NEEDED</label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                    >
+                      <option value="Residential Dumpster Rentals">Residential Dumpster Rentals</option>
+                      <option value="Commercial Dumpster Rentals">Commercial Dumpster Rentals</option>
+                      <option value="Industrial Dumpster Rentals">Industrial Dumpster Rentals</option>
+                      <option value="Short-Term Dumpster Rentals">Short-Term Dumpster Rentals</option>
+                      <option value="Long-Term Dumpster Rentals">Long-Term Dumpster Rentals</option>
+                      <option value="Vendor Dumpster Rentals">Vendor Dumpster Rentals</option>
+                      <option value="Concrete Dumpsters">Concrete Dumpsters</option>
+                      <option value="Estate Cleanout Services">Estate Cleanout Services</option>
+                    </select>
+                  </div>
                 </div>
 
+                {/* Row 3: Message */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    EMAIL (Optional)
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    SERVICE NEEDED
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="Residential Dumpster Rentals">Residential Dumpster Rentals</option>
-                    <option value="Commercial Dumpster Rentals">Commercial Dumpster Rentals</option>
-                    <option value="Industrial Dumpster Rentals">Industrial Dumpster Rentals</option>
-                    <option value="Short-Term Dumpster Rentals">Short-Term Dumpster Rentals</option>
-                    <option value="Long-Term Dumpster Rentals">Long-Term Dumpster Rentals</option>
-                    <option value="Vendor Dumpster Rentals">Vendor Dumpster Rentals</option>
-                    <option value="Concrete Dumpsters">Concrete Dumpsters</option>
-                    <option value="Estate Cleanout Services">Estate Cleanout Services</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    Message
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    rows={3}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                     placeholder="Tell us about your project..."
                   />
                 </div>
 
-                <div className="flex justify-center">
-                  <ReCAPTCHA
-                    ref={recaptchaRef}
-                    sitekey="6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
-                    onChange={handleCaptchaChange}
-                    theme="light"
-                    size="normal"
-                  />
-                </div>
+                {/* Row 4: reCAPTCHA (optional) */}
+                {recaptchaSiteKey && (
+                  <div className="flex justify-center">
+                    <ReCAPTCHA
+                      ref={recaptchaRef}
+                      sitekey={recaptchaSiteKey}
+                      onChange={handleCaptchaChange}
+                      theme="light"
+                      size="compact"
+                    />
+                  </div>
+                )}
 
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
@@ -317,8 +314,8 @@ const Hero = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting || !captchaToken}
-                  className={`w-full btn-primary ${isSubmitting || !captchaToken ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  disabled={isSubmitting || (recaptchaSiteKey && !captchaToken)}
+                  className={`w-full btn-primary ${isSubmitting || (recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>

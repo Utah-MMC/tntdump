@@ -79,74 +79,46 @@ const About = () => {
             </div>
           </div>
 
-          <div className="relative">
-            <div className="grid grid-cols-2 gap-4">
-              <div className="space-y-4">
-                <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/dumpster2-500x500-2.jpeg"
-                    alt="Professional dumpster rental service in Utah with blue Icon Dumpsters branding"
-                    fill
-                    className="object-cover"
-                    priority
-                  />
-                </div>
-                <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/dumpster3-500x500-1.jpeg"
-                    alt="Roll-off dumpster ready for delivery with Icon Dumpsters logo"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
-              <div className="space-y-4 pt-8">
-                <div className="relative h-48 rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/construction-site-3688252_1280.jpg"
-                    alt="Local dumpster rental service near you with fast delivery"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div className="relative h-64 rounded-lg overflow-hidden shadow-lg">
-                  <Image
-                    src="/images/construction-site-3688262_1280.jpg"
-                    alt="Utah dumpster rental company serving residential and commercial customers"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </div>
+        <div className="relative">
+          <div className="grid grid-cols-2 gap-4">
+            <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/dumpster2-500x500-2.jpeg"
+                alt="Professional dumpster rental service in Utah with blue Icon Dumpsters branding"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+            <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/dumpster3-500x500-1.jpeg"
+                alt="Roll-off dumpster ready for delivery with Icon Dumpsters logo"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/construction-site-3688252_1280.jpg"
+                alt="Local dumpster rental service near you with fast delivery"
+                fill
+                className="object-cover"
+              />
+            </div>
+            <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
+              <Image
+                src="/images/construction-site-3688262_1280.jpg"
+                alt="Utah dumpster rental company serving residential and commercial customers"
+                fill
+                className="object-cover"
+              />
             </div>
           </div>
+        </div>
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-blue-600 rounded-2xl p-8 text-white">
-            <h3 className="text-2xl font-bold mb-4">
-              Why Choose Icon Dumpsters?
-            </h3>
-            <p className="text-lg mb-6 max-w-2xl mx-auto">
-              With years of experience serving Utah communities, we understand the importance of reliable waste management solutions. 
-              Our commitment to customer satisfaction, competitive pricing, and environmental responsibility sets us apart.
-            </p>
-            <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold mb-2">500+</div>
-                <div className="text-blue-100">Happy Customers</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">24/7</div>
-                <div className="text-blue-100">Customer Support</div>
-              </div>
-              <div>
-                <div className="text-3xl font-bold mb-2">Same Day</div>
-                <div className="text-blue-100">Delivery Available</div>
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
     </section>
   )

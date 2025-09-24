@@ -12,8 +12,8 @@ interface CityCardProps {
 
 const CityCard = ({ city, state, description, image, slug, services = [] }: CityCardProps) => {
   return (
-    <Link href={`/cities/${slug}`} className="group">
-      <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+    <Link href={`/cities/${slug}`} className="group block h-full">
+      <div className="bg-white h-full flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <div className="relative h-48 overflow-hidden">
           <Image
             src={image}
@@ -29,7 +29,7 @@ const CityCard = ({ city, state, description, image, slug, services = [] }: City
           </div>
         </div>
         
-        <div className="p-6">
+        <div className="p-6 flex flex-col flex-1">
           <p className="text-gray-600 mb-4 line-clamp-3">
             {description}
           </p>
@@ -55,7 +55,7 @@ const CityCard = ({ city, state, description, image, slug, services = [] }: City
             </div>
           )}
           
-          <div className="flex items-center justify-between">
+          <div className="mt-auto flex items-center justify-between">
             <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
               Learn More →
             </span>
