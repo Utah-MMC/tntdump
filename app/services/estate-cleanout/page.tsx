@@ -93,7 +93,7 @@ export default function EstateCleanoutServicePage() {
         <div className="container-custom">
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/dumpster500x500-2.jpeg"
+              src="/images/dumpster2-500x500-2.jpeg"
               alt="Estate cleanout services for inherited properties"
               fill
               className="object-cover"

@@ -204,7 +204,7 @@ const Hero = () => {
 
             {/* Right Column - Contact Form */}
             <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Request Call Back</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Get Quote</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Row 1: Name + Phone */}

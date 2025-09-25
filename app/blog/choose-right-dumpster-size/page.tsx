@@ -130,7 +130,7 @@ export default function ChooseRightDumpsterSizePage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster500x500-2.jpeg"
+                src="/images/dumpster2-500x500-2.jpeg"
                 alt="Different dumpster sizes for various projects"
                 fill
                 className="object-cover"

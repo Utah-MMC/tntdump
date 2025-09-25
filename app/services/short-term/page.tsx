@@ -111,7 +111,7 @@ export default function ShortTermServicePage() {
         <div className="container-custom">
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/dumpster500x500-2.jpeg"
+              src="/images/dumpster2-500x500-2.jpeg"
               alt="Short-term dumpster rental for temporary projects"
               fill
               className="object-cover"
