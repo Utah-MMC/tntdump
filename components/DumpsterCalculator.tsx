@@ -1,301 +1,211 @@
 'use client'
 
-import { useState } from 'react'
-import { Calculator, Home, Building, Wrench, Trash2, Info } from 'lucide-react'
+import { useMemo, useState } from 'react'
+import { Calculator, Info } from 'lucide-react'
 
-interface ProjectType {
-  id: string
-  name: string
-  icon: React.ComponentType<any>
-  description: string
-  recommendedSizes: string[]
+type Duration = '1-day' | '7-day'
+type DumpsterType = 'general' | 'concrete'
+type GeneralSize = '15-yard' | '20-yard' | '30-yard'
+
+interface GeneralPricing {
+	size: GeneralSize
+	prices: { '1-day': number; '7-day': number }
+	includedTons: { '1-day': number; '7-day': number }
 }
 
-interface DumpsterSize {
-  size: string
-  capacity: string
-  dimensions: string
-  price: string
-  description: string
-  suitableFor: string[]
-}
+const GENERAL_TON_OVERAGE = 55
 
-const projectTypes: ProjectType[] = [
-  {
-    id: 'residential',
-    name: 'Residential',
-    icon: Home,
-    description: 'Home renovations, cleanouts, and DIY projects',
-    recommendedSizes: ['10-yard', '15-yard', '20-yard']
-  },
-  {
-    id: 'commercial',
-    name: 'Commercial',
-    icon: Building,
-    description: 'Business renovations, office cleanouts',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
-  },
-  {
-    id: 'construction',
-    name: 'Construction',
-    icon: Wrench,
-    description: 'Construction debris, demolition projects',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
-  },
-  {
-    id: 'cleanout',
-    name: 'Estate Cleanout',
-    icon: Trash2,
-    description: 'Moving, estate cleanouts, large cleanups',
-    recommendedSizes: ['15-yard', '20-yard', '30-yard']
-  }
+const GENERAL_PRICING: GeneralPricing[] = [
+	{
+		size: '15-yard',
+		prices: { '1-day': 300, '7-day': 325 },
+		includedTons: { '1-day': 0, '7-day': 2 }
+	},
+	{
+		size: '20-yard',
+		prices: { '1-day': 335, '7-day': 375 },
+		includedTons: { '1-day': 0, '7-day': 2 }
+	},
+	{
+		size: '30-yard',
+		prices: { '1-day': 345, '7-day': 400 },
+		includedTons: { '1-day': 0, '7-day': 2 }
+	}
 ]
 
-const dumpsterSizes: DumpsterSize[] = [
-  {
-    size: '10-yard',
-    capacity: '10 cubic yards',
-    dimensions: '12\' x 8\' x 3.5\'',
-    price: '$299',
-    description: 'Perfect for small projects and cleanouts',
-    suitableFor: ['Small home cleanouts', 'Garage organization', 'Small renovations', 'Yard waste removal']
-  },
-  {
-    size: '15-yard',
-    capacity: '15 cubic yards',
-    dimensions: '16\' x 8\' x 3.5\'',
-    price: '$399',
-    description: 'Great for medium-sized projects',
-    suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
-  },
-  {
-    size: '20-yard',
-    capacity: '20 cubic yards',
-    dimensions: '20\' x 8\' x 3.5\'',
-    price: '$499',
-    description: 'Most popular size for most projects',
-    suitableFor: ['Large renovations', 'Estate cleanouts', 'Construction debris', 'Commercial projects']
-  },
-  {
-    size: '30-yard',
-    capacity: '30 cubic yards',
-    dimensions: '20\' x 8\' x 6\'',
-    price: '$699',
-    description: 'Ideal for large construction projects',
-    suitableFor: ['Large construction', 'Commercial cleanouts', 'Industrial projects', 'Major renovations']
-  },
-  {
-    size: '40-yard',
-    capacity: '40 cubic yards',
-    dimensions: '20\' x 8\' x 8\'',
-    price: '$899',
-    description: 'Maximum capacity for heavy-duty projects',
-    suitableFor: ['Large construction sites', 'Major demolition', 'Industrial waste', 'Large commercial projects']
-  }
-]
+const CONCRETE_PRICING: Record<Duration, number> = { '1-day': 325, '7-day': 425 }
+
+const formatCurrency = (amount: number) => `$${amount.toFixed(0)}`
 
 const DumpsterCalculator = () => {
-  const [selectedProject, setSelectedProject] = useState<string>('')
-  const [selectedSize, setSelectedSize] = useState<string>('')
-  const [showResults, setShowResults] = useState(false)
+	const [type, setType] = useState<DumpsterType>('general')
+	const [size, setSize] = useState<GeneralSize>('20-yard')
+	const [duration, setDuration] = useState<Duration>('7-day')
+	const [extraTons, setExtraTons] = useState<number>(0)
 
-  const handleProjectSelect = (projectId: string) => {
-    setSelectedProject(projectId)
-    setSelectedSize('')
-    setShowResults(false)
-  }
+	const selectedGeneral = useMemo(
+		() => GENERAL_PRICING.find(s => s.size === size)!,
+		[size]
+	)
 
-  const handleSizeSelect = (size: string) => {
-    setSelectedSize(size)
-    setShowResults(true)
-  }
+	const basePrice = useMemo(() => {
+		if (type === 'general') {
+			return selectedGeneral.prices[duration]
+		}
+		return CONCRETE_PRICING[duration]
+	}, [type, selectedGeneral, duration])
 
-  const selectedProjectData = projectTypes.find(p => p.id === selectedProject)
-  const selectedSizeData = dumpsterSizes.find(s => s.size === selectedSize)
-  const recommendedSizes = selectedProjectData?.recommendedSizes || []
+	const tonsIncluded = useMemo(() => {
+		return type === 'general' ? selectedGeneral.includedTons[duration] : 0
+	}, [type, selectedGeneral, duration])
 
-  return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-custom">
-        <div className="text-center mb-12">
-          <div className="flex items-center justify-center mb-4">
-            <Calculator className="h-8 w-8 text-blue-600 mr-3" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
-              Dumpster Size Calculator
-            </h2>
-          </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
-            Get instant recommendations and pricing.
-          </p>
-        </div>
+	const overageCost = useMemo(() => {
+		if (type !== 'general') return 0
+		const extra = Math.max(0, extraTons)
+		return extra * GENERAL_TON_OVERAGE
+	}, [type, extraTons])
 
-        <div className="max-w-4xl mx-auto">
-          {/* Step 1: Project Type Selection */}
-          <div className="mb-8">
-            <h3 className="text-xl font-semibold text-gray-900 mb-6">Step 1: What type of project are you working on?</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              {projectTypes.map((project) => {
-                const Icon = project.icon
-                return (
-                  <button
-                    key={project.id}
-                    onClick={() => handleProjectSelect(project.id)}
-                    className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
-                      selectedProject === project.id
-                        ? 'border-blue-500 bg-blue-50 shadow-md'
-                        : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
-                    }`}
-                  >
-                    <div className="flex items-center mb-3">
-                      <Icon className={`h-6 w-6 mr-2 ${
-                        selectedProject === project.id ? 'text-blue-600' : 'text-gray-600'
-                      }`} />
-                      <h4 className="font-semibold text-gray-900">{project.name}</h4>
-                    </div>
-                    <p className="text-sm text-gray-600">{project.description}</p>
-                  </button>
-                )
-              })}
-            </div>
-          </div>
+	const total = basePrice + overageCost
 
-          {/* Step 2: Size Selection */}
-          {selectedProject && (
-            <div className="mb-8">
-              <h3 className="text-xl font-semibold text-gray-900 mb-6">
-                Step 2: Choose your dumpster size
-              </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
-                {dumpsterSizes
-                  .filter(size => recommendedSizes.includes(size.size))
-                  .map((size) => (
-                    <button
-                      key={size.size}
-                      onClick={() => handleSizeSelect(size.size)}
-                      className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
-                        selectedSize === size.size
-                          ? 'border-blue-500 bg-blue-50 shadow-md'
-                          : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
-                      }`}
-                    >
-                      <div className="flex justify-between items-start mb-3">
-                        <h4 className="font-bold text-lg text-gray-900">{size.size}</h4>
-                        <span className="text-2xl font-bold text-blue-600">{size.price}</span>
-                      </div>
-                      <p className="text-sm text-gray-600 mb-2">{size.capacity}</p>
-                      <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
-                      <p className="text-sm text-gray-700">{size.description}</p>
-                    </button>
-                  ))}
-              </div>
-            </div>
-          )}
+	return (
+		<section className="py-8 bg-gray-50">
+			<div className="container-custom">
+				<div className="text-center mb-6">
+					<div className="flex items-center justify-center mb-4">
+						<Calculator className="h-7 w-7 text-blue-600 mr-2" />
+						<h2 className="text-2xl lg:text-3xl font-bold text-gray-900">
+							Dumpster Pricing Calculator
+						</h2>
+					</div>
+					<p className="text-sm text-gray-600 max-w-3xl mx-auto">
+						Select dumpster type, duration, and optional extra tons to see pricing.
+					</p>
+				</div>
 
-          {/* Results */}
-          {showResults && selectedSizeData && (
-            <div className="bg-white rounded-xl shadow-lg p-8 border border-gray-200">
-              <div className="text-center mb-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                  Perfect! Here's your recommendation:
-                </h3>
-                <p className="text-gray-600">
-                  Based on your {selectedProjectData?.name.toLowerCase()} project, we recommend the {selectedSizeData.size} dumpster.
-                </p>
-              </div>
+				<div className="max-w-6xl mx-auto grid lg:grid-cols-2 gap-6">
+					{/* Controls */}
+					<div>
+						{/* Type */}
+						<div className="mb-4">
+						<h3 className="text-xl font-semibold text-gray-900 mb-3">Dumpster Type</h3>
+							<div className="grid grid-cols-2 gap-3">
+							<button
+								onClick={() => setType('general')}
+									className={`p-3 rounded-lg border-2 ${type === 'general' ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'}`}
+							>
+								General Debris
+							</button>
+							<button
+								onClick={() => setType('concrete')}
+									className={`p-3 rounded-lg border-2 ${type === 'concrete' ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'}`}
+							>
+								Concrete Dumpster
+							</button>
+						</div>
+					</div>
 
-              <div className="grid lg:grid-cols-2 gap-8">
-                {/* Dumpster Details */}
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Dumpster Details</h4>
-                  <div className="space-y-3">
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Size:</span>
-                      <span className="font-semibold">{selectedSizeData.size}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Capacity:</span>
-                      <span className="font-semibold">{selectedSizeData.capacity}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Dimensions:</span>
-                      <span className="font-semibold">{selectedSizeData.dimensions}</span>
-                    </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Price:</span>
-                      <span className="font-bold text-2xl text-blue-600">{selectedSizeData.price}</span>
-                    </div>
-                  </div>
-                </div>
+						{/* Size (general only) */}
+						{type === 'general' && (
+							<div className="mb-4">
+							<h3 className="text-xl font-semibold text-gray-900 mb-3">Size</h3>
+							<div className="grid md:grid-cols-3 gap-3">
+								{GENERAL_PRICING.map(s => (
+									<button
+										key={s.size}
+										onClick={() => setSize(s.size)}
+										className={`p-4 rounded-lg border-2 text-left ${size === s.size ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'}`}
+									>
+										<div className="flex items-center justify-between">
+											<span className="font-semibold text-gray-900 text-sm">{s.size}</span>
+											<span className="font-bold text-blue-600 text-base">{formatCurrency(s.prices[duration])}</span>
+										</div>
+										<p className="text-xs text-gray-600 mt-1">{s.includedTons[duration]} tons included</p>
+									</button>
+								))}
+							</div>
+						</div>
+						)}
 
-                {/* Suitable For */}
-                <div>
-                  <h4 className="text-xl font-semibold text-gray-900 mb-4">Perfect for:</h4>
-                  <ul className="space-y-2">
-                    {selectedSizeData.suitableFor.map((item, index) => (
-                      <li key={index} className="flex items-center">
-                        <div className="w-2 h-2 bg-blue-500 rounded-full mr-3"></div>
-                        <span className="text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
+						{/* Duration */}
+						<div className="mb-4">
+						<h3 className="text-xl font-semibold text-gray-900 mb-3">Duration</h3>
+						<div className="grid grid-cols-2 gap-3">
+							<button
+								onClick={() => setDuration('1-day')}
+									className={`p-3 rounded-lg border-2 ${duration === '1-day' ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'}`}
+							>
+								1 Day
+							</button>
+							<button
+								onClick={() => setDuration('7-day')}
+									className={`p-3 rounded-lg border-2 ${duration === '7-day' ? 'border-blue-500 bg-blue-50' : 'border-gray-200 bg-white hover:border-blue-300'}`}
+							>
+								7 Days
+							</button>
+						</div>
+					</div>
 
-              {/* Call to Action */}
-              <div className="mt-8 pt-6 border-t border-gray-200">
-                <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <a
-                    href="/quote"
-                    className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
-                  >
-                    Get Free Quote
-                  </a>
-                  <a
-                    href="tel:+18012099013"
-                    className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-50 transition-colors"
-                  >
-                    Call (801) 209-9013
-                  </a>
-                </div>
-                <p className="text-center text-sm text-gray-500 mt-4">
-                  Free same-day estimates • Fast delivery • Competitive pricing
-                </p>
-              </div>
-            </div>
-          )}
+						{/* Extra tons (general only) */}
+						{type === 'general' && (
+							<div className="mb-4">
+							<h3 className="text-xl font-semibold text-gray-900 mb-3">Extra Tons (optional)</h3>
+							<div className="flex items-center gap-3">
+								<input
+									type="number"
+									min={0}
+									step={0.5}
+									value={extraTons}
+									onChange={(e) => setExtraTons(Number(e.target.value))}
+									className="w-24 px-3 py-2 border border-gray-300 rounded-lg"
+								/>
+								<span className="text-gray-600 text-sm">x {formatCurrency(GENERAL_TON_OVERAGE)}/ton over included</span>
+							</div>
+							<p className="text-xs text-gray-500 mt-2">{tonsIncluded} tons included with selected option.</p>
+						</div>
+						)}
+					</div>
 
-          {/* Help Section */}
-          <div className="mt-12 bg-blue-50 rounded-lg p-6">
-            <div className="flex items-start">
-              <Info className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Need Help Choosing?</h4>
-                <p className="text-gray-700 mb-4">
-                  Our experienced team can help you choose the right dumpster size for your specific project. 
-                  We offer free consultations and same-day estimates.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="tel:+18012099013"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    📞 Call (801) 209-9013
-                  </a>
-                  <a
-                    href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    💬 Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  )
+					{/* Summary */}
+					<div className="bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+						<h3 className="text-xl font-bold text-gray-900 mb-4">Your Estimate</h3>
+						<div className="space-y-2 text-sm">
+							<div className="flex justify-between">
+								<span className="text-gray-600">Base price</span>
+								<span className="font-semibold">{formatCurrency(basePrice)}</span>
+							</div>
+							{type === 'general' && (
+								<>
+									<div className="flex justify-between">
+										<span className="text-gray-600">Included tons</span>
+										<span className="font-semibold">{tonsIncluded}</span>
+									</div>
+									<div className="flex justify-between">
+										<span className="text-gray-600">Extra tons</span>
+										<span className="font-semibold">{extraTons}</span>
+									</div>
+									<div className="flex justify-between">
+										<span className="text-gray-600">Overage cost</span>
+										<span className="font-semibold">{formatCurrency(overageCost)}</span>
+									</div>
+								</>
+							)}
+						</div>
+						<div className="mt-3 pt-3 border-t border-gray-200 flex justify-between items-center">
+							<span className="text-lg font-bold">Total</span>
+							<span className="text-2xl font-extrabold text-blue-600">{formatCurrency(total)}</span>
+						</div>
+
+						<div className="mt-4 flex flex-col sm:flex-row gap-3 justify-center">
+							<a href="/quote" className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors">Get Free Quote</a>
+							<a href="tel:+18012099013" className="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-50 transition-colors">Call (801) 209-9013</a>
+						</div>
+						<p className="text-center text-xs text-gray-500 mt-3">7-day rentals include 2 tons. 1-day rentals include 0 tons. Overage billed at {formatCurrency(GENERAL_TON_OVERAGE)}/ton. Concrete dumpsters are flat-rate (no tons included).</p>
+					</div>
+
+				</div>
+			</div>
+		</section>
+	)
 }
 
 export default DumpsterCalculator
