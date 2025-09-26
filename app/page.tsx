@@ -4,11 +4,40 @@ import About from '@/components/About'
 import Contact from '@/components/Contact'
 import CityCard from '@/components/CityCard'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
+import Image from 'next/image'
 
 export default function Home() {
   return (
     <main className="min-h-screen">
       <Hero />
+
+      {/* Featured Images Section (below Hero) */}
+      <section className="bg-white">
+        <div className="container-custom py-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="relative w-full h-56 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow">
+              <Image
+                src="/images/construction-dumpster-for-rent.png"
+                alt="Construction dumpster for rent"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+            <div className="relative w-full h-56 sm:h-72 md:h-80 rounded-lg overflow-hidden shadow">
+              <Image
+                src="/images/residential-dumpster-for-rent.png"
+                alt="Residential dumpster for rent"
+                fill
+                sizes="(min-width: 768px) 50vw, 100vw"
+                className="object-cover"
+                priority={false}
+              />
+            </div>
+          </div>
+        </div>
+      </section>
       
       <Services />
       
