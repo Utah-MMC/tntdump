@@ -1,5 +1,7 @@
+"use client"
 import Link from 'next/link'
 import Image from 'next/image'
+import HorizontalScroller from './HorizontalScroller'
 
 const Services = () => {
   const services = [
@@ -74,11 +76,12 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        {/* 4-column responsive grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch">
           {services.map((service, index) => (
-            <Link key={index} href={service.href} className="group">
-              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                <div className="relative h-48">
+            <Link key={index} href={service.href} className="group h-full" data-service-card>
+              <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
+                <div className="relative h-48 md:h-52 flex-shrink-0">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -86,14 +89,14 @@ const Services = () => {
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">
+                <div className="p-6 flex flex-col flex-1">
+                  <h3 className="text-lg md:text-xl font-bold text-gray-900 mb-2 md:mb-3 group-hover:text-blue-600 transition-colors">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4 line-clamp-4">
+                  <p className="text-gray-600 mb-4 line-clamp-3 md:line-clamp-4 flex-1">
                     {service.description}
                   </p>
-                  <div className="inline-flex items-center text-blue-600 group-hover:text-blue-700 font-semibold transition-colors">
+                  <div className="mt-auto inline-flex items-center text-blue-600 group-hover:text-blue-700 font-semibold transition-colors">
                     Learn More
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />

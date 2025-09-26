@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
+import HorizontalScroller from '@/components/HorizontalScroller'
 import { CheckCircle, Phone, Clock } from 'lucide-react'
 
 export default function DumpstersPage() {
@@ -117,10 +118,10 @@ export default function DumpstersPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch">
             {services.map((service, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
-                <div className="relative h-48">
+              <div key={index} className="bg-white rounded-lg shadow-lg overflow-hidden card-hover h-full flex flex-col">
+                <div className="relative h-48 flex-shrink-0">
                   <Image
                     src={service.image}
                     alt={service.alt}
@@ -128,11 +129,11 @@ export default function DumpstersPage() {
                     className="object-cover"
                   />
                 </div>
-                <div className="p-6">
+                <div className="p-6 flex flex-col flex-1">
                   <h3 className="text-xl font-bold text-gray-900 mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 mb-4">
+                  <p className="text-gray-600 mb-4 flex-1">
                     {service.description}
                   </p>
                   
@@ -150,7 +151,7 @@ export default function DumpstersPage() {
                   
                   <Link 
                     href={service.href}
-                    className="inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors"
+                    className="mt-auto inline-flex items-center text-primary-600 hover:text-primary-700 font-semibold transition-colors"
                   >
                     Learn More
                     <svg className="ml-2 w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
