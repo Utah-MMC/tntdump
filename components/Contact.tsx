@@ -1,3 +1,4 @@
+"use client"
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
 import Image from 'next/image'
 
