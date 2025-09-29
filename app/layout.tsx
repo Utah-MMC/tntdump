@@ -78,15 +78,6 @@ export default function RootLayout({
         <link rel="preload" as="style" href="/css/main.4f897a.css" />
         <link rel="stylesheet" href="/css/main.4f897a.css" media="print" onLoad="this.media='all'" />
         <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
-        {/* Preload hero background image for faster LCP */}
-        <link
-          rel="preload"
-          as="image"
-          href="/images/tand-t-dumpsters-hero-home-1920w.webp"
-          imagesrcset="/images/tand-t-dumpsters-hero-home-1920w.webp 1920w"
-          imagesizes="100vw"
-          fetchpriority="high"
-        />
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" strategy="afterInteractive" />
         {/* Google tag (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="afterInteractive" />

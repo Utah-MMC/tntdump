@@ -119,7 +119,7 @@ const Hero = () => {
           priority
           fetchPriority="high"
           sizes="100vw"
-          quality={80}
+          quality={60}
           className="object-cover"
         />
       </div>
