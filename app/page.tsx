@@ -24,7 +24,8 @@ export default function Home() {
                 src="/images/construction-dumpster-for-rent.png"
                 alt="Construction dumpster for rent"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
                 priority={false}
               />
@@ -34,7 +35,8 @@ export default function Home() {
                 src="/images/residential-dumpster-for-rent.png"
                 alt="Residential dumpster for rent"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
                 priority={false}
               />

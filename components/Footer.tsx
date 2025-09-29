@@ -42,7 +42,6 @@ const Footer = () => {
                  width={88}
                  height={25}
                  className="sm:w-[100px] sm:h-[28px]"
-                 priority
                />
              </div>
              <h3 className="text-lg sm:text-xl font-bold text-primary-400">T&T Dumpsters</h3>
