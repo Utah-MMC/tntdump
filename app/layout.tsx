@@ -9,7 +9,13 @@ import PerformanceMonitor from '@/components/PerformanceMonitor'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
+// Determine the base URL for absolute metadata URLs (OG/Twitter/canonical)
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
+
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
   description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
   keywords: 'dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, wasatch front dumpster rental',
