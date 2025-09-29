@@ -109,9 +109,21 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center" style={{backgroundImage: "url('/images/tand-t-dumpsters-hero-home-1920w.webp')"}}>
+    <section id="hero" className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center">
+      {/* Background image as actual <Image> for proper LCP and preload */}
+      <div className="absolute inset-0 hero-bg">
+        <Image
+          src="/images/tand-t-dumpsters-hero-home-1920w.webp"
+          alt="Dumpster rental services hero background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          className="object-cover"
+        />
+      </div>
       {/* Enhanced gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-700/70 to-primary-600/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-700/70 to-primary-600/80 hero-overlay"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
