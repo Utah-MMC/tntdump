@@ -153,7 +153,7 @@ const Hero = () => {
                     <Truck className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Fast Delivery</h3>
+                    <h2 className="font-bold text-base">Fast Delivery</h2>
                     <p className="text-blue-100 text-xs">Same-day service available</p>
                   </div>
                 </div>
@@ -163,7 +163,7 @@ const Hero = () => {
                     <Shield className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Reliable Service</h3>
+                    <h2 className="font-bold text-base">Reliable Service</h2>
                     <p className="text-blue-100 text-xs">55+ years experience</p>
                   </div>
                 </div>
@@ -173,7 +173,7 @@ const Hero = () => {
                     <Star className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">5-Star Rated</h3>
+                    <h2 className="font-bold text-base">5-Star Rated</h2>
                     <p className="text-blue-100 text-xs">Customer satisfaction</p>
                   </div>
                 </div>
@@ -183,7 +183,7 @@ const Hero = () => {
                     <Zap className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Quick Response</h3>
+                    <h2 className="font-bold text-base">Quick Response</h2>
                     <p className="text-blue-100 text-xs">15min response time</p>
                   </div>
                 </div>
