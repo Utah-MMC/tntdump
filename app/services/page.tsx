@@ -1,4 +1,5 @@
 import ServiceCard from '@/components/ServiceCard'
+import HorizontalScroller from '@/components/HorizontalScroller'
 import HeroSection from '@/components/HeroSection'
 import { Metadata } from 'next'
 
@@ -106,17 +107,20 @@ export default function ServicesPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch">
             {services.map((service, index) => (
-              <ServiceCard
-                key={index}
-                title={service.title}
-                description={service.description}
-                image={service.image}
-                slug={service.slug}
-                features={service.features}
-                price={service.price}
-              />
+              <div key={index} className="h-full flex">
+                <div className="w-full flex flex-col">
+                  <ServiceCard
+                    title={service.title}
+                    description={service.description}
+                    image={service.image}
+                    slug={service.slug}
+                    features={service.features}
+                    price={service.price}
+                  />
+                </div>
+              </div>
             ))}
           </div>
 
