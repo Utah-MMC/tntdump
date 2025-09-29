@@ -66,6 +66,8 @@ const nextConfig = {
   // Allow deploy to succeed even if there are ESLint/TypeScript errors.
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
+
+  // No redirects/rewrites for city pages; they now exist at new paths
 };
 
 module.exports = nextConfig;

@@ -12,7 +12,7 @@ interface CityCardProps {
 
 const CityCard = ({ city, state, description, image, slug, services = [] }: CityCardProps) => {
   return (
-    <Link href={`/cities/${slug}`} className="group block h-full">
+    <Link href={`/dumpster-rental-${slug}-ut`} className="group block h-full">
       <div className="bg-white h-full flex flex-col rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
         <div className="relative h-48 overflow-hidden">
           <Image

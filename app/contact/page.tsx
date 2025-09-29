@@ -325,27 +325,27 @@ export default function ContactPage() {
               <div className="space-y-4">
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/west-jordan" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">West Jordan</a>
+                  <a href="/dumpster-rental-west-jordan-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">West Jordan</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/salt-lake-city" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Salt Lake City</a>
+                  <a href="/dumpster-rental-salt-lake-city-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Salt Lake City</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/murray" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Murray</a>
+                  <a href="/dumpster-rental-murray-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Murray</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/sandy" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Sandy</a>
+                  <a href="/dumpster-rental-sandy-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Sandy</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/draper" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Draper</a>
+                  <a href="/dumpster-rental-draper-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Draper</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/cities/riverton" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Riverton</a>
+                  <a href="/dumpster-rental-riverton-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Riverton</a>
                 </div>
                 <div className="flex items-center space-x-3">
                   <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
