@@ -126,7 +126,7 @@ const Hero = () => {
             <div className="text-white">
               <div className="mb-6">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                  Professional Dumpster Rental Services
+                  Dumpster Rental in Salt Lake County
                 </h1>
                 <p className="text-lg lg:text-xl text-blue-100 mb-6 leading-relaxed">
                   Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
@@ -314,8 +314,8 @@ const Hero = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting || (recaptchaSiteKey && !captchaToken)}
-                  className={`w-full btn-primary ${isSubmitting || (recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  disabled={isSubmitting || (!!recaptchaSiteKey && !captchaToken)}
+                  className={`w-full btn-primary ${isSubmitting || (!!recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
