@@ -87,7 +87,6 @@ const About = () => {
                 alt="Professional dumpster rental service in Utah with blue Icon Dumpsters branding"
                 fill
                 className="object-cover"
-                priority
               />
             </div>
             <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">

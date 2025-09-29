@@ -145,7 +145,7 @@ const Header = () => {
         return (
      <>
        {/* Single Blue Header */}
-      <header className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
+      <header id="site-header" className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
          <div className="container-custom">
                       <div className="flex items-center justify-between h-[80px]">
               {/* Left Side - Contact Info */}
