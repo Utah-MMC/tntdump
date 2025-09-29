@@ -3,7 +3,7 @@ const path = require('path');
 
 function generateCityPage(cityName, stateCode) {
   const citySlug = cityName.toLowerCase().replace(/\s+/g, '-');
-  const pageDir = path.join(__dirname, '..', 'app', 'cities', citySlug);
+  const pageDir = path.join(__dirname, '..', 'app', `dumpster-rental-${citySlug}-ut`);
   const pageFile = path.join(pageDir, 'page.tsx');
 
   // Create directory if it doesn't exist
@@ -12,7 +12,8 @@ function generateCityPage(cityName, stateCode) {
   }
 
   const pageContent = `import { Metadata } from 'next'
-import CityPageTemplate, { generateCityMetadata } from '@/components/CityPageTemplate'
+import CityPageTemplate from '@/components/CityPageTemplate'
+import { generateCityMetadata } from '@/lib/cityMetadata'
 
 export const metadata: Metadata = generateCityMetadata('${cityName}', '${stateCode}')
 

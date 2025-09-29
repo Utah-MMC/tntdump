@@ -97,12 +97,12 @@ const Contact = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-4">Serving Area</h3>
               <div className="space-y-2">
-                <p className="text-gray-600">• <a href="/cities/west-jordan" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
-                <p className="text-gray-600">• <a href="/cities/salt-lake-city" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
-                <p className="text-gray-600">• <a href="/cities/murray" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
-                <p className="text-gray-600">• <a href="/cities/sandy" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
-                <p className="text-gray-600">• <a href="/cities/draper" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
-                <p className="text-gray-600">• <a href="/cities/riverton" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
                 <p className="text-gray-600">• And surrounding areas</p>
               </div>
             </div>
