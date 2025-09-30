@@ -19,9 +19,7 @@ export const metadata: Metadata = {
   title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
   description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
   keywords: 'dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, wasatch front dumpster rental',
-  alternates: {
-    canonical: 'https://tntdump.com',
-  },
+  metadataBase: new URL('https://tntdump.com'),
   openGraph: {
     title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
     description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
