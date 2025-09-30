@@ -3,7 +3,8 @@
 import React, { useState, useRef } from 'react'
 import { Phone, Clock, CheckCircle, Star, Truck, Shield, Zap } from 'lucide-react'
 import Image from 'next/image'
-import ReCAPTCHA from 'react-google-recaptcha'
+import dynamic from 'next/dynamic'
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false })
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const Hero = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const recaptchaRef = useRef<any>(null)
 
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
