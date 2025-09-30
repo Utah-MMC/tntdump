@@ -1,0 +1,59 @@
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "name": "T&T Dumpsters",
+      "telephone": "+1-801-209-9013",
+      "areaServed": "Wasatch Front",
+      "url": "https://tntdumpsters.com/services",
+      "image": "https://tntdumpsters.com/images/dumpster-hero.jpg"
+    },
+    {
+      "@type": "Service",
+      "serviceType": [
+        "Residential Dumpster",
+        "Commercial Dumpster",
+        "Concrete Dumpster",
+        "Estate Cleanout"
+      ],
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "T&T Dumpsters"
+      },
+      "areaServed": "Wasatch Front"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What can I put in the dumpster?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most household debris, wood, drywall, flooring, and roofing. No hazardous waste or liquids."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How fast can you deliver?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Many ZIP codes qualify for same-day delivery when ordered by 10am."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What about overage fees?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Each size includes a set tonnage. Overage is billed per ton. We’ll show your included weight before you book."
+          }
+        }
+      ]
+    }
+  ]
+}
+
+
+
