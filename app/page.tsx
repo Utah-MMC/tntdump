@@ -47,26 +47,6 @@ export default function Home() {
       
       <Services />
       
-      {/* Discover T&T Dumpsters Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="max-w-4xl mx-auto text-center">
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              Discover T&T Dumpsters: Your Reliable Partner in Waste Management
-            </h2>
-            
-            <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
-              <p>
-                T&T Dumpsters, a family-owned business established in 1965, has been providing exceptional dumps and garbage services in West Jordan, UT for over 55 years. Our longevity in the industry is a testament to our commitment to quality service, customer satisfaction, and environmental responsibility.
-              </p>
-              
-              <p>
-                We offer a wide range of services, including residential, commercial, and industrial dumpster services, as well as short-term and long-term dumpster services. We also provide vendor dumpster rental services and concrete dumpsters. Our team is dedicated to delivering fast and efficient service, with free same-day estimates, quick turnaround times, and competitive pricing. We are proud to be locally owned, ensuring that we understand and cater to the unique needs of our community.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
       
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
