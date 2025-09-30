@@ -145,7 +145,7 @@ const Header = () => {
         return (
      <>
        {/* Single Blue Header */}
-      <header className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
+      <header id="site-header" className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
          <div className="container-custom">
                       <div className="flex items-center justify-between h-[80px]">
               {/* Left Side - Contact Info */}
@@ -164,14 +164,15 @@ const Header = () => {
               {/* Logo - Centered */}
               <div className="flex items-center justify-center flex-1">
                 <Link href="/" className="flex items-center">
-                                   <Image
-                   src="/images/t-and-t-dumpsters-logo-176w.webp"
-                   alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                   width={176}
-                   height={50}
-                   className="h-8 w-auto sm:h-10"
-                   priority
-                 />
+                  <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
+                    <Image
+                      src="/images/t-and-t-dumpsters-logo-176w.webp"
+                      alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                 </Link>
               </div>
 

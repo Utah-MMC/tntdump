@@ -1,9 +1,10 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Phone, Clock, CheckCircle, Star, Truck, Shield, Zap } from 'lucide-react'
 import Image from 'next/image'
-import ReCAPTCHA from 'react-google-recaptcha'
+import dynamic from 'next/dynamic'
+const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false })
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -17,7 +18,7 @@ const Hero = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const recaptchaRef = useRef<ReCAPTCHA>(null)
+  const [recaptchaKey, setRecaptchaKey] = useState(0)
 
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
@@ -83,7 +84,7 @@ const Hero = () => {
       })
       if (recaptchaSiteKey) {
         setCaptchaToken(null)
-        recaptchaRef.current?.reset()
+        setRecaptchaKey((k) => k + 1)
       }
       setSubmitStatus('success')
       
@@ -109,9 +110,22 @@ const Hero = () => {
   }
 
   return (
-    <section className="relative min-h-[75vh] bg-cover bg-center bg-no-repeat flex items-start pt-12 sm:pt-16" style={{backgroundImage: "url('/images/tand-t-dumpsters-hero-home-1920w.webp')"}}>
+    <section id="hero" className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat flex items-start pt-10 sm:pt-12">
+      {/* Background image as actual <Image> for proper LCP and preload */}
+      <div className="absolute inset-0 hero-bg">
+        <Image
+          src="/images/tand-t-dumpsters-hero-home-1920w.webp"
+          alt="Dumpster rental services hero background"
+          fill
+          priority
+          fetchPriority="high"
+          sizes="100vw"
+          quality={60}
+          className="object-cover"
+        />
+      </div>
       {/* Enhanced gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-700/70 to-primary-600/80"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-primary-900/80 via-primary-700/70 to-primary-600/80 hero-overlay"></div>
       
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
@@ -126,7 +140,7 @@ const Hero = () => {
             <div className="text-white">
               <div className="mb-6">
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                  Professional Dumpster Rental Services
+                  Dumpster Rental in Salt Lake County
                 </h1>
                 <p className="text-lg lg:text-xl text-blue-100 mb-6 leading-relaxed">
                   Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
@@ -140,7 +154,7 @@ const Hero = () => {
                     <Truck className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Fast Delivery</h3>
+                    <h2 className="font-bold text-base">Fast Delivery</h2>
                     <p className="text-blue-100 text-xs">Same-day service available</p>
                   </div>
                 </div>
@@ -150,7 +164,7 @@ const Hero = () => {
                     <Shield className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Reliable Service</h3>
+                    <h2 className="font-bold text-base">Reliable Service</h2>
                     <p className="text-blue-100 text-xs">55+ years experience</p>
                   </div>
                 </div>
@@ -160,7 +174,7 @@ const Hero = () => {
                     <Star className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">5-Star Rated</h3>
+                    <h2 className="font-bold text-base">5-Star Rated</h2>
                     <p className="text-blue-100 text-xs">Customer satisfaction</p>
                   </div>
                 </div>
@@ -170,7 +184,7 @@ const Hero = () => {
                     <Zap className="h-5 w-5 text-yellow-400" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-base">Quick Response</h3>
+                    <h2 className="font-bold text-base">Quick Response</h2>
                     <p className="text-blue-100 text-xs">15min response time</p>
                   </div>
                 </div>
@@ -287,7 +301,7 @@ const Hero = () => {
                 {recaptchaSiteKey && (
                   <div className="flex justify-center">
                     <ReCAPTCHA
-                      ref={recaptchaRef}
+                      key={recaptchaKey}
                       sitekey={recaptchaSiteKey}
                       onChange={handleCaptchaChange}
                       theme="light"
