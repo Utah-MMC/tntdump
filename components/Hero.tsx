@@ -113,7 +113,7 @@ const Hero = () => {
 
   return (
 
-    <section id="hero" className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat flex items-start pt-10 sm:pt-12">
+    <section id="hero" className="relative bg-cover bg-center bg-no-repeat flex items-start pt-6 sm:pt-8 pb-2 sm:pb-4">
 
       {/* Background image as actual <Image> for proper LCP and preload */}
       <div className="absolute inset-0 hero-bg">
