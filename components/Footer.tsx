@@ -36,14 +36,14 @@ const Footer = () => {
                      {/* Company Info */}
            <div className="space-y-4">
              <div className="flex items-center space-x-2">
-               <Image
-                 src="/images/t-and-t-dumpsters-logo-176w.webp"
-                 alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                 width={88}
-                 height={25}
-                 className="sm:w-[100px] sm:h-[28px]"
-                 priority
-               />
+              <Image
+                src="/images/t-and-t-dumpsters-logo-176w.webp"
+                alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
+                width={176}
+                height={50}
+                className="h-8 w-auto sm:h-10"
+                priority
+              />
              </div>
              <h3 className="text-lg sm:text-xl font-bold text-primary-400">T&T Dumpsters</h3>
             <p className="text-gray-300">
