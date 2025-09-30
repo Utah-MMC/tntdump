@@ -20,46 +20,11 @@ const Services = () => {
       alt: 'Commercial dumpster rental service for businesses'
     },
     {
-      title: 'Industrial Dumpster Service',
-      description: 'Our industrial dumpster service is designed to handle the heavy-duty waste disposal needs of industrial operations. With our industrial dumpster service, you can focus on your operations while we take care of your waste.',
-      image: '/images/dumpster2-500x500-2.jpeg',
-      href: '/dumpsters/industrial',
-      alt: 'Industrial dumpster rental service for heavy-duty operations'
-    },
-    {
-      title: 'Short-Term Dumpster Service',
-      description: 'Our short-term dumpster service is perfect for projects with a defined timeline. Whether you\'re undertaking a home renovation or organizing a one-off event, our short-term dumpster service provides flexible and convenient waste management.',
-      image: '/images/dumpsterSmallBanner.jpeg',
-      href: '/dumpsters/short-term',
-      alt: 'Short-term dumpster rental for temporary projects'
-    },
-    {
-      title: 'Long-Term Dumpster Service',
-      description: 'For ongoing projects or businesses with consistent waste disposal needs, T&T Dumpsters long-term dumpster service is the ideal choice. We provide reliable, regular pick-ups to ensure your site remains clean and safe.',
-      image: '/images/dumpsters.jpeg',
-      href: '/dumpsters/long-term',
-      alt: 'Long-term dumpster rental for ongoing projects'
-    },
-    {
-      title: 'Vendor Dumpster Rental Service',
-      description: 'We offer a hassle-free solution for vendors needing waste management for their operations. If you\'re looking for reliable services, we deliver and pick up the dumpster according to your schedule, providing a seamless service experience.',
-      image: '/images/dumpsters2.jpeg',
-      href: '/dumpsters/vendor',
-      alt: 'Vendor dumpster rental service for vendors and contractors'
-    },
-    {
-      title: 'Concrete Dumpsters',
-      description: 'Our concrete dumpsters are specifically designed to handle heavy materials such as concrete, brick, and asphalt. This service is ideal for construction and demolition projects, ensuring efficient and safe waste disposal, every single time.',
+      title: 'Construction Dumpster Service',
+      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolition—like concrete, lumber, drywall, and roofing—so your job site stays clean and safe.',
       image: '/images/Construction-Rental-480x480.jpg',
       href: '/dumpsters/concrete',
-      alt: 'Concrete dumpsters for construction and demolition waste'
-    },
-    {
-      title: 'Estate Cleanout Services',
-      description: 'Looking for estate cleanout services? T&T Dumpsters offers efficient and reliable solutions for your estate cleanout needs. Choose our tailored residential dumpster rentals for managing inherited estates and let us do all the work for you.',
-      image: '/images/pexels-pamelamariephoto-2625896.jpg',
-      href: '/estate-cleanouts',
-      alt: 'Estate cleanout services for inherited properties'
+      alt: 'Construction dumpster rental service for construction and demolition debris'
     }
   ]
 
@@ -77,7 +42,7 @@ const Services = () => {
         </div>
 
         {/* 4-column responsive grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 items-stretch">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-8 items-stretch justify-center">
           {services.map((service, index) => (
             <Link key={index} href={service.href} className="group h-full" data-service-card>
               <div className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 h-full flex flex-col">
