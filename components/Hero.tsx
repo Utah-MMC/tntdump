@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useRef } from 'react'
+import React, { useState } from 'react'
 import { Phone, Clock, CheckCircle, Star, Truck, Shield, Zap } from 'lucide-react'
 import Image from 'next/image'
 import dynamic from 'next/dynamic'
@@ -18,7 +18,9 @@ const Hero = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-  const recaptchaRef = useRef<any>(null)
+
+  const [recaptchaKey, setRecaptchaKey] = useState(0)
+
 
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
@@ -84,7 +86,7 @@ const Hero = () => {
       })
       if (recaptchaSiteKey) {
         setCaptchaToken(null)
-        recaptchaRef.current?.reset()
+        setRecaptchaKey((k) => k + 1)
       }
       setSubmitStatus('success')
       
@@ -110,7 +112,9 @@ const Hero = () => {
   }
 
   return (
-    <section id="hero" className="relative min-h-screen bg-cover bg-center bg-no-repeat flex items-center">
+
+    <section id="hero" className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat flex items-start pt-10 sm:pt-12">
+
       {/* Background image as actual <Image> for proper LCP and preload */}
       <div className="absolute inset-0 hero-bg">
         <Image
@@ -301,7 +305,7 @@ const Hero = () => {
                 {recaptchaSiteKey && (
                   <div className="flex justify-center">
                     <ReCAPTCHA
-                      ref={recaptchaRef}
+                      key={recaptchaKey}
                       sitekey={recaptchaSiteKey}
                       onChange={handleCaptchaChange}
                       theme="light"

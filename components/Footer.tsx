@@ -35,15 +35,18 @@ const Footer = () => {
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                      {/* Company Info */}
            <div className="space-y-4">
-             <div className="flex items-center space-x-2">
-               <Image
-                 src="/images/t-and-t-dumpsters-logo-176w.webp"
-                 alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                 width={88}
-                 height={25}
-                 className="sm:w-[100px] sm:h-[28px]"
-               />
-             </div>
+
+            <div className="flex items-center space-x-2">
+              <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
+                <Image
+                  src="/images/t-and-t-dumpsters-logo-176w.webp"
+                  alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+            </div>
              <h3 className="text-lg sm:text-xl font-bold text-primary-400">T&T Dumpsters</h3>
             <p className="text-gray-300">
               Over 55 years of experience in dumpster rental services. Serving the Wasatch Front area with reliable, affordable waste management solutions.

@@ -164,13 +164,16 @@ const Header = () => {
               {/* Logo - Centered */}
               <div className="flex items-center justify-center flex-1">
                 <Link href="/" className="flex items-center">
-                                   <Image
-                   src="/images/t-and-t-dumpsters-logo-176w.webp"
-                   alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                   width={176}
-                   height={50}
-                   className="h-8 w-auto sm:h-10"
-                 />
+
+                  <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
+                    <Image
+                      src="/images/t-and-t-dumpsters-logo-176w.webp"
+                      alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
+                      fill
+                      className="object-contain"
+                      priority
+                    />
+                  </div>
                 </Link>
               </div>
 
