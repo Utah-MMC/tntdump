@@ -1,3 +1,4 @@
+"use client"
 import Image from 'next/image'
 const About = () => {
   return (
@@ -86,8 +87,9 @@ const About = () => {
                 src="/images/dumpster2-500x500-2.jpeg"
                 alt="Professional dumpster rental service in Utah with blue Icon Dumpsters branding"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
-                priority
               />
             </div>
             <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
@@ -95,6 +97,8 @@ const About = () => {
                 src="/images/dumpster3-500x500-1.jpeg"
                 alt="Roll-off dumpster ready for delivery with Icon Dumpsters logo"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
               />
             </div>
@@ -103,6 +107,8 @@ const About = () => {
                 src="/images/construction-site-3688252_1280.jpg"
                 alt="Local dumpster rental service near you with fast delivery"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
               />
             </div>
@@ -111,6 +117,8 @@ const About = () => {
                 src="/images/construction-site-3688262_1280.jpg"
                 alt="Utah dumpster rental company serving residential and commercial customers"
                 fill
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
               />
             </div>

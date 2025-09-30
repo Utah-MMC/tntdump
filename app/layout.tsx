@@ -1,4 +1,5 @@
 import type { Metadata, Viewport } from 'next'
+import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -6,9 +7,15 @@ import Footer from '@/components/Footer'
 import StickySidebar from '@/components/StickySidebar'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'], display: 'swap' })
+
+// Determine the base URL for absolute metadata URLs (OG/Twitter/canonical)
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export const metadata: Metadata = {
+  metadataBase: new URL(baseUrl),
   title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
   description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
   keywords: 'dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, wasatch front dumpster rental',
@@ -64,19 +71,30 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" async></script>
+        {/* Inline critical CSS for header/hero; defer rest */}
+        <style dangerouslySetInnerHTML={{__html: `
+          /* critical CSS */
+          #site-header{backdrop-filter:saturate(120%)}
+          #hero{min-height:100vh;position:relative}
+          #hero .hero-bg{will-change:transform}
+          #hero .hero-overlay{pointer-events:none}
+          h1{letter-spacing:-0.01em}
+        `}} />
+        {/* Defer main stylesheet load (if/when added) */}
+        <link rel="preload" as="style" href="/css/main.4f897a.css" />
+        <link rel="stylesheet" href="/css/main.4f897a.css" media="print" onLoad="this.media='all'" />
+        <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
+        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" strategy="afterInteractive" />
         {/* Google tag (gtag.js) */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-PRG0NC3ZHB');
-            `,
-          }}
-        />
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="afterInteractive" />
+        <Script id="gtm-init" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-PRG0NC3ZHB');
+          `}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -167,27 +185,24 @@ export default function RootLayout({
           }}
         />
         {/* Phone Call Tracking */}
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Track phone call clicks
-              document.addEventListener('DOMContentLoaded', function() {
-                const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-                phoneLinks.forEach(link => {
-                  link.addEventListener('click', function() {
-                    if (typeof window !== 'undefined' && (window as any).gtag) {
-                      (window as any).gtag('event', 'phone_call', {
-                        event_category: 'engagement',
-                        event_label: 'phone_click',
-                        value: 1
-                      });
-                    }
-                  });
+        <Script id="phone-click-tracking" strategy="idle">
+          {`
+            document.addEventListener('DOMContentLoaded', function() {
+              const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
+              phoneLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                  if (typeof window !== 'undefined' && window.gtag) {
+                    window.gtag('event', 'phone_call', {
+                      event_category: 'engagement',
+                      event_label: 'phone_click',
+                      value: 1
+                    });
+                  }
                 });
               });
-            `,
-          }}
-        />
+            });
+          `}
+        </Script>
       </head>
       <body className={inter.className}>
         <PerformanceMonitor />

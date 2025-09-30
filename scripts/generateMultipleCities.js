@@ -43,7 +43,7 @@ function generateAllCities() {
   });
   
   console.log(`\n✅ Successfully generated ${utahCities.length} city pages!`);
-  console.log('\n📁 Pages created in: app/cities/[city-name]/page.tsx');
+  console.log('\n📁 Pages created in: app/dumpster-rental-[city-name]-ut/page.tsx');
   console.log('\n🌐 Each page will have:');
   console.log('   • Randomized content variations');
   console.log('   • Different background images');

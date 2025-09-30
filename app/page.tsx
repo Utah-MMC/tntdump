@@ -1,10 +1,14 @@
 import Hero from '@/components/Hero'
-import Services from '@/components/Services'
-import About from '@/components/About'
-import Contact from '@/components/Contact'
+import nextDynamic from 'next/dynamic'
 import CityCard from '@/components/CityCard'
-import DumpsterCalculator from '@/components/DumpsterCalculator'
+const Services = nextDynamic(() => import('@/components/Services'), { ssr: false, loading: () => null })
+const About = nextDynamic(() => import('@/components/About'), { ssr: false, loading: () => null })
+const Contact = nextDynamic(() => import('@/components/Contact'), { ssr: false, loading: () => null })
+const DumpsterCalculator = nextDynamic(() => import('@/components/DumpsterCalculator'), { ssr: false, loading: () => null })
 import Image from 'next/image'
+
+export const revalidate = 3600
+export const dynamic = 'force-static'
 
 export default function Home() {
   return (
@@ -20,7 +24,8 @@ export default function Home() {
                 src="/images/construction-dumpster-for-rent.png"
                 alt="Construction dumpster for rent"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
                 priority={false}
               />
@@ -30,7 +35,8 @@ export default function Home() {
                 src="/images/residential-dumpster-for-rent.png"
                 alt="Residential dumpster for rent"
                 fill
-                sizes="(min-width: 768px) 50vw, 100vw"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+                quality={70}
                 className="object-cover"
                 priority={false}
               />

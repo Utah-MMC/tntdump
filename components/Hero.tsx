@@ -18,7 +18,9 @@ const Hero = () => {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
+
   const [recaptchaKey, setRecaptchaKey] = useState(0)
+
 
   const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
@@ -110,7 +112,9 @@ const Hero = () => {
   }
 
   return (
+
     <section id="hero" className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat flex items-start pt-10 sm:pt-12">
+
       {/* Background image as actual <Image> for proper LCP and preload */}
       <div className="absolute inset-0 hero-bg">
         <Image

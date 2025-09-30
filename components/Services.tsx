@@ -51,6 +51,8 @@ const Services = () => {
                     src={service.image}
                     alt={service.alt}
                     fill
+                    sizes="(min-width: 1280px) 25vw, (min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    quality={70}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>

@@ -35,6 +35,7 @@ const Footer = () => {
          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
                      {/* Company Info */}
            <div className="space-y-4">
+
             <div className="flex items-center space-x-2">
               <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
                 <Image

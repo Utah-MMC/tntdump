@@ -1,3 +1,4 @@
+"use client"
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
 import Image from 'next/image'
 
@@ -86,8 +87,13 @@ const Contact = () => {
                 className="object-cover"
               />
               <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
-                <button className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all">
-                  <svg className="w-8 h-8 text-primary-600" fill="currentColor" viewBox="0 0 24 24">
+                <button
+                  type="button"
+                  aria-label="Play video"
+                  title="Play video"
+                  className="bg-white bg-opacity-90 rounded-full p-4 hover:bg-opacity-100 transition-all focus:outline-none focus:ring-2 focus:ring-primary-600 focus:ring-offset-2 focus:ring-offset-black/40"
+                >
+                  <svg className="w-8 h-8 text-primary-600" aria-hidden="true" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M8 5v14l11-7z"/>
                   </svg>
                 </button>
@@ -97,12 +103,12 @@ const Contact = () => {
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-4">Serving Area</h3>
               <div className="space-y-2">
-                <p className="text-gray-600">• <a href="/cities/west-jordan" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
-                <p className="text-gray-600">• <a href="/cities/salt-lake-city" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
-                <p className="text-gray-600">• <a href="/cities/murray" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
-                <p className="text-gray-600">• <a href="/cities/sandy" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
-                <p className="text-gray-600">• <a href="/cities/draper" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
-                <p className="text-gray-600">• <a href="/cities/riverton" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
+                <p className="text-gray-600">• <a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
                 <p className="text-gray-600">• And surrounding areas</p>
               </div>
             </div>

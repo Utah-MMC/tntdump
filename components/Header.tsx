@@ -164,6 +164,7 @@ const Header = () => {
               {/* Logo - Centered */}
               <div className="flex items-center justify-center flex-1">
                 <Link href="/" className="flex items-center">
+
                   <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
                     <Image
                       src="/images/t-and-t-dumpsters-logo-176w.webp"
