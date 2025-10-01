@@ -342,7 +342,7 @@ const Hero = () => {
           </div>
 
           {/* Featured Images moved into Hero */}
-          <div className="mt-6">
+          <div className="mt-6 pb-[70px]">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
                 <Image
