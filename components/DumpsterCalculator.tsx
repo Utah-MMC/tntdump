@@ -15,7 +15,11 @@ interface DumpsterSize {
   size: string
   capacity: string
   dimensions: string
-  price: string
+  price1Day: string
+  price7Day: string
+  tons1Day: string
+  tons7Day: string
+  overagePerTon: string
   description: string
   suitableFor: string[]
 }
@@ -26,21 +30,21 @@ const projectTypes: ProjectType[] = [
     name: 'Residential',
     icon: Home,
     description: 'Home renovations, cleanouts, and DIY projects',
-    recommendedSizes: ['10-yard', '15-yard', '20-yard']
+    recommendedSizes: ['15-yard', '20-yard', '30-yard']
   },
   {
     id: 'commercial',
     name: 'Commercial',
     icon: Building,
     description: 'Business renovations, office cleanouts',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
+    recommendedSizes: ['20-yard', '30-yard']
   },
   {
     id: 'construction',
     name: 'Construction',
     icon: Wrench,
     description: 'Construction debris, demolition projects',
-    recommendedSizes: ['20-yard', '30-yard', '40-yard']
+    recommendedSizes: ['20-yard', '30-yard']
   },
   {
     id: 'cleanout',
@@ -53,18 +57,14 @@ const projectTypes: ProjectType[] = [
 
 const dumpsterSizes: DumpsterSize[] = [
   {
-    size: '10-yard',
-    capacity: '10 cubic yards',
-    dimensions: '12\' x 8\' x 3.5\'',
-    price: '$299',
-    description: 'Perfect for small projects and cleanouts',
-    suitableFor: ['Small home cleanouts', 'Garage organization', 'Small renovations', 'Yard waste removal']
-  },
-  {
     size: '15-yard',
     capacity: '15 cubic yards',
     dimensions: '16\' x 8\' x 3.5\'',
-    price: '$399',
+    price1Day: '$300',
+    price7Day: '$325',
+    tons1Day: 'No tons included',
+    tons7Day: '2 tons included',
+    overagePerTon: '$55/ton',
     description: 'Great for medium-sized projects',
     suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
   },
@@ -72,7 +72,11 @@ const dumpsterSizes: DumpsterSize[] = [
     size: '20-yard',
     capacity: '20 cubic yards',
     dimensions: '20\' x 8\' x 3.5\'',
-    price: '$499',
+    price1Day: '$335',
+    price7Day: '$375',
+    tons1Day: 'No tons included',
+    tons7Day: '2 tons included',
+    overagePerTon: '$55/ton',
     description: 'Most popular size for most projects',
     suitableFor: ['Large renovations', 'Estate cleanouts', 'Construction debris', 'Commercial projects']
   },
@@ -80,22 +84,18 @@ const dumpsterSizes: DumpsterSize[] = [
     size: '30-yard',
     capacity: '30 cubic yards',
     dimensions: '20\' x 8\' x 6\'',
-    price: '$699',
+    price1Day: '$345',
+    price7Day: '$400',
+    tons1Day: 'No tons included',
+    tons7Day: '2 tons included',
+    overagePerTon: '$55/ton',
     description: 'Ideal for large construction projects',
     suitableFor: ['Large construction', 'Commercial cleanouts', 'Industrial projects', 'Major renovations']
-  },
-  {
-    size: '40-yard',
-    capacity: '40 cubic yards',
-    dimensions: '20\' x 8\' x 8\'',
-    price: '$899',
-    description: 'Maximum capacity for heavy-duty projects',
-    suitableFor: ['Large construction sites', 'Major demolition', 'Industrial waste', 'Large commercial projects']
   }
 ]
 
 const DumpsterCalculator = () => {
-  const [selectedProject, setSelectedProject] = useState<string>('')
+  const [selectedProject, setSelectedProject] = useState<string>('residential')
   const [selectedSize, setSelectedSize] = useState<string>('')
   const [showResults, setShowResults] = useState(false)
 
@@ -181,8 +181,20 @@ const DumpsterCalculator = () => {
                     >
                       <div className="flex justify-between items-start mb-3">
                         <h4 className="font-bold text-lg text-gray-900">{size.size}</h4>
-                        <span className="text-2xl font-bold text-blue-600">{size.price}</span>
+                        <div className="text-right">
+                          <div className="text-xs text-gray-600">1 day</div>
+                          <div className="text-xl font-bold text-blue-600">{size.price1Day}</div>
+                          <div className="text-[11px] text-gray-500">{size.tons1Day}</div>
+                        </div>
                       </div>
+                      <div className="flex justify-end items-center -mt-2 mb-2">
+                        <div className="text-right">
+                          <div className="text-xs text-gray-600">7 days</div>
+                          <div className="text-lg font-semibold text-blue-600">{size.price7Day}</div>
+                          <div className="text-[11px] text-gray-500">{size.tons7Day}</div>
+                        </div>
+                      </div>
+                      <p className="text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
                       <p className="text-sm text-gray-600 mb-2">{size.capacity}</p>
                       <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
                       <p className="text-sm text-gray-700">{size.description}</p>
@@ -221,9 +233,27 @@ const DumpsterCalculator = () => {
                       <span className="text-gray-600">Dimensions:</span>
                       <span className="font-semibold">{selectedSizeData.dimensions}</span>
                     </div>
-                    <div className="flex justify-between">
-                      <span className="text-gray-600">Price:</span>
-                      <span className="font-bold text-2xl text-blue-600">{selectedSizeData.price}</span>
+                    <div className="space-y-1">
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Price (1 day):</span>
+                        <span className="font-semibold text-blue-600">{selectedSizeData.price1Day}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Tons (1 day):</span>
+                        <span className="font-semibold">{selectedSizeData.tons1Day}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Price (7 days):</span>
+                        <span className="font-semibold text-blue-600">{selectedSizeData.price7Day}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Tons (7 days):</span>
+                        <span className="font-semibold">{selectedSizeData.tons7Day}</span>
+                      </div>
+                      <div className="flex justify-between">
+                        <span className="text-gray-600">Overage per ton:</span>
+                        <span className="font-semibold">{selectedSizeData.overagePerTon}</span>
+                      </div>
                     </div>
                   </div>
                 </div>
