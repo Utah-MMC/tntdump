@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import HeroSection from '@/components/HeroSection'
 
 export default function QuotePage() {
@@ -11,10 +11,26 @@ export default function QuotePage() {
     email: '',
     serviceType: '',
     dumpsterSize: '',
+    zip: '',
     projectDescription: '',
     preferredDate: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
+
+  // Prefill from URL query params
+  useEffect(() => {
+    if (typeof window === 'undefined') return
+    const params = new URLSearchParams(window.location.search)
+    const size = params.get('size')
+    const zip = params.get('zip')
+    if (size || zip) {
+      setFormData((prev) => ({
+        ...prev,
+        dumpsterSize: size ? `${size} Yard` : prev.dumpsterSize,
+        zip: zip || prev.zip,
+      }))
+    }
+  }, [])
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
@@ -49,6 +65,7 @@ export default function QuotePage() {
         email: '',
         serviceType: '',
         dumpsterSize: '',
+        zip: '',
         projectDescription: '',
         preferredDate: ''
       })
@@ -132,6 +149,18 @@ export default function QuotePage() {
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
+                    <input 
+                      type="text" 
+                      name="zip"
+                      value={formData.zip}
+                      onChange={handleChange}
+                      pattern="^\\\d{5}$"
+                      placeholder="e.g., 84015"
                       className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     />
                   </div>

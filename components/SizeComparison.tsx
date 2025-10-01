@@ -55,7 +55,7 @@ export default function SizeComparison({ zip = '' }: { zip?: string }) {
                 <td className="py-3 pr-6">{r.price}</td>
                 <td className="py-3 pr-6">{r.fits ? 'Yes' : 'No'}</td>
                 <td className="py-3">
-                  <a className="btn-primary" href={`/book?size=${r.size}&zip=${encodeURIComponent(zip)}`}>Book</a>
+                  <a className="btn-primary" href={`/quote?size=${r.size}&zip=${encodeURIComponent(zip)}`}>Book</a>
                 </td>
               </tr>
             ))}
