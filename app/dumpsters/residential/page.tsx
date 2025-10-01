@@ -16,32 +16,47 @@ export default function ResidentialDumpsterPage() {
 
   const sizes = [
     {
-      size: '10 Yard',
-      description: 'Perfect for small projects and cleanouts',
-      capacity: '3-4 pickup truck loads',
-      dimensions: '12\' x 8\' x 4\'',
-      price: 'Starting at $299'
-    },
-    {
       size: '15 Yard',
       description: 'Ideal for medium-sized home projects',
       capacity: '5-6 pickup truck loads',
       dimensions: '12\' x 8\' x 6\'',
-      price: 'Starting at $399'
+      pricing: [
+        { label: '1 Day', value: '$300', note: 'no tons included' },
+        { label: '7 Days', value: '$325', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
     },
     {
       size: '20 Yard',
       description: 'Great for larger renovations and cleanouts',
       capacity: '7-8 pickup truck loads',
       dimensions: '22\' x 8\' x 6\'',
-      price: 'Starting at $499'
+      pricing: [
+        { label: '1 Day', value: '$335', note: 'no tons included' },
+        { label: '7 Days', value: '$375', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
     },
     {
       size: '30 Yard',
       description: 'Perfect for major home renovations',
       capacity: '10-12 pickup truck loads',
       dimensions: '22\' x 8\' x 8\'',
-      price: 'Starting at $699'
+      pricing: [
+        { label: '1 Day', value: '$345', note: 'no tons included' },
+        { label: '7 Days', value: '$400', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
+    },
+    {
+      size: 'Concrete Dumpster',
+      description: 'For concrete, brick, or asphalt only',
+      capacity: 'Heavy material only (no mixed waste)',
+      dimensions: 'Contact for available sizes',
+      pricing: [
+        { label: '1 Day', value: '$325', note: 'no tons included' },
+        { label: '7 Days', value: '$425', note: 'no tons included' }
+      ]
     }
   ]
 
@@ -111,6 +126,48 @@ export default function ResidentialDumpsterPage() {
         </div>
       </section>
 
+      {/* Dumpster Sizes */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Choose the Right Size for Your Project
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              We offer a range of dumpster sizes to accommodate projects of all sizes. 
+              Our team can help you choose the perfect size for your specific needs.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {sizes.map((size, index) => (
+              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
+                <h3 className="text-2xl font-bold text-primary-600 mb-2">{size.size}</h3>
+                <p className="text-gray-600 mb-4">{size.description}</p>
+                <div className="space-y-2 text-sm text-gray-600">
+                  <p><strong>Capacity:</strong> {size.capacity}</p>
+                  <p><strong>Dimensions:</strong> {size.dimensions}</p>
+                </div>
+                <div className="mt-4 text-left inline-block">
+                  <p className="text-sm font-semibold text-gray-700 mb-2 text-center">Pricing</p>
+                  <ul className="text-sm text-gray-700">
+                    {Array.isArray(size.pricing) && size.pricing.map((p, i) => (
+                      <li key={i} className="flex items-center justify-between gap-3 py-1">
+                        <span className="font-medium">{p.label}</span>
+                        <span className="font-bold text-primary-600">{p.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {Array.isArray(size.pricing) && size.pricing.some(p => p.note) && (
+                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' · ')}</p>
+                  )}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Features Section */}
       <section className="section-padding bg-white">
         <div className="container-custom">
@@ -135,34 +192,7 @@ export default function ResidentialDumpsterPage() {
         </div>
       </section>
 
-      {/* Dumpster Sizes */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Choose the Right Size for Your Project
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We offer a range of dumpster sizes to accommodate projects of all sizes. 
-              Our team can help you choose the perfect size for your specific needs.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {sizes.map((size, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <h3 className="text-2xl font-bold text-primary-600 mb-2">{size.size}</h3>
-                <p className="text-gray-600 mb-4">{size.description}</p>
-                <div className="space-y-2 text-sm text-gray-600">
-                  <p><strong>Capacity:</strong> {size.capacity}</p>
-                  <p><strong>Dimensions:</strong> {size.dimensions}</p>
-                  <p className="text-lg font-bold text-primary-600">{size.price}</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      
 
       {/* How It Works */}
       <section className="section-padding bg-white">

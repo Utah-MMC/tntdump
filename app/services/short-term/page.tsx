@@ -42,28 +42,40 @@ export default function ShortTermServicePage() {
 
   const sizes = [
     {
-      size: '10 Yard',
-      description: 'Perfect for small projects and quick cleanouts',
-      capacity: '3-4 pickup truck loads',
-      dimensions: '12\' x 8\' x 4\'',
-      price: 'Starting at $299',
-      duration: '1-7 days'
-    },
-    {
       size: '15 Yard',
       description: 'Ideal for medium-sized projects',
       capacity: '5-6 pickup truck loads',
       dimensions: '12\' x 8\' x 6\'',
-      price: 'Starting at $399',
-      duration: '1-7 days'
+      duration: '1-7 days',
+      pricing: [
+        { label: '1 Day', value: '$300', note: 'no tons included' },
+        { label: '7 Days', value: '$325', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
     },
     {
       size: '20 Yard',
       description: 'Great for larger projects and cleanouts',
       capacity: '7-8 pickup truck loads',
       dimensions: '22\' x 8\' x 6\'',
-      price: 'Starting at $499',
-      duration: '1-7 days'
+      duration: '1-7 days',
+      pricing: [
+        { label: '1 Day', value: '$335', note: 'no tons included' },
+        { label: '7 Days', value: '$375', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
+    },
+    {
+      size: '30 Yard',
+      description: 'Perfect for major projects with quick turnarounds',
+      capacity: '10-12 pickup truck loads',
+      dimensions: '22\' x 8\' x 8\'',
+      duration: '1-7 days',
+      pricing: [
+        { label: '1 Day', value: '$345', note: 'no tons included' },
+        { label: '7 Days', value: '$400', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
     }
   ]
 
@@ -192,7 +204,22 @@ export default function ShortTermServicePage() {
                   <p><strong>Dimensions:</strong> {size.dimensions}</p>
                   <p><strong>Rental Period:</strong> {size.duration}</p>
                 </div>
-                <p className="text-xl font-bold text-green-600">{size.price}</p>
+                {(size as any).pricing && (
+                  <div className="mt-2 text-left inline-block">
+                    <p className="text-sm font-semibold text-gray-700 mb-2 text-center">Pricing</p>
+                    <ul className="text-sm text-gray-700">
+                      {(size as any).pricing.map((p: any, i: number) => (
+                        <li key={i} className="flex items-center justify-between gap-3 py-1">
+                          <span className="font-medium">{p.label}</span>
+                          <span className="font-bold text-green-600">{p.value}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {(size as any).pricing.some((p: any) => p.note) && (
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
