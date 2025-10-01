@@ -14,6 +14,19 @@ export default function ConcreteDumpstersPage() {
     'Compliance with weight regulations'
   ]
 
+  const sizes = [
+    {
+      size: 'Concrete Dumpster',
+      description: 'Concrete, brick, or asphalt only (no mixed waste)',
+      capacity: 'Heavy material only',
+      dimensions: 'Contact for available sizes',
+      pricing: [
+        { label: '1 Day', value: '$325', note: 'no tons included' },
+        { label: '7 Days', value: '$425', note: 'no tons included' }
+      ]
+    }
+  ]
+
   const materials = [
     {
       material: 'Concrete',
@@ -111,6 +124,47 @@ export default function ConcreteDumpstersPage() {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Concrete Dumpster Pricing */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              Concrete Dumpster Pricing
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              Pricing shown includes 1-day and 7-day options for concrete-only loads.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-1 lg:grid-cols-1 gap-8 max-w-3xl mx-auto">
+            {sizes.map((size, index) => (
+              <div key={index} className="bg-white rounded-2xl shadow-xl p-8 text-center border border-gray-100">
+                <h3 className="text-3xl font-bold text-blue-600 mb-2">{size.size}</h3>
+                <p className="text-gray-600 mb-6">{size.description}</p>
+                <div className="space-y-2 text-base text-gray-700 mb-4">
+                  <p><strong>Capacity:</strong> {size.capacity}</p>
+                  <p><strong>Dimensions:</strong> {size.dimensions}</p>
+                </div>
+                <div className="mt-2 text-left inline-block">
+                  <p className="text-sm font-semibold text-gray-700 mb-2 text-center">Pricing</p>
+                  <ul className="text-base text-gray-700">
+                    {size.pricing.map((p, i) => (
+                      <li key={i} className="flex items-center justify-between gap-3 py-1">
+                        <span className="font-medium">{p.label}</span>
+                        <span className="font-bold text-blue-600">{p.value}</span>
+                      </li>
+                    ))}
+                  </ul>
+                  {size.pricing.some(p => p.note) && (
+                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' · ')}</p>
+                  )}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>

@@ -38,25 +38,14 @@ export default function ConcreteServicePage() {
 
   const sizes = [
     {
-      size: '20 Yard',
-      description: 'Small concrete projects and repairs',
-      capacity: '7-8 pickup truck loads',
-      dimensions: '22\' x 8\' x 6\'',
-      price: 'Starting at $499'
-    },
-    {
-      size: '30 Yard',
-      description: 'Medium concrete and demolition projects',
-      capacity: '10-12 pickup truck loads',
-      dimensions: '22\' x 8\' x 8\'',
-      price: 'Starting at $699'
-    },
-    {
-      size: '40 Yard',
-      description: 'Large concrete and heavy material projects',
-      capacity: '15-18 pickup truck loads',
-      dimensions: '22\' x 8\' x 10\'',
-      price: 'Starting at $899'
+      size: 'Concrete Dumpster',
+      description: 'For concrete, brick, or asphalt only (no mixed waste)',
+      capacity: 'Heavy material only',
+      dimensions: 'Contact for available sizes',
+      pricing: [
+        { label: '1 Day', value: '$325', note: 'no tons included' },
+        { label: '7 Days', value: '$425', note: 'no tons included' }
+      ]
     }
   ]
 
@@ -185,7 +174,22 @@ export default function ConcreteServicePage() {
                   <p><strong>Capacity:</strong> {size.capacity}</p>
                   <p><strong>Dimensions:</strong> {size.dimensions}</p>
                 </div>
-                <p className="text-xl font-bold text-green-600">{size.price}</p>
+                {(size as any).pricing && (
+                  <div className="mt-2 text-left inline-block">
+                    <p className="text-sm font-semibold text-gray-700 mb-2 text-center">Pricing</p>
+                    <ul className="text-sm text-gray-700">
+                      {(size as any).pricing.map((p: any, i: number) => (
+                        <li key={i} className="flex items-center justify-between gap-3 py-1">
+                          <span className="font-medium">{p.label}</span>
+                          <span className="font-bold text-green-600">{p.value}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    {(size as any).pricing.some((p: any) => p.note) && (
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                    )}
+                  </div>
+                )}
               </div>
             ))}
           </div>
