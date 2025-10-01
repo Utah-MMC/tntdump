@@ -53,7 +53,7 @@ export default function RecommendationCards({ recommendations = [], zip = '' }: 
           <div className="text-xs text-gray-500">{rec.etaText}</div>
           <div className="mt-5 flex gap-3">
             <a
-              href={`/book?size=${rec.sizeYd}&zip=${encodeURIComponent(zipVal)}`}
+              href={`/quote?size=${rec.sizeYd}&zip=${encodeURIComponent(zipVal)}`}
               className="btn-primary"
               onClick={() => analytics.event('recommendation_book_click', { size: rec.sizeYd, zip: zipVal })}
             >Book now</a>

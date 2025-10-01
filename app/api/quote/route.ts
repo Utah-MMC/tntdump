@@ -25,6 +25,7 @@ async function sendQuoteEmail(formData: {
   email?: string
   serviceType: string
   dumpsterSize?: string
+  zip?: string
   projectDescription?: string
   preferredDate?: string
 }) {
@@ -53,6 +54,7 @@ async function sendQuoteEmail(formData: {
             <h3 style="color: #374151; margin-top: 0;">Service Details</h3>
             <p><strong>Service Type:</strong> ${formData.serviceType}</p>
             ${formData.dumpsterSize ? `<p><strong>Dumpster Size:</strong> ${formData.dumpsterSize}</p>` : ''}
+            ${formData.zip ? `<p><strong>ZIP Code:</strong> ${formData.zip}</p>` : ''}
             ${formData.preferredDate ? `<p><strong>Preferred Delivery Date:</strong> ${formData.preferredDate}</p>` : ''}
           </div>
           
@@ -99,6 +101,7 @@ export async function POST(request: NextRequest) {
       email, 
       serviceType, 
       dumpsterSize, 
+      zip,
       projectDescription, 
       preferredDate 
     } = body
@@ -158,6 +161,7 @@ export async function POST(request: NextRequest) {
         email,
         serviceType,
         dumpsterSize,
+        zip,
         projectDescription,
         preferredDate
       })
