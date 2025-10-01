@@ -340,6 +340,34 @@ const Hero = () => {
               </form>
             </div>
           </div>
+
+          {/* Featured Images moved into Hero */}
+          <div className="mt-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/images/construction-dumpster-for-rent.png"
+                  alt="Construction dumpster for rent"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  quality={70}
+                  className="object-cover"
+                  priority={false}
+                />
+              </div>
+              <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/images/residential-dumpster-for-rent.png"
+                  alt="Residential dumpster for rent"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  quality={70}
+                  className="object-cover"
+                  priority={false}
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
