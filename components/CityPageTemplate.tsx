@@ -20,20 +20,7 @@ interface CityPageTemplateProps {
 }
 
 
-function getCityPricing(city: string) {
-  const cityData = cityContentVariations.citySpecific[city as keyof typeof cityContentVariations.citySpecific]
-  // All cities now have pricing, but TypeScript might not recognize this
-  if (cityData && 'pricing' in cityData && cityData.pricing) {
-    return cityData.pricing
-  }
-  // Default pricing (fallback)
-  return {
-    "10-yard": "$299",
-    "15-yard": "$399",
-    "20-yard": "$499",
-    "30-yard": "$699"
-  }
-}
+// Pricing is now standardized across all cities per latest sheet
 
 export default function CityPageTemplate({ city, state }: CityPageTemplateProps) {
   const [formData, setFormData] = useState({
@@ -140,8 +127,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
   const commercialFeatures = getDeterministicServiceFeatures('commercial', city)
   const industrialFeatures = getDeterministicServiceFeatures('industrial', city)
   
-  // Get city-specific pricing
-  const pricing = getCityPricing(city)
+  // Pricing cards use standardized rates displayed below the hero
 
   return (
     <main className="min-h-screen">
@@ -154,6 +140,87 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
         }}
         backgroundImage={backgroundImage}
       />
+      
+      {/* Pricing Section (shown directly below hero for all cities) */}
+      (
+        <section className="py-16 bg-white">
+          <div className="container-custom">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Dumpster Rental Pricing in {city}
+              </h2>
+              <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+                {pricingDescription}
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">15 Yard</h3>
+                <div className="space-y-3 mb-4">
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>1 Day</span><span>$300</span></p>
+                    <p className="text-sm text-gray-600">No tons included</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>7 Days</span><span>$325</span></p>
+                    <p className="text-sm text-gray-600">2 tons included</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">20 Yard</h3>
+                <div className="space-y-3 mb-4">
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>1 Day</span><span>$335</span></p>
+                    <p className="text-sm text-gray-600">No tons included</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>7 Days</span><span>$375</span></p>
+                    <p className="text-sm text-gray-600">2 tons included</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">30 Yard</h3>
+                <div className="space-y-3 mb-4">
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>1 Day</span><span>$345</span></p>
+                    <p className="text-sm text-gray-600">No tons included</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>7 Days</span><span>$400</span></p>
+                    <p className="text-sm text-gray-600">2 tons included</p>
+                  </div>
+                </div>
+                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
+              </div>
+
+              <div className="bg-gray-50 rounded-lg p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Concrete Dumpster</h3>
+                <div className="space-y-3 mb-4">
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>1 Day</span><span>$325</span></p>
+                    <p className="text-sm text-gray-600">No tons included</p>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-gray-900 flex justify-between"><span>7 Days</span><span>$425</span></p>
+                    <p className="text-sm text-gray-600">No tons included</p>
+                  </div>
+                </div>
+                <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
+              </div>
+            </div>
+          </div>
+        </section>
+      )
       
       {/* Hero Image Section */}
       <section className="py-16 bg-white">
@@ -278,57 +345,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Dumpster Rental Pricing in {city}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              {pricingDescription}
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">10 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">{pricing["10-yard"]}</p>
-              <p className="text-sm text-gray-600 mb-4">Perfect for small projects</p>
-              <a href="tel:+18012099013" className="btn-primary w-full">
-                Get Quote
-              </a>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">15 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">{pricing["15-yard"]}</p>
-              <p className="text-sm text-gray-600 mb-4">Great for renovations</p>
-              <a href="tel:+18012099013" className="btn-primary w-full">
-                Get Quote
-              </a>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">20 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">{pricing["20-yard"]}</p>
-              <p className="text-sm text-gray-600 mb-4">Most popular size</p>
-              <a href="tel:+18012099013" className="btn-primary w-full">
-                Get Quote
-              </a>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">30 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">{pricing["30-yard"]}</p>
-              <p className="text-sm text-gray-600 mb-4">Large projects</p>
-              <a href="tel:+18012099013" className="btn-primary w-full">
-                Get Quote
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
+      
 
       {/* Contact Section */}
       <section className="py-16 bg-gray-50">
