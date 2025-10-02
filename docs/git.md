@@ -28,7 +28,7 @@ git push -u origin HEAD
 - On GitHub: open your repository and click "Compare & pull request" for your branch.
 - With GitHub CLI (optional):
 ```bash
-gh pr create --fill --base main --head feature/short-description
+gh pr create --fill --base master --head feature/short-description
 ```
 
 ## 6) Update the PR after reviews (if needed)
