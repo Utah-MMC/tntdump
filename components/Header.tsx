@@ -145,37 +145,24 @@ const Header = () => {
         return (
      <>
        {/* Single Blue Header */}
-      <header id="site-header" className="bg-[#0003d5] text-white shadow-lg sticky top-0 z-50">
+      <header id="site-header" className="bg-gray-900 text-yellow-400 shadow-lg sticky top-0 z-50">
          <div className="container-custom">
                       <div className="flex items-center justify-between h-[80px]">
               {/* Left Side - Contact Info */}
               <div className="flex items-center space-x-8">
-                <div className="text-white">
+                <div className="text-yellow-400">
                   <p className="text-sm">Serving the Wasatch Front Area</p>
                   <div className="flex items-center space-x-1">
                     <span className="text-sm">Call or Text</span>
-                                         <a href="tel:+18012099013" className="text-lg font-bold hover:text-yellow-400 transition-colors">
+                                         <a href="tel:+18012099013" className="text-lg font-bold text-yellow-400 hover:text-yellow-300 transition-colors">
                        (801) 209-9013
                      </a>
                   </div>
                 </div>
               </div>
 
-              {/* Logo - Centered */}
-              <div className="flex items-center justify-center flex-1">
-                <Link href="/" className="flex items-center">
-
-                  <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
-                    <Image
-                      src="/images/t-and-t-dumpsters-logo-176w.webp"
-                      alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                      fill
-                      className="object-contain"
-                      priority
-                    />
-                  </div>
-                </Link>
-              </div>
+              {/* Center spacer to balance layout after removing logo */}
+              <div className="flex-1" />
 
               {/* Navigation - Right */}
               <nav className="hidden lg:flex items-center space-x-8">
@@ -183,7 +170,7 @@ const Header = () => {
                  <div key={item.name} className="relative">
                                        <Link
                       href={item.href}
-                      className={`flex items-center space-x-1 text-white hover:text-yellow-400 font-medium transition-colors ${item.name === 'Home' ? 'underline' : ''}`}
+                      className={`flex items-center space-x-1 text-yellow-400 hover:text-yellow-300 font-medium transition-colors ${item.name === 'Home' ? 'underline' : ''}`}
                       onMouseEnter={() => {
                         if (item.hasDropdown) {
                           if (item.name === 'Services') handleServicesMouseEnter()
@@ -300,9 +287,9 @@ const Header = () => {
              </nav>
 
              {/* Mobile menu button */}
-             <button
-               onClick={() => setIsMenuOpen(!isMenuOpen)}
-               className="lg:hidden p-2 text-white"
+            <button
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              className="lg:hidden p-2 text-yellow-400"
                aria-label="Toggle mobile menu"
              >
                {isMenuOpen ? (
@@ -321,15 +308,15 @@ const Header = () => {
                    <Link
                      key={item.name}
                      href={item.href}
-                     className="block py-3 px-4 text-white hover:text-yellow-400 font-medium hover:bg-primary-600/50 rounded-lg transition-colors"
+                     className="block py-3 px-4 text-yellow-400 hover:text-yellow-300 font-medium hover:bg-primary-600/50 rounded-lg transition-colors"
                      onClick={() => setIsMenuOpen(false)}
                    >
                      {item.name}
                    </Link>
                  ))}
-                                    <div className="pt-4 border-t border-[#0003d5]/50 mt-4">
+                                   <div className="pt-4 border-t border-[#0003d5]/50 mt-4">
                    <div className="px-4">
-                     <p className="text-sm text-gray-200 mb-2">Call or Text</p>
+                     <p className="text-sm text-yellow-400 mb-2">Call or Text</p>
                      <a href="tel:+18012099013" className="text-lg font-bold text-yellow-400 hover:text-yellow-300 block">
                        (801) 209-9013
                      </a>
