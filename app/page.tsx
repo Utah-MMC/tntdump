@@ -23,47 +23,87 @@ export default function Home() {
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
       
-      {/* Cities Section */}
-      <section className="py-16 bg-gray-50">
+      {/* Cities Section (replaced cards with linked list) */}
+      <section className="py-16 bg-gray-900">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
               Cities We Serve
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-sm text-blue-200 max-w-3xl mx-auto">
               T&T Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-            <CityCard
-              city="West Jordan"
-              state="UT"
-              description="Professional dumpster rental services in West Jordan, Utah. Fast delivery, competitive pricing, and reliable service for all your waste management needs."
-              image="/images/pexels-cottonbro-4551310.jpg"
-              slug="west-jordan"
-              services={['Residential', 'Commercial', 'Construction', 'Estate Cleanout']}
-            />
-            <CityCard
-              city="Salt Lake City"
-              state="UT"
-              description="Comprehensive dumpster rental solutions in Salt Lake City. From residential cleanouts to large commercial projects, we have the right dumpster for you."
-              image="/images/pexels-cottonbro-4888489.jpg"
-              slug="salt-lake-city"
-              services={['Residential', 'Commercial', 'Industrial', 'Short-term']}
-            />
-            <CityCard
-              city="Murray"
-              state="UT"
-              description="Reliable dumpster rental services in Murray, Utah. Quick turnaround times, competitive pricing, and exceptional customer service for all projects."
-              image="/images/pexels-cristian-rojas-8447756.jpg"
-              slug="murray"
-              services={['Residential', 'Commercial', 'Vendor Services', 'Concrete']}
-            />
-          </div>
+          {/* County grouped city links */}
+          {(() => {
+            const groupedCities: Record<string, Array<{ name: string; slug: string }>> = {
+              'Davis County': [
+                { name: 'Kaysville', slug: 'kaysville' },
+                { name: 'Farmington', slug: 'farmington' },
+                { name: 'Centerville', slug: 'centerville' },
+                { name: 'Bountiful', slug: 'bountiful' },
+                { name: 'Woods Cross', slug: 'woods-cross' },
+                { name: 'North Salt Lake', slug: 'north-salt-lake' },
+                { name: 'Clearfield', slug: 'clearfield' },
+                { name: 'Clinton', slug: 'clinton' },
+                { name: 'Hooper', slug: 'hooper' },
+                { name: 'Layton', slug: 'layton' },
+                { name: 'Syracuse', slug: 'syracuse' },
+                { name: 'West Point', slug: 'west-point' },
+              ],
+              'Salt Lake County': [
+                { name: 'Salt Lake City', slug: 'salt-lake-city' },
+                { name: 'West Jordan', slug: 'west-jordan' },
+                { name: 'Murray', slug: 'murray' },
+                { name: 'Midvale', slug: 'midvale' },
+                { name: 'Taylorsville', slug: 'taylorsville' },
+                { name: 'West Valley City', slug: 'west-valley-city' },
+                { name: 'Sandy', slug: 'sandy' },
+                { name: 'Riverton', slug: 'riverton' },
+                { name: 'South Jordan', slug: 'south-jordan' },
+                { name: 'Herriman', slug: 'herriman' },
+                { name: 'Draper', slug: 'draper' },
+              ],
+              'Utah County': [
+                { name: 'American Fork', slug: 'american-fork' },
+                { name: 'Lehi', slug: 'lehi' },
+                { name: 'Pleasant Grove', slug: 'pleasant-grove' },
+                { name: 'Orem', slug: 'orem' },
+                { name: 'Provo', slug: 'provo' },
+              ],
+              'Weber County': [
+                { name: 'Ogden', slug: 'ogden' },
+                { name: 'Riverdale', slug: 'riverdale' },
+                { name: 'Roy', slug: 'roy' },
+              ],
+            }
 
-          <div className="text-center">
+            return (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
+                {Object.entries(groupedCities).map(([countyName, cities]) => (
+                  <div key={countyName}>
+                    <h3 className="text-base font-semibold text-white mb-4">{countyName}</h3>
+                    <ul className="space-y-2">
+                      {[...cities].sort((a, b) => a.name.localeCompare(b.name)).map(({ name, slug }) => (
+                        <li key={slug}>
+                          <a
+                            href={`/dumpster-rental-${slug}-ut`}
+                            className="text-yellow-400 hover:text-yellow-300 text-sm"
+                          >
+                            {name} Utah Dumpster Rentals
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            )
+          })()}
+
+          <div className="text-center mt-12">
             <a 
               href="/cities" 
               className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors"
