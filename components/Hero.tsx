@@ -221,14 +221,14 @@ const Hero = () => {
             </div>
 
             {/* Right Column - Contact Form */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
+            <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
               <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Request Call Back</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Row 1: Name + Phone */}
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">NAME</label>
+                    <label htmlFor="name" className="block text-sm font-medium text-white mb-1">NAME</label>
                     <input
                       type="text"
                       id="name"
@@ -240,7 +240,7 @@ const Hero = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">PHONE</label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-white mb-1">PHONE</label>
                     <input
                       type="tel"
                       id="phone"
@@ -256,7 +256,7 @@ const Hero = () => {
                 {/* Row 2: Email + Service */}
                 <div className="grid sm:grid-cols-2 gap-3">
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">EMAIL (Optional)</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-white mb-1">EMAIL (Optional)</label>
                     <input
                       type="email"
                       id="email"
@@ -267,7 +267,7 @@ const Hero = () => {
                     />
                   </div>
                   <div>
-                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">SERVICE NEEDED</label>
+                    <label htmlFor="service" className="block text-sm font-medium text-white mb-1">SERVICE NEEDED</label>
                     <select
                       id="service"
                       name="service"
@@ -289,7 +289,7 @@ const Hero = () => {
 
                 {/* Row 3: Message */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                  <label htmlFor="message" className="block text-sm font-medium text-white mb-1">Message</label>
                   <textarea
                     id="message"
                     name="message"
@@ -333,7 +333,7 @@ const Hero = () => {
                 <button
                   type="submit"
                   disabled={isSubmitting || (!!recaptchaSiteKey && !captchaToken)}
-                  className={`w-full btn-primary ${isSubmitting || (!!recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-yellow-400 text-blue-900 font-bold rounded-lg px-6 py-3 hover:bg-yellow-300 transition-colors ${isSubmitting || (!!recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
