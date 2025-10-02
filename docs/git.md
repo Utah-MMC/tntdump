@@ -38,9 +38,9 @@ git commit -m "Address review feedback"
 git push
 ```
 
-## 7) Sync `main` after merge (optional cleanup)
+## 7) Sync `master` after merge (optional cleanup)
 ```bash
-git checkout main
+git checkout master
 git pull --ff-only
 git branch -d feature/short-description
 git push origin --delete feature/short-description

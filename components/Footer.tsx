@@ -1,6 +1,5 @@
 import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
-import Image from 'next/image'
 
 const Footer = () => {
   const currentYear = new Date().getFullYear()
@@ -32,71 +31,42 @@ const Footer = () => {
      return (
      <footer className="bg-gray-900 text-white">
        <div className="container-custom py-8 sm:py-12">
-         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                      {/* Company Info */}
            <div className="space-y-4">
-
-            <div className="flex items-center space-x-2">
-              <div className="relative h-8 sm:h-10 w-[160px] sm:w-[176px]">
-                <Image
-                  src="/images/t-and-t-dumpsters-logo-176w.webp"
-                  alt="T&T Dumpsters Logo - Professional dumpster rental services in Utah"
-                  fill
-                  className="object-contain"
-                  priority
-                />
-              </div>
-            </div>
-             <h3 className="text-lg sm:text-xl font-bold text-primary-400">T&T Dumpsters</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-yellow-400">T&T Dumpsters</h3>
             <p className="text-gray-300">
               Over 55 years of experience in dumpster rental services. Serving the Wasatch Front area with reliable, affordable waste management solutions.
             </p>
             <div className="space-y-2">
-                             <div className="flex items-center space-x-2">
-                 <Phone className="h-4 w-4 text-primary-400" />
-                                <a href="tel:+18012099013" className="text-gray-300 hover:text-white">
+                            <div className="flex items-center space-x-2">
+                <Phone className="h-4 w-4 text-green-500" />
+                               <a href="tel:+18012099013" className="text-yellow-400 hover:text-yellow-300">
                  (801) 209-9013
                </a>
                </div>
               <div className="flex items-center space-x-2">
-                <Mail className="h-4 w-4 text-primary-400" />
-                <a href="mailto:admin@tntdump.com" className="text-gray-300 hover:text-white">
+                <Mail className="h-4 w-4 text-green-500" />
+                <a href="mailto:admin@tntdump.com" className="text-yellow-400 hover:text-yellow-300">
                   admin@tntdump.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
-                <MapPin className="h-4 w-4 text-primary-400" />
+                <MapPin className="h-4 w-4 text-green-500" />
                 <span className="text-gray-300">Wasatch Front, UT</span>
               </div>
             </div>
           </div>
 
-          {/* Services */}
+          {/* Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
-            <ul className="space-y-2">
-              {navigation.services.map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Company */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Company</h3>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Links</h3>
             <ul className="space-y-2">
               {navigation.company.map((item) => (
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-gray-300 hover:text-white transition-colors"
+                    className="text-yellow-400 hover:text-yellow-300 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -107,7 +77,7 @@ const Footer = () => {
 
           {/* Business Hours */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Business Hours</h3>
+            <h3 className="text-lg font-semibold mb-4 text-yellow-400">Business Hours</h3>
             <div className="space-y-2 text-gray-300">
               <p><strong>Monday - Friday:</strong></p>
               <p>7:00 am - 9:00 pm</p>
@@ -126,12 +96,12 @@ const Footer = () => {
              <div className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
                © {currentYear} T&T Dumpsters. All rights reserved.
              </div>
-             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
+            <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
                {navigation.legal.map((item) => (
                  <Link
                    key={item.name}
                    href={item.href}
-                   className="text-gray-300 hover:text-white text-xs sm:text-sm transition-colors"
+                  className="text-yellow-400 hover:text-yellow-300 text-xs sm:text-sm transition-colors"
                  >
                    {item.name}
                  </Link>
