@@ -92,15 +92,15 @@ const Contact = () => {
 
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-4">Serving Area</h3>
-              <div className="space-y-2">
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
-                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
-                <p className="text-gray-600">â€¢ And surrounding areas</p>
-              </div>
+              <ul className="list-disc list-inside text-gray-600 space-y-2">
+                <li><a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></li>
+                <li><a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></li>
+                <li><a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></li>
+                <li><a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></li>
+                <li><a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></li>
+                <li><a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></li>
+                <li>And surrounding areas</li>
+              </ul>
             </div>
           </div>
         </div>
