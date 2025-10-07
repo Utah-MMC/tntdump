@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Shield } from 'lucide-react'
 
 export default function VendorServicePage() {
@@ -17,22 +17,22 @@ export default function VendorServicePage() {
     {
       type: 'Contractors',
       description: 'Construction and renovation waste management',
-      icon: '🔨'
+      icon: 'ðŸ”¨'
     },
     {
       type: 'Event Vendors',
       description: 'Trade shows, festivals, and event cleanup',
-      icon: '🎪'
+      icon: 'ðŸŽª'
     },
     {
       type: 'Suppliers',
       description: 'Manufacturing and distribution waste',
-      icon: '📦'
+      icon: 'ðŸ“¦'
     },
     {
       type: 'Service Providers',
       description: 'Maintenance and service company waste',
-      icon: '🔧'
+      icon: 'ðŸ”§'
     }
   ]
 
@@ -211,7 +211,7 @@ export default function VendorServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Partner with T&T Dumpsters?
+              Ready to Partner with TNT Dumpsters?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
               Get a free vendor quote and discover how we can provide reliable waste management for your business operations.
@@ -236,3 +236,4 @@ export default function VendorServicePage() {
     </main>
   )
 }
+

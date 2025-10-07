@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Winter Dumpster Rental: Tips for Cold Weather Projects | T&T Dumpsters',
+  title: 'Winter Dumpster Rental: Tips for Cold Weather Projects | TNT Dumpsters',
   description: 'Plan successful winter projects with these dumpster rental tips: placement, scheduling, safety, and how to prevent frozen loads and extra weight.',
   keywords: 'winter dumpster tips, cold weather dumpster rental, winter construction waste, frozen dumpster load prevention',
 }
@@ -38,7 +38,7 @@ export default function WinterDumpsterRentalTipsPage() {
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Winter Dumpster Rental: Tips for Cold Weather Projects</h1>
             <p className="text-xl text-gray-600 mb-8">Cold weather adds unique challenges to waste removal. These tips help you avoid delays, safety hazards, and unexpected fees.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>T&T Dumpsters Team</span></div>
+              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
               <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /><span>December 20, 2024</span></div>
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /><span>5 min read</span></div>
             </div>
@@ -94,5 +94,6 @@ export default function WinterDumpsterRentalTipsPage() {
     </main>
   )
 }
+
 
 

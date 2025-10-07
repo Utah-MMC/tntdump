@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import Image from 'next/image'
 import HorizontalScroller from '@/components/HorizontalScroller'
 import { CheckCircle, Phone, Clock } from 'lucide-react'
@@ -171,7 +171,7 @@ export default function DumpstersPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-6">
-                Why Choose T&T Dumpsters?
+                Why Choose TNT Dumpsters?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-4">
@@ -216,7 +216,7 @@ export default function DumpstersPage() {
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
                   src="/images/15-NEW-01.png"
-                  alt="T&T Dumpsters serving the Wasatch Front area with professional dumpster rental services"
+                  alt="TNT Dumpsters serving the Wasatch Front area with professional dumpster rental services"
                   fill
                   className="object-cover"
                 />
@@ -267,3 +267,4 @@ export default function DumpstersPage() {
     </main>
   )
 }
+

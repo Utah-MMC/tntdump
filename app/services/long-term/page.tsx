@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from 'lucide-react'
 
 export default function LongTermServicePage() {
@@ -67,7 +67,7 @@ export default function LongTermServicePage() {
               Long-Term Dumpster Rental Service
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              For ongoing projects or businesses with consistent waste disposal needs, T&T Dumpsters long-term dumpster service is the ideal choice. We provide reliable, regular pick-ups to ensure your site remains clean and safe.
+              For ongoing projects or businesses with consistent waste disposal needs, TNT Dumpsters long-term dumpster service is the ideal choice. We provide reliable, regular pick-ups to ensure your site remains clean and safe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -177,7 +177,7 @@ export default function LongTermServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}
@@ -262,3 +262,4 @@ export default function LongTermServicePage() {
     </main>
   )
 }
+

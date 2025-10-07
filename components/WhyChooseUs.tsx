@@ -1,4 +1,4 @@
-import { CheckCircle, Clock, DollarSign, MapPin, Truck, Users } from 'lucide-react'
+﻿import { CheckCircle, Clock, DollarSign, MapPin, Truck, Users } from 'lucide-react'
 
 const WhyChooseUs = () => {
   const benefits = [
@@ -39,10 +39,10 @@ const WhyChooseUs = () => {
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-4">
-            Why T&T Dumpsters is Your Best Choice for Waste Management
+            Why TNT Dumpsters is Your Best Choice for Waste Management
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Choosing T&T Dumpsters for your waste management needs means choosing a company with a proven track record of reliability and excellence. Our 55 years of experience in the industry, coupled with our commitment to fast delivery and quick turnaround times, ensures that we can handle any job, big or small.
+            Choosing TNT Dumpsters for your waste management needs means choosing a company with a proven track record of reliability and excellence. Our 55 years of experience in the industry, coupled with our commitment to fast delivery and quick turnaround times, ensures that we can handle any job, big or small.
           </p>
         </div>
 
@@ -76,6 +76,7 @@ const WhyChooseUs = () => {
 }
 
 export default WhyChooseUs
+
 
 
 

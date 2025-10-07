@@ -1,4 +1,4 @@
-export const cityContentVariations = {
+﻿export const cityContentVariations = {
   heroDescriptions: [
     "Professional dumpster rental services with fast delivery, competitive pricing, and reliable service for all your waste management needs.",
     "Comprehensive dumpster rental solutions with exceptional customer service. From residential cleanouts to large commercial projects, we provide quick turnaround times and affordable rates.",
@@ -11,10 +11,10 @@ export const cityContentVariations = {
   ],
 
   serviceDescriptions: [
-    "T&T Dumpsters provides comprehensive waste management solutions for residents and businesses. From residential cleanouts to large commercial projects, we have the right dumpster for your needs.",
+    "TNT Dumpsters provides comprehensive waste management solutions for residents and businesses. From residential cleanouts to large commercial projects, we have the right dumpster for your needs.",
     "We offer complete waste management solutions tailored to your specific requirements. Whether you need residential services or commercial solutions, we deliver reliable service to your community.",
     "Our team provides professional waste management services designed for diverse project needs. We specialize in residential, commercial, and industrial dumpster rentals throughout the area.",
-    "T&T Dumpsters delivers comprehensive waste solutions for every project type. Our experienced team ensures reliable service and competitive pricing for all your waste management needs.",
+    "TNT Dumpsters delivers comprehensive waste solutions for every project type. Our experienced team ensures reliable service and competitive pricing for all your waste management needs.",
     "We provide complete waste management services with professional expertise and reliable equipment. From small residential projects to large commercial operations, we handle it all.",
     "Local waste management experts with comprehensive solutions for every project. Fast delivery, competitive pricing, and exceptional customer service for all your disposal needs.",
     "Professional dumpster rental services with decades of experience. We offer reliable solutions for residential, commercial, and industrial waste management projects.",
@@ -44,13 +44,13 @@ export const cityContentVariations = {
   ],
 
   contactDescriptions: [
-    "Contact T&T Dumpsters for professional dumpster rental services. We provide fast delivery, competitive pricing, and exceptional customer service.",
+    "Contact TNT Dumpsters for professional dumpster rental services. We provide fast delivery, competitive pricing, and exceptional customer service.",
     "Get in touch with our team for reliable dumpster rental solutions. We offer quick delivery, competitive rates, and professional service.",
-    "Reach out to T&T Dumpsters for comprehensive waste management services. We deliver fast, affordable, and reliable solutions.",
+    "Reach out to TNT Dumpsters for comprehensive waste management services. We deliver fast, affordable, and reliable solutions.",
     "Contact our experienced team for professional dumpster rental services. Fast delivery, competitive pricing, and reliable waste management solutions.",
     "Get your free estimate today from our professional waste management team. Fast delivery, competitive rates, and exceptional service.",
     "Reach out to our local experts for reliable dumpster rental services. We provide comprehensive waste management solutions with fast delivery.",
-    "Contact T&T Dumpsters for professional waste management services. Our experienced team delivers reliable solutions with competitive pricing.",
+    "Contact TNT Dumpsters for professional waste management services. Our experienced team delivers reliable solutions with competitive pricing.",
     "Get in touch with our professional team for comprehensive dumpster rental services. Fast delivery, competitive rates, and exceptional customer service."
   ],
 
@@ -101,10 +101,10 @@ export const cityContentVariations = {
         "Professional waste management solutions in Salt Lake City with quick delivery, competitive rates, and reliable service. From Temple Square to the Avenues, we serve every neighborhood."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Salt Lake City residents and businesses. From downtown office cleanouts to Sugar House renovations, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Salt Lake City residents and businesses. From downtown office cleanouts to Sugar House renovations, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Salt Lake City's unique requirements. Whether you need residential services in the Avenues or commercial solutions downtown, we deliver reliable service.",
         "Our team provides professional waste management services designed for Salt Lake City's diverse community. We specialize in residential, commercial, and industrial dumpster rentals throughout the capital.",
-        "T&T Dumpsters delivers comprehensive waste solutions for every Salt Lake City project type. Our experienced team ensures reliable service and competitive pricing for all your needs in Utah's largest city.",
+        "TNT Dumpsters delivers comprehensive waste solutions for every Salt Lake City project type. Our experienced team ensures reliable service and competitive pricing for all your needs in Utah's largest city.",
         "We provide complete waste management services with professional expertise and reliable equipment. From small residential projects in Liberty Wells to large commercial operations downtown."
       ],
       whyChooseDescriptions: [
@@ -122,9 +122,9 @@ export const cityContentVariations = {
         "Budget-friendly dumpster rental in Salt Lake City with competitive pricing and free estimates."
       ],
       contactDescriptions: [
-        "Contact T&T Dumpsters for professional dumpster rental services in Salt Lake City. We provide fast delivery, competitive pricing, and exceptional customer service.",
+        "Contact TNT Dumpsters for professional dumpster rental services in Salt Lake City. We provide fast delivery, competitive pricing, and exceptional customer service.",
         "Get in touch with our team for reliable dumpster rental solutions in Salt Lake City. We offer quick delivery, competitive rates, and professional service.",
-        "Reach out to T&T Dumpsters for comprehensive waste management services in Salt Lake City. We deliver fast, affordable, and reliable solutions."
+        "Reach out to TNT Dumpsters for comprehensive waste management services in Salt Lake City. We deliver fast, affordable, and reliable solutions."
       ],
       localFeatures: [
         "Downtown office cleanouts",
@@ -151,7 +151,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in West Jordan, offering same-day delivery and competitive pricing. Serving this rapidly growing city with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for West Jordan residents and businesses. From new home construction to established neighborhood cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for West Jordan residents and businesses. From new home construction to established neighborhood cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to West Jordan's growing community. Whether you need residential services or commercial solutions, we deliver reliable service to this expanding city.",
         "Our team provides professional waste management services designed for West Jordan's development needs. We specialize in residential, commercial, and construction dumpster rentals throughout the city."
       ],
@@ -182,7 +182,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Provo, offering same-day delivery and competitive pricing. Serving this vibrant college town with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Provo residents and businesses. From BYU area projects to family home cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Provo residents and businesses. From BYU area projects to family home cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Provo's unique community. Whether you need residential services or university area solutions, we deliver reliable service to this vibrant city.",
         "Our team provides professional waste management services designed for Provo's diverse needs. We specialize in residential, commercial, and student housing dumpster rentals throughout the city."
       ],
@@ -213,7 +213,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Orem, offering same-day delivery and competitive pricing. Serving this family-friendly city with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Orem residents and businesses. From family home renovations to commercial developments, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Orem residents and businesses. From family home renovations to commercial developments, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Orem's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this growing city.",
         "Our team provides professional waste management services designed for Orem's diverse needs. We specialize in residential, commercial, and family-oriented dumpster rentals throughout the city."
       ],
@@ -238,7 +238,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Sandy, offering same-day delivery and competitive pricing. Serving this outdoor recreation hub with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Sandy residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Sandy residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Sandy's unique location. Whether you need residential services or commercial solutions, we deliver reliable service to this gateway city.",
         "Our team provides professional waste management services designed for Sandy's diverse needs. We specialize in residential, commercial, and mountain community dumpster rentals throughout the city."
       ],
@@ -263,7 +263,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in West Valley City, offering same-day delivery and competitive pricing. Serving this vibrant, diverse community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for West Valley City residents and businesses. From diverse community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for West Valley City residents and businesses. From diverse community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to West Valley City's unique community. Whether you need residential services or commercial solutions, we deliver reliable service to Utah's second-largest city.",
         "Our team provides professional waste management services designed for West Valley City's diverse needs. We specialize in residential, commercial, and community dumpster rentals throughout the city."
       ],
@@ -288,7 +288,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Ogden, offering same-day delivery and competitive pricing. Serving this historic northern Utah city with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Ogden residents and businesses. From historic district projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Ogden residents and businesses. From historic district projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Ogden's historic character. Whether you need residential services or commercial solutions, we deliver reliable service to this northern Utah city.",
         "Our team provides professional waste management services designed for Ogden's unique needs. We specialize in residential, commercial, and historic district dumpster rentals throughout the city."
       ],
@@ -319,7 +319,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Layton, offering same-day delivery and competitive pricing. Serving this growing northern Utah community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Layton residents and businesses. From military community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Layton residents and businesses. From military community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Layton's unique community. Whether you need residential services or commercial solutions, we deliver reliable service to this northern Utah city.",
         "Our team provides professional waste management services designed for Layton's diverse needs. We specialize in residential, commercial, and military community dumpster rentals throughout the city."
       ],
@@ -344,7 +344,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Taylorsville, offering same-day delivery and competitive pricing. Serving this family-friendly community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Taylorsville residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Taylorsville residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Taylorsville's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this Salt Lake Valley city.",
         "Our team provides professional waste management services designed for Taylorsville's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -369,7 +369,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in South Jordan, offering same-day delivery and competitive pricing. Serving this rapidly growing community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for South Jordan residents and businesses. From new development projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for South Jordan residents and businesses. From new development projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to South Jordan's growing community. Whether you need residential services or commercial solutions, we deliver reliable service to this southern Salt Lake Valley city.",
         "Our team provides professional waste management services designed for South Jordan's development needs. We specialize in residential, commercial, and new development dumpster rentals throughout the city."
       ],
@@ -394,7 +394,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Lehi, offering same-day delivery and competitive pricing. Serving this rapidly growing tech hub with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Lehi residents and businesses. From tech corridor projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Lehi residents and businesses. From tech corridor projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Lehi's unique tech community. Whether you need residential services or commercial solutions, we deliver reliable service to this growing tech hub.",
         "Our team provides professional waste management services designed for Lehi's diverse needs. We specialize in residential, commercial, and tech corridor dumpster rentals throughout the city."
       ],
@@ -425,7 +425,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Murray, offering same-day delivery and competitive pricing. Serving this central Salt Lake Valley community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Murray residents and businesses. From central valley projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Murray residents and businesses. From central valley projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Murray's central location. Whether you need residential services or commercial solutions, we deliver reliable service to this Salt Lake Valley crossroads.",
         "Our team provides professional waste management services designed for Murray's diverse needs. We specialize in residential, commercial, and central valley dumpster rentals throughout the city."
       ],
@@ -456,7 +456,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Draper, offering same-day delivery and competitive pricing. Serving this growing mountain gateway community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Draper residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Draper residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Draper's unique mountain location. Whether you need residential services or commercial solutions, we deliver reliable service to this gateway community.",
         "Our team provides professional waste management services designed for Draper's diverse needs. We specialize in residential, commercial, and mountain community dumpster rentals throughout the city."
       ],
@@ -487,7 +487,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Riverton, offering same-day delivery and competitive pricing. Serving this family-friendly community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Riverton residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Riverton residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Riverton's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this growing city.",
         "Our team provides professional waste management services designed for Riverton's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -518,7 +518,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Herriman, offering same-day delivery and competitive pricing. Serving this beautiful mountain community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Herriman residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Herriman residents and businesses. From mountain community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Herriman's unique mountain location. Whether you need residential services or commercial solutions, we deliver reliable service to this beautiful community.",
         "Our team provides professional waste management services designed for Herriman's diverse needs. We specialize in residential, commercial, and mountain community dumpster rentals throughout the city."
       ],
@@ -549,7 +549,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Bountiful, offering same-day delivery and competitive pricing. Serving this family-friendly Davis County community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Bountiful residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Bountiful residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Bountiful's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this Davis County city.",
         "Our team provides professional waste management services designed for Bountiful's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -580,7 +580,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Clearfield, offering same-day delivery and competitive pricing. Serving this northern Utah military community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Clearfield residents and businesses. From military community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Clearfield residents and businesses. From military community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Clearfield's unique military community. Whether you need residential services or commercial solutions, we deliver reliable service to this northern Utah city.",
         "Our team provides professional waste management services designed for Clearfield's diverse needs. We specialize in residential, commercial, and military community dumpster rentals throughout the city."
       ],
@@ -611,7 +611,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Midvale, offering same-day delivery and competitive pricing. Serving this central Salt Lake Valley community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Midvale residents and businesses. From central valley projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Midvale residents and businesses. From central valley projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Midvale's central location. Whether you need residential services or commercial solutions, we deliver reliable service to this Salt Lake Valley city.",
         "Our team provides professional waste management services designed for Midvale's diverse needs. We specialize in residential, commercial, and central valley dumpster rentals throughout the city."
       ],
@@ -642,7 +642,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in American Fork, offering same-day delivery and competitive pricing. Serving this family-friendly Utah Valley community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for American Fork residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for American Fork residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to American Fork's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this Utah Valley city.",
         "Our team provides professional waste management services designed for American Fork's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -673,7 +673,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Kaysville, offering same-day delivery and competitive pricing. Serving this family-friendly Davis County community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Kaysville residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Kaysville residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Kaysville's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this Davis County city.",
         "Our team provides professional waste management services designed for Kaysville's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -704,7 +704,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Pleasant Grove, offering same-day delivery and competitive pricing. Serving this family-friendly Utah Valley community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Pleasant Grove residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Pleasant Grove residents and businesses. From family community projects to residential cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Pleasant Grove's family-oriented community. Whether you need residential services or commercial solutions, we deliver reliable service to this Utah Valley city.",
         "Our team provides professional waste management services designed for Pleasant Grove's diverse needs. We specialize in residential, commercial, and family community dumpster rentals throughout the city."
       ],
@@ -735,7 +735,7 @@ export const cityContentVariations = {
         "Trusted dumpster rental services in Roy, offering same-day delivery and competitive pricing. Serving this northern Utah community with professional waste management solutions."
       ],
       serviceDescriptions: [
-        "T&T Dumpsters provides comprehensive waste management solutions for Roy residents and businesses. From residential projects to commercial cleanouts, we have the right dumpster for your needs.",
+        "TNT Dumpsters provides comprehensive waste management solutions for Roy residents and businesses. From residential projects to commercial cleanouts, we have the right dumpster for your needs.",
         "We offer complete waste management solutions tailored to Roy's community needs. Whether you need residential services or commercial solutions, we deliver reliable service to this northern Utah city.",
         "Our team provides professional waste management services designed for Roy's diverse needs. We specialize in residential, commercial, and community dumpster rentals throughout the city."
       ],
@@ -817,3 +817,4 @@ export function getCityLocalFeatures(city: string): string[] {
   // Fallback to generic features
   return getRandomServiceFeatures('residential')
 }
+

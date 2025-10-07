@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Zap } from 'lucide-react'
 
 export default function IndustrialServicePage() {
@@ -17,22 +17,22 @@ export default function IndustrialServicePage() {
     {
       industry: 'Manufacturing',
       description: 'Production waste, equipment disposal, facility maintenance',
-      icon: '🏭'
+      icon: 'ðŸ­'
     },
     {
       industry: 'Construction',
       description: 'Large-scale demolition, building materials, heavy debris',
-      icon: '🏗️'
+      icon: 'ðŸ—ï¸'
     },
     {
       industry: 'Mining',
       description: 'Industrial equipment, facility waste, maintenance debris',
-      icon: '⛏️'
+      icon: 'â›ï¸'
     },
     {
       industry: 'Energy',
       description: 'Power plant maintenance, equipment disposal, facility cleanouts',
-      icon: '⚡'
+      icon: 'âš¡'
     }
   ]
 
@@ -207,7 +207,7 @@ export default function IndustrialServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}
@@ -291,7 +291,7 @@ export default function IndustrialServicePage() {
               Ready to Handle Your Industrial Waste Management?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Get a free industrial quote and discover how T&T Dumpsters can provide reliable, compliant waste management for your operations.
+              Get a free industrial quote and discover how TNT Dumpsters can provide reliable, compliant waste management for your operations.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -313,3 +313,4 @@ export default function IndustrialServicePage() {
     </main>
   )
 }
+

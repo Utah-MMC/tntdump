@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
 import Image from 'next/image'
 
@@ -72,7 +72,7 @@ const Contact = () => {
             <div className="bg-primary-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-3">About Us</h3>
               <p className="text-gray-600">
-                By selecting T&T Dumpsters for your waste management requirements, you are opting for a firm with a demonstrated history of dependability and high performance. Call or text our family-owned and locally operated enterprise today!
+                By selecting TNT Dumpsters for your waste management requirements, you are opting for a firm with a demonstrated history of dependability and high performance. Call or text our family-owned and locally operated enterprise today!
               </p>
             </div>
           </div>
@@ -86,20 +86,20 @@ const Contact = () => {
                 controls
                 playsInline
                 preload="metadata"
-                aria-label="T&T Dumpsters truck video"
+                aria-label="TNT Dumpsters truck video"
               />
             </div>
 
             <div className="bg-gray-50 p-6 rounded-lg">
               <h3 className="font-semibold text-gray-900 mb-4">Serving Area</h3>
               <div className="space-y-2">
-                <p className="text-gray-600">• <a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
-                <p className="text-gray-600">• <a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
-                <p className="text-gray-600">• <a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
-                <p className="text-gray-600">• <a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
-                <p className="text-gray-600">• <a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
-                <p className="text-gray-600">• <a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
-                <p className="text-gray-600">• And surrounding areas</p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-west-jordan-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-salt-lake-city-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-murray-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-sandy-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-draper-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></p>
+                <p className="text-gray-600">â€¢ <a href="/dumpster-rental-riverton-ut" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></p>
+                <p className="text-gray-600">â€¢ And surrounding areas</p>
               </div>
             </div>
           </div>
@@ -110,6 +110,7 @@ const Contact = () => {
 }
 
 export default Contact
+
 
 
 

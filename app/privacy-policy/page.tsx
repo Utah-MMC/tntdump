@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | T&T Dumpsters',
-  description: 'Privacy policy for T&T Dumpsters. Learn how we collect, use, and protect your personal information.',
+  title: 'Privacy Policy | TNT Dumpsters',
+  description: 'Privacy policy for TNT Dumpsters. Learn how we collect, use, and protect your personal information.',
 }
 
 export default function PrivacyPolicy() {
@@ -14,7 +14,7 @@ export default function PrivacyPolicy() {
         </h1>
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-lg text-gray-600 mb-8">
-            This privacy policy describes how T&T Dumpsters collects, uses, and protects your personal information.
+            This privacy policy describes how TNT Dumpsters collects, uses, and protects your personal information.
           </p>
           
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Information We Collect</h2>
@@ -36,3 +36,4 @@ export default function PrivacyPolicy() {
     </div>
   )
 }
+

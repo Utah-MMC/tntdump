@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart, Home } from 'lucide-react'
 
 export default function EstateCleanoutServicePage() {
@@ -17,22 +17,22 @@ export default function EstateCleanoutServicePage() {
     {
       type: 'Estate Cleanouts',
       description: 'Complete property cleanouts after inheritance or sale',
-      icon: '🏠'
+      icon: 'ðŸ '
     },
     {
       type: 'Senior Downsizing',
       description: 'Compassionate assistance with moving and downsizing',
-      icon: '👴'
+      icon: 'ðŸ‘´'
     },
     {
       type: 'Property Preparation',
       description: 'Getting properties ready for sale or rental',
-      icon: '🔑'
+      icon: 'ðŸ”‘'
     },
     {
       type: 'Hoarding Cleanup',
       description: 'Sensitive cleanup of accumulated belongings',
-      icon: '📦'
+      icon: 'ðŸ“¦'
     }
   ]
 
@@ -68,7 +68,7 @@ export default function EstateCleanoutServicePage() {
               Estate Cleanout Services
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Looking for estate cleanout services? T&T Dumpsters offers efficient and reliable solutions for your estate cleanout needs. Choose our tailored residential dumpster rentals for managing inherited estates and let us do all the work for you.
+              Looking for estate cleanout services? TNT Dumpsters offers efficient and reliable solutions for your estate cleanout needs. Choose our tailored residential dumpster rentals for managing inherited estates and let us do all the work for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -268,3 +268,4 @@ export default function EstateCleanoutServicePage() {
     </main>
   )
 }
+

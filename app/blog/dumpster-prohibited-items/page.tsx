@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'What Can and Cannot Go in a Dumpster Rental | T&T Dumpsters',
+  title: 'What Can and Cannot Go in a Dumpster Rental | TNT Dumpsters',
   description: 'Understand prohibited items in dumpster rentals and the right way to dispose of household chemicals, electronics, tires, and other restricted materials.',
   keywords: 'dumpster prohibited items, what cannot go in dumpster, hazardous waste disposal, dumpster rules',
 }
@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 export default function DumpsterProhibitedItemsPage() {
   const prohibited = [
     'Liquids, paints, oils, and household chemicals',
-    'Batteries and electronics (E‑waste)',
+    'Batteries and electronics (Eâ€‘waste)',
     'Tires, propane tanks, and fuel containers',
     'Asbestos and other hazardous materials',
     'Refrigerants without proper certification',
@@ -42,9 +42,9 @@ export default function DumpsterProhibitedItemsPage() {
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Waste Management</span>
             </div>
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">What Can and Cannot Go in a Dumpster Rental</h1>
-            <p className="text-xl text-gray-600 mb-8">Knowing the rules keeps your project safe and avoids extra fees. Here’s a quick guide and where to take restricted items.</p>
+            <p className="text-xl text-gray-600 mb-8">Knowing the rules keeps your project safe and avoids extra fees. Hereâ€™s a quick guide and where to take restricted items.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>T&T Dumpsters Team</span></div>
+              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
               <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /><span>January 10, 2025</span></div>
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /><span>4 min read</span></div>
             </div>
@@ -85,7 +85,7 @@ export default function DumpsterProhibitedItemsPage() {
               </div>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Where to Take Restricted Items</h3>
-              <p className="text-lg text-gray-700">Local household hazardous waste facilities and e‑waste recyclers can properly handle restricted materials. Call us if you are unsure—we’ll point you in the right direction.</p>
+              <p className="text-lg text-gray-700">Local household hazardous waste facilities and eâ€‘waste recyclers can properly handle restricted materials. Call us if you are unsureâ€”weâ€™ll point you in the right direction.</p>
             </div>
           </div>
         </div>
@@ -95,7 +95,7 @@ export default function DumpsterProhibitedItemsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Have Questions About an Item?</h2>
-            <p className="text-blue-100 mb-8">We’ll help you determine what’s allowed and the best disposal option.</p>
+            <p className="text-blue-100 mb-8">Weâ€™ll help you determine whatâ€™s allowed and the best disposal option.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8012099013" className="inline-block bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">Call (801) 209-9013</a>
               <a href="/quote" className="inline-block bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors">Get Free Quote</a>
@@ -106,5 +106,6 @@ export default function DumpsterProhibitedItemsPage() {
     </main>
   )
 }
+
 
 

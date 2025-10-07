@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Building } from 'lucide-react'
 
 export default function CommercialServicePage() {
@@ -17,22 +17,22 @@ export default function CommercialServicePage() {
     {
       type: 'Office Buildings',
       description: 'Professional office renovations and cleanouts',
-      icon: '🏢'
+      icon: 'ðŸ¢'
     },
     {
       type: 'Retail Stores',
       description: 'Store updates, renovations, and inventory disposal',
-      icon: '🛍️'
+      icon: 'ðŸ›ï¸'
     },
     {
       type: 'Restaurants',
       description: 'Kitchen renovations and food service waste',
-      icon: '🍽️'
+      icon: 'ðŸ½ï¸'
     },
     {
       type: 'Warehouses',
       description: 'Large-scale cleanouts and facility maintenance',
-      icon: '🏭'
+      icon: 'ðŸ­'
     }
   ]
 
@@ -133,7 +133,7 @@ export default function CommercialServicePage() {
               Serving All Types of Businesses
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              T&T Dumpsters offers comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.
+              TNT Dumpsters offers comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.
             </p>
           </div>
 
@@ -207,7 +207,7 @@ export default function CommercialServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}
@@ -222,7 +222,7 @@ export default function CommercialServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">
-              Why Choose T&T Dumpsters for Your Business?
+              Why Choose TNT Dumpsters for Your Business?
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -291,7 +291,7 @@ export default function CommercialServicePage() {
               Ready to Streamline Your Business Waste Management?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Get a free commercial quote and discover how T&T Dumpsters can help your business stay clean and compliant.
+              Get a free commercial quote and discover how TNT Dumpsters can help your business stay clean and compliant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -313,3 +313,4 @@ export default function CommercialServicePage() {
     </main>
   )
 }
+
