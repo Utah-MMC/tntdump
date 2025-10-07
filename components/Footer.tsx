@@ -1,4 +1,4 @@
-import Link from 'next/link'
+﻿import Link from 'next/link'
 import { Phone, Mail, MapPin } from 'lucide-react'
 
 const Footer = () => {
@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                      {/* Company Info */}
            <div className="space-y-4">
-             <h3 className="text-lg sm:text-xl font-bold text-yellow-400">T&T Dumpsters</h3>
+             <h3 className="text-lg sm:text-xl font-bold text-yellow-400">TNT Dumpsters</h3>
             <p className="text-gray-300">
               Over 55 years of experience in dumpster rental services. Serving the Wasatch Front area with reliable, affordable waste management solutions.
             </p>
@@ -94,7 +94,7 @@ const Footer = () => {
          <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
              <div className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
-               © {currentYear} T&T Dumpsters. All rights reserved.
+               Â© {currentYear} TNT Dumpsters. All rights reserved.
              </div>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
                {navigation.legal.map((item) => (
@@ -115,6 +115,7 @@ const Footer = () => {
 }
 
 export default Footer
+
 
 
 

@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | T&T Dumpsters',
-  description: 'Terms of service for T&T Dumpsters. Learn about our service terms and conditions.',
+  title: 'Terms of Service | TNT Dumpsters',
+  description: 'Terms of service for TNT Dumpsters. Learn about our service terms and conditions.',
 }
 
 export default function TermsOfService() {
@@ -14,7 +14,7 @@ export default function TermsOfService() {
         </h1>
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-lg text-gray-600 mb-8">
-            These terms of service govern your use of T&T Dumpsters services and website.
+            These terms of service govern your use of TNT Dumpsters services and website.
           </p>
           
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Agreement</h2>
@@ -36,3 +36,4 @@ export default function TermsOfService() {
     </div>
   )
 }
+

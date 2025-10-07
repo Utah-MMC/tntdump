@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck } from 'lucide-react'
 
 export default function ResidentialServicePage() {
@@ -162,7 +162,7 @@ export default function ResidentialServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}
@@ -204,7 +204,7 @@ export default function ResidentialServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Why Choose T&T Dumpsters for Your Residential Needs?
+              Why Choose TNT Dumpsters for Your Residential Needs?
             </h2>
             <p className="text-xl text-blue-100">
               Over 55 years of experience serving Utah homeowners
@@ -274,3 +274,4 @@ export default function ResidentialServicePage() {
     </main>
   )
 }
+

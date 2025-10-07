@@ -1,8 +1,8 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Accessibility Policy | T&T Dumpsters',
-  description: 'Accessibility policy for T&T Dumpsters. Our commitment to making our services accessible to all customers.',
+  title: 'Accessibility Policy | TNT Dumpsters',
+  description: 'Accessibility policy for TNT Dumpsters. Our commitment to making our services accessible to all customers.',
 }
 
 export default function AccessibilityPolicy() {
@@ -14,7 +14,7 @@ export default function AccessibilityPolicy() {
         </h1>
         <div className="max-w-4xl mx-auto prose prose-lg">
           <p className="text-lg text-gray-600 mb-8">
-            T&T Dumpsters is committed to ensuring our services are accessible to all customers.
+            TNT Dumpsters is committed to ensuring our services are accessible to all customers.
           </p>
           
           <h2 className="text-2xl font-bold text-gray-900 mb-4">Our Commitment</h2>
@@ -36,3 +36,4 @@ export default function AccessibilityPolicy() {
     </div>
   )
 }
+

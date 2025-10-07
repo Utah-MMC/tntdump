@@ -1,9 +1,9 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Size Calculator | Find the Right Size | T&T Dumpsters',
+  title: 'Dumpster Size Calculator | Find the Right Size | TNT Dumpsters',
   description: 'Use our free dumpster size calculator to find the perfect dumpster for your project. Get instant recommendations, pricing, and free quotes. Call (801) 209-9013.',
   keywords: 'dumpster size calculator, dumpster rental calculator, dumpster size guide, dumpster pricing, utah dumpster rental',
 }
@@ -44,7 +44,7 @@ export default function CalculatorPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">📞</span>
+                  <span className="text-2xl">ðŸ“ž</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation</h3>
                 <p className="text-gray-600 mb-4">
@@ -60,7 +60,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">💰</span>
+                  <span className="text-2xl">ðŸ’°</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Estimates</h3>
                 <p className="text-gray-600 mb-4">
@@ -76,7 +76,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">🚚</span>
+                  <span className="text-2xl">ðŸšš</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
                 <p className="text-gray-600 mb-4">
@@ -182,3 +182,4 @@ export default function CalculatorPage() {
     </main>
   )
 }
+

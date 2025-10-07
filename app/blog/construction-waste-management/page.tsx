@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Construction Waste Management: Best Practices | T&T Dumpsters',
+  title: 'Construction Waste Management: Best Practices | TNT Dumpsters',
   description: 'Learn practical construction waste management strategies including segregation, recycling, safe disposal, and cost control for residential and commercial projects.',
   keywords: 'construction waste management, jobsite dumpsters, recycling construction debris, construction dumpster tips',
 }
@@ -38,7 +38,7 @@ export default function ConstructionWasteManagementPage() {
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Construction Waste Management: Best Practices</h1>
             <p className="text-xl text-gray-600 mb-8">Reduce costs, keep the site safe, and improve sustainability by planning how materials are handled, recycled, and disposed of from day one.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>T&T Dumpsters Team</span></div>
+              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
               <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /><span>December 15, 2024</span></div>
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /><span>8 min read</span></div>
             </div>
@@ -97,5 +97,6 @@ export default function ConstructionWasteManagementPage() {
     </main>
   )
 }
+
 
 

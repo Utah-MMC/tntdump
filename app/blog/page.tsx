@@ -1,11 +1,11 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Link from 'next/link'
 import Image from 'next/image'
 import { Calendar, User, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Blog | T&T Dumpsters | Tips, Guides & News',
-  description: 'Expert tips, guides, and news about dumpster rental services. Learn about waste management, project planning, and get the latest updates from T&T Dumpsters.',
+  title: 'Dumpster Rental Blog | TNT Dumpsters | Tips, Guides & News',
+  description: 'Expert tips, guides, and news about dumpster rental services. Learn about waste management, project planning, and get the latest updates from TNT Dumpsters.',
   keywords: 'dumpster rental blog, waste management tips, project planning, dumpster rental guides, utah dumpster rental news',
 }
 
@@ -15,7 +15,7 @@ const blogPosts = [
     title: 'How to Choose the Right Dumpster Size for Your Project',
     excerpt: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout. Our comprehensive guide covers all dumpster sizes and their best uses.',
     image: '/images/dumpster500x500-2.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2025-01-15',
     category: 'Project Planning',
     readTime: '5 min read',
@@ -26,7 +26,7 @@ const blogPosts = [
     title: 'What Can and Cannot Go in a Dumpster Rental',
     excerpt: 'Understanding what materials are allowed in dumpster rentals is crucial for a smooth project. Learn about prohibited items and how to dispose of them properly.',
     image: '/images/dumpster3-500x500-1.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2025-01-10',
     category: 'Waste Management',
     readTime: '4 min read',
@@ -37,7 +37,7 @@ const blogPosts = [
     title: 'Estate Cleanout: A Complete Guide for Families',
     excerpt: 'Navigating estate cleanouts can be overwhelming. Our guide provides step-by-step instructions, tips for organization, and how to handle sensitive situations with care.',
     image: '/images/dumpster2-500x500-2.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2025-01-05',
     category: 'Estate Services',
     readTime: '7 min read',
@@ -48,7 +48,7 @@ const blogPosts = [
     title: 'Commercial Dumpster Rental: What Businesses Need to Know',
     excerpt: 'Businesses have unique waste management needs. Learn about commercial dumpster rental options, compliance requirements, and cost-effective solutions.',
     image: '/images/dumpster500x500-2.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2024-12-28',
     category: 'Commercial Services',
     readTime: '6 min read',
@@ -59,7 +59,7 @@ const blogPosts = [
     title: 'Winter Dumpster Rental: Tips for Cold Weather Projects',
     excerpt: 'Winter projects come with unique challenges. Learn how to plan dumpster rentals during cold weather, including scheduling, placement, and safety considerations.',
     image: '/images/dumpster3-500x500-1.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2024-12-20',
     category: 'Seasonal Tips',
     readTime: '5 min read',
@@ -70,7 +70,7 @@ const blogPosts = [
     title: 'Construction Waste Management: Best Practices',
     excerpt: 'Proper construction waste management is essential for project success. Learn about waste reduction, recycling opportunities, and efficient disposal methods.',
     image: '/images/dumpster2-500x500-2.jpeg',
-    author: 'T&T Dumpsters Team',
+    author: 'TNT Dumpsters Team',
     date: '2024-12-15',
     category: 'Construction',
     readTime: '8 min read',
@@ -187,7 +187,7 @@ export default function BlogPage() {
         <div className="container-custom">
           <div className="max-w-2xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
-              Stay Updated with T&T Dumpsters
+              Stay Updated with TNT Dumpsters
             </h2>
             <p className="text-blue-100 mb-8">
               Get the latest tips, guides, and updates delivered to your inbox. No spam, just valuable content for your projects.
@@ -236,3 +236,4 @@ export default function BlogPage() {
     </main>
   )
 }
+

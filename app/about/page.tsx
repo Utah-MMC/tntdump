@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Users, Award } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
     {
       year: '1965',
       title: 'Company Founded',
-      description: 'T&T Dumpsters was established as a family-owned waste management business.'
+      description: 'TNT Dumpsters was established as a family-owned waste management business.'
     },
     {
       year: '1980',
@@ -66,7 +66,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen">
       <HeroSection
-        title="About T&T Dumpsters"
+        title="About TNT Dumpsters"
         description="A family-owned business with over 55 years of experience serving the Wasatch Front. We are committed to providing reliable, affordable, and environmentally responsible waste management solutions."
         primaryButton={{
           text: "Call Now: +1 (801) 209-9013",
@@ -90,7 +90,7 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
-                  T&T Dumpsters was founded in 1965 as a family-owned waste management business in West Jordan, Utah. 
+                  TNT Dumpsters was founded in 1965 as a family-owned waste management business in West Jordan, Utah. 
                   What started as a small local operation has grown into a trusted name in dumpster rental services 
                   throughout the Wasatch Front area.
                 </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   We are proud to be locally owned and operated, which allows us to understand and serve the unique 
-                  needs of our community. Our deep roots in the area mean we're not just a service provider – 
+                  needs of our community. Our deep roots in the area mean we're not just a service provider â€“ 
                   we're your neighbors, committed to keeping our community clean and beautiful.
                 </p>
               </div>
@@ -111,7 +111,7 @@ export default function AboutPage() {
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
                   src="/images/IMG_3190.jpg"
-                  alt="T&T Dumpsters serving the Wasatch Front community with reliable waste management services"
+                  alt="TNT Dumpsters serving the Wasatch Front community with reliable waste management services"
                   fill
                   className="object-cover"
                 />
@@ -156,7 +156,7 @@ export default function AboutPage() {
               Our Journey Through the Years
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              From our founding in 1965 to today, T&T Dumpsters has been a constant presence in the Wasatch Front, 
+              From our founding in 1965 to today, TNT Dumpsters has been a constant presence in the Wasatch Front, 
               evolving and growing while maintaining our commitment to quality service.
             </p>
           </div>
@@ -207,7 +207,7 @@ export default function AboutPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Choose T&T Dumpsters?
+                Why Choose TNT Dumpsters?
               </h2>
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
@@ -252,7 +252,7 @@ export default function AboutPage() {
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
                   src="/images/IMG_0350.jpg"
-                  alt="T&T Dumpsters professional team providing reliable waste management services"
+                  alt="TNT Dumpsters professional team providing reliable waste management services"
                   fill
                   className="object-cover"
                 />
@@ -266,7 +266,7 @@ export default function AboutPage() {
       <section className="section-padding bg-primary-600">
         <div className="container-custom text-center">
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Work with T&T Dumpsters?
+            Ready to Work with TNT Dumpsters?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
             Experience the difference that 55+ years of experience and family values can make. 
@@ -301,3 +301,4 @@ export default function AboutPage() {
     </main>
   )
 }
+

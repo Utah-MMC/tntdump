@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
@@ -62,7 +62,7 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen">
       <HeroSection
-        title="Contact T&T Dumpsters"
+        title="Contact TNT Dumpsters"
         description="Ready to get started with your dumpster rental? Contact us today for a free estimate and professional service. We're here to help with all your waste management needs."
         primaryButton={{
           text: "Call Now: +1 (801) 209-9013",
@@ -128,13 +128,13 @@ export default function ContactPage() {
                     <h3 className="font-semibold text-gray-900">Serving Area</h3>
                     <p className="text-gray-600">Wasatch Front, Utah</p>
                     <div className="mt-2 text-sm text-gray-600">
-                      <p>• West Jordan</p>
-                      <p>• Salt Lake City</p>
-                      <p>• Murray</p>
-                      <p>• Sandy</p>
-                      <p>• Draper</p>
-                      <p>• Riverton</p>
-                      <p>• And surrounding areas</p>
+                      <p>â€¢ West Jordan</p>
+                      <p>â€¢ Salt Lake City</p>
+                      <p>â€¢ Murray</p>
+                      <p>â€¢ Sandy</p>
+                      <p>â€¢ Draper</p>
+                      <p>â€¢ Riverton</p>
+                      <p>â€¢ And surrounding areas</p>
                     </div>
                   </div>
                 </div>
@@ -153,9 +153,9 @@ export default function ContactPage() {
               </div>
 
               <div className="bg-primary-50 p-6 rounded-lg">
-                <h3 className="font-semibold text-gray-900 mb-3">About T&T Dumpsters</h3>
+                <h3 className="font-semibold text-gray-900 mb-3">About TNT Dumpsters</h3>
                 <p className="text-gray-600">
-                  By selecting T&T Dumpsters for your waste management requirements, you are opting for a firm with a demonstrated history of dependability and high performance. Call or text our family-owned and locally operated enterprise today!
+                  By selecting TNT Dumpsters for your waste management requirements, you are opting for a firm with a demonstrated history of dependability and high performance. Call or text our family-owned and locally operated enterprise today!
                 </p>
               </div>
             </div>
@@ -265,7 +265,7 @@ export default function ContactPage() {
         <div className="container-custom">
           <div className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose T&T Dumpsters?
+              Why Choose TNT Dumpsters?
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               With over 55 years of experience, we provide reliable, affordable, and professional 
@@ -358,7 +358,7 @@ export default function ContactPage() {
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
                   src="/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp"
-                  alt="T&T Dumpsters serving the Wasatch Front area with professional dumpster rental services"
+                  alt="TNT Dumpsters serving the Wasatch Front area with professional dumpster rental services"
                   fill
                   className="object-cover"
                 />
@@ -407,3 +407,4 @@ export default function ContactPage() {
     </main>
   )
 }
+

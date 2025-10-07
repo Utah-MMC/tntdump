@@ -1,4 +1,4 @@
-import { Star } from 'lucide-react'
+﻿import { Star } from 'lucide-react'
 import Image from 'next/image'
 import QuickContactForm from '@/components/QuickContactForm'
 
@@ -7,14 +7,14 @@ export default function ReviewsPage() {
     {
       name: 'John Smith',
       rating: 5,
-      text: 'Excellent service! T&T Dumpsters delivered our dumpster right on time and picked it up when we were done. Very professional and competitive pricing. Will definitely use them again for our next project.',
+      text: 'Excellent service! TNT Dumpsters delivered our dumpster right on time and picked it up when we were done. Very professional and competitive pricing. Will definitely use them again for our next project.',
       location: 'West Jordan, UT',
       service: 'Residential Dumpster Rental'
     },
     {
       name: 'Sarah Johnson',
       rating: 5,
-      text: 'Great experience with T&T Dumpsters. They helped us with our home renovation project and made the waste disposal process so easy. The team was helpful, punctual, and made our project much smoother.',
+      text: 'Great experience with TNT Dumpsters. They helped us with our home renovation project and made the waste disposal process so easy. The team was helpful, punctual, and made our project much smoother.',
       location: 'Salt Lake City, UT',
       service: 'Home Renovation Project'
     },
@@ -28,7 +28,7 @@ export default function ReviewsPage() {
     {
       name: 'Lisa Wilson',
       rating: 5,
-      text: 'Professional, reliable, and affordable. T&T Dumpsters exceeded our expectations for our commercial project. The team was professional and the service was exactly what we needed.',
+      text: 'Professional, reliable, and affordable. TNT Dumpsters exceeded our expectations for our commercial project. The team was professional and the service was exactly what we needed.',
       location: 'Sandy, UT',
       service: 'Commercial Dumpster Rental'
     },
@@ -49,14 +49,14 @@ export default function ReviewsPage() {
     {
       name: 'David Miller',
       rating: 5,
-      text: 'Fantastic service! T&T Dumpsters provided exactly what we needed for our industrial cleanout. Professional, efficient, and cost-effective. Highly recommend for any waste management needs.',
+      text: 'Fantastic service! TNT Dumpsters provided exactly what we needed for our industrial cleanout. Professional, efficient, and cost-effective. Highly recommend for any waste management needs.',
       location: 'West Jordan, UT',
       service: 'Industrial Cleanout'
     },
     {
       name: 'Amanda Taylor',
       rating: 5,
-      text: 'Excellent experience with T&T Dumpsters. They helped us with our restaurant renovation and the service was impeccable. Fast delivery, great communication, and fair pricing.',
+      text: 'Excellent experience with TNT Dumpsters. They helped us with our restaurant renovation and the service was impeccable. Fast delivery, great communication, and fair pricing.',
       location: 'Salt Lake City, UT',
       service: 'Restaurant Renovation'
     },
@@ -99,7 +99,7 @@ export default function ReviewsPage() {
               <span className="text-primary-600">Reviews</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              See what our satisfied customers are saying about T&T Dumpsters. 
+              See what our satisfied customers are saying about TNT Dumpsters. 
               We take pride in providing exceptional service and building lasting relationships with our clients.
             </p>
             
@@ -141,7 +141,7 @@ export default function ReviewsPage() {
               What Our Customers Are Saying
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              At T&T Dumpsters, we take pride in providing exceptional dumpster services to our customers. 
+              At TNT Dumpsters, we take pride in providing exceptional dumpster services to our customers. 
               Here's what our satisfied clients have to say about their experience with us.
             </p>
           </div>
@@ -178,7 +178,7 @@ export default function ReviewsPage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Why Customers Choose T&T Dumpsters
+                Why Customers Choose TNT Dumpsters
               </h2>
               <div className="space-y-6">
                 <div className="flex items-start space-x-4">
@@ -233,7 +233,7 @@ export default function ReviewsPage() {
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
                   src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
-                  alt="T&T Dumpsters customer reviews and testimonials"
+                  alt="TNT Dumpsters customer reviews and testimonials"
                   fill
                   className="object-cover"
                 />
@@ -272,7 +272,7 @@ export default function ReviewsPage() {
             Ready to Experience Our Service?
           </h2>
           <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Join our satisfied customers and experience the T&T Dumpsters difference. 
+            Join our satisfied customers and experience the TNT Dumpsters difference. 
             Contact us today for a free estimate and professional service you can count on.
           </p>
           
@@ -316,3 +316,4 @@ export default function ReviewsPage() {
     </main>
   )
 }
+

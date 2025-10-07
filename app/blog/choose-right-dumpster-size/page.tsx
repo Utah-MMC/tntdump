@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'How to Choose the Right Dumpster Size for Your Project | T&T Dumpsters',
+  title: 'How to Choose the Right Dumpster Size for Your Project | TNT Dumpsters',
   description: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout. Our comprehensive guide covers all dumpster sizes and their best uses.',
   keywords: 'dumpster size guide, choose dumpster size, dumpster rental planning, project dumpster size, waste management planning',
 }
@@ -109,7 +109,7 @@ export default function ChooseRightDumpsterSizePage() {
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center">
                 <User className="w-4 h-4 mr-2" />
-                <span>T&T Dumpsters Team</span>
+                <span>TNT Dumpsters Team</span>
               </div>
               <div className="flex items-center">
                 <Calendar className="w-4 h-4 mr-2" />
@@ -264,3 +264,4 @@ export default function ChooseRightDumpsterSizePage() {
     </main>
   )
 }
+

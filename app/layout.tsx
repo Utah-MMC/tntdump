@@ -1,4 +1,4 @@
-import type { Metadata, Viewport } from 'next'
+﻿import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,21 +16,21 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
+  title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
   description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
   keywords: 'dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, wasatch front dumpster rental',
   metadataBase: new URL('https://tntdump.com'),
   openGraph: {
-    title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
+    title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
     description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
     url: 'https://tntdump.com',
-    siteName: 'T&T Dumpsters',
+    siteName: 'TNT Dumpsters',
     images: [
       {
         url: 'https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp',
         width: 1200,
         height: 630,
-        alt: 'T&T Dumpsters - Professional dumpster rental services in Utah',
+        alt: 'TNT Dumpsters - Professional dumpster rental services in Utah',
       },
     ],
     locale: 'en_US',
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'T&T Dumpsters - Dumpster Rental Services on the Wasatch Front',
+    title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
     description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
@@ -107,7 +107,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "T&T Dumpsters",
+              "name": "TNT Dumpsters",
               "description": "Professional dumpster rental services serving the Wasatch Front area for over 55 years. Residential, commercial, and industrial waste management solutions.",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
@@ -223,3 +223,4 @@ export default function RootLayout({
     </html>
   )
 }
+

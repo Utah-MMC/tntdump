@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero'
+﻿import Hero from '@/components/Hero'
 import nextDynamic from 'next/dynamic'
 import CityCard from '@/components/CityCard'
 const Services = nextDynamic(() => import('@/components/Services'), { ssr: false, loading: () => null })
@@ -59,7 +59,7 @@ export default function Home() {
               Cities We Serve
             </h2>
             <p className="text-sm text-blue-200 max-w-3xl mx-auto">
-              T&T Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
+              TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
           </div>
@@ -147,3 +147,4 @@ export default function Home() {
     </main>
   )
 }
+

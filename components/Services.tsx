@@ -1,4 +1,4 @@
-"use client"
+﻿"use client"
 import Link from 'next/link'
 import Image from 'next/image'
 import HorizontalScroller from './HorizontalScroller'
@@ -14,14 +14,14 @@ const Services = () => {
     },
     {
       title: 'Commercial Dumpster Service',
-      description: 'T&T Dumpsters offers a comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.',
+      description: 'TNT Dumpsters offers a comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.',
       image: '/images/dumpster3-500x500-1.jpeg',
       href: '/dumpsters/commercial',
       alt: 'Commercial dumpster rental service for businesses'
     },
     {
       title: 'Construction Dumpster Service',
-      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolition—like concrete, lumber, drywall, and roofing—so your job site stays clean and safe.',
+      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolitionâ€”like concrete, lumber, drywall, and roofingâ€”so your job site stays clean and safe.',
       image: '/images/Construction-Rental-480x480.jpg',
       href: '/dumpsters/concrete',
       alt: 'Construction dumpster rental service for construction and demolition debris'
@@ -90,4 +90,5 @@ const Services = () => {
 }
 
 export default Services
+
 

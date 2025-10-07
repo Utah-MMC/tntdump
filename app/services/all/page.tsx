@@ -1,10 +1,10 @@
-import ServiceCard from '@/components/ServiceCard'
+﻿import ServiceCard from '@/components/ServiceCard'
 import HeroSection from '@/components/HeroSection'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'All Services - T&T Dumpsters | Utah',
-  description: 'Legacy services grid for T&T Dumpsters',
+  title: 'All Services - TNT Dumpsters | Utah',
+  description: 'Legacy services grid for TNT Dumpsters',
 }
 
 const services = [
@@ -108,6 +108,7 @@ export default function ServicesAllPage() {
     </main>
   )
 }
+
 
 
 

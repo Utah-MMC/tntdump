@@ -1,7 +1,7 @@
-import type { Metadata } from 'next'
+﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Long-Term Dumpster Rental Services | T&T Dumpsters',
+  title: 'Long-Term Dumpster Rental Services | TNT Dumpsters',
   description: 'Professional long-term dumpster rental services in Utah. Flexible contracts, competitive pricing, and reliable service for ongoing waste management needs.',
   keywords: 'long-term dumpster rental, extended dumpster rental, ongoing waste management, utah dumpster rental',
 }
@@ -104,7 +104,7 @@ export default function LongTermDumpsters() {
                     ))}
                   </ul>
                   {size.pricing.some(p => p.note) && (
-                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' · ')}</p>
+                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' Â· ')}</p>
                   )}
                 </div>
               </div>
@@ -115,3 +115,4 @@ export default function LongTermDumpsters() {
     </div>
   )
 }
+

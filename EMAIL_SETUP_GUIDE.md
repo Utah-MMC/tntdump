@@ -1,9 +1,9 @@
-# Email Setup Guide for T&T Dumpsters
+﻿# Email Setup Guide for TNT Dumpsters
 
 ## Overview
 Your website now has fully functional contact and quote forms that will send email notifications to `admin@tntdump.com`. Here's what has been implemented:
 
-## ✅ What's Been Completed
+## âœ… What's Been Completed
 
 ### 1. API Endpoints Created
 - **Contact Form API**: `/api/contact` - Handles contact form submissions
@@ -21,7 +21,7 @@ Your website now has fully functional contact and quote forms that will send ema
 - Form type identification (Contact vs Quote)
 - Error handling and validation
 
-## 🔧 Setup Required
+## ðŸ”§ Setup Required
 
 ### Step 1: Get Your HostGator Email Credentials
 Since your email is hosted through HostGator, you'll need:
@@ -49,12 +49,12 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 1. Add the environment variables to your Vercel project:
    - Go to your Vercel dashboard
    - Select your project
-   - Go to Settings → Environment Variables
+   - Go to Settings â†’ Environment Variables
    - Add `EMAIL_USER` and `EMAIL_PASS`
 
 2. Redeploy your site
 
-## 📧 Email Templates
+## ðŸ“§ Email Templates
 
 ### Contact Form Email
 - Subject: "New Contact Form Submission - [Name]"
@@ -66,7 +66,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 - Includes: Full name, Phone, Email, Service type, Dumpster size, Project description, Preferred date
 - Professional HTML formatting
 
-## 🧪 Testing
+## ðŸ§ª Testing
 
 ### Test the Forms
 1. Go to your website
@@ -82,14 +82,14 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 - Phone numbers should be clickable
 - Email addresses should be clickable
 
-## 🔒 Security Features
+## ðŸ”’ Security Features
 
 - Form validation on both frontend and backend
 - reCAPTCHA integration (currently using test keys)
 - Input sanitization
 - Error handling
 
-## 🚨 Troubleshooting
+## ðŸš¨ Troubleshooting
 
 ### If emails aren't being sent:
 1. Check that environment variables are set correctly
@@ -103,7 +103,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 2. Verify API endpoints are accessible
 3. Check network tab for failed requests
 
-## 📱 Form Locations
+## ðŸ“± Form Locations
 
 1. **Homepage Hero Section**: Contact form with reCAPTCHA
 2. **Contact Page**: Full contact form
@@ -111,7 +111,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 
 All forms now send emails to `admin@tntdump.com` with professional formatting and all the information you need to follow up with customers.
 
-## 🎯 Next Steps
+## ðŸŽ¯ Next Steps
 
 1. Set up the environment variables
 2. Test all forms
@@ -119,3 +119,4 @@ All forms now send emails to `admin@tntdump.com` with professional formatting an
 4. Monitor email delivery and form submissions
 
 Your website is now ready to capture and forward all customer inquiries directly to your business email!
+

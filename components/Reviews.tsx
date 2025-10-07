@@ -1,18 +1,18 @@
-import { Star } from 'lucide-react'
+﻿import { Star } from 'lucide-react'
 
 const Reviews = () => {
   const reviews = [
     {
       name: 'John Smith',
       rating: 5,
-      text: 'Excellent service! T&T Dumpsters delivered our dumpster right on time and picked it up when we were done. Very professional and competitive pricing.',
+      text: 'Excellent service! TNT Dumpsters delivered our dumpster right on time and picked it up when we were done. Very professional and competitive pricing.',
       location: 'West Jordan, UT',
       service: 'Residential Renovation'
     },
     {
       name: 'Sarah Johnson',
       rating: 5,
-      text: 'Great experience with T&T Dumpsters. They helped us with our home renovation project and made the waste disposal process so easy.',
+      text: 'Great experience with TNT Dumpsters. They helped us with our home renovation project and made the waste disposal process so easy.',
       location: 'Salt Lake City, UT',
       service: 'Home Renovation'
     },
@@ -26,7 +26,7 @@ const Reviews = () => {
     {
       name: 'Lisa Wilson',
       rating: 5,
-      text: 'Professional, reliable, and affordable. T&T Dumpsters exceeded our expectations for our commercial project.',
+      text: 'Professional, reliable, and affordable. TNT Dumpsters exceeded our expectations for our commercial project.',
       location: 'Sandy, UT',
       service: 'Commercial Project'
     },
@@ -47,14 +47,14 @@ const Reviews = () => {
     {
       name: 'David Martinez',
       rating: 5,
-      text: 'T&T Dumpsters made our office renovation so much easier. Professional service, on-time delivery, and great pricing.',
+      text: 'TNT Dumpsters made our office renovation so much easier. Professional service, on-time delivery, and great pricing.',
       location: 'South Jordan, UT',
       service: 'Office Renovation'
     },
     {
       name: 'Amanda Thompson',
       rating: 5,
-      text: 'Used T&T Dumpsters for our restaurant remodel. They were flexible with scheduling and handled everything professionally.',
+      text: 'Used TNT Dumpsters for our restaurant remodel. They were flexible with scheduling and handled everything professionally.',
       location: 'Taylorsville, UT',
       service: 'Restaurant Renovation'
     },
@@ -75,7 +75,7 @@ const Reviews = () => {
             Here's what our satisfied customers are saying...
           </h2>
           <p className="text-lg text-blue-100 max-w-3xl mx-auto">
-            At T&T Dumpsters, we take pride in providing exceptional dumpster services to our customers. We would be grateful if you could share your thoughts about our business with others. Your feedback helps us improve and helps others make informed decisions.
+            At TNT Dumpsters, we take pride in providing exceptional dumpster services to our customers. We would be grateful if you could share your thoughts about our business with others. Your feedback helps us improve and helps others make informed decisions.
           </p>
         </div>
 
@@ -103,10 +103,10 @@ const Reviews = () => {
 
         <div className="text-center mt-12">
           <p className="text-lg text-blue-100 mb-6">
-            Please take a moment to leave a review of T&T Dumpsters and let others know what you think.
+            Please take a moment to leave a review of TNT Dumpsters and let others know what you think.
           </p>
           <a href="/reviews" className="btn-primary">
-            Learn More About T&T Dumpsters
+            Learn More About TNT Dumpsters
           </a>
         </div>
       </div>
@@ -115,6 +115,7 @@ const Reviews = () => {
 }
 
 export default Reviews
+
 
 
 

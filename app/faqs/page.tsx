@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, Phone, Clock, MapPin } from 'lucide-react'
@@ -45,7 +45,7 @@ export default function FAQsPage() {
       answer: 'Yes, we provide comprehensive commercial dumpster services for businesses of all sizes. We offer regular pickup schedules, larger dumpster sizes, and specialized services for different industries. Contact us for a consultation.'
     },
     {
-      question: 'What makes T&T Dumpsters different from other companies?',
+      question: 'What makes TNT Dumpsters different from other companies?',
       answer: 'With over 55 years of experience, we are a family-owned, locally operated business that understands the needs of our community. We offer competitive pricing, reliable service, and personalized attention to every customer. Our commitment to quality and customer satisfaction sets us apart.'
     },
     {
@@ -267,3 +267,4 @@ export default function FAQsPage() {
     </main>
   )
 }
+

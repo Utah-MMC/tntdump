@@ -1,7 +1,7 @@
-import { NextRequest, NextResponse } from 'next/server'
+﻿import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration for T&T Dumpsters
+// Email configuration for TNT Dumpsters
 const createTransporter = () => {
   return nodemailer.createTransport({
     host: 'vixen.websitewelcome.com',
@@ -67,13 +67,13 @@ async function sendQuoteEmail(formData: {
           
           <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px; margin: 20px 0;">
             <p style="margin: 0; color: #1e40af; font-weight: bold;">
-              📞 Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
+              ðŸ“ž Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
             </p>
           </div>
           
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
-            This quote request was sent from the T&T Dumpsters website quote form.<br>
+            This quote request was sent from the TNT Dumpsters website quote form.<br>
             Sent to: admin@tntdump.com | CC: admin@tntdump.com, icondumpsters@gmail.com
           </p>
         </div>
@@ -184,3 +184,4 @@ export async function POST(request: NextRequest) {
     )
   }
 }
+

@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Estate Cleanout: A Complete Guide for Families | T&T Dumpsters',
+  title: 'Estate Cleanout: A Complete Guide for Families | TNT Dumpsters',
   description: 'Step-by-step guidance for planning an estate cleanout with compassion and efficiency. Learn timelines, sorting strategies, and how dumpsters streamline the process.',
   keywords: 'estate cleanout guide, estate dumpster, home cleanout tips, bereavement cleanout help',
 }
@@ -38,7 +38,7 @@ export default function EstateCleanoutCompleteGuidePage() {
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Estate Cleanout: A Complete Guide for Families</h1>
             <p className="text-xl text-gray-600 mb-8">A thoughtful plan reduces stress and keeps the process organized. This guide walks through each step with practical advice.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>T&T Dumpsters Team</span></div>
+              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
               <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /><span>January 5, 2025</span></div>
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /><span>7 min read</span></div>
             </div>
@@ -73,7 +73,7 @@ export default function EstateCleanoutCompleteGuidePage() {
               </div>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Dumpster Tips</h3>
-              <p className="text-lg text-gray-700">A 15–20 yard container fits most estate projects. Keep donation items separate, and load heavy items first to distribute weight.</p>
+              <p className="text-lg text-gray-700">A 15â€“20 yard container fits most estate projects. Keep donation items separate, and load heavy items first to distribute weight.</p>
             </div>
           </div>
         </div>
@@ -94,5 +94,6 @@ export default function EstateCleanoutCompleteGuidePage() {
     </main>
   )
 }
+
 
 

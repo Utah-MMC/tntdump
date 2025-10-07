@@ -1,4 +1,4 @@
-'use client'
+﻿'use client'
 
 import { useState } from 'react'
 import { Phone, MessageSquare, Star, Clock, Mail, MapPin, Share2, Calculator } from 'lucide-react'
@@ -63,7 +63,7 @@ const StickySidebar = () => {
       action: () => {
         if (navigator.share) {
           navigator.share({
-            title: 'T&T Dumpsters',
+            title: 'TNT Dumpsters',
             text: 'Professional dumpster rental services in Utah',
             url: window.location.href
           })
@@ -108,3 +108,4 @@ const StickySidebar = () => {
 }
 
 export default StickySidebar
+

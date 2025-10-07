@@ -1,10 +1,10 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental Guide | T&T Dumpsters',
+  title: 'Commercial Dumpster Rental Guide | TNT Dumpsters',
   description: 'Everything businesses need to know about commercial dumpster rentals: container sizes, scheduling, compliance, and cost control for offices, retail, and construction.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
 }
@@ -38,7 +38,7 @@ export default function CommercialDumpsterRentalGuidePage() {
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Commercial Dumpster Rental: What Businesses Need to Know</h1>
             <p className="text-xl text-gray-600 mb-8">From small retail stores to large facilities, this guide explains how to choose the right dumpster, schedule service, and stay compliant.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
-              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>T&T Dumpsters Team</span></div>
+              <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
               <div className="flex items-center"><Calendar className="w-4 h-4 mr-2" /><span>December 28, 2024</span></div>
               <div className="flex items-center"><Clock className="w-4 h-4 mr-2" /><span>6 min read</span></div>
             </div>
@@ -61,7 +61,7 @@ export default function CommercialDumpsterRentalGuidePage() {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Container</h2>
-              <p className="text-lg text-gray-700 mb-6">Most businesses do well with 10–20 yard containers for regular cleanouts. Construction sites or warehouse projects may need 30 yard containers for bulky items.</p>
+              <p className="text-lg text-gray-700 mb-6">Most businesses do well with 10â€“20 yard containers for regular cleanouts. Construction sites or warehouse projects may need 30 yard containers for bulky items.</p>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Considerations</h3>
               <div className="bg-blue-50 rounded-lg p-6 mb-8">
@@ -94,5 +94,6 @@ export default function CommercialDumpsterRentalGuidePage() {
     </main>
   )
 }
+
 
 

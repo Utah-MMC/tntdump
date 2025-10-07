@@ -1,4 +1,4 @@
-import { Metadata } from 'next'
+﻿import { Metadata } from 'next'
 import DumpsterFinder from '@/components/DumpsterFinder'
 import RecommendationCards from '@/components/RecommendationCards'
 import SizeComparison from '@/components/SizeComparison'
@@ -7,7 +7,7 @@ import ZipStickyBar from '@/components/ZipStickyBar'
 import { FinderProvider } from '@/components/FinderContext'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Services - T&T Dumpsters | Utah',
+  title: 'Dumpster Rental Services - TNT Dumpsters | Utah',
   description: 'Find the right dumpster in 60 seconds. Get instant recommendations, ZIP-based pricing, and earliest delivery times.',
 }
 
@@ -39,3 +39,4 @@ export default function ServicesPage() {
     </main>
   )
 }
+
