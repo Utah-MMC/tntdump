@@ -113,7 +113,7 @@ const Hero = () => {
 
   return (
 
-    <section id="hero" className="relative min-h-[70vh] bg-cover bg-center bg-no-repeat flex items-start pt-10 sm:pt-12">
+    <section id="hero" className="relative bg-cover bg-center bg-no-repeat flex items-start pt-6 sm:pt-8 pb-2 sm:pb-4">
 
       {/* Background image as actual <Image> for proper LCP and preload */}
       <div className="absolute inset-0 hero-bg">
@@ -139,7 +139,7 @@ const Hero = () => {
 
       <div className="relative z-10 w-full">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8 items-center">
+          <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
             {/* Left Column - Content */}
             <div className="text-white">
               <div className="mb-6">
@@ -338,6 +338,34 @@ const Hero = () => {
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
               </form>
+            </div>
+          </div>
+
+          {/* Featured Images moved into Hero */}
+          <div className="mt-6 pb-[70px]">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/images/construction-dumpster-for-rent.png"
+                  alt="Construction dumpster for rent"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  quality={70}
+                  className="object-cover"
+                  priority={false}
+                />
+              </div>
+              <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
+                <Image
+                  src="/images/residential-dumpster-for-rent.png"
+                  alt="Residential dumpster for rent"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  quality={70}
+                  className="object-cover"
+                  priority={false}
+                />
+              </div>
             </div>
           </div>
         </div>
