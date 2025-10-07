@@ -257,9 +257,9 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               <p className="text-gray-600 mb-4">
                 Specialized services tailored to {city}'s unique community and development needs.
               </p>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600 list-disc list-inside">
                 {localFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
@@ -272,9 +272,9 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               <p className="text-gray-600 mb-4">
                 Office cleanouts, retail renovations, business waste, and regular service.
               </p>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600 list-disc list-inside">
                 {commercialFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
@@ -287,9 +287,9 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               <p className="text-gray-600 mb-4">
                 Large-scale industrial projects, construction waste, and heavy materials.
               </p>
-              <ul className="space-y-1 text-sm text-gray-600">
+              <ul className="space-y-1 text-sm text-gray-600 list-disc list-inside">
                 {industrialFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>{feature}</li>
                 ))}
               </ul>
             </div>
@@ -328,7 +328,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">â­</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Local Service</h3>
               <p className="text-blue-100">Family-owned business serving {city} since 1965</p>

@@ -44,7 +44,7 @@ export default function CalculatorPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸ“ž</span>
+                  <span className="text-2xl">📞</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation</h3>
                 <p className="text-gray-600 mb-4">
@@ -60,7 +60,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸ’°</span>
+                  <span className="text-2xl">💰</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Estimates</h3>
                 <p className="text-gray-600 mb-4">
@@ -76,7 +76,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸšš</span>
+                  <span className="text-2xl">🚚</span>
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
                 <p className="text-gray-600 mb-4">

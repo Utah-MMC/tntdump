@@ -57,7 +57,7 @@ async function sendEmailNotification(formData: {
           
           <div style="background-color: #dbeafe; padding: 15px; border-radius: 8px; margin: 20px 0;">
             <p style="margin: 0; color: #1e40af; font-weight: bold;">
-              ðŸ“ž Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
+              📞 Call back: <a href="tel:${formData.phone}">${formData.phone}</a>
             </p>
           </div>
           

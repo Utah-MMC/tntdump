@@ -22,17 +22,17 @@ export default function IndustrialServicePage() {
     {
       industry: 'Construction',
       description: 'Large-scale demolition, building materials, heavy debris',
-      icon: 'ðŸ—ï¸'
+      icon: '🏗️'
     },
     {
       industry: 'Mining',
       description: 'Industrial equipment, facility waste, maintenance debris',
-      icon: 'â›ï¸'
+      icon: '⛏️'
     },
     {
       industry: 'Energy',
       description: 'Power plant maintenance, equipment disposal, facility cleanouts',
-      icon: 'âš¡'
+      icon: '⚡'
     }
   ]
 
@@ -207,7 +207,7 @@ export default function IndustrialServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
                     )}
                   </div>
                 )}

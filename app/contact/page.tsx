@@ -127,15 +127,15 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Serving Area</h3>
                     <p className="text-gray-600">Wasatch Front, Utah</p>
-                    <div className="mt-2 text-sm text-gray-600">
-                      <p>â€¢ West Jordan</p>
-                      <p>â€¢ Salt Lake City</p>
-                      <p>â€¢ Murray</p>
-                      <p>â€¢ Sandy</p>
-                      <p>â€¢ Draper</p>
-                      <p>â€¢ Riverton</p>
-                      <p>â€¢ And surrounding areas</p>
-                    </div>
+                    <ul className="mt-2 text-sm text-gray-600 list-disc list-inside">
+                      <li>West Jordan</li>
+                      <li>Salt Lake City</li>
+                      <li>Murray</li>
+                      <li>Sandy</li>
+                      <li>Draper</li>
+                      <li>Riverton</li>
+                      <li>And surrounding areas</li>
+                    </ul>
                   </div>
                 </div>
 

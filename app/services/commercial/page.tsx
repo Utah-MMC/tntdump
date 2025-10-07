@@ -17,22 +17,22 @@ export default function CommercialServicePage() {
     {
       type: 'Office Buildings',
       description: 'Professional office renovations and cleanouts',
-      icon: 'ðŸ¢'
+      icon: '🏢'
     },
     {
       type: 'Retail Stores',
       description: 'Store updates, renovations, and inventory disposal',
-      icon: 'ðŸ›ï¸'
+      icon: '🛒'
     },
     {
       type: 'Restaurants',
       description: 'Kitchen renovations and food service waste',
-      icon: 'ðŸ½ï¸'
+      icon: '🍽️'
     },
     {
       type: 'Warehouses',
       description: 'Large-scale cleanouts and facility maintenance',
-      icon: 'ðŸ­'
+      icon: '🏭'
     }
   ]
 
@@ -207,7 +207,7 @@ export default function CommercialServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
                     )}
                   </div>
                 )}

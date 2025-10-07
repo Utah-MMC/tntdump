@@ -109,7 +109,7 @@ export default function ShortTermDumpsters() {
                     ))}
                   </ul>
                   {size.pricing.some(p => p.note) && (
-                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' Â· ')}</p>
+                    <p className="text-xs text-gray-500 mt-2 text-center">Notes: {size.pricing.filter(p => p.note).map(p => `${p.label} ${p.note}`).join(' · ')}</p>
                   )}
                 </div>
               </div>

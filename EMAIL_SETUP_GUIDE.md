@@ -3,7 +3,7 @@
 ## Overview
 Your website now has fully functional contact and quote forms that will send email notifications to `admin@tntdump.com`. Here's what has been implemented:
 
-## âœ… What's Been Completed
+## ✅ What's Been Completed
 
 ### 1. API Endpoints Created
 - **Contact Form API**: `/api/contact` - Handles contact form submissions
@@ -21,7 +21,7 @@ Your website now has fully functional contact and quote forms that will send ema
 - Form type identification (Contact vs Quote)
 - Error handling and validation
 
-## ðŸ”§ Setup Required
+## 🔧 Setup Required
 
 ### Step 1: Get Your HostGator Email Credentials
 Since your email is hosted through HostGator, you'll need:
@@ -49,12 +49,12 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 1. Add the environment variables to your Vercel project:
    - Go to your Vercel dashboard
    - Select your project
-   - Go to Settings â†’ Environment Variables
+- Go to Settings → Environment Variables
    - Add `EMAIL_USER` and `EMAIL_PASS`
 
 2. Redeploy your site
 
-## ðŸ“§ Email Templates
+## 📧 Email Templates
 
 ### Contact Form Email
 - Subject: "New Contact Form Submission - [Name]"
@@ -66,7 +66,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 - Includes: Full name, Phone, Email, Service type, Dumpster size, Project description, Preferred date
 - Professional HTML formatting
 
-## ðŸ§ª Testing
+## 🧪 Testing
 
 ### Test the Forms
 1. Go to your website
@@ -82,7 +82,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 - Phone numbers should be clickable
 - Email addresses should be clickable
 
-## ðŸ”’ Security Features
+## 🔐 Security Features
 
 - Form validation on both frontend and backend
 - reCAPTCHA integration (currently using test keys)
@@ -103,7 +103,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 2. Verify API endpoints are accessible
 3. Check network tab for failed requests
 
-## ðŸ“± Form Locations
+## 📱 Form Locations
 
 1. **Homepage Hero Section**: Contact form with reCAPTCHA
 2. **Contact Page**: Full contact form

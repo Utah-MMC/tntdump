@@ -61,7 +61,7 @@ export default function CommercialDumpsterRentalGuidePage() {
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Container</h2>
-              <p className="text-lg text-gray-700 mb-6">Most businesses do well with 10â€“20 yard containers for regular cleanouts. Construction sites or warehouse projects may need 30 yard containers for bulky items.</p>
+              <p className="text-lg text-gray-700 mb-6">Most businesses do well with 10–20 yard containers for regular cleanouts. Construction sites or warehouse projects may need 30 yard containers for bulky items.</p>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Key Considerations</h3>
               <div className="bg-blue-50 rounded-lg p-6 mb-8">

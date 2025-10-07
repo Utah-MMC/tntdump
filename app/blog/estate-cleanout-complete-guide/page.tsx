@@ -73,7 +73,7 @@ export default function EstateCleanoutCompleteGuidePage() {
               </div>
 
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Dumpster Tips</h3>
-              <p className="text-lg text-gray-700">A 15â€“20 yard container fits most estate projects. Keep donation items separate, and load heavy items first to distribute weight.</p>
+              <p className="text-lg text-gray-700">A 15–20 yard container fits most estate projects. Keep donation items separate, and load heavy items first to distribute weight.</p>
             </div>
           </div>
         </div>
