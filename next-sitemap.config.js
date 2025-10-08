@@ -2,7 +2,7 @@
 module.exports = {
   siteUrl: 'https://tntdump.com',
   generateRobotsTxt: true,
-  generateIndexSitemap: true, // outputs /sitemap_index.xml
+  generateIndexSitemap: false, // disable index; live index is /sitemap.xml
   sitemapSize: 45000,
   exclude: ['/admin/*', '/api/*'],
 
@@ -31,8 +31,7 @@ module.exports = {
     additionalSitemaps: [
       'https://tntdump.com/sitemap-pages.xml',
       'https://tntdump.com/sitemap-cities.xml',
-      'https://tntdump.com/sitemap-posts.xml',
-      'https://tntdump.com/sitemap_index.xml'
+      'https://tntdump.com/sitemap-posts.xml'
     ]
   }
 };
