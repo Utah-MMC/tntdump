@@ -76,6 +76,17 @@ const blogPosts = [
     readTime: '8 min read',
     slug: 'construction-waste-management'
   }
+  ,{
+    id: 7,
+    title: 'Dumpster Rentals: The Complete 2025 Guide to Sizes, Prices & Permits',
+    excerpt: 'Comprehensive 2025 guide covering sizes, pricing, permits, weight limits, and pro tips to avoid fees.',
+    image: '/images/dumpster500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-10-09',
+    category: 'Project Planning',
+    readTime: '10 min read',
+    slug: 'dumpster-rentals-2025-guide'
+  }
 ]
 
 const categories = [
