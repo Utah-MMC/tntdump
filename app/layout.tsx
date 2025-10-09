@@ -6,6 +6,9 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import StickySidebar from '@/components/StickySidebar'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
+import dynamic from 'next/dynamic'
+
+const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false, loading: () => null })
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -219,6 +222,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
+        <ChatWidget />
       </body>
     </html>
   )
