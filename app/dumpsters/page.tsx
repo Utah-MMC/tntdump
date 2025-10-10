@@ -8,7 +8,7 @@ export default function DumpstersPage() {
     {
       title: 'Residential Dumpster Service',
       description: 'Perfect for home renovations, garage cleanouts, and residential projects. Our residential dumpster service provides reliable waste management solutions for homeowners.',
-      image: '/images/dumpster500x500-2.jpeg',
+      image: '/images/dumpster2-500x500-2.jpeg',
       href: '/dumpsters/residential',
       features: ['Home renovations', 'Garage cleanouts', 'Yard waste removal', 'Furniture disposal'],
       alt: 'Residential dumpster rental service for homeowners'

@@ -50,7 +50,7 @@ export default function CommercialDumpsterRentalGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster500x500-2.jpeg" alt="Commercial property with roll-off dumpster" fill className="object-cover" />
+              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Commercial property with roll-off dumpster" fill className="object-cover" />
             </div>
           </div>
         </div>

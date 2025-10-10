@@ -14,7 +14,7 @@ const blogPosts = [
     id: 1,
     title: 'How to Choose the Right Dumpster Size for Your Project',
     excerpt: 'Learn how to select the perfect dumpster size for your home renovation, construction project, or cleanout. Our comprehensive guide covers all dumpster sizes and their best uses.',
-    image: '/images/dumpster500x500-2.jpeg',
+    image: '/images/dumpster2-500x500-2.jpeg',
     author: 'TNT Dumpsters Team',
     date: '2025-01-15',
     category: 'Project Planning',
@@ -47,7 +47,7 @@ const blogPosts = [
     id: 4,
     title: 'Commercial Dumpster Rental: What Businesses Need to Know',
     excerpt: 'Businesses have unique waste management needs. Learn about commercial dumpster rental options, compliance requirements, and cost-effective solutions.',
-    image: '/images/dumpster500x500-2.jpeg',
+    image: '/images/dumpster2-500x500-2.jpeg',
     author: 'TNT Dumpsters Team',
     date: '2024-12-28',
     category: 'Commercial Services',
@@ -80,7 +80,7 @@ const blogPosts = [
     id: 7,
     title: 'Dumpster Rentals: The Complete 2025 Guide to Sizes, Prices & Permits',
     excerpt: 'Comprehensive 2025 guide covering sizes, pricing, permits, weight limits, and pro tips to avoid fees.',
-    image: '/images/dumpster500x500-2.jpeg',
+    image: '/images/dumpster2-500x500-2.jpeg',
     author: 'TNT Dumpsters Team',
     date: '2025-10-09',
     category: 'Project Planning',
@@ -141,53 +141,50 @@ export default function BlogPage() {
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {blogPosts.map((post) => (
-              <article key={post.id} className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
-                <div className="relative h-48">
-                  <Image
-                    src={post.image}
-                    alt={post.title}
-                    fill
-                    className="object-cover"
-                  />
-                  <div className="absolute top-4 left-4">
-                    <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
-                      {post.category}
-                    </span>
+              <Link key={post.id} href={`/blog/${post.slug}`} className="group block">
+                <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
+                  <div className="relative h-48">
+                    <Image
+                      src={post.image}
+                      alt={post.title}
+                      fill
+                      className="object-cover"
+                    />
+                    <div className="absolute top-4 left-4">
+                      <span className="bg-blue-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                        {post.category}
+                      </span>
+                    </div>
                   </div>
-                </div>
-                
-                <div className="p-6">
-                  <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
-                    {post.title}
-                  </h2>
                   
-                  <p className="text-gray-600 mb-4 line-clamp-3">
-                    {post.excerpt}
-                  </p>
-                  
-                  <div className="flex items-center justify-between text-sm text-gray-500 mb-4">
-                    <div className="flex items-center space-x-4">
-                      <div className="flex items-center">
-                        <User className="w-4 h-4 mr-1" />
-                        <span>{post.author}</span>
+                  <div className="p-6">
+                    <h2 className="text-xl font-bold text-gray-900 mb-3 line-clamp-2">
+                      {post.title}
+                    </h2>
+                    
+                    <p className="text-gray-600 mb-4 line-clamp-3">
+                      {post.excerpt}
+                    </p>
+                    
+                    <div className="flex items-center justify-between text-sm text-gray-500">
+                      <div className="flex items-center space-x-4">
+                        <div className="flex items-center">
+                          <User className="w-4 h-4 mr-1" />
+                          <span>{post.author}</span>
+                        </div>
+                        <div className="flex items-center">
+                          <Calendar className="w-4 h-4 mr-1" />
+                          <span>{new Date(post.date).toLocaleDateString()}</span>
+                        </div>
                       </div>
-                      <div className="flex items-center">
-                        <Calendar className="w-4 h-4 mr-1" />
-                        <span>{new Date(post.date).toLocaleDateString()}</span>
+                      <div className="inline-flex items-center text-blue-600 group-hover:text-blue-700 font-medium">
+                        Read More
+                        <ArrowRight className="w-4 h-4 ml-1" />
                       </div>
                     </div>
-                    <span>{post.readTime}</span>
                   </div>
-                  
-                  <Link 
-                    href={`/blog/${post.slug}`}
-                    className="inline-flex items-center text-blue-600 hover:text-blue-700 font-medium"
-                  >
-                    Read More
-                    <ArrowRight className="w-4 h-4 ml-1" />
-                  </Link>
-                </div>
-              </article>
+                </article>
+              </Link>
             ))}
           </div>
         </div>
