@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Winter Dumpster Rental: Tips for Cold Weather Projects | TNT Dumpsters',
+  title: 'Winter Dumpster Rental Tips for Cold Weather | TNT Dumpsters',
   description: 'Plan successful winter projects with these dumpster rental tips: placement, scheduling, safety, and how to prevent frozen loads and extra weight.',
   keywords: 'winter dumpster tips, cold weather dumpster rental, winter construction waste, frozen dumpster load prevention',
 }
@@ -35,7 +35,7 @@ export default function WinterDumpsterRentalTipsPage() {
             <div className="mb-8">
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Seasonal Tips</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Winter Dumpster Rental: Tips for Cold Weather Projects</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Winter Dumpster Rental Tips for Cold Weather</h1>
             <p className="text-xl text-gray-600 mb-8">Cold weather adds unique challenges to waste removal. These tips help you avoid delays, safety hazards, and unexpected fees.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
@@ -60,6 +60,33 @@ export default function WinterDumpsterRentalTipsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Winter Dumpster Rental Tips for Cold Weather",
+                    "description": metadata.description,
+                    "datePublished": "2024-12-20",
+                    "dateModified": "2024-12-20",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/winter-dumpster-rental-tips" },
+                    "image": ["https://tntdump.com/images/dumpster3-500x500-1.jpeg"]
+                  })
+                }}
+              />
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Prevent Weather Delays</h2>
               <p className="text-lg text-gray-700 mb-6">Confirm pickup windows around incoming storms and keep the lid or tarp secure to reduce added weight from snow and rain.</p>
 
@@ -143,6 +170,20 @@ export default function WinterDumpsterRentalTipsPage() {
               <p className="text-lg text-gray-700 mb-6">Budget for the little winter extras: de-icer, sand, plywood pads, and a plow return before pickup. These line items pay for themselves by preventing missed pickups and driveway damage claims. Also, ask about bundled pricing: “If I add a second bin for next month, can we lock in today’s rate?” Winter is negotiation season.</p>
               <p className="text-lg text-gray-700 mb-6">And don’t forget: mistakes are cost centers. A blocked bin by a plowed berm costs a re-roll fee. A frozen latch costs time. A soaked load costs overage. Budget for prevention, not reaction. Your wallet will notice.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:text-blue-700">Dumpster Sizes: Yards, Dimensions, Capacity</Link></li>
+              <li><Link href="/blog/dumpster-rentals-2025-guide" className="text-blue-600 hover:text-blue-700">Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits</Link></li>
+              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+            </ul>
           </div>
         </div>
       </section>

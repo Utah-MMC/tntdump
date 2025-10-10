@@ -1,3 +1,4 @@
+import { Metadata } from 'next'
 import Link from 'next/link'
 
 export default function DumpsterRentals2025GuidePage() {
@@ -20,10 +21,36 @@ export default function DumpsterRentals2025GuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-              Dumpster Rentals: The Complete 2025 Guide to Sizes, Prices & Permits
+              Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits
             </h1>
 
             <article className="prose-article">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits",
+                    "description": "Comprehensive 2025 guide to dumpster rentals: sizes, pricing, permits/HOA rules, prohibited items, rental process, tonnage, and cost-saving tips.",
+                    "datePublished": "2025-01-08",
+                    "dateModified": "2025-01-08",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/dumpster-rentals-2025-guide" }
+                  })
+                }}
+              />
               <p>
                 Here’s a wild stat I share with every homeowner and GC I work with: a single 20-yard roll-off can hold 110–130 trash bags, yet I still see folks overfill it in one weekend. Why? Underestimating debris volume, forgetting about weight limits, or skipping the permit. I’ve made these mistakes, too—loaded a bin with soaked yard waste after an overnight storm and got smacked with overage. Oof!
               </p>
@@ -306,6 +333,20 @@ export default function DumpsterRentals2025GuidePage() {
                 Got a clever loading trick or a hard-won “never again” story? Share it. The best dumpster rental tips come from people in the trenches—like you and me. Let’s save money, stay safe, and keep your project humming along!
               </p>
             </article>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:text-blue-700">Dumpster Sizes: Yards, Dimensions, Capacity</Link></li>
+              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+              <li><Link href="/blog/winter-dumpster-rental-tips" className="text-blue-600 hover:text-blue-700">Winter Dumpster Rental Tips for Cold Weather</Link></li>
+            </ul>
           </div>
         </div>
       </section>
