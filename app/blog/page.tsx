@@ -100,6 +100,8 @@ const categories = [
 ]
 
 export default function BlogPage() {
+  const sortedPosts = [...blogPosts].sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
+
   return (
     <main className="min-h-screen">
       {/* Hero Section */}
@@ -140,7 +142,7 @@ export default function BlogPage() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {blogPosts.map((post) => (
+            {sortedPosts.map((post) => (
               <Link key={post.id} href={`/blog/${post.slug}`} className="group block">
                 <article className="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow">
                   <div className="relative h-48">

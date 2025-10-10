@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Sizes Explained (Cubic Yards, Dimensions & Capacity) | TNT Dumpsters',
+  title: 'Dumpster Sizes: Yards, Dimensions, Capacity | TNT Dumpsters',
   description: 'Plain-English guide to dumpster sizes. Match common projects to the right box, avoid weight overages, estimate debris volume, plan site access, and understand pricing & fees.',
   keywords: 'dumpster sizes explained, cubic yards, dumpster dimensions, dumpster capacity, choose dumpster size, weight limits, debris tonnage, dumpster pricing fees',
 }
@@ -36,7 +36,7 @@ export default function ChooseRightDumpsterSizePage() {
             </div>
             
             <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-              Dumpster Sizes Explained (Cubic Yards, Dimensions & Capacity)
+              Dumpster Sizes: Yards, Dimensions, Capacity
             </h1>
             
             <p className="text-xl text-gray-600 mb-8">
@@ -84,6 +84,33 @@ export default function ChooseRightDumpsterSizePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Dumpster Sizes: Yards, Dimensions, Capacity",
+                    "description": metadata.description,
+                    "datePublished": "2025-01-15",
+                    "dateModified": "2025-01-15",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/choose-right-dumpster-size" },
+                    "image": ["https://tntdump.com/images/dumpster2-500x500-2.jpeg"]
+                  })
+                }}
+              />
               <h2>Dumpster Sizes Explained (Cubic Yards, Dimensions &amp; Capacity)</h2>
               <p>The first time I rented a roll-off dumpster, I kept nodding like I understood “cubic yards.” I didn’t. Here’s the plain-English version: one cubic yard is a cube that’s 3 ft × 3 ft × 3 ft. Picture a standard washing machine—that’s roughly a cubic yard of volume. So when we say a 10 yard dumpster, it holds about ten of those “washing machine cubes.” Simple, right?</p>
               <p>Now, sizes aren’t just about volume. Dimensions matter because your site has limits. A 10 yard dumpster is usually around 12 ft long × 7–8 ft wide × 3.5 ft high. It’s short and squat—great for tight driveways, small cleanouts, and heavy debris like tile or concrete (with weight restrictions, of course). A 15 yard dumpster bumps the height a bit (about 4–4.5 ft high), keeping a compact footprint. The 20 yard dumpster is the crowd favorite: commonly ~22 ft long × 7–8 ft wide × 4–4.5 ft high. It fits most residential driveways and handles moderate renovation debris—drywall, cabinets, flooring, roofing shingles.</p>
@@ -143,6 +170,20 @@ export default function ChooseRightDumpsterSizePage() {
                 <li><strong>Reduce tipping weight</strong> by separating metal recycling and cardboard recycling where possible. Some facilities credit or discount clean recyclable loads. Even one less ton of mixed C&amp;D can swing your invoice from “Ouch” to “Okay.”</li>
               </ul>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/dumpster-rentals-2025-guide" className="text-blue-600 hover:text-blue-700">Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits</Link></li>
+              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+              <li><Link href="/blog/winter-dumpster-rental-tips" className="text-blue-600 hover:text-blue-700">Winter Dumpster Rental Tips for Cold Weather</Link></li>
+            </ul>
           </div>
         </div>
       </section>

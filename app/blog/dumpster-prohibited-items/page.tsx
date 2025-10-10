@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'What Can and Cannot Go in a Dumpster Rental | TNT Dumpsters',
+  title: 'What Can and Cannot Go in a Dumpster | TNT Dumpsters',
   description: 'Understand prohibited items in dumpster rentals and the right way to dispose of household chemicals, electronics, tires, and other restricted materials.',
   keywords: 'dumpster prohibited items, what cannot go in dumpster, hazardous waste disposal, dumpster rules',
 }
@@ -41,7 +41,7 @@ export default function DumpsterProhibitedItemsPage() {
             <div className="mb-8">
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Waste Management</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">What Can and Cannot Go in a Dumpster Rental</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">What Can and Cannot Go in a Dumpster</h1>
             <p className="text-xl text-gray-600 mb-8">Knowing the rules keeps your project safe and avoids extra fees. Here’s a quick guide and where to take restricted items.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
@@ -66,6 +66,33 @@ export default function DumpsterProhibitedItemsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "What Can and Cannot Go in a Dumpster",
+                    "description": metadata.description,
+                    "datePublished": "2025-01-10",
+                    "dateModified": "2025-01-10",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/dumpster-prohibited-items" },
+                    "image": ["https://tntdump.com/images/dumpster3-500x500-1.jpeg"]
+                  })
+                }}
+              />
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Prohibited Items</h2>
               <div className="bg-red-50 rounded-lg p-6 mb-8">
                 <ul className="space-y-2">
@@ -171,6 +198,20 @@ export default function DumpsterProhibitedItemsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Wrap-Up</h2>
               <p>If you made it here, you’re already ahead of most weekend warriors and even a few pros. Knowing what can and cannot go in a dumpster rental, how to prep materials, and how to dodge overage fees turns an anxious chore into a predictable process. Customize these steps for your city, document anything with refrigerants or hazardous waste, and keep your load level and clean. Got a hairy item you’re unsure about? Tell me what it is and your city—we’ll help you route it the right way so pickup day is a total non-event.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/dumpster-rentals-2025-guide" className="text-blue-600 hover:text-blue-700">Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits</Link></li>
+              <li><Link href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:text-blue-700">Dumpster Sizes: Yards, Dimensions, Capacity</Link></li>
+              <li><Link href="/blog/winter-dumpster-rental-tips" className="text-blue-600 hover:text-blue-700">Winter Dumpster Rental Tips for Cold Weather</Link></li>
+            </ul>
           </div>
         </div>
       </section>

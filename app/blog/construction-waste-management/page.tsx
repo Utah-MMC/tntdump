@@ -60,6 +60,33 @@ export default function ConstructionWasteManagementPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Construction Waste Management: Best Practices",
+                    "description": metadata.description,
+                    "datePublished": "2024-12-15",
+                    "dateModified": "2024-12-15",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/construction-waste-management" },
+                    "image": ["https://tntdump.com/images/dumpster2-500x500-2.jpeg"]
+                  })
+                }}
+              />
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Plan Your Waste Streams</h2>
               <p className="text-lg text-gray-700 mb-6">Start with a simple plan that identifies the main material streams on your job: clean wood, drywall, metal, concrete, and mixed debris. Label areas on-site and communicate the plan during the kickoff.</p>
 
@@ -132,6 +159,20 @@ export default function ConstructionWasteManagementPage() {
               <p className="text-lg text-gray-700 mb-6">The human part matters. Salvage days feel different—there’s pride in preserving something with history. When crews see a staircase get a second life in a community space, the job feels bigger than tonnage numbers. That’s the story that helps sell deconstruction on the next project without me saying a word.</p>
               <p className="text-lg text-gray-700 mb-6">If you’re on the fence, pilot a single zone. Track costs, time, and revenue or receipts. You’ll know quickly whether deconstruction is your new standard or a tool you pull out when conditions are right.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/commercial-dumpster-rental-guide" className="text-blue-600 hover:text-blue-700">Commercial Dumpster Rental: Business Guide</Link></li>
+              <li><Link href="/blog/dumpster-rentals-2025-guide" className="text-blue-600 hover:text-blue-700">Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits</Link></li>
+              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+            </ul>
           </div>
         </div>
       </section>

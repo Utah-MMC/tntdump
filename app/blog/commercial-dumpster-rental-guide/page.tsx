@@ -4,7 +4,7 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental Guide | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental: Business Guide | TNT Dumpsters',
   description: 'Everything businesses need to know about commercial dumpster rentals: container sizes, scheduling, compliance, and cost control for offices, retail, and construction.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
 }
@@ -35,7 +35,7 @@ export default function CommercialDumpsterRentalGuidePage() {
             <div className="mb-8">
               <span className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">Commercial Services</span>
             </div>
-            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Commercial Dumpster Rental: What Businesses Need to Know</h1>
+            <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Commercial Dumpster Rental: Business Guide</h1>
             <p className="text-xl text-gray-600 mb-8">From small retail stores to large facilities, this guide explains how to choose the right dumpster, schedule service, and stay compliant.</p>
             <div className="flex items-center space-x-6 text-sm text-gray-500">
               <div className="flex items-center"><User className="w-4 h-4 mr-2" /><span>TNT Dumpsters Team</span></div>
@@ -60,6 +60,33 @@ export default function CommercialDumpsterRentalGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
+              {/* BlogPosting JSON-LD */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BlogPosting",
+                    "headline": "Commercial Dumpster Rental: Business Guide",
+                    "description": metadata.description,
+                    "datePublished": "2024-12-28",
+                    "dateModified": "2024-12-28",
+                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                        "width": 176,
+                        "height": 176
+                      }
+                    },
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/commercial-dumpster-rental-guide" },
+                    "image": ["https://tntdump.com/images/dumpster2-500x500-2.jpeg"]
+                  })
+                }}
+              />
               <h2 className="text-3xl font-bold text-gray-900 mb-6">Choosing the Right Container</h2>
               <p className="text-lg text-gray-700 mb-6">Most businesses do well with 10â€“20 yard containers for regular cleanouts. Construction sites or warehouse projects may need 30 yard containers for bulky items.</p>
 
@@ -134,6 +161,20 @@ export default function CommercialDumpsterRentalGuidePage() {
               <p>Train, then retrain. New hires learn from the loudest person in the room, which isn’t always the most accurate. A quick monthly huddle on "what goes where" and why contamination fees happen will save real dollars. Add a trivia question and a small gift card—it sounds silly, but it works.</p>
               <p>Finally, think about neighbors. Early-morning pickups can be noisy; ask the hauler about quieter routes or later windows if complaints come in. Safety includes everyone who shares the space, even if they never touch the container.</p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Articles */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
+            <ul className="list-disc pl-5 space-y-2 text-lg">
+              <li><Link href="/blog/construction-waste-management" className="text-blue-600 hover:text-blue-700">Construction Waste Management: Best Practices</Link></li>
+              <li><Link href="/blog/dumpster-rentals-2025-guide" className="text-blue-600 hover:text-blue-700">Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits</Link></li>
+              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+            </ul>
           </div>
         </div>
       </section>
