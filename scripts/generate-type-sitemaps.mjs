@@ -42,7 +42,15 @@ function isDynamic(seg) {
 
 function shouldSkipTopLevel(seg) {
   // exclude folders that shouldn't be in sitemap
-  return ['api', 'admin', 'test', 'tests', 'testing', '__mocks__'].includes(seg);
+  if (['api', 'admin', 'test', 'tests', 'testing', '__mocks__'].includes(seg)) {
+    return true;
+  }
+  // Treat city pages as a separate sitemap to avoid duplicate coverage in pages
+  // e.g. /dumpster-rental-salt-lake-city-ut
+  if (/^dumpster-rental-.+-ut$/.test(seg)) {
+    return true;
+  }
+  return false;
 }
 
 function collectStaticRoutes(dir = APP_DIR) {
@@ -102,15 +110,42 @@ async function getPages() {
 }
 
 async function getCities() {
-  // Optional: data/cities.json = ["dumpster-rental-salt-lake-city-ut", "/dumpster-rental-sandy-ut", ...]
+  // Prefer explicit data file if present
+  // data/cities.json = ["dumpster-rental-salt-lake-city-ut", "/dumpster-rental-sandy-ut", ...]
   const citiesPath = path.join(DATA_DIR, 'cities.json');
   const list = readJsonIfExists(citiesPath);
-  if (!Array.isArray(list)) return [];
-  const now = toISO(Date.now());
-  return list.map(slugOrPath => {
-    const p = ensureLeadingSlash(String(slugOrPath).trim());
-    return { loc: `${SITE}${p}`, lastmod: now };
-  });
+  if (Array.isArray(list) && list.length > 0) {
+    const now = toISO(Date.now());
+    return list.map(slugOrPath => {
+      const p = ensureLeadingSlash(String(slugOrPath).trim());
+      return { loc: `${SITE}${p}`, lastmod: now };
+    });
+  }
+
+  // Fallback: auto-discover city pages from /app
+  // Any top-level directory matching /^dumpster-rental-.+-ut$/ with a page.* file
+  const entries = (() => {
+    try { return fs.readdirSync(APP_DIR, { withFileTypes: true }); } catch { return []; }
+  })();
+
+  const cityDirs = entries
+    .filter(e => e.isDirectory() && /^dumpster-rental-.+-ut$/.test(e.name));
+
+  const cities = [];
+  for (const dir of cityDirs) {
+    const dirPath = path.join(APP_DIR, dir.name);
+    // Find a page.* file for lastmod
+    let pageFilePath = null;
+    try {
+      const inner = fs.readdirSync(dirPath, { withFileTypes: true });
+      const pageFile = inner.find(e => e.isFile() && PAGE_FILENAMES.has(e.name));
+      if (pageFile) pageFilePath = path.join(dirPath, pageFile.name);
+    } catch {}
+
+    const lastmod = pageFilePath ? safeStatISO(pageFilePath) : toISO(Date.now());
+    cities.push({ loc: `${SITE}/${dir.name}`, lastmod });
+  }
+  return cities;
 }
 
 async function getPosts() {
@@ -141,6 +176,20 @@ function urlset(urls) {
   return [header, open, body, close].join('\n');
 }
 
+function sitemapIndex(files) {
+  const header = `<?xml version="1.0" encoding="UTF-8"?>`;
+  const open = `<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+  const close = `</sitemapindex>`;
+  const now = toISO(Date.now());
+  const body = files.map(f => [
+    `<sitemap>`,
+    `  <loc>${f}</loc>`,
+    `  <lastmod>${now}</lastmod>`,
+    `</sitemap>`
+  ].join('\n')).join('\n');
+  return [header, open, body, close].join('\n');
+}
+
 async function main() {
   if (!fs.existsSync(OUT_DIR)) fs.mkdirSync(OUT_DIR, { recursive: true });
 
@@ -148,11 +197,40 @@ async function main() {
     getPages(), getCities(), getPosts()
   ]);
 
-  fs.writeFileSync(path.join(OUT_DIR, 'sitemap-pages.xml'),  urlset(pages));
-  fs.writeFileSync(path.join(OUT_DIR, 'sitemap-cities.xml'), urlset(cities));
-  fs.writeFileSync(path.join(OUT_DIR, 'sitemap-posts.xml'),  urlset(posts));
+  // pages: always present
+  fs.writeFileSync(path.join(OUT_DIR, 'sitemap-pages.xml'), urlset(pages));
 
-  console.log(`SITEMAP ▶ pages=${pages.length} cities=${cities.length} posts=${posts.length}`);
+  // cities: write if present; otherwise remove stale file to avoid empty sitemap noise
+  const citiesFile = path.join(OUT_DIR, 'sitemap-cities.xml');
+  if (cities.length > 0) {
+    fs.writeFileSync(citiesFile, urlset(cities));
+  } else if (fs.existsSync(citiesFile)) {
+    try { fs.unlinkSync(citiesFile); } catch {}
+  }
+
+  // posts: write if present; otherwise keep file removed
+  const postsFile = path.join(OUT_DIR, 'sitemap-posts.xml');
+  if (posts.length > 0) {
+    fs.writeFileSync(postsFile, urlset(posts));
+  } else if (fs.existsSync(postsFile)) {
+    try { fs.unlinkSync(postsFile); } catch {}
+  }
+
+  // Write a clean index that references only non-empty sitemaps
+  const indexEntries = [
+    `${SITE}/sitemap-pages.xml`,
+    ...(cities.length > 0 ? [`${SITE}/sitemap-cities.xml`] : []),
+    ...(posts.length > 0 ? [`${SITE}/sitemap-posts.xml`] : [])
+  ];
+  fs.writeFileSync(path.join(OUT_DIR, 'sitemap.xml'), sitemapIndex(indexEntries));
+
+  // Remove legacy next-sitemap file if present to prevent duplicate coverage
+  const legacy = path.join(OUT_DIR, 'sitemap-0.xml');
+  if (fs.existsSync(legacy)) {
+    try { fs.unlinkSync(legacy); } catch {}
+  }
+
+  console.log(`SITEMAP ▶ pages=${pages.length} cities=${cities.length} posts=${posts.length} (index=${indexEntries.length})`);
 }
 
 main().catch(err => {
