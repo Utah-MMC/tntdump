@@ -7,9 +7,6 @@ User-agent: *
 Disallow: /admin/
 Disallow: /api/
 
-# Host
-Host: https://tntdump.com
-
 # Sitemaps
 Sitemap: https://tntdump.com/sitemap.xml
 Sitemap: https://tntdump.com/sitemap-pages.xml
