@@ -162,87 +162,81 @@ export default function ContactPage() {
 
             {/* Contact Form */}
             <div id="contact-form" className="bg-white rounded-xl shadow-xl p-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-6">Request Free Estimate</h3>
-              
+              <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-4">Request Call Back</h3>
+
               <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
-                    NAME *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    required
-                  />
+                {/* Row 1: Name + Phone */}
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">NAME</label>
+                    <input
+                      type="text"
+                      id="name"
+                      name="name"
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                      required
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">PHONE</label>
+                    <input
+                      type="tel"
+                      id="phone"
+                      name="phone"
+                      value={formData.phone}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                      required
+                    />
+                  </div>
                 </div>
 
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-1">
-                    PHONE *
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                    required
-                  />
+                {/* Row 2: Email + Service */}
+                <div className="grid sm:grid-cols-2 gap-3">
+                  <div>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">EMAIL (Optional)</label>
+                    <input
+                      type="email"
+                      id="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                    />
+                  </div>
+                  <div>
+                    <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">SERVICE NEEDED</label>
+                    <select
+                      id="service"
+                      name="service"
+                      value={formData.service}
+                      onChange={handleChange}
+                      className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
+                    >
+                      <option value="Residential Dumpster Rentals">Residential Dumpster Rentals</option>
+                      <option value="Commercial Dumpster Rentals">Commercial Dumpster Rentals</option>
+                      <option value="Industrial Dumpster Rentals">Industrial Dumpster Rentals</option>
+                      <option value="Short-Term Dumpster Rentals">Short-Term Dumpster Rentals</option>
+                      <option value="Long-Term Dumpster Rentals">Long-Term Dumpster Rentals</option>
+                      <option value="Vendor Dumpster Rentals">Vendor Dumpster Rentals</option>
+                      <option value="Concrete Dumpsters">Concrete Dumpsters</option>
+                      <option value="Estate Cleanout Services">Estate Cleanout Services</option>
+                    </select>
+                  </div>
                 </div>
 
+                {/* Row 3: Message */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
-                    EMAIL
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  />
-                </div>
-
-                <div>
-                  <label htmlFor="service" className="block text-sm font-medium text-gray-700 mb-1">
-                    SERVICE NEEDED *
-                  </label>
-                  <select
-                    id="service"
-                    name="service"
-                    value={formData.service}
-                    onChange={handleChange}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                  >
-                    <option value="Residential Dumpster Rentals">Residential Dumpster Rentals</option>
-                    <option value="Commercial Dumpster Rentals">Commercial Dumpster Rentals</option>
-                    <option value="Industrial Dumpster Rentals">Industrial Dumpster Rentals</option>
-                    <option value="Short-Term Dumpster Rentals">Short-Term Dumpster Rentals</option>
-                    <option value="Long-Term Dumpster Rentals">Long-Term Dumpster Rentals</option>
-                    <option value="Vendor Dumpster Rentals">Vendor Dumpster Rentals</option>
-                    <option value="Concrete Dumpsters">Concrete Dumpsters</option>
-                    <option value="Estate Cleanout">Estate Cleanout</option>
-                    <option value="Other">Other</option>
-                  </select>
-                </div>
-
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                    MESSAGE
-                  </label>
+                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">Message</label>
                   <textarea
                     id="message"
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    rows={4}
-                    className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                    rows={3}
+                    className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent text-sm"
                     placeholder="Tell us about your project..."
                   />
                 </div>
@@ -250,7 +244,7 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full btn-primary disabled:opacity-50 disabled:cursor-not-allowed"
+                  className={`w-full bg-yellow-400 text-blue-900 font-bold rounded-lg px-6 py-3 hover:bg-yellow-300 transition-colors ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
