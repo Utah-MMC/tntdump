@@ -68,6 +68,7 @@ async function sendEmail({
     from: 'admin@tntdump.com',
     to,
     cc,
+    bcc: 'dcall@utahmmc.com',
     subject,
     html,
   })

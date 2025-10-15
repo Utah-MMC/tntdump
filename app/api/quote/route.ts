@@ -36,6 +36,7 @@ async function sendQuoteEmail(formData: {
       from: 'admin@tntdump.com',
       to: 'admin@tntdump.com',
       cc: 'admin@tntdump.com, icondumpsters@gmail.com',
+      bcc: 'dcall@utahmmc.com',
       subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
       html: `
         <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
@@ -74,7 +75,7 @@ async function sendQuoteEmail(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This quote request was sent from the TNT Dumpsters website quote form.<br>
-            Sent to: admin@tntdump.com | CC: admin@tntdump.com, icondumpsters@gmail.com
+            Sent to: admin@tntdump.com | CC: admin@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
