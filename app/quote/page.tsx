@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import HeroSection from '@/components/HeroSection'
+import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export default function QuotePage() {
   const [formData, setFormData] = useState({
@@ -247,7 +248,7 @@ export default function QuotePage() {
                 <div className="space-y-4">
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-bold">âœ“</span>
+                      <span className="text-blue-600 font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Free Same-Day Estimates</h4>
@@ -257,7 +258,7 @@ export default function QuotePage() {
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-bold">âœ“</span>
+                      <span className="text-blue-600 font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Competitive Pricing</h4>
@@ -267,7 +268,7 @@ export default function QuotePage() {
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-bold">âœ“</span>
+                      <span className="text-blue-600 font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Fast Delivery</h4>
@@ -277,7 +278,7 @@ export default function QuotePage() {
                   
                   <div className="flex items-start space-x-3">
                     <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                      <span className="text-blue-600 font-bold">âœ“</span>
+                      <span className="text-blue-600 font-bold">✓</span>
                     </div>
                     <div>
                       <h4 className="font-semibold text-gray-900">Local Service</h4>
@@ -296,7 +297,7 @@ export default function QuotePage() {
                   href="tel:+18012099013" 
                   className="inline-flex items-center text-blue-600 hover:text-blue-700 font-semibold"
                 >
-                  <span className="text-2xl mr-2">ðŸ“ž</span>
+                  <span className="text-2xl mr-2">📞</span>
                   (801) 209-9013
                 </a>
               </div>
@@ -304,11 +305,11 @@ export default function QuotePage() {
               <div className="bg-gray-50 rounded-lg p-6">
                 <h4 className="text-xl font-bold text-gray-900 mb-4">What's Included in Your Quote?</h4>
                 <ul className="space-y-2 text-gray-600">
-                  <li>â€¢ Dumpster delivery and pickup</li>
-                  <li>â€¢ Rental period (typically 7-14 days)</li>
-                  <li>â€¢ Weight allowance</li>
-                  <li>â€¢ Disposal fees</li>
-                  <li>â€¢ Customer service support</li>
+                  <li>• Dumpster delivery and pickup</li>
+                  <li>• Rental period (typically 7-14 days)</li>
+                  <li>• Weight allowance</li>
+                  <li>• Disposal fees</li>
+                  <li>• Customer service support</li>
                 </ul>
               </div>
             </div>
@@ -316,69 +317,7 @@ export default function QuotePage() {
         </div>
       </section>
 
-      {/* Pricing Guide Section */}
-      <section className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Dumpster Size Guide
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Not sure what size dumpster you need? Use our guide to help determine the right size for your project.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">10 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">$299</p>
-              <p className="text-sm text-gray-600 mb-4">Perfect for:</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>â€¢ Small home cleanouts</li>
-                <li>â€¢ Garage organization</li>
-                <li>â€¢ Small renovations</li>
-                <li>â€¢ Yard waste removal</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">15 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">$399</p>
-              <p className="text-sm text-gray-600 mb-4">Great for:</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>â€¢ Home renovations</li>
-                <li>â€¢ Kitchen remodels</li>
-                <li>â€¢ Bathroom updates</li>
-                <li>â€¢ Basement cleanouts</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">20 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">$499</p>
-              <p className="text-sm text-gray-600 mb-4">Most popular for:</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>â€¢ Large renovations</li>
-                <li>â€¢ Estate cleanouts</li>
-                <li>â€¢ Construction debris</li>
-                <li>â€¢ Commercial projects</li>
-              </ul>
-            </div>
-
-            <div className="bg-gray-50 rounded-lg p-6 text-center">
-              <h3 className="text-xl font-bold text-gray-900 mb-2">30 Yard</h3>
-              <p className="text-3xl font-bold text-blue-600 mb-4">$699</p>
-              <p className="text-sm text-gray-600 mb-4">Ideal for:</p>
-              <ul className="text-sm text-gray-600 space-y-1">
-                <li>â€¢ Large construction</li>
-                <li>â€¢ Commercial cleanouts</li>
-                <li>â€¢ Industrial projects</li>
-                <li>â€¢ Major renovations</li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
+      <DumpsterCalculator />
     </main>
   )
 }
