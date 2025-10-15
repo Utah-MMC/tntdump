@@ -45,12 +45,12 @@ const Header = () => {
 
   const dumpsterServices = [
     { name: 'All Dumpster Types', href: '/dumpsters' },
-    { name: 'Residential Dumpster Service', href: '/dumpsters/residential' },
-    { name: 'Commercial Dumpster Service', href: '/dumpsters/commercial' },
-    { name: 'Industrial Dumpster Service', href: '/dumpsters/industrial' },
-    { name: 'Short-Term Dumpster Service', href: '/dumpsters/short-term' },
-    { name: 'Long-Term Dumpster Service', href: '/dumpsters/long-term' },
-    { name: 'Vendor Dumpster Rental Service', href: '/dumpsters/vendor' },
+    { name: 'Residential Dumpster Rental', href: '/dumpsters/residential' },
+    { name: 'Commercial Dumpster Rental', href: '/dumpsters/commercial' },
+    { name: 'Industrial Dumpster Rental', href: '/dumpsters/industrial' },
+    { name: 'Short-Term Dumpster Rental', href: '/dumpsters/short-term' },
+    { name: 'Long-Term Dumpster Rental', href: '/dumpsters/long-term' },
+    { name: 'Vendor Dumpster Rental', href: '/dumpsters/vendor' },
     { name: 'Concrete Dumpsters', href: '/dumpsters/concrete' },
   ]
 
