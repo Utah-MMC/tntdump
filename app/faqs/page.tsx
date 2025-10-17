@@ -10,11 +10,11 @@ export default function FAQsPage() {
   const faqs = [
     {
       question: 'What sizes of dumpsters do you offer?',
-      answer: 'We offer a range of dumpster sizes including 10-yard, 15-yard, 20-yard, and 30-yard dumpsters. Our team can help you choose the right size based on your project needs and the amount of waste you expect to generate.'
+      answer: 'We offer a range of dumpster sizes including 15-yard, 20-yard, and 30-yard dumpsters. Our team can help you choose the right size based on your project needs and the amount of waste you expect to generate.'
     },
     {
       question: 'How much do dumpster rentals cost?',
-      answer: 'Our dumpster rental prices start at $299 for a 10-yard dumpster. Pricing varies based on size, rental duration, and location. We offer free same-day estimates, so call us for an accurate quote for your specific project.'
+      answer: 'Our dumpster rental prices start at $299. Pricing varies based on size, rental duration, and location. We offer free same-day estimates, so call us for an accurate quote for your specific project.'
     },
     {
       question: 'How long can I keep the dumpster?',
