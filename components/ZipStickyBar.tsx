@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { analytics } from '@/lib/analytics'
 import { useFinder } from './FinderContext'
 
-const SIZE_CHIPS = [15, 20, 30, 40] as const
+const SIZE_CHIPS = [15, 20, 30] as const
 
 export default function ZipStickyBar() {
   const { setZip, setPreferredSize } = useFinder()

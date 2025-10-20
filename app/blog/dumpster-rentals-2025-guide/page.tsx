@@ -71,13 +71,13 @@ export default function DumpsterRentals2025GuidePage() {
               <ul>
                 <li>Bathroom or small cleanout: 10–15 yard roll-off</li>
                 <li>Kitchen remodel, flooring, roofing: 20 yard</li>
-                <li>Whole-home renovation, big demo, new build: 30–40 yard</li>
+                <li>Whole-home renovation, big demo, new build: 30 yard (plan swap-outs if needed)</li>
               </ul>
               <p>
                 Last tip: roll-offs are open-top, which is amazing for speed—just toss and go—but light debris blows. I keep a tarp in the garage and strap it down overnight. It’s a small habit that stops messes, neighbor complaints, and “windblown litter” fees.
               </p>
 
-              <h2>Dumpster Sizes &amp; Dimensions (10, 15, 20, 30, 40 Yard)</h2>
+              <h2>Dumpster Sizes &amp; Dimensions (10, 15, 20, 30 Yard)</h2>
               <p>
                 Sizing is where most money is saved—or lost. A “yard” is a cubic yard, so a 20-yard roll-off holds roughly 20 cubic yards of material. People ask me for truck-load equivalents, so here’s a practical cheat:
               </p>
@@ -86,10 +86,10 @@ export default function DumpsterRentals2025GuidePage() {
                 <li><strong>15 yard (~16’L x 7’W x 4.5’H):</strong> ~80–90 bags; ~4–5 pickup loads</li>
                 <li><strong>20 yard (~22’L x 7’W x 4’H):</strong> ~110–130 bags; ~6–8 pickup loads</li>
                 <li><strong>30 yard (~22’L x 7’W x 6’H):</strong> ~170–190 bags; ~9–11 pickup loads</li>
-                <li><strong>40 yard (~22’L x 7’W x 8’H):</strong> ~220–250 bags; ~12–14 pickup loads</li>
+                
               </ul>
               <p>
-                Dimensions vary by hauler, but lengths are commonly 12–22 feet. Height matters more than folks think. I once ordered a 40 yard for a garage clear-out and… we couldn’t easily lift heavy furniture over the side walls. We had a walk-in door—thank goodness—but that slowed loading. If your crew is small or you’re moving bulky items, consider the 20 yard with lower walls and a swing door. Faster, safer.
+                Dimensions vary by hauler, but lengths are commonly 12–22 feet. Height matters more than folks think. I once ordered a tall container for a garage clear-out and… we couldn’t easily lift heavy furniture over the side walls. We had a walk-in door—thank goodness—but that slowed loading. If your crew is small or you’re moving bulky items, consider the 20 yard with lower walls and a swing door. Faster, safer.
               </p>
               <p>
                 Material density is the silent killer. A 20 yard full of drywall is modest weight; a 20 yard of shingles, concrete, dirt, or wet yard waste can pound the scale. Many haulers restrict heavy materials to the bottom half of a container or require a smaller bin (like a 10 yard) for concrete/brick, because trucks and road laws have weight limits. If your job involves clean concrete, brick, or soil, ask for a dedicated “clean fill” dumpster. Cheaper processing, fewer headaches.
@@ -154,7 +154,7 @@ export default function DumpsterRentals2025GuidePage() {
                 <li>Bathroom remodel: 10–15 yard</li>
                 <li>Kitchen remodel (cabinets/flooring): 20 yard</li>
                 <li>Roofing 15–25 squares: 10–20 yard (check shingle weight rules)</li>
-                <li>Whole-home renovation: 30 yard (sometimes 40 yard if bulky &amp; light)</li>
+                <li>Whole-home renovation: 30 yard (schedule swap-outs if bulky &amp; light)</li>
                 <li>Concrete patio removal (clean): 10 yard dedicated clean fill</li>
               </ul>
               <p>
@@ -221,7 +221,7 @@ export default function DumpsterRentals2025GuidePage() {
 
               <h2>Weight Limits, Tonnage &amp; Dump Fees (Avoid Overage)</h2>
               <p>
-                Weight is where budgets go to blow up. Every bin comes with an included tonnage—say 2 tons for a 15 yard, 3 tons for a 20, 4–5 tons for a 30/40 (varies by market). Go over, and you’ll pay an overage per ton (or fraction). It adds up fast.
+                Weight is where budgets go to blow up. Every bin comes with an included tonnage—say 2 tons for a 15 yard, 3 tons for a 20, and around 4–5 tons for a 30 (varies by market). Go over, and you’ll pay an overage per ton (or fraction). It adds up fast.
               </p>
               <ul>
                 <li>Light debris: cabinets, trim, furniture, cardboard. A 20 yard might weigh 1.5–2.5 tons when full.</li>

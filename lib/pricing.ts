@@ -1,4 +1,4 @@
-export type DumpsterSize = '15' | '20' | '30' | '40'
+export type DumpsterSize = '15' | '20' | '30'
 
 export type ZipPricingInfo = {
   priceRangeBySize: Record<DumpsterSize, [number, number]>
@@ -8,17 +8,17 @@ export type ZipPricingInfo = {
 
 const DEFAULT_PRICING: ZipPricingInfo = {
   priceRangeBySize: {
-    '15': [320, 380],
-    '20': [360, 420],
-    '30': [420, 520],
-    '40': [520, 640],
+    // Align with homepage 7-day prices
+    // 15-yard: $325, 20-yard: $375, 30-yard: $400
+    '15': [325, 325],
+    '20': [375, 375],
+    '30': [400, 400],
   },
   etaText: 'Earliest delivery: tomorrow 8–11am',
   drivewayFriendlyBySize: {
     '15': true,
     '20': true,
     '30': false,
-    '40': false,
   },
 }
 
@@ -27,17 +27,16 @@ const PRICING_BY_PREFIX: Record<string, ZipPricingInfo> = {
   '840': DEFAULT_PRICING,
   '841': {
     priceRangeBySize: {
-      '15': [330, 390],
-      '20': [370, 440],
-      '30': [440, 540],
-      '40': [560, 690],
+      // Align with homepage 7-day prices (same across ZIPs)
+      '15': [325, 325],
+      '20': [375, 375],
+      '30': [400, 400],
     },
     etaText: 'Earliest delivery: today 2–5pm',
     drivewayFriendlyBySize: {
       '15': true,
       '20': true,
       '30': false,
-      '40': false,
     },
   },
 }
