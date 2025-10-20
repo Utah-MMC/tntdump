@@ -49,7 +49,9 @@ export default function RecommendationCards({ recommendations = [], zip = '' }: 
           <ul className="text-sm text-gray-700 mt-3 space-y-1">
             <li>~{rec.capacityLoads} pickup loads • {rec.weightTons} tons included • {rec.drivewayFriendly ? 'Driveway-friendly' : 'Requires street placement'}</li>
           </ul>
-          <div className="mt-4 font-semibold">From ${rec.priceMin}–${rec.priceMax} <span className="font-normal text-gray-600">(7 days, delivery included)</span></div>
+          <div className="mt-4 font-semibold">
+            From ${rec.priceMin === rec.priceMax ? rec.priceMin : `${rec.priceMin}–${rec.priceMax}`} <span className="font-normal text-gray-600">(7 days, delivery included)</span>
+          </div>
           <div className="text-xs text-gray-500">{rec.etaText}</div>
           <div className="mt-5 flex gap-3">
             <a

@@ -25,8 +25,8 @@ function computeRecommendedSizes(project: ProjectType, material: MaterialType, a
   if (material === 'Concrete (clean)') return ['15', '20']
   if (amount === 'Pickup load') return ['15', '20']
   if (amount === 'Small room') return ['20', '30']
-  if (amount === 'Whole house') return ['30', '40']
-  return ['20', '30', '40']
+  if (amount === 'Whole house') return ['30']
+  return ['20', '30']
 }
 
 export default function DumpsterFinder() {
@@ -189,7 +189,7 @@ export default function DumpsterFinder() {
           <div key={r.sizeYd} className="rounded-2xl border border-gray-200 p-4">
             <div className="font-semibold">{r.sizeYd}-yard Dumpster</div>
             <div className="text-sm text-gray-600">{r.bestFor}</div>
-            <div className="text-sm mt-2">From ${r.priceMin}–${r.priceMax}</div>
+            <div className="text-sm mt-2">From ${r.priceMin === r.priceMax ? r.priceMin : `${r.priceMin}–${r.priceMax}`}</div>
             <div className="text-xs text-gray-500">{r.etaText}</div>
           </div>
         ))}

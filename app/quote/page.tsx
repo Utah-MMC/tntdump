@@ -201,7 +201,7 @@ export default function QuotePage() {
                     <option value="15 Yard - Renovations">15 Yard - Renovations</option>
                     <option value="20 Yard - Most popular">20 Yard - Most popular</option>
                     <option value="30 Yard - Large projects">30 Yard - Large projects</option>
-                    <option value="40 Yard - Commercial">40 Yard - Commercial</option>
+                    
                     <option value="Not sure - Need recommendation">Not sure - Need recommendation</option>
                   </select>
                 </div>

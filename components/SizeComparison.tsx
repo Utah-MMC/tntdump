@@ -12,12 +12,12 @@ export default function SizeComparison({ zip = '' }: { zip?: string }) {
       { size: '15', bestFor: 'Kitchen/bath demo', capacity: '15', loads: 6, weight: 2 },
       { size: '20', bestFor: 'Garage cleanout', capacity: '20', loads: 8, weight: 3 },
       { size: '30', bestFor: 'Larger remodels', capacity: '30', loads: 12, weight: 4 },
-      { size: '40', bestFor: 'Major projects', capacity: '40', loads: 16, weight: 5 },
     ]
     return sizes.map((s) => {
       const [min, max] = getPriceRangeForSize(zip, s.size)
       const fits = isDrivewayFriendly(zip, s.size)
-      return { ...s, price: `$${min}–$${max}`, fits }
+      const price = min === max ? `$${min}` : `$${min}–$${max}`
+      return { ...s, price, fits }
     })
   }, [zip])
 
@@ -67,7 +67,7 @@ export default function SizeComparison({ zip = '' }: { zip?: string }) {
         <div className="mt-4 grid sm:grid-cols-2 gap-3 text-sm text-gray-700">
           <div className="rounded-xl border p-3">
             <div className="font-semibold mb-1">Illustrations</div>
-            <div className="text-gray-600">Visual size guides for 15/20/30/40 yd dumpsters.</div>
+            <div className="text-gray-600">Visual size guides for 15/20/30 yd dumpsters.</div>
           </div>
           <div className="rounded-xl border p-3">
             <div className="font-semibold mb-1">Common items</div>
