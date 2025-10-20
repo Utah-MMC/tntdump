@@ -1,5 +1,0 @@
-[33m2a4cec10[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m, [m[1;31morigin/master[m[33m, [m[1;31morigin/HEAD[m[33m)[m Completely rewrite Hero component to fix persistent JSX syntax errors
-[33mce0e26e4[m Fix JSX syntax error in Hero component - reformat section element
-[33maf6c559f[m Fix TypeScript build errors: Add gtag type declarations and fix window.gtag type casting
-[33m1c85dae1[m Resolve merge conflicts and complete comprehensive website updates
-[33m50f71db7[m Complete comprehensive website updates: 7 new city pages, 8 service pages, SEO optimization, enhanced contact forms, analytics tracking, blog structure, and performance improvements
