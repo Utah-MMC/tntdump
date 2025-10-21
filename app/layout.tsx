@@ -72,14 +72,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-            {/* Google Tag Manager */}
-            <Script id="gtm-script" strategy="afterInteractive">
-              {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?('&l='+l):'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-WFJHM33W');`}
-            </Script>
+        {/* Google Tag Manager */}
+        <Script id="gtm-script" strategy="afterInteractive">
+          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),dl=l!='dataLayer'?('&l='+l):'';j.async=true;j.src=
+          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+          })(window,document,'script','dataLayer','GTM-WFJHM33W');`}
+        </Script>
         {/* Inline critical CSS for header/hero; defer rest */}
         <style dangerouslySetInnerHTML={{__html: `
           /* critical CSS */
@@ -93,6 +93,12 @@ export default function RootLayout({
         <link rel="preload" as="style" href="/css/main.4f897a.css" />
         <link rel="stylesheet" href="/css/main.4f897a.css" media="print" onLoad="this.media='all'" />
         <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
+        {/* Favicon links */}
+        <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/logo/favicon-16x16.png" />
+        <link rel="manifest" href="/images/logo/site.webmanifest" />
+        <link rel="icon" href="/images/logo/favicon.ico" />
         <Script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" strategy="afterInteractive" />
         {/* Google tag (gtag.js) */}
         <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="afterInteractive" />
