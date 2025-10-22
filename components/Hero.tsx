@@ -146,8 +146,11 @@ const Hero = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                   Dumpster Rental in Salt Lake County
                 </h1>
-                <p className="text-lg lg:text-xl text-blue-100 mb-6 leading-relaxed">
-                  Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
+                <p className="text-lg lg:text-xl text-blue-100 mb-3 leading-relaxed">
+                  Need a roll off dumpster rental for a project or cleanout? TNT Dump offers local dumpster rental with fast delivery and clear pricing.
+                </p>
+                <p className="text-sm lg:text-base text-blue-100 mb-6">
+                  Looking for dumpster rental near me? Compare sizes and get a quick dumpster rental quote: <a href="#sizes" className="underline hover:text-white">see sizes</a> or <a href="#contact" className="underline hover:text-white">contact us</a>.
                 </p>
               </div>
 

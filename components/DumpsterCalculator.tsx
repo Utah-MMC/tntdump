@@ -115,7 +115,7 @@ const DumpsterCalculator = () => {
   const recommendedSizes = selectedProjectData?.recommendedSizes || []
 
   return (
-    <section className="py-16 bg-gray-50">
+    <section id="sizes" className="py-16 bg-gray-50">
       <div className="container-custom">
         <div className="text-center mb-12">
           <div className="flex items-center justify-center mb-4">
@@ -125,8 +125,7 @@ const DumpsterCalculator = () => {
             </h2>
           </div>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
-            Get instant recommendations and pricing.
+            Not sure what size dumpster you need? Use our calculator to find the right bin for your materials and space. See estimated dumpster rental cost by size and get answers to “how much is a dumpster rental?” without the guesswork.
           </p>
         </div>
 

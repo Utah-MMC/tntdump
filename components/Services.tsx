@@ -29,15 +29,14 @@ const Services = () => {
   ]
 
   return (
-    <section className="section-padding bg-white">
+    <section id="services" className="section-padding bg-white">
       <div className="container-custom">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-4">
             Our Dumpster Services
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We offer a comprehensive range of dumpster rental services to meet all your waste management needs. 
-            From residential cleanouts to large-scale industrial projects, we have the right solution for you.
+            We provide roll off dumpster rental for homes, contractors, and businesses. From construction dumpster rental and job site dumpster rental to residential cleanouts, our local dumpster rental keeps your project moving with fast service and fair pricing.
           </p>
         </div>
 

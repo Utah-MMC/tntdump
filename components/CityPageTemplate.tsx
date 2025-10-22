@@ -143,7 +143,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
       
       {/* Pricing Section (shown directly below hero for all cities) */}
       (
-        <section className="py-16 bg-white">
+        <section id="pricing" className="py-16 bg-white">
           <div className="container-custom">
             <div className="text-center mb-12">
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -151,6 +151,9 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               </h2>
               <p className="text-lg text-gray-600 max-w-3xl mx-auto">
                 {pricingDescription}
+              </p>
+              <p className="text-sm text-gray-600 max-w-3xl mx-auto mt-2">
+                Wondering how much is a dumpster rental in {city}? Prices depend on size, materials, and zone. Get a clear dumpster rental price and a quick dumpster rental quote from our local team.
               </p>
             </div>
 

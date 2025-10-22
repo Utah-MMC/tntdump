@@ -14,7 +14,7 @@ const Contact = () => {
                 Contact Us
               </h2>
               <p className="text-lg text-gray-600">
-                Ready to get started with your dumpster rental? Contact us today for a free estimate and professional service.
+                Ready to rent a dumpster? Get a fast dumpster rental quote and delivery details from our team. We offer delivery dumpster rental with careful placement and on-time pickup.
               </p>
             </div>
 
