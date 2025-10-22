@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import StickySidebar from '@/components/StickySidebar'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 import dynamic from 'next/dynamic'
 
@@ -22,7 +21,6 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
   description: 'Local dumpster rental in Salt Lake & Utah County with fast delivery, same day options, and upfront prices. Get a dumpster rental quote for construction or home cleanups.',
   keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
-  metadataBase: new URL('https://tntdump.com'),
   openGraph: {
     title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
     description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, and honest pricing. Get a dumpster rental quote today.',
@@ -91,7 +89,14 @@ export default function RootLayout({
         `}} />
         {/* Defer main stylesheet load (if/when added) */}
         <link rel="preload" as="style" href="/css/main.4f897a.css" />
-        <link rel="stylesheet" href="/css/main.4f897a.css" media="print" onLoad="this.media='all'" />
+        <link
+          rel="stylesheet"
+          href="/css/main.4f897a.css"
+          media="print"
+          onLoad={(e) => {
+            (e.currentTarget as HTMLLinkElement).media = 'all'
+          }}
+        />
         <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
         {/* Favicon links */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
@@ -160,7 +165,7 @@ export default function RootLayout({
           }}
         />
         {/* Phone Call Tracking */}
-        <Script id="phone-click-tracking" strategy="idle">
+        <Script id="phone-click-tracking" strategy="lazyOnload">
           {`
             document.addEventListener('DOMContentLoaded', function() {
               const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
