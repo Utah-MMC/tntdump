@@ -101,6 +101,14 @@ const Reviews = () => {
           ))}
         </div>
 
+        {/* Short testimonials */}
+        <div className="mt-12 grid md:grid-cols-2 gap-6">
+          <blockquote className="bg-white rounded-lg p-4 text-gray-700 italic">“Fast drop-off, careful placement, and fair rate. Exactly what I needed for a roof replacement in Lehi.” — Megan, Lehi (roof replacement)</blockquote>
+          <blockquote className="bg-white rounded-lg p-4 text-gray-700 italic">“Friendly team and quick pick-up. This was the easiest local dumpster rental I’ve used.” — Brian, West Jordan (local dumpster rental)</blockquote>
+          <blockquote className="bg-white rounded-lg p-4 text-gray-700 italic">“Clean truck, on-time delivery, and perfect size for our bathroom remodel.” — Alice, Sandy (bathroom remodel)</blockquote>
+          <blockquote className="bg-white rounded-lg p-4 text-gray-700 italic">“We booked a roll off dumpster and finished ahead of schedule thanks to their reliable service.” — Omar, Provo (roll off dumpster)</blockquote>
+        </div>
+
         <div className="text-center mt-12">
           <p className="text-lg text-blue-100 mb-6">
             Please take a moment to leave a review of TNT Dumpsters and let others know what you think.

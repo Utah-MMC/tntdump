@@ -146,15 +146,8 @@ const Hero = () => {
                 <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                   Dumpster Rental in Salt Lake County
                 </h1>
-                <p className="text-lg lg:text-xl text-blue-100 mb-3 leading-relaxed">
+                <p className="text-lg lg:text-xl text-blue-100 mb-6 leading-relaxed">
                   Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
-                </p>
-                {/* Introductory SEO copy */}
-                <p className="text-sm sm:text-base text-blue-100 mb-2 leading-relaxed">
-                  Need dumpster rental you can count on? We deliver roll off dumpster rental with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-300">dumpster rental cost</a> overview, then call for a firm dumpster rental quote.
-                </p>
-                <p className="text-sm sm:text-base text-blue-100 leading-relaxed">
-                  Whether you need delivery dumpster rental for a weekend cleanout or construction dumpster rental on a busy site, our local dumpster rental team keeps it simple: on-time drop-offs, careful placement, and easy haul-offs for your job site dumpster rental.
                 </p>
               </div>
 
@@ -217,10 +210,6 @@ const Hero = () => {
                   Get Free Quote
                 </a>
               </div>
-              {/* Same-day ribbon/CTA microcopy near hero */}
-              <p className="text-blue-100 text-xs opacity-90 mb-2" data-cta-variants="Same day dumpster rental available today — request delivery ›|Need a roll off today? Ask about same day dumpster rental ›|Urgent project? Same day dumpster rental when routes allow ›">
-                Ask about same day dumpster rental; tap Get Free Quote to check today’s schedule.
-              </p>
 
               {/* Trust Indicators */}
               <div className="flex items-center space-x-6 text-sm text-blue-100">
@@ -231,10 +220,9 @@ const Hero = () => {
               </div>
             </div>
 
-            {/* Right Column - Contact/Quote Form */}
-            <div id="quote" className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Get a dumpster rental quote</h3>
-              <p className="text-blue-100 text-xs mb-3">Fast delivery dumpster rental from a local team. We’ll confirm pricing and timing ASAP.</p>
+            {/* Right Column - Contact Form */}
+            <div className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
+              <h3 className="text-lg sm:text-xl font-bold text-white mb-3 sm:mb-4">Request Call Back</h3>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Row 1: Name + Phone */}
@@ -296,7 +284,6 @@ const Hero = () => {
                       <option value="Concrete Dumpsters">Concrete Dumpsters</option>
                       <option value="Estate Cleanout Services">Estate Cleanout Services</option>
                     </select>
-                    <small className="text-blue-200 text-xs">Not sure on size? Think kitchen remodel vs. garage cleanout and we’ll guide you.</small>
                   </div>
                 </div>
 

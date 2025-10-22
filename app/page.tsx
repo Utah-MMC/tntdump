@@ -18,6 +18,54 @@ export default function Home() {
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
       
       <Services />
+
+      {/* Pricing / How it works accordion */}
+      <section id="pricing" className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold gradient-text">Pricing & How It Works</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Simple, transparent options. Get a firm dumpster rental quote by calling (801) 209-9013.</p>
+          </div>
+          <div className="max-w-3xl mx-auto space-y-3">
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How much is a dumpster rental?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                Dumpster rental price varies by size, material, and location. Call for a fast dumpster rental quote; we’ll confirm weight limits and the best roll off dumpster for your project.
+              </div>
+            </details>
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">What affects dumpster rental cost?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                The biggest factors are tonnage, dumpster size, rental time, route distance, and disposal fees. We price delivery dumpster rental up front so there are no surprises.
+              </div>
+            </details>
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Do you offer same day dumpster rental?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                Yes—on many days. Contact us early and we’ll try to place a roll off dumpster the same day in Salt Lake & Utah County when routes allow.
+              </div>
+            </details>
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How do delivery and pick-up work?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                We schedule delivery dumpster rental, place it carefully on your driveway or job site, and return for pick-up on your call or on the preset date. Easy swaps are available.
+              </div>
+            </details>
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Can I get a fixed price before delivery?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                Absolutely. We confirm your dumpster rental price and expectations (material type, size, timing) before scheduling. No hidden fees—just clear terms.
+              </div>
+            </details>
+            <details className="border rounded-lg p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Do you help choose the right size?</summary>
+              <div className="mt-2 text-gray-700 text-sm">
+                Yes. Tell us about your project and we’ll recommend a roll off size. If you’re unsure, start with a versatile size and we can swap or haul-off as needed.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
       
       
       {/* Dumpster Calculator Section */}
@@ -116,6 +164,31 @@ export default function Home() {
       
       <About />
       <Contact />
+
+      {/* Footer FAQ block */}
+      <section className="py-16 bg-gray-900 text-blue-100">
+        <div className="container-custom">
+          <h2 className="text-xl lg:text-2xl font-bold text-white mb-6">Dumpster Rental FAQs</h2>
+          <dl className="space-y-4 text-sm">
+            <dt className="font-semibold text-white">Do you offer roll off dumpster rental near me?</dt>
+            <dd>Yes, we provide local dumpster rental across Salt Lake & Utah County with quick delivery.</dd>
+            <dt className="font-semibold text-white">Can I get same day dumpster rental?</dt>
+            <dd>Often yes—call early and we’ll try to fit you in based on route and availability.</dd>
+            <dt className="font-semibold text-white">How much is a dumpster rental?</dt>
+            <dd>Your dumpster rental price depends on size, tonnage, and material. Call for a fast dumpster rental quote.</dd>
+            <dt className="font-semibold text-white">What sizes do you carry?</dt>
+            <dd>We stock common roll off dumpster sizes suitable for cleanouts, remodels, roofing, and construction debris.</dd>
+            <dt className="font-semibold text-white">Where can you place the bin?</dt>
+            <dd>Driveway or job site. We place with care and use boards when needed to protect surfaces.</dd>
+            <dt className="font-semibold text-white">What’s included with delivery?</dt>
+            <dd>Delivery dumpster rental includes drop-off, a rental window, and scheduled pick-up. Extra weight or time may cost more.</dd>
+            <dt className="font-semibold text-white">Do you service contractors?</dt>
+            <dd>Yes. We support construction dumpster rental with swaps/haul-offs and reliable schedules for busy sites.</dd>
+            <dt className="font-semibold text-white">Do you offer same day bin rental?</dt>
+            <dd>When routes allow, we can arrange it. Call (801) 209-9013 to check today’s options.</dd>
+          </dl>
+        </div>
+      </section>
     </main>
   )
 }
