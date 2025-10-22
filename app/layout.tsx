@@ -87,17 +87,9 @@ export default function RootLayout({
           #hero .hero-overlay{pointer-events:none}
           h1{letter-spacing:-0.01em}
         `}} />
-        {/* Defer main stylesheet load (if/when added) */}
+        {/* Main stylesheet */}
         <link rel="preload" as="style" href="/css/main.4f897a.css" />
-        <link
-          rel="stylesheet"
-          href="/css/main.4f897a.css"
-          media="print"
-          onLoad={(e) => {
-            (e.currentTarget as HTMLLinkElement).media = 'all'
-          }}
-        />
-        <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
+        <link rel="stylesheet" href="/css/main.4f897a.css" />
         {/* Favicon links */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png" />
