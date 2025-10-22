@@ -166,26 +166,42 @@ export default function Home() {
       <Contact />
 
       {/* Footer FAQ block */}
-      <section className="py-16 bg-gray-900 text-blue-100">
+      <section className="py-16 bg-white">
         <div className="container-custom">
-          <h2 className="text-xl lg:text-2xl font-bold text-white mb-6">Dumpster Rental FAQs</h2>
-          <dl className="space-y-4 text-sm">
-            <dt className="font-semibold text-white">Do you offer roll off dumpster rental near me?</dt>
-            <dd>Yes, we provide local dumpster rental across Salt Lake & Utah County with quick delivery.</dd>
-            <dt className="font-semibold text-white">Can I get same day dumpster rental?</dt>
-            <dd>Often yes—call early and we’ll try to fit you in based on route and availability.</dd>
-            <dt className="font-semibold text-white">How much is a dumpster rental?</dt>
-            <dd>Your dumpster rental price depends on size, tonnage, and material. Call for a fast dumpster rental quote.</dd>
-            <dt className="font-semibold text-white">What sizes do you carry?</dt>
-            <dd>We stock common roll off dumpster sizes suitable for cleanouts, remodels, roofing, and construction debris.</dd>
-            <dt className="font-semibold text-white">Where can you place the bin?</dt>
-            <dd>Driveway or job site. We place with care and use boards when needed to protect surfaces.</dd>
-            <dt className="font-semibold text-white">What’s included with delivery?</dt>
-            <dd>Delivery dumpster rental includes drop-off, a rental window, and scheduled pick-up. Extra weight or time may cost more.</dd>
-            <dt className="font-semibold text-white">Do you service contractors?</dt>
-            <dd>Yes. We support construction dumpster rental with swaps/haul-offs and reliable schedules for busy sites.</dd>
-            <dt className="font-semibold text-white">Do you offer same day bin rental?</dt>
-            <dd>When routes allow, we can arrange it. Call (801) 209-9013 to check today’s options.</dd>
+          <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Dumpster Rental FAQs</h2>
+          <dl className="grid md:grid-cols-2 gap-6 text-sm">
+            <div>
+              <dt className="font-semibold text-gray-900">Do you offer roll off dumpster rental near me?</dt>
+              <dd className="text-gray-700">Yes, we provide local dumpster rental across Salt Lake & Utah County with quick delivery.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Can I get same day dumpster rental?</dt>
+              <dd className="text-gray-700">Often yes—call early and we’ll try to fit you in based on route and availability.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">How much is a dumpster rental?</dt>
+              <dd className="text-gray-700">Your dumpster rental price depends on size, tonnage, and material. Call for a fast dumpster rental quote.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">What sizes do you carry?</dt>
+              <dd className="text-gray-700">We stock common roll off dumpster sizes suitable for cleanouts, remodels, roofing, and construction debris.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Where can you place the bin?</dt>
+              <dd className="text-gray-700">Driveway or job site. We place with care and use boards when needed to protect surfaces.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">What’s included with delivery?</dt>
+              <dd className="text-gray-700">Delivery dumpster rental includes drop-off, a rental window, and scheduled pick-up. Extra weight or time may cost more.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Do you service contractors?</dt>
+              <dd className="text-gray-700">Yes. We support construction dumpster rental with swaps/haul-offs and reliable schedules for busy sites.</dd>
+            </div>
+            <div>
+              <dt className="font-semibold text-gray-900">Do you offer same day bin rental?</dt>
+              <dd className="text-gray-700">When routes allow, we can arrange it. Call (801) 209-9013 to check today’s options.</dd>
+            </div>
           </dl>
         </div>
       </section>
