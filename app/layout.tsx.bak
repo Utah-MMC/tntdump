@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import StickySidebar from '@/components/StickySidebar'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 import dynamic from 'next/dynamic'
 
@@ -18,12 +19,13 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
-  description: 'Local dumpster rental in Salt Lake & Utah County with fast delivery, same day options, and upfront prices. Get a dumpster rental quote for construction or home cleanups.',
-  keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
+  title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
+  description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
+  keywords: 'dumpster rental, roll-off dumpster, dumpster rental near me, utah dumpster rental, dumpster rental utah, wasatch front dumpster rental',
+  metadataBase: new URL('https://tntdump.com'),
   openGraph: {
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
-    description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, and honest pricing. Get a dumpster rental quote today.',
+    title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
+    description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
     url: 'https://tntdump.com',
     siteName: 'TNT Dumpsters',
     images: [
@@ -39,8 +41,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
-    description: 'Local dumpster rental with delivery and same day availability. Get a price and quote fast.',
+    title: 'TNT Dumpsters - Dumpster Rental Services on the Wasatch Front',
+    description: 'Over 55 years of experience providing reliable, affordable dumpster rental services. Residential, commercial, and industrial dumpster rentals throughout the Wasatch Front area.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
   robots: {
@@ -87,9 +89,10 @@ export default function RootLayout({
           #hero .hero-overlay{pointer-events:none}
           h1{letter-spacing:-0.01em}
         `}} />
-        {/* Main stylesheet */}
+        {/* Defer main stylesheet load (if/when added) */}
         <link rel="preload" as="style" href="/css/main.4f897a.css" />
-        <link rel="stylesheet" href="/css/main.4f897a.css" />
+        <link rel="stylesheet" href="/css/main.4f897a.css" media="print" onLoad="this.media='all'" />
+        <noscript><link rel="stylesheet" href="/css/main.4f897a.css" /></noscript>
         {/* Favicon links */}
         <link rel="apple-touch-icon" sizes="180x180" href="/images/logo/apple-touch-icon.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/logo/favicon-32x32.png" />
@@ -113,51 +116,91 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "TNT Dump",
+              "name": "TNT Dumpsters",
+              "description": "Professional dumpster rental services serving the Wasatch Front area for over 55 years. Residential, commercial, and industrial waste management solutions.",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
-              "areaServed": "Salt Lake & Utah County",
-              "openingHours": [
-                "Mo-Fr 07:00-19:00",
-                "Sa 08:00-17:00"
+              "email": "admin@tntdump.com",
+              "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "West Jordan",
+                "addressRegion": "UT",
+                "addressCountry": "US"
+              },
+              "geo": {
+                "@type": "GeoCoordinates",
+                "latitude": "40.6097",
+                "longitude": "-111.9391"
+              },
+              "areaServed": [
+                "West Jordan, UT",
+                "Salt Lake City, UT",
+                "Murray, UT",
+                "Sandy, UT",
+                "Draper, UT",
+                "Riverton, UT",
+                "South Jordan, UT",
+                "Taylorsville, UT",
+                "Midvale, UT"
               ],
-              "sameAs": []
-            })
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              "@context": "https://schema.org",
-              "@type": "FAQPage",
-              "mainEntity": [
-                {
-                  "@type": "Question",
-                  "name": "How much is a dumpster rental?",
-                  "acceptedAnswer": {"@type":"Answer","text":"Dumpster rental price depends on size, material, and service area. Call (801) 209-9013 for a quick dumpster rental quote and upfront options."}
+              "serviceArea": {
+                "@type": "GeoCircle",
+                "geoMidpoint": {
+                  "@type": "GeoCoordinates",
+                  "latitude": "40.6097",
+                  "longitude": "-111.9391"
                 },
-                {
-                  "@type": "Question",
-                  "name": "What affects dumpster rental cost?",
-                  "acceptedAnswer": {"@type":"Answer","text":"Weight, roll off dumpster size, rental time, route distance, and disposal fees affect dumpster rental cost. We confirm delivery dumpster rental details before drop-off."}
-                },
-                {
-                  "@type": "Question",
-                  "name": "Do you offer same day dumpster rental?",
-                  "acceptedAnswer": {"@type":"Answer","text":"Yes, same day service is often available in Salt Lake & Utah County. Contact us early for availability."}
-                },
-                {
-                  "@type": "Question",
-                  "name": "How do delivery and pick-up work?",
-                  "acceptedAnswer": {"@type":"Answer","text":"We schedule delivery dumpster rental, place the bin safely, and pick up on call or by preset date. Simple and fast."}
-                }
+                "geoRadius": "50000"
+              },
+              "openingHours": "Mo-Fr 07:00-21:00",
+              "priceRange": "$$",
+              "foundingDate": "1965",
+              "numberOfEmployees": "10-50",
+              "currenciesAccepted": "USD",
+              "paymentAccepted": "Cash, Check, Credit Card",
+              "hasOfferCatalog": {
+                "@type": "OfferCatalog",
+                "name": "Dumpster Rental Services",
+                "itemListElement": [
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Residential Dumpster Rental",
+                      "description": "Dumpster rental services for homeowners and residential projects"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Commercial Dumpster Rental",
+                      "description": "Dumpster rental services for businesses and commercial projects"
+                    }
+                  },
+                  {
+                    "@type": "Offer",
+                    "itemOffered": {
+                      "@type": "Service",
+                      "name": "Industrial Dumpster Rental",
+                      "description": "Heavy-duty dumpster rental services for industrial operations"
+                    }
+                  }
+                ]
+              },
+              "aggregateRating": {
+                "@type": "AggregateRating",
+                "ratingValue": "5.0",
+                "reviewCount": "9"
+              },
+              "sameAs": [
+                "https://tntdump.com"
               ]
             })
           }}
         />
         {/* Phone Call Tracking */}
-        <Script id="phone-click-tracking" strategy="lazyOnload">
+        <Script id="phone-click-tracking" strategy="idle">
           {`
             document.addEventListener('DOMContentLoaded', function() {
               const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
