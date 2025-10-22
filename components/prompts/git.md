@@ -24,12 +24,9 @@ git push -u origin HEAD
 # git push -u origin feature/short-description
 ```
 
-## 5) Open a pull request
-- On GitHub: open your repository and click "Compare & pull request" for your branch.
-- With GitHub CLI (optional):
-```bash
-gh pr create --fill --base master --head feature/short-description
-```
+## 5) Open a pull request (GitHub only)
+- After pushing, GitHub prints a link to open a PR. Open that link in your browser, confirm the base branch (e.g., `master` or `main`), add a clear title and description, and create the PR.
+- Alternatively, go to your repository on GitHub, switch to `feature/short-description`, and click "Compare & pull request".
 
 ## 6) Update the PR after reviews (if needed)
 ```bash

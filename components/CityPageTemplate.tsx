@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import Image from 'next/image'
@@ -251,7 +251,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">ðŸ </span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Local Services</h3>
               <p className="text-gray-600 mb-4">
@@ -259,14 +259,14 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               </p>
               <ul className="space-y-1 text-sm text-gray-600">
                 {localFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>• {feature}</li>
                 ))}
               </ul>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">ðŸ¢</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Commercial Services</h3>
               <p className="text-gray-600 mb-4">
@@ -274,14 +274,14 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               </p>
               <ul className="space-y-1 text-sm text-gray-600">
                 {commercialFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>• {feature}</li>
                 ))}
               </ul>
             </div>
 
             <div className="bg-white rounded-lg shadow-lg p-6">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-4">
-                <span className="text-2xl">ðŸ­</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Industrial Services</h3>
               <p className="text-gray-600 mb-4">
@@ -289,7 +289,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               </p>
               <ul className="space-y-1 text-sm text-gray-600">
                 {industrialFeatures.map((feature, index) => (
-                  <li key={index}>â€¢ {feature}</li>
+                  <li key={index}>• {feature}</li>
                 ))}
               </ul>
             </div>
@@ -312,7 +312,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">ðŸšš</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery</h3>
               <p className="text-blue-100">Same-day delivery available in {city}</p>
@@ -320,7 +320,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">ðŸ’°</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Competitive Pricing</h3>
               <p className="text-blue-100">Best rates in {city} with free estimates</p>
@@ -328,7 +328,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">â­</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold mb-2">Local Service</h3>
               <p className="text-blue-100">Family-owned business serving {city} since 1965</p>
@@ -336,7 +336,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
             
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl">ðŸ“ž</span>
+                <span className="text-2xl">⭐</span>
               </div>
               <h3 className="text-xl font-bold mb-2">24/7 Support</h3>
               <p className="text-blue-100">Always here to help {city} residents</p>
@@ -361,7 +361,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
               
               <div className="space-y-4">
                 <div className="flex items-center">
-                  <span className="text-2xl mr-4">ðŸ“ž</span>
+                  <span className="text-2xl mr-4">⭐</span>
                   <div>
                     <p className="font-semibold text-gray-900">Phone</p>
                     <a href="tel:+18012099013" className="text-blue-600 hover:text-blue-700">
@@ -371,7 +371,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                 </div>
                 
                 <div className="flex items-center">
-                  <span className="text-2xl mr-4">ðŸ“§</span>
+                  <span className="text-2xl mr-4">⭐</span>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
                     <a href="mailto:admin@tntdump.com" className="text-blue-600 hover:text-blue-700">
@@ -381,7 +381,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                 </div>
                 
                 <div className="flex items-center">
-                  <span className="text-2xl mr-4">ðŸ“</span>
+                  <span className="text-2xl mr-4">⭐</span>
                   <div>
                     <p className="font-semibold text-gray-900">Service Area</p>
                     <p className="text-gray-600">{city}, {state} and surrounding areas</p>
