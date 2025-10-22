@@ -17,6 +17,9 @@ export default function Home() {
 
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
       
+      {/* Dumpster Calculator Section (moved directly below Hero) */}
+      <DumpsterCalculator />
+
       <Services />
 
       {/* Pricing / How it works accordion */}
@@ -67,9 +70,6 @@ export default function Home() {
         </div>
       </section>
       
-      
-      {/* Dumpster Calculator Section */}
-      <DumpsterCalculator />
       
       {/* Cities Section (replaced cards with linked list) */}
       <section className="py-16 bg-gray-900">
