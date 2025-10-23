@@ -72,13 +72,13 @@ export default function Home() {
       
       
       {/* Cities Section (replaced cards with linked list) */}
-      <section className="py-16 bg-gray-900">
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-xl lg:text-2xl font-bold text-white mb-4">
+            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
               Cities We Serve
             </h2>
-            <p className="text-sm text-blue-200 max-w-3xl mx-auto">
+            <p className="text-sm text-gray-600 max-w-3xl mx-auto">
               TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
@@ -132,13 +132,13 @@ export default function Home() {
               <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10">
                 {Object.entries(groupedCities).map(([countyName, cities]) => (
                   <div key={countyName}>
-                    <h3 className="text-base font-semibold text-white mb-4">{countyName}</h3>
+                    <h3 className="text-base font-semibold text-gray-900 mb-4">{countyName}</h3>
                     <ul className="space-y-2">
                       {[...cities].sort((a, b) => a.name.localeCompare(b.name)).map(({ name, slug }) => (
                         <li key={slug}>
                           <a
                             href={`/dumpster-rental-${slug}-ut`}
-                            className="text-yellow-400 hover:text-yellow-300 text-sm"
+                            className="text-blue-600 hover:text-blue-700 text-sm"
                           >
                             {name} Utah Dumpster Rentals
                           </a>
