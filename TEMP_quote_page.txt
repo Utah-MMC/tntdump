@@ -1,9 +1,15 @@
 'use client'
+
+import type { Metadata } from 'next'
 import { useState, useEffect } from 'react'
 import HeroSection from '@/components/HeroSection'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
 
-// Metadata is provided via app/quote/head.tsx to keep this a Client Component
+export const metadata: Metadata = {
+  title: 'Get a Quote | Dumpster Rental | TNT Dump',
+  description:
+    'Get a dumpster rental quote with fast delivery in Salt Lake & Utah County. Clear pricing and size help for cleanouts, remodels, roofing, and job sites.',
+}
 
 export default function QuotePage() {
   const [formData, setFormData] = useState({
@@ -121,7 +127,7 @@ export default function QuotePage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</nlabel>
                     <input
                       type="text"
                       name="firstName"
@@ -276,3 +282,5 @@ export default function QuotePage() {
     </main>
   )
 }
+
+
