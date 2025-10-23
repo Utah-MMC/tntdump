@@ -133,7 +133,7 @@ export default function CitiesPage() {
                         .map(({ name, slug }) => (
                           <li key={slug}>
                             <a
-                              href={`/dumpster-rental-${slug}-ut`}
+                              href={`/ut/${slug}/dumpster-rental`}
                               className="text-blue-600 hover:text-blue-700 hover:underline"
                             >
                               {name}

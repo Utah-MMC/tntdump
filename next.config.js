@@ -90,6 +90,15 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
 
   // No redirects/rewrites for city pages; they now exist at new paths
+  async redirects() {
+    return [
+      {
+        source: '/dumpster-rental-:city-ut',
+        destination: '/ut/:city/dumpster-rental',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;
