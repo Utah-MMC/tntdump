@@ -111,6 +111,39 @@ export default function CommercialServicePage() {
         </div>
       </section>
 
+      {/* SEO SWEEP START [/services/commercial-faq] */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Commercial Dumpster FAQs</h2>
+          <div className="space-y-3 text-sm">
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Can you support build-outs and remodels?</summary>
+              <div className="mt-2">Yes—reliable swaps and job site placement. See <a href="/#contractors" className="text-blue-600 hover:underline">contractor notes</a>.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How do quotes work?</summary>
+              <div className="mt-2">We confirm size, tonnage, and timing up front. Review <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Do you offer rush delivery?</summary>
+              <div className="mt-2">When routes allow, we can offer quick delivery in Salt Lake & Utah County.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: [
+            { '@type': 'Question', name: 'Can you support build-outs and remodels?', acceptedAnswer: { '@type': 'Answer', text: 'Yes—reliable swaps and job site placement. See contractor notes on the homepage.' } },
+            { '@type': 'Question', name: 'How do quotes work?', acceptedAnswer: { '@type': 'Answer', text: 'We confirm size, tonnage, and timing up front. Review the dumpster rental cost section on the homepage.' } },
+            { '@type': 'Question', name: 'Do you offer rush delivery?', acceptedAnswer: { '@type': 'Answer', text: 'When routes allow, quick delivery is available in Salt Lake & Utah County.' } }
+          ]
+        }) }}
+      />
+      {/* SEO SWEEP END [/services/commercial-faq] */}
+
       {/* Service Image */}
       <section className="py-16 bg-white">
         <div className="container-custom">

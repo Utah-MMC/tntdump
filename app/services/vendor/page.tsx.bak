@@ -1,4 +1,4 @@
-import Image from 'next/image'
+﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Shield } from 'lucide-react'
 
 export default function VendorServicePage() {
@@ -76,39 +76,6 @@ export default function VendorServicePage() {
           </div>
         </div>
       </section>
-
-      {/* SEO SWEEP START [/services/vendor-faq] */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Vendor Dumpster FAQs</h2>
-          <div className="space-y-3 text-sm">
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Do you offer contractor pricing?</summary>
-              <div className="mt-2">Yes—call for vendor rates and recurring schedules.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Can you coordinate with subs?</summary>
-              <div className="mt-2">We'll align deliveries and swaps with your project plan.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Where can I check costs?</summary>
-              <div className="mt-2">See the homepage <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> and call for a firm quote.</div>
-            </details>
-          </div>
-        </div>
-      </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'FAQPage',
-          mainEntity: [
-            { '@type': 'Question', name: 'Do you offer contractor pricing?', acceptedAnswer: { '@type': 'Answer', text: 'Yes—call for vendor rates and recurring schedules.' } },
-            { '@type': 'Question', name: 'Can you coordinate with subs?', acceptedAnswer: { '@type': 'Answer', text: 'We align deliveries and swaps with your project plan.' } },
-            { '@type': 'Question', name: 'Where can I check costs?', acceptedAnswer: { '@type': 'Answer', text: 'See the homepage pricing section and call for a firm quote.' } }
-          ]
-        }) }}
-      />
-      {/* SEO SWEEP END [/services/vendor-faq] */}
 
       {/* Service Image */}
       <section className="py-16 bg-white">
@@ -269,5 +236,4 @@ export default function VendorServicePage() {
     </main>
   )
 }
-
 

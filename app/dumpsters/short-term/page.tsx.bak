@@ -1,17 +1,19 @@
 ﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Vendor Dumpster Rental | Dumpster Rental | TNT Dump',
-  description: 'Vendor and contractor dumpster rental with reliable scheduling, swaps, and clear pricing. Local service across Salt Lake & Utah County.',
+  title: 'Short-Term Dumpster Rental Services | TNT Dumpsters',
+  description: 'Professional short-term dumpster rental services in Utah. Quick delivery, flexible rental periods, and competitive pricing for temporary projects.',
+  keywords: 'short-term dumpster rental, temporary dumpster rental, project dumpster rental, utah dumpster rental',
 }
 
-export default function VendorDumpsters() {
+export default function ShortTermDumpsters() {
   const sizes = [
     {
       size: '15 Yard',
-      description: 'Ideal for vendor cleanups and small job sites',
+      description: 'Ideal for medium-sized projects',
       capacity: '5-6 pickup truck loads',
       dimensions: '12\' x 8\' x 6\'',
+      duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$300', note: 'no tons included' },
         { label: '7 Days', value: '$325', note: '2 tons included' },
@@ -20,9 +22,10 @@ export default function VendorDumpsters() {
     },
     {
       size: '20 Yard',
-      description: 'Great for vendor renovations and medium projects',
+      description: 'Great for larger projects and cleanouts',
       capacity: '7-8 pickup truck loads',
       dimensions: '22\' x 8\' x 6\'',
+      duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
@@ -31,9 +34,10 @@ export default function VendorDumpsters() {
     },
     {
       size: '30 Yard',
-      description: 'Perfect for larger vendor projects',
+      description: 'Perfect for major projects with quick turnarounds',
       capacity: '10-12 pickup truck loads',
       dimensions: '22\' x 8\' x 8\'',
+      duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
@@ -45,6 +49,7 @@ export default function VendorDumpsters() {
       description: 'Concrete, brick, or asphalt only (no mixed waste)',
       capacity: 'Heavy material only',
       dimensions: 'Contact for available sizes',
+      duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$325', note: 'no tons included' },
         { label: '7 Days', value: '$425', note: 'no tons included' }
@@ -56,18 +61,11 @@ export default function VendorDumpsters() {
     <div className="min-h-screen bg-white">
       <div className="container mx-auto px-4 py-16">
         <h1 className="text-4xl font-bold text-center text-gray-900 mb-8">
-          Vendor Dumpster Rental Services
+          Short-Term Dumpster Rental Services
         </h1>
         <p className="text-lg text-center text-gray-600 mb-8">
-          Professional vendor dumpster rental solutions for contractors, builders, and service providers.
+          Professional short-term dumpster rental solutions for temporary projects and cleanouts.
         </p>
-        {/* SEO SWEEP START [/dumpsters/vendor] */}
-        <div className="max-w-3xl mx-auto text-center text-sm text-gray-700 space-y-2">
-          <p>
-            See <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> for job site tips, and review <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> before booking.
-          </p>
-        </div>
-        {/* SEO SWEEP END [/dumpsters/vendor] */}
         <div className="text-center">
           <a 
             href="/contact" 
@@ -78,12 +76,12 @@ export default function VendorDumpsters() {
         </div>
       </div>
 
-      {/* Vendor Dumpster Sizes */}
+      {/* Short-Term Dumpster Sizes */}
       <section className="py-12 bg-gray-50">
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Vendor Dumpster Sizes
+              Short-Term Dumpster Sizes
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Choose from our most popular sizes. Pricing shown includes 1-day and 7-day options.
@@ -98,6 +96,7 @@ export default function VendorDumpsters() {
                 <div className="space-y-2 text-base text-gray-700 mb-4">
                   <p><strong>Capacity:</strong> {size.capacity}</p>
                   <p><strong>Dimensions:</strong> {size.dimensions}</p>
+                  <p><strong>Rental Period:</strong> {size.duration}</p>
                 </div>
                 <div className="mt-2 text-left inline-block">
                   <p className="text-sm font-semibold text-gray-700 mb-2 text-center">Pricing</p>
@@ -118,18 +117,6 @@ export default function VendorDumpsters() {
           </div>
         </div>
       </section>
-      {/* SEO SWEEP START [/dumpsters/vendor-schema] */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          serviceType: 'Vendor Dumpster Rental',
-          areaServed: 'Salt Lake & Utah County',
-          provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' }
-        }) }}
-      />
-      {/* SEO SWEEP END [/dumpsters/vendor-schema] */}
     </div>
   )
 }

@@ -18,25 +18,25 @@ export default function ShortTermServicePage() {
       type: 'Home Renovations',
       description: 'Kitchen, bathroom, and room remodeling projects',
       duration: '1-7 days',
-      icon: '🏠'
+      icon: 'ðŸ '
     },
     {
       type: 'Cleanouts',
       description: 'Garage, basement, and storage area cleanouts',
       duration: '1-3 days',
-      icon: '🧹'
+      icon: 'ðŸ§¹'
     },
     {
       type: 'Moving',
       description: 'Relocation and moving preparation',
       duration: '1-5 days',
-      icon: '📦'
+      icon: 'ðŸ“¦'
     },
     {
       type: 'Events',
       description: 'Party cleanup and event preparation',
       duration: '1-2 days',
-      icon: '🎉'
+      icon: 'ðŸŽ‰'
     }
   ]
 
@@ -117,6 +117,39 @@ export default function ShortTermServicePage() {
           </div>
         </div>
       </section>
+
+      {/* SEO SWEEP START [/services/short-term-faq] */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Short-Term Dumpster FAQs</h2>
+          <div className="space-y-3 text-sm">
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Can I get quick delivery?</summary>
+              <div className="mt-2">Often yesâ€”see <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a>.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">What about weekend projects?</summary>
+              <div className="mt-2">We'll align drop-off and pickup to your schedule when routes allow.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How are prices set?</summary>
+              <div className="mt-2">By size, tonnage, and time. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: [
+            { '@type': 'Question', name: 'Can I get quick delivery?', acceptedAnswer: { '@type': 'Answer', text: 'Often yesâ€”same-day may be available depending on routes.' } },
+            { '@type': 'Question', name: 'What about weekend projects?', acceptedAnswer: { '@type': 'Answer', text: 'We align drop-off and pickup to your schedule when routes allow.' } },
+            { '@type': 'Question', name: 'How are prices set?', acceptedAnswer: { '@type': 'Answer', text: 'By size, tonnage, and time. Review the homepage pricing section for details.' } }
+          ]
+        }) }}
+      />
+      {/* SEO SWEEP END [/services/short-term-faq] */}
 
       {/* Service Image */}
       <section className="py-16 bg-white">
@@ -216,7 +249,7 @@ export default function ShortTermServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}
@@ -322,3 +355,4 @@ export default function ShortTermServicePage() {
     </main>
   )
 }
+

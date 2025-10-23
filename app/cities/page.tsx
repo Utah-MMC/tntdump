@@ -66,10 +66,10 @@ export default function CitiesPage() {
 
   return (
     <main className="min-h-screen">
-      <section className="py-16 bg-[#0003d5] text-white">
+      <section className="py-16 bg-gray-50">
         <div className="container-custom text-center">
-          <h1 className="text-3xl lg:text-4xl font-bold mb-4">Cities We Serve</h1>
-          <p className="text-blue-100 max-w-3xl mx-auto">
+          <h1 className="text-3xl lg:text-4xl font-bold mb-4 text-gray-900">Cities We Serve</h1>
+          <p className="text-gray-700 max-w-3xl mx-auto">
             Find your city to view local dumpster rental services, pricing, and free same-day estimates.
           </p>
         </div>

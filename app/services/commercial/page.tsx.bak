@@ -1,63 +1,84 @@
-import Image from 'next/image'
-import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Wrench } from 'lucide-react'
+﻿import Image from 'next/image'
+import { CheckCircle, Phone, Clock, MapPin, Truck, Building } from 'lucide-react'
 
-export default function ConcreteServicePage() {
+export default function CommercialServicePage() {
   const features = [
-    'Concrete and cement disposal',
-    'Brick and masonry waste',
-    'Asphalt and paving materials',
-    'Construction and demolition debris',
-    'Heavy material handling',
-    'Driveway and sidewalk removal',
-    'Foundation and structural concrete',
-    'Industrial concrete waste'
+    'Office renovations and remodeling',
+    'Retail store cleanouts and updates',
+    'Restaurant and food service waste',
+    'Warehouse and storage facility cleanouts',
+    'Business relocation and moving',
+    'Construction and demolition projects',
+    'Seasonal business cleanup',
+    'Event and conference cleanup'
   ]
 
-  const materialTypes = [
+  const businessTypes = [
     {
-      type: 'Concrete',
-      description: 'Driveways, sidewalks, foundations, and structural concrete',
-      icon: 'ðŸ§±'
+      type: 'Office Buildings',
+      description: 'Professional office renovations and cleanouts',
+      icon: 'ðŸ¢'
     },
     {
-      type: 'Brick & Masonry',
-      description: 'Brick walls, stone work, and masonry materials',
-      icon: 'ðŸ§±'
+      type: 'Retail Stores',
+      description: 'Store updates, renovations, and inventory disposal',
+      icon: 'ðŸ›ï¸'
     },
     {
-      type: 'Asphalt',
-      description: 'Driveways, parking lots, and paving materials',
-      icon: 'ðŸ›£ï¸'
+      type: 'Restaurants',
+      description: 'Kitchen renovations and food service waste',
+      icon: 'ðŸ½ï¸'
     },
     {
-      type: 'Demolition',
-      description: 'Construction debris and building materials',
-      icon: 'ðŸ—ï¸'
+      type: 'Warehouses',
+      description: 'Large-scale cleanouts and facility maintenance',
+      icon: 'ðŸ­'
     }
   ]
 
   const sizes = [
     {
-      size: 'Concrete Dumpster',
-      description: 'For concrete, brick, or asphalt only (no mixed waste)',
-      capacity: 'Heavy material only',
-      dimensions: 'Contact for available sizes',
+      size: '15 Yard',
+      description: 'Perfect for small office cleanouts',
+      capacity: '5-6 pickup truck loads',
+      dimensions: '12\' x 8\' x 6\'',
       pricing: [
-        { label: '1 Day', value: '$325', note: 'no tons included' },
-        { label: '7 Days', value: '$425', note: 'no tons included' }
+        { label: '1 Day', value: '$300', note: 'no tons included' },
+        { label: '7 Days', value: '$325', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
+    },
+    {
+      size: '20 Yard',
+      description: 'Ideal for retail store renovations',
+      capacity: '7-8 pickup truck loads',
+      dimensions: '22\' x 8\' x 6\'',
+      pricing: [
+        { label: '1 Day', value: '$335', note: 'no tons included' },
+        { label: '7 Days', value: '$375', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
+      ]
+    },
+    {
+      size: '30 Yard',
+      description: 'Great for restaurant renovations',
+      capacity: '10-12 pickup truck loads',
+      dimensions: '22\' x 8\' x 8\'',
+      pricing: [
+        { label: '1 Day', value: '$345', note: 'no tons included' },
+        { label: '7 Days', value: '$400', note: '2 tons included' },
+        { label: 'Overage', value: '$55/ton' }
       ]
     }
   ]
 
   const benefits = [
-    'Heavy-duty dumpsters designed for concrete and heavy materials',
-    'Specialized equipment for heavy material handling',
-    'Proper disposal and recycling of concrete materials',
-    'Compliance with construction waste regulations',
-    'Flexible scheduling for construction projects',
-    'Expert guidance on concrete disposal requirements',
-    'Competitive pricing for heavy material disposal',
-    'Reliable service for construction and demolition projects'
+    'Flexible scheduling to minimize business disruption',
+    'Competitive commercial pricing and volume discounts',
+    'Compliance with local business waste regulations',
+    'Professional service with detailed documentation',
+    'Same-day delivery and pickup available',
+    'Dedicated account management for regular customers'
   ]
 
   return (
@@ -67,10 +88,10 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Concrete Dumpsters
+              Commercial Dumpster Rental Service
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              Our concrete dumpsters are specifically designed to handle heavy materials such as concrete, brick, and asphalt. This service is ideal for construction and demolition projects, ensuring efficient and safe waste disposal, every single time.
+              Comprehensive waste management solutions for businesses of all sizes. Professional service, competitive pricing, and flexible scheduling to keep your business running smoothly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -83,53 +104,20 @@ export default function ConcreteServicePage() {
                 href="/quote" 
                 className="inline-block bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
               >
-                Get Concrete Quote
+                Get Commercial Quote
               </a>
             </div>
           </div>
         </div>
       </section>
 
-      {/* SEO SWEEP START [/services/concrete-faq] */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Concrete Dumpster FAQs</h2>
-          <div className="space-y-3 text-sm">
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Can I mix concrete with other debris?</summary>
-              <div className="mt-2">Noâ€”concrete dumpsters are for clean concrete, brick, or asphalt only to meet weight limits.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">What size for concrete?</summary>
-              <div className="mt-2">Smaller containers reduce overload risk. We'll advise based on volume and access.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">How is pricing handled?</summary>
-              <div className="mt-2">Flat rates differ for heavy materials. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.</div>
-            </details>
-          </div>
-        </div>
-      </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'FAQPage',
-          mainEntity: [
-            { '@type': 'Question', name: 'Can I mix concrete with other debris?', acceptedAnswer: { '@type': 'Answer', text: 'Noâ€”concrete dumpsters are for clean concrete, brick, or asphalt only to meet weight limits.' } },
-            { '@type': 'Question', name: 'What size for concrete?', acceptedAnswer: { '@type': 'Answer', text: 'Smaller containers reduce overload risk. We will advise based on volume and access.' } },
-            { '@type': 'Question', name: 'How is pricing handled?', acceptedAnswer: { '@type': 'Answer', text: 'Flat rates differ for heavy materials. See the pricing section on the homepage.' } }
-          ]
-        }) }}
-      />
-      {/* SEO SWEEP END [/services/concrete-faq] */}
-
       {/* Service Image */}
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
-              src="/images/dumpster2-500x500-2.jpeg"
-              alt="Concrete dumpsters for construction and demolition waste"
+              src="/images/dumpster3-500x500-1.jpeg"
+              alt="Commercial dumpster rental service for businesses"
               fill
               className="object-cover"
             />
@@ -137,24 +125,24 @@ export default function ConcreteServicePage() {
         </div>
       </section>
 
-      {/* Material Types Section */}
+      {/* Business Types Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Heavy Material Disposal
+              Serving All Types of Businesses
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Specialized concrete dumpsters designed to handle the heaviest construction and demolition materials safely and efficiently.
+              TNT Dumpsters offers comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {materialTypes.map((material, index) => (
+            {businessTypes.map((business, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <div className="text-4xl mb-4">{material.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{material.type}</h3>
-                <p className="text-gray-600">{material.description}</p>
+                <div className="text-4xl mb-4">{business.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{business.type}</h3>
+                <p className="text-gray-600">{business.description}</p>
               </div>
             ))}
           </div>
@@ -166,10 +154,10 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Concrete & Heavy Material Solutions
+              Commercial Project Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Our concrete dumpsters are built to handle the toughest construction and demolition materials with specialized equipment and expertise.
+              Our commercial dumpster service handles a wide range of business waste management needs with professional efficiency.
             </p>
           </div>
 
@@ -191,14 +179,14 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Concrete Dumpster Sizes
+              Commercial Dumpster Sizes
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Heavy-duty dumpsters designed specifically for concrete and heavy material disposal with reinforced construction.
+              Choose from our range of commercial dumpster sizes designed to handle business waste efficiently and cost-effectively.
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {sizes.map((size, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
                 <h3 className="text-2xl font-bold text-blue-600 mb-2">{size.size}</h3>
@@ -234,7 +222,7 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">
-              Why Choose Our Concrete Dumpsters?
+              Why Choose TNT Dumpsters for Your Business?
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
@@ -255,41 +243,41 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Heavy-Duty Concrete Service
+              Professional Commercial Service
             </h2>
             <p className="text-xl text-blue-100">
-              Built for the toughest construction and demolition projects
+              Trusted by Utah businesses for over 55 years
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Building className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Heavy-Duty Design</h3>
-              <p className="text-blue-100">Built to handle concrete and heavy materials</p>
+              <h3 className="text-xl font-bold mb-2">Business Focused</h3>
+              <p className="text-blue-100">Designed specifically for commercial needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Wrench className="w-8 h-8 text-white" />
+                <Clock className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Specialized Equipment</h3>
-              <p className="text-blue-100">Proper tools for heavy material handling</p>
+              <h3 className="text-xl font-bold mb-2">Flexible Scheduling</h3>
+              <p className="text-blue-100">Work around your business hours</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Construction Focus</h3>
-              <p className="text-blue-100">Designed for construction projects</p>
+              <h3 className="text-xl font-bold mb-2">Reliable Service</h3>
+              <p className="text-blue-100">Consistent delivery and pickup</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Expert Guidance</h3>
-              <p className="text-blue-100">Professional advice for concrete disposal</p>
+              <h3 className="text-xl font-bold mb-2">Account Management</h3>
+              <p className="text-blue-100">Dedicated support for regular customers</p>
             </div>
           </div>
         </div>
@@ -300,10 +288,10 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Ready for Your Concrete Project?
+              Ready to Streamline Your Business Waste Management?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Get a free quote for concrete dumpster rental and ensure proper disposal of your heavy construction materials.
+              Get a free commercial quote and discover how TNT Dumpsters can help your business stay clean and compliant.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -316,7 +304,7 @@ export default function ConcreteServicePage() {
                 href="/quote" 
                 className="inline-block bg-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-700 transition-colors"
               >
-                Get Concrete Quote
+                Get Commercial Quote
               </a>
             </div>
           </div>

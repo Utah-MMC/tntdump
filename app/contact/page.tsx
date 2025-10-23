@@ -1,9 +1,10 @@
-﻿'use client'
-
+'use client'
 import { useState } from 'react'
 import { Phone, Clock, MapPin, Mail } from 'lucide-react'
 import Image from 'next/image'
 import HeroSection from '@/components/HeroSection'
+
+// Metadata is provided via app/contact/head.tsx to keep this a Client Component
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -11,7 +12,7 @@ export default function ContactPage() {
     phone: '',
     email: '',
     service: 'Residential Dumpster Rentals',
-    message: ''
+    message: '',
   })
 
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -19,12 +20,12 @@ export default function ContactPage() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData)
+        body: JSON.stringify(formData),
       })
 
       const result = await response.json()
@@ -33,16 +34,16 @@ export default function ContactPage() {
         console.error('API Error:', result)
         throw new Error(result.error || 'Failed to submit form')
       }
-      
+
       // Reset form
       setFormData({
         name: '',
         phone: '',
         email: '',
         service: 'Residential Dumpster Rentals',
-        message: ''
+        message: '',
       })
-      
+
       alert('Thank you! Your request has been submitted successfully. We will contact you soon.')
     } catch (error) {
       console.error('Error submitting form:', error)
@@ -52,10 +53,12 @@ export default function ContactPage() {
     }
   }
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [e.target.name]: e.target.value,
     })
   }
 
@@ -65,16 +68,30 @@ export default function ContactPage() {
         title="Contact TNT Dumpsters"
         description="Ready to get started with your dumpster rental? Contact us today for a free estimate and professional service. We're here to help with all your waste management needs."
         primaryButton={{
-          text: "Call Now: +1 (801) 209-9013",
-          href: "tel:+18012099013"
+          text: 'Call Now: +1 (801) 209-9013',
+          href: 'tel:+18012099013',
         }}
         secondaryButton={{
-          text: "Send Message",
-          href: "#contact-form"
+          text: 'Send Message',
+          href: '#contact-form',
         }}
         showPhoneButton={false}
         backgroundImage="/images/pexels-pamelamariephoto-2625896.jpg"
       />
+
+      {/* SEO SWEEP START [/contact-intro] */}
+      <section className="py-6 bg-white">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-xl font-bold text-gray-900 mb-2">Get a dumpster rental quote</h2>
+          <p className="text-sm text-gray-700">
+            Fast delivery, clear pricing, and local support. Serving Salt Lake & Utah County.
+          </p>
+          <p className="text-xs text-gray-600 mt-1">
+            Unsure on size? Think kitchen remodel vs. garage cleanout—we'll guide you.
+          </p>
+        </div>
+      </section>
+      {/* SEO SWEEP END [/contact-intro] */}
 
       {/* Contact Information */}
       <section className="section-padding bg-white">
@@ -83,12 +100,9 @@ export default function ContactPage() {
             {/* Contact Info */}
             <div className="space-y-8">
               <div>
-                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                  Get in Touch
-                </h2>
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Get in Touch</h2>
                 <p className="text-lg text-gray-600">
-                  We're here to help with all your dumpster rental needs. Contact us today for a free estimate 
-                  and professional service you can count on.
+                  We're here to help with all your dumpster rental needs. Contact us today for a free estimate and professional service you can count on.
                 </p>
               </div>
 
@@ -99,9 +113,12 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Phone</h3>
-                                    <a href="tel:+18012099013" className="text-lg text-primary-600 hover:text-primary-700 font-semibold">
-                  +1 (801) 209-9013
-                </a>
+                    <a
+                      href="tel:+18012099013"
+                      className="text-lg text-primary-600 hover:text-primary-700 font-semibold"
+                    >
+                      +1 (801) 209-9013
+                    </a>
                     <p className="text-sm text-gray-600">Call or Text</p>
                   </div>
                 </div>
@@ -113,8 +130,12 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Business Hours</h3>
                     <div className="text-gray-600">
-                      <p><strong>Monday - Friday:</strong> 7:00 am - 9:00 pm</p>
-                      <p><strong>Saturday - Sunday:</strong> Closed</p>
+                      <p>
+                        <strong>Monday - Friday:</strong> 7:00 am - 9:00 pm
+                      </p>
+                      <p>
+                        <strong>Saturday - Sunday:</strong> Closed
+                      </p>
                       <p className="text-sm mt-2">Call for after-hours or weekend availability.</p>
                     </div>
                   </div>
@@ -126,16 +147,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Serving Area</h3>
-                    <p className="text-gray-600">Wasatch Front, Utah</p>
-                    <div className="mt-2 text-sm text-gray-600">
-                      <p>• West Jordan</p>
-                      <p>• Salt Lake City</p>
-                      <p>• Murray</p>
-                      <p>• Sandy</p>
-                      <p>• Draper</p>
-                      <p>• Riverton</p>
-                      <p>• And surrounding areas</p>
-                    </div>
+                    <p className="text-gray-600">Salt Lake & Utah County</p>
                   </div>
                 </div>
 
@@ -145,7 +157,10 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
-                    <a href="mailto:admin@tntdump.com" className="text-primary-600 hover:text-primary-700">
+                    <a
+                      href="mailto:admin@tntdump.com"
+                      className="text-primary-600 hover:text-primary-700"
+                    >
                       admin@tntdump.com
                     </a>
                   </div>
@@ -244,7 +259,9 @@ export default function ContactPage() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-yellow-400 text-blue-900 font-bold rounded-lg px-6 py-3 hover:bg-yellow-300 transition-colors ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  className={`w-full bg-primary-600 text-white font-bold rounded-lg px-6 py-3 hover:bg-primary-700 transition-colors ${
+                    isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
+                  }`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>
@@ -254,151 +271,20 @@ export default function ContactPage() {
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="section-padding bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Why Choose TNT Dumpsters?
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              With over 55 years of experience, we provide reliable, affordable, and professional 
-              dumpster rental services throughout the Wasatch Front area.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Phone className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Free Estimates</h3>
-              <p className="text-gray-600">Get quick, accurate quotes with our free same-day estimates.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Clock className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Quick Service</h3>
-              <p className="text-gray-600">Fast delivery and pickup to keep your project on schedule.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <MapPin className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Local Business</h3>
-              <p className="text-gray-600">Family-owned and operated, serving our community for over 55 years.</p>
-            </div>
-            
-            <div className="text-center">
-              <div className="bg-primary-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                <Mail className="h-8 w-8 text-primary-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">Competitive Pricing</h3>
-              <p className="text-gray-600">Best value for your money without compromising on service quality.</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Map/Image Section */}
-      <section className="section-padding bg-white">
-        <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-                Serving the Wasatch Front
-              </h2>
-              <p className="text-lg text-gray-600 mb-6">
-                We proudly serve the entire Wasatch Front area, providing reliable dumpster rental 
-                services to homeowners, businesses, and contractors throughout Utah.
-              </p>
-              
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-west-jordan-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">West Jordan</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-salt-lake-city-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Salt Lake City</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-murray-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Murray</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-sandy-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Sandy</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-draper-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Draper</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <a href="/dumpster-rental-riverton-ut" className="text-gray-700 hover:text-primary-600 hover:underline transition-colors">Riverton</a>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <div className="w-3 h-3 bg-primary-600 rounded-full"></div>
-                  <span className="text-gray-700">And surrounding areas</span>
-                </div>
-              </div>
-            </div>
-            
-            <div className="relative">
-              <div className="relative h-96 rounded-lg overflow-hidden">
-                <Image
-                  src="/images/bigstock-Salt-Lake-City-Utah-USA-down-360462808-1536x1025.webp"
-                  alt="TNT Dumpsters serving the Wasatch Front area with professional dumpster rental services"
-                  fill
-                  className="object-cover"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Contact CTA */}
-      <section className="section-padding bg-primary-600">
-        <div className="container-custom text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-6">
-            Ready to Get Started?
-          </h2>
-          <p className="text-xl text-primary-100 mb-8 max-w-3xl mx-auto">
-            Contact us today for a free estimate and professional dumpster rental service. 
-            We're here to help with all your waste management needs.
-          </p>
-          
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-            <a href="tel:+18012099013" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center">
-              Call Now: +1 (801) 209-9013
-            </a>
-            <a href="#contact-form" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center">
-              Send Message
-            </a>
-          </div>
-
-          <div className="flex flex-col sm:flex-row gap-6 justify-center text-primary-100">
-            <div className="flex items-center space-x-2">
-              <Phone className="h-5 w-5" />
-              <span>Call or Text</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="h-5 w-5" />
-              <span>Mon - Fri: 7:00 am - 9:00 pm</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <MapPin className="h-5 w-5" />
-              <span>Serving the Wasatch Front</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* SEO SWEEP START [/contact-schema] */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'Service',
+            serviceType: 'Dumpster Rental',
+            areaServed: 'Salt Lake & Utah County',
+            provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' },
+          }),
+        }}
+      />
+      {/* SEO SWEEP END [/contact-schema] */}
     </main>
   )
 }
-

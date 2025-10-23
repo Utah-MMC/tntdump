@@ -140,15 +140,6 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
         }}
         backgroundImage={backgroundImage}
       />
-      {/* SEO SWEEP START [/city-intro] */}
-      <section className="py-6 bg-white">
-        <div className="container-custom max-w-4xl">
-          <p className="text-sm text-gray-700">
-            Need a local dumpster rental in {city}? We deliver roll off dumpsters with careful placement and clear scheduling. For pricing basics see <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>, and check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability. Serving Salt Lake & Utah County and nearby communities.
-          </p>
-        </div>
-      </section>
-      {/* SEO SWEEP END [/city-intro] */}
       
       {/* Pricing Section (shown directly below hero for all cities) */}
       (
@@ -244,19 +235,6 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
           </div>
         </div>
       </section>
-
-      {/* SEO SWEEP START [/city-service-schema] */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          serviceType: 'Dumpster Rental',
-          areaServed: 'Salt Lake & Utah County',
-          provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' }
-        }) }}
-      />
-      {/* SEO SWEEP END [/city-service-schema] */}
 
       {/* Services Section */}
       <section id="services" className="py-16 bg-gray-50">

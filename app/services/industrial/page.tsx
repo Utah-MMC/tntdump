@@ -111,6 +111,39 @@ export default function IndustrialServicePage() {
         </div>
       </section>
 
+      {/* SEO SWEEP START [/services/industrial-faq] */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Industrial Dumpster FAQs</h2>
+          <div className="space-y-3 text-sm">
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Do you handle heavy materials?</summary>
+              <div className="mt-2">Yes—concrete, masonry, and mixed construction debris with proper weight guidance.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Can you coordinate swaps?</summary>
+              <div className="mt-2">We schedule swaps and pickups to maintain uptime on busy sites.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How is pricing set?</summary>
+              <div className="mt-2">By size, tonnage, and time. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: [
+            { '@type': 'Question', name: 'Do you handle heavy materials?', acceptedAnswer: { '@type': 'Answer', text: 'Yes, we handle concrete, masonry, and mixed construction debris with proper weight guidance.' } },
+            { '@type': 'Question', name: 'Can you coordinate swaps?', acceptedAnswer: { '@type': 'Answer', text: 'We schedule swaps and pickups to maintain uptime on busy sites.' } },
+            { '@type': 'Question', name: 'How is pricing set?', acceptedAnswer: { '@type': 'Answer', text: 'By size, tonnage, and time. See the pricing section on the homepage.' } }
+          ]
+        }) }}
+      />
+      {/* SEO SWEEP END [/services/industrial-faq] */}
+
       {/* Service Image */}
       <section className="py-16 bg-white">
         <div className="container-custom">

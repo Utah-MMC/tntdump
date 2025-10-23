@@ -1,9 +1,8 @@
 ﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Short-Term Dumpster Rental Services | TNT Dumpsters',
-  description: 'Professional short-term dumpster rental services in Utah. Quick delivery, flexible rental periods, and competitive pricing for temporary projects.',
-  keywords: 'short-term dumpster rental, temporary dumpster rental, project dumpster rental, utah dumpster rental',
+  title: 'Short-Term Dumpster Rental | Dumpster Rental | TNT Dump',
+  description: 'Short-term roll off dumpster rental for events and quick projects. Fast delivery in Salt Lake & Utah County. See pricing basics and availability.',
 }
 
 export default function ShortTermDumpsters() {
@@ -66,6 +65,13 @@ export default function ShortTermDumpsters() {
         <p className="text-lg text-center text-gray-600 mb-8">
           Professional short-term dumpster rental solutions for temporary projects and cleanouts.
         </p>
+        {/* SEO SWEEP START [/dumpsters/short-term] */}
+        <div className="max-w-3xl mx-auto text-center text-sm text-gray-700 space-y-2">
+          <p>
+            Need fast turnaround? Check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> options. For numbers, review <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.
+          </p>
+        </div>
+        {/* SEO SWEEP END [/dumpsters/short-term] */}
         <div className="text-center">
           <a 
             href="/contact" 
@@ -117,6 +123,18 @@ export default function ShortTermDumpsters() {
           </div>
         </div>
       </section>
+      {/* SEO SWEEP START [/dumpsters/short-term-schema] */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: 'Short-Term Dumpster Rental',
+          areaServed: 'Salt Lake & Utah County',
+          provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' }
+        }) }}
+      />
+      {/* SEO SWEEP END [/dumpsters/short-term-schema] */}
     </div>
   )
 }

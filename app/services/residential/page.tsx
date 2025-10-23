@@ -1,4 +1,4 @@
-﻿import Image from 'next/image'
+import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck } from 'lucide-react'
 
 export default function ResidentialServicePage() {
@@ -89,6 +89,39 @@ export default function ResidentialServicePage() {
           </div>
         </div>
       </section>
+
+      {/* SEO SWEEP START [/services/residential-faq] */}
+      <section className="section-padding bg-white">
+        <div className="container-custom max-w-3xl">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Residential Dumpster FAQs</h2>
+          <div className="space-y-3 text-sm">
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">What size works for a garage cleanout?</summary>
+              <div className="mt-2">Most garage cleanouts fit a 15–20 yard roll off. We'll confirm weight and placement.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">How is pricing calculated?</summary>
+              <div className="mt-2">Size, tonnage, and time. See the homepage <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> basics.</div>
+            </details>
+            <details className="border rounded p-4 bg-gray-50">
+              <summary className="font-semibold cursor-pointer">Do you have fast delivery?</summary>
+              <div className="mt-2">Often yes. Check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability.</div>
+            </details>
+          </div>
+        </div>
+      </section>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org', '@type': 'FAQPage',
+          mainEntity: [
+            { '@type': 'Question', name: 'What size works for a garage cleanout?', acceptedAnswer: { '@type': 'Answer', text: 'Most garage cleanouts fit a 15–20 yard roll off. We will confirm weight and placement.' } },
+            { '@type': 'Question', name: 'How is pricing calculated?', acceptedAnswer: { '@type': 'Answer', text: 'Size, tonnage, and time. See the homepage pricing section for the basics.' } },
+            { '@type': 'Question', name: 'Do you have fast delivery?', acceptedAnswer: { '@type': 'Answer', text: 'Often yes, depending on routes. Same-day may be available.' } }
+          ]
+        }) }}
+      />
+      {/* SEO SWEEP END [/services/residential-faq] */}
 
       {/* Service Image */}
       <section className="py-16 bg-white">
@@ -274,4 +307,5 @@ export default function ResidentialServicePage() {
     </main>
   )
 }
+
 
