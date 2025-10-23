@@ -1,4 +1,6 @@
 /** @type {import('next').NextConfig} */
+// Load env early for build-time checks
+try { require('dotenv').config() } catch {}
 // Enforce required email credentials at build time
 if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
   throw new Error('Build aborted: EMAIL_USER and EMAIL_PASS must be set in environment or .env.local');
