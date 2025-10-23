@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
+import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'What Can and Cannot Go in a Dumpster | TNT Dumpsters',
@@ -198,6 +199,7 @@ export default function DumpsterProhibitedItemsPage() {
               <h2 className="text-3xl font-bold text-gray-900 mt-12 mb-6">Wrap-Up</h2>
               <p>If you made it here, you’re already ahead of most weekend warriors and even a few pros. Knowing what can and cannot go in a dumpster rental, how to prep materials, and how to dodge overage fees turns an anxious chore into a predictable process. Customize these steps for your city, document anything with refrigerants or hazardous waste, and keep your load level and clean. Got a hairy item you’re unsure about? Tell me what it is and your city—we’ll help you route it the right way so pickup day is a total non-event.</p>
             </div>
+            <ServingCityEnhancer />
           </div>
         </div>
       </section>
