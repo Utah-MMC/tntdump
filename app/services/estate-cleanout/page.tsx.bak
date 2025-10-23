@@ -1,50 +1,61 @@
-import Image from 'next/image'
-import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Shield } from 'lucide-react'
+﻿import Image from 'next/image'
+import { CheckCircle, Phone, Clock, MapPin, Truck, Heart, Home } from 'lucide-react'
 
-export default function VendorServicePage() {
+export default function EstateCleanoutServicePage() {
   const features = [
-    'Contractor waste management',
-    'Construction site cleanup',
-    'Vendor event waste disposal',
-    'Trade show and exhibition cleanup',
-    'Vendor facility maintenance',
-    'Supplier waste management',
-    'Vendor partnership programs',
-    'Custom vendor solutions'
+    'Complete estate and property cleanouts',
+    'Furniture and appliance disposal',
+    'Personal belongings organization',
+    'Property preparation for sale',
+    'Moving and relocation assistance',
+    'Hoarding cleanup services',
+    'Senior downsizing support',
+    'Property management cleanouts'
   ]
 
-  const vendorTypes = [
+  const cleanoutTypes = [
     {
-      type: 'Contractors',
-      description: 'Construction and renovation waste management',
-      icon: 'ðŸ”¨'
+      type: 'Estate Cleanouts',
+      description: 'Complete property cleanouts after inheritance or sale',
+      icon: 'ðŸ '
     },
     {
-      type: 'Event Vendors',
-      description: 'Trade shows, festivals, and event cleanup',
-      icon: 'ðŸŽª'
+      type: 'Senior Downsizing',
+      description: 'Compassionate assistance with moving and downsizing',
+      icon: 'ðŸ‘´'
     },
     {
-      type: 'Suppliers',
-      description: 'Manufacturing and distribution waste',
+      type: 'Property Preparation',
+      description: 'Getting properties ready for sale or rental',
+      icon: 'ðŸ”‘'
+    },
+    {
+      type: 'Hoarding Cleanup',
+      description: 'Sensitive cleanup of accumulated belongings',
       icon: 'ðŸ“¦'
-    },
-    {
-      type: 'Service Providers',
-      description: 'Maintenance and service company waste',
-      icon: 'ðŸ”§'
     }
   ]
 
+  const services = [
+    'Compassionate and respectful service',
+    'Complete property assessment and planning',
+    'Sorting and organization of belongings',
+    'Donation coordination for usable items',
+    'Safe disposal of unwanted materials',
+    'Property cleaning and preparation',
+    'Flexible scheduling to accommodate families',
+    'Detailed documentation and reporting'
+  ]
+
   const benefits = [
-    'Flexible scheduling to match your operations',
-    'Competitive vendor partnership rates',
-    'Reliable service for your business needs',
-    'Custom waste management solutions',
-    'Regular pickup schedules available',
-    'Dedicated vendor support team',
-    'Volume discounts for frequent service',
-    'Easy billing and payment options'
+    'Sensitive and respectful handling of personal belongings',
+    'Complete property cleanout from start to finish',
+    'Donation coordination for items that can be reused',
+    'Flexible scheduling to work with family needs',
+    'Professional organization and sorting services',
+    'Property preparation for sale or rental',
+    'Comprehensive cleanup and disposal services',
+    'Detailed documentation for estate purposes'
   ]
 
   return (
@@ -54,10 +65,10 @@ export default function VendorServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Vendor Dumpster Rental Service
+              Estate Cleanout Services
             </h1>
             <p className="text-xl text-blue-100 mb-8">
-              We offer a hassle-free solution for vendors needing waste management for their operations. If you're looking for reliable services, we deliver and pick up the dumpster according to your schedule, providing a seamless service experience.
+              Looking for estate cleanout services? TNT Dumpsters offers efficient and reliable solutions for your estate cleanout needs. Choose our tailored residential dumpster rentals for managing inherited estates and let us do all the work for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -70,45 +81,12 @@ export default function VendorServicePage() {
                 href="/quote" 
                 className="inline-block bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors"
               >
-                Get Vendor Quote
+                Get Estate Quote
               </a>
             </div>
           </div>
         </div>
       </section>
-
-      {/* SEO SWEEP START [/services/vendor-faq] */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Vendor Dumpster FAQs</h2>
-          <div className="space-y-3 text-sm">
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Do you offer contractor pricing?</summary>
-              <div className="mt-2">Yes—call for vendor rates and recurring schedules.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Can you coordinate with subs?</summary>
-              <div className="mt-2">We'll align deliveries and swaps with your project plan.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Where can I check costs?</summary>
-              <div className="mt-2">See the homepage <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> and call for a firm quote.</div>
-            </details>
-          </div>
-        </div>
-      </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'FAQPage',
-          mainEntity: [
-            { '@type': 'Question', name: 'Do you offer contractor pricing?', acceptedAnswer: { '@type': 'Answer', text: 'Yes—call for vendor rates and recurring schedules.' } },
-            { '@type': 'Question', name: 'Can you coordinate with subs?', acceptedAnswer: { '@type': 'Answer', text: 'We align deliveries and swaps with your project plan.' } },
-            { '@type': 'Question', name: 'Where can I check costs?', acceptedAnswer: { '@type': 'Answer', text: 'See the homepage pricing section and call for a firm quote.' } }
-          ]
-        }) }}
-      />
-      {/* SEO SWEEP END [/services/vendor-faq] */}
 
       {/* Service Image */}
       <section className="py-16 bg-white">
@@ -116,7 +94,7 @@ export default function VendorServicePage() {
           <div className="relative h-96 rounded-lg overflow-hidden">
             <Image
               src="/images/dumpster2-500x500-2.jpeg"
-              alt="Vendor dumpster rental service for vendors and contractors"
+              alt="Estate cleanout services for inherited properties"
               fill
               className="object-cover"
             />
@@ -124,24 +102,24 @@ export default function VendorServicePage() {
         </div>
       </section>
 
-      {/* Vendor Types Section */}
+      {/* Cleanout Types Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Serving All Types of Vendors
+              Comprehensive Estate Cleanout Services
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              We provide specialized waste management solutions for vendors across various industries and business types.
+              We provide sensitive and professional estate cleanout services to help families during difficult times with compassion and efficiency.
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {vendorTypes.map((vendor, index) => (
+            {cleanoutTypes.map((type, index) => (
               <div key={index} className="bg-white rounded-lg shadow-lg p-6 text-center">
-                <div className="text-4xl mb-4">{vendor.icon}</div>
-                <h3 className="text-xl font-bold text-gray-900 mb-2">{vendor.type}</h3>
-                <p className="text-gray-600">{vendor.description}</p>
+                <div className="text-4xl mb-4">{type.icon}</div>
+                <h3 className="text-xl font-bold text-gray-900 mb-2">{type.type}</h3>
+                <p className="text-gray-600">{type.description}</p>
               </div>
             ))}
           </div>
@@ -153,10 +131,10 @@ export default function VendorServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-              Vendor Waste Management Solutions
+              Complete Estate Cleanout Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              Comprehensive waste management services tailored to vendor operations and business needs.
+              Our comprehensive estate cleanout services handle every aspect of property cleanup with care and professionalism.
             </p>
           </div>
 
@@ -173,17 +151,38 @@ export default function VendorServicePage() {
         </div>
       </section>
 
-      {/* Benefits Section */}
+      {/* Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">
-              Vendor Partnership Benefits
+              Our Estate Cleanout Process
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {services.map((service, index) => (
+                <div key={index} className="flex items-start space-x-3">
+                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                    <CheckCircle className="w-4 h-4 text-white" />
+                  </div>
+                  <p className="text-gray-700">{service}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Benefits Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 text-center mb-8">
+              Why Choose Our Estate Cleanout Services?
             </h2>
             <div className="grid md:grid-cols-2 gap-6">
               {benefits.map((benefit, index) => (
                 <div key={index} className="flex items-start space-x-3">
-                  <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                  <div className="w-6 h-6 bg-blue-500 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                     <CheckCircle className="w-4 h-4 text-white" />
                   </div>
                   <p className="text-gray-700">{benefit}</p>
@@ -199,41 +198,41 @@ export default function VendorServicePage() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
-              Your Trusted Vendor Partner
+              Compassionate Estate Cleanout Service
             </h2>
             <p className="text-xl text-blue-100">
-              Reliable waste management solutions for your business operations
+              Serving families with care, respect, and professionalism
             </p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Shield className="w-8 h-8 text-white" />
+                <Heart className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Partnership Focus</h3>
-              <p className="text-blue-100">Built for vendor relationships</p>
+              <h3 className="text-xl font-bold mb-2">Compassionate Service</h3>
+              <p className="text-blue-100">Sensitive handling during difficult times</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Users className="w-8 h-8 text-white" />
+                <Home className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Dedicated Support</h3>
-              <p className="text-blue-100">Vendor-specific account management</p>
+              <h3 className="text-xl font-bold mb-2">Complete Service</h3>
+              <p className="text-blue-100">Full property cleanout from start to finish</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Flexible Service</h3>
-              <p className="text-blue-100">Scheduled to match your operations</p>
+              <h3 className="text-xl font-bold mb-2">Flexible Scheduling</h3>
+              <p className="text-blue-100">Work around your family's needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
-              <h3 className="text-xl font-bold mb-2">Reliable Service</h3>
-              <p className="text-blue-100">Consistent delivery and pickup</p>
+              <h3 className="text-xl font-bold mb-2">Professional Support</h3>
+              <p className="text-blue-100">Expert guidance throughout the process</p>
             </div>
           </div>
         </div>
@@ -244,10 +243,10 @@ export default function VendorServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
-              Ready to Partner with TNT Dumpsters?
+              Need Estate Cleanout Services?
             </h2>
             <p className="text-lg text-gray-600 mb-8">
-              Get a free vendor quote and discover how we can provide reliable waste management for your business operations.
+              Let us help you with compassionate and professional estate cleanout services. Get a free quote and discover how we can assist your family during this difficult time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a 
@@ -260,7 +259,7 @@ export default function VendorServicePage() {
                 href="/quote" 
                 className="inline-block bg-gray-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-gray-700 transition-colors"
               >
-                Get Vendor Quote
+                Get Estate Quote
               </a>
             </div>
           </div>
@@ -269,5 +268,4 @@ export default function VendorServicePage() {
     </main>
   )
 }
-
 

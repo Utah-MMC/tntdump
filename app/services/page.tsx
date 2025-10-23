@@ -78,7 +78,7 @@ export default function ServicesPage() {
           <details className="border rounded p-4 bg-gray-50">
             <summary className="font-semibold cursor-pointer">How do I choose a dumpster size?</summary>
             <div className="mt-2">
-              Tell us your project—garage cleanout, kitchen remodel, or roofing—and well recommend a roll off dumpster with the right weight limit.
+              Tell us your project—garage cleanout, kitchen remodel, or roofing—and we'll recommend a roll off dumpster with the right weight limit.
             </div>
           </details>
           <details className="border rounded p-4 bg-gray-50">
@@ -90,7 +90,7 @@ export default function ServicesPage() {
           <details className="border rounded p-4 bg-gray-50">
             <summary className="font-semibold cursor-pointer">Do you offer fast delivery?</summary>
             <div className="mt-2">
-              Yes—check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and well confirm your delivery window.
+              Yes—check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and we'll confirm your delivery window.
             </div>
           </details>
         </div>
@@ -141,4 +141,5 @@ export default function ServicesPage() {
     </main>
   )
 }
+
 

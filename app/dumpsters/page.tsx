@@ -100,7 +100,7 @@ export default function DumpstersPage() {
                 Asking about pricing? See our <a href="/#pricing" className="text-blue-700 hover:underline">dumpster rental cost</a> overview and call for a firm quote.
               </p>
               <p>
-                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and well confirm availability.
+                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and we'll confirm availability.
               </p>
             </div>
             {/* SEO SWEEP END [/dumpsters] */}
@@ -274,7 +274,7 @@ export default function DumpstersPage() {
           <div className="space-y-3">
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">What sizes do you carry?</summary>
-              <div className="mt-2">Common roll off sizes for home projects and construction debris. Well match size to your load type.</div>
+              <div className="mt-2">Common roll off sizes for home projects and construction debris. We'll match size to your load type.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">How fast can you deliver?</summary>
@@ -326,4 +326,5 @@ export default function DumpstersPage() {
     </main>
   )
 }
+
 

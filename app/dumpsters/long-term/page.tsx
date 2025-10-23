@@ -1,9 +1,8 @@
 ﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Long-Term Dumpster Rental Services | TNT Dumpsters',
-  description: 'Professional long-term dumpster rental services in Utah. Flexible contracts, competitive pricing, and reliable service for ongoing waste management needs.',
-  keywords: 'long-term dumpster rental, extended dumpster rental, ongoing waste management, utah dumpster rental',
+  title: 'Long-Term Dumpster Rental | Dumpster Rental | TNT Dump',
+  description: 'Long-term dumpster rental for ongoing work and operations. Reliable pickups and fair pricing in Salt Lake & Utah County.',
 }
 
 export default function LongTermDumpsters() {
@@ -62,6 +61,13 @@ export default function LongTermDumpsters() {
         <p className="text-lg text-center text-gray-600 mb-8">
           Professional long-term dumpster rental solutions for ongoing waste management needs.
         </p>
+        {/* SEO SWEEP START [/dumpsters/long-term] */}
+        <div className="max-w-3xl mx-auto text-center text-sm text-gray-700 space-y-2">
+          <p>
+            Ask about routine pickups and swaps. For pricing, see <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.
+          </p>
+        </div>
+        {/* SEO SWEEP END [/dumpsters/long-term] */}
         <div className="text-center">
           <a 
             href="/contact" 
@@ -112,6 +118,18 @@ export default function LongTermDumpsters() {
           </div>
         </div>
       </section>
+      {/* SEO SWEEP START [/dumpsters/long-term-schema] */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'Service',
+          serviceType: 'Long-Term Dumpster Rental',
+          areaServed: 'Salt Lake & Utah County',
+          provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' }
+        }) }}
+      />
+      {/* SEO SWEEP END [/dumpsters/long-term-schema] */}
     </div>
   )
 }

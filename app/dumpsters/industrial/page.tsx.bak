@@ -118,18 +118,9 @@ export default function IndustrialDumpsterPage() {
                 <span className="text-primary-600">Rental Service</span>
               </h1>
               <p className="text-xl text-gray-600">
-                Heavy-duty waste disposal solutions for industrial operations. Our industrial dumpster service handles the toughest waste management challenges with specialized equipment and expertise.
+                Heavy-duty waste disposal solutions for industrial operations. Our industrial dumpster service 
+                handles the toughest waste management challenges with specialized equipment and expertise.
               </p>
-              {/* SEO SWEEP START [/dumpsters/industrial] */}
-              <div className="text-sm text-gray-700 space-y-2">
-                <p>
-                  Scheduling or cost questions? See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> and ask about <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> when routes allow.
-                </p>
-                <p>
-                  For job sites, review our <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> notes on swaps, weight, and staging.
-                </p>
-              </div>
-              {/* SEO SWEEP END [/dumpsters/industrial] */}
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <a href="tel:+18012099013" className="btn-primary text-center">
@@ -169,19 +160,6 @@ export default function IndustrialDumpsterPage() {
           </div>
         </div>
       </section>
-
-      {/* SEO SWEEP START [/dumpsters/industrial-schema] */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org',
-          '@type': 'Service',
-          serviceType: 'Industrial Dumpster Rental',
-          areaServed: 'Salt Lake & Utah County',
-          provider: { '@type': 'LocalBusiness', name: 'TNT Dump', telephone: '(801) 209-9013' }
-        }) }}
-      />
-      {/* SEO SWEEP END [/dumpsters/industrial-schema] */}
 
       {/* Industrial Dumpster Sizes */}
       <section className="section-padding bg-gray-50">

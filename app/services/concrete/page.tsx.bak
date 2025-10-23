@@ -17,22 +17,22 @@ export default function ConcreteServicePage() {
     {
       type: 'Concrete',
       description: 'Driveways, sidewalks, foundations, and structural concrete',
-      icon: 'ðŸ§±'
+      icon: '🧱'
     },
     {
       type: 'Brick & Masonry',
       description: 'Brick walls, stone work, and masonry materials',
-      icon: 'ðŸ§±'
+      icon: '🧱'
     },
     {
       type: 'Asphalt',
       description: 'Driveways, parking lots, and paving materials',
-      icon: 'ðŸ›£ï¸'
+      icon: '🛣️'
     },
     {
       type: 'Demolition',
       description: 'Construction debris and building materials',
-      icon: 'ðŸ—ï¸'
+      icon: '🏗️'
     }
   ]
 
@@ -89,39 +89,6 @@ export default function ConcreteServicePage() {
           </div>
         </div>
       </section>
-
-      {/* SEO SWEEP START [/services/concrete-faq] */}
-      <section className="section-padding bg-white">
-        <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-4">Concrete Dumpster FAQs</h2>
-          <div className="space-y-3 text-sm">
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">Can I mix concrete with other debris?</summary>
-              <div className="mt-2">Noâ€”concrete dumpsters are for clean concrete, brick, or asphalt only to meet weight limits.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">What size for concrete?</summary>
-              <div className="mt-2">Smaller containers reduce overload risk. We'll advise based on volume and access.</div>
-            </details>
-            <details className="border rounded p-4 bg-gray-50">
-              <summary className="font-semibold cursor-pointer">How is pricing handled?</summary>
-              <div className="mt-2">Flat rates differ for heavy materials. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a>.</div>
-            </details>
-          </div>
-        </div>
-      </section>
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify({
-          '@context': 'https://schema.org', '@type': 'FAQPage',
-          mainEntity: [
-            { '@type': 'Question', name: 'Can I mix concrete with other debris?', acceptedAnswer: { '@type': 'Answer', text: 'Noâ€”concrete dumpsters are for clean concrete, brick, or asphalt only to meet weight limits.' } },
-            { '@type': 'Question', name: 'What size for concrete?', acceptedAnswer: { '@type': 'Answer', text: 'Smaller containers reduce overload risk. We will advise based on volume and access.' } },
-            { '@type': 'Question', name: 'How is pricing handled?', acceptedAnswer: { '@type': 'Answer', text: 'Flat rates differ for heavy materials. See the pricing section on the homepage.' } }
-          ]
-        }) }}
-      />
-      {/* SEO SWEEP END [/services/concrete-faq] */}
 
       {/* Service Image */}
       <section className="py-16 bg-white">
@@ -219,7 +186,7 @@ export default function ConcreteServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' · ')}</p>
                     )}
                   </div>
                 )}
@@ -325,4 +292,3 @@ export default function ConcreteServicePage() {
     </main>
   )
 }
-
