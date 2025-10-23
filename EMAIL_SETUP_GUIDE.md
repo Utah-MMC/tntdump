@@ -35,8 +35,11 @@ Create a file called `.env.local` in your project root with:
 
 ```env
 # Email Configuration for HostGator
-EMAIL_USER=admin@tntdump.com
-EMAIL_PASS=Uwg2025!
+EMAIL_HOST=mail.tntdump.com
+EMAIL_PORT=465
+EMAIL_SECURE=true
+EMAIL_USER=your_inbox@tntdump.com
+EMAIL_PASS=your_password_here
 
 # reCAPTCHA Configuration (optional - currently using test keys)
 RECAPTCHA_SITE_KEY=6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI
@@ -50,7 +53,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
    - Go to your Vercel dashboard
    - Select your project
    - Go to Settings â†’ Environment Variables
-   - Add `EMAIL_USER` and `EMAIL_PASS`
+   - Add `EMAIL_HOST`, `EMAIL_PORT`, `EMAIL_SECURE`, `EMAIL_USER`, and `EMAIL_PASS`
 
 2. Redeploy your site
 

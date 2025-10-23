@@ -8,14 +8,21 @@ type ChatMessage = {
 }
 
 function createTransporter() {
+  const user = process.env.EMAIL_USER
+  const pass = process.env.EMAIL_PASS
+  if (!user || !pass) {
+    throw new Error('EMAIL_USER and EMAIL_PASS must be set')
+  }
+
+  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
+  const port = Number(process.env.EMAIL_PORT || 465)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+
   return nodemailer.createTransport({
-    host: 'vixen.websitewelcome.com',
-    port: 465,
-    secure: true,
-    auth: {
-      user: process.env.EMAIL_USER || 'admin@tntdump.com',
-      pass: process.env.EMAIL_PASS || 'Uwg2025!',
-    },
+    host,
+    port,
+    secure,
+    auth: { user, pass },
     tls: {
       rejectUnauthorized: false,
     },

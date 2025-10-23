@@ -1,16 +1,23 @@
 ﻿import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
 
-// Email configuration for TNT Dumpsters
+// Email configuration for TNT Dumpsters (uses environment variables)
 const createTransporter = () => {
+  const user = process.env.EMAIL_USER
+  const pass = process.env.EMAIL_PASS
+  if (!user || !pass) {
+    throw new Error('EMAIL_USER and EMAIL_PASS must be set')
+  }
+
+  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
+  const port = Number(process.env.EMAIL_PORT || 465)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+
   return nodemailer.createTransport({
-    host: 'vixen.websitewelcome.com',
-    port: 465,
-    secure: true, // true for 465, false for other ports
-    auth: {
-      user: 'admin@tntdump.com',
-      pass: 'Uwg2025!'
-    },
+    host,
+    port,
+    secure,
+    auth: { user, pass },
     tls: {
       rejectUnauthorized: false
     }
