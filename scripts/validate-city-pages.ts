@@ -8,8 +8,12 @@
   - Links to hub and 2 adjacent cities => check data sufficient for rendering
   - CTA links (tel, sms, quote) exist
 */
-import { getAllCities, type CityData } from '../lib/cities'
-import { buildAllLD } from '../lib/schema'
+// Use CommonJS imports for ts-node compatibility
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { getAllCities } = require('../lib/cities') as typeof import('../lib/cities')
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const { buildAllLD } = require('../lib/schema') as typeof import('../lib/schema')
+type CityData = import('../lib/cities').CityData
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '801-997-8479' }
 
@@ -122,4 +126,3 @@ function main() {
 }
 
 main()
-

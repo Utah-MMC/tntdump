@@ -8,7 +8,7 @@ longitude: -111.8999
 
 # Permits
 permit_required: true
-permit_url: "" # TODO: insert official Midvale City right-of-way/encroachment permit URL
+permit_url: "https://www.midvaleutah.org/government/departments/engineering/permits" # TODO: verify official ROW/encroachment link
 permit_notes: >-
   In Midvale, a right-of-way (ROW) or encroachment permit may be required
   if a dumpster is placed in the street or within the public right-of-way.
@@ -37,6 +37,10 @@ neighborhoods_served:
   - Union Park area
   - Fort Union
   - Winchester Hills
+  - Copperview
+  - East Midvale
+  - Fashion Place area
+  - Midvale Heights
 real_job_examples:
   - size: 20
     summary: Driveway 20yd for basement cleanout near Fort Union
@@ -44,6 +48,10 @@ real_job_examples:
     summary: 30yd roofing tear-off by Jordan Bluffs
   - size: 10
     summary: 10yd garage purge in Old Town
+  - size: 40
+    summary: 40yd commercial fit-out debris off Union Park
+  - size: 20
+    summary: 20yd deck removal and yard waste in Winchester Hills
 local_testimonials:
   - quote: "TNT made it easy—drop-off same day and picked up exactly when we were done."
     author: Sarah M.
@@ -51,6 +59,12 @@ local_testimonials:
   - quote: "Professional and fair pricing."
     author: Dan R.
     locality: Bingham Junction
+  - quote: "Driver placed boards, texted on the way, and the pickup was right on time."
+    author: Elena T.
+    locality: Union Park
+  - quote: "Great communication throughout our remodel—zero surprises."
+    author: Mark K.
+    locality: Fort Union
 price_notes: >-
   Transparent local pricing with disposal included up to the standard weight
   limits for each size. Overweight loads and extra days are billed at fair

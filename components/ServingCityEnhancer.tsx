@@ -1,8 +1,13 @@
 "use client"
 import React, { useEffect, useState } from 'react'
-import { getAllCities } from '@/lib/cities'
 
 type Match = { city: string; slug: string }
+
+// Lightweight list to avoid server-only imports in the client bundle
+const UT_CITIES: Match[] = [
+  { city: 'Midvale', slug: 'midvale' },
+  { city: 'Herriman', slug: 'herriman' },
+]
 
 export default function ServingCityEnhancer() {
   const [matches, setMatches] = useState<Match[]>([])
@@ -10,13 +15,11 @@ export default function ServingCityEnhancer() {
   useEffect(() => {
     try {
       const text = document.body?.innerText || ''
-      const cities = getAllCities().filter((c) => c.state_code.toUpperCase() === 'UT')
       const found: Match[] = []
-      for (const c of cities) {
+      for (const c of UT_CITIES) {
         const re = new RegExp(`\\b${c.city}\\b`, 'i')
-        if (re.test(text)) found.push({ city: c.city, slug: c.slug })
+        if (re.test(text)) found.push(c)
       }
-      // de-duplicate and cap at 3
       const uniq = Array.from(new Map(found.map((f) => [f.slug, f])).values()).slice(0, 3)
       setMatches(uniq)
     } catch {
@@ -42,4 +45,3 @@ export default function ServingCityEnhancer() {
     </div>
   )
 }
-
