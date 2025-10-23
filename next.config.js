@@ -1,9 +1,14 @@
 /** @type {import('next').NextConfig} */
 // Load env early for build-time checks
-try { require('dotenv').config() } catch {}
-// Enforce required email credentials at build time
-if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
-  throw new Error('Build aborted: EMAIL_USER and EMAIL_PASS must be set in environment or .env.local');
+try {
+  const path = require('path')
+  require('dotenv').config({ path: path.join(__dirname, '.env.local') })
+  require('dotenv').config({ path: path.join(__dirname, '.env') })
+} catch {}
+// Enforce required email credentials at build time (prod/CI)
+const mustEnforce = process.env.NODE_ENV === 'production' || String(process.env.CI).toLowerCase() === 'true'
+if (mustEnforce && (!process.env.EMAIL_USER || !process.env.EMAIL_PASS)) {
+  throw new Error('Build aborted: EMAIL_USER and EMAIL_PASS must be set in environment or .env.local')
 }
 
 const nextConfig = {
