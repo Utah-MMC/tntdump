@@ -1,4 +1,9 @@
 /** @type {import('next').NextConfig} */
+// Enforce required email credentials at build time
+if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+  throw new Error('Build aborted: EMAIL_USER and EMAIL_PASS must be set in environment or .env.local');
+}
+
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
