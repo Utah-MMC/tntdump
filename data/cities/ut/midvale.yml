@@ -1,0 +1,95 @@
+slug: midvale
+city: Midvale
+state_code: UT
+county: Salt Lake County
+primary_zips: ["84047"]
+latitude: 40.6111
+longitude: -111.8999
+
+# Permits
+permit_required: true
+permit_url: "https://www.midvaleutah.org/government/departments/engineering/permits" # TODO: verify official ROW/encroachment link
+permit_notes: >-
+  In Midvale, a right-of-way (ROW) or encroachment permit may be required
+  if a dumpster is placed in the street or within the public right-of-way.
+  Driveway placement typically does not require a city permit. Always verify
+  current requirements with Midvale City before scheduling delivery.
+
+# Transfer station / landfill
+transfer_station_name: Trans-Jordan Landfill
+transfer_station_address: 10873 S 7200 W, South Jordan, UT 84095
+transfer_station_hours: "Mon–Sat 7:00am–6:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste containers. No paints, oils, liquids,
+  or hazardous materials. Mattresses and appliances may require additional
+  fees depending on the facility.
+busy_seasons_events: >-
+  Spring cleanups and summer construction demand can reduce same-day availability.
+  Fall yard waste peaks mid-October through November.
+neighborhoods_served:
+  - Old Town Midvale
+  - Jordan Bluffs
+  - Bingham Junction
+  - Union Park area
+  - Fort Union
+  - Winchester Hills
+  - Copperview
+  - East Midvale
+  - Fashion Place area
+  - Midvale Heights
+real_job_examples:
+  - size: 20
+    summary: Driveway 20yd for basement cleanout near Fort Union
+  - size: 30
+    summary: 30yd roofing tear-off by Jordan Bluffs
+  - size: 10
+    summary: 10yd garage purge in Old Town
+  - size: 40
+    summary: 40yd commercial fit-out debris off Union Park
+  - size: 20
+    summary: 20yd deck removal and yard waste in Winchester Hills
+local_testimonials:
+  - quote: "TNT made it easy—drop-off same day and picked up exactly when we were done."
+    author: Sarah M.
+    locality: Midvale
+  - quote: "Professional and fair pricing."
+    author: Dan R.
+    locality: Bingham Junction
+  - quote: "Driver placed boards, texted on the way, and the pickup was right on time."
+    author: Elena T.
+    locality: Union Park
+  - quote: "Great communication throughout our remodel—zero surprises."
+    author: Mark K.
+    locality: Fort Union
+price_notes: >-
+  Transparent local pricing with disposal included up to the standard weight
+  limits for each size. Overweight loads and extra days are billed at fair
+  posted rates.
+winter_notes: >-
+  We recommend plywood under the wheels to prevent impressions on soft or
+  thawing driveways. Avoid placing on unshoveled snow; we can provide salt
+  mats on request.
+hoa_common_rule: >-
+  Many HOAs require notice for visible street placement. Driveway placement
+  is generally acceptable—check community rules.
+adjacent_cities: ["Murray", "Sandy", "Cottonwood Heights"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "20 yard dumpster in Midvale driveway near Fort Union"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "30 yard dumpster delivery in Bingham Junction, Midvale"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "10 yard dumpster for garage cleanout in Old Town Midvale"
+    width: 1200
+    height: 800

@@ -1,4 +1,32 @@
 /** @type {import('next').NextConfig} */
+// Load env early for build-time checks
+try {
+  const fs = require('fs')
+  const path = require('path')
+  const envFiles = [path.join(__dirname, '.env.local'), path.join(__dirname, '.env')]
+  for (const f of envFiles) {
+    if (fs.existsSync(f)) {
+      const raw = fs.readFileSync(f, 'utf8')
+      raw.split(/\r?\n/).forEach((line) => {
+        const m = line.match(/^([^#=\s]+)\s*=\s*(.*)$/)
+        if (m) {
+          const key = m[1]
+          let val = m[2]
+          if ((val.startsWith('"') && val.endsWith('"')) || (val.startsWith("'") && val.endsWith("'"))) {
+            val = val.slice(1, -1)
+          }
+          if (process.env[key] === undefined) process.env[key] = val
+        }
+      })
+    }
+  }
+} catch {}
+// Enforce required email credentials at build time (prod/CI)
+const mustEnforce = process.env.NODE_ENV === 'production' || String(process.env.CI).toLowerCase() === 'true'
+if (mustEnforce && (!process.env.EMAIL_USER || !process.env.EMAIL_PASS)) {
+  throw new Error('Build aborted: EMAIL_USER and EMAIL_PASS must be set in environment or .env.local')
+}
+
 const nextConfig = {
   images: {
     domains: ['images.unsplash.com', 'via.placeholder.com'],
@@ -62,6 +90,15 @@ const nextConfig = {
   typescript: { ignoreBuildErrors: true },
 
   // No redirects/rewrites for city pages; they now exist at new paths
+  async redirects() {
+    return [
+      {
+        source: '/dumpster-rental-:city-ut',
+        destination: '/ut/:city/dumpster-rental',
+        permanent: true,
+      },
+    ]
+  },
 };
 
 module.exports = nextConfig;

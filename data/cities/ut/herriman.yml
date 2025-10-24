@@ -1,0 +1,95 @@
+slug: herriman
+city: Herriman
+state_code: UT
+county: Salt Lake County
+primary_zips: ["84096"]
+latitude: 40.5141
+longitude: -112.0329
+
+# Permits
+permit_required: true
+permit_url: "https://www.herriman.org/departments/engineering/right-of-way-permits" # TODO: verify official ROW/encroachment link
+permit_notes: >-
+  Herriman may require a right-of-way permit for dumpsters placed in the street
+  or public right-of-way. Driveway placements typically do not need a permit,
+  but neighborhood covenants can still apply. Expect basic traffic control like
+  cones or reflective sawhorses when placing near busy roads. Always confirm
+  with the city for current requirements before delivery.
+
+# Landfill / transfer
+transfer_station_name: Trans-Jordan Landfill
+transfer_station_address: 10873 S 7200 W, South Jordan, UT 84095
+transfer_station_hours: "Mon–Sat 7:00am–6:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 6
+cutoff_time: "14:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste containers. No liquids, oils, paints,
+  fuels, or hazardous materials. Tires and appliances may carry additional
+  fees. For hillside jobs, avoid overfilling with dense debris—weight caps are
+  reached quickly.
+busy_seasons_events: >-
+  Parade of Homes season and summer new builds increase demand across the
+  Rosecrest and Anthem areas. Spring yard cleanup spikes in April and May.
+  Athletic tournaments around Butterfield Canyon Park and community events in
+  Towne Center occasionally affect routing windows.
+neighborhoods_served:
+  - Rosecrest
+  - Anthem
+  - Herriman Towne Center
+  - Juniper Canyon
+  - Silvercrest
+  - Copper Creek
+  - Monarch Meadows
+  - Mountain View Corridor area
+real_job_examples:
+  - size: 20
+    summary: 20yd for kitchen remodel in Rosecrest
+  - size: 30
+    summary: 30yd new build debris in Anthem
+  - size: 10
+    summary: 10yd yard waste off Juniper Canyon
+  - size: 40
+    summary: 40yd community cleanup bin near Herriman Towne Center
+  - size: 20
+    summary: 20yd roofing tear-off in Monarch Meadows
+local_testimonials:
+  - quote: "Prompt delivery up the hill and careful placement—zero damage."
+    author: Kelli P.
+    locality: Herriman
+  - quote: "Great price and communication."
+    author: Trevor S.
+    locality: 84096
+  - quote: "They navigated the slope safely and protected our driveway—highly recommend."
+    author: Brooke L.
+    locality: Rosecrest
+  - quote: "Swap turnaround was fast during our build—super easy to schedule."
+    author: Nate D.
+    locality: Anthem
+price_notes: >-
+  Flat rate includes delivery, pickup, and disposal up to included weight.
+  Overages by the ton; transparent pricing without surprises.
+winter_notes: >-
+  For hillside placements, we chock wheels and avoid steep icy grades. Flexible
+  pickup windows help us time safe access during storms.
+hoa_common_rule: >-
+  Many HOAs require a 48-hour notice for visible street placement. Ask your
+  community management for specific guidance.
+adjacent_cities: ["Riverton", "South Jordan", "Bluffdale"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster4-500x500-1.jpeg"
+    alt: "20 yard dumpster in Herriman driveway near Rosecrest"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster5-500x500-1.jpeg"
+    alt: "30 yard dumpster for new build in Anthem, Herriman"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster6-500x500-1.jpeg"
+    alt: "10 yard dumpster for yard cleanup near Juniper Canyon in Herriman"
+    width: 1200
+    height: 800

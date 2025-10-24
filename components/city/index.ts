@@ -1,0 +1,10 @@
+export { default as SizesTable } from './SizesTable'
+export { default as PermitBlock } from './PermitBlock'
+export { default as DisposalBlock } from './DisposalBlock'
+export { default as Neighborhoods } from './Neighborhoods'
+export { default as LocalGallery } from './LocalGallery'
+export { default as Testimonials } from './Testimonials'
+export { default as FAQ } from './FAQ'
+export { default as CTA } from './CTA'
+export { default as NearbyCities } from './NearbyCities'
+

@@ -1,7 +1,8 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
+import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Dumpster Sizes: Yards, Dimensions, Capacity | TNT Dumpsters',
@@ -188,8 +189,7 @@ export default function ChooseRightDumpsterSizePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 bg-blue-600 text-white">
+      {/* CTA Section */}\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">
