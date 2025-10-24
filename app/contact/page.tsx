@@ -158,10 +158,10 @@ export default function ContactPage() {
                   <div>
                     <h3 className="font-semibold text-gray-900">Email</h3>
                     <a
-                      href="mailto:admin@tntdump.com"
+                      href="mailto:sales@tntdump.com"
                       className="text-primary-600 hover:text-primary-700"
                     >
-                      admin@tntdump.com
+                      sales@tntdump.com
                     </a>
                   </div>
                 </div>

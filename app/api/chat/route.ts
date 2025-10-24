@@ -72,7 +72,7 @@ async function sendEmail({
 }) {
   const transporter = createTransporter()
   await transporter.sendMail({
-    from: 'admin@tntdump.com',
+    from: 'sales@tntdump.com',
     to,
     cc,
     bcc: 'dcall@utahmmc.com',
@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'New Chat Started - TNT Dumpsters',
         to: 'dcall@utahmmc.com',
-        cc: ['jlafaver@utahmmc.com', 'admin@tntdump.com'],
+        cc: ['jlafaver@utahmmc.com', 'sales@tntdump.com'],
         html,
       })
       return NextResponse.json({ ok: true })
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'Chat Transcript - TNT Dumpsters',
         to: 'jlafaver@utahmmc.com',
-        cc: ['dcall@utahmmc.com', 'admin@tntdump.com'],
+        cc: ['dcall@utahmmc.com', 'sales@tntdump.com'],
         html,
       })
       return NextResponse.json({ ok: true })
