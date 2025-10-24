@@ -10,7 +10,7 @@ export async function generateStaticParams() {
 
 type PageProps = { params: { city: string } }
 
-const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '801-997-8479' }
+const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const data = getCityData(params.city)
@@ -68,7 +68,7 @@ function Intro({ city }: { city: CityData }) {
           </p>
           <div className="mt-6 inline-flex gap-3">
             <a href={city.quote_url || '/quote'} className="rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700">Get a Quote</a>
-            <a href={city.phone_cta ? `tel:${city.phone_cta}` : '#'} className="rounded-md bg-green-600 text-white px-4 py-2 hover:bg-green-700">Call {city.phone_cta}</a>
+            <a href={city.phone_cta ? `tel:+1${city.phone_cta.replace(/[^0-9]/g,'')}` : '#'} className="rounded-md bg-green-600 text-white px-4 py-2 hover:bg-green-700">Call ({city.phone_cta?.slice(0,3)}) {city.phone_cta?.slice(4)}</a>
           </div>
         </div>
         <div className="relative aspect-[5/3] rounded-lg overflow-hidden bg-gray-100">

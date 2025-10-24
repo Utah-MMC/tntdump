@@ -15,7 +15,7 @@ const { getAllCities } = require('../lib/cities') as typeof import('../lib/citie
 const { buildAllLD } = require('../lib/schema') as typeof import('../lib/schema')
 type CityData = import('../lib/cities').CityData
 
-const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '801-997-8479' }
+const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
 function wordCount(s: string) {
   return (s.match(/[A-Za-z0-9'\-]+/g) || []).length
