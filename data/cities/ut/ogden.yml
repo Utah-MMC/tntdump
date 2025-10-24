@@ -1,0 +1,88 @@
+slug: ogden
+city: Ogden
+state_code: UT
+county: Weber County
+primary_zips: ["84401", "84404", "84403"]
+latitude: 41.223
+longitude: -111.973
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Ogden typically do not require a permit. If a roll‑off must be placed on the street or within the public
+  right‑of‑way (ROW), verify Ogden City encroachment rules, visibility aids (cones/reflectors), and allowable durations. Urban streets
+  downtown and along Harrison Blvd/12th St corridors may have sight‑line and parking considerations—choose a location that preserves
+  mailbox/driveway access and keeps intersections clear.
+
+# Landfill / transfer
+transfer_station_name: Weber County Transfer Station
+transfer_station_address: 867 W Wilson Ln, Ogden, UT 84401
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Appliances and mattresses can incur
+  facility fees. Heavy debris should use smaller sizes to remain within legal road weights.
+busy_seasons_events: >-
+  Event surges along Historic 25th Street, university calendars, and remodel season on the East Bench and Five Points areas can compress
+  routing windows. Afternoon canyon winds and valley storms occasionally impact returns. Booking a morning slot a day ahead helps secure
+  first‑position delivery.
+neighborhoods_served:
+  - Downtown Ogden
+  - East Bench
+  - Harrison Blvd corridor
+  - 12th St corridor
+  - Five Points
+  - West Ogden
+  - Monroe Blvd area
+  - Jefferson Ave area
+real_job_examples:
+  - size: 20
+    summary: 20yd loft renovation debris near Historic 25th Street
+  - size: 30
+    summary: 30yd roofing tear‑off on the East Bench
+  - size: 10
+    summary: 10yd garage cleanout off Harrison Blvd corridor
+  - size: 40
+    summary: 40yd commercial cleanup along 12th St corridor
+  - size: 20
+    summary: 20yd kitchen/bath update in West Ogden
+  - size: 30
+    summary: 30yd multi‑unit rehab drywall and cabinets near Five Points
+local_testimonials:
+  - quote: "Downtown delivery right on time—kept bike lane and hydrant clear."
+    author: Nina K.
+    locality: Historic 25th Street
+  - quote: "Transparent price and a fast swap during our remodel."
+    author: Elias P.
+    locality: East Bench
+  - quote: "Driver used boards and suggested a safer spot for our narrow street."
+    author: Grace T.
+    locality: Monroe Blvd area
+price_notes: >-
+  Transparent pricing includes delivery, pickup, and disposal up to included weight per size. Overages/day rates posted—no hidden fees.
+winter_notes: >-
+  Canyon winds and valley storms can slow afternoon routes; boards protect soft/thawing driveways. Morning slots help maintain schedules.
+hoa_common_rule: >-
+  HOAs may require advance notice for visible on‑street placements; driveway placements are typically acceptable—confirm rules.
+adjacent_cities: ["Riverdale", "Roy", "North Ogden"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Ogden Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Ogden Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Ogden Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

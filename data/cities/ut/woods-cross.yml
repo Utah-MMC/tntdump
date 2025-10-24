@@ -1,0 +1,83 @@
+slug: woods-cross
+city: Woods Cross
+state_code: UT
+county: Davis County
+primary_zips: ["84087"]
+latitude: 40.871
+longitude: -111.93
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Woods Cross generally do not require a permit. If a roll‑off must be placed on the street or within the public
+  right‑of‑way (ROW), verify encroachment rules, visibility aids, and time limits with the city. Maintain access to mailboxes/cluster boxes
+  and driveways; avoid blocking sight lines. We can provide cones/reflectors on request.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed loads. No liquids, paints, oils, fuels, or hazardous materials. Appliances/mattresses may incur facility fees.
+busy_seasons_events: >-
+  Spring cleanups and summer projects around 500 S and Old Town can tighten delivery windows. Traffic near I‑15/Bangerter can impact afternoon
+  routes; morning slots help when timing is critical.
+neighborhoods_served:
+  - Woods Cross Heights
+  - Old Town
+  - 500 S corridor
+  - Foxboro adjacent
+  - 1100 W corridor
+  - 1500 S area
+real_job_examples:
+  - size: 20
+    summary: 20yd kitchen remodel near 500 S corridor
+  - size: 30
+    summary: 30yd roofing tear‑off in Woods Cross Heights
+  - size: 10
+    summary: 10yd garage cleanout around Old Town
+  - size: 40
+    summary: 40yd commercial cleanup near 1100 W industrial area
+  - size: 20
+    summary: 20yd deck/fence removal near Foxboro adjacent area
+  - size: 30
+    summary: 30yd multi‑room renovation debris along 1500 S
+local_testimonials:
+  - quote: "They worked around our schedule and placed exactly where we needed."
+    author: Kara J.
+    locality: Woods Cross Heights
+  - quote: "Clear pricing and quick pickup—would use again."
+    author: Daniel P.
+    locality: Old Town
+  - quote: "Driver kept mailbox access open and texted on the way—super helpful."
+    author: Ruby C.
+    locality: 500 S corridor
+price_notes: >-
+  Transparent pricing with included weight per size. Overages/day rates are posted—no surprises.
+winter_notes: >-
+  Valley storms can affect afternoon routes—book morning slots when timing matters. Boards protect soft or thawing driveways.
+hoa_common_rule: >-
+  Many HOAs request notice for visible street placement; driveway placement is typically fine—confirm community rules.
+adjacent_cities: ["Bountiful", "North Salt Lake", "West Bountiful"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Woods Cross Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Woods Cross Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Woods Cross Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

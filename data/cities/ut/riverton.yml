@@ -1,0 +1,91 @@
+slug: riverton
+city: Riverton
+state_code: UT
+county: Salt Lake County
+primary_zips: ["84065"]
+latitude: 40.5212
+longitude: -111.9391
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Riverton typically do not require permits. For on‑street or right‑of‑way (ROW) placements, verify encroachment rules,
+  visibility aids, and time limits with Riverton City. Preserve access to mailboxes, cluster boxes, and driveways, and avoid blocking sight
+  lines at corners. Choose a level, stable spot away from drainage. Cones/reflectors available on request for short on‑street placements.
+
+# Landfill / transfer
+transfer_station_name: Trans-Jordan Landfill
+transfer_station_address: 10873 S 7200 W, South Jordan, UT 84095
+transfer_station_hours: "Mon–Sat 7:00am–6:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 5
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Heavy debris uses smaller sizes to
+  stay within legal road weights.
+busy_seasons_events: >-
+  Spring cleanups, summer builds, and HOA cleanup days across Riverbend, Monarch Meadows, and Foothills can tighten schedules. Community events
+  near Riverton City Park and traffic along 12600 S/Redwood corridors may compress afternoon windows. Book morning slots during peak weeks and
+  let us know if contractors are waiting—we can prioritize first‑position delivery.
+neighborhoods_served:
+  - Riverbend
+  - Monarch Meadows
+  - Foothills
+  - Western Springs
+  - 12600 S corridor
+  - Patrick Henry area
+real_job_examples:
+  - size: 20
+    summary: 20yd driveway bin for kitchen remodel in Riverbend
+  - size: 30
+    summary: 30yd roofing tear‑off near Monarch Meadows
+  - size: 10
+    summary: 10yd garage purge off 12600 S corridor
+  - size: 40
+    summary: 40yd HOA community cleanup in Foothills
+  - size: 20
+    summary: 20yd deck/fence removal in Western Springs
+  - size: 30
+    summary: 30yd interior gut and drywall for multi‑room update
+  - size: 20
+    summary: 20yd flooring/trim demo near Patrick Henry area
+  - size: 30
+    summary: 30yd estate cleanout and bulky items along Redwood corridor
+local_testimonials:
+  - quote: "Great price and on‑time delivery—made the project easy."
+    author: Mel S.
+    locality: Monarch Meadows
+  - quote: "Driver kept access open and used boards—no marks left."
+    author: Omar B.
+    locality: Riverbend
+  - quote: "Fast swap between phases—excellent communication."
+    author: Paige N.
+    locality: Foothills
+  - quote: "They suggested a smarter placement that kept street parking and the mailbox accessible—super helpful."
+    author: Alan G.
+    locality: Riverbend
+price_notes: >-
+  Transparent pricing with included weight per size. Overages/day rates posted—no hidden fees.
+winter_notes: >-
+  Neighborhood slopes and storms can affect afternoon routes; choose morning slots when timing matters. Boards protect soft/thawing driveways.
+hoa_common_rule: >-
+  Most HOAs request notice for visible street placements; driveway placements are typically acceptable—confirm community rules.
+adjacent_cities: ["South Jordan", "Herriman", "Bluffdale"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Riverton Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Riverton Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Riverton Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800

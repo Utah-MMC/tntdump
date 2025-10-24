@@ -1,0 +1,84 @@
+slug: north-salt-lake
+city: North Salt Lake
+state_code: UT
+county: Davis County
+primary_zips: ["84054"]
+latitude: 40.848
+longitude: -111.906
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in North Salt Lake generally do not require a city permit. If a roll‑off must be placed on the street or in the
+  public right‑of‑way (ROW), verify current encroachment rules, visibility requirements, and durations with the city. Place the container
+  to preserve mailbox and driveway access and to avoid blocking sight lines on hills/curves. Cones/reflectors available on request.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed loads; no liquids, paints, oils, fuels, or hazardous materials. Appliances/mattresses may incur facility
+  fees. Keep heavy debris to smaller sizes to stay under legal weight limits.
+busy_seasons_events: >-
+  Busy I‑15/US‑89/Legacy traffic can compress afternoon routing. Foxboro and Eagle Ridge remodels surge in summer, with fall yard waste
+  spikes across valley neighborhoods. Morning slots are recommended during peak activity.
+neighborhoods_served:
+  - Foxboro
+  - Orchard
+  - Eagle Ridge
+  - Legacy Parkway area
+  - Redwood corridor
+  - Parkway Blvd area
+real_job_examples:
+  - size: 20
+    summary: 20yd kitchen remodel debris in Foxboro
+  - size: 30
+    summary: 30yd roofing tear‑off near Eagle Ridge
+  - size: 10
+    summary: 10yd garage purge off Redwood Rd
+  - size: 40
+    summary: 40yd commercial cleanup near I‑215/Redwood corridor
+  - size: 20
+    summary: 20yd fence/deck removal around Orchard community
+  - size: 30
+    summary: 30yd multi‑room renovation drywall and cabinets along Parkway Blvd
+local_testimonials:
+  - quote: "They navigated traffic and still hit the morning window—impressive."
+    author: Sam K.
+    locality: Eagle Ridge
+  - quote: "Straightforward pricing and clean placement—we’d rent again."
+    author: Olivia H.
+    locality: Foxboro
+  - quote: "Helpful driver kept mailbox and driveway access open."
+    author: Victor D.
+    locality: Orchard
+price_notes: >-
+  Transparent pricing with included weight by size. Overages/day rates are posted with no hidden fees.
+winter_notes: >-
+  Valley storms and inversions can impact afternoon returns—secure morning slots when timing matters. We use boards on soft/thawing driveways.
+hoa_common_rule: >-
+  HOAs often request advance notice for visible street placements. Driveway placements are typically fine—confirm community rules.
+adjacent_cities: ["Bountiful", "Woods Cross", "Salt Lake City"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "North Salt Lake Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "North Salt Lake Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "North Salt Lake Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

@@ -1,0 +1,84 @@
+slug: clearfield
+city: Clearfield
+state_code: UT
+county: Davis County
+primary_zips: ["84015"]
+latitude: 41.106
+longitude: -112.026
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Clearfield generally do not require a city permit. If a dumpster must be placed on the street
+  or within the public right-of-way (ROW), confirm current rules with Clearfield City before scheduling. Avoid blocking
+  sidewalks or sight lines. We can add cones/reflectors and coordinate with you to minimize impact on neighbors.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 5
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste containers. No liquids, paints, oils, fuels, or hazardous materials. Tires and appliances
+  may carry additional fees at the facility.
+busy_seasons_events: >-
+  Spring move-outs and summer projects around Freeport Center and neighborhood streets can tighten delivery windows.
+  City events and peak traffic near Clearfield Station sometimes compress afternoon routes. Book early for morning
+  slots if you have contractor crews waiting.
+neighborhoods_served:
+  - Downtown Clearfield
+  - Kiwanis Park area
+  - Freeport Center
+  - Steed Park
+  - Clearfield Station
+  - 700 S corridor
+real_job_examples:
+  - size: 20
+    summary: 20yd driveway bin for bathroom remodel near Kiwanis Park
+  - size: 30
+    summary: 30yd renovation debris by Freeport Center
+  - size: 10
+    summary: 10yd garage cleanout near Steed Park
+  - size: 40
+    summary: 40yd commercial cleanup off State Street
+  - size: 20
+    summary: 20yd flooring replacement debris in neighborhood off 700 S
+  - size: 30
+    summary: 30yd multi-room remodel waste close to Clearfield Station
+local_testimonials:
+  - quote: "Professional driver and smooth process from quote to pickup."
+    author: Tony V.
+    locality: Clearfield Station
+  - quote: "Fair pricing and quick turnaround—would rent again."
+    author: Lauren W.
+    locality: Downtown Clearfield
+  - quote: "Texted en route and placed exactly where requested without blocking the sidewalk."
+    author: Nate J.
+    locality: Kiwanis Park area
+price_notes: >-
+  Flat rate includes delivery, pickup, and disposal up to included weight. Overage tonnage is billed at posted rates.
+winter_notes: >-
+  Inversions and storms can impact routing; we offer flexible pickup windows. Use boards on soft/thawing driveways.
+hoa_common_rule: >-
+  Typical HOAs allow driveway placement; check with management for guidance on visible street placements.
+adjacent_cities: ["Clinton", "Layton", "Syracuse"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Clearfield Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Clearfield Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Clearfield Utah 10 yard for garage cleanout"
+    width: 1200
+    height: 800

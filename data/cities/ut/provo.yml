@@ -1,0 +1,83 @@
+slug: provo
+city: Provo
+state_code: UT
+county: Utah County
+primary_zips: ["84601", "84604"]
+latitude: 40.2338
+longitude: -111.6585
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Provo generally do not require permits. For on‑street or right‑of‑way (ROW) placements, verify encroachment rules,
+  required visibility aids, and allowable durations with the city. Urban streets downtown can have sight‑line/parking considerations—choose a
+  location preserving mailbox and driveway access. Cones/reflectors available.
+
+# Landfill / transfer
+transfer_station_name: North Pointe Solid Waste District
+transfer_station_address: 2000 W 200 S, Lindon, UT 84042
+transfer_station_hours: "Mon–Sat 7:00am–6:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Mattresses/appliances may incur facility fees.
+busy_seasons_events: >-
+  University calendars, event surges, and remodel seasons in Downtown, Joaquin, Rivergrove, and Edgemont can compress routes. Morning slots help
+  avoid afternoon congestion.
+neighborhoods_served:
+  - Downtown Provo
+  - Joaquin
+  - Rivergrove
+  - Edgemont
+  - Carterville
+  - Provost
+real_job_examples:
+  - size: 20
+    summary: 20yd loft renovation debris in Downtown Provo
+  - size: 30
+    summary: 30yd roofing tear‑off near Edgemont
+  - size: 10
+    summary: 10yd garage cleanout off 500 N corridor
+  - size: 40
+    summary: 40yd multi‑unit cleanout along Freedom Blvd
+  - size: 20
+    summary: 20yd deck/fence removal in Rivergrove
+  - size: 30
+    summary: 30yd interior gut and drywall for multi‑room update in Joaquin
+local_testimonials:
+  - quote: "Downtown drop right on time—driver kept bike lane and hydrant clear."
+    author: Eli R.
+    locality: Downtown Provo
+  - quote: "Upfront pricing and fast swap—made our remodel easy."
+    author: Naomi K.
+    locality: Edgemont
+  - quote: "They suggested a better placement for our narrow street—very helpful."
+    author: Troy H.
+    locality: Joaquin
+price_notes: >-
+  Flat rate includes delivery, pickup, and disposal up to included weight. Overages/day rates posted—no hidden fees.
+winter_notes: >-
+  Valley storms can affect afternoons—boards protect soft or thawing driveways. Morning slots help maintain schedules.
+hoa_common_rule: >-
+  HOAs often require notice for visible on‑street placements; driveway placements are typically acceptable—confirm community rules.
+adjacent_cities: ["Orem", "Springville", "Vineyard"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Provo Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Provo Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Provo Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+
