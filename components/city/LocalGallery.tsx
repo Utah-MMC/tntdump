@@ -17,6 +17,7 @@ export default function LocalGallery({ city }: { city: CityData }) {
                 alt={img.alt || `${city.city} dumpster rental photo`}
                 fill
                 sizes="(max-width: 768px) 100vw, 33vw"
+                quality={70}
                 className="object-cover"
                 priority={i === 0}
               />
@@ -27,4 +28,3 @@ export default function LocalGallery({ city }: { city: CityData }) {
     </section>
   )
 }
-
