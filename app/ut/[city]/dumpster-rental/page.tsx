@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getCityData, getCitySlugParams, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
-import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, LocalGallery, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
+import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
 
 export async function generateStaticParams() {
   return getCitySlugParams()
@@ -221,7 +221,6 @@ export default async function CityPage({ params }: PageProps) {
       <PermitBlock city={city} />
       <DisposalBlock city={city} />
       <Neighborhoods city={city} />
-      <LocalGallery city={city} />
       <Testimonials city={city} />
       <FAQ items={faq} />
       <NearbyCities city={city} />
