@@ -6,10 +6,9 @@ import { fireContactEvent } from '@/lib/ga'
 type Props = { city: CityData; brand: { name: string; url: string } }
 
 const sizes = [
-  { size: 10, dims: '12’ x 7’ x 3.5’', ideal: 'Garage cleanouts, small remodels' },
+  { size: 15, dims: '16’ x 7.5’ x 4’', ideal: 'Home cleanouts, light remodels' },
   { size: 20, dims: '22’ x 7.5’ x 4.5’', ideal: 'Kitchen/bath remodels, roofing' },
   { size: 30, dims: '22’ x 7.5’ x 6’', ideal: 'Whole-home cleanouts, construction' },
-  { size: 40, dims: '22’ x 7.5’ x 8’', ideal: 'Large projects, commercial jobs' },
 ]
 
 export default function SizesTable({ city, brand }: Props) {
@@ -54,4 +53,3 @@ export default function SizesTable({ city, brand }: Props) {
     </section>
   )
 }
-
