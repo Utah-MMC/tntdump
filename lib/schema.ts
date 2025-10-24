@@ -48,7 +48,7 @@ export function buildServiceLD(brand: Brand, city: CityData) {
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Dumpster Sizes',
-      itemListElement: [10, 20, 30, 40].map((size) => ({
+      itemListElement: [15, 20, 30].map((size) => ({
         '@type': 'Offer',
         itemOffered: {
           '@type': 'Product',
@@ -92,8 +92,7 @@ export function buildFaqLD(faq: { question: string; answer: string }[]) {
 export function buildAllLD(brand: Brand, city: CityData, faq: { question: string; answer: string }[]) {
   const local = buildLocalBusinessLD(brand, city)
   const service = buildServiceLD(brand, city)
-  const products = [10, 20, 30, 40].map((s) => buildProductLD(s, city, brand))
+  const products = [15, 20, 30].map((s) => buildProductLD(s, city, brand))
   const faqLD = buildFaqLD(faq)
   return [local, service, ...products, faqLD]
 }
-

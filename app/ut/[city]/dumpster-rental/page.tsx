@@ -16,7 +16,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Fast, local dumpster rental in ${data.city}, UT. ${BRAND.name} delivers ${[10,20,30,40].join('/')} yard roll-off dumpsters with transparent pricing and same-day options.`
+  const description = `Fast, local dumpster rental in ${data.city}, UT. ${BRAND.name} delivers ${[15,20,30].join('/')} yard roll-off dumpsters with transparent pricing and same-day options.`
   const canonical = `${BRAND.url}/ut/${data.slug}/dumpster-rental`
   return {
     title,
@@ -42,7 +42,7 @@ function Intro({ city }: { city: CityData }) {
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">Dumpster Rentals in {city.city}, Utah</h1>
           <p className="mt-4 text-gray-700">
             When you need a dumpster in {city.city}, we make it simple. {`TNT Dumpsters`} is a locally focused hauler offering fast
-            delivery, clear pricing, and respectful placement on your property or jobsite. Choose from 10, 20, 30, or 40 yard
+            delivery, clear pricing, and respectful placement on your property or jobsite. Choose from 15, 20, or 30 yard
             roll-off containers to match your project—from a weekend garage purge to a full-scale remodel or new build.
           </p>
           <p className="mt-3 text-gray-700">
@@ -122,12 +122,12 @@ function buildFaq(city: CityData) {
   // Build 46 Q&As blending global and city-local details
   const q = (question: string, answer: string) => base.push({ question, answer })
   q(`How soon can I get a dumpster in ${city.city}?`, `Most deliveries in ${city.city} arrive in about ${city.avg_delivery_eta_hours || 4} hours when ordered before ${city.cutoff_time || '3:00 PM'}. Same-day is often available.`)
-  q('What sizes are available?', 'We offer 10, 20, 30, and 40 yard roll-off dumpsters for residential and commercial projects.')
+  q('What sizes are available?', 'We offer 15, 20, and 30 yard roll-off dumpsters for residential and commercial projects.')
   q('What is included in pricing?', city.price_notes || 'Transparent pricing with delivery, pickup, and disposal up to included weight. Overages billed per ton.')
   q('Do I need a permit?', city.permit_required ? 'Street placement may require a right-of-way permit from the city. Driveways typically do not.' : 'Driveway placements usually do not require permits; check local rules for street placements.')
   q(`Where does the waste go from ${city.city}?`, `We use approved facilities such as ${city.transfer_station_name || 'the local landfill/transfer station'}. Restrictions may apply for certain materials.`)
   q('What cannot go in the dumpster?', city.disallowed_items_deltas || 'No liquids, paints, oils, hazardous waste, or electronics. Dirt/concrete only in dedicated containers.')
-  q('How much space is required?', 'A clear spot ~60 feet long for 20–40 yard bins; 10 yard bins need less. Overhead clearance of 20–25 feet is ideal.')
+  q('How much space is required?', 'A clear spot about 45–60 feet long for 20–30 yard bins; 15 yard bins typically need 35–40 feet. Overhead clearance of 20–25 feet is ideal.')
   q('Can the dumpster damage my driveway?', 'We can place boards to protect asphalt or concrete and suggest locations that distribute weight.')
   q('Do you serve HOAs?', 'Yes. We commonly coordinate acceptable placements and timing with HOA managers to avoid violations.')
   q('How long is the rental period?', 'Standard terms include several days; extensions are available—just let us know to avoid daily fees.')

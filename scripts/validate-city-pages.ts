@@ -46,7 +46,7 @@ function buildFaq(city: CityData) {
   const items: { question: string; answer: string }[] = []
   const q = (Q: string, A: string) => items.push({ question: Q, answer: A })
   q(`How soon can I get a dumpster in ${city.city}?`, `Most deliveries in ${city.city} arrive in about ${city.avg_delivery_eta_hours || 4} hours when ordered before ${city.cutoff_time || '3:00 PM'}.`)
-  q('What sizes are available?', 'We offer 10, 20, 30, and 40 yard roll-off dumpsters for residential and commercial projects.')
+  q('What sizes are available?', 'We offer 15, 20, and 30 yard roll-off dumpsters for residential and commercial projects.')
   q('What is included in pricing?', city.price_notes || 'Transparent pricing with delivery, pickup, and disposal up to included weight. Overages billed per ton.')
   q('Do I need a permit?', city.permit_required ? 'Street placement may require a right-of-way permit from the city. Driveways typically do not.' : 'Driveway placements usually do not require permits; check local rules for street placements.')
   q(`Where does the waste go from ${city.city}?`, `We use approved facilities such as ${city.transfer_station_name || 'the local landfill/transfer station'}.`)
@@ -92,7 +92,7 @@ function validateCity(city: CityData) {
   if (!types.has('Service')) errors.push('Missing Service LD')
   if (!types.has('FAQPage')) errors.push('Missing FAQPage LD')
   const products = ld.filter((b) => (b as any)['@type'] === 'Product')
-  if (products.length < 4) errors.push('Missing Product LD items for sizes')
+  if (products.length < 3) errors.push('Missing Product LD items for sizes')
 
   // Links
   if ((city.adjacent_cities || []).length < 2) errors.push('Fewer than 2 adjacent cities')

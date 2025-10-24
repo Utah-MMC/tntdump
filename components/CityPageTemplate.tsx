@@ -212,20 +212,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                 <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
               </div>
 
-              <div className="bg-gray-50 rounded-lg p-6">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">Concrete Dumpster</h3>
-                <div className="space-y-3 mb-4">
-                  <div>
-                    <p className="font-semibold text-gray-900 flex justify-between"><span>1 Day</span><span>$325</span></p>
-                    <p className="text-sm text-gray-600">No tons included</p>
-                  </div>
-                  <div>
-                    <p className="font-semibold text-gray-900 flex justify-between"><span>7 Days</span><span>$425</span></p>
-                    <p className="text-sm text-gray-600">No tons included</p>
-                  </div>
-                </div>
-                <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
-              </div>
+              
             </div>
           </div>
         </section>
