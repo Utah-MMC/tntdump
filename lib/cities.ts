@@ -105,6 +105,43 @@ function slugifyCity(name: string) {
     .replace(/(^-|-$)/g, '')
 }
 
+function slugifyStrict(s: string) {
+  // Mirror settings used by the image fetcher (lower, strict, trim)
+  return String(s)
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/(^-|-$)/g, '')
+}
+
+type ManifestItem = {
+  file: string
+  alt?: string
+  title?: string | null
+  width?: number | null
+  height?: number | null
+}
+
+function loadCityGalleryFromManifest(city: string, stateName: string): { src: string; alt: string; width?: number; height?: number }[] {
+  try {
+    const folder = slugifyStrict(`${city}, ${stateName}`)
+    const manifestPath = path.join(ROOT, 'public', 'images', 'cities', folder, 'manifest.json')
+    if (!fs.existsSync(manifestPath)) return []
+    const raw = fs.readFileSync(manifestPath, 'utf8')
+    const arr = JSON.parse(raw) as ManifestItem[]
+    if (!Array.isArray(arr)) return []
+    const out = arr.map((it) => ({
+      src: it.file?.startsWith('/') ? it.file : `/${it.file}`,
+      alt: it.alt || `${city} local photo`,
+      width: typeof it.width === 'number' ? it.width : undefined,
+      height: typeof it.height === 'number' ? it.height : undefined,
+    }))
+    return out
+  } catch {
+    return []
+  }
+}
+
 function parseCsv(): CityBase[] {
   const csvPath = path.join(DATA_DIR, 'cities.csv')
   const raw = fs.readFileSync(csvPath, 'utf8')
@@ -180,8 +217,22 @@ export function getAllCities(): CityData[] {
       phone_cta: override.phone_cta || row.phone_cta || undefined,
       sms_cta: override.sms_cta || row.sms_cta || undefined,
       quote_url: override.quote_url || row.quote_url || undefined,
-      gallery: override.gallery || []
+      gallery: []
     }
+
+    // Merge gallery: lead images from public manifest first, then YAML overrides
+    const manifestGallery = loadCityGalleryFromManifest(out.city, out.state_name)
+    const yamlGallery = override.gallery || []
+    const merged: { src: string; alt: string; width?: number; height?: number }[] = []
+    const seen = new Set<string>()
+    for (const it of [...manifestGallery, ...yamlGallery]) {
+      const key = it.src
+      if (key && !seen.has(key)) {
+        seen.add(key)
+        merged.push({ src: it.src, alt: it.alt, width: (it as any).width, height: (it as any).height })
+      }
+    }
+    out.gallery = merged
     return out
   })
 }
@@ -216,4 +267,3 @@ export function getCityPathsJson(): string[] {
   const all = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
   return all.map((c) => `/ut/${c.slug}/dumpster-rental`)
 }
-
