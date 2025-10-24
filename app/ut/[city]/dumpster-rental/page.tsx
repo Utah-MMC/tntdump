@@ -35,6 +35,22 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 }
 
 function Intro({ city }: { city: CityData }) {
+  const to12h = (t?: string) => {
+    if (!t) return '3:00 PM'
+    if (/\b(am|pm)\b/i.test(t)) {
+      const m = t.match(/^\s*(\d{1,2}):(\d{2})\s*(am|pm)\s*$/i)
+      if (m) return `${Number(m[1])}:${m[2]} ${m[3].toUpperCase()}`
+      return t.replace(/\b(am|pm)\b/i, (s) => s.toUpperCase())
+    }
+    const m = t.match(/^(\d{1,2}):(\d{2})$/)
+    if (!m) return t
+    let h = parseInt(m[1], 10)
+    const min = m[2]
+    const suffix = h >= 12 ? 'PM' : 'AM'
+    if (h === 0) h = 12
+    else if (h > 12) h -= 12
+    return `${h}:${min} ${suffix}`
+  }
   return (
     <section className="py-14 bg-white">
       <div className="container-custom grid lg:grid-cols-2 gap-8 items-center">
@@ -46,7 +62,7 @@ function Intro({ city }: { city: CityData }) {
             roll-off containers to match your project—from a weekend garage purge to a full-scale remodel or new build.
           </p>
           <p className="mt-3 text-gray-700">
-            Most orders in {city.city} can be scheduled the same day when placed before our cut-off at {city.cutoff_time || '3:00 PM'}.
+            Most orders in {city.city} can be scheduled the same day when placed before our cut-off at {to12h(city.cutoff_time)}.
             Typical ETA is about {city.avg_delivery_eta_hours || 4} hours depending on traffic and route density. Our drivers place
             boards as needed to protect driveways and will help you pick an ideal location that balances access, safety, and any HOA requirements.
           </p>
@@ -121,7 +137,23 @@ function buildFaq(city: CityData) {
   const base: { question: string; answer: string }[] = []
   // Build 46 Q&As blending global and city-local details
   const q = (question: string, answer: string) => base.push({ question, answer })
-  q(`How soon can I get a dumpster in ${city.city}?`, `Most deliveries in ${city.city} arrive in about ${city.avg_delivery_eta_hours || 4} hours when ordered before ${city.cutoff_time || '3:00 PM'}. Same-day is often available.`)
+  const to12h = (t?: string) => {
+    if (!t) return '3:00 PM'
+    if (/\b(am|pm)\b/i.test(t)) {
+      const m = t.match(/^\s*(\d{1,2}):(\d{2})\s*(am|pm)\s*$/i)
+      if (m) return `${Number(m[1])}:${m[2]} ${m[3].toUpperCase()}`
+      return t.replace(/\b(am|pm)\b/i, (s) => s.toUpperCase())
+    }
+    const m = t.match(/^(\d{1,2}):(\d{2})$/)
+    if (!m) return t
+    let h = parseInt(m[1], 10)
+    const min = m[2]
+    const suffix = h >= 12 ? 'PM' : 'AM'
+    if (h === 0) h = 12
+    else if (h > 12) h -= 12
+    return `${h}:${min} ${suffix}`
+  }
+  q(`How soon can I get a dumpster in ${city.city}?`, `Most deliveries in ${city.city} arrive in about ${city.avg_delivery_eta_hours || 4} hours when ordered before ${to12h(city.cutoff_time)}. Same-day is often available.`)
   q('What sizes are available?', 'We offer 15, 20, and 30 yard roll-off dumpsters for residential and commercial projects.')
   q('What is included in pricing?', city.price_notes || 'Transparent pricing with delivery, pickup, and disposal up to included weight. Overages billed per ton.')
   q('Do I need a permit?', city.permit_required ? 'Street placement may require a right-of-way permit from the city. Driveways typically do not.' : 'Driveway placements usually do not require permits; check local rules for street placements.')

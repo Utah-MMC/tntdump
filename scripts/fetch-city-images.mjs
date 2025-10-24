@@ -45,8 +45,8 @@ const CITIES = [
 // Where to save everything
 const OUTPUT_DIR = path.resolve(__dirname, "../public/images/cities");
 
-// Try changing this if you want more/less images per city
-const IMAGES_PER_CITY = 6;
+// Target: 4 images per city (resumable if re-run)
+const IMAGES_PER_CITY = 4;
 
 // Preferred source: "wikimedia" (safest) or "openverse"
 const PROVIDER = "wikimedia";
@@ -125,6 +125,23 @@ function manifestEntry({ city, title, file, width, height, sourceUrl, author, li
     license: license || null,
     attribution
   };
+}
+
+// ---------------- RESUME HELPERS ----------------
+function loadExistingManifest(cityDir) {
+  const mp = path.join(cityDir, "manifest.json");
+  if (!fs.existsSync(mp)) return [];
+  try {
+    return JSON.parse(fs.readFileSync(mp, "utf-8")) || [];
+  } catch {
+    return [];
+  }
+}
+
+function countExistingFiles(cityDir, citySlug) {
+  if (!fs.existsSync(cityDir)) return 0;
+  const files = fs.readdirSync(cityDir);
+  return files.filter(f => new RegExp(`^${citySlug}-\\d{2}\\.`).test(f)).length;
 }
 
 // ---------------- PROVIDERS ----------------
@@ -225,19 +242,32 @@ async function run() {
     const cityDir = path.join(OUTPUT_DIR, citySlug);
     ensureDir(cityDir);
 
-    console.log(`\nFetching images for ${city}…`);
+    // Load previous state for resumability
+    let manifest = loadExistingManifest(cityDir);
+    const existingFiles = countExistingFiles(cityDir, citySlug);
+    // Prefer manifest length for truth; fallback to files count
+    let existingCount = Math.max(manifest.length, existingFiles);
+
+    if (existingCount >= IMAGES_PER_CITY) {
+      console.log(`\nSkipping ${city}: already have ${existingCount}/${IMAGES_PER_CITY}.`);
+      continue;
+    }
+
+    const remaining = IMAGES_PER_CITY - existingCount;
+    console.log(`\nFetching images for ${city}… Need ${remaining} more.`);
+
     let results = [];
     try {
       results = PROVIDER === "openverse"
-        ? await fetchOpenverse(city, IMAGES_PER_CITY)
-        : await fetchWikimedia(city, IMAGES_PER_CITY);
+        ? await fetchOpenverse(city, remaining)
+        : await fetchWikimedia(city, remaining);
     } catch (e) {
       console.error(`Fetch error for ${city}:`, e.message);
       continue;
     }
 
-    const manifest = [];
-    let idx = 1;
+    // Start index after existing items
+    let idx = existingCount + 1;
 
     for (const img of results) {
       const ext = (new URL(img.directUrl).pathname.split(".").pop() || "jpg").split("?")[0];
@@ -261,6 +291,9 @@ async function run() {
         );
         console.log(`✔ Saved ${filename}`);
         idx += 1;
+
+        // Stop early if we hit the target (in case providers returned extras)
+        if (manifest.length >= IMAGES_PER_CITY) break;
       } catch (e) {
         console.warn(`Skipped ${img.directUrl}: ${e.message}`);
       }
@@ -269,8 +302,8 @@ async function run() {
     }
 
     const manifestPath = path.join(cityDir, "manifest.json");
-    fs.writeFileSync(manifestPath, JSON.stringify(manifest, null, 2));
-    console.log(`📝 Wrote ${manifestPath} (${manifest.length} items)`);
+    fs.writeFileSync(manifestPath, JSON.stringify(manifest.slice(0, IMAGES_PER_CITY), null, 2));
+    console.log(`📝 Wrote ${manifestPath} (${manifest.slice(0, IMAGES_PER_CITY).length} items)`);
   }
 
   console.log("\nDone.");
