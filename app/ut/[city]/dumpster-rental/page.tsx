@@ -56,7 +56,15 @@ function Intro({ city }: { city: CityData }) {
           </div>
         </div>
         <div className="relative aspect-[5/3] rounded-lg overflow-hidden bg-gray-100">
-          <Image src={city.gallery?.[0]?.src || '/images/dumpster2-500x500-1.jpeg'} alt={`${city.city} Utah dumpster rental`} fill className="object-cover" />
+          <Image
+            src={city.gallery?.[0]?.src || '/images/dumpster2-500x500-1.jpeg'}
+            alt={`${city.city} Utah dumpster rental`}
+            fill
+            className="object-cover"
+            sizes="(max-width: 1024px) 100vw, 50vw"
+            priority
+            quality={70}
+          />
         </div>
       </div>
     </section>
@@ -195,4 +203,3 @@ export default async function CityPage({ params }: PageProps) {
     </main>
   )
 }
-
