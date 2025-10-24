@@ -64,8 +64,8 @@ winter_notes: >-
 hoa_common_rule: >-
   Most HOAs request notice for visible street placement; driveway placements typically fine—confirm community rules.
 adjacent_cities: ["Lehi", "Pleasant Grove", "Highland"]
-phone_cta: "801-997-8479"
-sms_cta: "801-997-8479"
+phone_cta: "801-209-9013"
+sms_cta: "801-209-9013"
 quote_url: "https://tntdump.com/quote"
 gallery:
   - src: "/images/dumpster1-500x500-1.jpeg"
@@ -80,4 +80,3 @@ gallery:
     alt: "American Fork Utah 10 yard dumpster for garage cleanout"
     width: 1200
     height: 800
-
