@@ -10,7 +10,7 @@ export default function LocalGallery({ city }: { city: CityData }) {
       <div className="container-custom">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Local Project Photos</h2>
         <div className="grid md:grid-cols-3 gap-4">
-          {items.slice(0, 6).map((img, i) => (
+          {items.slice(0, 3).map((img, i) => (
             <div key={i} className="relative aspect-[4/3] overflow-hidden rounded-lg bg-gray-100">
               <Image
                 src={img.src}

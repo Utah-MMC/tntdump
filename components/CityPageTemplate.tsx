@@ -383,8 +383,8 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                   <span className="text-2xl mr-4">⭐</span>
                   <div>
                     <p className="font-semibold text-gray-900">Email</p>
-                    <a href="mailto:admin@tntdump.com" className="text-blue-600 hover:text-blue-700">
-                      admin@tntdump.com
+                    <a href="mailto:sales@tntdump.com" className="text-blue-600 hover:text-blue-700">
+                      sales@tntdump.com
                     </a>
                   </div>
                 </div>

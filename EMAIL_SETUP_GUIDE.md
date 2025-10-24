@@ -1,7 +1,7 @@
 ﻿# Email Setup Guide for TNT Dumpsters
 
 ## Overview
-Your website now has fully functional contact and quote forms that will send email notifications to `admin@tntdump.com`. Here's what has been implemented:
+Your website now has fully functional contact and quote forms that will send email notifications to `sales@tntdump.com`. Here's what has been implemented:
 
 ## âœ… What's Been Completed
 
@@ -26,7 +26,7 @@ Your website now has fully functional contact and quote forms that will send ema
 ### Step 1: Get Your HostGator Email Credentials
 Since your email is hosted through HostGator, you'll need:
 
-1. **Your full email address**: `admin@tntdump.com`
+1. **Your full email address**: `sales@tntdump.com`
 2. **Your email password**: The password you use to log into your HostGator email account
 3. **SMTP Server**: `mail.tntdump.com` (already configured)
 
@@ -76,7 +76,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 2. Fill out the contact form on the homepage
 3. Fill out the quote form at `/quote`
 4. Fill out the contact form at `/contact`
-5. Check `admin@tntdump.com` for emails
+5. Check `sales@tntdump.com` for emails
 
 ### Expected Behavior
 - Forms should submit successfully
@@ -112,7 +112,7 @@ RECAPTCHA_SECRET_KEY=6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe
 2. **Contact Page**: Full contact form
 3. **Quote Page**: Detailed quote request form
 
-All forms now send emails to `admin@tntdump.com` with professional formatting and all the information you need to follow up with customers.
+All forms now send emails to `sales@tntdump.com` with professional formatting and all the information you need to follow up with customers.
 
 ## ðŸŽ¯ Next Steps
 

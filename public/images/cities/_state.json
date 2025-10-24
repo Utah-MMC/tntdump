@@ -1,0 +1,157 @@
+{
+  "american-fork-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "bountiful-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "centerville-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "clearfield-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "clinton-utah": {
+    "wikimedia": {
+      "gsroffset": 12
+    }
+  },
+  "draper-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "farmington-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "herriman-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "hooper-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "kaysville-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "layton-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "lehi-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "midvale-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "murray-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "north-salt-lake-utah": {
+    "wikimedia": {
+      "gsroffset": 24
+    }
+  },
+  "ogden-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "orem-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "pleasant-grove-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "provo-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "riverdale-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "riverton-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "roy-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "salt-lake-city-utah": {
+    "wikimedia": {
+      "gsroffset": 36
+    }
+  },
+  "sandy-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "south-jordan-utah": {
+    "wikimedia": {
+      "gsroffset": 12
+    }
+  },
+  "syracuse-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "taylorsville-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  },
+  "west-jordan-utah": {
+    "wikimedia": {
+      "gsroffset": 6
+    }
+  },
+  "west-point-utah": {
+    "wikimedia": {
+      "gsroffset": 30
+    }
+  },
+  "west-valley-city-utah": {
+    "wikimedia": {
+      "gsroffset": 24
+    }
+  },
+  "woods-cross-utah": {
+    "wikimedia": {
+      "gsroffset": 0
+    }
+  }
+}

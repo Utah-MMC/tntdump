@@ -37,9 +37,9 @@ async function sendEmailNotification(formData: {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: 'admin@tntdump.com',
-      to: 'admin@tntdump.com',
-      cc: 'admin@tntdump.com, icondumpsters@gmail.com',
+      from: 'sales@tntdump.com',
+      to: 'sales@tntdump.com',
+      cc: 'sales@tntdump.com, icondumpsters@gmail.com',
       bcc: 'dcall@utahmmc.com',
       subject: `New ${formData.formType} Submission - ${formData.name}`,
       html: `
@@ -72,14 +72,14 @@ async function sendEmailNotification(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This email was sent from the TNT Dumpsters website contact form.<br>
-            Sent to: admin@tntdump.com | CC: admin@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
+            Sent to: sales@tntdump.com | CC: sales@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Email sent successfully to admin@tntdump.com')
+    console.log('Email sent successfully to sales@tntdump.com')
   } catch (error) {
     console.error('Error sending email:', error)
     throw error
