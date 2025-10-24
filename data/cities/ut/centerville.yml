@@ -1,0 +1,87 @@
+slug: centerville
+city: Centerville
+state_code: UT
+county: Davis County
+primary_zips: ["84014"]
+latitude: 40.918
+longitude: -111.872
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Centerville generally do not require a city permit. For any placement on the
+  street or within the public right-of-way (ROW), check with Centerville City for current encroachment
+  rules, visibility requirements, and allowable durations. Place the container where it does not block
+  fire hydrants, mailboxes, or drive approaches. We can provide cones or reflective markers when a short
+  on‑street placement is the safest option.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Tires and
+  appliances may carry facility surcharges.
+busy_seasons_events: >-
+  Spring cleanups and summer remodels drive higher demand throughout Parrish and Island View. Fall yard waste
+  peaks as leaves drop around the bench areas. Weekend traffic near big box centers along Parrish Lane can
+  compress delivery windows; booking a morning slot the day prior helps ensure first‑position service.
+neighborhoods_served:
+  - Parrish
+  - Deuel Creek
+  - Smoot Park area
+  - Island View
+  - Centerville Heights
+  - Porter Lane corridor
+  - Chase Lane area
+real_job_examples:
+  - size: 20
+    summary: 20yd driveway bin for kitchen remodel near Deuel Creek
+  - size: 30
+    summary: 30yd roofing tear-off in Centerville Heights
+  - size: 10
+    summary: 10yd garage cleanout off Porter Lane
+  - size: 40
+    summary: 40yd commercial fit-out debris by Parrish Lane
+  - size: 20
+    summary: 20yd deck removal and landscaping debris in Island View
+  - size: 30
+    summary: 30yd basement cleanout and drywall in Smoot Park area
+local_testimonials:
+  - quote: "On-time drop and pickup—made our project painless."
+    author: Andrea S.
+    locality: Deuel Creek
+  - quote: "Great price and careful placement with boards."
+    author: Rob H.
+    locality: Island View
+  - quote: "They navigated a tight lane near our mailbox and kept access clear—very professional."
+    author: Dennis L.
+    locality: Centerville Heights
+price_notes: >-
+  Transparent pricing with included weight by size. Overages billed per ton with no hidden fees.
+winter_notes: >-
+  Bench roads can be icy—use boards on soft/thawing driveways. We can adjust pickup windows during storms for safe access.
+hoa_common_rule: >-
+  Most HOAs request notice for visible street placement; driveway placement is typically fine—confirm community rules.
+adjacent_cities: ["Farmington", "Bountiful", "Woods Cross"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Centerville Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Centerville Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Centerville Utah 10 yard for garage cleanout"
+    width: 1200
+    height: 800

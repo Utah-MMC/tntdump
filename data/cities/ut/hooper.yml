@@ -1,0 +1,83 @@
+slug: hooper
+city: Hooper
+state_code: UT
+county: Weber County
+primary_zips: ["84315"]
+latitude: 41.163
+longitude: -112.119
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Hooper typically do not require a city permit. For on‑street or right‑of‑way (ROW) placements,
+  check with Weber County/Hooper City for current requirements, including visibility aids and allowable time windows.
+  Pick a spot that preserves mailbox and driveway access and keeps clear of culverts/ditches. We can provide cones/reflectors.
+
+# Landfill / transfer
+transfer_station_name: Weber County Transfer Station
+transfer_station_address: 867 W Wilson Ln, Ogden, UT 84401
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed" # TODO: verify seasonal/holiday hours
+
+# Operations and service
+avg_delivery_eta_hours: 6
+cutoff_time: "14:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Heavy debris should use
+  smaller sizes to stay under legal weight limits.
+busy_seasons_events: >-
+  Spring cleanups and summer remodels in rural subdivisions can increase demand. Agricultural debris surges after major
+  yard/fence work and storm cleanups. Afternoon winds near open fields can affect tarp handling—secure loose debris well.
+neighborhoods_served:
+  - Hooper Estates
+  - Country fields
+  - 5500 W corridor
+  - Lakeside area
+  - West Point border
+  - 5100 S corridor
+real_job_examples:
+  - size: 20
+    summary: 20yd yard cleanup and fencing debris near 5500 W
+  - size: 30
+    summary: 30yd roofing tear-off in Hooper Estates
+  - size: 10
+    summary: 10yd garage cleanout in Lakeside area
+  - size: 40
+    summary: 40yd acreage cleanup along 5100 S corridor
+  - size: 20
+    summary: 20yd barn declutter and scrap removal near West Point border
+  - size: 30
+    summary: 30yd addition/remodel debris in country subdivision
+local_testimonials:
+  - quote: "Driver navigated rural access and placed exactly where we needed."
+    author: Shane M.
+    locality: Hooper Estates
+  - quote: "Straightforward pricing and fast swap during our project."
+    author: Kendra F.
+    locality: Country fields
+  - quote: "They kept mailbox access open and avoided our sprinklers—much appreciated."
+    author: Paul R.
+    locality: Lakeside area
+price_notes: >-
+  Transparent local pricing with included weight by size. Overages and extra days billed at posted rates with no hidden fees.
+winter_notes: >-
+  Rural roads can be slick—allow flexible pickup windows during storms. Use boards on soft or thawing driveways to prevent impressions.
+hoa_common_rule: >-
+  Most HOAs allow driveway placement; confirm any rules for visible street placements in your subdivision.
+adjacent_cities: ["West Point", "Clinton", "Roy"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Hooper Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Hooper Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Hooper Utah 10 yard for garage cleanout"
+    width: 1200
+    height: 800

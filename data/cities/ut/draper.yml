@@ -1,0 +1,85 @@
+slug: draper
+city: Draper
+state_code: UT
+county: Salt Lake County
+primary_zips: ["84020"]
+latitude: 40.5247
+longitude: -111.8638
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Draper typically do not require a permit. If a bin must be placed on the street or within the public
+  right-of-way (ROW), check Draper City’s current encroachment guidance, visibility requirements, and time limits. Hillside areas
+  near SunCrest and Corner Canyon can have slope/wind considerations—choose a stable, level spot away from drainage.
+
+# Landfill / transfer
+transfer_station_name: Trans-Jordan Landfill
+transfer_station_address: 10873 S 7200 W, South Jordan, UT 84095
+transfer_station_hours: "Mon–Sat 7:00am–6:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Appliances and mattresses may carry
+  facility surcharges. Heavy debris should use smaller sizes to stay within road weight limits.
+busy_seasons_events: >-
+  Spring cleanups and summer remodels increase demand across Draper Heights, Willow Springs, and Galena Park areas. Trail and event
+  traffic near Corner Canyon can compress afternoon routing. Morning delivery slots are recommended during peak weeks.
+neighborhoods_served:
+  - SunCrest
+  - Corner Canyon
+  - Draper Heights
+  - Willow Springs
+  - Galena Park area
+  - South Mountain
+  - Highland Dr corridor
+real_job_examples:
+  - size: 20
+    summary: 20yd kitchen remodel near Willow Springs
+  - size: 30
+    summary: 30yd roofing tear-off around Draper Heights
+  - size: 10
+    summary: 10yd garage purge off Highland Dr corridor
+  - size: 40
+    summary: 40yd commercial cleanup near Galena Park
+  - size: 20
+    summary: 20yd fencing/deck removal in SunCrest
+  - size: 30
+    summary: 30yd interior gut and drywall close to Corner Canyon
+local_testimonials:
+  - quote: "They handled the slope and winds near SunCrest—placement was perfect."
+    author: Laura H.
+    locality: SunCrest
+  - quote: "Upfront pricing and a fast swap during our kitchen project."
+    author: Brock E.
+    locality: Willow Springs
+  - quote: "Driver kept mailbox access open and used boards to protect our driveway."
+    author: Dana P.
+    locality: Draper Heights
+price_notes: >-
+  Transparent local pricing with included weight per size. Overages and extra days billed at posted rates—no hidden fees.
+winter_notes: >-
+  Bench winds and snow can affect timing—secure a morning slot when schedules are tight. We use boards on soft or thawing driveways.
+hoa_common_rule: >-
+  Most HOAs request notice for visible street placements; driveway placements are typically fine—confirm community rules.
+adjacent_cities: ["Sandy", "South Jordan", "Lehi"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Draper Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Draper Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Draper Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

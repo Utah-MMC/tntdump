@@ -1,0 +1,85 @@
+slug: west-point
+city: West Point
+state_code: UT
+county: Davis County
+primary_zips: ["84015"]
+latitude: 41.118
+longitude: -112.082
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in West Point typically do not require permits. For on‑street or right‑of‑way (ROW) placements, verify current city
+  guidance on encroachment, visibility aids, and allowable durations. Keep bins clear of hydrants, cluster mailboxes, and culvert entries.
+  We can provide cones/reflectors and help you choose a safe spot that preserves access.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 6
+cutoff_time: "14:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste; no liquids, paints, oils, fuels, or hazardous materials. Heavy debris belongs in smaller sizes
+  to stay within legal weight limits.
+busy_seasons_events: >-
+  Spring cleanups, summer remodels, and HOA cleanup days create short surges. Afternoon winds across open fields can affect tarp handling—
+  secure loose debris. Book morning slots when contractor timelines are tight.
+neighborhoods_served:
+  - Loy Blake Park area
+  - 3000 W corridor
+  - 1800 N corridor
+  - Lakeside neighborhoods
+  - East/West Point subdivisions
+  - 4000 W corridor
+real_job_examples:
+  - size: 20
+    summary: 20yd fencing and yard cleanup near 3000 W
+  - size: 30
+    summary: 30yd roofing tear‑off close to 1800 N corridor
+  - size: 10
+    summary: 10yd garage purge in Lakeside neighborhood
+  - size: 40
+    summary: 40yd HOA community cleanup near Loy Blake Park
+  - size: 20
+    summary: 20yd deck removal and debris along 4000 W
+  - size: 30
+    summary: 30yd multi‑room renovation drywall and cabinets
+local_testimonials:
+  - quote: "Fast delivery and they kept the mailbox accessible—thanks!"
+    author: Alyssa W.
+    locality: 3000 W corridor
+  - quote: "Upfront pricing and an easy swap during our remodel."
+    author: Chris H.
+    locality: Lakeside neighborhoods
+  - quote: "Driver helped pick a spot that preserved driveway access for both cars."
+    author: Luke B.
+    locality: Loy Blake Park area
+price_notes: >-
+  Flat rate includes delivery, pickup, and disposal up to included weight. Overages and extra days are billed at posted rates with no
+  hidden fees.
+winter_notes: >-
+  Rural roads can be slick—we use boards on soft/thawing driveways and can adjust pickup windows during storms.
+hoa_common_rule: >-
+  Most HOAs allow driveway placement; visible street placements commonly require notice—check your community guidelines.
+adjacent_cities: ["Clinton", "Hooper", "Syracuse"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "West Point Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "West Point Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "West Point Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

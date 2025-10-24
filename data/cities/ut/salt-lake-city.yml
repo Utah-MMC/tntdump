@@ -1,0 +1,85 @@
+slug: salt-lake-city
+city: Salt Lake City
+state_code: UT
+county: Salt Lake County
+primary_zips: ["84101", "84102", "84103"]
+latitude: 40.7608
+longitude: -111.891
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Salt Lake City usually do not require permits. For on‑street or right‑of‑way (ROW) placements, verify current
+  encroachment rules, visibility aids, and allowable durations with the city. Urban streets in Downtown, Central 9th, and Ballpark areas
+  may have special considerations for sight lines and traffic. We can provide cones/reflectors and help select a safe location.
+
+# Landfill / transfer
+transfer_station_name: Salt Lake Valley Landfill
+transfer_station_address: 6030 W 1300 S, Salt Lake City, UT 84104
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed" # TODO: verify seasonal/holiday hours
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Appliances/mattresses may incur facility
+  fees. Heavy debris belongs in smaller sizes to remain within legal weights.
+busy_seasons_events: >-
+  Event surges, condo/loft remodels, and seasonal yard waste peaks can affect routing. Sugar House and Avenues projects often request morning
+  slots to avoid afternoon traffic. Rose Park and Ballpark corridors may compress return windows—plan accordingly.
+neighborhoods_served:
+  - Downtown
+  - Sugar House
+  - Avenues
+  - Rose Park
+  - Ballpark
+  - Central 9th
+  - Liberty Wells
+real_job_examples:
+  - size: 20
+    summary: 20yd loft renovation debris in Downtown
+  - size: 30
+    summary: 30yd roofing tear‑off near Sugar House
+  - size: 10
+    summary: 10yd garage cleanout in Liberty Wells
+  - size: 40
+    summary: 40yd commercial office cleanout along 300 W
+  - size: 20
+    summary: 20yd kitchen/bath update in the Avenues
+  - size: 30
+    summary: 30yd multi‑unit rehab debris along Ballpark corridor
+local_testimonials:
+  - quote: "Downtown delivery right on schedule—crew kept clear of bike lane and hydrant."
+    author: Alicia M.
+    locality: Downtown
+  - quote: "Transparent pricing and easy communication—would rent again."
+    author: Colton J.
+    locality: Sugar House
+  - quote: "Driver helped pick a spot that preserved street parking and mailbox access."
+    author: Renee K.
+    locality: Avenues
+price_notes: >-
+  Transparent pricing includes delivery, pickup, and disposal up to included weight per size. Overages/day rates posted—no surprises.
+winter_notes: >-
+  Inversions and storms can slow afternoon routes; morning slots help when timing matters. We use boards on soft/thawing driveways.
+hoa_common_rule: >-
+  HOAs often require notice for visible on‑street placements; driveway placements are typically acceptable—confirm community rules.
+adjacent_cities: ["South Salt Lake", "Millcreek", "North Salt Lake"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Salt Lake City Utah 20 yard roll‑off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Salt Lake City Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Salt Lake City Utah 10 yard dumpster for garage cleanout"
+    width: 1200
+    height: 800
+

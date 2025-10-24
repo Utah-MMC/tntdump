@@ -1,0 +1,88 @@
+slug: bountiful
+city: Bountiful
+state_code: UT
+county: Davis County
+primary_zips: ["84010"]
+latitude: 40.8894
+longitude: -111.8808
+
+# Permits
+permit_required: false
+# TODO: If street placement becomes common, add the official Bountiful City ROW/encroachment permit URL here.
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Bountiful generally do not require a city permit. If a container must be placed
+  on the street or within the public right-of-way, check with Bountiful City for current Right-of-Way
+  (ROW) or encroachment rules. We can provide cones/visibility aids for safe temporary placement.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed" # TODO: verify seasonal/holiday hours
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste containers. No liquids, paints, oils, fuels, or hazardous materials.
+  Tires and appliances may carry additional facility fees. Keep heavy materials to smaller sizes to avoid overweights.
+busy_seasons_events: >-
+  Spring cleanups, summer remodels, and fall yard waste surges. Community events can affect routing windows—booking
+  a day ahead improves first-position delivery.
+neighborhoods_served:
+  - Val Verda
+  - Mueller Park
+  - Bountiful Heights
+  - Orchard
+  - Downtown Bountiful
+  - East Bench
+  - Stone Ridge
+  - Canyon Creek area
+  - Holbrook Canyon area
+real_job_examples:
+  - size: 20
+    summary: 20yd driveway bin for kitchen remodel near Mueller Park
+  - size: 30
+    summary: 30yd roofing tear-off in Bountiful Heights
+  - size: 10
+    summary: 10yd garage cleanout off Orchard Drive
+  - size: 40
+    summary: 40yd commercial renovation debris near Downtown Bountiful
+  - size: 20
+    summary: 20yd yard waste and fencing project in Val Verda
+local_testimonials:
+  - quote: "Fast delivery up the bench and careful placement with boards—great experience."
+    author: Megan L.
+    locality: East Bench
+  - quote: "Clear pricing and on-time pickup. Made our remodel easier."
+    author: Jared P.
+    locality: Mueller Park
+  - quote: "Professional driver and good communication—would rent again."
+    author: Chris D.
+    locality: Bountiful Heights
+price_notes: >-
+  Transparent local pricing with disposal included up to the standard weight limits for each size.
+  Overweight loads and extra days are billed at posted rates with no hidden fees.
+winter_notes: >-
+  In foothill areas, avoid steep icy grades. We can chock wheels and use boards to protect soft or thawing
+  driveways. Flexible pickup windows help us time safe access during storms.
+hoa_common_rule: >-
+  Many HOAs request notice for visible street placement. Driveway placement is generally acceptable—check
+  community rules in advance.
+adjacent_cities: ["Centerville", "North Salt Lake", "Woods Cross"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/cities/bountiful-utah/bountiful-utah-01.jpg"
+    alt: "Bountiful, Utah dumpster rental – lead photo of Bountiful"
+    width: 1920
+    height: 1446
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Bountiful Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Bountiful Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800

@@ -1,0 +1,83 @@
+slug: farmington
+city: Farmington
+state_code: UT
+county: Davis County
+primary_zips: ["84025"]
+latitude: 40.98
+longitude: -111.887
+
+# Permits
+permit_required: false
+permit_url: ""
+permit_notes: >-
+  Driveway placements in Farmington generally do not require a permit. If a container must be placed on the street or in
+  the public right-of-way (ROW), verify encroachment rules, visibility needs, and time limits with Farmington City before
+  delivery. Avoid placing where sight lines are blocked near hills or bends. We can provide cones/reflectors as needed.
+
+# Landfill / transfer
+transfer_station_name: Wasatch Integrated Waste Management District
+transfer_station_address: 1997 E 3500 N, Layton, UT 84040
+transfer_station_hours: "Mon–Sat 7:00am–5:00pm; Sun Closed"
+
+# Operations and service
+avg_delivery_eta_hours: 4
+cutoff_time: "15:00"
+disallowed_items_deltas: >-
+  No dirt/rock/concrete in mixed waste. No liquids, paints, oils, fuels, or hazardous materials. Mattresses/appliances
+  may incur facility fees.
+busy_seasons_events: >-
+  Event surges near Station Park and Lagoon can affect routing windows and afternoon return times. During summer weekends,
+  book early for morning slots. Neighborhood remodels along the East Bench and Ranches areas often create short-term spikes.
+neighborhoods_served:
+  - Station Park area
+  - Oakridge
+  - Shepherd Creek
+  - East Bench
+  - Lagoon / park area
+  - Farmington Ranches
+real_job_examples:
+  - size: 20
+    summary: 20yd remodel debris near Station Park
+  - size: 30
+    summary: 30yd roofing tear-off in East Bench area
+  - size: 10
+    summary: 10yd declutter in Oakridge neighborhood
+  - size: 40
+    summary: 40yd commercial cleanup along US‑89 corridor
+  - size: 20
+    summary: 20yd deck/fence removal in Farmington Ranches
+  - size: 30
+    summary: 30yd multi-room renovation with drywall and cabinets near Oakridge
+local_testimonials:
+  - quote: "Lagoon weekend traffic and they still delivered on time—excellent."
+    author: Brian K.
+    locality: Station Park
+  - quote: "Careful driveway placement and a fair price."
+    author: Nicole D.
+    locality: Farmington Ranches
+  - quote: "Helpful team, clear terms, and the swap was fast during our remodel."
+    author: Ava T.
+    locality: East Bench
+price_notes: >-
+  Transparent pricing with included weight by size. Overages billed per ton and any extra days at posted rates.
+winter_notes: >-
+  Bench roads and hills can be slick—use boards on soft/thawing driveways and allow flexible pickup windows during storms.
+hoa_common_rule: >-
+  Many HOAs request notice for visible street placement; driveway placements are usually acceptable—confirm with management.
+adjacent_cities: ["Centerville", "Kaysville", "Fruit Heights"]
+phone_cta: "801-997-8479"
+sms_cta: "801-997-8479"
+quote_url: "https://tntdump.com/quote"
+gallery:
+  - src: "/images/dumpster1-500x500-1.jpeg"
+    alt: "Farmington Utah 20 yard roll-off on driveway"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster2-500x500-1.jpeg"
+    alt: "Farmington Utah 30 yard dumpster delivery"
+    width: 1200
+    height: 800
+  - src: "/images/dumpster3-500x500-1.jpeg"
+    alt: "Farmington Utah 10 yard for garage cleanout"
+    width: 1200
+    height: 800
