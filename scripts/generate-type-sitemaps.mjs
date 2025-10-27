@@ -111,40 +111,26 @@ async function getPages() {
 
 async function getCities() {
   // Prefer explicit data file if present
-  // data/cities.json = ["dumpster-rental-salt-lake-city-ut", "/dumpster-rental-sandy-ut", ...]
+  // data/cities.json = ["/ut/midvale/dumpster-rental", ...]
   const citiesPath = path.join(DATA_DIR, 'cities.json');
   const list = readJsonIfExists(citiesPath);
   if (Array.isArray(list) && list.length > 0) {
     const now = toISO(Date.now());
-    return list.map(slugOrPath => {
-      const p = ensureLeadingSlash(String(slugOrPath).trim());
-      return { loc: `${SITE}${p}`, lastmod: now };
-    });
+    return list
+      .map(slugOrPath => ensureLeadingSlash(String(slugOrPath).trim()))
+      .filter(p => p.startsWith('/ut/'))
+      .map(p => ({ loc: `${SITE}${p}`, lastmod: now }));
   }
 
-  // Fallback: auto-discover city pages from /app
-  // Any top-level directory matching /^dumpster-rental-.+-ut$/ with a page.* file
-  const entries = (() => {
-    try { return fs.readdirSync(APP_DIR, { withFileTypes: true }); } catch { return []; }
-  })();
-
-  const cityDirs = entries
-    .filter(e => e.isDirectory() && /^dumpster-rental-.+-ut$/.test(e.name));
-
-  const cities = [];
-  for (const dir of cityDirs) {
-    const dirPath = path.join(APP_DIR, dir.name);
-    // Find a page.* file for lastmod
-    let pageFilePath = null;
-    try {
-      const inner = fs.readdirSync(dirPath, { withFileTypes: true });
-      const pageFile = inner.find(e => e.isFile() && PAGE_FILENAMES.has(e.name));
-      if (pageFile) pageFilePath = path.join(dirPath, pageFile.name);
-    } catch {}
-
-    const lastmod = pageFilePath ? safeStatISO(pageFilePath) : toISO(Date.now());
-    cities.push({ loc: `${SITE}/${dir.name}`, lastmod });
-  }
+  // Fallback: derive from data/cities/ut/*.yml filenames
+  const utDir = path.join(DATA_DIR, 'cities', 'ut');
+  let entries = [];
+  try { entries = fs.readdirSync(utDir, { withFileTypes: true }); } catch { entries = []; }
+  const now = toISO(Date.now());
+  const cities = entries
+    .filter(e => e.isFile() && e.name.endsWith('.yml'))
+    .map(e => e.name.replace(/\.yml$/, ''))
+    .map(slug => ({ loc: `${SITE}/ut/${slug}/dumpster-rental`, lastmod: now }));
   return cities;
 }
 
