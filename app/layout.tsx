@@ -1,7 +1,5 @@
 ﻿import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
-import { SITE_URL, canonicalizePath } from '@/lib/seo/canonical'
-import CanonicalFallback from './(seo)/CanonicalFallback'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -13,11 +11,13 @@ const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
-// Canonical/absolute URLs base
+// Determine the base URL for absolute metadata URLs (OG/Twitter/canonical)
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ? process.env.NEXT_PUBLIC_SITE_URL
+  : (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'http://localhost:3000')
 
 export const metadata: Metadata = {
-  metadataBase: SITE_URL,
-  alternates: { canonical: '/' },
+  metadataBase: new URL(baseUrl),
   title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
   description: 'Local dumpster rental in Salt Lake & Utah County with fast delivery, same day options, and upfront prices. Get a dumpster rental quote for construction or home cleanups.',
   keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
@@ -70,8 +70,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Fallback canonical for top-level routes */}
-        <CanonicalFallback path={canonicalizePath('/')} />
         {/* Google Tag Manager */}
         <Script id="gtm-script" strategy="afterInteractive">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
