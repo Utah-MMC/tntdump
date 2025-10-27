@@ -89,14 +89,11 @@ const nextConfig = {
   eslint: { ignoreDuringBuilds: true },
   typescript: { ignoreBuildErrors: true },
 
-  // No redirects/rewrites for city pages; they now exist at new paths
-  async redirects() {
+  // Rewrites for legacy city URLs to new App Router path (no redirect)
+  async rewrites() {
     return [
-      {
-        source: '/dumpster-rental-:city-ut',
-        destination: '/ut/:city/dumpster-rental',
-        permanent: true,
-      },
+      { source: '/cities/:city', destination: '/ut/:city/dumpster-rental' },
+      { source: '/dumpster-rental-:city-ut', destination: '/ut/:city/dumpster-rental' },
     ]
   },
 };

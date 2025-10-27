@@ -137,7 +137,7 @@ export default function Home() {
                       {[...cities].sort((a, b) => a.name.localeCompare(b.name)).map(({ name, slug }) => (
                         <li key={slug}>
                           <a
-                            href={`/dumpster-rental-${slug}-ut`}
+                            href={`/ut/${slug}/dumpster-rental`}
                             className="text-blue-600 hover:text-blue-700 text-sm"
                           >
                             {name} Utah Dumpster Rentals
