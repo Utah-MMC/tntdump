@@ -94,7 +94,11 @@ const dumpsterSizes: DumpsterSize[] = [
   }
 ]
 
-const DumpsterCalculator = () => {
+interface DumpsterCalculatorProps {
+  embedded?: boolean
+}
+
+const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
   const [selectedProject, setSelectedProject] = useState<string>('residential')
   const [selectedSize, setSelectedSize] = useState<string>('')
   const [showResults, setShowResults] = useState(false)
@@ -115,33 +119,33 @@ const DumpsterCalculator = () => {
   const recommendedSizes = selectedProjectData?.recommendedSizes || []
 
   return (
-    <section className="py-16 bg-gray-50">
-      <div className="container-custom">
-        <div className="text-center mb-12">
+    <section className={embedded ? '' : 'py-16 bg-gray-50'}>
+      <div className={embedded ? '' : 'container-custom'}>
+        <div className={`text-center ${embedded ? 'mb-6' : 'mb-12'}`}>
           <div className="flex items-center justify-center mb-4">
             <Calculator className="h-8 w-8 text-blue-600 mr-3" />
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+            <h2 className={`${embedded ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-4xl'} font-bold text-gray-900`}>
               Dumpster Size Calculator
             </h2>
           </div>
-          <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className={`${embedded ? 'text-base' : 'text-lg'} text-gray-600 max-w-3xl mx-auto`}>
             Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
             Get instant recommendations and pricing.
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className={`${embedded ? '' : 'max-w-4xl mx-auto'}`}>
           {/* Step 1: Project Type Selection */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Step 1: What type of project are you working on?</h3>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className={`${embedded ? 'grid grid-cols-2 gap-3' : 'grid md:grid-cols-2 lg:grid-cols-4 gap-4'}`}>
               {projectTypes.map((project) => {
                 const Icon = project.icon
                 return (
                   <button
                     key={project.id}
                     onClick={() => handleProjectSelect(project.id)}
-                    className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
+                    className={`${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left ${
                       selectedProject === project.id
                         ? 'border-blue-500 bg-blue-50 shadow-md'
                         : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
@@ -151,9 +155,9 @@ const DumpsterCalculator = () => {
                       <Icon className={`h-6 w-6 mr-2 ${
                         selectedProject === project.id ? 'text-blue-600' : 'text-gray-600'
                       }`} />
-                      <h4 className="font-semibold text-gray-900">{project.name}</h4>
+                      <h4 className={`font-semibold text-gray-900 ${embedded ? 'text-sm' : ''}`}>{project.name}</h4>
                     </div>
-                    <p className="text-sm text-gray-600">{project.description}</p>
+                    <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-600`}>{project.description}</p>
                   </button>
                 )
               })}
@@ -166,38 +170,38 @@ const DumpsterCalculator = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-6">
                 Step 2: Choose your dumpster size
               </h3>
-              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              <div className={`${embedded ? 'grid grid-cols-1 sm:grid-cols-2 gap-3' : 'grid md:grid-cols-2 lg:grid-cols-3 gap-4'}`}>
                 {dumpsterSizes
                   .filter(size => recommendedSizes.includes(size.size))
                   .map((size) => (
                     <button
                       key={size.size}
                       onClick={() => handleSizeSelect(size.size)}
-                      className={`p-6 rounded-lg border-2 transition-all duration-200 text-left ${
+                      className={`${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left ${
                         selectedSize === size.size
                           ? 'border-blue-500 bg-blue-50 shadow-md'
                           : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
                       }`}
                     >
                       <div className="flex justify-between items-start mb-3">
-                        <h4 className="font-bold text-lg text-gray-900">{size.size}</h4>
+                        <h4 className={`font-bold ${embedded ? 'text-base' : 'text-lg'} text-gray-900`}>{size.size}</h4>
                         <div className="text-right">
                           <div className="text-xs text-gray-600">1 day</div>
-                          <div className="text-xl font-bold text-blue-600">{size.price1Day}</div>
+                          <div className={`${embedded ? 'text-lg' : 'text-xl'} font-bold text-blue-600`}>{size.price1Day}</div>
                           <div className="text-[11px] text-gray-500">{size.tons1Day}</div>
                         </div>
                       </div>
                       <div className="flex justify-end items-center -mt-2 mb-2">
                         <div className="text-right">
                           <div className="text-xs text-gray-600">7 days</div>
-                          <div className="text-lg font-semibold text-blue-600">{size.price7Day}</div>
+                          <div className={`${embedded ? 'text-base' : 'text-lg'} font-semibold text-blue-600`}>{size.price7Day}</div>
                           <div className="text-[11px] text-gray-500">{size.tons7Day}</div>
                         </div>
                       </div>
                       <p className="text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
-                      <p className="text-sm text-gray-600 mb-2">{size.capacity}</p>
+                      <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-600 mb-2`}>{size.capacity}</p>
                       <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
-                      <p className="text-sm text-gray-700">{size.description}</p>
+                      <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-700`}>{size.description}</p>
                     </button>
                   ))}
               </div>
@@ -276,7 +280,7 @@ const DumpsterCalculator = () => {
               <div className="mt-8 pt-6 border-t border-gray-200">
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
                   <a
-                    href="/quote"
+                    href={embedded ? '#quote-form' : '/quote'}
                     className="bg-blue-600 text-white px-8 py-3 rounded-lg font-semibold text-center hover:bg-blue-700 transition-colors"
                   >
                     Get Free Quote
