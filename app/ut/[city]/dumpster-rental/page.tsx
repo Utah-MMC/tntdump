@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { canonicalizePath } from '@/lib/seo/canonical'
 import Image from 'next/image'
 import { getCityData, getCitySlugParams, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
@@ -17,7 +18,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
   const description = `Fast, local dumpster rental in ${data.city}, UT. ${BRAND.name} delivers ${[15,20,30].join('/')} yard roll-off dumpsters with transparent pricing and same-day options.`
-  const canonical = `${BRAND.url}/ut/${data.slug}/dumpster-rental`
+  const canonical = canonicalizePath(`/ut/${data.slug}/dumpster-rental/`)
   return {
     title,
     description,
