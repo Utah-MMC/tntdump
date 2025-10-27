@@ -104,11 +104,6 @@ function ensureLeadingSlash(urlPath) {
   return urlPath;
 }
 
-function toAbsolute(pathname) {
-  const p = ensureLeadingSlash(String(pathname).split('?')[0]);
-  return new URL(p, SITE).href;
-}
-
 async function getPages() {
   // Purely from filesystem
   return collectStaticRoutes();
@@ -124,7 +119,7 @@ async function getCities() {
     return list
       .map(slugOrPath => ensureLeadingSlash(String(slugOrPath).trim()))
       .filter(p => p.startsWith('/ut/'))
-      .map(p => ({ loc: toAbsolute(p), lastmod: now }));
+      .map(p => ({ loc: `${SITE}${p}`, lastmod: now }));
   }
 
   // Fallback: derive from data/cities/ut/*.yml filenames
@@ -135,7 +130,7 @@ async function getCities() {
   const cities = entries
     .filter(e => e.isFile() && e.name.endsWith('.yml'))
     .map(e => e.name.replace(/\.yml$/, ''))
-    .map(slug => ({ loc: toAbsolute(`/ut/${slug}/dumpster-rental`), lastmod: now }));
+    .map(slug => ({ loc: `${SITE}/ut/${slug}/dumpster-rental`, lastmod: now }));
   return cities;
 }
 
@@ -155,11 +150,8 @@ function urlset(urls) {
   const header = `<?xml version="1.0" encoding="UTF-8"?>`;
   const open = `<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
   const close = `</urlset>`;
-  const seen = new Set();
   const body = urls.map(u => {
-    const loc = u.loc; // already absolute
-    if (seen.has(loc)) return '';
-    seen.add(loc);
+    const loc = u.loc.replace(/(?<!:)\/{2,}/g, '/'); // normalize accidental doubles
     return [
       `<url>`,
       `  <loc>${loc}</loc>`,
