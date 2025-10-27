@@ -15,7 +15,9 @@
     "sitemap:index": "next-sitemap --config next-sitemap.config.js",
     "sitemap:local": "run-s sitemap:types sitemap:index",
     "generate:cities": "ts-node scripts/generate-city-pages.ts data/cities/cities.csv",
-    "validate:cities": "ts-node scripts/validate-city-pages.ts"
+    "validate:cities": "ts-node scripts/validate-city-pages.ts",
+    "clean:repo": "tsx scripts/repo-clean.ts",
+    "clean:repo:apply": "tsx scripts/repo-clean.ts --apply"
   },
   "dependencies": {
     "@tailwindcss/typography": "^0.5.10",
@@ -41,6 +43,8 @@
     "typescript": "^5"
   },
   "devDependencies": {
+    "globby": "^14.0.2",
+    "tsx": "^4.19.0",
     "@testing-library/jest-dom": "^6.8.0",
     "@testing-library/react": "^14.3.1",
     "@types/js-yaml": "^4.0.9",
