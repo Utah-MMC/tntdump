@@ -29,6 +29,13 @@ build/
 .DS_Store
 Thumbs.db
 
+# temp/junk
+temp_head.txt
+tmt.txt
+*.tmp
+*.orig
+*.rej
+
 # Logs
 *.log
 
