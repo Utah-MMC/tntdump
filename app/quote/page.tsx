@@ -252,8 +252,8 @@ export default function QuotePage() {
             </div>
 
             {/* Calculator or helper */}
-            <div>
-              <DumpsterCalculator />
+            <div className="lg:mt-4">
+              <DumpsterCalculator embedded />
             </div>
           </div>
         </div>
