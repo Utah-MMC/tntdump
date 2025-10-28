@@ -24,5 +24,12 @@
       "destination": "https://tntdump.com/$1",
       "permanent": true
     }
+  ],
+  "rewrites": [
+    { "source": "/favicon.ico", "destination": "/images/logo/favicon.ico" },
+    { "source": "/apple-touch-icon.png", "destination": "/images/logo/apple-touch-icon.png" },
+    { "source": "/site.webmanifest", "destination": "/images/logo/site.webmanifest" },
+    { "source": "/android-chrome-192x192.png", "destination": "/images/logo/android-chrome-192x192.png" },
+    { "source": "/android-chrome-512x512.png", "destination": "/images/logo/android-chrome-512x512.png" }
   ]
 }
