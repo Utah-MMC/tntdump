@@ -1,6 +1,7 @@
-﻿import { Metadata } from 'next'
+import { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
+import { Phone, FileText, Truck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dumpster Size Calculator | Find the Right Size | TNT Dumpsters',
@@ -44,7 +45,7 @@ export default function CalculatorPage() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸ“ž</span>
+                  <Phone className="w-8 h-8 text-blue-700" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Consultation</h3>
                 <p className="text-gray-600 mb-4">
@@ -60,7 +61,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸ’°</span>
+                  <FileText className="w-8 h-8 text-blue-700" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Free Estimates</h3>
                 <p className="text-gray-600 mb-4">
@@ -76,7 +77,7 @@ export default function CalculatorPage() {
 
               <div className="text-center">
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                  <span className="text-2xl">ðŸšš</span>
+                  <Truck className="w-8 h-8 text-blue-700" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3">Fast Delivery</h3>
                 <p className="text-gray-600 mb-4">

@@ -93,8 +93,8 @@ const Footer = () => {
                  {/* Bottom Section */}
          <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-             <div className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
-               Â© {currentYear} TNT Dumpsters. All rights reserved.
+            <div className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
+               &copy; {currentYear} TNT Dumpsters. All rights reserved.
              </div>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
                {navigation.legal.map((item) => (
