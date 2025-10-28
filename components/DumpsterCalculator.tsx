@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Calculator, Home, Building, Wrench, Trash2, Info } from 'lucide-react'
+import { Calculator, Home, Building, Wrench, Info, HardHat } from 'lucide-react'
 
 interface ProjectType {
   id: string
@@ -47,11 +47,11 @@ const projectTypes: ProjectType[] = [
     recommendedSizes: ['20-yard', '30-yard']
   },
   {
-    id: 'cleanout',
-    name: 'Estate Cleanout',
-    icon: Trash2,
-    description: 'Moving, estate cleanouts, large cleanups',
-    recommendedSizes: ['15-yard', '20-yard', '30-yard']
+    id: 'concrete',
+    name: 'Concrete',
+    icon: HardHat,
+    description: 'Driveways, slabs, footings (clean loads only)',
+    recommendedSizes: ['15-yard', '20-yard']
   }
 ]
 
@@ -66,7 +66,7 @@ const dumpsterSizes: DumpsterSize[] = [
     tons7Day: '2 tons included',
     overagePerTon: '$55/ton',
     description: 'Great for medium-sized projects',
-    suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
+    suitableFor: ['Concrete tear-outs', 'Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
   },
   {
     size: '20-yard',
@@ -78,7 +78,7 @@ const dumpsterSizes: DumpsterSize[] = [
     tons7Day: '2 tons included',
     overagePerTon: '$55/ton',
     description: 'Most popular size for most projects',
-    suitableFor: ['Large renovations', 'Estate cleanouts', 'Construction debris', 'Commercial projects']
+    suitableFor: ['Large renovations', 'Concrete (load to half-full)', 'Construction debris', 'Commercial projects']
   },
   {
     size: '30-yard',
@@ -93,6 +93,38 @@ const dumpsterSizes: DumpsterSize[] = [
     suitableFor: ['Large construction', 'Commercial cleanouts', 'Industrial projects', 'Major renovations']
   }
 ]
+
+const concreteNotes: Record<string, { title: string; points: string[] }> = {
+  '15-yard': {
+    title: 'Concrete load guidance',
+    points: [
+      'Holds roughly 7-8 cubic yards of broken concrete (~12 tons max).',
+      'Clean concrete only - no dirt, trash, or long rebar.',
+      'Keep the load level with the top rail to stay within weight limits.',
+      'Weight charged at $55 per ton - no included tonnage.'
+    ]
+  },
+  '20-yard': {
+    title: 'Concrete load guidance',
+    points: [
+      'Limit concrete to about 10 cubic yards (half-full) to avoid overweight tickets.',
+      'Only clean concrete, brick, or asphalt - no mixed debris or soil.',
+      'Break pieces down so they lay flat; avoid large slabs or protruding rebar.',
+      'Weight charged at $55 per ton - no included tonnage.'
+    ]
+  }
+}
+
+const concreteTonnage: Record<string, { tons1Day: string; tons7Day: string }> = {
+  '15-yard': {
+    tons1Day: 'No tons included - billed by actual weight',
+    tons7Day: 'No tons included - billed by actual weight'
+  },
+  '20-yard': {
+    tons1Day: 'No tons included - billed by actual weight',
+    tons7Day: 'No tons included - billed by actual weight'
+  }
+}
 
 interface DumpsterCalculatorProps {
   embedded?: boolean
@@ -116,6 +148,8 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
 
   const selectedProjectData = projectTypes.find(p => p.id === selectedProject)
   const selectedSizeData = dumpsterSizes.find(s => s.size === selectedSize)
+  const selectedConcreteTonnage =
+    selectedProject === 'concrete' && selectedSizeData ? concreteTonnage[selectedSizeData.size] : undefined
   const recommendedSizes = selectedProjectData?.recommendedSizes || []
 
   return (
@@ -188,20 +222,40 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                         <div className="text-right">
                           <div className="text-xs text-gray-600">1 day</div>
                           <div className={`${embedded ? 'text-lg' : 'text-xl'} font-bold text-blue-600`}>{size.price1Day}</div>
-                          <div className="text-[11px] text-gray-500">{size.tons1Day}</div>
+                          <div className="text-[11px] text-gray-500">
+                            {selectedProject === 'concrete' && concreteTonnage[size.size]
+                              ? concreteTonnage[size.size].tons1Day
+                              : size.tons1Day}
+                          </div>
                         </div>
                       </div>
                       <div className="flex justify-end items-center -mt-2 mb-2">
                         <div className="text-right">
                           <div className="text-xs text-gray-600">7 days</div>
                           <div className={`${embedded ? 'text-base' : 'text-lg'} font-semibold text-blue-600`}>{size.price7Day}</div>
-                          <div className="text-[11px] text-gray-500">{size.tons7Day}</div>
+                          <div className="text-[11px] text-gray-500">
+                            {selectedProject === 'concrete' && concreteTonnage[size.size]
+                              ? concreteTonnage[size.size].tons7Day
+                              : size.tons7Day}
+                          </div>
                         </div>
                       </div>
                       <p className="text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
                       <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-600 mb-2`}>{size.capacity}</p>
                       <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
                       <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-700`}>{size.description}</p>
+                      {selectedProject === 'concrete' && concreteNotes[size.size] && (
+                        <div className="mt-3 pt-3 border-t border-blue-100">
+                          <p className="text-[11px] font-semibold text-blue-700 uppercase tracking-wide">
+                            {concreteNotes[size.size].title}
+                          </p>
+                          <ul className="mt-2 text-xs text-gray-600 space-y-1 list-disc pl-4">
+                            {concreteNotes[size.size].points.map((note, index) => (
+                              <li key={index}>{note}</li>
+                            ))}
+                          </ul>
+                        </div>
+                      )}
                     </button>
                   ))}
               </div>
@@ -244,7 +298,9 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Tons (1 day):</span>
-                        <span className="font-semibold">{selectedSizeData.tons1Day}</span>
+                        <span className="font-semibold">
+                          {selectedConcreteTonnage ? selectedConcreteTonnage.tons1Day : selectedSizeData.tons1Day}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Price (7 days):</span>
@@ -252,7 +308,9 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Tons (7 days):</span>
-                        <span className="font-semibold">{selectedSizeData.tons7Day}</span>
+                        <span className="font-semibold">
+                          {selectedConcreteTonnage ? selectedConcreteTonnage.tons7Day : selectedSizeData.tons7Day}
+                        </span>
                       </div>
                       <div className="flex justify-between">
                         <span className="text-gray-600">Overage per ton:</span>
