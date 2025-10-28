@@ -94,6 +94,12 @@ const nextConfig = {
     return [
       { source: '/cities/:city', destination: '/ut/:city/dumpster-rental' },
       { source: '/dumpster-rental-:city-ut', destination: '/ut/:city/dumpster-rental' },
+      // Root-level favicon and PWA assets preferred by Google Search
+      { source: '/favicon.ico', destination: '/images/logo/favicon.ico' },
+      { source: '/apple-touch-icon.png', destination: '/images/logo/apple-touch-icon.png' },
+      { source: '/site.webmanifest', destination: '/images/logo/site.webmanifest' },
+      { source: '/android-chrome-192x192.png', destination: '/images/logo/android-chrome-192x192.png' },
+      { source: '/android-chrome-512x512.png', destination: '/images/logo/android-chrome-512x512.png' },
     ]
   },
 };
