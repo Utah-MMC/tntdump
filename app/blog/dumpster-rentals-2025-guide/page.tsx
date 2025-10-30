@@ -84,8 +84,8 @@ export default function DumpsterRentals2025GuidePage() {
               <ul>
                 <li><strong>10 yard (~12’L x 7’W x 3.5’H):</strong> ~50–60 trash bags; ~3 pickup-truck loads</li>
                 <li><strong>15 yard (~16’L x 7’W x 4.5’H):</strong> ~80–90 bags; ~4–5 pickup loads</li>
-                <li><strong>20 yard (~22’L x 7’W x 4’H):</strong> ~110–130 bags; ~6–8 pickup loads</li>
-                <li><strong>30 yard (~22’L x 7’W x 6’H):</strong> ~170–190 bags; ~9–11 pickup loads</li>
+                <li><strong>20 yard (~17'L x 7.5'W x 5'H):</strong> ~110–130 bags; ~6–8 pickup loads</li>
+                <li><strong>30 yard (~18.3'L x 7.3'W x 6.6'H):</strong> ~170–190 bags; ~9–11 pickup loads</li>
                 
               </ul>
               <p>

@@ -19,7 +19,7 @@ export default function ConcreteDumpstersPage() {
       size: 'Concrete Dumpster',
       description: 'Concrete, brick, or asphalt only (no mixed waste)',
       capacity: 'Heavy material only',
-      dimensions: 'Contact for available sizes',
+      dimensions: '16.46' x 8.00' x 2.67'',
       pricing: [
         { label: '1 Day', value: '$325', note: 'no tons included' },
         { label: '7 Days', value: '$425', note: 'no tons included' }

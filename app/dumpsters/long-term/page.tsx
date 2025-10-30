@@ -33,7 +33,7 @@ export default function LongTermDumpstersPage() {
       size: '20 Yard',
       description: 'Our most popular size for manufacturing and multi-unit housing',
       capacity: '7-8 pickup truck loads',
-      dimensions: "22' x 8' x 6'",
+      dimensions: "17.08' x 7.54' x 5.00'",
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
@@ -44,7 +44,7 @@ export default function LongTermDumpstersPage() {
       size: '30 Yard',
       description: 'Great for phased builds, remodel rollouts, or campus projects',
       capacity: '10-12 pickup truck loads',
-      dimensions: "22' x 8' x 8'",
+      dimensions: "18.25' x 7.25' x 6.63'",
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
@@ -55,7 +55,7 @@ export default function LongTermDumpstersPage() {
       size: 'Concrete Dumpster',
       description: 'Dedicated heavy-material boxes for concrete, brick, or asphalt',
       capacity: 'Heavy material only (no mixed waste)',
-      dimensions: 'Contact for available sizes',
+      dimensions: "16.46' x 8.00' x 2.67'",
       pricing: [
         { label: '1 Day', value: '$325', note: 'no tons included' },
         { label: '7 Days', value: '$425', note: 'no tons included' },
