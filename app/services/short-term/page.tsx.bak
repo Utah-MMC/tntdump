@@ -57,7 +57,7 @@ export default function ShortTermServicePage() {
       size: '20 Yard',
       description: 'Great for larger projects and cleanouts',
       capacity: '7-8 pickup truck loads',
-      dimensions: '22\' x 8\' x 6\'',
+      dimensions: '17.08\' x 7.54\' x 5.00\'',
       duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
@@ -69,7 +69,7 @@ export default function ShortTermServicePage() {
       size: '30 Yard',
       description: 'Perfect for major projects with quick turnarounds',
       capacity: '10-12 pickup truck loads',
-      dimensions: '22\' x 8\' x 8\'',
+      dimensions: '18.25\' x 7.25\' x 6.63\'',
       duration: '1-7 days',
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },

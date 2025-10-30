@@ -51,11 +51,23 @@ const projectTypes: ProjectType[] = [
     name: 'Concrete',
     icon: HardHat,
     description: 'Driveways, slabs, footings (clean loads only)',
-    recommendedSizes: ['15-yard', '20-yard']
+    recommendedSizes: ['12-yard']
   }
 ]
 
 const dumpsterSizes: DumpsterSize[] = [
+  {
+    size: '12-yard',
+    capacity: '12 cubic yards',
+    dimensions: '16.46\' x 8.00\' x 2.67\'',
+    price1Day: '$325',
+    price7Day: '$425',
+    tons1Day: 'No tons included - billed by actual weight',
+    tons7Day: 'No tons included - billed by actual weight',
+    overagePerTon: '$55/ton',
+    description: 'Purpose-built for dense materials like concrete and brick',
+    suitableFor: ['Driveways and patios', 'Flatwork demo', 'Footings and slabs', 'Clean masonry loads']
+  },
   {
     size: '15-yard',
     capacity: '15 cubic yards',
@@ -66,24 +78,24 @@ const dumpsterSizes: DumpsterSize[] = [
     tons7Day: '2 tons included',
     overagePerTon: '$55/ton',
     description: 'Great for medium-sized projects',
-    suitableFor: ['Concrete tear-outs', 'Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
+    suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
   },
   {
     size: '20-yard',
     capacity: '20 cubic yards',
-    dimensions: '20\' x 8\' x 3.5\'',
+    dimensions: '17.08\' x 7.54\' x 5.00\'',
     price1Day: '$335',
     price7Day: '$375',
     tons1Day: 'No tons included',
     tons7Day: '2 tons included',
     overagePerTon: '$55/ton',
     description: 'Most popular size for most projects',
-    suitableFor: ['Large renovations', 'Concrete (load to half-full)', 'Construction debris', 'Commercial projects']
+    suitableFor: ['Large renovations', 'Construction debris', 'Commercial projects']
   },
   {
     size: '30-yard',
     capacity: '30 cubic yards',
-    dimensions: '20\' x 8\' x 6\'',
+    dimensions: '18.25\' x 7.25\' x 6.63\'',
     price1Day: '$345',
     price7Day: '$400',
     tons1Day: 'No tons included',
@@ -95,32 +107,19 @@ const dumpsterSizes: DumpsterSize[] = [
 ]
 
 const concreteNotes: Record<string, { title: string; points: string[] }> = {
-  '15-yard': {
+  '12-yard': {
     title: 'Concrete load guidance',
     points: [
-      'Holds roughly 7-8 cubic yards of broken concrete (~12 tons max).',
-      'Clean concrete only - no dirt, trash, or long rebar.',
-      'Keep the load level with the top rail to stay within weight limits.',
-      'Weight charged at $55 per ton - no included tonnage.'
-    ]
-  },
-  '20-yard': {
-    title: 'Concrete load guidance',
-    points: [
-      'Limit concrete to about 10 cubic yards (half-full) to avoid overweight tickets.',
-      'Only clean concrete, brick, or asphalt - no mixed debris or soil.',
-      'Break pieces down so they lay flat; avoid large slabs or protruding rebar.',
-      'Weight charged at $55 per ton - no included tonnage.'
+      'Designed for clean concrete, brick, or asphalt only—no dirt or trash.',
+      'Keep pieces under 2-3 feet so they sit flat and level with the top rail.',
+      'Limit weight to roughly 10-12 tons to avoid overweight tickets.',
+      'Weight is billed at $55 per ton—no included tonnage on concrete loads.'
     ]
   }
 }
 
 const concreteTonnage: Record<string, { tons1Day: string; tons7Day: string }> = {
-  '15-yard': {
-    tons1Day: 'No tons included - billed by actual weight',
-    tons7Day: 'No tons included - billed by actual weight'
-  },
-  '20-yard': {
+  '12-yard': {
     tons1Day: 'No tons included - billed by actual weight',
     tons7Day: 'No tons included - billed by actual weight'
   }

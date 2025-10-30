@@ -33,7 +33,7 @@ export default function ShortTermDumpstersPage() {
       size: '20 Yard',
       description: 'Great for remodels, roofing, and light demos',
       capacity: '7-8 pickup truck loads',
-      dimensions: "22' x 8' x 6'",
+      dimensions: "17.08' x 7.54' x 5.00'",
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
@@ -44,7 +44,7 @@ export default function ShortTermDumpstersPage() {
       size: '30 Yard',
       description: 'Ideal for fast commercial or multi-room renovations',
       capacity: '10-12 pickup truck loads',
-      dimensions: "22' x 8' x 8'",
+      dimensions: "18.25' x 7.25' x 6.63'",
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
@@ -55,7 +55,7 @@ export default function ShortTermDumpstersPage() {
       size: 'Concrete Dumpster',
       description: 'Concrete, brick, or asphalt only (no mixed waste)',
       capacity: 'Heavy material only',
-      dimensions: 'Contact for available sizes',
+      dimensions: "16.46' x 8.00' x 2.67'",
       pricing: [
         { label: '1 Day', value: '$325', note: 'no tons included' },
         { label: '7 Days', value: '$425', note: 'no tons included' },
