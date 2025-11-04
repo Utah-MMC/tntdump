@@ -1,6 +1,6 @@
 # Git: add, commit, push, and open a pull request
 
-## 1) Create a new branch
+## 1) Create a new branch and name the branch something specific that relates to all changes made
 ```bash
 git checkout -b feature/short-description
 ```
@@ -26,7 +26,7 @@ git push -u origin HEAD
 
 ## 5) Open a pull request (GitHub only)
 - After pushing, GitHub prints a link to open a PR. Open that link in your browser, confirm the base branch (e.g., `master` or `main`), add a clear title and description, and create the PR.
-- Alternatively, go to your repository on GitHub, switch to `feature/short-description`, and click "Compare & pull request".
+
 
 ## 6) Update the PR after reviews (if needed)
 ```bash
