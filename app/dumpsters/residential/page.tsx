@@ -166,6 +166,21 @@ export default function ResidentialDumpsterPage() {
         </div>
       </section>
 
+      {/* Residential Dumpster Sizes Image */}
+      <section className="py-8 bg-gray-50">
+        <div className="container-custom">
+          <div className="relative w-full max-w-5xl mx-auto">
+            <Image
+              src="/images/residential-dumpster-sizes.jpg"
+              alt="Residential Dumpster Sizes"
+              width={1200}
+              height={600}
+              className="rounded-lg shadow-lg w-full h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Features */}
       <section className="section-padding bg-white">
         <div className="container-custom">
