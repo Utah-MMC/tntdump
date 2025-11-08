@@ -140,10 +140,9 @@ export default function CommercialDumpsterPage() {
         </div>
       </section>
 
-      {/* Construction Dumpster Sizes Image  */}
+      {/* Construction Dumpster Sizes Image */}
       <section className="py-8 bg-gray-50">
         <div className="container-custom">
-          <h2 className="text-3xl font-bold text-center mb-4">Construction Dumpster Sizes</h2>
           <div className="relative w-full max-w-5xl mx-auto">
             <Image
               src="/images/construction-dumpster-sizes.jpg"

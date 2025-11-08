@@ -17,7 +17,135 @@ export default function Home() {
 
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
       
-      {/* Dumpster Calculator Section (moved directly below Hero) */}
+      {/* Dumpster Sizes Cards Section */}
+      <section className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-4">Our Dumpster Sizes</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Choose the perfect size for your project. All rentals include delivery and pickup.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* 15 YD Dumpster */}
+            <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="relative h-48 bg-gray-100 p-2">
+                <Image
+                  src="/images/15-yard-dumpster-card.jpg"
+                  alt="15 yard dumpster"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  quality={85}
+                  loading="lazy"
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold text-green-600 mb-3">15 YD DUMPSTER</h3>
+                  <div className="mb-4">
+                    <p className="text-3xl font-bold text-gray-900">$325 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-700 mb-4">
+                    <p>Includes 2 tons</p>
+                    <p className="text-xs">($55/ extra ton)</p>
+                  </div>
+                </div>
+                <a href="/quote" className="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded transition-colors mb-4">
+                  CLICK TO ORDER – 15YD
+                </a>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="font-semibold text-gray-900 text-sm mb-2">Dimensions:</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 16 feet long</li>
+                    <li>• 8 feet wide</li>
+                    <li>• 3.5 feet tall</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 20 YD Dumpster */}
+            <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="relative h-48 bg-gray-100 p-2">
+                <Image
+                  src="/images/20-yard-dumpster-card.jpg"
+                  alt="20 yard dumpster"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  quality={85}
+                  loading="lazy"
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold text-green-600 mb-3">20 YD DUMPSTER</h3>
+                  <div className="mb-4">
+                    <p className="text-3xl font-bold text-gray-900">$375 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-700 mb-4">
+                    <p>Includes 2 tons</p>
+                    <p className="text-xs">($55/ extra ton)</p>
+                  </div>
+                </div>
+                <a href="/quote" className="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded transition-colors mb-4">
+                  CLICK TO ORDER – 20 YD
+                </a>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="font-semibold text-gray-900 text-sm mb-2">Dimensions:</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 17.08 feet long</li>
+                    <li>• 7.54 feet wide</li>
+                    <li>• 5 feet tall</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            {/* 30 YD Dumpster */}
+            <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="relative h-48 bg-gray-100 p-2">
+                <Image
+                  src="/images/30-yard-dumpster-card.jpg"
+                  alt="30 yard dumpster"
+                  fill
+                  sizes="(min-width: 1024px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  quality={85}
+                  loading="lazy"
+                  className="object-contain"
+                />
+              </div>
+              <div className="p-6 flex flex-col flex-grow">
+                <div className="flex-grow">
+                  <h3 className="text-2xl font-bold text-green-600 mb-3">30 YD DUMPSTER</h3>
+                  <div className="mb-4">
+                    <p className="text-3xl font-bold text-gray-900">$400 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
+                  </div>
+                  <div className="space-y-2 text-sm text-gray-700 mb-4">
+                    <p>Includes 2 tons</p>
+                    <p className="text-xs">($55/ extra ton)</p>
+                  </div>
+                </div>
+                <a href="/quote" className="block w-full text-center bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-4 rounded transition-colors mb-4">
+                  CLICK TO ORDER – 30 YD
+                </a>
+                <div className="pt-4 border-t border-gray-200">
+                  <p className="font-semibold text-gray-900 text-sm mb-2">Dimensions:</p>
+                  <ul className="text-sm text-gray-700 space-y-1">
+                    <li>• 18.25 feet long</li>
+                    <li>• 7.25 feet wide</li>
+                    <li>• 6.63 feet tall</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
 
       {/* Dumpster Size Images Section */}
