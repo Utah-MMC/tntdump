@@ -27,7 +27,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* 15 YD Dumpster */}
             <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
-              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.07] transition-opacity duration-300 pointer-events-none z-10"></div>
               <div className="relative h-48 bg-gray-100 p-2">
                 <Image
                   src="/images/15-yard-dumpster-card.jpg"
@@ -41,7 +41,7 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-green-600 mb-3">15 YD DUMPSTER</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-3">15 YD DUMPSTER</h3>
                   <div className="mb-4">
                     <p className="text-3xl font-bold text-gray-900">$325 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
                   </div>
@@ -66,7 +66,7 @@ export default function Home() {
 
             {/* 20 YD Dumpster */}
             <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
-              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.07] transition-opacity duration-300 pointer-events-none z-10"></div>
               <div className="relative h-48 bg-gray-100 p-2">
                 <Image
                   src="/images/20-yard-dumpster-card.jpg"
@@ -80,7 +80,7 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-green-600 mb-3">20 YD DUMPSTER</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-3">20 YD DUMPSTER</h3>
                   <div className="mb-4">
                     <p className="text-3xl font-bold text-gray-900">$375 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
                   </div>
@@ -105,7 +105,7 @@ export default function Home() {
 
             {/* 30 YD Dumpster */}
             <div className="group relative bg-white rounded-lg shadow-xl overflow-hidden border border-gray-200 hover:shadow-2xl transition-shadow flex flex-col">
-              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.15] transition-opacity duration-300 pointer-events-none z-10"></div>
+              <div className="absolute inset-0 bg-[#3b82f6] opacity-0 group-hover:opacity-[0.07] transition-opacity duration-300 pointer-events-none z-10"></div>
               <div className="relative h-48 bg-gray-100 p-2">
                 <Image
                   src="/images/30-yard-dumpster-card.jpg"
@@ -119,7 +119,7 @@ export default function Home() {
               </div>
               <div className="p-6 flex flex-col flex-grow">
                 <div className="flex-grow">
-                  <h3 className="text-2xl font-bold text-green-600 mb-3">30 YD DUMPSTER</h3>
+                  <h3 className="text-2xl font-bold text-blue-600 mb-3">30 YD DUMPSTER</h3>
                   <div className="mb-4">
                     <p className="text-3xl font-bold text-gray-900">$400 <span className="text-lg font-normal text-gray-600">– 7 DAY RENTAL</span></p>
                   </div>
@@ -147,52 +147,6 @@ export default function Home() {
 
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
-
-      {/* Dumpster Size Images Section */}
-      <section className="py-16 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold gradient-text">Dumpster Sizes</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Choose the right dumpster size for your project</p>
-          </div>
-          <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src="/images/construction-dumpster-sizes.jpg"
-                  alt="Construction dumpster sizes and dimensions guide"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  quality={85}
-                  loading="lazy"
-                  className="object-contain"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900">Construction Dumpster Sizes</h3>
-                <p className="text-gray-600 text-sm mt-2">Perfect for construction and demolition projects</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden">
-              <div className="relative h-64 md:h-80">
-                <Image
-                  src="/images/residential-dumpster-sizes.jpg"
-                  alt="Residential dumpster sizes and dimensions guide"
-                  fill
-                  sizes="(min-width: 768px) 50vw, 100vw"
-                  quality={85}
-                  loading="lazy"
-                  className="object-contain"
-                />
-              </div>
-              <div className="p-4">
-                <h3 className="text-lg font-semibold text-gray-900">Residential Dumpster Sizes</h3>
-                <p className="text-gray-600 text-sm mt-2">Ideal for home cleanouts and renovations</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       <Services />
 
