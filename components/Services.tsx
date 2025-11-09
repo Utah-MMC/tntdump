@@ -8,21 +8,21 @@ const Services = () => {
     {
       title: 'Residential Dumpster Service',
       description: 'Our residential dumpster service is designed to meet the waste disposal needs of homeowners. Whether you\'re renovating, cleaning out a garage, or simply need a reliable waste management solution, our residential dumpster service is the perfect fit.',
-      image: '/images/dumpster2-500x500-2.jpeg',
+      image: '/images/residential-dumpster-sizes.jpg',
       href: '/dumpsters/residential',
       alt: 'Residential dumpster rental service for homeowners'
     },
     {
       title: 'Commercial Dumpster Service',
       description: 'TNT Dumpsters offers a comprehensive commercial dumpster service. Ideal for businesses of all sizes, our commercial dumpster service ensures that your business remains clean and compliant with waste disposal regulations.',
-      image: '/images/dumpster3-500x500-1.jpeg',
+      image: '/images/Construction-Rental-480x480.jpg',
       href: '/dumpsters/commercial',
       alt: 'Commercial dumpster rental service for businesses'
     },
     {
       title: 'Construction Dumpster Service',
-      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolitionâ€”like concrete, lumber, drywall, and roofingâ€”so your job site stays clean and safe.',
-      image: '/images/Construction-Rental-480x480.jpg',
+      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolitionâ€"like concrete, lumber, drywall, and roofingâ€"so your job site stays clean and safe.',
+      image: '/images/construction-dumpster-sizes.jpg',
       href: '/dumpsters/concrete',
       alt: 'Construction dumpster rental service for construction and demolition debris'
     }

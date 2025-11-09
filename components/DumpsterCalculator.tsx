@@ -178,19 +178,20 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                   <button
                     key={project.id}
                     onClick={() => handleProjectSelect(project.id)}
-                    className={`${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left ${
+                    className={`group relative ${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left overflow-hidden ${
                       selectedProject === project.id
                         ? 'border-blue-500 bg-blue-50 shadow-md'
                         : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
                     }`}
                   >
-                    <div className="flex items-center mb-3">
+                    <div className="absolute inset-0 bg-[#111827] opacity-0 group-hover:opacity-[0.05] transition-opacity duration-300 pointer-events-none z-10"></div>
+                    <div className="relative z-20 flex items-center mb-3">
                       <Icon className={`h-6 w-6 mr-2 ${
                         selectedProject === project.id ? 'text-blue-600' : 'text-gray-600'
                       }`} />
                       <h4 className={`font-semibold text-gray-900 ${embedded ? 'text-sm' : ''}`}>{project.name}</h4>
                     </div>
-                    <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-600`}>{project.description}</p>
+                    <p className={`relative z-20 ${embedded ? 'text-xs' : 'text-sm'} text-gray-600`}>{project.description}</p>
                   </button>
                 )
               })}
@@ -210,13 +211,14 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                     <button
                       key={size.size}
                       onClick={() => handleSizeSelect(size.size)}
-                      className={`${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left ${
+                      className={`group relative ${embedded ? 'p-4' : 'p-6'} rounded-lg border-2 transition-all duration-200 text-left overflow-hidden ${
                         selectedSize === size.size
                           ? 'border-blue-500 bg-blue-50 shadow-md'
                           : 'border-gray-200 bg-white hover:border-blue-300 hover:shadow-sm'
                       }`}
                     >
-                      <div className="flex justify-between items-start mb-3">
+                      <div className="absolute inset-0 bg-[#111827] opacity-0 group-hover:opacity-[0.05] transition-opacity duration-300 pointer-events-none z-10"></div>
+                      <div className="relative z-20 flex justify-between items-start mb-3">
                         <h4 className={`font-bold ${embedded ? 'text-base' : 'text-lg'} text-gray-900`}>{size.size}</h4>
                         <div className="text-right">
                           <div className="text-xs text-gray-600">1 day</div>
@@ -228,7 +230,7 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                           </div>
                         </div>
                       </div>
-                      <div className="flex justify-end items-center -mt-2 mb-2">
+                      <div className="relative z-20 flex justify-end items-center -mt-2 mb-2">
                         <div className="text-right">
                           <div className="text-xs text-gray-600">7 days</div>
                           <div className={`${embedded ? 'text-base' : 'text-lg'} font-semibold text-blue-600`}>{size.price7Day}</div>
@@ -239,12 +241,12 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                           </div>
                         </div>
                       </div>
-                      <p className="text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
-                      <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-600 mb-2`}>{size.capacity}</p>
-                      <p className="text-xs text-gray-500 mb-3">{size.dimensions}</p>
-                      <p className={`${embedded ? 'text-xs' : 'text-sm'} text-gray-700`}>{size.description}</p>
+                      <p className="relative z-20 text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
+                      <p className={`relative z-20 ${embedded ? 'text-xs' : 'text-sm'} text-gray-600 mb-2`}>{size.capacity}</p>
+                      <p className="relative z-20 text-xs text-gray-500 mb-3">{size.dimensions}</p>
+                      <p className={`relative z-20 ${embedded ? 'text-xs' : 'text-sm'} text-gray-700`}>{size.description}</p>
                       {selectedProject === 'concrete' && concreteNotes[size.size] && (
-                        <div className="mt-3 pt-3 border-t border-blue-100">
+                        <div className="relative z-20 mt-3 pt-3 border-t border-blue-100">
                           <p className="text-[11px] font-semibold text-blue-700 uppercase tracking-wide">
                             {concreteNotes[size.size].title}
                           </p>
@@ -355,34 +357,6 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
               </div>
             </div>
           )}
-
-          {/* Help Section */}
-          <div className="mt-12 bg-blue-50 rounded-lg p-6">
-            <div className="flex items-start">
-              <Info className="h-6 w-6 text-blue-600 mr-3 mt-1 flex-shrink-0" />
-              <div>
-                <h4 className="font-semibold text-gray-900 mb-2">Need Help Choosing?</h4>
-                <p className="text-gray-700 mb-4">
-                  Our experienced team can help you choose the right dumpster size for your specific project. 
-                  We offer free consultations and same-day estimates.
-                </p>
-                <div className="flex flex-col sm:flex-row gap-3">
-                  <a
-                    href="tel:+18012099013"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    📞 Call (801) 209-9013
-                  </a>
-                  <a
-                    href="/contact"
-                    className="text-blue-600 hover:text-blue-700 font-semibold"
-                  >
-                    💬 Contact Us
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
     </section>
