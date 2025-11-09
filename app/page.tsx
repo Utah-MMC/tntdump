@@ -17,6 +17,23 @@ export default function Home() {
 
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
       
+      {/* 3-Step Dumpster Rental Process Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-5xl mx-auto">
+            <Image
+              src="/images/3-step-process-dumpster-rental-v2.jpg"
+              alt="3 Step Dumpster Rental Process - Order, Delivery, We Pick It Up"
+              width={1600}
+              height={600}
+              quality={90}
+              className="w-full h-auto rounded-lg shadow-lg"
+              priority={false}
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Dumpster Sizes Cards Section */}
       <section className="py-16 bg-white">
         <div className="container-custom">
