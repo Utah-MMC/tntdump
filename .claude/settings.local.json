@@ -12,7 +12,11 @@
       "Bash(git push:*)",
       "Bash(gh auth:*)",
       "Bash(gh pr create:*)",
-      "Bash(git commit:*)"
+      "Bash(git commit:*)",
+      "Bash(sed:*)",
+      "Bash(xargs:*)",
+      "Bash(git worktree:*)",
+      "Bash(git branch:*)"
     ],
     "deny": [],
     "ask": []
