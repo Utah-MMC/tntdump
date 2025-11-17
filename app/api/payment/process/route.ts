@@ -1,4 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server';
+import Stripe from 'stripe';
+
+const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
+  apiVersion: '2024-11-20.acacia',
+});
 
 export async function POST(request: NextRequest) {
   try {
@@ -10,60 +15,62 @@ export async function POST(request: NextRequest) {
       deliveryDate,
       pickupDate,
       rentalDays,
-      paymentDetails,
     } = body;
 
-    // Validate required fields
     if (!amount || !customerInfo || !dumpsterSize || !deliveryDate) {
       return NextResponse.json(
         { error: 'Missing required fields' },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
-    // TODO: Integrate with actual payment processor (Stripe, Square, etc.)
-    // For now, we'll simulate a successful payment
-    
-    // Generate a unique order ID
-    const orderId = `ORD-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    
-    // In a real implementation, you would:
-    // 1. Create a payment intent with Stripe/Square
-    // 2. Process the payment
-    // 3. Store the order in a database
-    // 4. Send confirmation emails
-    
-    // Simulate payment processing
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    const baseUrl =
+      process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
 
-    // Log the order (in production, save to database)
-    console.log('Order created:', {
-      orderId,
-      amount,
-      customerInfo,
-      dumpsterSize,
-      deliveryDate,
-      pickupDate,
-      rentalDays,
-      status: 'paid',
-      createdAt: new Date().toISOString(),
+    const session = await stripe.checkout.sessions.create({
+      mode: 'payment',
+      payment_method_types: ['card'],
+      customer_email: customerInfo.email,
+      line_items: [
+        {
+          price_data: {
+            currency: 'usd',
+            unit_amount: Math.round(amount * 100), // dollars -> cents
+            product_data: {
+              name: `${dumpsterSize} Dumpster Rental`,
+              description: `Delivery: ${deliveryDate}${
+                pickupDate ? ` • Pickup: ${pickupDate}` : ''
+              }`,
+            },
+          },
+          quantity: 1,
+        },
+      ],
+      metadata: {
+        dumpsterSize,
+        deliveryDate,
+        pickupDate: pickupDate || '',
+        rentalDays: rentalDays?.toString() || '',
+        customerName: `${customerInfo.firstName} ${customerInfo.lastName}`,
+        customerPhone: customerInfo.phone,
+        customerZip: customerInfo.zipCode,
+      },
+      success_url: `${baseUrl}/order-confirmation?orderId={CHECKOUT_SESSION_ID}`,
+      cancel_url: `${baseUrl}/cart?canceled=true`,
     });
-
-    // TODO: Send confirmation email to customer
-    // TODO: Send notification to business owner
 
     return NextResponse.json({
-      success: true,
-      orderId,
-      paymentIntentId: orderId, // In real implementation, this would be from Stripe
-      message: 'Payment processed successfully',
+      url: session.url,
+      sessionId: session.id,
     });
-  } catch (error) {
-    console.error('Payment processing error:', error);
+  } catch (error: any) {
+    console.error('Stripe error:', error);
     return NextResponse.json(
-      { error: 'Payment processing failed', message: error instanceof Error ? error.message : 'Unknown error' },
-      { status: 500 }
+      {
+        error: 'Payment processing failed',
+        message: error?.message || 'Unknown error',
+      },
+      { status: 500 },
     );
   }
 }
-
