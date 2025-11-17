@@ -7,14 +7,12 @@ import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [isServicesOpen, setIsServicesOpen] = useState(false)
   const [isDumpstersOpen, setIsDumpstersOpen] = useState(false)
   const [isToolsOpen, setIsToolsOpen] = useState(false)
   const [isAboutOpen, setIsAboutOpen] = useState(false)
   const [isContactOpen, setIsContactOpen] = useState(false)
-  
+
   // Timeout refs for dropdown delays
-  const servicesTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const dumpstersTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const toolsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const aboutTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -22,25 +20,12 @@ const Header = () => {
 
   const navigation = [
     { name: 'Home', href: '/', hasDropdown: false },
-    { name: 'Services', href: '/services', hasDropdown: true },
     { name: 'Cities', href: '/cities', hasDropdown: false },
     { name: 'Dumpsters', href: '/dumpsters', hasDropdown: true },
     { name: 'Blog', href: '/blog', hasDropdown: false },
     { name: 'Tools', href: '#', hasDropdown: true },
     { name: 'About', href: '/about', hasDropdown: true },
     { name: 'Contact', href: '/contact', hasDropdown: true },
-  ]
-
-  const serviceTypes = [
-    { name: 'All Services', href: '/services' },
-    { name: 'Residential Dumpster Rental', href: '/services' },
-    { name: 'Commercial Dumpster Rental', href: '/services' },
-    { name: 'Industrial Dumpster Rental', href: '/services' },
-    { name: 'Short-Term Dumpster Rental', href: '/services' },
-    { name: 'Long-Term Dumpster Rental', href: '/services' },
-    { name: 'Vendor Dumpster Rental', href: '/services' },
-    { name: 'Concrete Dumpsters', href: '/services' },
-    { name: 'Estate Cleanout Services', href: '/estate-cleanouts' },
   ]
 
   const dumpsterServices = [
@@ -79,7 +64,6 @@ const Header = () => {
   // Clear timeout on unmount
   useEffect(() => {
     return () => {
-      if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
       if (dumpstersTimeoutRef.current) clearTimeout(dumpstersTimeoutRef.current)
       if (toolsTimeoutRef.current) clearTimeout(toolsTimeoutRef.current)
       if (aboutTimeoutRef.current) clearTimeout(aboutTimeoutRef.current)
@@ -88,17 +72,6 @@ const Header = () => {
   }, [])
 
   // Helper functions for dropdown management
-  const handleServicesMouseEnter = () => {
-    if (servicesTimeoutRef.current) clearTimeout(servicesTimeoutRef.current)
-    setIsServicesOpen(true)
-  }
-
-  const handleServicesMouseLeave = () => {
-    servicesTimeoutRef.current = setTimeout(() => {
-      setIsServicesOpen(false)
-    }, 150)
-  }
-
   const handleDumpstersMouseEnter = () => {
     if (dumpstersTimeoutRef.current) clearTimeout(dumpstersTimeoutRef.current)
     setIsDumpstersOpen(true)
@@ -174,7 +147,6 @@ const Header = () => {
                       className={`flex items-center space-x-1 text-yellow-400 hover:text-yellow-300 font-medium transition-colors ${item.name === 'Home' ? 'underline' : ''}`}
                       onMouseEnter={() => {
                         if (item.hasDropdown) {
-                          if (item.name === 'Services') handleServicesMouseEnter()
                           if (item.name === 'Dumpsters') handleDumpstersMouseEnter()
                           if (item.name === 'Tools') handleToolsMouseEnter()
                           if (item.name === 'About') handleAboutMouseEnter()
@@ -182,7 +154,6 @@ const Header = () => {
                         }
                       }}
                       onMouseLeave={() => {
-                        if (item.name === 'Services') handleServicesMouseLeave()
                         if (item.name === 'Dumpsters') handleDumpstersMouseLeave()
                         if (item.name === 'Tools') handleToolsMouseLeave()
                         if (item.name === 'About') handleAboutMouseLeave()
@@ -194,24 +165,6 @@ const Header = () => {
                    </Link>
 
                   {/* Dropdown Menus */}
-                  {item.name === 'Services' && isServicesOpen && (
-                    <div 
-                      className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
-                      onMouseEnter={handleServicesMouseEnter}
-                      onMouseLeave={handleServicesMouseLeave}
-                    >
-                      {serviceTypes.map((service) => (
-                        <Link
-                          key={service.name}
-                          href={service.href}
-                          className="block px-4 py-2 text-gray-800 hover:bg-primary-50 hover:text-primary-600 transition-colors"
-                        >
-                          {service.name}
-                        </Link>
-                      ))}
-                    </div>
-                  )}
-
                   {item.name === 'Dumpsters' && isDumpstersOpen && (
                     <div 
                       className="absolute top-full left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 py-2"
