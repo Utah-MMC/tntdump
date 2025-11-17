@@ -32,92 +32,13 @@ export default function PaymentForm({
   const [isProcessing, setIsProcessing] = useState(false);
   const [paymentMethod, setPaymentMethod] = useState<'card' | 'cash'>('card');
 
-  // Payment form state
-  const [cardNumber, setCardNumber] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
-  const [cvv, setCvv] = useState('');
-  const [billingZip, setBillingZip] = useState(customerInfo.zipCode || '');
-
-  // Format card number with spaces
-  const formatCardNumber = (value: string) => {
-    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
-    const matches = v.match(/\d{4,16}/g);
-    const match = (matches && matches[0]) || '';
-    const parts = [];
-
-    for (let i = 0, len = match.length; i < len; i += 4) {
-      parts.push(match.substring(i, i + 4));
-    }
-
-    if (parts.length) {
-      return parts.join(' ');
-    } else {
-      return value;
-    }
-  };
-
-  // Format expiry date MM/YY
-  const formatExpiryDate = (value: string) => {
-    const v = value.replace(/\s+/g, '').replace(/[^0-9]/gi, '');
-    if (v.length >= 2) {
-      return v.substring(0, 2) + '/' + v.substring(2, 4);
-    }
-    return v;
-  };
-
-  const handleCardNumberChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatCardNumber(e.target.value);
-    if (formatted.replace(/\s/g, '').length <= 16) {
-      setCardNumber(formatted);
-    }
-  };
-
-  const handleExpiryChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const formatted = formatExpiryDate(e.target.value);
-    if (formatted.replace('/', '').length <= 4) {
-      setExpiryDate(formatted);
-    }
-  };
-
-  const handleCvvChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const value = e.target.value.replace(/[^0-9]/gi, '');
-    if (value.length <= 4) {
-      setCvv(value);
-    }
-  };
-
-  const validateCardNumber = (number: string): boolean => {
-    const cleaned = number.replace(/\s/g, '');
-    if (cleaned.length < 13 || cleaned.length > 16) return false;
-    
-    // Luhn algorithm
-    let sum = 0;
-    let isEven = false;
-    
-    for (let i = cleaned.length - 1; i >= 0; i--) {
-      let digit = parseInt(cleaned.charAt(i), 10);
-      
-      if (isEven) {
-        digit *= 2;
-        if (digit > 9) {
-          digit -= 9;
-        }
-      }
-      
-      sum += digit;
-      isEven = !isEven;
-    }
-    
-    return sum % 10 === 0;
-  };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsProcessing(true);
 
     try {
       if (paymentMethod === 'cash') {
-        // For cash/check payment, create an order without payment processing
+        // Pay on delivery: create order directly in our system
         const response = await fetch('/api/orders/create', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
@@ -138,31 +59,16 @@ export default function PaymentForm({
         }
 
         const result = await response.json();
-        
-        // Show success message and redirect
-        alert('Order created successfully! We will contact you to confirm payment and delivery details.');
-        window.location.href = '/order-confirmation?orderId=' + result.orderId;
+
+        alert(
+          'Order created successfully! We will contact you to confirm payment and delivery details.',
+        );
+        window.location.href =
+          '/order-confirmation?orderId=' + result.orderId;
         return;
       }
 
-      // Validate card payment
-      if (!validateCardNumber(cardNumber)) {
-        throw new Error('Invalid card number. Please check and try again.');
-      }
-
-      if (!expiryDate || expiryDate.length !== 5) {
-        throw new Error('Invalid expiry date. Please use MM/YY format.');
-      }
-
-      if (!cvv || cvv.length < 3) {
-        throw new Error('Invalid CVV. Please enter 3 or 4 digits.');
-      }
-
-      if (!billingZip || billingZip.length !== 5) {
-        throw new Error('Invalid billing ZIP code.');
-      }
-
-      // Process card payment (this would integrate with Stripe or another payment processor)
+      // Card payment: create Stripe Checkout session
       const response = await fetch('/api/payment/process', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -173,12 +79,6 @@ export default function PaymentForm({
           deliveryDate,
           pickupDate,
           rentalDays,
-          paymentDetails: {
-            cardNumber: cardNumber.replace(/\s/g, ''),
-            expiryDate,
-            cvv,
-            billingZip,
-          },
         }),
       });
 
@@ -188,16 +88,23 @@ export default function PaymentForm({
       }
 
       const result = await response.json();
-      
-      // Success!
-      onSuccess(result.paymentIntentId || result.orderId);
-      
-      // Redirect to confirmation page
-      window.location.href = '/order-confirmation?orderId=' + (result.orderId || result.paymentIntentId);
+
+      // Notify parent that a session was created
+      onSuccess(result.sessionId || '');
+
+      // Redirect user to Stripe-hosted Checkout page
+      if (result.url) {
+        window.location.href = result.url;
+      } else {
+        throw new Error('Missing Stripe checkout URL');
+      }
     } catch (error: any) {
       console.error('Payment error:', error);
       onError(error.message || 'An error occurred while processing your payment');
-      alert(error.message || 'Payment failed. Please try again or contact us at (801) 209-9013');
+      alert(
+        error.message ||
+          'Payment failed. Please try again or contact us at (801) 209-9013',
+      );
     } finally {
       setIsProcessing(false);
     }
@@ -207,7 +114,9 @@ export default function PaymentForm({
     <form onSubmit={handleSubmit} className="space-y-6">
       {/* Payment Method Selection */}
       <div>
-        <label className="block text-sm font-medium text-gray-700 mb-3">Payment Method</label>
+        <label className="block text-sm font-medium text-gray-700 mb-3">
+          Payment Method
+        </label>
         <div className="grid grid-cols-2 gap-4">
           <button
             type="button"
@@ -235,84 +144,23 @@ export default function PaymentForm({
       </div>
 
       {paymentMethod === 'card' && (
-        <>
-          {/* Card Number */}
-          <div>
-            <label htmlFor="cardNumber" className="block text-sm font-medium text-gray-700 mb-2">
-              Card Number *
-            </label>
-            <input
-              type="text"
-              id="cardNumber"
-              value={cardNumber}
-              onChange={handleCardNumberChange}
-              placeholder="1234 5678 9012 3456"
-              required
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-
-          {/* Expiry and CVV */}
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label htmlFor="expiryDate" className="block text-sm font-medium text-gray-700 mb-2">
-                Expiry Date *
-              </label>
-              <input
-                type="text"
-                id="expiryDate"
-                value={expiryDate}
-                onChange={handleExpiryChange}
-                placeholder="MM/YY"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-            <div>
-              <label htmlFor="cvv" className="block text-sm font-medium text-gray-700 mb-2">
-                CVV *
-              </label>
-              <input
-                type="text"
-                id="cvv"
-                value={cvv}
-                onChange={handleCvvChange}
-                placeholder="123"
-                required
-                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-              />
-            </div>
-          </div>
-
-          {/* Billing ZIP */}
-          <div>
-            <label htmlFor="billingZip" className="block text-sm font-medium text-gray-700 mb-2">
-              Billing ZIP Code *
-            </label>
-            <input
-              type="text"
-              id="billingZip"
-              value={billingZip}
-              onChange={(e) => {
-                const value = e.target.value.replace(/[^0-9]/gi, '');
-                if (value.length <= 5) {
-                  setBillingZip(value);
-                }
-              }}
-              placeholder="84015"
-              required
-              maxLength={5}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
-            />
-          </div>
-        </>
+        <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
+          <p className="text-sm text-blue-800">
+            <strong>Pay with Card:</strong> When you click{' '}
+            <em>Complete Order</em>, you&apos;ll be redirected to a secure
+            Stripe checkout page to pay with your credit or debit card.
+            We never see or store your full card details.
+          </p>
+        </div>
       )}
 
       {paymentMethod === 'cash' && (
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-4">
           <p className="text-sm text-blue-800">
-            <strong>Pay on Delivery:</strong> You can pay with cash or check when the dumpster is delivered. 
-            Our driver will provide you with a receipt. We'll contact you to confirm your order and delivery details.
+            <strong>Pay on Delivery:</strong> You can pay with cash or check
+            when the dumpster is delivered. Our driver will provide you with a
+            receipt. We&apos;ll contact you to confirm your order and delivery
+            details.
           </p>
         </div>
       )}
@@ -334,9 +182,12 @@ export default function PaymentForm({
             />
           </svg>
           <div>
-            <p className="text-sm font-semibold text-gray-900">Secure Payment</p>
+            <p className="text-sm font-semibold text-gray-900">
+              Secure Checkout
+            </p>
             <p className="text-xs text-gray-600 mt-1">
-              Your payment information is encrypted and secure. We never store your full card details.
+              Card payments are handled by Stripe on their PCI-compliant
+              checkout page. TNT Dump never stores your full card details.
             </p>
           </div>
         </div>
@@ -387,4 +238,3 @@ export default function PaymentForm({
     </form>
   );
 }
-
