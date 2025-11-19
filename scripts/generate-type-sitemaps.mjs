@@ -53,6 +53,22 @@ function shouldSkipTopLevel(seg) {
   return false;
 }
 
+function shouldSkipRoute(rel) {
+  // Skip test pages and other non-indexable pages
+  if (rel.includes('/test') || rel.includes('/test-email') || rel.includes('/test-form')) {
+    return true;
+  }
+  // Skip order confirmation and cart pages (transactional, should not be indexed)
+  if (rel.includes('/order-confirmation') || rel.includes('/cart')) {
+    return true;
+  }
+  // Skip blog posts (they're in sitemap-posts.xml)
+  if (rel.startsWith('/blog/') && rel !== '/blog') {
+    return true;
+  }
+  return false;
+}
+
 function collectStaticRoutes(dir = APP_DIR) {
   const out = [];
 
@@ -65,11 +81,14 @@ function collectStaticRoutes(dir = APP_DIR) {
     const pageFile = entries.find(e => e.isFile() && PAGE_FILENAMES.has(e.name));
     if (pageFile) {
       const loc = rel === '' ? '/' : '/' + rel.replace(/\\/g, '/');
-      const filePath = path.join(current, pageFile.name);
-      out.push({
-        loc: `${SITE}${loc}`,
-        lastmod: safeStatISO(filePath)
-      });
+      // Skip routes that shouldn't be in sitemap
+      if (!shouldSkipRoute(loc)) {
+        const filePath = path.join(current, pageFile.name);
+        out.push({
+          loc: `${SITE}${loc}`,
+          lastmod: safeStatISO(filePath)
+        });
+      }
       // We still continue walking because nested routes may exist too.
     }
 
