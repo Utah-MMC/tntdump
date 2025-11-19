@@ -7,14 +7,15 @@ import ZipStickyBar from '@/components/ZipStickyBar'
 import { FinderProvider } from '@/components/FinderContext'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Services | Dumpster Rental | TNT Dump',
+  title: 'Dumpster Rental Services | TNT Dump',
   description:
-    'Local roll off dumpster rental for homes, remodels, and contractors in Salt Lake & Utah County. Fast delivery dumpster rental and clear dumpster rental price—call (801) 209-9013.',
+    'Local roll off dumpster rental for homes, remodels, and contractors in Salt Lake & Utah County. Fast delivery and clear pricing. Call (801) 209-9013.',
 }
 
 export default function ServicesPage() {
   return (
     <main className="mx-auto max-w-7xl px-4 py-10">
+      <h1 className="sr-only">Dumpster Rental Services</h1>
       <FinderProvider>
         <section id="finder">
           <DumpsterFinder />

@@ -16,7 +16,8 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Fast, local dumpster rental in ${data.city}, UT. ${BRAND.name} delivers ${[15,20,30].join('/')} yard roll-off dumpsters with transparent pricing and same-day options.`
+  // Optimized description: 120-160 characters for SEO
+  const description = `Local dumpster rental in ${data.city}, UT. Fast delivery, clear pricing for remodels, cleanouts, and construction. Call (801) 209-9013.`
   const canonical = `${BRAND.url}/ut/${data.slug}/dumpster-rental`
   return {
     title,

@@ -2,8 +2,8 @@ import type { Metadata } from 'next'
 import { getCitiesByCounty } from '@/lib/cities'
 
 export const metadata: Metadata = {
-  title: 'Utah Service Areas | TNT Dumpsters',
-  description: 'Browse all Utah cities we serve. Find local dumpster rental details, pricing, and same-day delivery options by city.',
+  title: 'Utah Service Areas | TNT Dump',
+  description: 'Browse Utah cities we serve. Find local dumpster rental details, pricing, and same-day delivery options by city.',
 }
 
 export default function ServiceAreasPage() {

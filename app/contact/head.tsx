@@ -4,7 +4,7 @@ export default function Head() {
       <title>Contact | Dumpster Rental | TNT Dump</title>
       <meta
         name="description"
-        content="Questions or quotes for dumpster rental? Call (801) 209-9013 or use the form. Fast delivery and local service in Salt Lake & Utah County."
+        content="Contact TNT Dump for dumpster rental quotes. Call (801) 209-9013 or use our form. Fast delivery in Salt Lake & Utah County."
       />
     </>
   )

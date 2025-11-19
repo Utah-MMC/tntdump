@@ -5,9 +5,9 @@ import HorizontalScroller from '@/components/HorizontalScroller'
 import { CheckCircle, Phone, Clock } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Services | Dumpster Rental | TNT Dump',
+  title: 'Dumpster Services | TNT Dump',
   description:
-    'Roll off dumpster rental for residential, commercial, and construction projects. Fast delivery, fair dumpster rental price, and local service in Salt Lake & Utah County.',
+    'Roll off dumpster rental for residential, commercial, and construction projects. Fast delivery, fair pricing, and local service in Salt Lake & Utah County.',
 }
 
 export default function DumpstersPage() {

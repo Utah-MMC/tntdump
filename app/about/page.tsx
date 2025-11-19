@@ -1,6 +1,12 @@
 ﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Users, Award } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'About Us | TNT Dump',
+  description: 'Family-owned dumpster rental business with over 55 years of experience serving the Wasatch Front. Reliable, affordable waste management solutions.',
+}
 
 export default function AboutPage() {
   const values = [

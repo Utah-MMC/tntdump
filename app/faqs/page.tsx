@@ -3,6 +3,10 @@
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, Phone, Clock, MapPin } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
+import type { Metadata } from 'next'
+
+// Note: Metadata cannot be exported from client components
+// This page uses HeroSection which has an H1
 
 export default function FAQsPage() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)

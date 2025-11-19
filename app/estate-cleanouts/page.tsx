@@ -1,6 +1,12 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart } from 'lucide-react'
 import QuickContactForm from '@/components/QuickContactForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Estate Cleanout Services | TNT Dump',
+  description: 'Compassionate estate cleanout services in Salt Lake & Utah County. Complete property cleanouts, furniture removal, and donation coordination.',
+}
 
 export default function EstateCleanoutsPage() {
   const services = [

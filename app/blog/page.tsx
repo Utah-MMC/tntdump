@@ -4,8 +4,8 @@ import Image from 'next/image'
 import { Calendar, User, ArrowRight } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Blog | TNT Dumpsters | Tips, Guides & News',
-  description: 'Expert tips, guides, and news about dumpster rental services. Learn about waste management, project planning, and get the latest updates from TNT Dumpsters.',
+  title: 'Dumpster Rental Blog | TNT Dump',
+  description: 'Expert tips and guides about dumpster rental services. Learn about waste management, project planning, and get updates from TNT Dump.',
   keywords: 'dumpster rental blog, waste management tips, project planning, dumpster rental guides, utah dumpster rental news',
 }
 

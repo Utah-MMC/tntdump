@@ -5,8 +5,8 @@ import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Sizes: Yards, Dimensions, Capacity | TNT Dumpsters',
-  description: 'Plain-English guide to dumpster sizes. Match common projects to the right box, avoid weight overages, estimate debris volume, plan site access, and understand pricing & fees.',
+  title: 'Dumpster Sizes Guide | TNT Dump',
+  description: 'Guide to dumpster sizes. Match projects to the right size, avoid weight overages, estimate debris volume, and understand pricing.',
   keywords: 'dumpster sizes explained, cubic yards, dumpster dimensions, dumpster capacity, choose dumpster size, weight limits, debris tonnage, dumpster pricing fees',
 }
 
@@ -189,7 +189,8 @@ export default function ChooseRightDumpsterSizePage() {
         </div>
       </section>
 
-      {/* CTA Section */}\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
+      {/* CTA Section */}
+\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

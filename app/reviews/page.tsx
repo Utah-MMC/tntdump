@@ -1,6 +1,12 @@
 ﻿import { Star } from 'lucide-react'
 import Image from 'next/image'
 import QuickContactForm from '@/components/QuickContactForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Customer Reviews | TNT Dump',
+  description: 'Read customer reviews for TNT Dump dumpster rental services. See what our clients say about our reliable, affordable waste management solutions.',
+}
 
 export default function ReviewsPage() {
   const reviews = [
