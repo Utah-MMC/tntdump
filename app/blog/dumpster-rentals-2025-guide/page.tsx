@@ -1,6 +1,14 @@
 import { Metadata } from 'next'
 import Link from 'next/link'
 
+export const metadata: Metadata = {
+  title: 'Dumpster Rentals 2025 Guide | TNT Dump',
+  description: 'Complete guide to dumpster rentals in 2025. Learn about sizes, pricing, delivery, and best practices for your project.',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/dumpster-rentals-2025-guide',
+  },
+}
+
 export default function DumpsterRentals2025GuidePage() {
   return (
     <main className="min-h-screen">

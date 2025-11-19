@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Dumpster Sizes Guide | TNT Dump',
   description: 'Guide to dumpster sizes. Match projects to the right size, avoid weight overages, estimate debris volume, and understand pricing.',
   keywords: 'dumpster sizes explained, cubic yards, dumpster dimensions, dumpster capacity, choose dumpster size, weight limits, debris tonnage, dumpster pricing fees',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/choose-right-dumpster-size',
+  },
 }
 
 export default function ChooseRightDumpsterSizePage() {

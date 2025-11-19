@@ -1,5 +1,14 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Short-Term Dumpster Rental | TNT Dump',
+  description: 'Short-term dumpster rental for events, weekend cleanups, and fast projects. Same-day delivery available across Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/short-term',
+  },
+}
 
 export default function ShortTermServicePage() {
   const features = [

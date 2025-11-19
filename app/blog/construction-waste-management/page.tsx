@@ -4,9 +4,12 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Construction Waste Management: Best Practices | TNT Dumpsters',
+  title: 'Construction Waste Management: Best Practices | TNT Dump',
   description: 'Learn practical construction waste management strategies including segregation, recycling, safe disposal, and cost control for residential and commercial projects.',
   keywords: 'construction waste management, jobsite dumpsters, recycling construction debris, construction dumpster tips',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/construction-waste-management',
+  },
 }
 
 export default function ConstructionWasteManagementPage() {

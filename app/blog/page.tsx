@@ -7,6 +7,9 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Blog | TNT Dump',
   description: 'Expert tips and guides about dumpster rental services. Learn about waste management, project planning, and get updates from TNT Dump.',
   keywords: 'dumpster rental blog, waste management tips, project planning, dumpster rental guides, utah dumpster rental news',
+  alternates: {
+    canonical: 'https://tntdump.com/blog',
+  },
 }
 
 const blogPosts = [

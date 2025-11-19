@@ -6,6 +6,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Estate Cleanout Services | TNT Dump',
   description: 'Compassionate estate cleanout services in Salt Lake & Utah County. Complete property cleanouts, furniture removal, and donation coordination.',
+  alternates: {
+    canonical: 'https://tntdump.com/estate-cleanouts',
+  },
 }
 
 export default function EstateCleanoutsPage() {

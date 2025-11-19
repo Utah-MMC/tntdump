@@ -6,6 +6,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Customer Reviews | TNT Dump',
   description: 'Read customer reviews for TNT Dump dumpster rental services. See what our clients say about our reliable, affordable waste management solutions.',
+  alternates: {
+    canonical: 'https://tntdump.com/reviews',
+  },
 }
 
 export default function ReviewsPage() {

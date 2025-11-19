@@ -1,5 +1,14 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart, Home } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Estate Cleanout Services | TNT Dump',
+  description: 'Estate cleanout services for complete property cleanouts, furniture removal, and property preparation. Compassionate service in Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/estate-cleanout',
+  },
+}
 
 export default function EstateCleanoutServicePage() {
   const features = [

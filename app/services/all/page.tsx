@@ -3,8 +3,11 @@ import HeroSection from '@/components/HeroSection'
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'All Services - TNT Dumpsters | Utah',
-  description: 'Legacy services grid for TNT Dumpsters',
+  title: 'All Services | TNT Dump',
+  description: 'Complete list of dumpster rental services: residential, commercial, industrial, short-term, long-term, vendor, and concrete dumpsters.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/all',
+  },
 }
 
 const services = [
@@ -78,8 +81,8 @@ export default function ServicesAllPage() {
   return (
     <main className="min-h-screen">
       <HeroSection
-        title="All Services"
-        description="Legacy services grid."
+        title="All Dumpster Rental Services"
+        description="Complete list of dumpster rental services available from TNT Dump. Residential, commercial, industrial, short-term, long-term, vendor, and concrete dumpsters."
         primaryButton={{ text: 'Call (801) 209-9013', href: 'tel:+18012099013' }}
         secondaryButton={{ text: 'Back to Services', href: '/services' }}
         showPhoneButton={false}
@@ -102,6 +105,25 @@ export default function ServicesAllPage() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+      
+      {/* Additional Service Links */}
+      <section className="py-8 bg-white">
+        <div className="container-custom">
+          <div className="text-center">
+            <p className="text-gray-600 mb-4">Also explore our service pages:</p>
+            <div className="flex flex-wrap justify-center gap-4">
+              <a href="/services/residential" className="text-blue-600 hover:text-blue-700 hover:underline">Residential</a>
+              <a href="/services/commercial" className="text-blue-600 hover:text-blue-700 hover:underline">Commercial</a>
+              <a href="/services/industrial" className="text-blue-600 hover:text-blue-700 hover:underline">Industrial</a>
+              <a href="/services/concrete" className="text-blue-600 hover:text-blue-700 hover:underline">Concrete</a>
+              <a href="/services/short-term" className="text-blue-600 hover:text-blue-700 hover:underline">Short-Term</a>
+              <a href="/services/long-term" className="text-blue-600 hover:text-blue-700 hover:underline">Long-Term</a>
+              <a href="/services/vendor" className="text-blue-600 hover:text-blue-700 hover:underline">Vendor</a>
+              <a href="/services/estate-cleanout" className="text-blue-600 hover:text-blue-700 hover:underline">Estate Cleanout</a>
+            </div>
           </div>
         </div>
       </section>

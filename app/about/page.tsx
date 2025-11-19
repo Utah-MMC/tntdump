@@ -6,6 +6,9 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'About Us | TNT Dump',
   description: 'Family-owned dumpster rental business with over 55 years of experience serving the Wasatch Front. Reliable, affordable waste management solutions.',
+  alternates: {
+    canonical: 'https://tntdump.com/about',
+  },
 }
 
 export default function AboutPage() {

@@ -4,9 +4,12 @@ import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Estate Cleanout: Complete Family Guide (2025) | TNT Dumpsters',
+  title: 'Estate Cleanout: Complete Family Guide | TNT Dump',
   description: 'Estate Cleanout made simple: a step-by-step family guide to plan, sort, sell, donate, and dispose—reducing stress, saving time, and keeping everything organized.',
   keywords: 'estate cleanout guide, estate dumpster, home cleanout tips, bereavement cleanout help',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/estate-cleanout-complete-guide',
+  },
 }
 
 export default function EstateCleanoutCompleteGuidePage() {

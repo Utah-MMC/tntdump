@@ -1,8 +1,11 @@
 ﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Terms of Service | TNT Dumpsters',
-  description: 'Terms of service for TNT Dumpsters. Learn about our service terms and conditions.',
+  title: 'Terms of Service | TNT Dump',
+  description: 'Terms of service for TNT Dump. Learn about our service terms and conditions.',
+  alternates: {
+    canonical: 'https://tntdump.com/terms-of-service',
+  },
 }
 
 export default function TermsOfService() {

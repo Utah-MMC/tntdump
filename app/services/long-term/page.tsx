@@ -1,5 +1,14 @@
 ﻿import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Long-Term Dumpster Rental | TNT Dump',
+  description: 'Long-term dumpster rental programs with reliable pickups, scheduled swaps, and dedicated dispatcher support throughout Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/long-term',
+  },
+}
 
 export default function LongTermServicePage() {
   const features = [

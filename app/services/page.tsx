@@ -10,6 +10,9 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Services | TNT Dump',
   description:
     'Local roll off dumpster rental for homes, remodels, and contractors in Salt Lake & Utah County. Fast delivery and clear pricing. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services',
+  },
 }
 
 export default function ServicesPage() {
@@ -136,9 +139,27 @@ export default function ServicesPage() {
       />
       {/* SEO SWEEP END [/services-schema] */}
 
-      <div className="sr-only">
-        <a href="/services/all">View all services</a>
-      </div>
+      {/* Service Pages Links */}
+      <section className="mt-12 bg-gray-50 py-8">
+        <div className="container-custom">
+          <h2 className="text-xl font-bold text-gray-900 mb-4 text-center">Our Service Types</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 max-w-4xl mx-auto">
+            <a href="/services/residential" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Residential Dumpster Rental</a>
+            <a href="/services/commercial" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Commercial Dumpster Rental</a>
+            <a href="/services/industrial" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Industrial Dumpster Rental</a>
+            <a href="/services/concrete" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Concrete Dumpsters</a>
+            <a href="/services/short-term" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Short-Term Rental</a>
+            <a href="/services/long-term" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Long-Term Rental</a>
+            <a href="/services/vendor" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Vendor Dumpster Rental</a>
+            <a href="/services/estate-cleanout" className="text-blue-600 hover:text-blue-700 hover:underline text-sm">Estate Cleanout</a>
+          </div>
+          <div className="text-center mt-6">
+            <a href="/services/all" className="text-blue-600 hover:text-blue-700 font-semibold">
+              View All Services →
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

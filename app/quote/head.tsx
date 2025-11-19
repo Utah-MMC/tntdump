@@ -6,6 +6,7 @@ export default function Head() {
         name="description"
         content="Get a dumpster rental quote with fast delivery in Salt Lake & Utah County. Clear pricing and size help for cleanouts, remodels, and roofing."
       />
+      <link rel="canonical" href="https://tntdump.com/quote" />
     </>
   )
 }

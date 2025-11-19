@@ -1,8 +1,11 @@
 ﻿import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | TNT Dumpsters',
-  description: 'Privacy policy for TNT Dumpsters. Learn how we collect, use, and protect your personal information.',
+  title: 'Privacy Policy | TNT Dump',
+  description: 'Privacy policy for TNT Dump. Learn how we collect, use, and protect your personal information.',
+  alternates: {
+    canonical: 'https://tntdump.com/privacy-policy',
+  },
 }
 
 export default function PrivacyPolicy() {

@@ -1,5 +1,14 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Residential Dumpster Rental | TNT Dump',
+  description: 'Residential dumpster rental for home cleanouts, remodels, and yard projects. Fast delivery in Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/residential',
+  },
+}
 
 export default function ResidentialServicePage() {
   const features = [

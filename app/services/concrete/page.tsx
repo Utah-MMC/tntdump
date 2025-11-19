@@ -1,5 +1,14 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Wrench } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Concrete Dumpster Rental | TNT Dump',
+  description: 'Concrete dumpster rental for heavy materials: concrete, brick, asphalt. Delivery with weight guidance in Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/concrete',
+  },
+}
 
 export default function ConcreteServicePage() {
   const features = [

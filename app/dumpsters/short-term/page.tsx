@@ -4,9 +4,12 @@ import { CheckCircle, Phone, Clock, MapPin, Truck, Zap, Timer } from 'lucide-rea
 import QuickContactForm from '@/components/QuickContactForm'
 
 export const metadata: Metadata = {
-  title: 'Short-Term Dumpster Rental | Dumpster Rental | TNT Dump',
+  title: 'Short-Term Dumpster Rental | TNT Dump',
   description:
     'Short-term roll off dumpster rental for events, weekend cleanups, and fast projects. Same-day delivery available across Salt Lake & Utah County.',
+  alternates: {
+    canonical: 'https://tntdump.com/dumpsters/short-term',
+  },
 }
 
 export default function ShortTermDumpstersPage() {

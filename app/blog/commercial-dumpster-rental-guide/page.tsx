@@ -5,9 +5,12 @@ import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental: Business Guide | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental: Business Guide | TNT Dump',
   description: 'Everything businesses need to know about commercial dumpster rentals: container sizes, scheduling, compliance, and cost control for offices, retail, and construction.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
+  alternates: {
+    canonical: 'https://tntdump.com/blog/commercial-dumpster-rental-guide',
+  },
 }
 
 export default function CommercialDumpsterRentalGuidePage() {
@@ -178,7 +181,8 @@ export default function CommercialDumpsterRentalGuidePage() {
             </ul>
           </div>
         </div>
-      </section>\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
+      </section>
+\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Set Up Reliable Service</h2>

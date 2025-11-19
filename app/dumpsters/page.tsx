@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'Dumpster Services | TNT Dump',
   description:
     'Roll off dumpster rental for residential, commercial, and construction projects. Fast delivery, fair pricing, and local service in Salt Lake & Utah County.',
+  alternates: {
+    canonical: 'https://tntdump.com/dumpsters',
+  },
 }
 
 export default function DumpstersPage() {

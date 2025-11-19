@@ -1,6 +1,15 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Building } from 'lucide-react'
 import QuickContactForm from '@/components/QuickContactForm'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Industrial Dumpster Rental | TNT Dump',
+  description: 'Industrial dumpster rental for manufacturing, construction, and large-scale projects. Fast delivery in Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/dumpsters/industrial',
+  },
+}
 
 export default function IndustrialDumpsterPage() {
   const features = [

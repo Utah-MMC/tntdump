@@ -20,6 +20,7 @@ const Footer = () => {
       { name: 'FAQs', href: '/faqs' },
       { name: 'Contact', href: '/contact' },
       { name: 'Estate Cleanouts', href: '/estate-cleanouts' },
+      { name: 'Partners', href: '/partners' },
     ],
     legal: [
       { name: 'Privacy Policy', href: '/privacy-policy' },

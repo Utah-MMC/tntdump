@@ -1,5 +1,14 @@
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Users, Shield } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Vendor Dumpster Rental | TNT Dump',
+  description: 'Contractor and vendor dumpster rentals with dependable delivery windows, swap-outs, and coordinated site access across Salt Lake & Utah County. Call (801) 209-9013.',
+  alternates: {
+    canonical: 'https://tntdump.com/services/vendor',
+  },
+}
 
 export default function VendorServicePage() {
   const features = [

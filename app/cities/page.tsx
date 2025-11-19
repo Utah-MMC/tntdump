@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Cities We Serve | Dumpster Rental | TNT Dump',
   description:
     'Browse cities we serve across the Wasatch Front. Find local dumpster rental services, pricing, and same-day delivery options by city.',
+  alternates: {
+    canonical: 'https://tntdump.com/cities',
+  },
 }
 
 const imagePool = [

@@ -1,6 +1,10 @@
 'use client'
 
 import { useState } from 'react'
+import type { Metadata } from 'next'
+
+// Note: Metadata cannot be exported from client components
+// This is a test page and should not be indexed
 
 export default function TestFormPage() {
   const [formData, setFormData] = useState({

@@ -4,9 +4,12 @@ import DumpsterCalculator from '@/components/DumpsterCalculator'
 import { Phone, FileText, Truck } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Size Calculator | Find the Right Size | TNT Dumpsters',
+  title: 'Dumpster Size Calculator | TNT Dump',
   description: 'Use our free dumpster size calculator to find the perfect dumpster for your project. Get instant recommendations, pricing, and free quotes. Call (801) 209-9013.',
   keywords: 'dumpster size calculator, dumpster rental calculator, dumpster size guide, dumpster pricing, utah dumpster rental',
+  alternates: {
+    canonical: 'https://tntdump.com/calculator',
+  },
 }
 
 export default function CalculatorPage() {

@@ -1,5 +1,8 @@
 'use client'
 
+// Note: Metadata cannot be exported from client components
+// Error pages should not be indexed
+
 export default function GlobalError({
   error,
   reset,
