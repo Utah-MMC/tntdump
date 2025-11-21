@@ -97,10 +97,10 @@ export default function DumpstersPage() {
                 Choose local dumpster rental with clear scheduling and careful placement. We handle driveway-safe roll off dumpster delivery and quick pickups for remodels, roof tear-offs, landscaping, and cleanouts.
               </p>
               <p>
-                Asking about pricing? See our <a href="/#pricing" className="text-blue-700 hover:underline">dumpster rental cost</a> overview and call for a firm quote.
+                Asking about pricing? See our <a href="/#pricing" className="text-blue-700 hover:underline">dumpster rental cost</a> overview and call for a firm quote. Need help choosing? Use our <a href="/calculator" className="text-blue-700 hover:underline">dumpster size calculator</a> or browse our <a href="/services" className="text-blue-700 hover:underline">dumpster rental services</a>.
               </p>
               <p>
-                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and we'll confirm availability.
+                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and we'll confirm availability. Learn more in our <a href="/blog" className="text-blue-700 hover:underline">dumpster rental blog</a> with tips and guides.
               </p>
             </div>
             {/* SEO SWEEP END [/dumpsters] */}
@@ -267,6 +267,50 @@ export default function DumpstersPage() {
         </div>
       </section>
 
+      {/* Related Resources Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Related Resources</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Explore more dumpster rental information and services</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Services</h3>
+              <p className="text-sm text-gray-600">Learn about our comprehensive service offerings</p>
+            </a>
+            <a href="/blog/choose-right-dumpster-size" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Choose the Right Size</h3>
+              <p className="text-sm text-gray-600">Guide to selecting the perfect dumpster size</p>
+            </a>
+            <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Calculate the right dumpster for your project</p>
+            </a>
+            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free dumpster rental quote</p>
+            </a>
+            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find dumpster rental in your Utah city</p>
+            </a>
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental services</p>
+            </a>
+            <a href="/dumpsters/commercial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpsters</h3>
+              <p className="text-sm text-gray-600">Business dumpster rental solutions</p>
+            </a>
+            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and expert advice</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* SEO SWEEP START [/dumpsters-faq] */}
       <section className="section-padding bg-white">
         <div className="container-custom max-w-3xl">
@@ -274,15 +318,15 @@ export default function DumpstersPage() {
           <div className="space-y-3">
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">What sizes do you carry?</summary>
-              <div className="mt-2">Common roll off sizes for home projects and construction debris. We'll match size to your load type.</div>
+              <div className="mt-2">Common roll off sizes for home projects and construction debris. We'll match size to your load type. Use our <a href="/calculator" className="text-blue-700 hover:underline">dumpster size calculator</a> or read our <a href="/blog/choose-right-dumpster-size" className="text-blue-700 hover:underline">size guide</a> for help.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">How fast can you deliver?</summary>
-              <div className="mt-2">Delivery timing depends on routes. See <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> for rush options.</div>
+              <div className="mt-2">Delivery timing depends on routes. See <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> for rush options. <a href="/quote" className="text-blue-700 hover:underline">Request a quote</a> to check availability.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">How do quotes work?</summary>
-              <div className="mt-2">We confirm size, tonnage, and placement so your dumpster rental price stays predictable.</div>
+              <div className="mt-2">We confirm size, tonnage, and placement so your dumpster rental price stays predictable. <a href="/quote" className="text-blue-700 hover:underline">Get a free quote</a> or browse our <a href="/services" className="text-blue-700 hover:underline">service options</a>.</div>
             </details>
           </div>
         </div>

@@ -358,6 +358,50 @@ export default function EstateCleanoutsPage() {
           </div>
         </div>
       </section>
+
+      {/* Related Resources Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Related Resources</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Explore more dumpster rental services and information</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters/residential" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts</p>
+            </a>
+            <a href="/blog/estate-cleanout-complete-guide" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanout Guide</h3>
+              <p className="text-sm text-gray-600">Complete guide to estate cleanouts</p>
+            </a>
+            <a href="/dumpsters" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+              <p className="text-sm text-gray-600">Browse all dumpster sizes</p>
+            </a>
+            <a href="/calculator" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the right dumpster size</p>
+            </a>
+            <a href="/quote" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free quote</p>
+            </a>
+            <a href="/services" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Services</h3>
+              <p className="text-sm text-gray-600">Browse all services</p>
+            </a>
+            <a href="/cities" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find service in your city</p>
+            </a>
+            <a href="/blog" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Blog</h3>
+              <p className="text-sm text-gray-600">Tips and guides</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

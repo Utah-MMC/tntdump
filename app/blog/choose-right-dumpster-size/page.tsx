@@ -189,7 +189,43 @@ export default function ChooseRightDumpsterSizePage() {
         </div>
       </section>
 
-      {/* CTA Section */}\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
+      {/* Related Services Section */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Explore Our Dumpster Rental Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <a href="/dumpsters" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+                <p className="text-sm text-gray-600">Browse all dumpster sizes and types</p>
+              </a>
+              <a href="/calculator" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+                <p className="text-sm text-gray-600">Calculate the right size for your project</p>
+              </a>
+              <a href="/quote" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+                <p className="text-sm text-gray-600">Request a free dumpster rental quote</p>
+              </a>
+              <a href="/dumpsters/residential" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
+                <p className="text-sm text-gray-600">Home dumpster rental services</p>
+              </a>
+              <a href="/dumpsters/commercial" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpsters</h3>
+                <p className="text-sm text-gray-600">Business dumpster rental</p>
+              </a>
+              <a href="/services" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">All Services</h3>
+                <p className="text-sm text-gray-600">Browse all dumpster rental services</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">

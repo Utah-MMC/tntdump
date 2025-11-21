@@ -99,7 +99,7 @@ export default function CommercialDumpsterPage() {
               {/* SEO SWEEP START [/dumpsters/commercial] */}
               <div className="text-sm text-gray-700 space-y-2">
                 <p>
-                  Contractor or facilities lead? See our <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> notes and <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> overview. Serving Salt Lake & Utah County.
+                  Contractor or facilities lead? See our <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> notes and <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> overview. Serving Salt Lake & Utah County. Check out our <a href="/dumpsters/industrial" className="text-blue-600 hover:underline">industrial dumpster rental</a> for heavy-duty needs or <a href="/dumpsters/long-term" className="text-blue-600 hover:underline">long-term dumpster rental</a> for ongoing projects.
                 </p>
               </div>
               {/* SEO SWEEP END [/dumpsters/commercial] */}
@@ -163,6 +163,50 @@ export default function CommercialDumpsterPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
             <a href="tel:+18012099013" className="bg-white text-primary-600 hover:bg-gray-100 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center">Call Now</a>
             <a href="/contact" className="border-2 border-white text-white hover:bg-white hover:text-primary-600 font-semibold py-3 px-6 rounded-lg transition-colors duration-200 text-center">Contact Us</a>
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources Section */}
+      <section className="section-padding bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Related Resources</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Explore more commercial dumpster rental information</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental services</p>
+            </a>
+            <a href="/dumpsters/industrial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Industrial Dumpsters</h3>
+              <p className="text-sm text-gray-600">Heavy-duty dumpster solutions</p>
+            </a>
+            <a href="/dumpsters/long-term" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Long-Term Rentals</h3>
+              <p className="text-sm text-gray-600">Ongoing dumpster service</p>
+            </a>
+            <a href="/blog/commercial-dumpster-rental-guide" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Guide</h3>
+              <p className="text-sm text-gray-600">Business dumpster rental guide</p>
+            </a>
+            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free quote</p>
+            </a>
+            <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Services</h3>
+              <p className="text-sm text-gray-600">Browse all services</p>
+            </a>
+            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find service in your city</p>
+            </a>
+            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Blog</h3>
+              <p className="text-sm text-gray-600">Tips and guides</p>
+            </a>
           </div>
         </div>
       </section>

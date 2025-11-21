@@ -178,7 +178,43 @@ export default function CommercialDumpsterRentalGuidePage() {
             </ul>
           </div>
         </div>
-      </section>\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
+      </section>
+
+      {/* Related Services Section */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Explore Our Commercial Dumpster Services</h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+              <a href="/dumpsters/commercial" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpsters</h3>
+                <p className="text-sm text-gray-600">Business dumpster rental solutions</p>
+              </a>
+              <a href="/dumpsters/industrial" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Industrial Dumpsters</h3>
+                <p className="text-sm text-gray-600">Heavy-duty dumpster solutions</p>
+              </a>
+              <a href="/dumpsters/long-term" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Long-Term Rentals</h3>
+                <p className="text-sm text-gray-600">Ongoing dumpster service</p>
+              </a>
+              <a href="/quote" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+                <p className="text-sm text-gray-600">Request a free quote</p>
+              </a>
+              <a href="/services" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">All Services</h3>
+                <p className="text-sm text-gray-600">Browse all services</p>
+              </a>
+              <a href="/cities" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+                <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+                <p className="text-sm text-gray-600">Find service in your city</p>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+\n\n      <section className="py-8 bg-white">\n        <div className="container-custom max-w-4xl mx-auto">\n          <ServingCityEnhancer />\n        </div>\n      </section>\n\n      <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Set Up Reliable Service</h2>

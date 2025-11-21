@@ -23,16 +23,16 @@ export default function ServicesPage() {
         {/* SEO SWEEP START [/services] */}
         <section className="mt-8 text-gray-700 text-sm space-y-3">
           <p>
-            Find local dumpster rental options that fit your project. We help homeowners and contractors choose the right roll off dumpster size with quick delivery in Salt Lake & Utah County.
+            Find local dumpster rental options that fit your project. We help homeowners and contractors choose the right roll off dumpster size with quick delivery in Salt Lake & Utah County. Browse our <a href="/dumpsters" className="text-blue-600 hover:underline">dumpster types</a> or use our <a href="/calculator" className="text-blue-600 hover:underline">size calculator</a>.
           </p>
           <p>
-            Planning a home cleanout, kitchen remodel, roof replacement, or landscaping project? Our team recommends sizes and confirms weight limits up front so your dumpster rental cost stays clear.
+            Planning a home cleanout, kitchen remodel, roof replacement, or landscaping project? Our team recommends sizes and confirms weight limits up front so your dumpster rental cost stays clear. See our <a href="/dumpsters/residential" className="text-blue-600 hover:underline">residential dumpster rental</a> or <a href="/dumpsters/commercial" className="text-blue-600 hover:underline">commercial dumpster rental</a> pages.
           </p>
           <p>
-            Need speed or job site support? Check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and see how we support <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> with swaps and reliable timing.
+            Need speed or job site support? Check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and see how we support <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> with swaps and reliable timing. Read our <a href="/blog" className="text-blue-600 hover:underline">dumpster rental blog</a> for tips.
           </p>
           <p>
-            For pricing details and what affects totals, review our <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> section on the homepage.
+            For pricing details and what affects totals, review our <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> section on the homepage. <a href="/quote" className="text-blue-600 hover:underline">Get a free quote</a> for your specific project needs.
           </p>
         </section>
         {/* SEO SWEEP END [/services] */}
@@ -134,6 +134,50 @@ export default function ServicesPage() {
         }}
       />
       {/* SEO SWEEP END [/services-schema] */}
+
+      {/* Related Resources Section */}
+      <section className="mt-16 py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Related Resources</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Explore more dumpster rental information and services</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+              <p className="text-sm text-gray-600">Browse residential, commercial, and specialty dumpsters</p>
+            </a>
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts and remodels</p>
+            </a>
+            <a href="/dumpsters/commercial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpsters</h3>
+              <p className="text-sm text-gray-600">Business and construction dumpster solutions</p>
+            </a>
+            <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the perfect dumpster size for your project</p>
+            </a>
+            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free dumpster rental quote</p>
+            </a>
+            <a href="/blog/choose-right-dumpster-size" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Guide</h3>
+              <p className="text-sm text-gray-600">Learn how to choose the right dumpster size</p>
+            </a>
+            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find dumpster rental in your Utah city</p>
+            </a>
+            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and expert advice</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
       <div className="sr-only">
         <a href="/services/all">View all services</a>
