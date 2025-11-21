@@ -95,11 +95,11 @@ export default function ResidentialDumpsterPage() {
               {/* SEO SWEEP START [/dumpsters/residential] */}
               <div className="text-sm text-gray-700 space-y-2">
                 <p>
-                  Ask about <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> basics or check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability. Serving Salt Lake & Utah County.
+                  Ask about <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> basics or check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability. Serving Salt Lake & Utah County. Need help choosing? Use our <a href="/calculator" className="text-blue-600 hover:underline">dumpster size calculator</a> or read our <a href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:underline">size guide</a>.
                 </p>
                 <ul className="list-disc list-inside text-gray-700">
-                  <li>Cleanouts & Moves: attic, basement, garage, estate, hoarder (15–20 yd)</li>
-                  <li>Remodels & Projects: kitchen, bathroom, roof replacement, landscaping (20–30 yd)</li>
+                  <li>Cleanouts & Moves: attic, basement, garage, estate, hoarder (15–20 yd) - see <a href="/estate-cleanouts" className="text-blue-600 hover:underline">estate cleanout services</a></li>
+                  <li>Remodels & Projects: kitchen, bathroom, roof replacement, landscaping (20–30 yd) - browse <a href="/services" className="text-blue-600 hover:underline">all services</a></li>
                 </ul>
               </div>
               {/* SEO SWEEP END [/dumpsters/residential] */}
@@ -272,6 +272,50 @@ export default function ResidentialDumpsterPage() {
         <div className="container-custom">
           <div className="max-w-md mx-auto">
             <QuickContactForm serviceType="Residential Dumpster Rental" buttonText="Get Free Estimate" />
+          </div>
+        </div>
+      </section>
+
+      {/* Related Resources Section */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Related Resources</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Explore more residential dumpster rental information</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters/commercial" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpsters</h3>
+              <p className="text-sm text-gray-600">Business dumpster rental solutions</p>
+            </a>
+            <a href="/estate-cleanouts" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
+              <p className="text-sm text-gray-600">Professional estate cleanout services</p>
+            </a>
+            <a href="/calculator" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the right dumpster size</p>
+            </a>
+            <a href="/blog/choose-right-dumpster-size" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Guide</h3>
+              <p className="text-sm text-gray-600">How to choose the right size</p>
+            </a>
+            <a href="/quote" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free quote</p>
+            </a>
+            <a href="/services" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Services</h3>
+              <p className="text-sm text-gray-600">Browse all dumpster rental services</p>
+            </a>
+            <a href="/cities" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find service in your city</p>
+            </a>
+            <a href="/blog" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Blog</h3>
+              <p className="text-sm text-gray-600">Tips and guides</p>
+            </a>
           </div>
         </div>
       </section>

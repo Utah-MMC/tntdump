@@ -154,6 +154,50 @@ export default function CitiesPage() {
           <CitySearch cities={cities} />
         </div>
       </section>
+
+      {/* Related Resources Section */}
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Dumpster Rental Services</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive dumpster rental resources</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+              <p className="text-sm text-gray-600">Residential, commercial, and specialty dumpsters</p>
+            </a>
+            <a href="/services" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Our Services</h3>
+              <p className="text-sm text-gray-600">Comprehensive dumpster rental services</p>
+            </a>
+            <a href="/calculator" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the perfect dumpster size</p>
+            </a>
+            <a href="/quote" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free dumpster rental quote</p>
+            </a>
+            <a href="/dumpsters/residential" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental</p>
+            </a>
+            <a href="/dumpsters/commercial" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Rentals</h3>
+              <p className="text-sm text-gray-600">Business dumpster rental</p>
+            </a>
+            <a href="/estate-cleanouts" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
+              <p className="text-sm text-gray-600">Professional cleanout services</p>
+            </a>
+            <a href="/blog" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and advice</p>
+            </a>
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

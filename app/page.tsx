@@ -165,6 +165,50 @@ export default function Home() {
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
 
+      {/* Crosslinks Section */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Dumpster Rental Services</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive dumpster rental resources and services</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+              <p className="text-sm text-gray-600">View residential, commercial, industrial, and specialty dumpsters</p>
+            </a>
+            <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Our Services</h3>
+              <p className="text-sm text-gray-600">Learn about our dumpster rental services and solutions</p>
+            </a>
+            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and expert advice on dumpster rentals</p>
+            </a>
+            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find dumpster rental services in your Utah city</p>
+            </a>
+            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free dumpster rental quote today</p>
+            </a>
+            <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the perfect dumpster size for your project</p>
+            </a>
+            <a href="/estate-cleanouts" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
+              <p className="text-sm text-gray-600">Professional estate cleanout services</p>
+            </a>
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts and remodels</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       <Services />
 
       {/* Pricing / How it works grid */}
