@@ -89,19 +89,6 @@ const Contact = () => {
                 aria-label="TNT Dumpsters truck video"
               />
             </div>
-
-            <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-4">Serving Area</h3>
-              <ul className="list-disc list-inside text-gray-600 space-y-2">
-                <li><a href="/ut/west-jordan/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">West Jordan</a></li>
-                <li><a href="/ut/salt-lake-city/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Salt Lake City</a></li>
-                <li><a href="/ut/murray/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Murray</a></li>
-                <li><a href="/ut/sandy/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Sandy</a></li>
-                <li><a href="/ut/draper/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Draper</a></li>
-                <li><a href="/ut/riverton/dumpster-rental" className="text-primary-600 hover:text-primary-700 hover:underline transition-colors">Riverton</a></li>
-                <li>And surrounding areas</li>
-              </ul>
-            </div>
           </div>
         </div>
       </div>

@@ -1,12 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server';
-import Stripe from 'stripe';
-
-const stripe = new Stripe(process.env.STRIPE_SECRET_KEY as string, {
-  apiVersion: '2024-11-20.acacia',
-});
+import { stripe } from '@/lib/stripe';
 
 export async function POST(request: NextRequest) {
   try {
+    if (!stripe) {
+      return NextResponse.json(
+        {
+          error: 'Payment processing is not configured',
+          message:
+            'Stripe is not set up on this environment. Please contact support or try again later.',
+        },
+        { status: 500 },
+      );
+    }
+
     const body = await request.json();
     const {
       amount,

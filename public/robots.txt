@@ -15,23 +15,3 @@ Sitemap: https://tntdump.com/sitemap.xml
 Sitemap: https://tntdump.com/sitemap-pages.xml
 Sitemap: https://tntdump.com/sitemap-cities.xml
 Sitemap: https://tntdump.com/sitemap-posts.xml
-
-# Search engines (power Google/Bing/Copilot/AI Overviews)
-User-agent: Googlebot
-Allow: /
-User-agent: Bingbot
-Allow: /
-
-# AI-specific/user-triggered crawlers
-User-agent: GPTBot            # OpenAI (ChatGPT browsing)
-Allow: /
-User-agent: PerplexityBot     # Perplexity AI
-Allow: /
-User-agent: ClaudeBot         # Anthropic (Claude)
-Allow: /
-User-agent: Claude-User
-Allow: /
-User-agent: Claude-SearchBot
-Allow: /
-User-agent: CCBot             # CommonCrawl (training & discovery)
-Allow: /
