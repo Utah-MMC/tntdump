@@ -21,7 +21,7 @@ const Services = () => {
     },
     {
       title: 'Construction Dumpster Service',
-      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolitionâ€"like concrete, lumber, drywall, and roofingâ€"so your job site stays clean and safe.',
+      description: 'Our construction dumpster service is built for contractors and DIY projects. Perfect for debris from construction and demolition—like concrete, lumber, drywall, and roofing—so your job site stays clean and safe.',
       image: '/images/construction-dumpster-sizes.jpg',
       href: '/dumpsters/concrete',
       alt: 'Construction dumpster rental service for construction and demolition debris'

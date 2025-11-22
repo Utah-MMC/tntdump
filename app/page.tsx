@@ -201,101 +201,6 @@ export default function Home() {
 
       {/* Dumpster Calculator Section */}
       <DumpsterCalculator />
-
-      {/* Crosslinks Section */}
-      <section className="py-12 bg-gray-50">
-        <div className="container-custom">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Dumpster Rental Services</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive dumpster rental resources and services</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-            <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
-              <p className="text-sm text-gray-600">View residential, commercial, industrial, and specialty dumpsters</p>
-            </a>
-            <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Our Services</h3>
-              <p className="text-sm text-gray-600">Learn about our dumpster rental services and solutions</p>
-            </a>
-            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
-              <p className="text-sm text-gray-600">Tips, guides, and expert advice on dumpster rentals</p>
-            </a>
-            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
-              <p className="text-sm text-gray-600">Find dumpster rental services in your Utah city</p>
-            </a>
-            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
-              <p className="text-sm text-gray-600">Request a free dumpster rental quote today</p>
-            </a>
-            <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
-              <p className="text-sm text-gray-600">Find the perfect dumpster size for your project</p>
-            </a>
-            <a href="/estate-cleanouts" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
-              <p className="text-sm text-gray-600">Professional estate cleanout services</p>
-            </a>
-            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
-              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts and remodels</p>
-            </a>
-          </div>
-        </div>
-      </section>
-
-      <Services />
-
-      {/* Pricing / How it works grid */}
-      <section id="pricing" className="py-16 bg-white">
-        <div className="container-custom">
-          <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold gradient-text">Pricing & How It Works</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Simple, transparent options. Get a firm dumpster rental quote by calling (801) 209-9013.</p>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">How much is a dumpster rental?</h3>
-              <p className="text-gray-700 text-sm">
-                Dumpster rental price varies by size, material, and location. Call for a fast dumpster rental quote; we'll confirm weight limits and the best roll off dumpster for your project.
-              </p>
-            </div>
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">What affects dumpster rental cost?</h3>
-              <p className="text-gray-700 text-sm">
-                The biggest factors are tonnage, dumpster size, rental time, route distance, and disposal fees. We price delivery dumpster rental up front so there are no surprises.
-              </p>
-            </div>
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">Do you offer same day dumpster rental?</h3>
-              <p className="text-gray-700 text-sm">
-                Yes—on many days. Contact us early and we'll try to place a roll off dumpster the same day in Salt Lake & Utah County when routes allow.
-              </p>
-            </div>
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">How do delivery and pick-up work?</h3>
-              <p className="text-gray-700 text-sm">
-                We schedule delivery dumpster rental, place it carefully on your driveway or job site, and return for pick-up on your call or on the preset date. Easy swaps are available.
-              </p>
-            </div>
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">Can I get a fixed price before delivery?</h3>
-              <p className="text-gray-700 text-sm">
-                Absolutely. We confirm your dumpster rental price and expectations (material type, size, timing) before scheduling. No hidden fees—just clear terms.
-              </p>
-            </div>
-            <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">Do you help choose the right size?</h3>
-              <p className="text-gray-700 text-sm">
-                Yes. Tell us about your project and we'll recommend a roll off size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-      
       
       {/* Cities Section (replaced cards with linked list) */}
       <section className="py-16 bg-white">
@@ -308,6 +213,23 @@ export default function Home() {
               TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
+            <p className="mt-3 text-xs text-gray-500">
+              Primary dumpster rental service areas include Davis County, Salt Lake County, Utah County, and Weber County.
+            </p>
+          </div>
+
+          {/* Service areas visual map */}
+          <div className="max-w-3xl mx-auto mb-12">
+            <Image
+              src="/images/service_areas.png"
+              alt="Utah dumpster rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
+              width={1200}
+              height={400}
+              loading="lazy"
+              quality={70}
+              className="w-full h-auto rounded-lg shadow-md"
+              sizes="(min-width: 1024px) 50vw, 100vw"
+            />
           </div>
 
           {/* County grouped city links */}
@@ -387,6 +309,101 @@ export default function Home() {
           </div>
         </div>
       </section>
+      
+      <Services />
+      
+      {/* Crosslinks Section (moved below Services) */}
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Dumpster Rental Services</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive dumpster rental resources and services</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
+              <p className="text-sm text-gray-600">View residential, commercial, industrial, and specialty dumpsters</p>
+            </a>
+            <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Our Services</h3>
+              <p className="text-sm text-gray-600">Learn about our dumpster rental services and solutions</p>
+            </a>
+            <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and expert advice on dumpster rentals</p>
+            </a>
+            <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
+              <p className="text-sm text-gray-600">Find dumpster rental services in your Utah city</p>
+            </a>
+            <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
+              <p className="text-sm text-gray-600">Request a free dumpster rental quote today</p>
+            </a>
+            <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Find the perfect dumpster size for your project</p>
+            </a>
+            <a href="/estate-cleanouts" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
+              <p className="text-sm text-gray-600">Professional estate cleanout services</p>
+            </a>
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
+              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts and remodels</p>
+            </a>
+          </div>
+        </div>
+      </section>
+      
+      {/* Pricing / How it works grid */}
+      <section id="pricing" className="py-16 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold gradient-text">Pricing & How It Works</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Simple, transparent options. Get a firm dumpster rental quote by calling (801) 209-9013.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">How much is a dumpster rental?</h3>
+              <p className="text-gray-700 text-sm">
+                Dumpster rental price varies by size, material, and location. Call for a fast dumpster rental quote; we'll confirm weight limits and the best roll off dumpster for your project.
+              </p>
+            </div>
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">What affects dumpster rental cost?</h3>
+              <p className="text-gray-700 text-sm">
+                The biggest factors are tonnage, dumpster size, rental time, route distance, and disposal fees. We price delivery dumpster rental up front so there are no surprises.
+              </p>
+            </div>
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">Do you offer same day dumpster rental?</h3>
+              <p className="text-gray-700 text-sm">
+                Yes—on many days. Contact us early and we'll try to place a roll off dumpster the same day in Salt Lake & Utah County when routes allow.
+              </p>
+            </div>
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">How do delivery and pick-up work?</h3>
+              <p className="text-gray-700 text-sm">
+                We schedule delivery dumpster rental, place it carefully on your driveway or job site, and return for pick-up on your call or on the preset date. Easy swaps are available.
+              </p>
+            </div>
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">Can I get a fixed price before delivery?</h3>
+              <p className="text-gray-700 text-sm">
+                Absolutely. We confirm your dumpster rental price and expectations (material type, size, timing) before scheduling. No hidden fees—just clear terms.
+              </p>
+            </div>
+            <div className="border rounded-lg p-6 bg-gray-50">
+              <h3 className="font-semibold text-gray-900 mb-3">Do you help choose the right size?</h3>
+              <p className="text-gray-700 text-sm">
+                Yes. Tell us about your project and we'll recommend a roll off size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      
       
       <About />
       <Contact />
