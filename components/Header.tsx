@@ -10,7 +10,7 @@ const Header = () => {
   const [isToolsOpen, setIsToolsOpen] = useState(false)
   const [isAboutOpen, setIsAboutOpen] = useState(false)
   const [isContactOpen, setIsContactOpen] = useState(false)
-  
+
   // Timeout refs for dropdown delays
   const dumpstersTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const toolsTimeoutRef = useRef<NodeJS.Timeout | null>(null)
@@ -70,6 +70,7 @@ const Header = () => {
     }
   }, [])
 
+  // Helper functions for dropdown management
   const handleDumpstersMouseEnter = () => {
     if (dumpstersTimeoutRef.current) clearTimeout(dumpstersTimeoutRef.current)
     setIsDumpstersOpen(true)
