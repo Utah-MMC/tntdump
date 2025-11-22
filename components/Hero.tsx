@@ -3,8 +3,6 @@
 import React, { useState } from 'react'
 import { Phone, Clock, CheckCircle, Star, Truck, Shield, Zap } from 'lucide-react'
 import Image from 'next/image'
-import dynamic from 'next/dynamic'
-const ReCAPTCHA = dynamic(() => import('react-google-recaptcha'), { ssr: false })
 
 const Hero = () => {
   const [formData, setFormData] = useState({
@@ -14,15 +12,9 @@ const Hero = () => {
     service: 'Residential Dumpster Rentals',
     message: ''
   })
-  const [captchaToken, setCaptchaToken] = useState<string | null>(null)
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle')
   const [errorMessage, setErrorMessage] = useState('')
-
-  const [recaptchaKey, setRecaptchaKey] = useState(0)
-
-
-  const recaptchaSiteKey = process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ''
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -44,12 +36,6 @@ const Hero = () => {
       return
     }
     
-    if (recaptchaSiteKey && !captchaToken) {
-      setErrorMessage('Please complete the reCAPTCHA verification')
-      setSubmitStatus('error')
-      return
-    }
-
     setIsSubmitting(true)
     
     try {
@@ -57,7 +43,7 @@ const Hero = () => {
       const response = await fetch('/api/contact', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ ...formData, captchaToken })
+        body: JSON.stringify(formData)
       })
 
       const result = await response.json()
@@ -84,10 +70,6 @@ const Hero = () => {
         service: 'Residential Dumpster Rentals',
         message: ''
       })
-      if (recaptchaSiteKey) {
-        setCaptchaToken(null)
-        setRecaptchaKey((k) => k + 1)
-      }
       setSubmitStatus('success')
       
     } catch (error) {
@@ -97,11 +79,6 @@ const Hero = () => {
     } finally {
       setIsSubmitting(false)
     }
-  }
-
-  const handleCaptchaChange = (token: string | null) => {
-    console.log('reCAPTCHA token:', token)
-    setCaptchaToken(token)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -139,15 +116,17 @@ const Hero = () => {
 
       <div className="relative z-10 w-full">
         <div className="container-custom">
-          <div className="grid lg:grid-cols-2 gap-8 items-center max-w-6xl mx-auto">
+          <div className="max-w-6xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-6 leading-tight whitespace-nowrap">
+              Dumpster Rental in Salt Lake County
+            </h1>
+          </div>
+          <div className="grid lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
             {/* Left Column - Content */}
             <div className="text-white">
               <div className="mb-6">
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
-                  Dumpster Rental in Salt Lake County
-                </h1>
                 <p className="text-lg lg:text-xl text-blue-100 mb-3 leading-relaxed">
-                  Over 55 years of experience providing reliable, affordable dumpster rental services throughout the Wasatch Front area.
+                  Over 55 years delivering reliable, affordable dumpster rentals across the Wasatch Front.
                 </p>
                 {/* Introductory SEO copy */}
                 <p className="text-sm sm:text-base text-blue-100 mb-2 leading-relaxed">
@@ -233,7 +212,7 @@ const Hero = () => {
 
             {/* Right Column - Contact/Quote Form */}
             <div id="quote" className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-white mb-1">Get a dumpster rental quote</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-1">Get a Dumpster Rental Quote</h3>
               <p className="text-blue-100 text-xs mb-3">Fast delivery dumpster rental from a local team. We’ll confirm pricing and timing ASAP.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -314,19 +293,6 @@ const Hero = () => {
                   />
                 </div>
 
-                {/* Row 4: reCAPTCHA (optional) */}
-                {recaptchaSiteKey && (
-                  <div className="flex justify-center">
-                    <ReCAPTCHA
-                      key={recaptchaKey}
-                      sitekey={recaptchaSiteKey}
-                      onChange={handleCaptchaChange}
-                      theme="light"
-                      size="compact"
-                    />
-                  </div>
-                )}
-
                 {/* Status Messages */}
                 {submitStatus === 'success' && (
                   <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
@@ -345,8 +311,8 @@ const Hero = () => {
 
                 <button
                   type="submit"
-                  disabled={isSubmitting || (!!recaptchaSiteKey && !captchaToken)}
-                  className={`w-full bg-yellow-400 text-blue-900 font-bold rounded-lg px-6 py-3 hover:bg-yellow-300 transition-colors ${isSubmitting || (!!recaptchaSiteKey && !captchaToken) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                  disabled={isSubmitting}
+                  className={`w-full bg-yellow-400 text-blue-900 font-bold rounded-lg px-6 py-3 hover:bg-yellow-300 transition-colors ${isSubmitting ? 'opacity-50 cursor-not-allowed' : ''}`}
                 >
                   {isSubmitting ? 'Submitting...' : 'Submit Request'}
                 </button>

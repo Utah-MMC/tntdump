@@ -152,7 +152,7 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
   const recommendedSizes = selectedProjectData?.recommendedSizes || []
 
   return (
-    <section className={embedded ? '' : 'py-16 bg-[#facc15]/20'}>
+    <section className={embedded ? '' : 'py-16'}>
       <div className={embedded ? '' : 'container-custom'}>
         <div className={`text-center ${embedded ? 'mb-6' : 'mb-12'}`}>
           <div className="flex items-center justify-center mb-4">
