@@ -69,17 +69,11 @@ const Contact = () => {
               </div>
             </div>
 
-            <div className="bg-primary-50 p-6 rounded-lg">
-              <h3 className="font-semibold text-gray-900 mb-3">About Us</h3>
-              <p className="text-gray-600">
-                By selecting TNT Dumpsters for your waste management requirements, you are opting for a firm with a demonstrated history of dependability and high performance. Call or text our family-owned and locally operated enterprise today!
-              </p>
-            </div>
           </div>
 
           {/* Right Column - Video */}
           <div className="space-y-6">
-            <div className="relative h-64 rounded-lg overflow-hidden">
+            <div className="relative h-[32rem] rounded-lg overflow-hidden">
               <video
                 className="absolute inset-0 w-full h-full object-cover"
                 src="/images/tntvideo.mp4"

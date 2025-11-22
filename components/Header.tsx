@@ -3,7 +3,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Phone, Menu, X, ChevronDown, Star } from 'lucide-react'
 import Link from 'next/link'
-import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)

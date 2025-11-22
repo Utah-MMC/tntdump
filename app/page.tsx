@@ -206,9 +206,11 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
-            <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4">
-              Cities We Serve
-            </h2>
+            <a href="/cities" className="inline-block">
+              <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-4 hover:text-blue-600 transition-colors">
+                Cities We Serve
+              </h2>
+            </a>
             <p className="text-sm text-gray-600 max-w-3xl mx-auto">
               TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
@@ -220,16 +222,18 @@ export default function Home() {
 
           {/* Service areas visual map */}
           <div className="max-w-3xl mx-auto mb-12">
-            <Image
-              src="/images/service_areas.png"
-              alt="Utah dumpster rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
-              width={1200}
-              height={400}
-              loading="lazy"
-              quality={70}
-              className="w-full h-auto rounded-lg shadow-md"
-              sizes="(min-width: 1024px) 50vw, 100vw"
-            />
+            <a href="/cities" className="block">
+              <Image
+                src="/images/service_areas.png"
+                alt="Utah dumpster rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
+                width={1200}
+                height={400}
+                loading="lazy"
+                quality={70}
+                className="w-full h-auto rounded-lg shadow-md"
+                sizes="(min-width: 1024px) 50vw, 100vw"
+              />
+            </a>
           </div>
 
           {/* County grouped city links */}
@@ -299,14 +303,6 @@ export default function Home() {
             )
           })()}
 
-          <div className="text-center mt-12">
-            <a 
-              href="/cities" 
-              className="inline-block bg-blue-600 text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-blue-700 transition-colors"
-            >
-              View All Cities
-            </a>
-          </div>
         </div>
       </section>
       
