@@ -148,16 +148,53 @@ export default function Home() {
       {/* 3-Step Dumpster Rental Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
-          <div className="max-w-5xl mx-auto">
-            <Image
-              src="/images/3-step-process-dumpster-rental-v2.jpg"
-              alt="3 Step Dumpster Rental Process - Order, Delivery, We Pick It Up"
-              width={1600}
-              height={600}
-              quality={90}
-              className="w-full h-auto rounded-lg shadow-lg"
-              priority={false}
-            />
+          <div className="max-w-6xl mx-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              {/* Dumpster Rental Delivery */}
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/dumpster-rental-dropoff.png"
+                    alt="Professional dumpster rental delivery service with roll-off truck dropping off dumpster at job site"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Residential Dumpster Rental */}
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/dumpster-rental-driveway.jpeg"
+                    alt="Residential dumpster rental placed on driveway for home renovation and construction debris removal"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+
+              {/* Construction Dumpster Rental */}
+              <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
+                <div className="relative aspect-[4/3]">
+                  <Image
+                    src="/images/open-dumpster.png"
+                    alt="Open dumpster rental at construction site for efficient waste management and debris disposal"
+                    fill
+                    sizes="(min-width: 768px) 33vw, 100vw"
+                    quality={85}
+                    className="object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

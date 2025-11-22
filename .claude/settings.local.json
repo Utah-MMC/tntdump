@@ -16,7 +16,11 @@
       "Bash(sed:*)",
       "Bash(xargs:*)",
       "Bash(git worktree:*)",
-      "Bash(git branch:*)"
+      "Bash(git branch:*)",
+      "Bash(npm install:*)",
+      "Bash(iconv:*)",
+      "Bash(.env.local.utf8)",
+      "Bash(.env.local.nobom)"
     ],
     "deny": [],
     "ask": []
