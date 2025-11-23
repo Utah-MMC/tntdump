@@ -228,7 +228,7 @@ export default function PaymentForm({
         )}
       </button>
 
-      <p className="text-xs text-gray-500 text-center">
+      <p className="text-xs text-gray-600 text-center">
         By completing this order, you agree to our{' '}
         <a href="/terms-of-service" className="text-blue-600 hover:underline">
           Terms of Service

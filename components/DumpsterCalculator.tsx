@@ -228,7 +228,7 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                         <div className="text-right">
                           <div className="text-xs text-gray-600">1 day</div>
                           <div className={`${embedded ? 'text-lg' : 'text-xl'} font-bold text-blue-600`}>{size.price1Day}</div>
-                          <div className="text-[11px] text-gray-500">
+                          <div className="text-[11px] text-gray-600">
                             {selectedProject === 'concrete' && concreteTonnage[size.size]
                               ? concreteTonnage[size.size].tons1Day
                               : size.tons1Day}
@@ -239,16 +239,16 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
                         <div className="text-right">
                           <div className="text-xs text-gray-600">7 days</div>
                           <div className={`${embedded ? 'text-base' : 'text-lg'} font-semibold text-blue-600`}>{size.price7Day}</div>
-                          <div className="text-[11px] text-gray-500">
+                          <div className="text-[11px] text-gray-600">
                             {selectedProject === 'concrete' && concreteTonnage[size.size]
                               ? concreteTonnage[size.size].tons7Day
                               : size.tons7Day}
                           </div>
                         </div>
                       </div>
-                      <p className="relative z-20 text-[11px] text-gray-500 mb-2">Overage: {size.overagePerTon}</p>
+                      <p className="relative z-20 text-[11px] text-gray-600 mb-2">Overage: {size.overagePerTon}</p>
                       <p className={`relative z-20 ${embedded ? 'text-xs' : 'text-sm'} text-gray-600 mb-2`}>{size.capacity}</p>
-                      <p className="relative z-20 text-xs text-gray-500 mb-3">{size.dimensions}</p>
+                      <p className="relative z-20 text-xs text-gray-600 mb-3">{size.dimensions}</p>
                       <p className={`relative z-20 ${embedded ? 'text-xs' : 'text-sm'} text-gray-700`}>{size.description}</p>
                       {selectedProject === 'concrete' && concreteNotes[size.size] && (
                         <div className="relative z-20 mt-3 pt-3 border-t border-blue-100">

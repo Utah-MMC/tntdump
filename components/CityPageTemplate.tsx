@@ -176,7 +176,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                     <p className="text-sm text-gray-600">2 tons included</p>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <p className="text-xs text-gray-600 mb-4">Additional weight: $55 per ton</p>
                 <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
               </div>
 
@@ -192,7 +192,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                     <p className="text-sm text-gray-600">2 tons included</p>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <p className="text-xs text-gray-600 mb-4">Additional weight: $55 per ton</p>
                 <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
               </div>
 
@@ -208,7 +208,7 @@ export default function CityPageTemplate({ city, state }: CityPageTemplateProps)
                     <p className="text-sm text-gray-600">2 tons included</p>
                   </div>
                 </div>
-                <p className="text-xs text-gray-500 mb-4">Additional weight: $55 per ton</p>
+                <p className="text-xs text-gray-600 mb-4">Additional weight: $55 per ton</p>
                 <a href="tel:+18012099013" className="btn-primary w-full">Get Quote</a>
               </div>
 

@@ -173,7 +173,7 @@ export default function Home() {
                     alt="Residential dumpster rental placed on driveway for home renovation and construction debris removal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
-                    quality={85}
+                  quality={70}
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
                   />
@@ -215,7 +215,7 @@ export default function Home() {
               TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
-            <p className="mt-3 text-xs text-gray-500">
+            <p className="mt-3 text-xs text-gray-600">
               Primary dumpster rental service areas include Davis County, Salt Lake County, Utah County, and Weber County.
             </p>
           </div>
