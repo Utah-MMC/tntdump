@@ -154,20 +154,25 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
   return (
     <section className={embedded ? '' : 'py-16'}>
       <div className={embedded ? '' : 'container-custom'}>
-        <div className={`text-center ${embedded ? 'mb-6' : 'mb-12'}`}>
-          <div className="flex items-center justify-center mb-4">
-            <Calculator className="h-8 w-8 text-blue-600 mr-3" />
-            <h2 className={`${embedded ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-4xl'} font-bold text-gray-900`}>
-              Dumpster Size Calculator
-            </h2>
+        <div
+          className={
+            embedded ? '' : 'max-w-4xl mx-auto bg-yellow-50 rounded-2xl shadow-md px-6 sm:px-8 py-10'
+          }
+        >
+          <div className={`text-center ${embedded ? 'mb-6' : 'mb-8'}`}>
+            <div className="flex items-center justify-center mb-4">
+              <Calculator className="h-8 w-8 text-blue-600 mr-3" />
+              <h2 className={`${embedded ? 'text-2xl lg:text-3xl' : 'text-3xl lg:text-4xl'} font-bold text-gray-900`}>
+                Dumpster Size Calculator
+              </h2>
+            </div>
+            <p className={`${embedded ? 'text-base' : 'text-lg'} text-gray-600 max-w-3xl mx-auto`}>
+              Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
+              Get instant recommendations and pricing.
+            </p>
           </div>
-          <p className={`${embedded ? 'text-base' : 'text-lg'} text-gray-600 max-w-3xl mx-auto`}>
-            Not sure what size dumpster you need? Use our calculator to find the perfect size for your project. 
-            Get instant recommendations and pricing.
-          </p>
-        </div>
 
-        <div className={`${embedded ? '' : 'max-w-4xl mx-auto'}`}>
+          <div>
           {/* Step 1: Project Type Selection */}
           <div className="mb-8">
             <h3 className="text-xl font-semibold text-gray-900 mb-6">Step 1: What type of project are you working on?</h3>
@@ -357,6 +362,7 @@ const DumpsterCalculator = ({ embedded = false }: DumpsterCalculatorProps) => {
               </div>
             </div>
           )}
+          </div>
         </div>
       </div>
     </section>
