@@ -89,3 +89,5 @@ jspm_packages/
 .vercel
 
 desktop.ini
+
+.env.local
