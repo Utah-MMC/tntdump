@@ -1,7 +1,7 @@
 'use client'
 
 import dynamic from 'next/dynamic'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
 const ChatWidgetInner = dynamic(() => import('./ChatWidget'), {
   ssr: false,
@@ -9,27 +9,26 @@ const ChatWidgetInner = dynamic(() => import('./ChatWidget'), {
 })
 
 export default function DeferredChatWidget() {
-  const [shouldRender, setShouldRender] = useState(false)
+  const [hasClicked, setHasClicked] = useState(false)
 
-  useEffect(() => {
-    // Defer chat widget until after main content is interactive
-    const onIdle = () => setShouldRender(true)
+  // Lightweight launcher: only when the user clicks do we load the heavy chat widget bundle.
+  if (!hasClicked) {
+    return (
+      <div className="fixed bottom-4 right-4 z-[60]">
+        <button
+          type="button"
+          aria-label="Open chat"
+          onClick={() => setHasClicked(true)}
+          className="relative bg-primary-600 text-white rounded-full shadow-lg px-4 py-3 hover:bg-primary-700 transition-colors"
+        >
+          Chat with us
+        </button>
+      </div>
+    )
+  }
 
-    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
-      ;(window as typeof window & { requestIdleCallback?: (cb: () => void) => number }).requestIdleCallback?.(
-        onIdle
-      )
-    } else if (typeof window !== 'undefined') {
-      const timeoutId = window.setTimeout(onIdle, 5000)
-      return () => window.clearTimeout(timeoutId)
-    } else {
-      // Fallback for non-browser (shouldn't normally hit)
-      setShouldRender(true)
-    }
-  }, [])
-
-  if (!shouldRender) return null
   return <ChatWidgetInner />
 }
+
 
 
