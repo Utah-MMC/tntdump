@@ -252,7 +252,7 @@ export default function QuoteForm({ onFormSubmit, initialData }: QuoteFormProps)
               min={getMinDeliveryDate()}
               className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
             />
-            <p className="text-xs text-gray-500 mt-1">Minimum 48 hours notice</p>
+            <p className="text-xs text-gray-600 mt-1">Minimum 48 hours notice</p>
           </div>
 
           <div>
@@ -316,7 +316,7 @@ export default function QuoteForm({ onFormSubmit, initialData }: QuoteFormProps)
         Continue to Payment
       </button>
 
-      <p className="text-xs text-gray-500 text-center">
+      <p className="text-xs text-gray-600 text-center">
         By continuing, you agree to our{' '}
         <a href="/terms-of-service" className="text-blue-600 hover:underline">
           Terms of Service

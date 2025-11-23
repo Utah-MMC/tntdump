@@ -93,7 +93,7 @@ const Reviews = () => {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="font-semibold text-gray-900">{review.name}</p>
-                  <p className="text-sm text-gray-500">{review.location}</p>
+                  <p className="text-sm text-gray-600">{review.location}</p>
                   <p className="text-xs text-blue-600 mt-1">{review.service}</p>
                 </div>
               </div>

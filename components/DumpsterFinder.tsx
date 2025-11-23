@@ -105,7 +105,7 @@ export default function DumpsterFinder() {
         <span className="text-gray-300">•</span>
         <span>SMS updates</span>
       </div>
-      <div className="text-xs text-gray-500 mt-1">*Order by 10am for most ZIP codes.</div>
+      <div className="text-xs text-gray-600 mt-1">*Order by 10am for most ZIP codes.</div>
 
       <form onSubmit={onSubmit} className="mt-6 space-y-6" aria-labelledby="dumpster-finder">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
@@ -190,7 +190,7 @@ export default function DumpsterFinder() {
             <div className="font-semibold">{r.sizeYd}-yard Dumpster</div>
             <div className="text-sm text-gray-600">{r.bestFor}</div>
             <div className="text-sm mt-2">From ${r.priceMin === r.priceMax ? r.priceMin : `${r.priceMin}–${r.priceMax}`}</div>
-            <div className="text-xs text-gray-500">{r.etaText}</div>
+            <div className="text-xs text-gray-600">{r.etaText}</div>
           </div>
         ))}
       </div>

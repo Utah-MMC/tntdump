@@ -10,6 +10,12 @@
   body {
     @apply text-gray-900 bg-white;
   }
+
+  /* Make inline links in text blocks clearly distinguishable (not just color) */
+  p a,
+  li a {
+    @apply underline underline-offset-2 decoration-2;
+  }
 }
 
 @layer components {

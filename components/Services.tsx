@@ -36,7 +36,7 @@ const Services = () => {
             Our Dumpster Services
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-            We offer a comprehensive range of dumpster rental services to meet all your waste management needs. From residential cleanouts to large-scale industrial projects, we have the right solution for you. Learn about <a href="#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> or jump to <a href="#quote" className="text-blue-600 hover:underline">get a quote</a>.
+            We offer a comprehensive range of dumpster rental services to meet all your waste management needs. From residential cleanouts to large-scale industrial projects, we have the right solution for you. Learn about <a href="#pricing" className="text-blue-600 font-semibold">dumpster rental cost</a> or jump to <a href="#quote" className="text-blue-600 font-semibold">get a quote</a>.
           </p>
         </div>
 
@@ -79,13 +79,13 @@ const Services = () => {
           <div id="same-day">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Same-Day & Delivery</h3>
             <p className="text-gray-700 text-sm">
-              Need speed? Our <a href="#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> depends on route capacity, but we always move fast. Expect reliable delivery dumpster rental with careful driveway placement, options for a roll off dumpster in tight spots, and local dumpster rental pros who communicate ETA and pickup windows.
+              Need speed? Our <a href="#same-day" className="text-blue-600 font-semibold">same day dumpster rental</a> depends on route capacity, but we always move fast. Expect reliable delivery dumpster rental with careful driveway placement, options for a roll off dumpster in tight spots, and local dumpster rental pros who communicate ETA and pickup windows.
             </p>
           </div>
           <div id="contractors">
             <h3 className="text-xl font-bold text-gray-900 mb-2">Contractors & Job Sites</h3>
             <p className="text-gray-700 text-sm">
-              Built for crews: <a href="#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> sized for roofing, demo, and heavy debris with easy swaps/haul-offs to keep production moving. Count on dependable routes, job site dumpster rental guidance, and clear paperwork for your GC or homeowner.
+              Built for crews: <a href="#contractors" className="text-blue-600 font-semibold">construction dumpster rental</a> sized for roofing, demo, and heavy debris with easy swaps/haul-offs to keep production moving. Count on dependable routes, job site dumpster rental guidance, and clear paperwork for your GC or homeowner.
             </p>
           </div>
         </div>
@@ -96,28 +96,28 @@ const Services = () => {
             <h3 className="font-semibold text-gray-900 mb-2">Cleanouts & Moves</h3>
             <p className="text-gray-700 text-sm mb-2">Perfect for quick home cleanups and seasonal purges.</p>
             <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-              <li>bin rental for attic cleanout <span className="text-gray-500">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for basement cleanout <span className="text-gray-500">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for garage cleanout <span className="text-gray-500">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for estate cleanout <span className="text-gray-500">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for foreclosure cleanout <span className="text-gray-500">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for hoarder cleanup <span className="text-gray-500">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for home cleanout <span className="text-gray-500">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for moving <span className="text-gray-500">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for spring cleaning <span className="text-gray-500">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for storm cleanup <span className="text-gray-500">(typical size: 20 yd)</span></li>
+              <li>bin rental for attic cleanout <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li>bin rental for basement cleanout <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li>bin rental for garage cleanout <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li>bin rental for estate cleanout <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li>bin rental for foreclosure cleanout <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li>bin rental for hoarder cleanup <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li>bin rental for home cleanout <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li>bin rental for moving <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li>bin rental for spring cleaning <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li>bin rental for storm cleanup <span className="text-gray-600">(typical size: 20 yd)</span></li>
             </ul>
           </div>
           <div>
             <h3 className="font-semibold text-gray-900 mb-2">Remodels & Projects</h3>
             <p className="text-gray-700 text-sm mb-2">Keep work areas clean and safe during upgrades.</p>
             <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-              <li>bin rental for kitchen remodel <span className="text-gray-500">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for bathroom remodel <span className="text-gray-500">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for remodel <span className="text-gray-500">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for renovation <span className="text-gray-500">(typical size: 20 yd)</span></li>
-              <li>bin rental for roof replacement <span className="text-gray-500">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for landscaping <span className="text-gray-500">(typical size: 10–15 yd)</span></li>
+              <li>bin rental for kitchen remodel <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li>bin rental for bathroom remodel <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li>bin rental for remodel <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li>bin rental for renovation <span className="text-gray-600">(typical size: 20 yd)</span></li>
+              <li>bin rental for roof replacement <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li>bin rental for landscaping <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
             </ul>
           </div>
         </div>

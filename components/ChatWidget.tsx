@@ -394,7 +394,7 @@ export default function ChatWidget() {
                 Send
               </button>
             </div>
-            <div className="text-xs text-gray-500 mt-2">By chatting, you agree to our terms. For urgent help call {DISPLAY_PHONE}.</div>
+            <div className="text-xs text-gray-600 mt-2">By chatting, you agree to our terms. For urgent help call {DISPLAY_PHONE}.</div>
           </div>
         </div>
       )}

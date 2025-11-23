@@ -5,9 +5,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
-import dynamic from 'next/dynamic'
-
-const ChatWidget = dynamic(() => import('@/components/ChatWidget'), { ssr: false, loading: () => null })
+import DeferredChatWidget from '@/components/DeferredChatWidget'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -59,8 +57,13 @@ export const metadata: Metadata = {
 export const viewport: Viewport = {
   width: 'device-width',
   initialScale: 1,
-  maximumScale: 1,
 }
+
+// Allow easy runtime control over non-essential third-party analytics
+const ENABLE_AHREFS =
+  typeof process.env.NEXT_PUBLIC_ENABLE_AHREFS === 'undefined'
+    ? true
+    : process.env.NEXT_PUBLIC_ENABLE_AHREFS !== 'false'
 
 export default function RootLayout({
   children,
@@ -71,7 +74,7 @@ export default function RootLayout({
     <html lang="en">
       <head>
         {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="afterInteractive">
+        <Script id="gtm-script" strategy="lazyOnload">
           {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
           new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
           j=d.createElement(s),dl=l!='dataLayer'?('&l='+l):'';j.async=true;j.src=
@@ -97,10 +100,16 @@ export default function RootLayout({
         <link rel="icon" type="image/png" sizes="192x192" href="/android-chrome-192x192.png" />
         <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/site.webmanifest" />
-        <Script src="https://analytics.ahrefs.com/analytics.js" data-key="J6l/Si6YRb7vUC03WX6kZQ" strategy="afterInteractive" />
+        {ENABLE_AHREFS && (
+          <Script
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key="J6l/Si6YRb7vUC03WX6kZQ"
+            strategy="lazyOnload"
+          />
+        )}
         {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="afterInteractive" />
-        <Script id="gtm-init" strategy="afterInteractive">
+        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="lazyOnload" />
+        <Script id="gtm-init" strategy="lazyOnload">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
@@ -186,7 +195,7 @@ export default function RootLayout({
         <Header />
         {children}
         <Footer />
-        <ChatWidget />
+        <DeferredChatWidget />
       </body>
     </html>
   )

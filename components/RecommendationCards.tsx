@@ -52,7 +52,7 @@ export default function RecommendationCards({ recommendations = [], zip = '' }: 
           <div className="mt-4 font-semibold">
             From ${rec.priceMin === rec.priceMax ? rec.priceMin : `${rec.priceMin}–${rec.priceMax}`} <span className="font-normal text-gray-600">(7 days, delivery included)</span>
           </div>
-          <div className="text-xs text-gray-500">{rec.etaText}</div>
+          <div className="text-xs text-gray-600">{rec.etaText}</div>
           <div className="mt-5 flex gap-3">
             <a
               href={`/quote?size=${rec.sizeYd}&zip=${encodeURIComponent(zipVal)}`}

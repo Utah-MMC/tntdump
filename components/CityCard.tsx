@@ -61,7 +61,7 @@ const CityCard = ({ city, state, description, image, slug, services = [] }: City
             <span className="text-blue-600 font-semibold group-hover:text-blue-700 transition-colors">
               Learn More →
             </span>
-            <div className="text-sm text-gray-500">
+            <div className="text-sm text-gray-600">
               Dumpster Rental
             </div>
           </div>
