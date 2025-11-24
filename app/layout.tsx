@@ -73,13 +73,32 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Google Tag Manager */}
-        <Script id="gtm-script" strategy="lazyOnload">
-          {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-          new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-          j=d.createElement(s),dl=l!='dataLayer'?('&l='+l):'';j.async=true;j.src=
-          'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-          })(window,document,'script','dataLayer','GTM-WFJHM33W');`}
+        {/* Preconnect to critical third-party origins */}
+        <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+
+        {/* GTM - deferred until user interaction or 4s timeout for better TBT */}
+        <Script id="gtm-deferred" strategy="lazyOnload">
+          {`(function(){
+            var loaded=false;
+            function loadGTM(){
+              if(loaded)return;loaded=true;
+              window.dataLayer=window.dataLayer||[];
+              window.dataLayer.push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+              var s=document.createElement('script');s.async=true;
+              s.src='https://www.googletagmanager.com/gtm.js?id=GTM-WFJHM33W';
+              document.head.appendChild(s);
+            }
+            if('requestIdleCallback' in window){
+              requestIdleCallback(loadGTM,{timeout:4000});
+            }else{
+              setTimeout(loadGTM,4000);
+            }
+            ['scroll','click','touchstart','keydown'].forEach(function(e){
+              document.addEventListener(e,loadGTM,{once:true,passive:true});
+            });
+          })();`}
         </Script>
         {/* Inline critical CSS for header/hero; defer rest */}
         <style dangerouslySetInnerHTML={{__html: `
@@ -107,16 +126,7 @@ export default function RootLayout({
             strategy="lazyOnload"
           />
         )}
-        {/* Google tag (gtag.js) */}
-        <Script src="https://www.googletagmanager.com/gtag/js?id=G-PRG0NC3ZHB" strategy="lazyOnload" />
-        <Script id="gtm-init" strategy="lazyOnload">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-PRG0NC3ZHB');
-          `}
-        </Script>
+        {/* Note: GA4 (G-PRG0NC3ZHB) should be configured in GTM to avoid loading duplicate scripts */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -166,21 +176,13 @@ export default function RootLayout({
             })
           }}
         />
-        {/* Phone Call Tracking */}
+        {/* Phone Call Tracking - uses dataLayer for GTM */}
         <Script id="phone-click-tracking" strategy="lazyOnload">
           {`
-            document.addEventListener('DOMContentLoaded', function() {
-              const phoneLinks = document.querySelectorAll('a[href^="tel:"]');
-              phoneLinks.forEach(link => {
-                link.addEventListener('click', function() {
-                  if (typeof window !== 'undefined' && window.gtag) {
-                    window.gtag('event', 'phone_call', {
-                      event_category: 'engagement',
-                      event_label: 'phone_click',
-                      value: 1
-                    });
-                  }
-                });
+            document.querySelectorAll('a[href^="tel:"]').forEach(function(link){
+              link.addEventListener('click',function(){
+                window.dataLayer=window.dataLayer||[];
+                window.dataLayer.push({event:'phone_call',event_category:'engagement',event_label:'phone_click'});
               });
             });
           `}
