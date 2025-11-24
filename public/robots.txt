@@ -11,6 +11,7 @@ Disallow: /api/
 Host: https://tntdump.com
 
 # Sitemaps
+Sitemap: https://tntdump.com/sitemap.xml
 Sitemap: https://tntdump.com/sitemap-pages.xml
 Sitemap: https://tntdump.com/sitemap-cities.xml
 Sitemap: https://tntdump.com/sitemap-posts.xml
