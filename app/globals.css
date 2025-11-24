@@ -53,3 +53,31 @@
     @apply prose prose-lg max-w-none;
   }
 }
+
+/* Mobile chat button positioning - ensure always visible */
+@media (max-width: 768px) {
+  /* Chat widget wrapper - fixed position bottom-right */
+  .fixed.bottom-4.right-4 {
+    right: 16px !important;
+    bottom: 16px !important;
+    left: auto !important;
+    z-index: 9999 !important;
+    max-width: calc(100% - 32px);
+  }
+
+  /* Ensure button stays within viewport */
+  .fixed.bottom-4.right-4 button {
+    max-width: 100%;
+  }
+
+  /* Chat dialog on mobile - constrain width */
+  .fixed.bottom-4.right-4 > div[role="dialog"] {
+    max-width: calc(100vw - 32px);
+    width: calc(100vw - 32px);
+  }
+
+  /* Prevent horizontal scroll from chat widget */
+  body {
+    overflow-x: hidden;
+  }
+}
