@@ -20,7 +20,14 @@
       "Bash(npm install:*)",
       "Bash(iconv:*)",
       "Bash(.env.local.utf8)",
-      "Bash(.env.local.nobom)"
+      "Bash(.env.local.nobom)",
+      "Bash(lighthouse:*)",
+      "Bash(node -e:*)",
+      "Bash(npm run build:*)",
+      "Bash(nul)",
+      "Bash(npm ls:*)",
+      "Bash(npm uninstall:*)",
+      "Bash(gh pr list:*)"
     ],
     "deny": [],
     "ask": []
