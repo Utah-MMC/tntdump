@@ -1,8 +1,15 @@
-1) Do not automatically add, commit, push, or create any pull requests without me explicitly telling you to do so
-
 # Prompt Library
 
-- 5-Step SEO Blog Post Prompt: `components/prompts/blog-5-step.md`
-  - Use this every time you create a new blog post.
-  - Covers outline, writing guidance, full draft, and final SEO pack.
+## SEO – Structure & Pages
+- City Page Builder → `scripts/prompts/seo/city-page-builder.md`
+- Homepage SEO Refresh → `scripts/prompts/seo/homepage-keywords.md`
+- Sitewide SEO Sweep → `scripts/prompts/seo/sitewide-keywords.md`
 
+## Content – Blogging
+- 5-Step SEO Blog Post Prompt → `scripts/prompts/seo/blog-5-step.md`
+
+## QA / Validation
+- City Page QA (manual + script pairing) → `scripts/prompts/qa/city-page-qa.md`
+
+## Workflow
+- Git: add/commit/push/PR → `scripts/prompts/workflow/git.md`
