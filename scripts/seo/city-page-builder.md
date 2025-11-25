@@ -1,3 +1,6 @@
+## DCALL - this is pretty much a one time scripts for any site. Make I used it to test two cities, so make sure you replace those with the cities you want to add. 
+
+
 You are an elite full-stack SEO engineer. Implement a scalable, white-hat local SEO system for TNT Dump (tntdump.com) that creates high-quality, unique city pages and avoids doorway/spun content. Do ALL tasks below in one end-to-end change with clean commits.
 
 # High-level goals

@@ -27,7 +27,9 @@
       "Bash(nul)",
       "Bash(npm ls:*)",
       "Bash(npm uninstall:*)",
-      "Bash(gh pr list:*)"
+      "Bash(gh pr list:*)",
+      "Bash(test:*)",
+      "Bash(git cherry-pick:*)"
     ],
     "deny": [],
     "ask": []
