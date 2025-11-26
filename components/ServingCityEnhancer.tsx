@@ -36,7 +36,7 @@ export default function ServingCityEnhancer() {
       <ul className="mt-2 flex flex-wrap gap-3">
         {matches.map((m) => (
           <li key={m.slug}>
-            <a className="text-blue-700 hover:underline" href={`/ut/${m.slug}/dumpster-rental`}>
+            <a className="text-blue-700 hover:underline" href={`/${m.slug}-dumpster-rentals/service-areas/${m.slug}`}>
               {m.city}
             </a>
           </li>

@@ -69,7 +69,7 @@ export default function CitySearch({ cities }: CitySearchProps) {
           {filteredCities.map((city, index) => (
             <Link 
               key={city.slug} 
-              href={`/ut/${city.slug}/dumpster-rental`}
+              href={`/${city.slug}-dumpster-rentals/service-areas/${city.slug}`}
               className="group bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
             >
             <div className="relative h-48 overflow-hidden">

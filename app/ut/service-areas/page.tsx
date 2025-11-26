@@ -24,7 +24,7 @@ export default function ServiceAreasPage() {
               <ul className="space-y-2">
                 {cities.map((c) => (
                   <li key={c.slug}>
-                    <a href={`/ut/${c.slug}/dumpster-rental`} className="text-blue-600 hover:underline">
+                    <a href={`/${c.slug}-dumpster-rentals/service-areas/${c.slug}`} className="text-blue-600 hover:underline">
                       {c.city}, {c.state_code}
                     </a>
                     <div className="text-sm text-gray-600">Fast delivery · {c.primary_zips.join(', ')} ZIPs</div>

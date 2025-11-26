@@ -92,8 +92,9 @@ const nextConfig = {
   // Rewrites for legacy city URLs to new App Router path (no redirect)
   async rewrites() {
     return [
-      { source: '/cities/:city', destination: '/ut/:city/dumpster-rental' },
-      { source: '/dumpster-rental-:city-ut', destination: '/ut/:city/dumpster-rental' },
+      { source: '/cities/:city', destination: '/:city-dumpster-rentals/service-areas/:city' },
+      { source: '/dumpster-rental-:city-ut', destination: '/:city-dumpster-rentals/service-areas/:city' },
+      { source: '/ut/:city/dumpster-rental', destination: '/:city-dumpster-rentals/service-areas/:city' },
       // Root-level favicon and PWA assets preferred by Google Search
       { source: '/favicon.ico', destination: '/images/logo/favicon.ico' },
       { source: '/apple-touch-icon.png', destination: '/images/logo/apple-touch-icon.png' },

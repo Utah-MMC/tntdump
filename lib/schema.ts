@@ -69,7 +69,7 @@ export function buildProductLD(size: number, city: CityData, brand: Brand) {
     category: 'Dumpster',
     offers: {
       '@type': 'Offer',
-      url: `${brand.url}/ut/${city.slug}/dumpster-rental`,
+      url: `${brand.url}/${city.slug}-dumpster-rentals/service-areas/${city.slug}`,
       availability: 'https://schema.org/InStock',
       priceCurrency: 'USD',
     },

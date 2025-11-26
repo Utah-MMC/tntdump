@@ -36,7 +36,7 @@ export default function SizesTable({ city, brand }: Props) {
                   <td className="px-4 py-4 text-right">
                     <a
                       href={city.quote_url || `${brand.url}/quote`}
-                      onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/ut/${city.slug}/dumpster-rental`, cta_type: 'quote' })}
+                      onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/${city.slug}-dumpster-rentals/service-areas/${city.slug}`, cta_type: 'quote' })}
                       className="inline-flex items-center gap-2 rounded-md bg-blue-600 px-4 py-2 text-white hover:bg-blue-700"
                     >
                       Get Quote

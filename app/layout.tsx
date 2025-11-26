@@ -16,11 +16,14 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
+  title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
   description: 'Local dumpster rental in Salt Lake & Utah County with fast delivery, same day options, and upfront prices. Get a dumpster rental quote for construction or home cleanups.',
   keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
+  authors: [{ name: 'TNT Dumpsters' }],
+  creator: 'TNT Dumpsters',
+  publisher: 'TNT Dumpsters',
   openGraph: {
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
+    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
     description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, and honest pricing. Get a dumpster rental quote today.',
     url: 'https://tntdump.com',
     siteName: 'TNT Dumpsters',
@@ -37,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dump',
+    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
     description: 'Local dumpster rental with delivery and same day availability. Get a price and quote fast.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
@@ -127,13 +130,28 @@ export default function RootLayout({
           />
         )}
         {/* Note: GA4 (G-PRG0NC3ZHB) should be configured in GTM to avoid loading duplicate scripts */}
+        {/* Organization Schema - Helps Google identify site name */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "TNT Dumpsters",
+              "url": "https://tntdump.com",
+              "logo": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+              "sameAs": []
+            })
+          }}
+        />
+        {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
-              "name": "TNT Dump",
+              "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
               "areaServed": "Salt Lake & Utah County",
