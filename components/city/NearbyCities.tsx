@@ -21,7 +21,7 @@ export default function NearbyCities({ city }: { city: CityData }) {
                   className="text-blue-600 hover:underline"
                   href={`/${slug}-dumpster-rentals/service-areas/${slug}`}
                 >
-                  {name} Dumpster Rental
+                  {name} Dumpster Rentals
                 </a>
               </li>
             )

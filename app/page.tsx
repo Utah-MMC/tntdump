@@ -15,6 +15,31 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
 
+      {/* Core services quick links for strong internal routing */}
+      <section className="py-8 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Core Services</p>
+            <h2 className="text-2xl font-bold text-gray-900">Find the Right Dumpster Service</h2>
+            <p className="text-sm text-gray-600 max-w-3xl mx-auto">Jump straight into our most-requested dumpster rentals.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Dumpster Rentals</h3>
+              <p className="text-sm text-gray-600">Driveway-safe bins for cleanouts, remodels, and moves.</p>
+            </a>
+            <a href="/dumpsters/commercial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Dumpster Rentals</h3>
+              <p className="text-sm text-gray-600">Contractor-friendly service with reliable swaps and scheduling.</p>
+            </a>
+            <a href="/dumpsters/concrete" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Construction & Concrete Dumpsters</h3>
+              <p className="text-sm text-gray-600">Heavy debris solutions for concrete, brick, and demo waste.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
 
       {/* Dumpster Sizes Cards Section */}

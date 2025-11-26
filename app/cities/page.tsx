@@ -136,7 +136,7 @@ export default function CitiesPage() {
                               href={`/${slug}-dumpster-rentals/service-areas/${slug}`}
                               className="text-blue-600 hover:text-blue-700 hover:underline"
                             >
-                              {name}
+                              {name} Dumpster Rentals
                             </a>
                           </li>
                         ))}

@@ -13,7 +13,7 @@ export default function ServiceAreasPage() {
       <section className="py-14 bg-white">
         <div className="container-custom text-center">
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">Utah Service Areas</h1>
-          <p className="text-gray-700 mt-2">Select a city to view local dumpster rental details.</p>
+          <p className="text-gray-700 mt-2">Select a city below to view local dumpster rental services, pricing, and same-day delivery options.</p>
         </div>
       </section>
       <section className="py-10 bg-gray-50">
@@ -24,10 +24,10 @@ export default function ServiceAreasPage() {
               <ul className="space-y-2">
                 {cities.map((c) => (
                   <li key={c.slug}>
-                    <a href={`/${c.slug}-dumpster-rentals/service-areas/${c.slug}`} className="text-blue-600 hover:underline">
-                      {c.city}, {c.state_code}
+                    <a href={`/${c.slug}-dumpster-rentals/service-areas/${c.slug}`} className="text-blue-600 hover:underline font-semibold">
+                      {c.city} Dumpster Rentals
                     </a>
-                    <div className="text-sm text-gray-600">Fast delivery · {c.primary_zips.join(', ')} ZIPs</div>
+                    <div className="text-sm text-gray-600 mt-1">Same-day dumpster delivery · Serving {c.primary_zips.join(', ')} ZIP codes</div>
                   </li>
                 ))}
               </ul>

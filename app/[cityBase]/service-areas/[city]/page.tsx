@@ -233,7 +233,7 @@ export default async function CityPage({ params }: PageProps) {
       <section className="py-10 bg-white">
         <div className="container-custom text-sm text-gray-600">
           Looking for more? Explore our{' '}
-          <a href="/ut/service-areas" className="text-blue-600 hover:underline">Utah service areas hub</a>.
+          <a href="/ut/service-areas" className="text-blue-600 hover:underline">Utah dumpster rental service areas</a>.
         </div>
       </section>
       <CTA city={city} />

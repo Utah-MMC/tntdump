@@ -37,7 +37,7 @@ export default function ServingCityEnhancer() {
         {matches.map((m) => (
           <li key={m.slug}>
             <a className="text-blue-700 hover:underline" href={`/${m.slug}-dumpster-rentals/service-areas/${m.slug}`}>
-              {m.city}
+              {m.city} Dumpster Rentals
             </a>
           </li>
         ))}
