@@ -1,4 +1,5 @@
-// mmc-site.config.ts
+// utah-mmc-site.config.ts
+
 const siteConfig = {
     siteId: 'tntdump',
     siteName: 'TNT Dumpsters',
