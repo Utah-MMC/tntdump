@@ -19,7 +19,7 @@ Key pieces:
 - Hub page: `app/ut/service-areas/page.tsx` groups UT cities by county.
 - GA4 contact event hooks in `lib/ga.ts` fired on tel/sms/quote clicks.
 
-Sitemaps: the generator `scripts/generate-type-sitemaps.mjs` includes city pages from `data/cities.json`. Run `npm run generate:cities` after editing CSV/YAML.
+Sitemaps: the generator `king-tut/automation/generate-type-sitemaps.mjs` includes city pages from `data/cities.json`. Run `npm run generate:cities` after editing CSV/YAML.
 
 ### Add a New City
 - Add a row to `data/cities/cities.csv` with the provided headers.
