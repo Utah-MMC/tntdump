@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
+import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Estate Cleanout: Complete Family Guide (2025) | TNT Dumpsters',
@@ -259,6 +260,8 @@ export default function EstateCleanoutCompleteGuidePage() {
         </div>
       </section>
 
+      <BlogServiceLinks eyebrow="Services" />
+
       <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
@@ -274,6 +277,7 @@ export default function EstateCleanoutCompleteGuidePage() {
     </main>
   )
 }
+
 
 
 

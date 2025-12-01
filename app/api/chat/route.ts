@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'New Chat Started - TNT Dumpsters',
         to: 'dcall@utahmmc.com',
-        cc: ['jlafaver@utahmmc.com', 'admin@tntdump.com', 'info@icondumpsters.com'],
+        cc: ['jlafaver@utahmmc.com', 'admin@tntdump.com', 'icondumpsters@gmail.com'],
         html,
       })
       return NextResponse.json({ ok: true })
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'Chat Transcript - TNT Dumpsters',
         to: 'jlafaver@utahmmc.com',
-        cc: ['dcall@utahmmc.com', 'admin@tntdump.com', 'info@icondumpsters.com'],
+        cc: ['dcall@utahmmc.com', 'admin@tntdump.com', 'icondumpsters@gmail.com'],
         html,
       })
       return NextResponse.json({ ok: true })

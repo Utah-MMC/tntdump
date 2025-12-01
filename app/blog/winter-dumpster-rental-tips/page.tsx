@@ -2,6 +2,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
+import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Winter Dumpster Rental Tips for Cold Weather | TNT Dumpsters',
@@ -187,6 +188,8 @@ export default function WinterDumpsterRentalTipsPage() {
           </div>
         </div>
       </section>
+
+      <BlogServiceLinks eyebrow="Services" />
 
       <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">

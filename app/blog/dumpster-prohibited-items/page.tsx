@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { Calendar, User, Clock, ArrowLeft, CheckCircle } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
+import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'What Can and Cannot Go in a Dumpster | TNT Dumpsters',
@@ -218,11 +219,13 @@ export default function DumpsterProhibitedItemsPage() {
         </div>
       </section>
 
+      <BlogServiceLinks eyebrow="Services" />
+
       <section className="py-16 bg-blue-600 text-white">
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl font-bold mb-4">Have Questions About an Item?</h2>
-            <p className="text-blue-100 mb-8">We’ll help you determine what’s allowed and the best disposal option.</p>
+            <p className="text-blue-100 mb-8">We'll help you determine what's allowed and the best disposal option.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:8012099013" className="inline-block bg-yellow-400 text-blue-900 px-8 py-4 rounded-lg font-bold text-lg hover:bg-yellow-300 transition-colors">Call (801) 209-9013</a>
               <a href="/quote" className="inline-block bg-white/20 text-white border-2 border-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-white/30 transition-colors">Get Free Quote</a>

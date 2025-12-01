@@ -362,6 +362,35 @@ export default function ConcreteDumpstersPage() {
         </div>
       </section>
 
+      {/* Related resources back to blog content */}
+      <section className="section-padding bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Learn More</p>
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Concrete & Construction Tips</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Dive into our guides for job site debris, weight rules, and material restrictions.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
+            <a href="/blog/construction-waste-management" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Construction Waste Tips</h3>
+              <p className="text-sm text-gray-600">Best practices for handling job site debris.</p>
+            </a>
+            <a href="/blog/dumpster-rentals-2025-guide" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">2025 Dumpster Guide</h3>
+              <p className="text-sm text-gray-600">Permits, pricing, and heavy material rules.</p>
+            </a>
+            <a href="/blog/dumpster-prohibited-items" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Prohibited Materials</h3>
+              <p className="text-sm text-gray-600">Keep concrete loads compliant and clean.</p>
+            </a>
+            <a href="/blog/choose-right-dumpster-size" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+              <h3 className="font-bold text-blue-600 mb-2">Choose the Right Size</h3>
+              <p className="text-sm text-gray-600">Size guidance for heavy debris projects.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Quick Contact Form */}
       <section className="section-padding bg-gray-50">
         <div className="container-custom">
