@@ -38,8 +38,7 @@ async function sendEmailNotification(formData: {
     
     const mailOptions = {
       from: 'admin@tntdump.com',
-      to: 'admin@tntdump.com',
-      cc: 'icondumpsters@gmail.com',
+      to: ['admin@tntdump.com', 'icondumpsters@gmail.com'],
       bcc: 'dcall@utahmmc.com',
       subject: `New ${formData.formType} Submission - ${formData.name}`,
       html: `
@@ -72,7 +71,7 @@ async function sendEmailNotification(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This email was sent from the TNT Dumpsters website contact form.<br>
-            Sent to: admin@tntdump.com | CC: icondumpsters@gmail.com | BCC: dcall@utahmmc.com
+            Sent to: admin@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
