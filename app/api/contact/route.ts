@@ -104,32 +104,33 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Optional reCAPTCHA verification - only verify if both secret and valid token are provided
-    // If verification fails, log it but don't block form submission
+    // reCAPTCHA verification is completely optional and never blocks form submission
+    // This is intentionally non-blocking to ensure forms always work
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
     const hasValidToken = captchaToken && typeof captchaToken === 'string' && captchaToken.trim().length > 0
     
+    // Only attempt verification if both are present, but never block on failure
     if (recaptchaSecret && hasValidToken) {
-      try {
-        const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ secret: recaptchaSecret, response: captchaToken })
+      // Run verification asynchronously without blocking
+      fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ secret: recaptchaSecret, response: captchaToken })
+      })
+        .then(res => res.json())
+        .then(verifyJson => {
+          if (verifyJson.success) {
+            console.log('reCAPTCHA verification passed')
+          } else {
+            console.warn('reCAPTCHA verification failed (non-blocking):', verifyJson)
+          }
         })
-        const verifyJson = await verifyRes.json()
-        if (!verifyJson.success) {
-          console.warn('reCAPTCHA verification failed (allowing submission):', verifyJson)
-        } else {
-          console.log('reCAPTCHA verification passed')
-        }
-      } catch (e) {
-        console.warn('reCAPTCHA verification error (allowing submission):', e)
-      }
+        .catch(e => {
+          console.warn('reCAPTCHA verification error (non-blocking):', e)
+        })
     } else {
       if (recaptchaSecret && !hasValidToken) {
         console.log('reCAPTCHA secret is set but no valid token provided; skipping verification')
-      } else {
-        console.log('reCAPTCHA not configured; skipping verification')
       }
     }
 
