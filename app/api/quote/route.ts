@@ -123,10 +123,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Optional reCAPTCHA verification - only verify if both secret and token are provided
+    // Optional reCAPTCHA verification - only verify if both secret and valid token are provided
+    // If verification fails, log it but don't block form submission
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
     const token = (body as any).captchaToken
-    if (recaptchaSecret && token) {
+    const hasValidToken = token && typeof token === 'string' && token.trim().length > 0
+    
+    if (recaptchaSecret && hasValidToken) {
       try {
         const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
           method: 'POST',
@@ -135,17 +138,16 @@ export async function POST(request: NextRequest) {
         })
         const verifyJson = await verifyRes.json()
         if (!verifyJson.success) {
-          console.log('reCAPTCHA verification failed:', verifyJson)
-          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 })
+          console.warn('reCAPTCHA verification failed (allowing submission):', verifyJson)
+        } else {
+          console.log('reCAPTCHA verification passed')
         }
-        console.log('reCAPTCHA verification passed')
       } catch (e) {
-        console.error('reCAPTCHA verification error:', e)
-        return NextResponse.json({ error: 'reCAPTCHA verification error' }, { status: 400 })
+        console.warn('reCAPTCHA verification error (allowing submission):', e)
       }
     } else {
-      if (recaptchaSecret && !token) {
-        console.log('reCAPTCHA secret is set but no token provided; skipping verification')
+      if (recaptchaSecret && !hasValidToken) {
+        console.log('reCAPTCHA secret is set but no valid token provided; skipping verification')
       } else {
         console.log('reCAPTCHA not configured; skipping verification')
       }
