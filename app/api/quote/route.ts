@@ -9,9 +9,9 @@ const createTransporter = () => {
     throw new Error('EMAIL_USER and EMAIL_PASS must be set')
   }
 
-  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
-  const port = Number(process.env.EMAIL_PORT || 465)
-  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+  const host = process.env.EMAIL_HOST || 'smtp.gmail.com'
+  const port = Number(process.env.EMAIL_PORT || 587)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : false
 
   return nodemailer.createTransport({
     host,
@@ -40,9 +40,9 @@ async function sendQuoteEmail(formData: {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: 'sales@tntdump.com',
-      to: 'sales@tntdump.com',
-      cc: 'sales@tntdump.com, icondumpsters@gmail.com',
+      from: 'admin@tntdump.com',
+      to: 'admin@tntdump.com',
+      cc: 'info@icondumpsters.com',
       bcc: 'dcall@utahmmc.com',
       subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
       html: `
@@ -82,14 +82,14 @@ async function sendQuoteEmail(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This quote request was sent from the TNT Dumpsters website quote form.<br>
-            Sent to: sales@tntdump.com | CC: sales@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
+            Sent to: admin@tntdump.com | CC: info@icondumpsters.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Quote email sent successfully to sales@tntdump.com')
+    console.log('Quote email sent successfully to admin@tntdump.com')
   } catch (error) {
     console.error('Error sending quote email:', error)
     throw error
