@@ -104,13 +104,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Optional reCAPTCHA verification if secret is configured
+    // Optional reCAPTCHA verification - only verify if both secret and token are provided
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
-    if (recaptchaSecret) {
+    if (recaptchaSecret && captchaToken) {
       try {
-        if (!captchaToken) {
-          return NextResponse.json({ error: 'reCAPTCHA validation failed' }, { status: 400 })
-        }
         const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
           method: 'POST',
           headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -121,12 +118,17 @@ export async function POST(request: NextRequest) {
           console.log('reCAPTCHA verification failed:', verifyJson)
           return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 })
         }
+        console.log('reCAPTCHA verification passed')
       } catch (e) {
         console.error('reCAPTCHA verification error:', e)
         return NextResponse.json({ error: 'reCAPTCHA verification error' }, { status: 400 })
       }
     } else {
-      console.log('reCAPTCHA secret not set; skipping verification')
+      if (recaptchaSecret && !captchaToken) {
+        console.log('reCAPTCHA secret is set but no token provided; skipping verification')
+      } else {
+        console.log('reCAPTCHA not configured; skipping verification')
+      }
     }
 
     // Log form data first
