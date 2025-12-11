@@ -130,10 +130,10 @@ const Hero = () => {
                 </p>
                 {/* Introductory SEO copy */}
                 <p className="text-sm sm:text-base text-blue-100 mb-2 leading-relaxed">
-                  Need dumpster rental you can count on? We deliver roll off dumpster rental with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-300">dumpster rental cost</a> overview, then call for a firm dumpster rental quote.
+                  Need a roll-off container you can count on? We deliver with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-300">pricing</a> overview, then call for a firm quote.
                 </p>
                 <p className="text-sm sm:text-base text-blue-100 leading-relaxed">
-                  Whether you need delivery dumpster rental for a weekend cleanout or construction dumpster rental on a busy site, our local dumpster rental team keeps it simple: on-time drop-offs, careful placement, and easy haul-offs for your job site dumpster rental.
+                  Whether you need a container for a weekend cleanout or a roll-off for a busy construction site, our local team keeps it simple: on-time drop-offs, careful placement, and easy pickups.
                 </p>
               </div>
 
@@ -197,8 +197,8 @@ const Hero = () => {
                 </a>
               </div>
               {/* Same-day ribbon/CTA microcopy near hero */}
-              <p className="text-blue-100 text-xs opacity-90 mb-2" data-cta-variants="Same day dumpster rental available today — request delivery ›|Need a roll off today? Ask about same day dumpster rental ›|Urgent project? Same day dumpster rental when routes allow ›">
-                Ask about same day dumpster rental; tap Get Free Quote to check today’s schedule.
+              <p className="text-blue-100 text-xs opacity-90 mb-2" data-cta-variants="Same day service available today — request delivery ›|Need a roll off today? Ask about same day delivery ›|Urgent project? Same day service when routes allow ›">
+                Ask about same day delivery; tap Get Free Quote to check today's schedule.
               </p>
 
               {/* Trust Indicators */}
@@ -212,8 +212,8 @@ const Hero = () => {
 
             {/* Right Column - Contact/Quote Form */}
             <div id="quote" className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-1">Get a Dumpster Rental Quote</h3>
-              <p className="text-blue-100 text-xs mb-3">Fast delivery dumpster rental from a local team. We’ll confirm pricing and timing ASAP.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-1">Get a Quote</h3>
+              <p className="text-blue-100 text-xs mb-3">Fast delivery from a local team. We'll confirm pricing and timing ASAP.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Row 1: Name + Phone */}

@@ -17,14 +17,14 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-  description: 'Local dumpster rental in Salt Lake & Utah County with fast delivery, same day options, and upfront prices. Get a dumpster rental quote for construction or home cleanups.',
+  description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, upfront prices. Get a quote for construction or home cleanups.',
   keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
   authors: [{ name: 'TNT Dumpsters' }],
   creator: 'TNT Dumpsters',
   publisher: 'TNT Dumpsters',
   openGraph: {
     title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-    description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, and honest pricing. Get a dumpster rental quote today.',
+    description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, honest pricing. Get a quote today.',
     url: 'https://tntdump.com',
     siteName: 'TNT Dumpsters',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-    description: 'Local dumpster rental with delivery and same day availability. Get a price and quote fast.',
+    description: 'Local dumpster rental with delivery and same day availability. Get pricing and quotes fast.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
   robots: {
@@ -172,23 +172,23 @@ export default function RootLayout({
               "mainEntity": [
                 {
                   "@type": "Question",
-                  "name": "How much is a dumpster rental?",
-                  "acceptedAnswer": {"@type":"Answer","text":"Dumpster rental price depends on size, material, and service area. Call (801) 209-9013 for a quick dumpster rental quote and upfront options."}
+                  "name": "How much does it cost?",
+                  "acceptedAnswer": {"@type":"Answer","text":"Price depends on size, material, and service area. Call (801) 209-9013 for a quick quote and upfront options."}
                 },
                 {
                   "@type": "Question",
-                  "name": "What affects dumpster rental cost?",
-                  "acceptedAnswer": {"@type":"Answer","text":"Weight, roll off dumpster size, rental time, route distance, and disposal fees affect dumpster rental cost. We confirm delivery dumpster rental details before drop-off."}
+                  "name": "What affects the cost?",
+                  "acceptedAnswer": {"@type":"Answer","text":"Weight, roll-off container size, rental time, route distance, and disposal fees affect cost. We confirm delivery details before drop-off."}
                 },
                 {
                   "@type": "Question",
-                  "name": "Do you offer same day dumpster rental?",
+                  "name": "Do you offer same day service?",
                   "acceptedAnswer": {"@type":"Answer","text":"Yes, same day service is often available in Salt Lake & Utah County. Contact us early for availability."}
                 },
                 {
                   "@type": "Question",
                   "name": "How do delivery and pick-up work?",
-                  "acceptedAnswer": {"@type":"Answer","text":"We schedule delivery dumpster rental, place the bin safely, and pick up on call or by preset date. Simple and fast."}
+                  "acceptedAnswer": {"@type":"Answer","text":"We schedule delivery, place the container safely, and pick up on call or by preset date. Simple and fast."}
                 }
               ]
             })
