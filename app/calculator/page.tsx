@@ -2,7 +2,7 @@ import { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
 import Link from 'next/link'
-import { Phone, FileText, Truck, Calculator, Ruler3D, DollarSign } from 'lucide-react'
+import { Phone, FileText, Truck, Calculator, Box, DollarSign } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dumpster Size Calculator | Find the Right Size | TNT Dumpsters',
@@ -82,7 +82,7 @@ export default function CalculatorPage() {
               {/* Volume Calculator Card */}
               <Link href="/calculator/volume" className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow block group">
                 <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <Ruler3D className="w-8 h-8 text-purple-700" aria-hidden="true" />
+                  <Box className="w-8 h-8 text-purple-700" aria-hidden="true" />
                 </div>
                 <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-blue-600 transition-colors">
                   Volume Calculator
