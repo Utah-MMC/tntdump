@@ -135,10 +135,37 @@ async function getCities() {
   const list = readJsonIfExists(citiesPath);
   if (Array.isArray(list) && list.length > 0) {
     const now = toISO(Date.now());
-    return list
+    const cityRoutes = list
       .map(slugOrPath => ensureLeadingSlash(String(slugOrPath).trim()))
-      .filter(p => p.startsWith('/ut/'))
-      .map(p => ({ loc: `${SITE}${p}`, lastmod: now }));
+      .filter(p => p.startsWith('/ut/'));
+    
+    // Extract city slugs from routes like /ut/midvale/dumpster-rental
+    const citySlugs = cityRoutes
+      .map(route => {
+        const match = route.match(/^\/ut\/([^\/]+)\/dumpster-rental$/);
+        return match ? match[1] : null;
+      })
+      .filter(Boolean);
+    
+    // Generate city dumpster rental pages
+    const cityPages = cityRoutes.map(p => ({ loc: `${SITE}${p}`, lastmod: now }));
+    
+    // Generate city service area pages: /{city-slug}-dumpster-rentals/service-areas/{city-slug}
+    const serviceAreaPages = citySlugs.map(slug => ({
+      loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}`,
+      lastmod: now
+    }));
+    
+    // Generate size-specific service area pages
+    const sizes = ['15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster'];
+    const sizePages = citySlugs.flatMap(slug =>
+      sizes.map(size => ({
+        loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}/${size}`,
+        lastmod: now
+      }))
+    );
+    
+    return [...cityPages, ...serviceAreaPages, ...sizePages];
   }
 
   // Fallback: derive from data/cities/ut/*.yml filenames
@@ -146,11 +173,24 @@ async function getCities() {
   let entries = [];
   try { entries = fs.readdirSync(utDir, { withFileTypes: true }); } catch { entries = []; }
   const now = toISO(Date.now());
-  const cities = entries
+  const citySlugs = entries
     .filter(e => e.isFile() && e.name.endsWith('.yml'))
-    .map(e => e.name.replace(/\.yml$/, ''))
-    .map(slug => ({ loc: `${SITE}/ut/${slug}/dumpster-rental`, lastmod: now }));
-  return cities;
+    .map(e => e.name.replace(/\.yml$/, ''));
+  
+  const cities = citySlugs.map(slug => ({ loc: `${SITE}/ut/${slug}/dumpster-rental`, lastmod: now }));
+  const serviceAreaPages = citySlugs.map(slug => ({
+    loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}`,
+    lastmod: now
+  }));
+  const sizes = ['15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster'];
+  const sizePages = citySlugs.flatMap(slug =>
+    sizes.map(size => ({
+      loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}/${size}`,
+      lastmod: now
+    }))
+  );
+  
+  return [...cities, ...serviceAreaPages, ...sizePages];
 }
 
 async function getPosts() {

@@ -1,7 +1,8 @@
 import { Metadata } from 'next'
 import HeroSection from '@/components/HeroSection'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
-import { Phone, FileText, Truck } from 'lucide-react'
+import Link from 'next/link'
+import { Phone, FileText, Truck, Calculator, Ruler3D, DollarSign } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dumpster Size Calculator | Find the Right Size | TNT Dumpsters',
@@ -28,6 +29,77 @@ export default function CalculatorPage() {
       />
 
       <DumpsterCalculator />
+
+      {/* Specialized Calculators Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="container-custom">
+          <div className="max-w-6xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+                Specialized Dumpster Calculators
+              </h2>
+              <p className="text-lg text-gray-600">
+                Need more detailed estimates? Try our specialized calculators for accurate cost and volume calculations.
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {/* Size Calculator Card */}
+              <div className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow">
+                <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Calculator className="w-8 h-8 text-blue-700" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center">Size Calculator</h3>
+                <p className="text-gray-600 mb-6 text-center">
+                  Find the perfect dumpster size based on your project type and debris amount. Get instant size recommendations.
+                </p>
+                <div className="text-center">
+                  <span className="inline-block bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-sm font-medium mb-4">
+                    Currently Active
+                  </span>
+                  <p className="text-sm text-gray-500">You're using this calculator above</p>
+                </div>
+              </div>
+
+              {/* Cost Calculator Card */}
+              <Link href="/calculator/cost" className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow block group">
+                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <DollarSign className="w-8 h-8 text-green-700" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-blue-600 transition-colors">
+                  Cost Calculator
+                </h3>
+                <p className="text-gray-600 mb-6 text-center">
+                  Estimate your total dumpster rental cost by size, location, rental duration, and additional services.
+                </p>
+                <div className="text-center">
+                  <span className="inline-block bg-green-600 text-white px-6 py-2 rounded-lg font-semibold group-hover:bg-green-700 transition-colors">
+                    Calculate Cost →
+                  </span>
+                </div>
+              </Link>
+
+              {/* Volume Calculator Card */}
+              <Link href="/calculator/volume" className="bg-white rounded-lg shadow-lg p-8 hover:shadow-xl transition-shadow block group">
+                <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                  <Ruler3D className="w-8 h-8 text-purple-700" aria-hidden="true" />
+                </div>
+                <h3 className="text-xl font-bold text-gray-900 mb-3 text-center group-hover:text-blue-600 transition-colors">
+                  Volume Calculator
+                </h3>
+                <p className="text-gray-600 mb-6 text-center">
+                  Calculate debris volume room-by-room or by material type to determine the exact dumpster size you need.
+                </p>
+                <div className="text-center">
+                  <span className="inline-block bg-purple-600 text-white px-6 py-2 rounded-lg font-semibold group-hover:bg-purple-700 transition-colors">
+                    Calculate Volume →
+                  </span>
+                </div>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* Additional Information Section */}
       <section className="py-16 bg-white">

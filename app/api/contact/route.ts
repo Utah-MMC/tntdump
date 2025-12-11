@@ -81,6 +81,13 @@ async function sendEmailNotification(formData: {
     console.log('Email sent successfully to admin@tntdump.com')
   } catch (error) {
     console.error('Error sending email:', error)
+    console.error('Email error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      code: (error as any).code,
+      command: (error as any).command,
+      response: (error as any).response,
+      responseCode: (error as any).responseCode
+    })
     throw error
   }
 }
@@ -144,6 +151,11 @@ export async function POST(request: NextRequest) {
 
     // Try to send email
     try {
+      console.log('Attempting to send email...')
+      console.log('EMAIL_USER:', process.env.EMAIL_USER ? 'SET' : 'NOT SET')
+      console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'SET' : 'NOT SET')
+      console.log('EMAIL_HOST:', process.env.EMAIL_HOST || 'smtp.gmail.com')
+      
       await sendEmailNotification({
         name,
         phone,
@@ -155,6 +167,10 @@ export async function POST(request: NextRequest) {
       console.log('Email sent successfully!')
     } catch (emailError) {
       console.error('Email sending failed:', emailError)
+      console.error('Email error details:', {
+        message: emailError instanceof Error ? emailError.message : 'Unknown error',
+        stack: emailError instanceof Error ? emailError.stack : undefined
+      })
       // Continue anyway - don't fail the form submission
     }
 

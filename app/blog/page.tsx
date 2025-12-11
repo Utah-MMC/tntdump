@@ -23,6 +23,50 @@ const blogPosts = [
   },
   {
     id: 2,
+    title: '20 Yard Dumpster: The Complete Guide to Utah\'s Most Popular Size',
+    excerpt: 'Everything you need to know about 20-yard dumpsters: dimensions, capacity, weight limits, cost, and why it\'s the most popular choice for residential projects in Utah.',
+    image: '/images/dumpster2-500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-14',
+    category: 'Size Guide',
+    readTime: '6 min read',
+    slug: '20-yard-dumpster-complete-guide'
+  },
+  {
+    id: 3,
+    title: '15 Yard Dumpster: Complete Guide, Dimensions, Uses & Cost',
+    excerpt: 'Comprehensive guide to 15-yard dumpsters including exact dimensions, capacity, weight limits, best projects, cost breakdown, and when to choose this versatile mid-size option.',
+    image: '/images/dumpster2-500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-13',
+    category: 'Size Guide',
+    readTime: '6 min read',
+    slug: '15-yard-dumpster-complete-guide'
+  },
+  {
+    id: 4,
+    title: 'Dumpster Rental Prices by Size: Complete Cost Comparison 2025',
+    excerpt: 'Side-by-side price comparison of all dumpster sizes with cost breakdowns, project recommendations, ROI analysis, and strategies to get the best value for your rental.',
+    image: '/images/dumpster3-500x500-1.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-12',
+    category: 'Pricing Guide',
+    readTime: '7 min read',
+    slug: 'dumpster-rental-prices-by-size'
+  },
+  {
+    id: 5,
+    title: 'How Much Does a Dumpster Rental Cost in 2025?',
+    excerpt: 'Complete breakdown of dumpster rental costs including size-based pricing, hidden fees to avoid, weight limits, rental periods, and proven strategies to save money.',
+    image: '/images/dumpster2-500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-10',
+    category: 'Pricing Guide',
+    readTime: '8 min read',
+    slug: 'dumpster-rental-cost-2025'
+  },
+  {
+    id: 6,
     title: 'What Can and Cannot Go in a Dumpster Rental',
     excerpt: 'Understanding what materials are allowed in dumpster rentals is crucial for a smooth project. Learn about prohibited items and how to dispose of them properly.',
     image: '/images/dumpster3-500x500-1.jpeg',
@@ -33,7 +77,18 @@ const blogPosts = [
     slug: 'dumpster-prohibited-items'
   },
   {
-    id: 3,
+    id: 7,
+    title: 'Kitchen Remodel Dumpster: Size Guide, Costs & What Fits',
+    excerpt: 'Planning a kitchen renovation? Learn which dumpster size you need, what debris fits, weight considerations, cost estimates, and money-saving tips for your remodel.',
+    image: '/images/dumpster2-500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-15',
+    category: 'Project Planning',
+    readTime: '5 min read',
+    slug: 'kitchen-remodel-dumpster-guide'
+  },
+  {
+    id: 8,
     title: 'Estate Cleanout: A Complete Guide for Families',
     excerpt: 'Navigating estate cleanouts can be overwhelming. Our guide provides step-by-step instructions, tips for organization, and how to handle sensitive situations with care.',
     image: '/images/dumpster2-500x500-2.jpeg',
@@ -44,7 +99,7 @@ const blogPosts = [
     slug: 'estate-cleanout-complete-guide'
   },
   {
-    id: 4,
+    id: 9,
     title: 'Commercial Dumpster Rental: What Businesses Need to Know',
     excerpt: 'Businesses have unique waste management needs. Learn about commercial dumpster rental options, compliance requirements, and cost-effective solutions.',
     image: '/images/dumpster2-500x500-2.jpeg',
@@ -55,7 +110,7 @@ const blogPosts = [
     slug: 'commercial-dumpster-rental-guide'
   },
   {
-    id: 5,
+    id: 10,
     title: 'Winter Dumpster Rental: Tips for Cold Weather Projects',
     excerpt: 'Winter projects come with unique challenges. Learn how to plan dumpster rentals during cold weather, including scheduling, placement, and safety considerations.',
     image: '/images/dumpster3-500x500-1.jpeg',
@@ -66,7 +121,7 @@ const blogPosts = [
     slug: 'winter-dumpster-rental-tips'
   },
   {
-    id: 6,
+    id: 11,
     title: 'Construction Waste Management: Best Practices',
     excerpt: 'Proper construction waste management is essential for project success. Learn about waste reduction, recycling opportunities, and efficient disposal methods.',
     image: '/images/dumpster2-500x500-2.jpeg',
@@ -75,9 +130,9 @@ const blogPosts = [
     category: 'Construction',
     readTime: '8 min read',
     slug: 'construction-waste-management'
-  }
-  ,{
-    id: 7,
+  },
+  {
+    id: 12,
     title: 'Dumpster Rentals: The Complete 2025 Guide to Sizes, Prices & Permits',
     excerpt: 'Comprehensive 2025 guide covering sizes, pricing, permits, weight limits, and pro tips to avoid fees.',
     image: '/images/dumpster2-500x500-2.jpeg',
@@ -91,6 +146,8 @@ const blogPosts = [
 
 const categories = [
   'All Posts',
+  'Pricing Guide',
+  'Size Guide',
   'Project Planning',
   'Waste Management',
   'Estate Services',
