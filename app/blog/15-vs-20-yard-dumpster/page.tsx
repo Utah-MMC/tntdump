@@ -68,7 +68,7 @@ export default function FifteenVsTwentyYardDumpsterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/pexels-tomfisk-3181031.jpg"
                 alt="15 yard vs 20 yard dumpster size comparison for home projects"
                 fill
                 className="object-cover"

@@ -1,6 +1,6 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
-import { CheckCircle, Phone, Clock, Home, Wrench, Car } from 'lucide-react'
+import { CheckCircle, Phone, Clock, Wrench, Car } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Garage Cleanout Service | TNT Dumpsters | Utah',

@@ -51,7 +51,7 @@ export default function EstateCleanoutCompleteGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Estate cleanout with organized boxes and a dumpster" fill className="object-cover" />
+              <Image src="/images/pexels-wendelinjacober-1411392.jpg" alt="Estate cleanout with organized boxes and a dumpster" fill className="object-cover" />
             </div>
           </div>
         </div>

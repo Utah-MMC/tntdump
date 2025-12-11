@@ -68,7 +68,7 @@ export default function KitchenRemodelDumpsterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/pexels-pamelamariephoto-2625896.jpg"
                 alt="Kitchen remodel dumpster with debris for renovation project"
                 fill
                 className="object-cover"

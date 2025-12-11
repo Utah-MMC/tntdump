@@ -68,7 +68,7 @@ export default function RoofingProjectDumpsterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/roof-truss-3339206_1280.jpg"
                 alt="Roofing dumpster filled with asphalt shingles and roofing debris"
                 fill
                 className="object-cover"

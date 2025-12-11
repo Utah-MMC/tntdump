@@ -46,7 +46,7 @@ export default function DeckDemolitionDumpsterGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Deck demolition dumpster rental guide" fill className="object-cover" />
+              <Image src="/images/pexels-stijn-dijkstra-1306815-2583836.jpg" alt="Deck demolition dumpster rental guide" fill className="object-cover" />
             </div>
           </div>
         </div>

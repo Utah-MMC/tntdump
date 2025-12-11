@@ -17,7 +17,7 @@ export const stripe = stripeSecretKey
       // Use a stable, known-good API version. This should be kept in sync
       // with the Stripe account settings but does not need to be cutting edge
       // to work correctly.
-      apiVersion: '2024-06-20',
+      apiVersion: '2023-10-16' as const,
       typescript: true,
     })
   : null;

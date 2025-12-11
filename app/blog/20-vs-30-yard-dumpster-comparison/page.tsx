@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, User, Clock, ArrowLeft, Scale, CheckCircle } from 'lucide-react'
+import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
@@ -50,7 +50,7 @@ export default function TwentyVsThirtyYardComparisonPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="20 vs 30 yard dumpster comparison for medium to large projects" fill className="object-cover" />
+              <Image src="/images/pexels-rodrigo-eder-1347087-2846205.jpg" alt="20 vs 30 yard dumpster comparison for medium to large projects" fill className="object-cover" />
             </div>
           </div>
         </div>

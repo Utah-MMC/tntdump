@@ -68,7 +68,7 @@ export default function MovingOutDumpsterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/dumpster-rental-driveway.jpeg"
                 alt="Moving out dumpster with furniture and boxes for relocation"
                 fill
                 className="object-cover"

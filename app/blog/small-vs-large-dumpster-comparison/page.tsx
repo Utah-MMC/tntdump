@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, User, Clock, ArrowLeft, Scale, CheckCircle } from 'lucide-react'
+import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
@@ -46,7 +46,7 @@ export default function SmallVsLargeDumpsterComparisonPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Small vs large dumpster comparison guide" fill className="object-cover" />
+              <Image src="/images/pexels-triemli-33520761.jpg" alt="Small vs large dumpster comparison guide" fill className="object-cover" />
             </div>
           </div>
         </div>

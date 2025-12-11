@@ -68,7 +68,7 @@ export default function GarageCleanoutDumpsterPage() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/dumpsterSmallBanner.jpeg"
                 alt="Garage cleanout dumpster with tools, equipment, and storage items"
                 fill
                 className="object-cover"

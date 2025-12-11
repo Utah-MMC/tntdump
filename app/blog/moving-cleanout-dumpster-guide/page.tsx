@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import { Calendar, User, Clock, ArrowLeft, Truck, CheckCircle } from 'lucide-react'
+import { Calendar, User, Clock, ArrowLeft } from 'lucide-react'
 import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
@@ -46,7 +46,7 @@ export default function MovingCleanoutDumpsterGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Moving cleanout dumpster rental guide" fill className="object-cover" />
+              <Image src="/images/pexels-olly-3760529.jpg" alt="Moving cleanout dumpster rental guide" fill className="object-cover" />
             </div>
           </div>
         </div>

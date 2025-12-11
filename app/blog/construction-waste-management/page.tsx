@@ -51,7 +51,7 @@ export default function ConstructionWasteManagementPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster2-500x500-2.jpeg" alt="Construction site with dumpster for debris management" fill className="object-cover" />
+              <Image src="/images/construction-site-3688262_1280.jpg" alt="Construction site with dumpster for debris management" fill className="object-cover" />
             </div>
           </div>
         </div>

@@ -68,7 +68,7 @@ export default function DumpsterRentalCost2025Page() {
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
               <Image
-                src="/images/dumpster2-500x500-2.jpeg"
+                src="/images/pexels-cottonbro-4888489.jpg"
                 alt="Dumpster rental cost breakdown and pricing guide"
                 fill
                 className="object-cover"

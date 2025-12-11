@@ -51,7 +51,7 @@ export default function WinterDumpsterRentalTipsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="relative h-96 rounded-lg overflow-hidden">
-              <Image src="/images/dumpster3-500x500-1.jpeg" alt="Dumpster in snowy conditions during winter project" fill className="object-cover" />
+              <Image src="/images/dumpsterSmallBanner3.jpeg" alt="Dumpster in snowy conditions during winter project" fill className="object-cover" />
             </div>
           </div>
         </div>
