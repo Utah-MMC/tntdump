@@ -10,10 +10,10 @@
     "lint": "next lint",
     "test": "vitest run",
     "test:watch": "vitest",
-    "sitemap": "run-s sitemap:types sitemap:index",
+    "sitemap": "run-s sitemap:index sitemap:types",
     "sitemap:types": "node scripts/automation/generate-type-sitemaps.mjs",
     "sitemap:index": "next-sitemap --config next-sitemap.config.js",
-    "sitemap:local": "run-s sitemap:types sitemap:index",
+    "sitemap:local": "run-s sitemap:index sitemap:types",
     "generate:cities": "ts-node scripts/generate-city-pages.ts data/cities/cities.csv",
     "validate:cities": "ts-node scripts/validate-city-pages.ts"
   },

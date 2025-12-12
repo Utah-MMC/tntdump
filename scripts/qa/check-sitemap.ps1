@@ -9,11 +9,35 @@ $xmlPath = Join-Path (Join-Path $root '..') 'public/sitemap.xml'
 $xmlPath = [System.IO.Path]::GetFullPath($xmlPath)
 if (-not (Test-Path $xmlPath)) { Write-Error "sitemap.xml not found at $xmlPath"; exit 1 }
 
-$content = Get-Content -Raw $xmlPath
-$matches = [System.Text.RegularExpressions.Regex]::Matches($content, '<loc>\s*([^<]+?)\s*</loc>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
-$urls = @()
-foreach ($m in $matches) { $urls += $m.Groups[1].Value.Trim() }
-$urls = $urls | Sort-Object -Unique
+function Get-LocsFromXmlString([string]$xml) {
+  $matches = [System.Text.RegularExpressions.Regex]::Matches($xml, '<loc>\s*([^<]+?)\s*</loc>', [System.Text.RegularExpressions.RegexOptions]::IgnoreCase)
+  $urls = @()
+  foreach ($m in $matches) { $urls += $m.Groups[1].Value.Trim() }
+  return ($urls | Sort-Object -Unique)
+}
+
+function Get-UrlsFromSitemapLocal([string]$path) {
+  if (-not (Test-Path $path)) { return @() }
+  $xml = Get-Content -Raw $path
+
+  # If sitemap index, load referenced files from /public by filename and recurse
+  if ($xml -match '<sitemapindex\b') {
+    $locs = Get-LocsFromXmlString $xml
+    $all = @()
+    foreach ($loc in $locs) {
+      $fileName = [System.IO.Path]::GetFileName(([Uri]$loc).AbsolutePath)
+      if (-not $fileName) { continue }
+      $childPath = Join-Path (Split-Path -Parent $path) $fileName
+      $all += Get-UrlsFromSitemapLocal $childPath
+    }
+    return ($all | Sort-Object -Unique)
+  }
+
+  # urlset: return <loc> urls
+  return (Get-LocsFromXmlString $xml)
+}
+
+$urls = Get-UrlsFromSitemapLocal $xmlPath
 
 Write-Output ("Found {0} URLs in sitemap." -f $urls.Count)
 
