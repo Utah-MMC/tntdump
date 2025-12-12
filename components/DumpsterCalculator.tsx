@@ -74,8 +74,8 @@ const dumpsterSizes: DumpsterSize[] = [
     dimensions: '16\' x 8\' x 3.5\'',
     price1Day: '$300',
     price7Day: '$325',
-    tons1Day: 'No tons included',
-    tons7Day: '2 tons included',
+    tons1Day: 'Billed by actual weight',
+    tons7Day: 'Billed by actual weight',
     overagePerTon: '$55/ton',
     description: 'Great for medium-sized projects',
     suitableFor: ['Home renovations', 'Kitchen remodels', 'Bathroom updates', 'Basement cleanouts']
@@ -86,8 +86,8 @@ const dumpsterSizes: DumpsterSize[] = [
     dimensions: '17.08\' x 7.54\' x 5.00\'',
     price1Day: '$335',
     price7Day: '$375',
-    tons1Day: 'No tons included',
-    tons7Day: '2 tons included',
+    tons1Day: 'Billed by actual weight',
+    tons7Day: 'Billed by actual weight',
     overagePerTon: '$55/ton',
     description: 'Most popular size for most projects',
     suitableFor: ['Large renovations', 'Construction debris', 'Commercial projects']
@@ -98,8 +98,8 @@ const dumpsterSizes: DumpsterSize[] = [
     dimensions: '18.25\' x 7.25\' x 6.63\'',
     price1Day: '$345',
     price7Day: '$400',
-    tons1Day: 'No tons included',
-    tons7Day: '2 tons included',
+    tons1Day: 'Billed by actual weight',
+    tons7Day: 'Billed by actual weight',
     overagePerTon: '$55/ton',
     description: 'Ideal for large construction projects',
     suitableFor: ['Large construction', 'Commercial cleanouts', 'Industrial projects', 'Major renovations']

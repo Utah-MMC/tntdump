@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Bathroom Remodel Dumpster Guide: Size, Cost & What Fits | TNT Dumpsters',
-  description: 'Complete guide to dumpster rental for bathroom remodels. Learn which size you need, what debris fits, cost estimates, weight considerations, and money-saving tips for your bathroom renovation in Utah.',
+  description: 'Bathroom remodel dumpster guide: size recommendations, what fits, weight pitfalls for tile, cost estimates, and money-saving tips.',
   keywords: 'bathroom remodel dumpster, bathroom renovation dumpster, bathroom demolition dumpster, small dumpster rental, utah dumpster rental',
 }
 

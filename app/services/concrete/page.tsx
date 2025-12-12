@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Wrench } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Concrete Dumpster Rental | Heavy Debris Disposal | TNT Dumpsters',
+  description:
+    'Concrete dumpster rental for driveways, patios, brick, and masonry in Utah. Heavy-debris disposal with clear pricing—call (801) 209-9013.',
+  alternates: { canonical: 'https://tntdump.com/services/concrete' },
+}
 
 export default function ConcreteServicePage() {
   const features = [

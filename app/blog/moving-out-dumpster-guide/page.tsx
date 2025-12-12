@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Moving Out? Complete Dumpster Rental Guide for Relocations 2025',
-  description: 'Complete moving out dumpster guide covering sizing (apartment=10-15yd, house=15-20yd), what to discard vs move, furniture disposal, timeline coordination, cost-effective strategies, and apartment/HOA considerations for efficient relocations.',
+  description: 'Moving out dumpster guide: pick a size for apartments vs houses, what to toss, timeline tips, and HOA-friendly placement guidance.',
   keywords: 'moving out dumpster, moving dumpster rental, relocation dumpster, moving junk removal, apartment moving dumpster, house moving cleanout',
 }
 

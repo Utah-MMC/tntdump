@@ -373,6 +373,18 @@ export default function Home() {
               <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
               <p className="text-sm text-gray-600">Home container rental for cleanouts and remodels</p>
             </a>
+            <a href="#cleanouts-moves" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Cleanouts & Moves</h3>
+              <p className="text-sm text-gray-600">Quick home cleanups and seasonal purges</p>
+            </a>
+            <a href="#remodels-projects" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Remodels & Projects</h3>
+              <p className="text-sm text-gray-600">Keep work areas clean during upgrades</p>
+            </a>
+            <a href="#what-we-take" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">What We Take</h3>
+              <p className="text-sm text-gray-600">Materials and debris we accept</p>
+            </a>
           </div>
         </div>
       </section>

@@ -41,6 +41,7 @@ const Header = () => {
   const toolsServices = [
     { name: 'Size Calculator', href: '/calculator' },
     { name: 'Get Free Quote', href: '/quote' },
+    { name: 'Order Online', href: '/cart' },
     { name: 'Request Call Back', href: '/quote' },
     { name: 'Schedule Pickup', href: '/contact' },
   ]

@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `30 Yard Dumpster Rental in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Rent a 30 yard dumpster in ${data.city}, UT. Large capacity for whole-home renovations, new construction, and commercial projects. Dimensions: 22'L × 7.5'W × 6'H. Transparent pricing.`
+  const description = `Rent a 30-yard dumpster in ${data.city}, UT for large cleanouts and construction. Fast delivery and clear pricing—call ${BRAND.telephone}.`
   const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}/30-yard-dumpster`
   return {
     title,
@@ -112,8 +112,8 @@ function SpecsSection({ city }: { city: CityData }) {
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Weight Limit</h3>
-            <p className="text-gray-700">3-4 tons included</p>
-            <p className="text-sm text-gray-600 mt-1">Overages billed per ton</p>
+            <p className="text-gray-700">Weight billed at $55/ton</p>
+            <p className="text-sm text-gray-600 mt-1">Based on actual weight at disposal</p>
           </div>
           <div className="bg-white p-6 rounded-lg border border-gray-200">
             <h3 className="text-lg font-semibold text-gray-900 mb-2">Pricing</h3>
@@ -382,10 +382,10 @@ function buildFaq(city: CityData) {
   }
 
   // 30 yard specific questions first
-  q(`How much does a 30 yard dumpster cost in ${city.city}?`, `Pricing typically ranges from $500-$600 for a 30 yard dumpster in ${city.city}, including delivery, pickup, and 3-4 tons of disposal. Final cost depends on location, haul distance, and debris type.`)
+  q(`How much does a 30 yard dumpster cost in ${city.city}?`, `Pricing typically ranges from $500-$600 for a 30 yard dumpster in ${city.city}, including delivery and pickup. Weight is billed separately at $55 per ton based on actual weight. Final cost depends on location, haul distance, and debris type.`)
   q('What are the dimensions of a 30 yard dumpster?', 'A 30 yard dumpster measures approximately 22 feet long × 7.5 feet wide × 6 feet high. Plan for ~60 feet of clearance for safe delivery and pickup.')
   q('How much can a 30 yard dumpster hold?', 'About 30 cubic yards—equivalent to 12-15 full-size pickup truck loads. Perfect for whole-home renovations, large cleanouts, and new construction projects.')
-  q('What weight is included with a 30 yard dumpster?', 'Most 30 yard rentals include 3-4 tons (6,000-8,000 lbs) of disposal. Overages are billed per ton. Heavy materials like concrete or dirt may require smaller containers.')
+  q('How is weight billed for a 30 yard dumpster?', 'Weight is always billed separately at $55 per ton based on actual weight at disposal. No free tons are included with any dumpster size. Heavy materials like concrete or dirt may require dedicated containers.')
   q('Can I put concrete in a 30 yard dumpster?', 'Generally no. Concrete and masonry are extremely heavy and should go in dedicated containers with lower fill heights. A full 30 yard of concrete exceeds legal road weight limits.')
   q('Is a 30 yard dumpster big enough for a whole house cleanout?', 'Yes—a 30 yard is ideal for clearing out entire homes, including furniture, appliances, and decades of accumulated items from 3-5 bedroom properties.')
   q('How long can I keep a 30 yard dumpster?', 'Standard rental periods include several days to a week. Extensions are available—just let us know to avoid daily fees. Long-term projects can negotiate weekly or monthly rates.')

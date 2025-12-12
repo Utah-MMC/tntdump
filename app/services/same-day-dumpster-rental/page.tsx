@@ -4,7 +4,7 @@ import { CheckCircle, Phone, Clock, Zap, Truck } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Same Day Dumpster Rental | TNT Dumpsters | Utah',
-  description: 'Same day dumpster rental in Utah. Fast delivery for urgent projects. Emergency dumpster rental available. Call (801) 209-9013 for immediate service.',
+  description: 'Same-day dumpster rental in Utah for urgent cleanups and remodels. Fast delivery—call (801) 209-9013 to book.',
   keywords: 'same day dumpster rental, emergency dumpster rental, fast dumpster delivery, urgent dumpster rental, same day delivery, utah dumpster rental',
 }
 

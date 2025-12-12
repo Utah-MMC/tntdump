@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: '10 vs 15 Yard Dumpster: Which Size Do You Need? | TNT Dumpsters',
-  description: 'Compare 10 vs 15 yard dumpsters: dimensions, capacity, cost, and best uses. Learn which size fits your project and avoid paying for unused space. Expert comparison guide for Utah homeowners.',
+  description: '10 vs 15 yard dumpsters compared: dimensions, capacity, cost, and best uses so you choose the right size and avoid overpaying.',
   keywords: '10 vs 15 yard dumpster, 10 yard vs 15 yard, small dumpster comparison, dumpster size comparison, residential dumpster rental, utah dumpster rental',
 }
 

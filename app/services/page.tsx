@@ -9,8 +9,11 @@ import { FinderProvider } from '@/components/FinderContext'
 export const metadata: Metadata = {
   title: 'Dumpster Rental Services | Dumpster Rental | TNT Dump',
   description:
-    'Local roll off dumpster rental for homes, remodels, and contractors in Salt Lake & Utah County. Fast delivery dumpster rental and clear dumpster rental price—call (801) 209-9013.',
+    'Dumpster rental services in Salt Lake & Utah County for homes and contractors. Find the right size, get clear pricing, and schedule fast delivery.',
 }
+
+// Enable ISR - revalidate daily
+export const revalidate = 86400
 
 export default function ServicesPage() {
   return (
@@ -29,10 +32,10 @@ export default function ServicesPage() {
             Planning a home cleanout, kitchen remodel, roof replacement, or landscaping project? Our team recommends sizes and confirms weight limits up front so your dumpster rental cost stays clear. See our <a href="/dumpsters/residential" className="text-blue-600 hover:underline">residential dumpster rental</a> or <a href="/dumpsters/commercial" className="text-blue-600 hover:underline">commercial dumpster rental</a> pages.
           </p>
           <p>
-            Need speed or job site support? Check <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and see how we support <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> with swaps and reliable timing. Read our <a href="/blog" className="text-blue-600 hover:underline">dumpster rental blog</a> for tips.
+            Need speed or job site support? Check <a href="/services/same-day-dumpster-rental" className="text-blue-600 hover:underline">same day dumpster rental</a> availability and see how we support <a href="/#contractors" className="text-blue-600 hover:underline">construction dumpster rental</a> with swaps and reliable timing. Read our <a href="/blog" className="text-blue-600 hover:underline">dumpster rental blog</a> for tips.
           </p>
           <p>
-            For pricing details and what affects totals, review our <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> section on the homepage. <a href="/quote" className="text-blue-600 hover:underline">Get a free quote</a> for your specific project needs.
+            For pricing details and what affects totals, review our <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> section on the homepage. <a href="/quote" className="text-blue-600 hover:underline">Get a free quote</a> for your specific project needs, or <a href="/cart" className="text-blue-600 hover:underline">order your dumpster rental online</a>.
           </p>
         </section>
         {/* SEO SWEEP END [/services] */}

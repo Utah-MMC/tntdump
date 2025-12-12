@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart } from 'lucide-react'
 import QuickContactForm from '@/components/QuickContactForm'
+
+export const metadata: Metadata = {
+  title: 'Estate Cleanouts in Utah | Compassionate Cleanout Help | TNT Dumpsters',
+  description:
+    'Compassionate estate cleanout help in Utah. We sort, donate, haul away, and prepare properties for sale with clear pricing and flexible scheduling.',
+  alternates: { canonical: 'https://tntdump.com/estate-cleanouts' },
+}
 
 export default function EstateCleanoutsPage() {
   const services = [

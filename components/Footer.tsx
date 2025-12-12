@@ -17,6 +17,7 @@ const Footer = () => {
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Reviews', href: '/reviews' },
+      { name: 'Partners', href: '/partners' },
       { name: 'FAQs', href: '/faqs' },
       { name: 'Contact', href: '/contact' },
       { name: 'Estate Cleanouts', href: '/estate-cleanouts' },
@@ -37,6 +38,17 @@ const Footer = () => {
              <h3 className="text-lg sm:text-xl font-bold text-yellow-400">TNT Dumpsters</h3>
             <p className="text-gray-300">
               Over 55 years of experience in dumpster rental services. Serving the Wasatch Front area with reliable, affordable waste management solutions.
+            </p>
+            <p className="text-gray-300 text-sm">
+              Sister company:{' '}
+              <a
+                href="https://icondumpsters.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-yellow-400 hover:text-yellow-300 underline"
+              >
+                Icon Dumpsters
+              </a>
             </p>
             <div className="space-y-2">
                             <div className="flex items-center space-x-2">

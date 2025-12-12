@@ -5,7 +5,7 @@ import { DollarSign, FileText, Calculator, TrendingDown, Clock, Shield } from 'l
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Cost Calculator | Estimate Pricing | TNT Dumpsters',
-  description: 'Calculate your dumpster rental costs instantly with our free pricing calculator. Get accurate estimates for 10, 15, 20, and 30 yard dumpsters in Utah. Transparent pricing with no hidden fees. Call (801) 209-9013.',
+  description: 'Estimate dumpster rental pricing in Utah by size and rental period. Transparent rates for 10–30 yard roll-offs—call (801) 209-9013.',
   keywords: 'dumpster rental cost calculator, estimate dumpster cost, dumpster pricing calculator, dumpster rental price estimator, utah dumpster cost, dumpster rental rates',
 }
 
@@ -166,8 +166,8 @@ export default function CostCalculatorPage() {
                   What's included in the base price?
                 </h3>
                 <p className="text-gray-600">
-                  Our base price includes delivery, pickup, a 7-day rental period, and disposal fees for
-                  standard materials up to the weight limit for your dumpster size. There are no hidden fees.
+                  Our base price includes delivery, pickup, and a 7-day rental period. Weight is billed separately 
+                  at $55 per ton based on actual weight. There are no hidden fees.
                 </p>
               </div>
 
@@ -178,7 +178,7 @@ export default function CostCalculatorPage() {
                 <p className="text-gray-600">
                   Additional fees may apply for extended rental periods ($15/day after 7 days), same-day
                   delivery ($50-75), permit assistance ($75), or heavy debris like concrete (10% upcharge).
-                  Overage fees apply if you exceed the included weight limit.
+                  Weight is always billed at $55 per ton based on actual weight at disposal.
                 </p>
               </div>
 
@@ -205,11 +205,11 @@ export default function CostCalculatorPage() {
 
               <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">
-                  How much weight is included?
+                  How is weight billed?
                 </h3>
                 <p className="text-gray-600">
-                  10-yard dumpsters include 1 ton, 15-yard and 20-yard include 2 tons, and 30-yard dumpsters
-                  include 3 tons of disposal. Additional tonnage is billed separately at market rates.
+                  Weight is always billed separately at $55 per ton based on the actual weight of your materials at disposal. 
+                  There are no free tons included with any dumpster size. This ensures transparent, fair pricing for all customers.
                 </p>
               </div>
 
@@ -267,6 +267,15 @@ export default function CostCalculatorPage() {
             <a href="/dumpsters/commercial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-blue-600 mb-2">Commercial Rentals</h3>
               <p className="text-sm text-gray-600">Business dumpster solutions</p>
+            </a>
+            <a
+              href="https://icondumpsters.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow"
+            >
+              <h3 className="font-bold text-blue-600 mb-2">Icon Dumpsters</h3>
+              <p className="text-sm text-gray-600">Visit our sister dumpster company</p>
             </a>
           </div>
         </div>

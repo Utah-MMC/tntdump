@@ -27,7 +27,7 @@ export interface CostBreakdown {
     extraDayTotal: number
   }
   disposal: {
-    tonsIncluded: number
+    weightRate: number
     description: string
   }
   addOns: {
@@ -43,12 +43,13 @@ export interface CostBreakdown {
 /**
  * Base pricing by dumpster size
  * These are average ranges for Utah locations
+ * Note: Weight is always billed separately at $55/ton - no free tons included
  */
-const BASE_PRICING: Record<DumpsterSize, { min: number; max: number; tonsIncluded: number }> = {
-  10: { min: 300, max: 400, tonsIncluded: 1 },
-  15: { min: 350, max: 450, tonsIncluded: 2 },
-  20: { min: 400, max: 500, tonsIncluded: 2 },
-  30: { min: 500, max: 600, tonsIncluded: 3 },
+const BASE_PRICING: Record<DumpsterSize, { min: number; max: number }> = {
+  10: { min: 300, max: 400 },
+  15: { min: 350, max: 450 },
+  20: { min: 400, max: 500 },
+  30: { min: 500, max: 600 },
 }
 
 /**
@@ -113,10 +114,10 @@ export function calculateDumpsterCost(inputs: CostCalculatorInputs): CostBreakdo
     extraDayTotal,
   }
 
-  // Disposal information
+  // Disposal information - weight is always billed at $55/ton
   const disposal = {
-    tonsIncluded: basePricing.tonsIncluded,
-    description: `Up to ${basePricing.tonsIncluded} ton${basePricing.tonsIncluded > 1 ? 's' : ''} included`,
+    weightRate: 55,
+    description: 'Weight billed at $55 per ton',
   }
 
   // Calculate add-on costs

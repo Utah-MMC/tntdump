@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `15 Yard Dumpster Rental in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Rent a 15 yard dumpster in ${data.city}, UT. Perfect for bathroom remodels, flooring projects, and small cleanouts. Dimensions: 16'L × 7.5'W × 4.5'H. Fast delivery, transparent pricing.`
+  const description = `Rent a 15-yard dumpster in ${data.city}, UT for remodels and small cleanouts. Fast delivery, clear pricing, easy pickup—call ${BRAND.telephone}.`
   const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}/15-yard-dumpster`
   return {
     title,
@@ -449,7 +449,7 @@ function buildFaq(city: CityData) {
   q('Will the driver call before arrival?', 'We can call or text before arrival—note your preference when booking.')
   q('How do I prepare for dumpster delivery?', 'Clear vehicles, move bins/cans, and mark any sprinklers or utilities in the placement zone.')
   q('What if my HOA complains?', city.hoa_common_rule || 'We can relocate promptly or schedule pickups to comply. Ask us for HOA-friendly placement ideas.')
-  q('Is weight included in the price?', 'Yes, each 15 yard dumpster includes 2-3 tons of weight allowance. We\'ll quote included tonnage up front.')
+  q('How is weight billed?', 'Weight is always billed separately at $55 per ton based on actual weight at disposal. No free tons are included with any dumpster size.')
   q('How do I avoid overweight fees?', 'Choose the right size, keep out prohibited/soaked materials, and avoid overloading with heavy debris like tile or concrete.')
   q('Can you place a dumpster on gravel?', 'Yes, packed gravel is generally fine. We avoid soft lawns without protection.')
   q('What about narrow alley placements?', 'Case-by-case: width, overhead, and turning radius matter. Send a photo—we can advise.')

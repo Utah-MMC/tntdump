@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: '20 vs 30 Yard Dumpster: Which Size for Your Project? | TNT Dumpsters',
-  description: 'Compare 20 vs 30 yard dumpsters: dimensions, capacity, cost, and best uses. Learn which size fits kitchen remodels, roof tear-offs, and large renovations. Expert comparison for Utah projects.',
+  description: 'Compare 20 vs 30 yard dumpsters: capacity, cost, and best uses. Learn which size fits remodels, roof tear-offs, and renovations.',
   keywords: '20 vs 30 yard dumpster, 20 yard vs 30 yard, medium dumpster comparison, kitchen remodel dumpster, roof tear-off dumpster, utah dumpster rental',
 }
 

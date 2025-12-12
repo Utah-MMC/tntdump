@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Deck Demolition Dumpster Guide: Size, Cost & Disposal | TNT Dumpsters',
-  description: 'Complete guide to dumpster rental for deck demolition. Learn which size you need, what materials fit, cost estimates, weight considerations, and tips for deck removal projects in Utah.',
+  description: 'Deck demolition dumpster guide: recommended sizes, what fits, weight tips for wood and composite, and ways to keep disposal costs down.',
   keywords: 'deck demolition dumpster, deck removal dumpster, deck tear-down dumpster, wood disposal dumpster, utah dumpster rental',
 }
 

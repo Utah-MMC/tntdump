@@ -92,64 +92,64 @@ const Services = () => {
 
         {/* Use-case bullets */}
         <div className="mt-10 grid md:grid-cols-2 gap-8">
-          <div>
+          <div id="cleanouts-moves">
             <h3 className="font-semibold text-gray-900 mb-2">Cleanouts & Moves</h3>
             <p className="text-gray-700 text-sm mb-2">Perfect for quick home cleanups and seasonal purges.</p>
             <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-              <li>bin rental for attic cleanout <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for basement cleanout <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for garage cleanout <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for estate cleanout <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for foreclosure cleanout <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for hoarder cleanup <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
-              <li>bin rental for home cleanout <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for moving <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for spring cleaning <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for storm cleanup <span className="text-gray-600">(typical size: 20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for attic cleanout</Link> <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li><Link href="/services/basement-cleanout-service" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for basement cleanout</Link> <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li><Link href="/services/garage-cleanout-service" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for garage cleanout</Link> <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li><Link href="/services/estate-cleanout" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for estate cleanout</Link> <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li><Link href="/services/estate-cleanout" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for foreclosure cleanout</Link> <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li><Link href="/services/estate-cleanout" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for hoarder cleanup</Link> <span className="text-gray-600">(typical size: 20–30 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for home cleanout</Link> <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for moving</Link> <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for spring cleaning</Link> <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for storm cleanup</Link> <span className="text-gray-600">(typical size: 20 yd)</span></li>
             </ul>
           </div>
-          <div>
+          <div id="remodels-projects">
             <h3 className="font-semibold text-gray-900 mb-2">Remodels & Projects</h3>
             <p className="text-gray-700 text-sm mb-2">Keep work areas clean and safe during upgrades.</p>
             <ul className="list-disc list-inside text-gray-700 text-sm space-y-1">
-              <li>bin rental for kitchen remodel <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for bathroom remodel <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
-              <li>bin rental for remodel <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
-              <li>bin rental for renovation <span className="text-gray-600">(typical size: 20 yd)</span></li>
-              <li>bin rental for roof replacement <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
-              <li>bin rental for landscaping <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li><Link href="/services/kitchen-remodel-dumpster" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for kitchen remodel</Link> <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for bathroom remodel</Link> <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for remodel</Link> <span className="text-gray-600">(typical size: 15–20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for renovation</Link> <span className="text-gray-600">(typical size: 20 yd)</span></li>
+              <li><Link href="/services/roofing-dumpster-rental" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for roof replacement</Link> <span className="text-gray-600">(typical size: 10–20 yd)</span></li>
+              <li><Link href="/dumpsters/residential" className="text-blue-600 hover:text-blue-700 hover:underline">bin rental for landscaping</Link> <span className="text-gray-600">(typical size: 10–15 yd)</span></li>
             </ul>
           </div>
         </div>
 
         {/* What we take - materials grid */}
-        <div className="mt-12">
+        <div id="what-we-take" className="mt-12">
           <h3 className="text-xl font-bold text-gray-900 mb-4">What We Take</h3>
           <div className="materials-grid grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
             {[
-              ['appliances','Dumpster rental for appliances.'],
-              ['cardboard','Dumpster rental for cardboard.'],
-              ['concrete','Dumpster rental for concrete.'],
-              ['construction debris','Dumpster rental for construction debris.'],
-              ['demolition debris','Dumpster rental for demolition debris.'],
-              ['dirt','Dumpster rental for dirt.'],
-              ['drywall','Dumpster rental for drywall.'],
-              ['furniture','Dumpster rental for furniture.'],
-              ['green waste','Dumpster rental for green waste.'],
-              ['household junk','Dumpster rental for household junk.'],
-              ['mattress','Dumpster rental for mattress.'],
-              ['metal','Dumpster rental for metal.'],
-              ['recycling','Dumpster rental for recycling.'],
-              ['roofing','Dumpster rental for roofing.'],
-              ['shingles','Dumpster rental for shingles.'],
-              ['soil','Dumpster rental for soil.'],
-              ['wood','Dumpster rental for wood.'],
-              ['yard waste','Dumpster rental for yard waste.'],
-            ].map(([title, caption], i) => (
-              <div key={i} className="materials-item p-4 bg-gray-50 rounded-lg border">
-                <h4 className="font-semibold text-gray-900 text-sm mb-1">{title}</h4>
+              ['appliances','Dumpster rental for appliances.', '/dumpsters/residential'],
+              ['cardboard','Dumpster rental for cardboard.', '/dumpsters/residential'],
+              ['concrete','Dumpster rental for concrete.', '/dumpsters/concrete'],
+              ['construction debris','Dumpster rental for construction debris.', '/dumpsters/concrete'],
+              ['demolition debris','Dumpster rental for demolition debris.', '/dumpsters/concrete'],
+              ['dirt','Dumpster rental for dirt.', '/dumpsters/concrete'],
+              ['drywall','Dumpster rental for drywall.', '/dumpsters/concrete'],
+              ['furniture','Dumpster rental for furniture.', '/dumpsters/residential'],
+              ['green waste','Dumpster rental for green waste.', '/dumpsters/residential'],
+              ['household junk','Dumpster rental for household junk.', '/dumpsters/residential'],
+              ['mattress','Dumpster rental for mattress.', '/dumpsters/residential'],
+              ['metal','Dumpster rental for metal.', '/dumpsters/residential'],
+              ['recycling','Dumpster rental for recycling.', '/dumpsters/residential'],
+              ['roofing','Dumpster rental for roofing.', '/services/roofing-dumpster-rental'],
+              ['shingles','Dumpster rental for shingles.', '/services/roofing-dumpster-rental'],
+              ['soil','Dumpster rental for soil.', '/dumpsters/concrete'],
+              ['wood','Dumpster rental for wood.', '/dumpsters/concrete'],
+              ['yard waste','Dumpster rental for yard waste.', '/dumpsters/residential'],
+            ].map(([title, caption, href], i) => (
+              <Link key={i} href={href} className="materials-item p-4 bg-gray-50 rounded-lg border hover:bg-gray-100 hover:shadow-md transition-all">
+                <h4 className="font-semibold text-gray-900 text-sm mb-1 hover:text-blue-600">{title}</h4>
                 <p className="text-gray-700 text-xs">{caption}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -158,7 +158,7 @@ const Services = () => {
         <div className="sr-only" aria-hidden="true">
           <p>Fast local dumpster rental for home cleanups and small projects.</p>
           <p>Roll off dumpster solutions for contractors needing reliable swaps.</p>
-          <p>Construction dumpster rental priced right with clear weight allowances.</p>
+          <p>Construction dumpster rental priced right with transparent weight billing at $55/ton.</p>
         </div>
 
         {/* Image alt/filename suggestions (non-functional note) */}

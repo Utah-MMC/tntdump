@@ -22,7 +22,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `20 Yard Dumpster Rental in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Rent a 20 yard dumpster in ${data.city}, UT. The most popular size for kitchen remodels, roof tear-offs, and renovations. Dimensions: 22'L × 7.5'W × 4.5'H. Same-day delivery available.`
+  const description = `Rent a 20-yard dumpster in ${data.city}, UT for remodels and roof tear-offs. Fast delivery, clear pricing, easy pickup—call ${BRAND.telephone}.`
   const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}/20-yard-dumpster`
   return {
     title,
@@ -118,7 +118,7 @@ function SpecsBlock({ city }: { city: CityData }) {
           <div className="bg-white rounded-lg p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-blue-600 mb-2">Weight Limit</h3>
             <p className="text-gray-700">
-              <strong>2–3 tons included</strong>
+              <strong>Weight billed at $55/ton</strong>
             </p>
             <p className="text-sm text-gray-600 mt-1">Overages billed per ton</p>
           </div>
@@ -271,8 +271,7 @@ function WhyPopular({ city }: { city: CityData }) {
             avoiding the premium of a 30 yard container.
           </li>
           <li>
-            <strong>Weight allowance matches projects:</strong> The included 2–3 ton weight limit aligns perfectly with typical remodel and cleanout debris,
-            minimizing overage fees.
+            <strong>Fair weight billing:</strong> Weight is billed at $55 per ton based on actual weight, ensuring transparent and fair pricing for all customers.
           </li>
           <li>
             <strong>Easy walk-in access:</strong> The 4.5-foot sidewall height allows most people to toss bags and boxes over the side while still being
@@ -352,17 +351,17 @@ function buildFaq(city: CityData) {
 
   // 20-yard specific FAQs
   q(`How big is a 20 yard dumpster?`, `A 20 yard dumpster is approximately 22 feet long, 7.5 feet wide, and 4.5 feet high. It holds 20 cubic yards or about 8–10 pickup truck loads.`)
-  q(`How much does a 20 yard dumpster cost in ${city.city}?`, `Typical pricing for a 20 yard dumpster in ${city.city} ranges from $400–$500 including delivery, pickup, disposal, and 2–3 tons of weight. Overages are billed per ton.`)
+  q(`How much does a 20 yard dumpster cost in ${city.city}?`, `Typical pricing for a 20 yard dumpster in ${city.city} ranges from $400–$500 including delivery and pickup. Weight is billed separately at $55 per ton based on actual weight.`)
   q(`How soon can I get a 20 yard dumpster in ${city.city}?`, `Most 20 yard dumpster deliveries in ${city.city} arrive within ${city.avg_delivery_eta_hours || 4} hours when ordered before ${to12h(city.cutoff_time)}. Same-day delivery is often available.`)
   q(`What can I put in a 20 yard dumpster?`, `General construction debris, household junk, furniture, appliances, roofing shingles, flooring, drywall, yard waste, and more. No hazardous materials, liquids, or electronics.`)
-  q(`How much weight is included with a 20 yard dumpster?`, `Our 20 yard dumpsters include 2–3 tons of disposal. Heavy materials like concrete or dirt may require dedicated containers with lower weight limits.`)
+  q(`How is weight billed for a 20 yard dumpster?`, `Weight is always billed separately at $55 per ton based on actual weight at disposal. No free tons are included with any dumpster size.`)
   q(`Will a 20 yard dumpster fit in my driveway?`, `Most standard driveways in ${city.city} accommodate a 20 yard dumpster (22 ft long). We need about 45–50 feet of clearance including truck positioning.`)
   q(`Can I use a 20 yard dumpster for a roof tear-off?`, `Yes—a 20 yard dumpster is perfect for roofing projects of 20–30 squares. Make sure to communicate the square footage when booking so we can confirm capacity.`)
   q(`What is the best dumpster size for a kitchen remodel?`, `A 20 yard dumpster is the most popular choice for full kitchen remodels in ${city.city}. It holds all cabinets, countertops, appliances, flooring, and drywall from a typical kitchen gut.`)
   q(`Do I need a permit for a 20 yard dumpster in ${city.city}?`, city.permit_required ? `Street placements may require a right-of-way permit in ${city.city}. Driveway placements typically do not.` : `Driveway placements usually do not require permits. Street placements may—check with the city beforehand.`)
   q(`How long can I keep a 20 yard dumpster?`, `Standard rental periods include several days. Extensions are available—let us know ahead of time to avoid daily fees and ensure the container stays scheduled for your project.`)
   q(`Can I load the 20 yard dumpster above the rim?`, `No—debris must stay level with the top rail for safe tarping and transport. Overfilled containers cannot be picked up until brought to legal fill height.`)
-  q(`What if my 20 yard dumpster gets too heavy?`, `Overage fees apply when loads exceed the included tonnage. To avoid this, keep out prohibited materials, don't soak debris, and call if you think you're approaching the limit.`)
+  q(`How is weight calculated?`, `Weight is measured at the disposal facility and billed at $55 per ton. To minimize costs, keep out prohibited materials, avoid soaking debris with water, and separate heavy materials when possible.`)
   q(`Can a 20 yard dumpster be placed on the street?`, `Often yes, but it may require a city permit and must not obstruct traffic or visibility. Check local regulations before placing in the right-of-way.`)
   q(`Will the 20 yard dumpster damage my driveway?`, `We place protective boards under the dumpster to distribute weight and prevent cracks or impressions on asphalt and concrete driveways in ${city.city}.`)
   q(`Can I share a 20 yard dumpster with my neighbor?`, `Yes—just coordinate on placement, access, and splitting costs. Ensure combined loads stay within weight and volume limits.`)

@@ -263,8 +263,7 @@ export default function CostCalculator() {
                         {inputs.size} Yard Dumpster Rental
                       </div>
                       <div className="text-sm text-gray-600">
-                        Includes delivery, pickup, and {costBreakdown.disposal.tonsIncluded} ton
-                        {costBreakdown.disposal.tonsIncluded > 1 ? 's' : ''} disposal
+                        Includes delivery and pickup. Weight billed separately at ${costBreakdown.disposal.weightRate}/ton.
                       </div>
                     </div>
                     <div className="text-right">
@@ -403,9 +402,9 @@ export default function CostCalculator() {
                 <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
                   <DollarSign className="w-8 h-8 text-blue-700" aria-hidden="true" />
                 </div>
-                <h4 className="font-bold text-gray-900 mb-2">Disposal Fees</h4>
+                <h4 className="font-bold text-gray-900 mb-2">Weight Billing</h4>
                 <p className="text-gray-600 text-sm">
-                  Included disposal fees for standard materials up to the weight limit for your size.
+                  Weight is billed at $55 per ton based on actual weight at disposal. No free tons included.
                 </p>
               </div>
               <div className="text-center">

@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Kitchen Remodel Dumpster: Size Guide, Costs & What Fits | Complete Planning',
-  description: 'Comprehensive kitchen remodel dumpster guide covering dumpster sizes (10-20 yards), what fits, weight considerations, cost estimates, and loading strategies for partial and full kitchen renovations in Utah.',
+  description: 'Kitchen remodel dumpster guide: recommended sizes, what fits, weight pitfalls, and tips to keep your renovation cleanup on budget.',
   keywords: 'kitchen remodel dumpster, kitchen renovation dumpster size, kitchen demo dumpster, kitchen remodel waste, dumpster rental for kitchen remodel, kitchen renovation waste disposal',
 }
 

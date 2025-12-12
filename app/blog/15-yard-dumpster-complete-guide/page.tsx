@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: '15 Yard Dumpster: Complete Guide, Dimensions, Uses & Cost in 2025',
-  description: 'Comprehensive guide to 15-yard dumpsters: exact dimensions (16ft L × 7.5ft W × 4.5ft H), capacity (15 cubic yards), weight limits, best projects (bathroom remodels, flooring, deck removal), what fits with quantities, cost ($350-$450), and loading tips.',
+  description: '15-yard dumpster guide: best projects, what fits, weight limits, and typical pricing in Utah—plus loading tips to avoid overages.',
   keywords: '15 yard dumpster rental, 15 yard dumpster size, what fits in 15 yard dumpster, 15 yard dumpster dimensions, 15 yard dumpster cost, 15 yard dumpster capacity, 15 yard dumpster weight limit',
 }
 

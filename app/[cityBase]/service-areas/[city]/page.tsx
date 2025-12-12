@@ -14,6 +14,9 @@ export async function generateStaticParams() {
   }))
 }
 
+// Enable ISR - revalidate daily for city service area pages
+export const revalidate = 86400
+
 type PageProps = { params: { cityBase: string; city: string } }
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
@@ -22,7 +25,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Fast, local dumpster rental in ${data.city}, UT. ${BRAND.name} delivers ${[15,20,30].join('/')} yard roll-off dumpsters with transparent pricing and same-day options.`
+  const description = `Local dumpster rental in ${data.city}, UT—${[15, 20, 30].join('/')} yard roll-offs with fast delivery and clear pricing. Call ${BRAND.telephone}.`
   const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}`
   return {
     title,
@@ -161,7 +164,7 @@ function buildFaq(city: CityData) {
   }
   q(`How soon can I get a dumpster in ${city.city}?`, `Most deliveries in ${city.city} arrive in about ${city.avg_delivery_eta_hours || 4} hours when ordered before ${to12h(city.cutoff_time)}. Same-day is often available.`)
   q('What sizes are available?', 'We offer 15, 20, and 30 yard roll-off dumpsters for residential and commercial projects.')
-  q('What is included in pricing?', city.price_notes || 'Transparent pricing with delivery, pickup, and disposal up to included weight. Overages billed per ton.')
+  q('What is included in pricing?', city.price_notes || 'Transparent pricing with delivery and pickup included. Weight is billed separately at $55 per ton based on actual weight.')
   q('Do I need a permit?', city.permit_required ? 'Street placement may require a right-of-way permit from the city. Driveways typically do not.' : 'Driveway placements usually do not require permits; check local rules for street placements.')
   q(`Where does the waste go from ${city.city}?`, `We use approved facilities such as ${city.transfer_station_name || 'the local landfill/transfer station'}. Restrictions may apply for certain materials.`)
   q('What cannot go in the dumpster?', city.disallowed_items_deltas || 'No liquids, paints, oils, hazardous waste, or electronics. Dirt/concrete only in dedicated containers.')
@@ -193,7 +196,7 @@ function buildFaq(city: CityData) {
   q('What about alley placements?', 'Case-by-case: width, overhead, and turning radius matter. Send a quick photo—we can advise.')
   q('How do I prepare the site?', 'Clear vehicles, move bins/cans, and mark any sprinklers or utilities in the placement zone.')
   q('What if my HOA complains?', city.hoa_common_rule || 'We can relocate promptly or schedule pickups to comply; ask us for HOA-friendly placement ideas.')
-  q('Any weight included?', 'Yes—each size includes a weight allowance. We\'ll quote the included tons up front.')
+  q('How is weight billed?', 'Weight is always billed separately at $55 per ton based on actual weight at disposal. No free tons are included with any dumpster size.')
   q('Do you accept shingles?', 'Yes—roof tear-offs are common. We\'ll match bin size to squares and layers.')
   q('How do swaps bill?', 'Each swap is a new haul plus tonnage. Ask for project pricing if you expect multiple turns.')
   q('Is there a tonnage cap?', 'Road limits apply. For heavy debris, we use smaller containers to stay legal and safe.')

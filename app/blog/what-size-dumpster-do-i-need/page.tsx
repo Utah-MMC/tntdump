@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'What Size Dumpster Do I Need? Complete Selection Guide 2025',
-  description: 'Complete guide to choosing the right dumpster size: 10 yard ($300-400), 15 yard ($350-450), 20 yard ($400-500), 30 yard ($500-600). Includes decision tree, 20+ project types, volume calculation, and the "when in doubt" sizing rule.',
+  description: 'What size dumpster do I need? Compare 10–30 yard options by project type, capacity, and price. Includes a simple decision tree.',
   keywords: 'what size dumpster do i need, dumpster size guide, how to choose dumpster size, dumpster size calculator, right dumpster size, dumpster sizing guide',
 }
 

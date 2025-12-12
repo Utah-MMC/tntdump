@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Commercial Dumpster Rental: Business Guide | TNT Dumpsters',
-  description: 'Everything businesses need to know about commercial dumpster rentals: container sizes, scheduling, compliance, and cost control for offices, retail, and construction.',
+  description: 'Commercial dumpster rental guide for businesses: container sizes, service schedules, compliance basics, and cost-control tips.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
 }
 

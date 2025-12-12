@@ -4,7 +4,7 @@ import { CheckCircle, Phone, Clock, Wrench, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Kitchen Remodel Dumpster Rental | TNT Dumpsters | Utah',
-  description: 'Kitchen remodel dumpster rental in Utah. Perfect sizes for cabinets, countertops, appliances, and renovation debris. Same-day delivery available. Call (801) 209-9013 for a free quote.',
+  description: 'Kitchen remodel dumpster rental in Utah for cabinets, countertops, and demo debris. Fast delivery and clear pricing—call (801) 209-9013.',
   keywords: 'kitchen remodel dumpster, kitchen renovation dumpster, cabinet disposal, countertop removal, kitchen remodel waste, utah dumpster rental',
 }
 

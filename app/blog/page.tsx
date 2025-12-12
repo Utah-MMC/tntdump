@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   keywords: 'dumpster rental blog, waste management tips, project planning, dumpster rental guides, utah dumpster rental news',
 }
 
+// Enable ISR - revalidate every hour
+export const revalidate = 3600
+
 const blogPosts = [
   {
     id: 1,
@@ -251,6 +254,105 @@ const blogPosts = [
     category: 'Size Guide',
     readTime: '6 min read',
     slug: '30-yard-dumpster-guide'
+  },
+  {
+    id: 23,
+    title: '10 vs 15 Yard Dumpster: Which Size Do You Need?',
+    excerpt: 'Compare 10 vs 15 yard dumpsters: dimensions, capacity, cost, and best uses. Learn which size fits your project and avoid paying for unused space.',
+    image: '/images/dumpster2-500x500-2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-11',
+    category: 'Size Guide',
+    readTime: '5 min read',
+    slug: '10-vs-15-yard-dumpster-comparison'
+  },
+  {
+    id: 24,
+    title: 'Small vs Large Dumpster: Complete Comparison Guide',
+    excerpt: 'Compare small vs large dumpsters: 10-15 yard vs 30-40 yard dumpsters. Learn which size fits your project, cost differences, and when to choose each size.',
+    image: '/images/pexels-rodrigo-eder-1347087-2846205.jpg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-09',
+    category: 'Size Guide',
+    readTime: '5 min read',
+    slug: 'small-vs-large-dumpster-comparison'
+  },
+  {
+    id: 25,
+    title: 'Office Cleanout Dumpster Guide: Size, Cost & Planning',
+    excerpt: 'Complete guide to dumpster rental for office cleanouts. Learn which size you need, what office materials fit, cost estimates, and timeline planning.',
+    image: '/images/construction-site-3688252_1280.jpg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-08',
+    category: 'Commercial Services',
+    readTime: '5 min read',
+    slug: 'office-cleanout-dumpster-guide'
+  },
+  {
+    id: 26,
+    title: 'Deck Demolition Dumpster Guide: Size, Cost & Disposal',
+    excerpt: 'Complete guide to dumpster rental for deck demolition. Learn which size you need, what materials fit, cost estimates, and tips for deck removal projects.',
+    image: '/images/dumpsterSmallBanner.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-07',
+    category: 'Project Planning',
+    readTime: '5 min read',
+    slug: 'deck-demolition-dumpster-guide'
+  },
+  {
+    id: 27,
+    title: 'Moving Cleanout Dumpster Guide: Size, Cost & Tips',
+    excerpt: 'Complete guide to dumpster rental for moving cleanouts. Learn which size you need, what items fit, cost estimates, and tips for efficient moving cleanout.',
+    image: '/images/dumpster-rental-driveway.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-06',
+    category: 'Project Planning',
+    readTime: '5 min read',
+    slug: 'moving-cleanout-dumpster-guide'
+  },
+  {
+    id: 28,
+    title: 'Yard Waste Dumpster Guide: Size, Cost & Disposal Tips',
+    excerpt: 'Complete guide to dumpster rental for yard waste removal. Learn which size you need, what yard materials fit, cost estimates, and seasonal tips.',
+    image: '/images/dumpsterSmallBanner2.jpeg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-04',
+    category: 'Project Planning',
+    readTime: '5 min read',
+    slug: 'yard-waste-dumpster-guide'
+  },
+  {
+    id: 29,
+    title: 'Bathroom Remodel Dumpster Guide: Size, Cost & What Fits',
+    excerpt: 'Complete guide to dumpster rental for bathroom remodels. Learn which size you need, what debris fits, cost estimates, and money-saving tips.',
+    image: '/images/pexels-jplenio-2566826.jpg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-03',
+    category: 'Project Planning',
+    readTime: '5 min read',
+    slug: 'bathroom-remodel-dumpster-guide'
+  },
+  {
+    id: 30,
+    title: '20 vs 30 Yard Dumpster: Which Size for Your Project?',
+    excerpt: 'Compare 20 vs 30 yard dumpsters: dimensions, capacity, cost, and best uses. Learn which size fits kitchen remodels, roof tear-offs, and large renovations.',
+    image: '/images/pexels-rodrigo-eder-1347087-2846205.jpg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-02',
+    category: 'Size Guide',
+    readTime: '5 min read',
+    slug: '20-vs-30-yard-dumpster-comparison'
+  },
+  {
+    id: 31,
+    title: 'Construction Dumpster Size Guide: Choosing the Right Size',
+    excerpt: 'Complete guide to choosing construction dumpster sizes. Learn which size fits your construction project, weight considerations, and cost estimates.',
+    image: '/images/construction-site-3688262_1280.jpg',
+    author: 'TNT Dumpsters Team',
+    date: '2025-01-01',
+    category: 'Construction',
+    readTime: '6 min read',
+    slug: 'construction-dumpster-size-guide'
   }
 ]
 

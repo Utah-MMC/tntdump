@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Office Cleanout Dumpster Guide: Size, Cost & Planning | TNT Dumpsters',
-  description: 'Complete guide to dumpster rental for office cleanouts. Learn which size you need, what office materials fit, cost estimates, timeline planning, and tips for efficient office cleanout in Utah.',
+  description: 'Office cleanout dumpster guide: pick the right size, what fits, cost expectations, and a simple plan for fast, disruption-free cleanup.',
   keywords: 'office cleanout dumpster, office dumpster rental, commercial cleanout dumpster, office waste disposal, business dumpster rental, utah dumpster rental',
 }
 

@@ -5,7 +5,7 @@ import { Phone, FileText, Ruler, Scale, TrendingUp, Home } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Dumpster Volume Calculator | Calculate Debris Size | TNT Dumpsters',
-  description: 'Estimate your debris volume with our free calculator. Get accurate dumpster size recommendations based on your project materials and room-by-room measurements. Call (801) 209-9013.',
+  description: 'Estimate debris volume and get a recommended dumpster size. Room-by-room and material calculators—call (801) 209-9013.',
   keywords: 'dumpster volume calculator, how much fits in dumpster, debris volume calculator, cubic yard calculator, construction debris calculator, renovation volume estimator',
 }
 

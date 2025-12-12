@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Home Renovation Dumpster Guide: Complete Planning Guide | TNT Dumpsters',
-  description: 'Complete guide to dumpster rental for home renovations. Learn which size you need, what materials fit, cost estimates, timeline planning, and money-saving tips for whole-house renovations in Utah.',
+  description: 'Home renovation dumpster guide: pick the right size, plan placement, estimate volume, and avoid overage fees on whole-house projects.',
   keywords: 'home renovation dumpster, whole house renovation dumpster, renovation waste disposal, residential renovation dumpster, utah dumpster rental',
 }
 

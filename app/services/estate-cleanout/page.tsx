@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Heart, Home } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Estate Cleanout Service | Utah | TNT Dumpsters',
+  description:
+    'Estate cleanout service in Utah for downsizing, inheritances, and property sales. Professional hauling, flexible scheduling, and clear pricing.',
+  alternates: { canonical: 'https://tntdump.com/services/estate-cleanout' },
+}
 
 export default function EstateCleanoutServicePage() {
   const features = [

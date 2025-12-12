@@ -4,7 +4,7 @@ import { CheckCircle, Phone, Clock, Home, Box } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Basement Cleanout Service | TNT Dumpsters | Utah',
-  description: 'Basement cleanout service in Utah. Complete basement cleanup and junk removal. Furniture, appliances, storage items, and debris disposal. Same-day service available. Call (801) 209-9013.',
+  description: 'Basement cleanout service in Utah for junk, furniture, and storage clutter. Fast scheduling and clear pricing—call (801) 209-9013.',
   keywords: 'basement cleanout, basement cleanup, basement junk removal, basement decluttering, storage cleanout, utah dumpster rental',
 }
 

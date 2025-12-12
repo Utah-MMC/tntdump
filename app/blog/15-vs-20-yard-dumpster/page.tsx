@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: '15 Yard vs 20 Yard Dumpster: Which Size Do You Need? 2025',
-  description: '15 yard vs 20 yard dumpster comparison: 15-yard holds 6-7 truck loads ($350-$450), 20-yard holds 8-10 loads ($400-$500). Learn capacity differences, cost analysis, and when to choose each size for maximum ROI on your renovation project.',
+  description: '15 vs 20 yard dumpsters: capacity, pricing, and best projects. Learn when to size up to avoid extra hauls or overages.',
   keywords: '15 vs 20 yard dumpster, 15 yard or 20 yard dumpster, dumpster size comparison, 15 yard dumpster vs 20 yard, which dumpster size, dumpster rental comparison',
 }
 

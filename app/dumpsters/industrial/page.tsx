@@ -1,6 +1,14 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Building } from 'lucide-react'
 import QuickContactForm from '@/components/QuickContactForm'
+
+export const metadata: Metadata = {
+  title: 'Industrial Dumpster Rental | Utah | TNT Dumpsters',
+  description:
+    'Industrial dumpster rentals for manufacturing, construction, and facility cleanouts in Utah. Heavy-duty service with clear pricing—call (801) 209-9013.',
+  alternates: { canonical: 'https://tntdump.com/dumpsters/industrial' },
+}
 
 export default function IndustrialDumpsterPage() {
   const features = [
@@ -67,9 +75,9 @@ export default function IndustrialDumpsterPage() {
       capacity: '5-6 pickup truck loads',
       dimensions: '12\' x 8\' x 6\'',
       pricing: [
-        { label: '1 Day', value: '$300', note: 'no tons included' },
-        { label: '7 Days', value: '$325', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: '1 Day', value: '$300', note: 'billed by weight' },
+        { label: '7 Days', value: '$325', note: 'billed by weight' },
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -80,7 +88,7 @@ export default function IndustrialDumpsterPage() {
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -91,7 +99,7 @@ export default function IndustrialDumpsterPage() {
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -100,8 +108,8 @@ export default function IndustrialDumpsterPage() {
       capacity: 'Heavy material only',
       dimensions: "16.46' x 8.00' x 2.67'",
       pricing: [
-        { label: '1 Day', value: '$325', note: 'no tons included' },
-        { label: '7 Days', value: '$425', note: 'no tons included' }
+        { label: '1 Day', value: '$325', note: 'billed by weight' },
+        { label: '7 Days', value: '$425', note: 'billed by weight' }
       ]
     }
   ]

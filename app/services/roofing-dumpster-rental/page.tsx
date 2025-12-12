@@ -4,7 +4,7 @@ import { CheckCircle, Phone, Clock, Home, Shield } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Roofing Dumpster Rental | TNT Dumpsters | Utah',
-  description: 'Roofing dumpster rental for shingle removal, roof tear-off, and roofing debris disposal in Utah. Heavy-duty dumpsters for roofing projects. Same-day delivery. Call (801) 209-9013.',
+  description: 'Roofing dumpster rental for shingle removal and roof tear-offs in Utah. Heavy debris capacity, fast delivery—call (801) 209-9013.',
   keywords: 'roofing dumpster, roof tear-off dumpster, shingle disposal, roofing debris removal, roof replacement dumpster, utah dumpster rental',
 }
 

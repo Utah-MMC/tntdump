@@ -6,7 +6,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Estate Cleanout: Complete Family Guide (2025) | TNT Dumpsters',
-  description: 'Estate Cleanout made simple: a step-by-step family guide to plan, sort, sell, donate, and dispose—reducing stress, saving time, and keeping everything organized.',
+  description: 'Estate cleanout step-by-step: plan, sort, donate, sell, and dispose with less stress. Includes a checklist and timeline for families.',
   keywords: 'estate cleanout guide, estate dumpster, home cleanout tips, bereavement cleanout help',
 }
 

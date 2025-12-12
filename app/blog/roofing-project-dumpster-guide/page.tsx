@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Roofing Project Dumpster Guide: Sizing for Shingle Disposal 2025 | Complete Roof Tear-Off Guide',
-  description: 'Complete roofing dumpster guide with sizing formula (squares × layers), shingle weight calculations (200-250 lbs/square), size recommendations by roof area, cost estimates, and safety tips for efficient shingle disposal.',
+  description: 'Roofing dumpster guide: size by roof squares and layers, shingle weight basics, cost expectations, and safety tips for clean tear-offs.',
   keywords: 'roofing dumpster, roof tear off dumpster size, shingle disposal, roofing project dumpster rental, roof replacement dumpster, asphalt shingle disposal',
 }
 

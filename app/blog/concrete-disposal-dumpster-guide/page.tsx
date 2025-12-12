@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Concrete Disposal: Dumpster Guide & Weight Limits 2025 | Complete Cost Breakdown',
-  description: 'Complete concrete disposal dumpster guide covering weight calculations (150 lbs/cubic ft), recommended sizes (10-15 yard), clean loads vs mixed loads, cost premiums, disposal options, rebar considerations, and how to minimize expenses.',
+  description: 'Concrete disposal guide: weight limits, size recommendations, clean-load rules, rebar tips, and how to reduce concrete dumpster costs.',
   keywords: 'concrete disposal dumpster, concrete dumpster rental, concrete weight limits, concrete dumpster cost, clean concrete disposal, concrete debris removal',
 }
 

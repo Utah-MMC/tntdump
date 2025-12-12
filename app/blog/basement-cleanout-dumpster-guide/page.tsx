@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Basement Cleanout: How to Choose the Right Dumpster Size 2025 | Complete Guide',
-  description: 'Complete basement cleanout dumpster guide covering optimal sizes (15-20 yards), common items removed, access considerations, sorting strategies, timeline planning, cost estimates, and tips for efficient basement junk removal.',
+  description: 'Basement cleanout dumpster guide: best sizes, what fits, access tips, sorting plan, and cost expectations for fast, stress-free cleanup.',
   keywords: 'basement cleanout dumpster, basement junk removal dumpster, basement renovation dumpster, basement debris disposal, dumpster rental for basement cleanout',
 }
 

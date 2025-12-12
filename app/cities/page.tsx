@@ -138,6 +138,15 @@ export default function CitiesPage() {
                             >
                               {name} Dumpster Rentals
                             </a>
+                            {' '}
+                            <span className="text-gray-400">|</span>
+                            {' '}
+                            <a
+                              href={`/ut/${slug}/dumpster-rental`}
+                              className="text-blue-600 hover:text-blue-700 hover:underline text-sm"
+                            >
+                              {name} UT
+                            </a>
                           </li>
                         ))}
                     </ul>

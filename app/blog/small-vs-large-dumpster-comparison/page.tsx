@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Small vs Large Dumpster: Complete Comparison Guide | TNT Dumpsters',
-  description: 'Compare small vs large dumpsters: 10-15 yard vs 30-40 yard dumpsters. Learn which size fits your project, cost differences, capacity comparisons, and when to choose each size for Utah projects.',
+  description: 'Small vs large dumpsters: compare capacity, cost, and best uses for 10–15 yard vs 30–40 yard containers on Utah projects.',
   keywords: 'small vs large dumpster, small dumpster vs large dumpster, dumpster size comparison, residential vs commercial dumpster, utah dumpster rental',
 }
 

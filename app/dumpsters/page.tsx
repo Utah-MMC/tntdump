@@ -7,8 +7,11 @@ import { CheckCircle, Phone, Clock } from 'lucide-react'
 export const metadata: Metadata = {
   title: 'Dumpster Services | Dumpster Rental | TNT Dump',
   description:
-    'Roll off dumpster rental for residential, commercial, and construction projects. Fast delivery, fair dumpster rental price, and local service in Salt Lake & Utah County.',
+    'Roll-off dumpster rentals for residential, commercial, and construction projects in Salt Lake & Utah County. Fast delivery, clear pricing, easy pickup.',
 }
+
+// Enable ISR - revalidate daily
+export const revalidate = 86400
 
 export default function DumpstersPage() {
   const services = [
@@ -75,6 +78,15 @@ export default function DumpstersPage() {
       features: ['Concrete disposal', 'Brick removal', 'Asphalt waste', 'Construction debris'],
       alt: 'Concrete dumpsters for construction and demolition waste',
     },
+    {
+      title: 'Demolition Dumpster Rental',
+      description:
+        'Specialized dumpster rental for commercial construction, roofing, and heavy demolition projects. Concrete and dirt dumpsters available.',
+      image: '/images/dumpster1-500x500-1.jpeg',
+      href: '/demolition-dumpster',
+      features: ['Commercial demolition', 'Roofing projects', 'Heavy debris', 'Concrete disposal'],
+      alt: 'Demolition dumpster rental for heavy construction projects',
+    },
   ]
 
   return (
@@ -100,7 +112,7 @@ export default function DumpstersPage() {
                 Asking about pricing? See our <a href="/#pricing" className="text-blue-700 hover:underline">dumpster rental cost</a> overview and call for a firm quote. Need help choosing? Use our <a href="/calculator" className="text-blue-700 hover:underline">dumpster size calculator</a> or browse our <a href="/services" className="text-blue-700 hover:underline">dumpster rental services</a>.
               </p>
               <p>
-                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and we'll confirm availability. Learn more in our <a href="/blog" className="text-blue-700 hover:underline">dumpster rental blog</a> with tips and guides.
+                Tight timelines? Check <a href="/#same-day" className="text-blue-700 hover:underline">same day dumpster rental</a> options and we'll confirm availability. For heavy demolition projects, see our <a href="/demolition-dumpster" className="text-blue-700 hover:underline">demolition dumpster rental</a> service. Learn more in our <a href="/blog" className="text-blue-700 hover:underline">dumpster rental blog</a> with tips and guides.
               </p>
             </div>
             {/* SEO SWEEP END [/dumpsters] */}

@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Construction Dumpster Size Guide: Choosing the Right Size | TNT Dumpsters',
-  description: 'Complete guide to choosing construction dumpster sizes. Learn which size fits your construction project, weight considerations, cost estimates, and tips for construction waste management in Utah.',
+  description: 'Construction dumpster size guide: pick the right container, understand weight limits, estimate costs, and keep job sites running smoothly.',
   keywords: 'construction dumpster size, construction waste dumpster, contractor dumpster rental, construction debris disposal, commercial dumpster rental, utah dumpster rental',
 }
 

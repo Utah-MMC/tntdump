@@ -7,7 +7,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Yard Waste Dumpster Guide: Size, Cost & Disposal Tips | TNT Dumpsters',
-  description: 'Complete guide to dumpster rental for yard waste removal. Learn which size you need, what yard materials fit, cost estimates, seasonal tips, and disposal guidelines for yard cleanup in Utah.',
+  description: 'Yard waste dumpster guide: size, cost, what you can toss, seasonal tips, and disposal rules for Utah cleanups and landscaping.',
   keywords: 'yard waste dumpster, yard cleanup dumpster, yard debris removal, landscaping waste dumpster, yard waste disposal, utah dumpster rental',
 }
 

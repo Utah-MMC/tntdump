@@ -17,14 +17,14 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
   title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-  description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, upfront prices. Get a quote for construction or home cleanups.',
+  description: 'Local dumpster rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
   keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
   authors: [{ name: 'TNT Dumpsters' }],
   creator: 'TNT Dumpsters',
   publisher: 'TNT Dumpsters',
   openGraph: {
     title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-    description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, same day options, honest pricing. Get a quote today.',
+    description: 'Local dumpster rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
     url: 'https://tntdump.com',
     siteName: 'TNT Dumpsters',
     images: [
@@ -41,7 +41,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-    description: 'Local dumpster rental with delivery and same day availability. Get pricing and quotes fast.',
+    description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, clear pricing, easy pickup. Get a free quote today.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
   robots: {

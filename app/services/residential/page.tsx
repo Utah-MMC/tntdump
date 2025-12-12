@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Residential Dumpster Rental | Home Projects | TNT Dumpsters',
+  description:
+    'Residential dumpster rentals for remodels, cleanouts, and yard debris in Utah. Driveway-safe roll-offs with fast delivery and clear pricing.',
+  alternates: { canonical: 'https://tntdump.com/services/residential' },
+}
 
 export default function ResidentialServicePage() {
   const features = [
@@ -20,9 +28,9 @@ export default function ResidentialServicePage() {
       capacity: '5-6 pickup truck loads',
       dimensions: '12\' x 8\' x 6\'',
       pricing: [
-        { label: '1 Day', value: '$300', note: 'no tons included' },
-        { label: '7 Days', value: '$325', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: '1 Day', value: '$300', note: 'billed by weight' },
+        { label: '7 Days', value: '$325', note: 'billed by weight' },
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -33,7 +41,7 @@ export default function ResidentialServicePage() {
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -44,7 +52,7 @@ export default function ResidentialServicePage() {
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     }
   ]

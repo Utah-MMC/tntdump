@@ -6,7 +6,7 @@ import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
   title: 'Construction Waste Management: Best Practices | TNT Dumpsters',
-  description: 'Learn practical construction waste management strategies including segregation, recycling, safe disposal, and cost control for residential and commercial projects.',
+  description: 'Construction waste management tips: sort debris, recycle, prevent contamination, and cut disposal costs on residential and commercial jobs.',
   keywords: 'construction waste management, jobsite dumpsters, recycling construction debris, construction dumpster tips',
 }
 

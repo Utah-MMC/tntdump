@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: '20 Yard Dumpster: The Complete Guide to Utah\'s Most Popular Size',
-  description: 'The definitive guide to 20 yard dumpster rentals. Learn exact dimensions (22ft L × 7.5ft W × 4.5ft H), capacity (8-10 truck loads), weight limits (2-3 tons), costs ($400-$500), and what fits. Perfect for kitchen remodels, roof tear-offs, and multi-room renovations.',
+  description: '20-yard dumpster guide: dimensions, what fits, weight limits, typical pricing in Utah, and when to choose it for remodels or roofing.',
   keywords: '20 yard dumpster rental, 20 yard dumpster dimensions, 20 yard dumpster cost, 20 yard vs 30 yard, 20 yard vs 15 yard dumpster, residential dumpster rental, kitchen remodel dumpster',
 }
 

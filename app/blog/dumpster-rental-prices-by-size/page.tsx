@@ -6,7 +6,7 @@ import ServingCityEnhancer from '@/components/ServingCityEnhancer'
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Prices by Size: Complete Cost Comparison 2025',
-  description: 'Complete dumpster rental price comparison by size. Learn exact costs for 10, 15, 20, and 30-yard dumpsters, cost breakdowns by project type, and how to choose the most cost-effective size for your budget.',
+  description: 'Dumpster rental prices by size in Utah: compare 10, 15, 20, and 30-yard costs and pick the most cost-effective container.',
   keywords: 'dumpster rental prices, 15 yard dumpster cost, 20 yard dumpster price, dumpster price comparison, dumpster rental cost by size, cheapest dumpster rental, affordable dumpster rental, dumpster pricing',
 }
 
