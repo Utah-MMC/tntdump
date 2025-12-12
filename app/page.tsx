@@ -13,6 +13,55 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <main className="min-h-screen">
+      {/* Comprehensive Structured Data for AI Overview */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Rent a Dumpster in Utah",
+            "description": "Complete guide to renting a dumpster in Salt Lake & Utah County. Step-by-step instructions for ordering, delivery, and pickup.",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Contact TNT Dumpsters",
+                "text": "Call (801) 209-9013 or request a quote online. Provide details about your project, location, and preferred delivery date.",
+                "url": "https://tntdump.com/quote"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Choose Your Dumpster Size",
+                "text": "Select from 15-yard (small cleanouts), 20-yard (medium remodels), or 30-yard (large construction) containers. Our team can help recommend the right size.",
+                "url": "https://tntdump.com/calculator"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Schedule Delivery",
+                "text": "We schedule delivery, typically within 4-6 hours when ordered before 3:00 PM. Same-day service is often available in Salt Lake & Utah County.",
+                "url": "https://tntdump.com"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Load Your Dumpster",
+                "text": "Fill the dumpster with your debris. Keep materials level with the top rail and avoid prohibited items like liquids, hazardous waste, and electronics.",
+                "url": "https://tntdump.com/dumpsters"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "Schedule Pickup",
+                "text": "Call or text when ready for pickup. We typically retrieve same day or next morning. Extended rentals available with daily fees.",
+                "url": "https://tntdump.com/contact"
+              }
+            ]
+          })
+        }}
+      />
       <Hero />
 
       {/* Core services quick links for strong internal routing */}
@@ -441,42 +490,58 @@ export default function Home() {
       <About />
       <Contact />
 
-      {/* Footer FAQ block */}
-      <section className="py-16 bg-white">
+      {/* Footer FAQ block - Enhanced for AI Overview */}
+      <section className="py-16 bg-white" itemScope itemType="https://schema.org/FAQPage">
         <div className="container-custom">
           <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Container Rental FAQs</h2>
           <dl className="grid md:grid-cols-2 gap-6 text-sm">
-            <div>
-              <dt className="font-semibold text-gray-900">Do you offer roll-off containers near me?</dt>
-              <dd className="text-gray-700">Yes, we provide local service across Salt Lake & Utah County with quick delivery.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">How much does it cost to rent a dumpster in Utah?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Dumpster rental prices start at $325 for a 15-yard container (7-day rental), $375 for a 20-yard, and $400 for a 30-yard dumpster. All prices include delivery and pickup. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Can I get same day service?</dt>
-              <dd className="text-gray-700">Often yes—call early and we'll try to fit you in based on route and availability.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">Do you offer same day dumpster delivery?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Yes, same-day dumpster delivery is often available in Salt Lake & Utah County when orders are placed before our cutoff time (typically 3:00 PM). Delivery typically takes 4-6 hours depending on route and traffic. Contact us early in the day to secure same-day service.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">How much does it cost?</dt>
-              <dd className="text-gray-700">Price depends on size, tonnage, and material. Call for a fast quote.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What dumpster sizes do you offer?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We offer three dumpster sizes: 15-yard (16' x 8' x 3.5') for small cleanouts and garage purges, 20-yard (17' x 7.5' x 5') for medium remodels and construction projects, and 30-yard (18' x 7.25' x 6.6') for large construction and demolition projects. Our team can help you choose the right size based on your project type and debris volume.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">What sizes do you carry?</dt>
-              <dd className="text-gray-700">We stock common roll-off container sizes suitable for cleanouts, remodels, roofing, and construction debris.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What items are prohibited in dumpsters?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Prohibited items include liquids, paints, oils, hazardous waste, batteries, electronics, tires, and appliances (with some exceptions). Dirt and concrete require dedicated containers. We'll review restrictions when you book to ensure proper disposal and avoid additional fees.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Where can you place the bin?</dt>
-              <dd className="text-gray-700">Driveway or job site. We place with care and use boards when needed to protect surfaces.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">Do I need a permit for dumpster placement?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Driveway placements typically don't require permits. Street or public right-of-way placements may require a city permit. Permit requirements vary by city in Utah. We can help you understand local requirements and provide guidance on obtaining permits if needed.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">What's included with delivery?</dt>
-              <dd className="text-gray-700">Delivery includes drop-off, a rental window, and scheduled pick-up. Extra weight or time may cost more.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">How does dumpster delivery and pickup work?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We schedule delivery at your preferred time, carefully place the container on your driveway or job site using protective boards when needed, and return for pickup when you call or on the preset date. Our drivers will call or text before arrival. Pickup is typically same-day or next morning when requested.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Do you service contractors?</dt>
-              <dd className="text-gray-700">Yes. We support construction projects with swaps, haul-offs, and reliable schedules for busy sites.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What areas do you serve?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We serve Salt Lake County, Utah County, Davis County, and Weber County, including cities like Salt Lake City, Provo, Orem, Lehi, West Jordan, Sandy, Murray, Layton, Ogden, and many more. Contact us to confirm service in your specific location.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Do you offer same day bin rental?</dt>
-              <dd className="text-gray-700">When routes allow, we can arrange it. Call (801) 209-9013 to check today's options.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What affects dumpster rental cost?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Several factors affect dumpster rental pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may require special containers. We provide transparent pricing upfront with no hidden fees.</span>
+              </dd>
             </div>
           </dl>
         </div>

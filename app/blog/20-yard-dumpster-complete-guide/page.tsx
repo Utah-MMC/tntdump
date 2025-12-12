@@ -83,7 +83,7 @@ export default function TwentyYardDumpsterGuidePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="prose prose-lg max-w-none">
-              {/* BlogPosting JSON-LD */}
+              {/* BlogPosting JSON-LD - Enhanced for AI Overview */}
               <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
@@ -92,12 +92,17 @@ export default function TwentyYardDumpsterGuidePage() {
                     "@type": "BlogPosting",
                     "headline": "20 Yard Dumpster: The Complete Guide to Utah's Most Popular Size",
                     "description": metadata.description,
-                    "datePublished": "2025-01-14",
-                    "dateModified": "2025-01-14",
-                    "author": { "@type": "Organization", "name": "TNT Dumpsters" },
+                    "datePublished": "2025-01-14T00:00:00+00:00",
+                    "dateModified": "2025-01-14T00:00:00+00:00",
+                    "author": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "url": "https://tntdump.com"
+                    },
                     "publisher": {
                       "@type": "Organization",
                       "name": "TNT Dumpsters",
+                      "url": "https://tntdump.com",
                       "logo": {
                         "@type": "ImageObject",
                         "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
@@ -105,8 +110,84 @@ export default function TwentyYardDumpsterGuidePage() {
                         "height": 176
                       }
                     },
-                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/20-yard-dumpster-complete-guide" },
-                    "image": ["https://tntdump.com/images/dumpster2-500x500-2.jpeg"]
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://tntdump.com/blog/20-yard-dumpster-complete-guide"
+                    },
+                    "image": [
+                      {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/20-yard-dumpster-card.jpg",
+                        "width": 1200,
+                        "height": 630
+                      }
+                    ],
+                    "articleSection": "Size Guide",
+                    "keywords": "20 yard dumpster, dumpster rental, Utah dumpster rental, residential dumpster",
+                    "wordCount": "2500",
+                    "inLanguage": "en-US"
+                  })
+                }}
+              />
+              {/* Article Schema - Additional layer for AI Overview */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "Article",
+                    "headline": "20 Yard Dumpster: The Complete Guide to Utah's Most Popular Size",
+                    "description": metadata.description,
+                    "datePublished": "2025-01-14T00:00:00+00:00",
+                    "dateModified": "2025-01-14T00:00:00+00:00",
+                    "author": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "url": "https://tntdump.com"
+                    },
+                    "publisher": {
+                      "@type": "Organization",
+                      "name": "TNT Dumpsters",
+                      "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp"
+                      }
+                    },
+                    "mainEntityOfPage": {
+                      "@type": "WebPage",
+                      "@id": "https://tntdump.com/blog/20-yard-dumpster-complete-guide"
+                    },
+                    "image": "https://tntdump.com/images/20-yard-dumpster-card.jpg"
+                  })
+                }}
+              />
+              {/* BreadcrumbList for Blog Post */}
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    "@context": "https://schema.org",
+                    "@type": "BreadcrumbList",
+                    "itemListElement": [
+                      {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": "https://tntdump.com"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Blog",
+                        "item": "https://tntdump.com/blog"
+                      },
+                      {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": "20 Yard Dumpster Guide",
+                        "item": "https://tntdump.com/blog/20-yard-dumpster-complete-guide"
+                      }
+                    ]
                   })
                 }}
               />

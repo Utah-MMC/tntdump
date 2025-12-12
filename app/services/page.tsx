@@ -60,17 +60,63 @@ export default function ServicesPage() {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'Service',
+            name: 'Dumpster Rental Services',
+            description: 'Professional dumpster rental services in Salt Lake & Utah County. Residential, commercial, and construction dumpster rentals with fast delivery and clear pricing.',
             serviceType: [
               'Residential Dumpster Rental',
               'Commercial Dumpster Rental',
               'Construction Dumpster Rental',
+              'Roll-Off Container Rental',
             ],
-            areaServed: 'Salt Lake & Utah County',
+            areaServed: [
+              {
+                '@type': 'State',
+                name: 'Utah'
+              },
+              {
+                '@type': 'City',
+                name: 'Salt Lake City, UT'
+              },
+              {
+                '@type': 'City',
+                name: 'Provo, UT'
+              }
+            ],
             provider: {
               '@type': 'LocalBusiness',
-              name: 'TNT Dump',
+              name: 'TNT Dumpsters',
+              url: 'https://tntdump.com',
               telephone: '(801) 209-9013',
             },
+            offers: {
+              '@type': 'Offer',
+              priceCurrency: 'USD',
+              availability: 'https://schema.org/InStock',
+            },
+          }),
+        }}
+      />
+      {/* BreadcrumbList for Services page */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              {
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://tntdump.com',
+              },
+              {
+                '@type': 'ListItem',
+                position: 2,
+                name: 'Services',
+                item: 'https://tntdump.com/services',
+              },
+            ],
           }),
         }}
       />
