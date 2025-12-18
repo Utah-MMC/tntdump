@@ -96,7 +96,7 @@ const Hero = () => {
       <div className="absolute inset-0 hero-bg">
         <Image
           src="/images/tand-t-dumpsters-hero-home-1920w.webp"
-          alt="Dumpster rental services hero background"
+          alt="Roll-off container services hero background"
           fill
           priority
           fetchPriority="high"
@@ -118,7 +118,7 @@ const Hero = () => {
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-6 leading-tight whitespace-nowrap">
-              Dumpster Rental in Salt Lake County
+              Roll-Off Container Rental in Salt Lake County
             </h1>
           </div>
           <div className="grid lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">
@@ -126,7 +126,7 @@ const Hero = () => {
             <div className="text-white">
               <div className="mb-6">
                 <p className="text-lg lg:text-xl text-blue-100 mb-3 leading-relaxed">
-                  Over 55 years delivering reliable, affordable dumpster rentals across the Wasatch Front.
+                  Over 55 years delivering reliable, affordable container services across the Wasatch Front.
                 </p>
                 {/* Introductory SEO copy */}
                 <p className="text-sm sm:text-base text-blue-100 mb-2 leading-relaxed">

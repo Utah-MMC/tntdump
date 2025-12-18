@@ -1,4 +1,4 @@
-﻿import Hero from '@/components/Hero'
+import Hero from '@/components/Hero'
 import nextDynamic from 'next/dynamic'
 import CityCard from '@/components/CityCard'
 const Services = nextDynamic(() => import('@/components/Services'), { ssr: false, loading: () => null })
@@ -96,7 +96,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-4">Our Dumpster Sizes</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Choose the perfect size for your project. All rentals include delivery and pickup.</p>
+              <p className="text-gray-600 max-w-3xl mx-auto">Choose the right size for your project. All rentals include delivery and pickup.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* 15 YD Dumpster */}
@@ -219,17 +219,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3-Step Dumpster Rental Process Section */}
+      {/* 3-Step Container Rental Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Dumpster Rental Delivery */}
+              {/* Container Delivery */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/images/dumpster-rental-dropoff.png"
-                    alt="Professional dumpster rental delivery service with roll-off truck dropping off dumpster at job site"
+                    alt="Professional roll-off container delivery service with truck dropping off container at job site"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     quality={85}
@@ -239,12 +239,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Residential Dumpster Rental */}
+              {/* Residential Container */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/images/dumpster-rental-driveway.jpeg"
-                    alt="Residential dumpster rental placed on driveway for home renovation and construction debris removal"
+                    alt="Residential roll-off container placed on driveway for home renovation and construction debris removal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                   quality={70}
@@ -254,12 +254,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Construction Dumpster Rental */}
+              {/* Construction Container */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
                     src="/images/open-dumpster.png"
-                    alt="Open dumpster rental at construction site for efficient waste management and debris disposal"
+                    alt="Open roll-off container at construction site for efficient waste management and debris disposal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     quality={85}
@@ -299,7 +299,7 @@ export default function Home() {
             <a href="/cities" className="block">
               <Image
                 src="/images/service_areas.png"
-                alt="Utah dumpster rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
+                alt="Utah container rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
                 width={1200}
                 height={400}
                 loading="lazy"
@@ -366,7 +366,7 @@ export default function Home() {
                             href={`/${slug}-dumpster-rentals/service-areas/${slug}`}
                             className="text-blue-600 hover:text-blue-700 text-sm"
                           >
-                            {name} Utah Dumpster Rentals
+                            {name} Container Rentals
                           </a>
                         </li>
                       ))}
@@ -387,7 +387,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Services</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive roll-off container resources and services</p>
+            <p className="text-gray-600 max-w-3xl mx-auto">Browse our roll-off container resources and services</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
@@ -404,7 +404,7 @@ export default function Home() {
             </a>
             <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
-              <p className="text-sm text-gray-600">Find dumpster rental services in your Utah city</p>
+              <p className="text-sm text-gray-600">Find container rental services in your Utah city</p>
             </a>
             <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
@@ -449,37 +449,37 @@ export default function Home() {
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">How much does it cost?</h3>
               <p className="text-gray-700 text-sm">
-                Price varies by size, material, and location. Call for a fast quote; we'll confirm weight limits and the best roll-off container for your project.
+                Price varies by size, material, and location. Call for a quick quote. We'll confirm weight limits and the best container for your project.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">What affects the cost?</h3>
               <p className="text-gray-700 text-sm">
-                The biggest factors are tonnage, container size, rental time, route distance, and disposal fees. We price delivery up front so there are no surprises.
+                Main factors are tonnage, container size, rental time, route distance, and disposal fees. We price delivery up front with no surprises.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">Do you offer same day service?</h3>
               <p className="text-gray-700 text-sm">
-                Yes—on many days. Contact us early and we'll try to place a roll-off container the same day in Salt Lake & Utah County when routes allow.
+                Yes, on many days. Contact us early and we'll try to deliver the same day in Salt Lake & Utah County when routes allow.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">How do delivery and pick-up work?</h3>
               <p className="text-gray-700 text-sm">
-                We schedule delivery, place the container carefully on your driveway or job site, and return for pick-up on your call or on the preset date. Easy swaps are available.
+                We schedule delivery, place the container on your driveway or job site, and return for pick-up when you call or on the preset date. Easy swaps are available.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">Can I get a fixed price before delivery?</h3>
               <p className="text-gray-700 text-sm">
-                Absolutely. We confirm your price and expectations (material type, size, timing) before scheduling. No hidden fees—just clear terms.
+                Yes. We confirm your price and expectations (material type, size, timing) before scheduling. No hidden fees, just clear terms.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">Do you help choose the right size?</h3>
               <p className="text-gray-700 text-sm">
-                Yes. Tell us about your project and we'll recommend a roll-off size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
+                Yes. Tell us about your project and we'll recommend a size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
               </p>
             </div>
           </div>
@@ -498,7 +498,7 @@ export default function Home() {
             <div itemScope itemType="https://schema.org/Question">
               <dt className="font-semibold text-gray-900" itemProp="name">How much does it cost to rent a dumpster in Utah?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">Dumpster rental prices start at $325 for a 15-yard container (7-day rental), $375 for a 20-yard, and $400 for a 30-yard dumpster. All prices include delivery and pickup. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote.</span>
+                <span itemProp="text">Container prices start at $325 for a 15-yard container (7-day rental), $375 for a 20-yard, and $400 for a 30-yard. All prices include delivery and pickup. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote.</span>
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
@@ -510,25 +510,25 @@ export default function Home() {
             <div itemScope itemType="https://schema.org/Question">
               <dt className="font-semibold text-gray-900" itemProp="name">What dumpster sizes do you offer?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">We offer three dumpster sizes: 15-yard (16' x 8' x 3.5') for small cleanouts and garage purges, 20-yard (17' x 7.5' x 5') for medium remodels and construction projects, and 30-yard (18' x 7.25' x 6.6') for large construction and demolition projects. Our team can help you choose the right size based on your project type and debris volume.</span>
+                <span itemProp="text">We offer three sizes: 15-yard (16' x 8' x 3.5') for small cleanouts, 20-yard (17' x 7.5' x 5') for medium remodels, and 30-yard (18' x 7.25' x 6.6') for large construction projects. Our team can help you choose the right size based on your project type and debris volume.</span>
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
               <dt className="font-semibold text-gray-900" itemProp="name">What items are prohibited in dumpsters?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">Prohibited items include liquids, paints, oils, hazardous waste, batteries, electronics, tires, and appliances (with some exceptions). Dirt and concrete require dedicated containers. We'll review restrictions when you book to ensure proper disposal and avoid additional fees.</span>
+                <span itemProp="text">Prohibited items include liquids, paints, oils, hazardous waste, batteries, electronics, tires, and appliances (with some exceptions). Dirt and concrete need special containers. We'll review restrictions when you book to ensure proper disposal and avoid extra fees.</span>
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
               <dt className="font-semibold text-gray-900" itemProp="name">Do I need a permit for dumpster placement?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">Driveway placements typically don't require permits. Street or public right-of-way placements may require a city permit. Permit requirements vary by city in Utah. We can help you understand local requirements and provide guidance on obtaining permits if needed.</span>
+                <span itemProp="text">Driveway placements usually don't need permits. Street or public right-of-way placements may need a city permit. Permit rules vary by city in Utah. We can help you understand local requirements and guide you on getting permits if needed.</span>
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
               <dt className="font-semibold text-gray-900" itemProp="name">How does dumpster delivery and pickup work?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">We schedule delivery at your preferred time, carefully place the container on your driveway or job site using protective boards when needed, and return for pickup when you call or on the preset date. Our drivers will call or text before arrival. Pickup is typically same-day or next morning when requested.</span>
+                <span itemProp="text">We schedule delivery at your preferred time, place the container on your driveway or job site, and return for pickup when you call or on the preset date. Our drivers will call or text before arrival. Pickup is usually same-day or next morning when requested.</span>
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
@@ -538,9 +538,9 @@ export default function Home() {
               </dd>
             </div>
             <div itemScope itemType="https://schema.org/Question">
-              <dt className="font-semibold text-gray-900" itemProp="name">What affects dumpster rental cost?</dt>
+              <dt className="font-semibold text-gray-900" itemProp="name">What affects container rental cost?</dt>
               <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
-                <span itemProp="text">Several factors affect dumpster rental pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may require special containers. We provide transparent pricing upfront with no hidden fees.</span>
+                <span itemProp="text">Several factors affect pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may need special containers. We provide clear pricing upfront with no hidden fees.</span>
               </dd>
             </div>
           </dl>

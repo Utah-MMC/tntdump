@@ -1,4 +1,4 @@
-﻿import type { Metadata, Viewport } from 'next'
+import type { Metadata, Viewport } from 'next'
 import Script from 'next/script'
 import { Inter } from 'next/font/google'
 import './globals.css'
@@ -16,9 +16,9 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
-  description: 'Local dumpster rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
-  keywords: 'dumpster rental, roll off dumpster rental, dumpster rental price, dumpster rental quote, delivery dumpster rental, construction dumpster rental, local dumpster rental',
+  title: 'Dumpster Rental & Roll-Off Container Services | TNT Dumpsters',
+  description: 'Local container rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
+  keywords: 'dumpster rental, roll off container, container rental price, dumpster quote, delivery container, construction container, local dumpster service',
   authors: [{ name: 'TNT Dumpsters' }],
   creator: 'TNT Dumpsters',
   publisher: 'TNT Dumpsters',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
         url: 'https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp',
         width: 1200,
         height: 630,
-        alt: 'TNT Dumpsters - Professional dumpster rental services in Utah',
+        alt: 'TNT Dumpsters - Professional container rental services in Utah',
       },
     ],
     locale: 'en_US',
@@ -148,7 +148,7 @@ export default function RootLayout({
               "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "logo": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
-              "description": "Professional dumpster rental services in Salt Lake & Utah County. Fast delivery, clear pricing, and reliable service for residential and commercial projects.",
+              "description": "Professional container rental services in Salt Lake & Utah County. Fast delivery, clear pricing, and reliable service for residential and commercial projects.",
               "address": {
                 "@type": "PostalAddress",
                 "addressRegion": "UT",
@@ -204,7 +204,7 @@ export default function RootLayout({
               "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
-              "description": "Professional dumpster rental services in Salt Lake & Utah County. Offering 15, 20, and 30 yard roll-off containers with fast delivery and transparent pricing.",
+              "description": "Professional container rental services in Salt Lake & Utah County. Offering 15, 20, and 30 yard roll-off containers with fast delivery and transparent pricing.",
               "areaServed": [
                 {
                   "@type": "City",
@@ -245,15 +245,15 @@ export default function RootLayout({
                   "name": "How much does it cost to rent a dumpster?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Dumpster rental prices start at $325 for a 15-yard container, $375 for a 20-yard, and $400 for a 30-yard dumpster. All prices include a 7-day rental period. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote."
+                    "text": "Container prices start at $325 for a 15-yard container, $375 for a 20-yard, and $400 for a 30-yard. All prices include a 7-day rental period. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote."
                   }
                 },
                 {
                   "@type": "Question",
-                  "name": "What affects dumpster rental cost?",
+                  "name": "What affects container rental cost?",
                   "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Several factors affect dumpster rental pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may require special containers. We provide transparent pricing upfront with no hidden fees."
+                    "text": "Several factors affect pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may need special containers. We provide clear pricing upfront with no hidden fees."
                   }
                 },
                 {
