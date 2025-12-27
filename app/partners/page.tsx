@@ -1,3 +1,12 @@
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'Trusted Partners | TNT Dumpsters',
+  description:
+    'Meet trusted local partners we recommend for project planning and home services across Utah. Reliable pros who align with TNT Dumpsters quality.',
+  alternates: { canonical: 'https://tntdump.com/partners' },
+}
+
 export default function PartnersPage() {
   return (
     <main className="min-h-screen section-padding">

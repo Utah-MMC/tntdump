@@ -4,6 +4,11 @@
   "framework": "nextjs",
   "installCommand": "npm install",
   "devCommand": "npm run dev",
+  "git": {
+    "deploymentEnabled": {
+      "master": true
+    }
+  },
   "crons": [
     {
       "path": "/api/indexnow",

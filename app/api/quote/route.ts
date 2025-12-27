@@ -9,9 +9,9 @@ const createTransporter = () => {
     throw new Error('EMAIL_USER and EMAIL_PASS must be set')
   }
 
-  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
-  const port = Number(process.env.EMAIL_PORT || 465)
-  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+  const host = process.env.EMAIL_HOST || 'smtp.gmail.com'
+  const port = Number(process.env.EMAIL_PORT || 587)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : false
 
   return nodemailer.createTransport({
     host,
@@ -40,9 +40,8 @@ async function sendQuoteEmail(formData: {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: 'sales@tntdump.com',
-      to: 'sales@tntdump.com',
-      cc: 'sales@tntdump.com, icondumpsters@gmail.com',
+      from: 'admin@tntdump.com',
+      to: ['admin@tntdump.com', 'icondumpsters@gmail.com'],
       bcc: 'dcall@utahmmc.com',
       subject: `New Quote Request - ${formData.firstName} ${formData.lastName}`,
       html: `
@@ -82,14 +81,14 @@ async function sendQuoteEmail(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This quote request was sent from the TNT Dumpsters website quote form.<br>
-            Sent to: sales@tntdump.com | CC: sales@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
+            Sent to: admin@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Quote email sent successfully to sales@tntdump.com')
+    console.log('Quote email sent successfully to admin@tntdump.com')
   } catch (error) {
     console.error('Error sending quote email:', error)
     throw error
@@ -123,30 +122,35 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Optional reCAPTCHA verification if secret is configured
+    // reCAPTCHA verification is completely optional and never blocks form submission
+    // This is intentionally non-blocking to ensure forms always work
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
-    if (recaptchaSecret) {
-      try {
-        const token = (body as any).captchaToken
-        if (!token) {
-          return NextResponse.json({ error: 'reCAPTCHA validation failed' }, { status: 400 })
-        }
-        const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ secret: recaptchaSecret, response: token })
+    const token = (body as any).captchaToken
+    const hasValidToken = token && typeof token === 'string' && token.trim().length > 0
+    
+    // Only attempt verification if both are present, but never block on failure
+    if (recaptchaSecret && hasValidToken) {
+      // Run verification asynchronously without blocking
+      fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ secret: recaptchaSecret, response: token })
+      })
+        .then(res => res.json())
+        .then(verifyJson => {
+          if (verifyJson.success) {
+            console.log('reCAPTCHA verification passed')
+          } else {
+            console.warn('reCAPTCHA verification failed (non-blocking):', verifyJson)
+          }
         })
-        const verifyJson = await verifyRes.json()
-        if (!verifyJson.success) {
-          console.log('reCAPTCHA verification failed:', verifyJson)
-          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 })
-        }
-      } catch (e) {
-        console.error('reCAPTCHA verification error:', e)
-        return NextResponse.json({ error: 'reCAPTCHA verification error' }, { status: 400 })
-      }
+        .catch(e => {
+          console.warn('reCAPTCHA verification error (non-blocking):', e)
+        })
     } else {
-      console.log('reCAPTCHA secret not set; skipping verification')
+      if (recaptchaSecret && !hasValidToken) {
+        console.log('reCAPTCHA secret is set but no valid token provided; skipping verification')
+      }
     }
 
     // Log form data first

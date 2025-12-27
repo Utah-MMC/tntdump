@@ -6,9 +6,9 @@ import QuickContactForm from '@/components/QuickContactForm'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export const metadata: Metadata = {
-  title: 'Demolition Dumpster Rental | Commercial & Construction | TNT Dump',
+  title: 'Demolition Dumpster Rental | Commercial & Construction |...',
   description:
-    'Specialized demolition dumpster rental for commercial construction, roofing, and heavy demolition projects. Concrete and dirt dumpsters available. Fast delivery in Salt Lake & Utah County. Call (801) 209-9013.',
+    'Demolition dumpster rental for construction, roofing, and heavy debris in Salt Lake & Utah County. Concrete and dirt dumpsters available—call (801) 209-9013.',
   keywords: [
     'demolition dumpster',
     'demolition dumpster rental',
@@ -35,7 +35,8 @@ export const metadata: Metadata = {
     description: 'Specialized demolition dumpster rental for commercial construction, roofing, and heavy demolition projects. Concrete and dirt dumpsters available.',
     url: 'https://tntdump.com/demolition-dumpster',
     type: 'website',
-  },
+  
+      images: [{ url: '/images/tand-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],},
 }
 
 export default function DemolitionDumpsterPage() {
@@ -73,8 +74,8 @@ export default function DemolitionDumpsterPage() {
       capacity: '12-yard capacity',
       weight: 'Up to 4,000 lbs per cubic yard',
       pricing: [
-        { label: '1 Day', value: '$325', note: 'no tons included' },
-        { label: '7 Days', value: '$425', note: 'no tons included' },
+        { label: '1 Day', value: '$325', note: 'billed by weight' },
+        { label: '7 Days', value: '$425', note: 'billed by weight' },
       ],
       bestFor: ['Concrete demolition', 'Foundation removal', 'Driveway removal', 'Brick/masonry disposal'],
     },
@@ -84,8 +85,8 @@ export default function DemolitionDumpsterPage() {
       capacity: '10-yard capacity',
       weight: 'Up to 2,000 lbs per cubic yard',
       pricing: [
-        { label: '1 Day', value: '$299', note: 'no tons included' },
-        { label: '7 Days', value: '$349', note: 'no tons included' },
+        { label: '1 Day', value: '$299', note: 'billed by weight' },
+        { label: '7 Days', value: '$349', note: 'billed by weight' },
       ],
       bestFor: ['Excavation projects', 'Grading work', 'Landscaping', 'Clean fill dirt'],
     },
@@ -95,9 +96,9 @@ export default function DemolitionDumpsterPage() {
       capacity: '15, 20, or 30-yard options',
       weight: 'Varies by material type',
       pricing: [
-        { label: '15 Yard - 7 Days', value: '$325', note: '2 tons included' },
-        { label: '20 Yard - 7 Days', value: '$375', note: '2 tons included' },
-        { label: '30 Yard - 7 Days', value: '$450', note: '2 tons included' },
+        { label: '15 Yard - 7 Days', value: '$325', note: 'billed by weight' },
+        { label: '20 Yard - 7 Days', value: '$375', note: 'billed by weight' },
+        { label: '30 Yard - 7 Days', value: '$450', note: 'billed by weight' },
       ],
       bestFor: ['General demolition', 'Renovation projects', 'Mixed construction debris', 'Roofing projects'],
     },

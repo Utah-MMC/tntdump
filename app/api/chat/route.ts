@@ -14,9 +14,9 @@ function createTransporter() {
     throw new Error('EMAIL_USER and EMAIL_PASS must be set')
   }
 
-  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
-  const port = Number(process.env.EMAIL_PORT || 465)
-  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+  const host = process.env.EMAIL_HOST || 'smtp.gmail.com'
+  const port = Number(process.env.EMAIL_PORT || 587)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : false
 
   return nodemailer.createTransport({
     host,
@@ -72,7 +72,7 @@ async function sendEmail({
 }) {
   const transporter = createTransporter()
   await transporter.sendMail({
-    from: 'sales@tntdump.com',
+    from: 'admin@tntdump.com',
     to,
     cc,
     bcc: 'dcall@utahmmc.com',
@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'New Chat Started - TNT Dumpsters',
         to: 'dcall@utahmmc.com',
-        cc: ['jlafaver@utahmmc.com', 'sales@tntdump.com'],
+        cc: ['jlafaver@utahmmc.com', 'admin@tntdump.com', 'icondumpsters@gmail.com'],
         html,
       })
       return NextResponse.json({ ok: true })
@@ -134,7 +134,7 @@ export async function POST(req: NextRequest) {
       await sendEmail({
         subject: 'Chat Transcript - TNT Dumpsters',
         to: 'jlafaver@utahmmc.com',
-        cc: ['dcall@utahmmc.com', 'sales@tntdump.com'],
+        cc: ['dcall@utahmmc.com', 'admin@tntdump.com', 'icondumpsters@gmail.com'],
         html,
       })
       return NextResponse.json({ ok: true })

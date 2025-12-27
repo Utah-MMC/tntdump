@@ -29,6 +29,7 @@ module.exports = {
       { userAgent: '*', disallow: ['/admin/', '/api/'] }
     ],
     additionalSitemaps: [
+      'https://tntdump.com/sitemap.xml',
       'https://tntdump.com/sitemap-pages.xml',
       'https://tntdump.com/sitemap-cities.xml',
       'https://tntdump.com/sitemap-posts.xml'

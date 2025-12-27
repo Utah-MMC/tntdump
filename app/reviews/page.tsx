@@ -1,6 +1,14 @@
-﻿import { Star } from 'lucide-react'
+﻿import type { Metadata } from 'next'
+import { Star } from 'lucide-react'
 import Image from 'next/image'
 import QuickContactForm from '@/components/QuickContactForm'
+
+export const metadata: Metadata = {
+  title: 'TNT Dumpsters Reviews | Dumpster Rental in Utah',
+  description:
+    'Read reviews for TNT Dumpsters. Local roll-off dumpster rentals with fast delivery, clear pricing, and friendly support across Salt Lake & Utah County.',
+  alternates: { canonical: 'https://tntdump.com/reviews' },
+}
 
 export default function ReviewsPage() {
   const reviews = [

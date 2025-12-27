@@ -30,7 +30,10 @@
       "Bash(gh pr list:*)",
       "Bash(test:*)",
       "Bash(git cherry-pick:*)",
-      "Bash(git switch:*)"
+      "Bash(git switch:*)",
+      "Bash(ls:*)",
+      "Bash(mkdir:*)",
+      "Bash(dir:*)"
     ],
     "deny": [],
     "ask": []

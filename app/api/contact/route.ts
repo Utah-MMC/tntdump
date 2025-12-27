@@ -9,9 +9,9 @@ const createTransporter = () => {
     throw new Error('EMAIL_USER and EMAIL_PASS must be set')
   }
 
-  const host = process.env.EMAIL_HOST || 'mail.tntdump.com'
-  const port = Number(process.env.EMAIL_PORT || 465)
-  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : port === 465
+  const host = process.env.EMAIL_HOST || 'smtp.gmail.com'
+  const port = Number(process.env.EMAIL_PORT || 587)
+  const secure = process.env.EMAIL_SECURE ? process.env.EMAIL_SECURE === 'true' : false
 
   return nodemailer.createTransport({
     host,
@@ -37,9 +37,8 @@ async function sendEmailNotification(formData: {
     const transporter = createTransporter()
     
     const mailOptions = {
-      from: 'sales@tntdump.com',
-      to: 'sales@tntdump.com',
-      cc: 'sales@tntdump.com, icondumpsters@gmail.com',
+      from: 'admin@tntdump.com',
+      to: ['admin@tntdump.com', 'icondumpsters@gmail.com'],
       bcc: 'dcall@utahmmc.com',
       subject: `New ${formData.formType} Submission - ${formData.name}`,
       html: `
@@ -72,16 +71,23 @@ async function sendEmailNotification(formData: {
           <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
           <p style="color: #6b7280; font-size: 12px; text-align: center;">
             This email was sent from the TNT Dumpsters website contact form.<br>
-            Sent to: sales@tntdump.com | CC: sales@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
+            Sent to: admin@tntdump.com, icondumpsters@gmail.com | BCC: dcall@utahmmc.com
           </p>
         </div>
       `
     }
 
     await transporter.sendMail(mailOptions)
-    console.log('Email sent successfully to sales@tntdump.com')
+    console.log('Email sent successfully to admin@tntdump.com')
   } catch (error) {
     console.error('Error sending email:', error)
+    console.error('Email error details:', {
+      message: error instanceof Error ? error.message : 'Unknown error',
+      code: (error as any).code,
+      command: (error as any).command,
+      response: (error as any).response,
+      responseCode: (error as any).responseCode
+    })
     throw error
   }
 }
@@ -104,29 +110,34 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Optional reCAPTCHA verification if secret is configured
+    // reCAPTCHA verification is completely optional and never blocks form submission
+    // This is intentionally non-blocking to ensure forms always work
     const recaptchaSecret = process.env.RECAPTCHA_SECRET_KEY
-    if (recaptchaSecret) {
-      try {
-        if (!captchaToken) {
-          return NextResponse.json({ error: 'reCAPTCHA validation failed' }, { status: 400 })
-        }
-        const verifyRes = await fetch('https://www.google.com/recaptcha/api/siteverify', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-          body: new URLSearchParams({ secret: recaptchaSecret, response: captchaToken })
+    const hasValidToken = captchaToken && typeof captchaToken === 'string' && captchaToken.trim().length > 0
+    
+    // Only attempt verification if both are present, but never block on failure
+    if (recaptchaSecret && hasValidToken) {
+      // Run verification asynchronously without blocking
+      fetch('https://www.google.com/recaptcha/api/siteverify', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: new URLSearchParams({ secret: recaptchaSecret, response: captchaToken })
+      })
+        .then(res => res.json())
+        .then(verifyJson => {
+          if (verifyJson.success) {
+            console.log('reCAPTCHA verification passed')
+          } else {
+            console.warn('reCAPTCHA verification failed (non-blocking):', verifyJson)
+          }
         })
-        const verifyJson = await verifyRes.json()
-        if (!verifyJson.success) {
-          console.log('reCAPTCHA verification failed:', verifyJson)
-          return NextResponse.json({ error: 'reCAPTCHA verification failed' }, { status: 400 })
-        }
-      } catch (e) {
-        console.error('reCAPTCHA verification error:', e)
-        return NextResponse.json({ error: 'reCAPTCHA verification error' }, { status: 400 })
-      }
+        .catch(e => {
+          console.warn('reCAPTCHA verification error (non-blocking):', e)
+        })
     } else {
-      console.log('reCAPTCHA secret not set; skipping verification')
+      if (recaptchaSecret && !hasValidToken) {
+        console.log('reCAPTCHA secret is set but no valid token provided; skipping verification')
+      }
     }
 
     // Log form data first
@@ -140,6 +151,11 @@ export async function POST(request: NextRequest) {
 
     // Try to send email
     try {
+      console.log('Attempting to send email...')
+      console.log('EMAIL_USER:', process.env.EMAIL_USER ? 'SET' : 'NOT SET')
+      console.log('EMAIL_PASS:', process.env.EMAIL_PASS ? 'SET' : 'NOT SET')
+      console.log('EMAIL_HOST:', process.env.EMAIL_HOST || 'smtp.gmail.com')
+      
       await sendEmailNotification({
         name,
         phone,
@@ -151,6 +167,10 @@ export async function POST(request: NextRequest) {
       console.log('Email sent successfully!')
     } catch (emailError) {
       console.error('Email sending failed:', emailError)
+      console.error('Email error details:', {
+        message: emailError instanceof Error ? emailError.message : 'Unknown error',
+        stack: emailError instanceof Error ? emailError.stack : undefined
+      })
       // Continue anyway - don't fail the form submission
     }
 

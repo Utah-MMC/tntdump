@@ -1,5 +1,13 @@
-﻿import Image from 'next/image'
+﻿import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
+  description:
+    'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
+  alternates: { canonical: 'https://tntdump.com/services/long-term' },
+}
 
 export default function LongTermServicePage() {
   const features = [
@@ -30,9 +38,9 @@ export default function LongTermServicePage() {
       description: 'Small ongoing operations',
       capacity: '5-6 pickup truck loads',
       pricing: [
-        { label: '1 Day', value: '$300', note: 'no tons included' },
-        { label: '7 Days', value: '$325', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: '1 Day', value: '$300', note: 'billed by weight' },
+        { label: '7 Days', value: '$325', note: 'billed by weight' },
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -42,7 +50,7 @@ export default function LongTermServicePage() {
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -52,7 +60,7 @@ export default function LongTermServicePage() {
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     }
   ]

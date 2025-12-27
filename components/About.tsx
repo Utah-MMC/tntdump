@@ -104,7 +104,7 @@ const About = () => {
             </div>
             <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/construction-site-3688252_1280.jpg"
+                src="/images/construction-site-3688252-1280.jpg"
                 alt="Local dumpster rental service near you with fast delivery"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"
@@ -114,7 +114,7 @@ const About = () => {
             </div>
             <div className="relative h-56 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/images/construction-site-3688262_1280.jpg"
+                src="/images/construction-site-3688262-1280.jpg"
                 alt="Utah dumpster rental company serving residential and commercial customers"
                 fill
                 sizes="(min-width: 1024px) 50vw, 100vw"

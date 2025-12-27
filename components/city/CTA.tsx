@@ -13,7 +13,7 @@ export default function CTA({ city }: { city: CityData }) {
         {tel && (
           <a
             href={tel}
-            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/ut/${city.slug}/dumpster-rental`, cta_type: 'tel' })}
+            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/${city.slug}-dumpster-rentals/service-areas/${city.slug}`, cta_type: 'tel' })}
             className="flex-1 text-center rounded-md bg-green-600 text-white px-4 py-2 hover:bg-green-700"
           >
             Call {city.phone_cta}
@@ -22,7 +22,7 @@ export default function CTA({ city }: { city: CityData }) {
         {sms && (
           <a
             href={sms}
-            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/ut/${city.slug}/dumpster-rental`, cta_type: 'sms' })}
+            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/${city.slug}-dumpster-rentals/service-areas/${city.slug}`, cta_type: 'sms' })}
             className="flex-1 text-center rounded-md bg-yellow-500 text-white px-4 py-2 hover:bg-yellow-600"
           >
             Text Us
@@ -31,7 +31,7 @@ export default function CTA({ city }: { city: CityData }) {
         {quote && (
           <a
             href={quote}
-            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/ut/${city.slug}/dumpster-rental`, cta_type: 'quote' })}
+            onClick={() => fireContactEvent({ city: city.city, state: city.state_code, page_path: `/${city.slug}-dumpster-rentals/service-areas/${city.slug}`, cta_type: 'quote' })}
             className="flex-1 text-center rounded-md bg-blue-600 text-white px-4 py-2 hover:bg-blue-700"
           >
             Get Instant Quote

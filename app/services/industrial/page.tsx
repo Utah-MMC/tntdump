@@ -1,5 +1,13 @@
-﻿import Image from 'next/image'
+﻿import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Zap } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Industrial Dumpster Rental | Large Projects | TNT Dumpsters',
+  description:
+    'Industrial dumpster rentals for manufacturing waste, facility cleanouts, and heavy debris in Utah. Fast delivery, clear pricing—call (801) 209-9013.',
+  alternates: { canonical: 'https://tntdump.com/services/industrial' },
+}
 
 export default function IndustrialServicePage() {
   const features = [
@@ -43,9 +51,9 @@ export default function IndustrialServicePage() {
       capacity: '7-8 pickup truck loads',
       dimensions: '17.08\' x 7.54\' x 5.00\'',
       pricing: [
-        { label: '1 Day', value: '$335', note: 'no tons included' },
-        { label: '7 Days', value: '$375', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: '1 Day', value: '$335', note: 'billed by weight' },
+        { label: '7 Days', value: '$375', note: 'billed by weight' },
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -56,7 +64,7 @@ export default function IndustrialServicePage() {
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {

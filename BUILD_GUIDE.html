@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TNT Dumpsters - Complete Build Guide</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.8;
+      color: #1e293b;
+      background: #ffffff;
+    }
+    
+    h1 {
+      color: #1e40af;
+      border-bottom: 4px solid #3b82f6;
+      padding-bottom: 15px;
+      margin-bottom: 30px;
+      font-size: 2.5em;
+      page-break-after: avoid;
+    }
+    
+    h2 {
+      color: #2563eb;
+      margin-top: 40px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #60a5fa;
+      padding-bottom: 8px;
+      font-size: 1.8em;
+      page-break-after: avoid;
+    }
+    
+    h3 {
+      color: #3b82f6;
+      margin-top: 30px;
+      margin-bottom: 15px;
+      font-size: 1.4em;
+      page-break-after: avoid;
+    }
+    
+    h4 {
+      color: #60a5fa;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      font-size: 1.2em;
+    }
+    
+    p {
+      margin-bottom: 15px;
+      text-align: justify;
+    }
+    
+    code {
+      background: #f1f5f9;
+      padding: 3px 8px;
+      border-radius: 4px;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 0.9em;
+      color: #dc2626;
+    }
+    
+    pre {
+      background: #1e293b;
+      color: #e2e8f0;
+      padding: 20px;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 20px 0;
+      page-break-inside: avoid;
+    }
+    
+    pre code {
+      background: transparent;
+      color: inherit;
+      padding: 0;
+    }
+    
+    ul, ol {
+      margin-left: 30px;
+      margin-bottom: 20px;
+    }
+    
+    li {
+      margin: 8px 0;
+    }
+    
+    a {
+      color: #2563eb;
+      text-decoration: underline;
+    }
+    
+    a:hover {
+      color: #1e40af;
+    }
+    
+    strong {
+      color: #1e293b;
+      font-weight: 600;
+    }
+    
+    blockquote {
+      border-left: 4px solid #3b82f6;
+      padding-left: 20px;
+      margin: 20px 0;
+      color: #64748b;
+      font-style: italic;
+    }
+    
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      margin: 20px 0;
+      page-break-inside: avoid;
+    }
+    
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 12px;
+      text-align: left;
+    }
+    
+    th {
+      background: #3b82f6;
+      color: white;
+      font-weight: 600;
+    }
+    
+    tr:nth-child(even) {
+      background: #f8fafc;
+    }
+    
+    @media print {
+      body {
+        max-width: 100%;
+        padding: 20px;
+      }
+      
+      h1, h2, h3, h4 {
+        page-break-after: avoid;
+      }
+      
+      pre, blockquote, table {
+        page-break-inside: avoid;
+      }
+      
+      ul, ol {
+        page-break-inside: avoid;
+      }
+    }
+    
+    .toc {
+      background: #f8fafc;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+      border-left: 4px solid #3b82f6;
+    }
+    
+    .toc h2 {
+      margin-top: 0;
+      border-bottom: none;
+    }
+    
+    .toc ul {
+      list-style: none;
+      margin-left: 0;
+    }
+    
+    .toc li {
+      margin: 5px 0;
+    }
+    
+    .toc a {
+      text-decoration: none;
+      color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+  <h1>TNT Dumpsters Website - Complete Build Guide</h1>
+
+<p><strong>Step-by-Step Documentation for Building from Scratch</strong></p>
+
+<p>---</p>
+
+<h2>Table of Contents</h2>
+
+<ul><li><a href="#project-overview">Project Overview</a></li></ul>
+<ul><li><a href="#initial-setup">Initial Setup</a></li></ul>
+<ul><li><a href="#project-structure">Project Structure</a></li></ul>
+<ul><li><a href="#core-configuration-files">Core Configuration Files</a></li></ul>
+<ul><li><a href="#layout-and-root-components">Layout and Root Components</a></li></ul>
+<ul><li><a href="#homepage-components">Homepage Components</a></li></ul>
+<ul><li><a href="#city-pages-system">City Pages System</a></li></ul>
+<ul><li><a href="#api-routes">API Routes</a></li></ul>
+<ul><li><a href="#seo-and-structured-data">SEO and Structured Data</a></li></ul>
+<ul><li><a href="#styling-and-design">Styling and Design</a></li></ul>
+<ul><li><a href="#forms-and-user-interaction">Forms and User Interaction</a></li></ul>
+<ul><li><a href="#deployment-configuration">Deployment Configuration</a></li></ul>
+<ul><li><a href="#prompts-used">Prompts Used</a></li></ul>
+
+<p>---</p>
+
+<h2>Project Overview</h2>
+
+<p><strong>Project Name:</strong> TNT Dumpsters</p>
+<p><strong>Domain:</strong> tntdump.com</p>
+<p><strong>Technology Stack:</strong></p>
+<ul><li>Next.js 14.0.4 (App Router)</li></ul>
+<ul><li>TypeScript</li></ul>
+<ul><li>Tailwind CSS</li></ul>
+<ul><li>React 18</li></ul>
+<ul><li>Node.js</li></ul>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Local SEO city pages (data-driven)</li></ul>
+<ul><li>Quote and contact forms</li></ul>
+<ul><li>Blog system</li></ul>
+<ul><li>Service pages</li></ul>
+<ul><li>Dumpster size calculator</li></ul>
+<ul><li>Payment integration (Stripe)</li></ul>
+<ul><li>Email notifications</li></ul>
+<ul><li>Google Analytics integration</li></ul>
+
+<p>---</p>
+
+<h2>Initial Setup</h2>
+
+<h3>Step 1: Initialize Next.js Project</h3>
+
+<p><strong>Command:</strong></p>
+<p>``<code>bash</p>
+<p>npx create-next-app@14.0.4 tnt-dumpsters --typescript --tailwind --app --no-import-alias</p>
+<p>cd tnt-dumpsters</p>
+</code>`<code>
+
+<p><strong>Files Created:</strong></p>
+<ul><li></code>package.json<code> - Project dependencies</li></ul>
+<ul><li></code>tsconfig.json<code> - TypeScript configuration</li></ul>
+<ul><li></code>next.config.js<code> - Next.js configuration</li></ul>
+<ul><li></code>tailwind.config.js<code> - Tailwind CSS configuration</li></ul>
+<ul><li></code>app/<code> directory structure</li></ul>
+
+<h3>Step 2: Install Dependencies</h3>
+
+<p><strong>Command:</strong></p>
+</code>`<code>bash
+<p>npm install @stripe/stripe-js @tailwindcss/typography autoprefixer dotenv js-yaml lucide-react next-sitemap nodemailer npm-run-all papaparse postcss react-google-recaptcha slugify stripe tailwindcss</p>
+<p>npm install --save-dev @testing-library/jest-dom @testing-library/react @types/js-yaml @types/nodemailer @types/papaparse @types/react-google-recaptcha eslint eslint-config-next jsdom ts-node vitest</p>
+</code>`<code>
+
+<p><strong>Key Dependencies:</strong></p>
+<ul><li></code>next-sitemap<code> - Sitemap generation</li></ul>
+<ul><li></code>nodemailer<code> - Email sending</li></ul>
+<ul><li></code>stripe<code> - Payment processing</li></ul>
+<ul><li></code>papaparse<code> - CSV parsing</li></ul>
+<ul><li></code>js-yaml<code> - YAML parsing</li></ul>
+<ul><li></code>lucide-react<code> - Icons</li></ul>
+
+<p>---</p>
+
+<h2>Project Structure</h2>
+
+<h3>Directory Layout</h3>
+
+</code>`<code>
+<p>tnt/</p>
+<p>├── app/                    # Next.js App Router pages</p>
+<p>│   ├── layout.tsx          # Root layout</p>
+<p>│   ├── page.tsx            # Homepage</p>
+<p>│   ├── [cityBase]/         # Dynamic city routes</p>
+<p>│   ├── api/                # API routes</p>
+<p>│   ├── blog/               # Blog posts</p>
+<p>│   ├── dumpsters/          # Dumpster type pages</p>
+<p>│   ├── services/           # Service pages</p>
+<p>│   └── ...</p>
+<p>├── components/             # React components</p>
+<p>│   ├── city/               # City page components</p>
+<p>│   ├── Header.tsx</p>
+<p>│   ├── Footer.tsx</p>
+<p>│   ├── Hero.tsx</p>
+<p>│   └── ...</p>
+<p>├── lib/                    # Utility functions</p>
+<p>│   ├── cities.ts           # City data loading</p>
+<p>│   ├── schema.ts           # JSON-LD schema builders</p>
+<p>│   ├── pricing.ts          # Pricing calculations</p>
+<p>│   └── ...</p>
+<p>├── data/                   # Data files</p>
+<p>│   └── cities/             # City data (CSV + YAML)</p>
+<p>├── public/                 # Static assets</p>
+<p>│   ├── images/</p>
+<p>│   └── ...</p>
+<p>├── scripts/                # Build/automation scripts</p>
+<p>│   ├── automation/</p>
+<p>│   ├── seo/</p>
+<p>│   └── ...</p>
+<p>└── types/                  # TypeScript type definitions</p>
+</code>`<code>
+
+<p>---</p>
+
+<h2>Core Configuration Files</h2>
+
+<h3>Step 3: Configure TypeScript (</code>tsconfig.json<code>)</h3>
+
+<p><strong>File:</strong> </code>tsconfig.json<code></p>
+
+<p><strong>Content:</strong></p>
+</code>`<code>json
+<p>{</p>
+<p>"compilerOptions": {</p>
+<p>"target": "es5",</p>
+<p>"lib": ["dom", "dom.iterable", "es6"],</p>
+<p>"allowJs": true,</p>
+<p>"skipLibCheck": true,</p>
+<p>"strict": true,</p>
+<p>"noEmit": true,</p>
+<p>"esModuleInterop": true,</p>
+<p>"module": "esnext",</p>
+<p>"moduleResolution": "bundler",</p>
+<p>"resolveJsonModule": true,</p>
+<p>"isolatedModules": true,</p>
+<p>"jsx": "preserve",</p>
+<p>"incremental": true,</p>
+<p>"plugins": [{ "name": "next" }],</p>
+<p>"paths": {</p>
+<p>"@/<em>": ["./</em>"]</p>
+<p>}</p>
+<p>},</p>
+<p>"include": ["next-env.d.ts", "<strong>/<em>.ts", "</strong>/</em>.tsx", ".next/types/<em>*/</em>.ts"],</p>
+<p>"exclude": ["node_modules"]</p>
+<p>}</p>
+</code>`<code>
+
+<p><strong>Purpose:</strong> TypeScript configuration with path aliases for </code>@/<code> imports.</p>
+
+<h3>Step 4: Configure Next.js (</code>next.config.js<code>)</h3>
+
+<p><strong>File:</strong> </code>next.config.js<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Environment variable loading</li></ul>
+<ul><li>Image optimization</li></ul>
+<ul><li>Cache headers</li></ul>
+<ul><li>URL rewrites for legacy routes</li></ul>
+<ul><li>Email credential validation</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Configure Next.js for production with image optimization, cache headers, and environment variable validation. Add rewrites for legacy city URLs."</p>
+
+<h3>Step 5: Configure Tailwind CSS (</code>tailwind.config.js<code>)</h3>
+
+<p><strong>File:</strong> </code>tailwind.config.js<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Custom color palette (primary blue, secondary gray)</li></ul>
+<ul><li>Typography plugin</li></ul>
+<ul><li>Content paths for all component files</li></ul>
+
+<p>---</p>
+
+<h2>Layout and Root Components</h2>
+
+<h3>Step 6: Create Root Layout (</code>app/layout.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>app/layout.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Metadata configuration (title, description, Open Graph, Twitter cards)</li></ul>
+<ul><li>Google Tag Manager integration (deferred loading)</li></ul>
+<ul><li>Organization and LocalBusiness JSON-LD</li></ul>
+<ul><li>FAQPage schema</li></ul>
+<ul><li>Phone click tracking</li></ul>
+<ul><li>Header and Footer components</li></ul>
+<ul><li>Deferred chat widget</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a Next.js root layout with comprehensive SEO metadata, deferred GTM loading for performance, structured data for Organization and LocalBusiness, and phone click tracking. Include Header and Footer components."</p>
+
+<p><strong>Sections:</strong></p>
+<ul><li>Metadata configuration</li></ul>
+<ul><li>Viewport settings</li></ul>
+<ul><li>GTM deferred script</li></ul>
+<ul><li>Critical CSS inline</li></ul>
+<ul><li>Favicon links</li></ul>
+<ul><li>JSON-LD structured data</li></ul>
+<ul><li>Phone tracking script</li></ul>
+<ul><li>Header/Footer/Children rendering</li></ul>
+
+<h3>Step 7: Create Header Component (</code>components/Header.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/Header.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Sticky navigation</li></ul>
+<ul><li>Dropdown menus (Dumpsters, Tools, About, Contact)</li></ul>
+<ul><li>Mobile menu</li></ul>
+<ul><li>Phone number display</li></ul>
+<ul><li>Hover states with delays</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a responsive header component with dropdown menus, mobile navigation, and phone number display. Use hover delays for better UX."</p>
+
+<h3>Step 8: Create Footer Component (</code>components/Footer.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/Footer.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Company information</li></ul>
+<ul><li>Service links</li></ul>
+<ul><li>Legal pages (Privacy, Terms)</li></ul>
+<ul><li>Contact information</li></ul>
+<ul><li>Social links (if applicable)</li></ul>
+
+<p>---</p>
+
+<h2>Homepage Components</h2>
+
+<h3>Step 9: Create Homepage (</code>app/page.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>app/page.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Hero section</li></ul>
+<ul><li>Core services quick links</li></ul>
+<ul><li>Dumpster size cards (15/20/30 yard)</li></ul>
+<ul><li>Process images</li></ul>
+<ul><li>Dumpster calculator</li></ul>
+<ul><li>Cities section</li></ul>
+<ul><li>Services section</li></ul>
+<ul><li>Pricing/FAQ section</li></ul>
+<ul><li>About section</li></ul>
+<ul><li>Contact section</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a comprehensive homepage with hero section, dumpster size cards, city listings, services overview, pricing information, and multiple CTAs. Use dynamic imports for performance."</p>
+
+<h3>Step 10: Create Hero Component (</code>components/Hero.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/Hero.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Full-screen hero with background image</li></ul>
+<ul><li>Contact form integration</li></ul>
+<ul><li>Key features grid</li></ul>
+<ul><li>CTA buttons (Phone, Quote)</li></ul>
+<ul><li>Trust indicators</li></ul>
+<ul><li>Responsive design</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a hero component with background image, contact form, feature highlights, and multiple CTAs. Ensure LCP optimization with priority image loading."</p>
+
+<p><strong>Form Integration:</strong></p>
+<ul><li>Connects to </code>/api/contact<code></li></ul>
+<ul><li>Form validation</li></ul>
+<ul><li>Success/error states</li></ul>
+<ul><li>GA4 event tracking</li></ul>
+
+<p>---</p>
+
+<h2>City Pages System</h2>
+
+<h3>Step 11: Create City Data System (</code>lib/cities.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>lib/cities.ts<code></p>
+
+<p><strong>Purpose:</strong> Load and parse city data from CSV and YAML files.</p>
+
+<p><strong>Key Functions:</strong></p>
+<ul><li></code>getAllCities()<code> - Load all cities from CSV + YAML overrides</li></ul>
+<ul><li></code>getCityData(slug)<code> - Get specific city data</li></ul>
+<ul><li></code>getCitySlugParams()<code> - Generate static params for Next.js</li></ul>
+<ul><li></code>getCitiesByCounty()<code> - Group cities by county</li></ul>
+
+<p><strong>Data Sources:</strong></p>
+<ul><li></code>data/cities/cities.csv<code> - Base city data</li></ul>
+<ul><li></code>data/cities/ut/{city}.yml<code> - City-specific overrides</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a city data loader that reads from CSV and YAML files. Support per-city overrides, gallery images from manifests, and type-safe data structures."</p>
+
+<h3>Step 12: Create City CSV Structure (</code>data/cities/cities.csv<code>)</h3>
+
+<p><strong>File:</strong> </code>data/cities/cities.csv<code></p>
+
+<p><strong>Columns:</strong></p>
+<ul><li>city, state_code, county</li></ul>
+<ul><li>primary_zips, latitude, longitude</li></ul>
+<ul><li>avg_delivery_eta_hours, cutoff_time</li></ul>
+<ul><li>permit_required, permit_url, permit_notes</li></ul>
+<ul><li>transfer_station_name, transfer_station_address, transfer_station_hours</li></ul>
+<ul><li>disallowed_items_deltas</li></ul>
+<ul><li>busy_seasons_events</li></ul>
+<ul><li>neighborhoods_served</li></ul>
+<ul><li>real_job_examples</li></ul>
+<ul><li>local_testimonials</li></ul>
+<ul><li>price_notes, winter_notes, hoa_common_rule</li></ul>
+<ul><li>adjacent_cities</li></ul>
+<ul><li>phone_cta, sms_cta, quote_url</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a CSV structure for city data with all necessary fields for local SEO: permits, transfer stations, neighborhoods, testimonials, pricing notes, and CTAs."</p>
+
+<h3>Step 13: Create City YAML Override Example (</code>data/cities/ut/midvale.yml<code>)</h3>
+
+<p><strong>File:</strong> </code>data/cities/ut/midvale.yml<code></p>
+
+<p><strong>Purpose:</strong> City-specific content overrides and enhancements.</p>
+
+<p><strong>Example Structure:</strong></p>
+</code>`<code>yaml
+<p>slug: midvale</p>
+<p>city: Midvale</p>
+<p>permit_required: true</p>
+<p>permit_url: https://midvaleut.gov/permits</p>
+<p>transfer_station_name: Salt Lake Valley Landfill</p>
+<p>transfer_station_address: 6030 W 1300 S, Salt Lake City, UT</p>
+<p>neighborhoods_served:</p>
+<p>- Midvale Center</p>
+<p>- Union Park</p>
+<p>adjacent_cities:</p>
+<p>- murray</p>
+<p>- sandy</p>
+<p>gallery:</p>
+<p>- src: /images/cities/midvale/dumpster-1.jpg</p>
+<p>alt: Midvale dumpster rental</p>
+</code>`<code>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create YAML override files for city-specific content. Include galleries, testimonials, neighborhoods, and permit information."</p>
+
+<h3>Step 14: Create City Page Route (</code>app/[cityBase]/service-areas/[city]/page.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>app/[cityBase]/service-areas/[city]/page.tsx<code></p>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>Dynamic route with </code>generateStaticParams()<code></li></ul>
+<ul><li>Metadata generation per city</li></ul>
+<ul><li>JSON-LD structured data</li></ul>
+<ul><li>City-specific content sections</li></ul>
+
+<p><strong>Sections:</strong></p>
+<ul><li>Intro (H1, description, CTAs)</li></ul>
+<ul><li>Sizes Table</li></ul>
+<ul><li>Permit Block</li></ul>
+<ul><li>Disposal Block</li></ul>
+<ul><li>Neighborhoods</li></ul>
+<ul><li>Testimonials</li></ul>
+<ul><li>FAQ (46+ questions)</li></ul>
+<ul><li>Nearby Cities</li></ul>
+<ul><li>CTA Bar</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a dynamic city page route with static generation, comprehensive metadata, JSON-LD schemas, and city-specific content sections. Ensure 600+ words with 250+ city-unique words."</p>
+
+<h3>Step 15: Create City Page Components (</code>components/city/<code>)</h3>
+
+<p><strong>Files:</strong></p>
+<ul><li></code>components/city/SizesTable.tsx<code> - Dumpster size pricing table</li></ul>
+<ul><li></code>components/city/PermitBlock.tsx<code> - Permit information</li></ul>
+<ul><li></code>components/city/DisposalBlock.tsx<code> - Landfill/transfer station info</li></ul>
+<ul><li></code>components/city/Neighborhoods.tsx<code> - Neighborhoods served</li></ul>
+<ul><li></code>components/city/Testimonials.tsx<code> - Local testimonials</li></ul>
+<ul><li></code>components/city/FAQ.tsx<code> - FAQ section with schema</li></ul>
+<ul><li></code>components/city/CTA.tsx<code> - Call-to-action bar</li></ul>
+<ul><li></code>components/city/NearbyCities.tsx<code> - Adjacent city links</li></ul>
+<ul><li></code>components/city/LocalGallery.tsx<code> - City-specific images</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create modular city page components: sizes table, permit block, disposal info, neighborhoods, testimonials, FAQ with schema, CTAs, and nearby cities. Each component should accept city data props."</p>
+
+<h3>Step 16: Create Schema Builders (</code>lib/schema.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>lib/schema.ts<code></p>
+
+<p><strong>Functions:</strong></p>
+<ul><li></code>buildLocalBusinessLD()<code> - LocalBusiness schema</li></ul>
+<ul><li></code>buildServiceLD()<code> - Service schema</li></ul>
+<ul><li></code>buildProductLD()<code> - Product schema for each dumpster size</li></ul>
+<ul><li></code>buildFaqLD()<code> - FAQPage schema</li></ul>
+<ul><li></code>buildAllLD()<code> - Combine all schemas</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create JSON-LD schema builders for LocalBusiness, Service, Product (for each dumpster size), and FAQPage. Ensure schema.org compliance and proper areaServed data."</p>
+
+<p>---</p>
+
+<h2>API Routes</h2>
+
+<h3>Step 17: Create Quote API (</code>app/api/quote/route.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>app/api/quote/route.ts<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>POST endpoint for quote requests</li></ul>
+<ul><li>Form validation</li></ul>
+<ul><li>reCAPTCHA verification (optional)</li></ul>
+<ul><li>Email sending via Nodemailer</li></ul>
+<ul><li>Error handling</li></ul>
+
+<p><strong>Email Configuration:</strong></p>
+<ul><li>Uses environment variables (EMAIL_USER, EMAIL_PASS)</li></ul>
+<ul><li>Sends to sales@tntdump.com</li></ul>
+<ul><li>CC and BCC recipients</li></ul>
+<ul><li>HTML email template</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a quote API endpoint that validates form data, optionally verifies reCAPTCHA, sends formatted HTML emails via Nodemailer, and handles errors gracefully."</p>
+
+<h3>Step 18: Create Contact API (</code>app/api/contact/route.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>app/api/contact/route.ts<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Similar to quote API</li></ul>
+<ul><li>Handles contact form submissions</li></ul>
+<ul><li>Email notifications</li></ul>
+<ul><li>Form type tracking</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a contact API endpoint similar to quote API but for general contact form submissions. Include form type tracking in emails."</p>
+
+<h3>Step 19: Create Payment API (</code>app/api/payment/route.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>app/api/payment/route.ts<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Stripe payment processing</li></ul>
+<ul><li>Payment intent creation</li></ul>
+<ul><li>Webhook handling</li></ul>
+<ul><li>Order confirmation</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a Stripe payment API endpoint for processing dumpster rental payments. Include payment intent creation and webhook handling for order confirmations."</p>
+
+<p>---</p>
+
+<h2>SEO and Structured Data</h2>
+
+<h3>Step 20: Create Sitemap Generation (</code>scripts/automation/generate-type-sitemaps.mjs<code>)</h3>
+
+<p><strong>File:</strong> </code>scripts/automation/generate-type-sitemaps.mjs<code></p>
+
+<p><strong>Purpose:</strong> Generate sitemaps for different content types (pages, cities, blog posts).</p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Reads city data</li></ul>
+<ul><li>Generates city page URLs</li></ul>
+<ul><li>Creates separate sitemap files</li></ul>
+<ul><li>Integrates with next-sitemap</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a sitemap generator script that reads city data and generates separate sitemap files for pages, cities, and blog posts. Integrate with next-sitemap."</p>
+
+<h3>Step 21: Configure Sitemap (</code>next-sitemap.config.js<code>)</h3>
+
+<p><strong>File:</strong> </code>next-sitemap.config.js<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Site URL configuration</li></ul>
+<ul><li>Sitemap index generation</li></ul>
+<ul><li>Robots.txt generation</li></ul>
+<ul><li>Exclude patterns</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Configure next-sitemap to generate sitemap index, individual sitemaps, and robots.txt. Include all city pages and blog posts."</p>
+
+<p>---</p>
+
+<h2>Styling and Design</h2>
+
+<h3>Step 22: Create Global Styles (</code>app/globals.css<code>)</h3>
+
+<p><strong>File:</strong> </code>app/globals.css<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Tailwind directives</li></ul>
+<ul><li>Custom utility classes</li></ul>
+<ul><li>Container styles</li></ul>
+<ul><li>Button styles</li></ul>
+<ul><li>Typography overrides</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create global CSS with Tailwind directives, custom container classes, button styles, and typography overrides. Ensure consistent spacing and colors."</p>
+
+<h3>Step 23: Create Utility Components</h3>
+
+<p><strong>Files:</strong></p>
+<ul><li></code>components/LazyImage.tsx<code> - Lazy-loaded images</li></ul>
+<ul><li></code>components/PerformanceMonitor.tsx<code> - Performance tracking</li></ul>
+<ul><li></code>components/DeferredChatWidget.tsx<code> - Deferred chat loading</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create utility components for lazy image loading, performance monitoring, and deferred chat widget loading to improve Core Web Vitals."</p>
+
+<p>---</p>
+
+<h2>Forms and User Interaction</h2>
+
+<h3>Step 24: Create Quote Form (</code>components/QuoteForm.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/QuoteForm.tsx<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Multi-step form (optional)</li></ul>
+<ul><li>Field validation</li></ul>
+<ul><li>reCAPTCHA integration</li></ul>
+<ul><li>Success/error states</li></ul>
+<ul><li>GA4 tracking</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a comprehensive quote form component with validation, reCAPTCHA, error handling, and GA4 event tracking. Include all necessary fields for dumpster rental quotes."</p>
+
+<h3>Step 25: Create Contact Form (</code>components/Contact.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/Contact.tsx<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Contact form fields</li></ul>
+<ul><li>Service selection</li></ul>
+<ul><li>Message textarea</li></ul>
+<ul><li>Form submission handling</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a contact form component that submits to the contact API, includes validation, and provides user feedback."</p>
+
+<h3>Step 26: Create Dumpster Calculator (</code>components/DumpsterCalculator.tsx<code>)</h3>
+
+<p><strong>File:</strong> </code>components/DumpsterCalculator.tsx<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Interactive size calculator</li></ul>
+<ul><li>Project type selection</li></ul>
+<ul><li>Size recommendations</li></ul>
+<ul><li>CTA to quote form</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create an interactive dumpster size calculator component that recommends sizes based on project type and provides a CTA to get a quote."</p>
+
+<p>---</p>
+
+<h2>Deployment Configuration</h2>
+
+<h3>Step 27: Create Environment Variables (</code>env.example<code>)</h3>
+
+<p><strong>File:</strong> </code>env.example<code></p>
+
+<p><strong>Variables:</strong></p>
+<ul><li>EMAIL_HOST, EMAIL_PORT, EMAIL_USER, EMAIL_PASS</li></ul>
+<ul><li>RECAPTCHA_SITE_KEY, RECAPTCHA_SECRET_KEY</li></ul>
+<ul><li>STRIPE_PUBLIC_KEY, STRIPE_SECRET_KEY</li></ul>
+<ul><li>NEXT_PUBLIC_SITE_URL</li></ul>
+<ul><li>GTM_ID (optional)</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create an environment variables example file with all necessary configuration for email, reCAPTCHA, Stripe, and site URL."</p>
+
+<h3>Step 28: Create Deployment Scripts</h3>
+
+<p><strong>Files:</strong></p>
+<ul><li></code>package.json<code> scripts section</li></ul>
+<ul><li>Build scripts</li></ul>
+<ul><li>Sitemap generation</li></ul>
+<ul><li>Validation scripts</li></ul>
+
+<p><strong>Scripts:</strong></p>
+</code>`<code>json
+<p>{</p>
+<p>"scripts": {</p>
+<p>"dev": "next dev",</p>
+<p>"build": "next build",</p>
+<p>"postbuild": "npm run sitemap",</p>
+<p>"start": "next start",</p>
+<p>"sitemap": "run-s sitemap:types sitemap:index",</p>
+<p>"sitemap:types": "node scripts/automation/generate-type-sitemaps.mjs",</p>
+<p>"sitemap:index": "next-sitemap --config next-sitemap.config.js",</p>
+<p>"generate:cities": "ts-node scripts/generate-city-pages.ts data/cities/cities.csv",</p>
+<p>"validate:cities": "ts-node scripts/validate-city-pages.ts"</p>
+<p>}</p>
+<p>}</p>
+</code>`<code>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create npm scripts for development, building, sitemap generation, city page generation, and validation."</p>
+
+<p>---</p>
+
+<h2>Prompts Used</h2>
+
+<h3>City Page Builder Prompt</h3>
+
+<p><strong>Location:</strong> </code>scripts/seo/city-page-builder.md<code></p>
+
+<p><strong>Full Prompt:</strong></p>
+</code>`<code>
+<p>You are an elite full-stack SEO engineer. Implement a scalable, white-hat local SEO system for TNT Dump (tntdump.com) that creates high-quality, unique city pages and avoids doorway/spun content. Do ALL tasks below in one end-to-end change with clean commits.</p>
+
+<h1>High-level goals</h1>
+<ul><li>Rank for queries like "dumpster rental {city} utah" with unique, useful city pages.</li></ul>
+<ul><li>Avoid black-hat pitfalls (no doorway pages, no spun text, no fake addresses).</li></ul>
+<ul><li>Make it data-driven (CSV/YAML) + templatized, yet with substantial city-unique content.</li></ul>
+<ul><li>Ship two production-ready pages now: Midvale, UT and Herriman, UT.</li></ul>
+<ul><li>Add a "Service Areas" hub and internal cross-links.</li></ul>
+<ul><li>Add JSON-LD (LocalBusiness, Service, Product for dumpster sizes, FAQPage).</li></ul>
+<ul><li>Add GA4 event tracking for CTAs (tel, SMS, quote).</li></ul>
+<ul><li>Keep Core Web Vitals in mind (fast, compressed images, lazyload).</li></ul>
+
+<h1>Guardrails (MUST follow)</h1>
+<ul><li>Each city page must include ≥ 600–900 words total, with ≥ 250–300 words that are city-unique beyond just the city name.</li></ul>
+<ul><li>Include city-specific: permit rules/links, landfill/transfer station info, neighborhoods/ZIPs, delivery ETA/cutoffs, seasonal notes (snow/steep driveways where relevant), 1–2 city-specific testimonials (placeholder OK if real ones unavailable), and at least 3 locally shot/representative photos (use placeholders if needed, but name and alt are city-specific).</li></ul>
+<ul><li>No keyword stuffing. No hidden text. No fabricated addresses or GBPs.</li></ul>
+<ul><li>Use one legitimate GBP (service-area business). Do not create fake "offices".</li></ul>
+
+<h1>Data model (for all stacks)</h1>
+<p>Create /data/cities/ with both a CSV and per-city YAMLs:</p>
+<ul><li>/data/cities/cities.csv with headings: city,state_code,county,primary_zips,avg_delivery_eta_hours,cutoff_time,permit_required,permit_url,permit_notes,transfer_station_name,transfer_station_address,transfer_station_hours,disallowed_items_deltas,busy_seasons_events,neighborhoods_served,real_job_examples,local_testimonials,price_notes,winter_notes,hoa_common_rule,adjacent_cities,latitude,longitude,phone_cta, sms_cta, quote_url</li></ul>
+<ul><li>Also allow per-city YAMLs under /data/cities/{state}/{city}.yml with same fields for overrides.</li></ul>
+
+<h1>Content template (rendered per city)</h1>
+<p>Create a reusable page template with these sections (each backed by data fields + optional manual content):</p>
+<p>1) H1: "Dumpster Rentals in {City, Utah}"</p>
+<p>2) Trust badges row (licensed/insured, years in UT).</p>
+<p>3) Sizes & Pricing table: 10/20/30/40-yard with tonnage, typical projects, price range, overage/day fees; include any city-specific notes.</p>
+<p>4) "How it works" (3 steps).</p>
+<p>5) City-specific <strong>Permits & Placement</strong> (use permit_* fields; external link).</p>
+<p>6) <strong>Disposal & Landfill/Transfer</strong> info (name, address, typical hours; what can/can't go—include disallowed deltas).</p>
+<p>7) <strong>Neighborhoods & ZIPs we serve</strong> (bulleted) and candid coverage notes (out-of-range honesty).</p>
+<p>8) <strong>Local photos</strong> (3+) with alt like "{City} {job-type} – 20-yard roll-off on driveway".</p>
+<p>9) <strong>Local testimonials</strong> (1–2).</p>
+<p>10) <strong>FAQ</strong> (4–6 Q&As relevant to the city: permits timing, alley placement, HOA rules, winter/slope tips). Mark up with FAQPage schema.</p>
+<p>11) <strong>CTA bar</strong> (Call tel:, SMS sms:, Get a Quote link). Mention same-day by cutoff where applicable.</p>
+
+<h1>Routing & URLs</h1>
+<ul><li>Canonical path format: /ut/{city}/dumpster-rental/ (lowercase; hyphenate).</li></ul>
+<ul><li>Create a <strong>Service Areas hub</strong> at /ut/service-areas/ listing all UT cities, grouped by county; each entry links to its city page with a one-sentence local blurb.</li></ul>
+<ul><li>From each city page, link to 2–3 adjacent cities (from </code>adjacent_cities<code>).</li></ul>
+<ul><li>Ensure sitemap includes the hub and all city pages; update robots if needed.</li></ul>
+
+<h1>Structured data (JSON-LD)</h1>
+<p>For each city page:</p>
+<ul><li>LocalBusiness (service-area): name, url, telephone, sameAs (if social), areaServed (city + zips), geo (lat/long), hasOfferCatalog/hasMap optional.</li></ul>
+<ul><li>Service for "Dumpster Rental".</li></ul>
+<ul><li>Product for each dumpster size (name, description, offers priceRange, availability "InStock").</li></ul>
+<ul><li>FAQPage with the on-page Q&A.</li></ul>
+<p>Implement via a small utility that merges site-wide brand details + city data. Validate with schema.org rules.</p>
+
+<h1>Internal linking</h1>
+<ul><li>Add contextual links from relevant blog posts (if present) to their matching city page (lightweight heuristic: if post mentions city name, add a short "Serving {City}" box with a link).</li></ul>
+<ul><li>On each city page, a "Nearby cities" component that lists adjacent cities.</li></ul>
+
+<h1>Tracking</h1>
+<ul><li>Add GA4 event tracking for:</li></ul>
+<p>- Clicks on tel: links → event name "contact_call"</p>
+<p>- Clicks on sms: links → "contact_sms"</p>
+<p>- Quote button clicks → "contact_quote"</p>
+<p>Include event params: city, state, page_path, cta_type.</p>
+
+<h1>Performance/UX</h1>
+<ul><li>Optimize images (next/image if Next.js; otherwise responsive img + lazy).</li></ul>
+<ul><li>Ensure CLS-safe layout for hero + table.</li></ul>
+<ul><li>Lighthouse/LCP budget: target LCP < 2.5s on mobile. If image heavy, use blur placeholders.</li></ul>
+
+<h1>Implementation details by stack</h1>
+
+<h2>If Next.js (app router)</h2>
+<ul><li>Create: /app/ut/[city]/dumpster-rental/page.tsx (or /pages if pages router).</li></ul>
+<ul><li>Create /lib/cities.ts to load CSV/YAML (use gray-matter or js-yaml; papaparse for CSV).</li></ul>
+<ul><li>Create components:</li></ul>
+<p>- CityPage.tsx (composes all sections)</p>
+<p>- SizesTable.tsx, PermitBlock.tsx, DisposalBlock.tsx, Neighborhoods.tsx, LocalGallery.tsx, Testimonials.tsx, FAQ.tsx, CTA.tsx, NearbyCities.tsx</p>
+<ul><li>Create /lib/schema.ts to output JSON-LD for LocalBusiness, Service, Product, FAQPage.</li></ul>
+<ul><li>Add /app/ut/service-areas/page.tsx listing cities from data.</li></ul>
+<ul><li>Generate static params (or getStaticPaths) from CSV to prebuild pages.</li></ul>
+<ul><li>Update next-sitemap config to include new routes (or create one if missing).</li></ul>
+
+<h1>QA checklist (enforce; fail build if missing)</h1>
+<p>Write a small script /scripts/validate-city-pages.ts that:</p>
+<ul><li>Ensures each city page has ≥ 600 words and ≥ 250 city-unique words.</li></ul>
+<ul><li>Has a valid permit_url when permit_required = true.</li></ul>
+<ul><li>Has landfill name/address.</li></ul>
+<ul><li>Has at least 3 images with city-specific alt text.</li></ul>
+<ul><li>Emits JSON-LD blocks for LocalBusiness, Service, Product, FAQPage.</li></ul>
+<ul><li>Links to the hub and to ≥ 2 adjacent cities.</li></ul>
+<ul><li>Exposes CTA links (tel, sms, quote).</li></ul>
+<p>Run this in CI (or npm run validate:city-pages) and block commit if failing.</p>
+
+<p>Begin now. Make minimal, well-organized commits with descriptive messages.</p>
+</code>`<code>
+
+<h3>Homepage SEO Prompt</h3>
+
+<p><strong>Location:</strong> </code>scripts/seo/homepage-keywords.md<code></p>
+
+<p><strong>Purpose:</strong> Optimize homepage for target keywords.</p>
+
+<p><strong>Key Elements:</strong></p>
+<ul><li>Primary keywords: "dumpster rental", "roll off dumpster rental"</li></ul>
+<ul><li>Secondary keywords: "dumpster rental price", "dumpster rental quote"</li></ul>
+<ul><li>Local modifiers: "Salt Lake County", "Utah County"</li></ul>
+<ul><li>Service keywords: "same day dumpster rental", "delivery dumpster rental"</li></ul>
+
+<h3>Blog Post Prompt</h3>
+
+<p><strong>Location:</strong> </code>scripts/prompts/seo/blog-5-step.md<code></p>
+
+<p><strong>5-Step Process:</strong></p>
+<ul><li>Research and outline</li></ul>
+<ul><li>Draft content</li></ul>
+<ul><li>SEO optimization</li></ul>
+<ul><li>Internal linking</li></ul>
+<ul><li>Final review</li></ul>
+
+<p>---</p>
+
+<h2>Additional Components</h2>
+
+<h3>Step 29: Create Service Pages</h3>
+
+<p><strong>Files:</strong></p>
+<ul><li></code>app/services/residential/page.tsx<code></li></ul>
+<ul><li></code>app/services/commercial/page.tsx<code></li></ul>
+<ul><li></code>app/services/industrial/page.tsx<code></li></ul>
+<ul><li></code>app/services/concrete/page.tsx<code></li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create service pages for residential, commercial, industrial, and concrete dumpster rentals. Each page should include service-specific content, pricing, and CTAs."</p>
+
+<h3>Step 30: Create Blog System</h3>
+
+<p><strong>Files:</strong></p>
+<ul><li></code>app/blog/page.tsx<code> - Blog listing</li></ul>
+<ul><li></code>app/blog/[slug]/page.tsx<code> - Individual blog posts</li></ul>
+
+<p><strong>Features:</strong></p>
+<ul><li>Blog post listing</li></ul>
+<ul><li>Individual post pages</li></ul>
+<ul><li>SEO optimization</li></ul>
+<ul><li>Internal linking to city pages</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a blog system with listing page and individual post pages. Include SEO metadata, internal linking to city pages, and related posts."</p>
+
+<h3>Step 31: Create Calculator Page</h3>
+
+<p><strong>File:</strong> </code>app/calculator/page.tsx<code></p>
+
+<p><strong>Features:</strong></p>
+<ul><li>Interactive size calculator</li></ul>
+<ul><li>Project type selection</li></ul>
+<ul><li>Visual size comparisons</li></ul>
+<ul><li>CTA to quote form</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a dumpster size calculator page with interactive project selection, size recommendations, and visual comparisons."</p>
+
+<p>---</p>
+
+<h2>Testing and Validation</h2>
+
+<h3>Step 32: Create Validation Script (</code>scripts/validate-city-pages.ts<code>)</h3>
+
+<p><strong>File:</strong> </code>scripts/validate-city-pages.ts<code></p>
+
+<p><strong>Validations:</strong></p>
+<ul><li>Word count (≥ 600 total, ≥ 250 city-unique)</li></ul>
+<ul><li>Permit URL when required</li></ul>
+<ul><li>Landfill information</li></ul>
+<ul><li>Gallery images (≥ 3)</li></ul>
+<ul><li>JSON-LD schemas</li></ul>
+<ul><li>Internal links (≥ 2 adjacent cities)</li></ul>
+<ul><li>CTA links present</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Create a validation script that checks city pages for word count, required fields, JSON-LD schemas, images, and internal links. Fail build if validation fails."</p>
+
+<p>---</p>
+
+<h2>Performance Optimization</h2>
+
+<h3>Step 33: Optimize Images</h3>
+
+<p><strong>Strategies:</strong></p>
+<ul><li>Use Next.js Image component</li></ul>
+<ul><li>WebP/AVIF formats</li></ul>
+<ul><li>Lazy loading</li></ul>
+<ul><li>Responsive sizes</li></ul>
+<ul><li>Priority for above-fold images</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Optimize all images using Next.js Image component with WebP/AVIF formats, lazy loading, and responsive sizes. Set priority for hero images."</p>
+
+<h3>Step 34: Defer Third-Party Scripts</h3>
+
+<p><strong>Strategies:</strong></p>
+<ul><li>Defer GTM loading</li></ul>
+<ul><li>Lazy load chat widget</li></ul>
+<ul><li>Use requestIdleCallback</li></ul>
+<ul><li>Load on user interaction</li></ul>
+
+<p><strong>Prompt Used:</strong></p>
+<p>> "Defer all third-party scripts (GTM, chat widgets, analytics) until user interaction or idle time. Use requestIdleCallback with timeout fallback."</p>
+
+<p>---</p>
+
+<h2>Final Steps</h2>
+
+<h3>Step 35: Create README</h3>
+
+<p><strong>File:</strong> </code>README.md<code></p>
+
+<p><strong>Sections:</strong></p>
+<ul><li>Project overview</li></ul>
+<ul><li>Setup instructions</li></ul>
+<ul><li>Environment variables</li></ul>
+<ul><li>Build commands</li></ul>
+<ul><li>City page creation guide</li></ul>
+<ul><li>Validation rules</li></ul>
+
+<h3>Step 36: Create Deployment Guide</h3>
+
+<p><strong>File:</strong> </code>HOSTGATOR_DEPLOYMENT_GUIDE.md`</p>
+
+<p><strong>Sections:</strong></p>
+<ul><li>Hosting setup</li></ul>
+<ul><li>Environment configuration</li></ul>
+<ul><li>Build process</li></ul>
+<ul><li>Domain configuration</li></ul>
+<ul><li>SSL setup</li></ul>
+
+<p>---</p>
+
+<h2>Summary</h2>
+
+<p>This guide documents the complete build process for the TNT Dumpsters website. The site is built with:</p>
+
+<ul><li><strong>Next.js 14</strong> (App Router) for server-side rendering and static generation</li></ul>
+<ul><li><strong>TypeScript</strong> for type safety</li></ul>
+<ul><li><strong>Tailwind CSS</strong> for styling</li></ul>
+<ul><li><strong>Data-driven city pages</strong> for local SEO</li></ul>
+<ul><li><strong>Comprehensive SEO</strong> with structured data</li></ul>
+<ul><li><strong>Form handling</strong> with email notifications</li></ul>
+<ul><li><strong>Payment integration</strong> with Stripe</li></ul>
+<ul><li><strong>Performance optimization</strong> for Core Web Vitals</li></ul>
+
+<p><strong>Key Features:</strong></p>
+<ul><li>30+ city pages with unique content</li></ul>
+<ul><li>Blog system</li></ul>
+<ul><li>Service pages</li></ul>
+<ul><li>Quote and contact forms</li></ul>
+<ul><li>Dumpster calculator</li></ul>
+<ul><li>Payment processing</li></ul>
+<ul><li>Email notifications</li></ul>
+<ul><li>Analytics integration</li></ul>
+
+<p><strong>Total Files Created:</strong> 100+ files across components, pages, API routes, utilities, and configuration.</p>
+
+<p>---</p>
+
+<h2>Quick Reference: File Creation Order</h2>
+
+<ul><li>Initialize Next.js project</li></ul>
+<ul><li>Install dependencies</li></ul>
+<ul><li>Configure TypeScript, Next.js, Tailwind</li></ul>
+<ul><li>Create root layout and metadata</li></ul>
+<ul><li>Create Header and Footer</li></ul>
+<ul><li>Create homepage and Hero component</li></ul>
+<ul><li>Set up city data system (CSV, YAML, loader)</li></ul>
+<ul><li>Create city page route and components</li></ul>
+<ul><li>Create API routes (quote, contact, payment)</li></ul>
+<ul><li>Create service pages</li></ul>
+<ul><li>Create blog system</li></ul>
+<ul><li>Add SEO and structured data</li></ul>
+<ul><li>Create forms and calculator</li></ul>
+<ul><li>Add validation scripts</li></ul>
+<ul><li>Optimize performance</li></ul>
+<ul><li>Create documentation</li></ul>
+
+<p>---</p>
+
+<p><strong>End of Build Guide</strong></p>
+
+
+</body>
+</html>

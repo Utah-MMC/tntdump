@@ -347,7 +347,6 @@ export default function ChatWidget() {
               </div>
               {recaptchaSiteKey && (
                 <div className="pt-1">
-                  {/* @ts-expect-error async dynamic import type */}
                   <ReCAPTCHA sitekey={recaptchaSiteKey} onChange={(token: string | null) => setCaptchaToken(token)} />
                 </div>
               )}

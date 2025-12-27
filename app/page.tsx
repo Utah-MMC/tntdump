@@ -1,4 +1,4 @@
-﻿import Hero from '@/components/Hero'
+import Hero from '@/components/Hero'
 import nextDynamic from 'next/dynamic'
 import CityCard from '@/components/CityCard'
 const Services = nextDynamic(() => import('@/components/Services'), { ssr: false, loading: () => null })
@@ -13,7 +13,82 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Page.Tsx</h1>
+      {/* Comprehensive Structured Data for AI Overview */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "HowTo",
+            "name": "How to Rent a Dumpster in Utah",
+            "description": "Complete guide to renting a dumpster in Salt Lake & Utah County. Step-by-step instructions for ordering, delivery, and pickup.",
+            "step": [
+              {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Contact TNT Dumpsters",
+                "text": "Call (801) 209-9013 or request a quote online. Provide details about your project, location, and preferred delivery date.",
+                "url": "https://tntdump.com/quote"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Choose Your Dumpster Size",
+                "text": "Select from 15-yard (small cleanouts), 20-yard (medium remodels), or 30-yard (large construction) containers. Our team can help recommend the right size.",
+                "url": "https://tntdump.com/calculator"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Schedule Delivery",
+                "text": "We schedule delivery, typically within 4-6 hours when ordered before 3:00 PM. Same-day service is often available in Salt Lake & Utah County.",
+                "url": "https://tntdump.com"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Load Your Dumpster",
+                "text": "Fill the dumpster with your debris. Keep materials level with the top rail and avoid prohibited items like liquids, hazardous waste, and electronics.",
+                "url": "https://tntdump.com/dumpsters"
+              },
+              {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "Schedule Pickup",
+                "text": "Call or text when ready for pickup. We typically retrieve same day or next morning. Extended rentals available with daily fees.",
+                "url": "https://tntdump.com/contact"
+              }
+            ]
+          })
+        }}
+      />
       <Hero />
+
+      {/* Core services quick links for strong internal routing */}
+      <section className="py-8 bg-gray-50">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Core Services</p>
+            <h2 className="text-2xl font-bold text-gray-900">Find the Right Dumpster Service</h2>
+            <p className="text-sm text-gray-600 max-w-3xl mx-auto">Jump straight into our most-requested services.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Residential Containers</h3>
+              <p className="text-sm text-gray-600">Driveway-safe bins for cleanouts, remodels, and moves.</p>
+            </a>
+            <a href="/dumpsters/commercial" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Commercial Containers</h3>
+              <p className="text-sm text-gray-600">Contractor-friendly service with reliable swaps and scheduling.</p>
+            </a>
+            <a href="/dumpsters/concrete" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow block">
+              <h3 className="font-bold text-blue-600 mb-2">Construction & Concrete Containers</h3>
+              <p className="text-sm text-gray-600">Heavy debris solutions for concrete, brick, and demo waste.</p>
+            </a>
+          </div>
+        </div>
+      </section>
 
       {/* Featured images moved inside <Hero /> to remove extra spacing */}
 
@@ -22,7 +97,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold gradient-text mb-4">Our Dumpster Sizes</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Choose the perfect size for your project. All rentals include delivery and pickup.</p>
+              <p className="text-gray-600 max-w-3xl mx-auto">Choose the right size for your project. All rentals include delivery and pickup.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* 15 YD Dumpster */}
@@ -145,17 +220,17 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3-Step Dumpster Rental Process Section */}
+      {/* 3-Step Container Rental Process Section */}
       <section className="py-16 bg-gray-50">
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-3 gap-6">
-              {/* Dumpster Rental Delivery */}
+              {/* Container Delivery */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/dumpster-rental-dropoff.png"
-                    alt="Professional dumpster rental delivery service with roll-off truck dropping off dumpster at job site"
+                    src="/images/dumpster-delivery-service.png"
+                    alt="Professional roll-off container delivery service with truck dropping off container at job site"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     quality={85}
@@ -165,12 +240,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Residential Dumpster Rental */}
+              {/* Residential Container */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/dumpster-rental-driveway.jpeg"
-                    alt="Residential dumpster rental placed on driveway for home renovation and construction debris removal"
+                    src="/images/residential-dumpster-driveway.jpeg"
+                    alt="Residential roll-off container placed on driveway for home renovation and construction debris removal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                   quality={70}
@@ -180,12 +255,12 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Construction Dumpster Rental */}
+              {/* Construction Container */}
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/open-dumpster.png"
-                    alt="Open dumpster rental at construction site for efficient waste management and debris disposal"
+                    src="/images/open-dumpster-rental.png"
+                    alt="Open roll-off container at construction site for efficient waste management and debris disposal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
                     quality={85}
@@ -212,11 +287,11 @@ export default function Home() {
               </h2>
             </a>
             <p className="text-sm text-gray-600 max-w-3xl mx-auto">
-              TNT Dumpsters provides professional dumpster rental services throughout the Wasatch Front area. 
+              TNT Dumpsters provides professional roll-off container services throughout the Wasatch Front area. 
               Click on your city below to learn more about our local services and pricing.
             </p>
             <p className="mt-3 text-xs text-gray-600">
-              Primary dumpster rental service areas include Davis County, Salt Lake County, Utah County, and Weber County.
+              Primary service areas include Davis County, Salt Lake County, Utah County, and Weber County.
             </p>
           </div>
 
@@ -224,8 +299,8 @@ export default function Home() {
           <div className="max-w-3xl mx-auto mb-12">
             <a href="/cities" className="block">
               <Image
-                src="/images/service_areas.png"
-                alt="Utah dumpster rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
+                src="/images/utah-dumpster-service-areas.png"
+                alt="Utah container rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
                 width={1200}
                 height={400}
                 loading="lazy"
@@ -289,10 +364,10 @@ export default function Home() {
                       {[...cities].sort((a, b) => a.name.localeCompare(b.name)).map(({ name, slug }) => (
                         <li key={slug}>
                           <a
-                            href={`/ut/${slug}/dumpster-rental`}
+                            href={`/${slug}-dumpster-rentals/service-areas/${slug}`}
                             className="text-blue-600 hover:text-blue-700 text-sm"
                           >
-                            {name} Utah Dumpster Rentals
+                            {name} Container Rentals
                           </a>
                         </li>
                       ))}
@@ -312,33 +387,33 @@ export default function Home() {
       <section className="py-12 bg-gray-50">
         <div className="container-custom">
           <div className="text-center mb-8">
-            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Dumpster Rental Services</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto">Browse our comprehensive dumpster rental resources and services</p>
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Explore Our Services</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Browse our roll-off container resources and services</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
             <a href="/dumpsters" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">All Dumpster Types</h3>
-              <p className="text-sm text-gray-600">View residential, commercial, industrial, and specialty dumpsters</p>
+              <h3 className="font-bold text-blue-600 mb-2">All Container Types</h3>
+              <p className="text-sm text-gray-600">View residential, commercial, industrial, and specialty containers</p>
             </a>
             <a href="/services" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Our Services</h3>
-              <p className="text-sm text-gray-600">Learn about our dumpster rental services and solutions</p>
+              <p className="text-sm text-gray-600">Learn about our roll-off container services and solutions</p>
             </a>
             <a href="/blog" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
-              <h3 className="font-bold text-blue-600 mb-2">Dumpster Rental Blog</h3>
-              <p className="text-sm text-gray-600">Tips, guides, and expert advice on dumpster rentals</p>
+              <h3 className="font-bold text-blue-600 mb-2">Container Rental Blog</h3>
+              <p className="text-sm text-gray-600">Tips, guides, and expert advice on container rentals</p>
             </a>
             <a href="/cities" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Cities We Serve</h3>
-              <p className="text-sm text-gray-600">Find dumpster rental services in your Utah city</p>
+              <p className="text-sm text-gray-600">Find container rental services in your Utah city</p>
             </a>
             <a href="/quote" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Get Free Quote</h3>
-              <p className="text-sm text-gray-600">Request a free dumpster rental quote today</p>
+              <p className="text-sm text-gray-600">Request a free quote today</p>
             </a>
             <a href="/calculator" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Size Calculator</h3>
-              <p className="text-sm text-gray-600">Find the perfect dumpster size for your project</p>
+              <p className="text-sm text-gray-600">Find the perfect container size for your project</p>
             </a>
             <a href="/estate-cleanouts" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Estate Cleanouts</h3>
@@ -346,7 +421,19 @@ export default function Home() {
             </a>
             <a href="/dumpsters/residential" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">Residential Rentals</h3>
-              <p className="text-sm text-gray-600">Home dumpster rental for cleanouts and remodels</p>
+              <p className="text-sm text-gray-600">Home container rental for cleanouts and remodels</p>
+            </a>
+            <a href="#cleanouts-moves" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Cleanouts & Moves</h3>
+              <p className="text-sm text-gray-600">Quick home cleanups and seasonal purges</p>
+            </a>
+            <a href="#remodels-projects" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">Remodels & Projects</h3>
+              <p className="text-sm text-gray-600">Keep work areas clean during upgrades</p>
+            </a>
+            <a href="#what-we-take" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
+              <h3 className="font-bold text-blue-600 mb-2">What We Take</h3>
+              <p className="text-sm text-gray-600">Materials and debris we accept</p>
             </a>
           </div>
         </div>
@@ -357,43 +444,43 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-8">
             <h2 className="text-2xl lg:text-3xl font-bold gradient-text">Pricing & How It Works</h2>
-            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Simple, transparent options. Get a firm dumpster rental quote by calling (801) 209-9013.</p>
+            <p className="text-gray-600 max-w-3xl mx-auto text-sm">Simple, transparent options. Get a firm quote by calling (801) 209-9013.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
             <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">How much is a dumpster rental?</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">How much does it cost?</h3>
               <p className="text-gray-700 text-sm">
-                Dumpster rental price varies by size, material, and location. Call for a fast dumpster rental quote; we'll confirm weight limits and the best roll off dumpster for your project.
+                Price varies by size, material, and location. Call for a quick quote. We'll confirm weight limits and the best container for your project.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">What affects dumpster rental cost?</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">What affects the cost?</h3>
               <p className="text-gray-700 text-sm">
-                The biggest factors are tonnage, dumpster size, rental time, route distance, and disposal fees. We price delivery dumpster rental up front so there are no surprises.
+                Main factors are tonnage, container size, rental time, route distance, and disposal fees. We price delivery up front with no surprises.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
-              <h3 className="font-semibold text-gray-900 mb-3">Do you offer same day dumpster rental?</h3>
+              <h3 className="font-semibold text-gray-900 mb-3">Do you offer same day service?</h3>
               <p className="text-gray-700 text-sm">
-                Yes—on many days. Contact us early and we'll try to place a roll off dumpster the same day in Salt Lake & Utah County when routes allow.
+                Yes, on many days. Contact us early and we'll try to deliver the same day in Salt Lake & Utah County when routes allow.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">How do delivery and pick-up work?</h3>
               <p className="text-gray-700 text-sm">
-                We schedule delivery dumpster rental, place it carefully on your driveway or job site, and return for pick-up on your call or on the preset date. Easy swaps are available.
+                We schedule delivery, place the container on your driveway or job site, and return for pick-up when you call or on the preset date. Easy swaps are available.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">Can I get a fixed price before delivery?</h3>
               <p className="text-gray-700 text-sm">
-                Absolutely. We confirm your dumpster rental price and expectations (material type, size, timing) before scheduling. No hidden fees—just clear terms.
+                Yes. We confirm your price and expectations (material type, size, timing) before scheduling. No hidden fees, just clear terms.
               </p>
             </div>
             <div className="border rounded-lg p-6 bg-gray-50">
               <h3 className="font-semibold text-gray-900 mb-3">Do you help choose the right size?</h3>
               <p className="text-gray-700 text-sm">
-                Yes. Tell us about your project and we'll recommend a roll off size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
+                Yes. Tell us about your project and we'll recommend a size. If you're unsure, start with a versatile size and we can swap or haul-off as needed.
               </p>
             </div>
           </div>
@@ -404,42 +491,58 @@ export default function Home() {
       <About />
       <Contact />
 
-      {/* Footer FAQ block */}
-      <section className="py-16 bg-white">
+      {/* Footer FAQ block - Enhanced for AI Overview */}
+      <section className="py-16 bg-white" itemScope itemType="https://schema.org/FAQPage">
         <div className="container-custom">
-          <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Dumpster Rental FAQs</h2>
+          <h2 className="text-xl lg:text-2xl font-bold text-gray-900 mb-6">Container Rental FAQs</h2>
           <dl className="grid md:grid-cols-2 gap-6 text-sm">
-            <div>
-              <dt className="font-semibold text-gray-900">Do you offer roll off dumpster rental near me?</dt>
-              <dd className="text-gray-700">Yes, we provide local dumpster rental across Salt Lake & Utah County with quick delivery.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">How much does it cost to rent a dumpster in Utah?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Container prices start at $325 for a 15-yard container (7-day rental), $375 for a 20-yard, and $400 for a 30-yard. All prices include delivery and pickup. Additional charges apply for extra weight ($55 per ton) and extended rental days. Final pricing depends on size, material type, location, and rental duration. Call (801) 209-9013 for a detailed quote.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Can I get same day dumpster rental?</dt>
-              <dd className="text-gray-700">Often yes—call early and we’ll try to fit you in based on route and availability.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">Do you offer same day dumpster delivery?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Yes, same-day dumpster delivery is often available in Salt Lake & Utah County when orders are placed before our cutoff time (typically 3:00 PM). Delivery typically takes 4-6 hours depending on route and traffic. Contact us early in the day to secure same-day service.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">How much is a dumpster rental?</dt>
-              <dd className="text-gray-700">Your dumpster rental price depends on size, tonnage, and material. Call for a fast dumpster rental quote.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What dumpster sizes do you offer?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We offer three sizes: 15-yard (16' x 8' x 3.5') for small cleanouts, 20-yard (17' x 7.5' x 5') for medium remodels, and 30-yard (18' x 7.25' x 6.6') for large construction projects. Our team can help you choose the right size based on your project type and debris volume.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">What sizes do you carry?</dt>
-              <dd className="text-gray-700">We stock common roll off dumpster sizes suitable for cleanouts, remodels, roofing, and construction debris.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What items are prohibited in dumpsters?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Prohibited items include liquids, paints, oils, hazardous waste, batteries, electronics, tires, and appliances (with some exceptions). Dirt and concrete need special containers. We'll review restrictions when you book to ensure proper disposal and avoid extra fees.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Where can you place the bin?</dt>
-              <dd className="text-gray-700">Driveway or job site. We place with care and use boards when needed to protect surfaces.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">Do I need a permit for dumpster placement?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Driveway placements usually don't need permits. Street or public right-of-way placements may need a city permit. Permit rules vary by city in Utah. We can help you understand local requirements and guide you on getting permits if needed.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">What’s included with delivery?</dt>
-              <dd className="text-gray-700">Delivery dumpster rental includes drop-off, a rental window, and scheduled pick-up. Extra weight or time may cost more.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">How does dumpster delivery and pickup work?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We schedule delivery at your preferred time, place the container on your driveway or job site, and return for pickup when you call or on the preset date. Our drivers will call or text before arrival. Pickup is usually same-day or next morning when requested.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Do you service contractors?</dt>
-              <dd className="text-gray-700">Yes. We support construction dumpster rental with swaps/haul-offs and reliable schedules for busy sites.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What areas do you serve?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">We serve Salt Lake County, Utah County, Davis County, and Weber County, including cities like Salt Lake City, Provo, Orem, Lehi, West Jordan, Sandy, Murray, Layton, Ogden, and many more. Contact us to confirm service in your specific location.</span>
+              </dd>
             </div>
-            <div>
-              <dt className="font-semibold text-gray-900">Do you offer same day bin rental?</dt>
-              <dd className="text-gray-700">When routes allow, we can arrange it. Call (801) 209-9013 to check today’s options.</dd>
+            <div itemScope itemType="https://schema.org/Question">
+              <dt className="font-semibold text-gray-900" itemProp="name">What affects container rental cost?</dt>
+              <dd className="text-gray-700" itemScope itemType="https://schema.org/Answer" itemProp="acceptedAnswer">
+                <span itemProp="text">Several factors affect pricing: container size (15, 20, or 30 yards), material weight (billed at $55 per ton), rental duration (standard 7 days, then daily fees), route distance, disposal fees, and material type. Heavy materials like concrete or dirt may need special containers. We provide clear pricing upfront with no hidden fees.</span>
+              </dd>
             </div>
           </dl>
         </div>

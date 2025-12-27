@@ -107,6 +107,18 @@ export default function QuotePage() {
             Delivery dumpster rental with local support. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> basics or ask about <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> timing. Browse our <a href="/dumpsters" className="text-blue-600 hover:underline">dumpster types</a> or use our <a href="/calculator" className="text-blue-600 hover:underline">size calculator</a>.
           </p>
           <p className="text-xs text-gray-600 mt-1">Need help on size? Kitchen remodel vs. garage cleanout is a good place to start. Check our <a href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:underline">size guide</a> or browse <a href="/services" className="text-blue-600 hover:underline">all services</a>.</p>
+          <p className="text-xs text-gray-600 mt-2">
+            Looking for our sister company? Visit{' '}
+            <a
+              href="https://icondumpsters.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-600 hover:underline"
+            >
+              icondumpsters.com
+            </a>
+            .
+          </p>
         </div>
       </section>
       {/* SEO SWEEP END [/quote-intro] */}

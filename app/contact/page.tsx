@@ -76,7 +76,7 @@ export default function ContactPage() {
           href: '#contact-form',
         }}
         showPhoneButton={false}
-        backgroundImage="/images/pexels-pamelamariephoto-2625896.jpg"
+        backgroundImage="/images/dumpster-rental-contact.jpg"
       />
 
       {/* SEO SWEEP START [/contact-intro] */}

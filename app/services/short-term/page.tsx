@@ -1,5 +1,13 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar } from 'lucide-react'
+
+export const metadata: Metadata = {
+  title: 'Short-Term Dumpster Rental | Quick Projects | TNT Dumpsters',
+  description:
+    'Short-term dumpster rentals for cleanouts, remodels, and moves in Utah. Fast delivery, flexible pickup, and clear pricing—call (801) 209-9013.',
+  alternates: { canonical: 'https://tntdump.com/services/short-term' },
+}
 
 export default function ShortTermServicePage() {
   const features = [
@@ -48,9 +56,9 @@ export default function ShortTermServicePage() {
       dimensions: '12\' x 8\' x 6\'',
       duration: '1-7 days',
       pricing: [
-        { label: '1 Day', value: '$300', note: 'no tons included' },
-        { label: '7 Days', value: '$325', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: '1 Day', value: '$300', note: 'billed by weight' },
+        { label: '7 Days', value: '$325', note: 'billed by weight' },
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -62,7 +70,7 @@ export default function ShortTermServicePage() {
       pricing: [
         { label: '1 Day', value: '$335', note: 'no tons included' },
         { label: '7 Days', value: '$375', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     },
     {
@@ -74,7 +82,7 @@ export default function ShortTermServicePage() {
       pricing: [
         { label: '1 Day', value: '$345', note: 'no tons included' },
         { label: '7 Days', value: '$400', note: '2 tons included' },
-        { label: 'Overage', value: '$55/ton' }
+        { label: 'Weight', value: '$55/ton' }
       ]
     }
   ]

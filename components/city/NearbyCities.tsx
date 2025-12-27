@@ -19,9 +19,9 @@ export default function NearbyCities({ city }: { city: CityData }) {
               <li key={name}>
                 <a
                   className="text-blue-600 hover:underline"
-                  href={`/ut/${slug}/dumpster-rental`}
+                  href={`/${slug}-dumpster-rentals/service-areas/${slug}`}
                 >
-                  {name} Dumpster Rental
+                  {name} Dumpster Rentals
                 </a>
               </li>
             )

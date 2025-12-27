@@ -265,5 +265,5 @@ export function getCitiesByCounty(state = 'UT') {
 
 export function getCityPathsJson(): string[] {
   const all = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
-  return all.map((c) => `/ut/${c.slug}/dumpster-rental`)
+  return all.map((c) => `/${c.slug}-dumpster-rentals/service-areas/${c.slug}`)
 }

@@ -1,6 +1,14 @@
-﻿import Image from 'next/image'
+﻿import type { Metadata } from 'next'
+import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Users, Award } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
+
+export const metadata: Metadata = {
+  title: 'About TNT Dumpsters | Local Dumpster Rental in Utah',
+  description:
+    'Family-owned dumpster rental serving Salt Lake & Utah County. Learn our story, service values, and what to expect from delivery to pickup.',
+  alternates: { canonical: 'https://tntdump.com/about' },
+}
 
 export default function AboutPage() {
   const values = [

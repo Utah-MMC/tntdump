@@ -33,11 +33,11 @@ const nextConfig = {
     formats: ['image/webp', 'image/avif'],
     deviceSizes: [360, 480, 640, 750, 828, 1080, 1200, 1440, 1920],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    minimumCacheTTL: 60,
+    minimumCacheTTL: 31536000, // 1 year - images are immutable
   },
   compress: true,
   poweredByHeader: false,
-  generateEtags: false,
+  generateEtags: true, // Enable ETags for better caching
   async headers() {
     return [
       {
@@ -73,7 +73,61 @@ const nextConfig = {
       {
         source: '/sitemap.xml',
         headers: [
-          { key: 'Cache-Control', value: 'public, max-age=3600' },
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600' },
+        ],
+      },
+      {
+        source: '/sitemap-:path*.xml',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600' },
+        ],
+      },
+      {
+        source: '/blog/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/services/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/ut/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/:path*-dumpster-rentals/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/about',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800' },
+        ],
+      },
+      {
+        source: '/contact',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/quote',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400' },
+        ],
+      },
+      {
+        source: '/calculator/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'public, max-age=3600, s-maxage=3600, stale-while-revalidate=86400' },
         ],
       },
       {
@@ -92,8 +146,9 @@ const nextConfig = {
   // Rewrites for legacy city URLs to new App Router path (no redirect)
   async rewrites() {
     return [
-      { source: '/cities/:city', destination: '/ut/:city/dumpster-rental' },
-      { source: '/dumpster-rental-:city-ut', destination: '/ut/:city/dumpster-rental' },
+      { source: '/cities/:city', destination: '/:city-dumpster-rentals/service-areas/:city' },
+      { source: '/dumpster-rental-:city-ut', destination: '/:city-dumpster-rentals/service-areas/:city' },
+      { source: '/ut/:city/dumpster-rental', destination: '/:city-dumpster-rentals/service-areas/:city' },
       // Root-level favicon and PWA assets preferred by Google Search
       { source: '/favicon.ico', destination: '/images/logo/favicon.ico' },
       { source: '/apple-touch-icon.png', destination: '/images/logo/apple-touch-icon.png' },
