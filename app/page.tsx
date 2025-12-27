@@ -13,7 +13,6 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <main className="min-h-screen">
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Page.Tsx</h1>
       {/* Comprehensive Structured Data for AI Overview */}
       <script
         type="application/ld+json"

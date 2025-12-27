@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Mold Remediation Dumpster Rental | TNT Dumpsters',
   description: 'Mold remediation dumpster rentals for safe disposal of damaged materials. Fast delivery and flexible pickup. Get fast de',
   alternates: { canonical: 'https://tntdump.com/services/mold-remediation' },
-,
     openGraph: {
       title: 'Mold Remediation Dumpster Rental | TNT Dumpsters',
       description: 'Mold remediation dumpster rentals for safe disposal of damaged materials. Fast delivery and flexible pickup.',
@@ -48,3 +47,4 @@ export default function MoldRemediationPage() {
     />
   )
 }
+

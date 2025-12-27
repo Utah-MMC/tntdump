@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   description: 'Internal test page for deployment verification. Not intended for public search results. Get fast delivery and clear pric',
   alternates: { canonical: 'https://tntdump.com/test' },
   robots: { index: false, follow: false },
-,
     openGraph: {
       title: 'Test | TNT Dumpsters test test',
       description: 'Internal test page for deployment verification. Not intended for public search results. Get fast delivery and clear pric',
@@ -31,3 +30,4 @@ export default function TestPage() {
     </div>
   )
 }
+

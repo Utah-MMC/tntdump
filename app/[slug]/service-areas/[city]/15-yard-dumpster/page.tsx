@@ -10,12 +10,12 @@ import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FA
 export async function generateStaticParams() {
   const allCities = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
   return allCities.map((c) => ({
-    cityBase: `${c.slug}-dumpster-rentals`,
+    slug: `${c.slug}-dumpster-rentals`,
     city: c.slug,
   }))
 }
 
-type PageProps = { params: { cityBase: string; city: string } }
+type PageProps = { params: { slug: string; city: string } }
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
@@ -109,7 +109,7 @@ function SpecsBlock({ city }: { city: CityData }) {
           <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
             <div className="text-blue-600 font-semibold text-sm uppercase mb-2">Capacity</div>
             <div className="text-2xl font-bold text-gray-900">15 Cubic Yards</div>
-            <div className="text-sm text-gray-600 mt-1">≈ 6-7 pickup truck loads</div>
+            <div className="text-sm text-gray-600 mt-1">— 6-7 pickup truck loads</div>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-sm border border-gray-200">
             <div className="text-blue-600 font-semibold text-sm uppercase mb-2">Weight Limit</div>
@@ -132,32 +132,32 @@ function BestProjectsBlock({ city }: { city: CityData }) {
     {
       title: 'Bathroom Remodels',
       description: 'Perfect for removing old vanities, tile, fixtures, and demolition debris from a full bathroom renovation.',
-      icon: '🛁'
+      icon: '✅'
     },
     {
       title: 'Flooring Removal',
       description: 'Handles carpet, hardwood, tile, or laminate removal from 500-1,000 square feet of space.',
-      icon: '🏠'
+      icon: '✅'
     },
     {
       title: 'Small Deck Removal',
       description: 'Ideal for teardown of 200-300 sq ft decks or small outdoor structures.',
-      icon: '🔨'
+      icon: '✅'
     },
     {
       title: 'Garage Cleanouts',
       description: 'Great for clearing accumulated junk, old furniture, boxes, and miscellaneous items from a single-car garage.',
-      icon: '🚗'
+      icon: '✅'
     },
     {
       title: 'Kitchen Remodels (Partial)',
       description: 'Suitable for cabinet removal, countertop demo, and appliance disposal in partial kitchen updates.',
-      icon: '🍳'
+      icon: '✅'
     },
     {
       title: 'Yard Debris',
       description: 'Handles branches, shrub removal, and moderate landscaping cleanup projects.',
-      icon: '🌳'
+      icon: '✅'
     }
   ]
 
@@ -515,3 +515,5 @@ export default async function FifteenYardPage({ params }: PageProps) {
     </main>
   )
 }
+
+

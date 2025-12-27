@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   description:
     'Order a dumpster rental online in minutes. Choose your size, schedule delivery, and checkout securely with TNT Dumpsters in Utah.',
   alternates: { canonical: 'https://tntdump.com/cart' },
-,
     openGraph: {
       title: 'Order Dumpster Rental Online | TNT Dumpsters',
       description: 'Order a dumpster rental online in minutes. Choose your size, schedule delivery, and checkout securely with TNT Dumpsters in Utah.',
@@ -20,5 +19,6 @@ export const metadata: Metadata = {
 export default function CartLayout({ children }: { children: React.ReactNode }) {
   return children
 }
+
 
 

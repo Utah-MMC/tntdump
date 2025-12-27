@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Condo Cleanout Dumpster Rental | TNT Dumpsters',
   description: 'Condo cleanout dumpsters for upgrades, move-outs, and renovations. Fast delivery, careful placement, and clear pricing. ',
   alternates: { canonical: 'https://tntdump.com/services/condo-cleanout' },
-,
     openGraph: {
       title: 'Condo Cleanout Dumpster Rental | TNT Dumpsters',
       description: 'Condo cleanout dumpsters for upgrades, move-outs, and renovations. Fast delivery, careful placement, and clear pricing.',
@@ -48,3 +47,4 @@ export default function CondoCleanoutPage() {
     />
   )
 }
+

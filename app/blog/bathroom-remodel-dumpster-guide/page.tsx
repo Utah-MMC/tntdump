@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Bathroom Remodel Dumpster Guide: Size, Cost, and Tips | TNT Dumpsters',
   description: 'A bathroom remodel dumpster guide with size recommendations, debris planning, and loading tips to keep your project clean and on budget.',
   keywords: 'bathroom remodel dumpster, bathroom renovation dumpster, bathroom demolition dumpster, small dumpster rental, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/bathroom-remodel-dumpster-guide' },
     openGraph: {
       title: 'Bathroom Remodel Dumpster Guide: Size, Cost, and Tips | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

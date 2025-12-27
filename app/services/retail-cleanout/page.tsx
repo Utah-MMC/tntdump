@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Retail Cleanout Dumpster Rental | TNT Dumpsters',
   description: 'Retail cleanout dumpsters for store remodels, closures, and fixture updates. Fast delivery and easy pickup. Get fast del',
   alternates: { canonical: 'https://tntdump.com/services/retail-cleanout' },
-,
     openGraph: {
       title: 'Retail Cleanout Dumpster Rental | TNT Dumpsters',
       description: 'Retail cleanout dumpsters for store remodels, closures, and fixture updates. Fast delivery and easy pickup.',
@@ -48,3 +47,4 @@ export default function RetailCleanoutPage() {
     />
   )
 }
+

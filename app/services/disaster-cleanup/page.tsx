@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Disaster Cleanup Dumpster Rental | TNT Dumpsters',
   description: 'Disaster cleanup dumpsters for storm debris, flood damage, and emergency cleanouts. Fast delivery and flexible pickups. ',
   alternates: { canonical: 'https://tntdump.com/services/disaster-cleanup' },
-,
     openGraph: {
       title: 'Disaster Cleanup Dumpster Rental | TNT Dumpsters',
       description: 'Disaster cleanup dumpsters for storm debris, flood damage, and emergency cleanouts. Fast delivery and flexible pickups.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function DisasterCleanupPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Disaster Cleanup Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Disaster Cleanup Dumpster Rental"
       subtitle="Fast dumpster delivery to help you recover after storms, floods, and emergencies."
       description="When cleanup needs are urgent, we prioritize delivery and flexible pickup so you can focus on recovery."
@@ -49,3 +47,5 @@ export default function DisasterCleanupPage() {
     />
   )
 }
+
+

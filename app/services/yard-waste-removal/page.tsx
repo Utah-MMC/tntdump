@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Yard Waste Dumpster Rental | TNT Dumpsters',
   description: 'Yard waste dumpster rentals for landscaping, tree trimming, and seasonal cleanups. Fast delivery and easy pickup. Get fa',
   alternates: { canonical: 'https://tntdump.com/services/yard-waste-removal' },
-,
     openGraph: {
       title: 'Yard Waste Dumpster Rental | TNT Dumpsters',
       description: 'Yard waste dumpster rentals for landscaping, tree trimming, and seasonal cleanups. Fast delivery and easy pickup.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function YardWasteRemovalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Yard Waste Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Yard Waste Dumpster Rental"
       subtitle="Handle landscaping debris, brush, and seasonal yard cleanup with a roll-off dumpster."
       description="Yard waste builds up fast. We deliver dumpsters for branches, shrubs, and landscaping debris so your cleanup stays efficient."
@@ -49,3 +47,5 @@ export default function YardWasteRemovalPage() {
     />
   )
 }
+
+

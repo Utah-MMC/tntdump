@@ -5,12 +5,11 @@ import { CheckCircle, Phone, Clock, MapPin, Truck, Shield, Zap } from 'lucide-re
 export const metadata: Metadata = {
   title: 'Industrial Dumpster Rental | Large Projects | TNT Dumpsters',
   description:
-    'Industrial dumpster rentals for manufacturing waste, facility cleanouts, and heavy debris in Utah. Fast delivery, clear pricing—call (801) 209-9013.',
+    'Industrial dumpster rentals for manufacturing waste, facility cleanouts, and heavy debris in Utah. Fast delivery, clear pricingï¿½call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/industrial' },
-,
     openGraph: {
       title: 'Industrial Dumpster Rental | Large Projects | TNT Dumpsters',
-      description: 'Industrial dumpster rentals for manufacturing waste, facility cleanouts, and heavy debris in Utah. Fast delivery, clear pricing—call (801) 209-9013.',
+      description: 'Industrial dumpster rentals for manufacturing waste, facility cleanouts, and heavy debris in Utah. Fast delivery, clear pricingï¿½call (801) 209-9013.',
       url: 'https://tntdump.com/services/industrial',
       siteName: 'TNT Dumpsters',
       type: 'website',
@@ -136,7 +135,7 @@ export default function IndustrialServicePage() {
           <div className="space-y-3 text-sm">
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Do you handle heavy materials?</summary>
-              <div className="mt-2">Yes—concrete, masonry, and mixed construction debris with proper weight guidance.</div>
+              <div className="mt-2">Yesï¿½concrete, masonry, and mixed construction debris with proper weight guidance.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Can you coordinate swaps?</summary>
@@ -364,4 +363,5 @@ export default function IndustrialServicePage() {
     </main>
   )
 }
+
 

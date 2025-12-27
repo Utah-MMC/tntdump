@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Commercial Dumpster Rental Guide: Sizes, Costs, and Tips | TNT Dumpsters',
   description: 'A practical commercial dumpster rental guide with size planning, waste types, scheduling tips, and cost-saving advice for businesses.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
-,
   alternates: { canonical: 'https://tntdump.com/blog/commercial-dumpster-rental-guide' },
     openGraph: {
       title: 'Commercial Dumpster Rental Guide: Sizes, Costs, and Tips | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

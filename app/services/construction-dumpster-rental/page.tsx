@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Construction Dumpster Rental | TNT Dumpsters',
   description: 'Construction dumpster rentals for job sites, renovations, and demolition. Fast delivery, clear pricing, and reliable swaps.',
   alternates: { canonical: 'https://tntdump.com/services/construction-dumpster-rental' },
-,
     openGraph: {
       title: 'Construction Dumpster Rental | TNT Dumpsters',
       description: 'Construction dumpster rentals for job sites, renovations, and demolition. Fast delivery, clear pricing, and reliable swaps.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function ConstructionDumpsterRentalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Construction Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Construction Dumpster Rental"
       subtitle="Reliable roll-offs for contractors, builders, and job sites across Utah."
       description="Keep construction debris moving with scheduled deliveries, fast swaps, and dependable pickup windows."
@@ -49,3 +47,5 @@ export default function ConstructionDumpsterRentalPage() {
     />
   )
 }
+
+

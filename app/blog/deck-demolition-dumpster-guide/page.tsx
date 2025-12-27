@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Deck Demolition Dumpster Guide: Size, Tips, and Safety | TNT Dumpsters',
   description: 'A deck demolition dumpster guide with size recommendations, loading tips, and safety advice for clean, efficient tear-outs.',
   keywords: 'deck demolition dumpster, deck removal dumpster, deck tear-down dumpster, wood disposal dumpster, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/deck-demolition-dumpster-guide' },
     openGraph: {
       title: 'Deck Demolition Dumpster Guide: Size, Tips, and Safety | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

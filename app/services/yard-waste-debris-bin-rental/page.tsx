@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Yard Waste Debris Bin Rental | TNT Dumpsters',
   description: 'Yard waste debris bin rentals for landscaping projects, brush removal, and seasonal cleanups. Get fast delivery and clea',
   alternates: { canonical: 'https://tntdump.com/services/yard-waste-debris-bin-rental' },
-,
     openGraph: {
       title: 'Yard Waste Debris Bin Rental | TNT Dumpsters',
       description: 'Yard waste debris bin rentals for landscaping projects, brush removal, and seasonal cleanups.',
@@ -48,3 +47,4 @@ export default function YardWasteDebrisBinRentalPage() {
     />
   )
 }
+

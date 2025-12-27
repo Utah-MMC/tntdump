@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Mobile Home Cleanout Dumpster Rental | TNT Dumpsters',
   description: 'Mobile home cleanout dumpsters for renovations, removals, and property resets. Fast delivery and easy pickup. Get fast d',
   alternates: { canonical: 'https://tntdump.com/services/mobile-home-cleanout' },
-,
     openGraph: {
       title: 'Mobile Home Cleanout Dumpster Rental | TNT Dumpsters',
       description: 'Mobile home cleanout dumpsters for renovations, removals, and property resets. Fast delivery and easy pickup.',
@@ -48,3 +47,4 @@ export default function MobileHomeCleanoutPage() {
     />
   )
 }
+

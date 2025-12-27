@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'RV Cleanout Dumpster Rental | TNT Dumpsters',
   description: 'RV cleanout dumpsters for travel trailers, campers, and storage cleanups. Fast delivery and easy pickup. Get fast delive',
   alternates: { canonical: 'https://tntdump.com/services/rv-cleanout' },
-,
     openGraph: {
       title: 'RV Cleanout Dumpster Rental | TNT Dumpsters',
       description: 'RV cleanout dumpsters for travel trailers, campers, and storage cleanups. Fast delivery and easy pickup.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function RvCleanoutPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">RV Cleanout Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="RV Cleanout Dumpster Rental"
       subtitle="Clear out campers, RVs, and storage areas with a convenient roll-off dumpster."
       description="Whether you are renovating an RV or clearing storage, our dumpsters give you time to load at your own pace."
@@ -49,3 +47,5 @@ export default function RvCleanoutPage() {
     />
   )
 }
+
+

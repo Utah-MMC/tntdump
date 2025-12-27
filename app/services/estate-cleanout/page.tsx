@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description:
     'Estate cleanout service in Utah for downsizing, inheritances, and property sales. Professional hauling, flexible scheduling, and clear pricing.',
   alternates: { canonical: 'https://tntdump.com/services/estate-cleanout' },
-,
     openGraph: {
       title: 'Estate Cleanout Service | Utah | TNT Dumpsters',
       description: 'Estate cleanout service in Utah for downsizing, inheritances, and property sales. Professional hauling, flexible scheduling, and clear pricing.',
@@ -320,5 +319,6 @@ export default function EstateCleanoutServicePage() {
     </main>
   )
 }
+
 
 

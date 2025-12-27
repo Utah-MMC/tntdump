@@ -5,12 +5,11 @@ import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from '
 export const metadata: Metadata = {
   title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
   description:
-    'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
+    'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricingï¿½call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/long-term' },
-,
     openGraph: {
       title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
-      description: 'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
+      description: 'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricingï¿½call (801) 209-9013.',
       url: 'https://tntdump.com/services/long-term',
       siteName: 'TNT Dumpsters',
       type: 'website',
@@ -112,7 +111,7 @@ export default function LongTermServicePage() {
           <div className="space-y-3 text-sm">
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Do you offer scheduled pickups?</summary>
-              <div className="mt-2">Yes—recurring pickups and swaps based on your operation.</div>
+              <div className="mt-2">Yesï¿½recurring pickups and swaps based on your operation.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">How is pricing structured?</summary>
@@ -120,7 +119,7 @@ export default function LongTermServicePage() {
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Can you handle multi-site accounts?</summary>
-              <div className="mt-2">Yes—one point of contact for scheduling and billing.</div>
+              <div className="mt-2">Yesï¿½one point of contact for scheduling and billing.</div>
             </details>
           </div>
         </div>
@@ -313,4 +312,5 @@ export default function LongTermServicePage() {
     </main>
   )
 }
+
 

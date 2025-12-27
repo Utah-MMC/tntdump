@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Dumpster Prohibited Items: What You Cannot Throw Away | TNT Dumpsters',
   description: 'A clear list of dumpster prohibited items with reasons, safe alternatives, and tips to avoid fees or rejected loads.',
   keywords: 'dumpster prohibited items, what cannot go in dumpster, hazardous waste disposal, dumpster rules',
-,
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-prohibited-items' },
     openGraph: {
       title: 'Dumpster Prohibited Items: What You Cannot Throw Away | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

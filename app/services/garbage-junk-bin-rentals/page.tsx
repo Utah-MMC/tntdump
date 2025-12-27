@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Garbage Junk Bin Rentals | TNT Dumpsters',
   description: 'Garbage and junk bin rentals for cleanouts, renovations, and job sites. Fast delivery and simple pickup. Get fast delive',
   alternates: { canonical: 'https://tntdump.com/services/garbage-junk-bin-rentals' },
-,
     openGraph: {
       title: 'Garbage Junk Bin Rentals | TNT Dumpsters',
       description: 'Garbage and junk bin rentals for cleanouts, renovations, and job sites. Fast delivery and simple pickup.',
@@ -48,3 +47,4 @@ export default function GarbageJunkBinRentalsPage() {
     />
   )
 }
+

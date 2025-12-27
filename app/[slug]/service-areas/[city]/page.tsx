@@ -4,18 +4,18 @@ import { getCityData, getAllCities, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
 
 // Generate static params for all cities
-// The cityBase should be {city-slug}-dumpster-rentals and city should be {city-slug}
+// The slug should be {city-slug}-dumpster-rentals and city should be {city-slug}
 export async function generateStaticParams() {
   const allCities = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
   return allCities.map((c) => ({
-    cityBase: `${c.slug}-dumpster-rentals`,
+    slug: `${c.slug}-dumpster-rentals`,
     city: c.slug,
   }))
 }
 
 export const revalidate = 86400
 
-type PageProps = { params: { cityBase: string; city: string } }
+type PageProps = { params: { slug: string; city: string } }
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   const data = getCityData(params.city)
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
-  const description = `Local dumpster rental in ${data.city}, UT—${[15, 20, 30].join('/')} yard roll-offs with fast delivery and clear pricing. Call ${BRAND.telephone}.`
+  const description = `Local dumpster rental in ${data.city}, UT — ${[15, 20, 30].join('/')} yard roll-offs with fast delivery and clear pricing. Call ${BRAND.telephone}.`
   const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}`
   return {
     title,
@@ -168,7 +168,7 @@ export default async function CityPage({ params }: PageProps) {
 
   return (
     <main className="min-h-screen">
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">:City</h1>
+      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Dumpster Rentals in {city.city}, Utah</h1>
       {ld.map((block, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(block) }} />
       ))}
@@ -176,3 +176,4 @@ export default async function CityPage({ params }: PageProps) {
     </main>
   )
 }
+

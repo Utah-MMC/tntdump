@@ -10,12 +10,12 @@ import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FA
 export async function generateStaticParams() {
   const allCities = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
   return allCities.map((c) => ({
-    cityBase: `${c.slug}-dumpster-rentals`,
+    slug: `${c.slug}-dumpster-rentals`,
     city: c.slug,
   }))
 }
 
-type PageProps = { params: { cityBase: string; city: string } }
+type PageProps = { params: { slug: string; city: string } }
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
@@ -134,32 +134,32 @@ function BestProjectsSection({ city }: { city: CityData }) {
     {
       title: 'Whole-Home Renovations',
       description: `Gutting multiple rooms or an entire house in ${city.city}? A 30 yard handles drywall, framing, cabinets, flooring, and fixtures from 3,000+ sq ft properties.`,
-      icon: '🏠',
+      icon: '✅',
     },
     {
       title: 'New Construction Framing',
       description: 'Perfect for builders working on new construction sites. Handles wood scraps, packaging, and framing debris from large residential or commercial builds.',
-      icon: '🔨',
+      icon: '✅',
     },
     {
       title: 'Large Estate Cleanouts',
       description: 'Clearing out a multi-story home, downsizing, or handling an estate? The 30 yard size accommodates furniture, appliances, and decades of accumulated items.',
-      icon: '📦',
+      icon: '✅',
     },
     {
       title: 'Commercial Cleanouts',
       description: 'Retail fit-outs, office relocations, warehouse clearances—commercial projects generate volume, and our 30 yard containers keep pace.',
-      icon: '🏢',
+      icon: '✅',
     },
     {
       title: 'Multi-Story Projects',
       description: 'When your demolition or renovation spans multiple floors, the extra capacity prevents constant swaps and keeps crews productive.',
-      icon: '🏗️',
+      icon: '⭐',
     },
     {
       title: 'Large Landscaping Projects',
       description: 'Major yard overhauls with brush, stumps, sod removal, and hardscaping debris. Watch weight on dirt and rock—we can help you size appropriately.',
-      icon: '🌳',
+      icon: '✅',
     },
   ]
 
@@ -284,17 +284,17 @@ function LocalContext({ city }: { city: CityData }) {
         {city.real_job_examples && city.real_job_examples.length > 0 ? (
           <ul>
             {city.real_job_examples.filter(j => j.size === 30).map((j, i) => (
-              <li key={i}>{j.size} yard – {j.summary}</li>
+              <li key={i}>{j.size} yard — {j.summary}</li>
             ))}
             {city.real_job_examples.filter(j => j.size !== 30).slice(0, 2).map((j, i) => (
-              <li key={i}>{j.size} yard – {j.summary}</li>
+              <li key={i}>{j.size} yard — {j.summary}</li>
             ))}
           </ul>
         ) : (
           <ul>
-            <li>30 yard – Whole-home gut renovation in downtown {city.city}</li>
-            <li>30 yard – New construction framing cleanup for 3,500 sq ft home</li>
-            <li>30 yard – Estate cleanout with furniture and appliances from 5-bedroom house</li>
+            <li>30 yard — Whole-home gut renovation in downtown {city.city}</li>
+            <li>30 yard — New construction framing cleanup for 3,500 sq ft home</li>
+            <li>30 yard — Estate cleanout with furniture and appliances from 5-bedroom house</li>
           </ul>
         )}
       </div>
@@ -488,3 +488,5 @@ export default async function ThirtyYardDumpsterPage({ params }: PageProps) {
     </main>
   )
 }
+
+

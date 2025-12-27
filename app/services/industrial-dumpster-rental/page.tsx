@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Industrial Dumpster Rental | TNT Dumpsters',
   description: 'Industrial dumpster rentals for manufacturing, warehouses, and large-scale cleanup projects. Reliable delivery and swaps.',
   alternates: { canonical: 'https://tntdump.com/services/industrial-dumpster-rental' },
-,
     openGraph: {
       title: 'Industrial Dumpster Rental | TNT Dumpsters',
       description: 'Industrial dumpster rentals for manufacturing, warehouses, and large-scale cleanup projects. Reliable delivery and swaps.',
@@ -48,3 +47,4 @@ export default function IndustrialDumpsterRentalPage() {
     />
   )
 }
+

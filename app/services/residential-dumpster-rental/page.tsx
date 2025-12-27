@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Residential Dumpster Rental | TNT Dumpsters',
   description: 'Residential dumpster rentals for cleanouts, remodels, and yard projects. Reliable service, fast delivery, and clear pricing.',
   alternates: { canonical: 'https://tntdump.com/services/residential-dumpster-rental' },
-,
     openGraph: {
       title: 'Residential Dumpster Rental | TNT Dumpsters',
       description: 'Residential dumpster rentals for cleanouts, remodels, and yard projects. Reliable service, fast delivery, and clear pricing.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function ResidentialDumpsterRentalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Residential Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Residential Dumpster Rental"
       subtitle="Keep home projects on schedule with dependable dumpster delivery and pickup."
       description="From garage cleanouts to kitchen remodels, TNT Dumpsters delivers the right-size roll-off for your home project."
@@ -49,3 +47,5 @@ export default function ResidentialDumpsterRentalPage() {
     />
   )
 }
+
+

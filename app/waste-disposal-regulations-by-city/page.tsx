@@ -58,7 +58,7 @@ export default function Page() {
 
           <h2>How to plan by city</h2>
           <p>
-            If you are unsure about your city’s rules, call the local public works or building
+            If you are unsure about your city's rules, call the local public works or building
             department. We can also help you plan based on your city and project scope.
           </p>
 

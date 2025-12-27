@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Cost 2025: What Affects Price | TNT Dumpsters',
   description: 'A clear 2025 dumpster rental cost guide with pricing factors, common fees, and tips to keep your project on budget.',
   keywords: 'dumpster rental cost, how much does a dumpster cost, dumpster rental prices, dumpster cost calculator, dumpster rental pricing, average dumpster rental cost, cheap dumpster rental, affordable dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-rental-cost-2025' },
     openGraph: {
       title: 'Dumpster Rental Cost 2025: What Affects Price | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

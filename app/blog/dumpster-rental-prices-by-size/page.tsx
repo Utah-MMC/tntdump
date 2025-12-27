@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Dumpster Rental Prices by Size: A Clear Breakdown | TNT Dumpsters',
   description: 'A clear breakdown of dumpster rental prices by size with what each size fits and how to avoid extra fees.',
   keywords: 'dumpster rental prices, 15 yard dumpster cost, 20 yard dumpster price, dumpster price comparison, dumpster rental cost by size, cheapest dumpster rental, affordable dumpster rental, dumpster pricing',
-,
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-rental-prices-by-size' },
     openGraph: {
       title: 'Dumpster Rental Prices by Size: A Clear Breakdown | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

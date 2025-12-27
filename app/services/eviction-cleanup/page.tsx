@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Eviction Cleanup Dumpster Rental | TNT Dumpsters',
   description: 'Eviction cleanup dumpsters for property managers and landlords. Fast delivery, clear pricing, and quick pickup. Get fast',
   alternates: { canonical: 'https://tntdump.com/services/eviction-cleanup' },
-,
     openGraph: {
       title: 'Eviction Cleanup Dumpster Rental | TNT Dumpsters',
       description: 'Eviction cleanup dumpsters for property managers and landlords. Fast delivery, clear pricing, and quick pickup.',
@@ -48,3 +47,4 @@ export default function EvictionCleanupPage() {
     />
   )
 }
+

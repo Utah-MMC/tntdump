@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Office Cleanout Dumpster Guide: Plan, Sort, and Clear | TNT Dumpsters',
   description: 'An office cleanout dumpster guide with sorting tips, size recommendations, and ways to keep business disruption low.',
   keywords: 'office cleanout dumpster, office dumpster rental, commercial cleanout dumpster, office waste disposal, business dumpster rental, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/office-cleanout-dumpster-guide' },
     openGraph: {
       title: 'Office Cleanout Dumpster Guide: Plan, Sort, and Clear | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

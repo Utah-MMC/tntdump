@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description:
     'Residential dumpster rentals for remodels, cleanouts, and yard debris in Utah. Driveway-safe roll-offs with fast delivery and clear pricing.',
   alternates: { canonical: 'https://tntdump.com/services/residential' },
-,
     openGraph: {
       title: 'Residential Dumpster Rental | Home Projects | TNT Dumpsters',
       description: 'Residential dumpster rentals for remodels, cleanouts, and yard debris in Utah. Driveway-safe roll-offs with fast delivery and clear pricing.',
@@ -325,5 +324,6 @@ export default function ResidentialServicePage() {
     </main>
   )
 }
+
 
 

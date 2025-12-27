@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Small vs Large Dumpster Comparison: Which Size Wins? | TNT Dumpsters',
   description: 'A practical small vs large dumpster comparison with cost, capacity, and project fit to help you choose the right size.',
   keywords: 'small vs large dumpster, small dumpster vs large dumpster, dumpster size comparison, residential vs commercial dumpster, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/small-vs-large-dumpster-comparison' },
     openGraph: {
       title: 'Small vs Large Dumpster Comparison: Which Size Wins? | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

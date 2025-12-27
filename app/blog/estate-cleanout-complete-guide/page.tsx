@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Estate Cleanout Complete Guide: A Calm, Step by Step Plan | TNT Dumpsters',
   description: 'A complete estate cleanout guide with planning steps, sorting tips, and dumpster advice to keep the process manageable.',
   keywords: 'estate cleanout guide, estate dumpster, home cleanout tips, bereavement cleanout help',
-,
   alternates: { canonical: 'https://tntdump.com/blog/estate-cleanout-complete-guide' },
     openGraph: {
       title: 'Estate Cleanout Complete Guide: A Calm, Step by Step Plan | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

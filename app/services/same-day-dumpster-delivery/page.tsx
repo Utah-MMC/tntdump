@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Same Day Dumpster Delivery | TNT Dumpsters',
   description: 'Same-day dumpster delivery for urgent cleanouts and job sites across Utah. Call early for availability. Get fast deliver',
   alternates: { canonical: 'https://tntdump.com/services/same-day-dumpster-delivery' },
-,
     openGraph: {
       title: 'Same Day Dumpster Delivery | TNT Dumpsters',
       description: 'Same-day dumpster delivery for urgent cleanouts and job sites across Utah. Call early for availability.',
@@ -48,3 +47,4 @@ export default function SameDayDumpsterDeliveryPage() {
     />
   )
 }
+

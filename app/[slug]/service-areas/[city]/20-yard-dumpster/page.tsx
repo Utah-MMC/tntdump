@@ -10,12 +10,12 @@ import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FA
 export async function generateStaticParams() {
   const allCities = getAllCities().filter((c) => (c.state_code || '').toUpperCase() === 'UT')
   return allCities.map((c) => ({
-    cityBase: `${c.slug}-dumpster-rentals`,
+    slug: `${c.slug}-dumpster-rentals`,
     city: c.slug,
   }))
 }
 
-type PageProps = { params: { cityBase: string; city: string } }
+type PageProps = { params: { slug: string; city: string } }
 
 const BRAND = { name: 'TNT Dumpsters', url: 'https://tntdump.com', telephone: '(801) 209-9013' }
 
@@ -65,9 +65,9 @@ function Intro({ city }: { city: CityData }) {
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900">20 Yard Dumpster Rental in {city.city}, Utah</h1>
           <p className="mt-4 text-gray-700">
             The <strong>20 yard dumpster is our most popular size</strong> in {city.city}—and for good reason. It's the perfect sweet spot for
-            kitchen remodels, roof tear-offs (20–30 squares), multi-room renovations, and estate cleanouts. With dimensions of approximately
-            <strong> 22 feet long × 7.5 feet wide × 4.5 feet high</strong>, it holds about <strong>8–10 pickup truck loads</strong> of debris
-            and includes <strong>2–3 tons</strong> of disposal at our base rate.
+            kitchen remodels, roof tear-offs (20—30 squares), multi-room renovations, and estate cleanouts. With dimensions of approximately
+            <strong> 22 feet long × 7.5 feet wide × 4.5 feet high</strong>, it holds about <strong>8—10 pickup truck loads</strong> of debris
+            and includes <strong>2—3 tons</strong> of disposal at our base rate.
           </p>
           <p className="mt-3 text-gray-700">
             Most 20 yard dumpster orders in {city.city} can be delivered <strong>same-day</strong> when placed before our cut-off at {to12h(city.cutoff_time)}.
@@ -114,7 +114,7 @@ function SpecsBlock({ city }: { city: CityData }) {
             <p className="text-gray-700">
               <strong>20 cubic yards</strong>
             </p>
-            <p className="text-sm text-gray-600 mt-1">~8–10 pickup truck loads</p>
+            <p className="text-sm text-gray-600 mt-1">~8—10 pickup truck loads</p>
           </div>
           <div className="bg-white rounded-lg p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-blue-600 mb-2">Weight Limit</h3>
@@ -126,7 +126,7 @@ function SpecsBlock({ city }: { city: CityData }) {
           <div className="bg-white rounded-lg p-6 border border-gray-200">
             <h3 className="text-lg font-semibold text-blue-600 mb-2">Typical Cost</h3>
             <p className="text-gray-700">
-              <strong>$400–$500</strong>
+              <strong>$400—$500</strong>
             </p>
             <p className="text-sm text-gray-600 mt-1">
               <Link href="/calculator/cost" className="text-blue-600 hover:underline">Calculate your price</Link>
@@ -143,32 +143,32 @@ function BestProjects({ city }: { city: CityData }) {
     {
       title: 'Kitchen Remodels (Full Gut)',
       description: `The 20 yarder is ideal for a full kitchen tear-out in ${city.city}—cabinets, countertops, flooring, drywall, and old appliances all fit comfortably.`,
-      icon: '🏠',
+      icon: '✅',
     },
     {
-      title: 'Roof Tear-Offs (20–30 Squares)',
-      description: `Perfect for most single-family roofs. Whether you're replacing asphalt shingles or upgrading to metal, a 20 yard container handles 20–30 squares with ease.`,
-      icon: '🏚️',
+      title: 'Roof Tear-Offs (20—30 Squares)',
+      description: `Perfect for most single-family roofs. Whether you're replacing asphalt shingles or upgrading to metal, a 20 yard container handles 20—30 squares with ease.`,
+      icon: '⭐',
     },
     {
       title: 'Multi-Room Renovations',
-      description: `Renovating 2–3 rooms? The 20 yard size gives you enough capacity for demo debris, old fixtures, and flooring without overpaying for unused space.`,
-      icon: '🔨',
+      description: `Renovating 2—3 rooms? The 20 yard size gives you enough capacity for demo debris, old fixtures, and flooring without overpaying for unused space.`,
+      icon: '✅',
     },
     {
       title: 'Estate Cleanouts',
       description: `When clearing out a loved one's home in ${city.city}, a 20 yarder handles furniture, personal items, and household goods efficiently.`,
-      icon: '📦',
+      icon: '✅',
     },
     {
       title: 'Deck & Fence Removal',
       description: `Tearing down an old deck or fence? The 20 yard dumpster accommodates boards, posts, and hardware from medium to large structures.`,
-      icon: '🪵',
+      icon: '✅',
     },
     {
       title: 'Basement Cleanouts',
       description: `Years of accumulated storage, old furniture, exercise equipment, and boxes—all of it fits in a 20 yard container for a full basement cleanout.`,
-      icon: '🗄️',
+      icon: '⭐',
     },
   ]
 
@@ -217,16 +217,16 @@ function WhatFits({ city }: { city: CityData }) {
       <div className="container-custom prose prose-blue max-w-none">
         <h2>What Fits in a 20 Yard Dumpster?</h2>
         <p>
-          A 20 cubic yard dumpster can hold approximately <strong>8–10 pickup truck loads</strong> of debris. Here's a visual breakdown
+          A 20 cubic yard dumpster can hold approximately <strong>8—10 pickup truck loads</strong> of debris. Here's a visual breakdown
           of what typically fits:
         </p>
         <ul>
           <li><strong>Kitchen remodel debris:</strong> All cabinets, countertops, appliances, flooring, drywall, and trim from a full kitchen gut</li>
-          <li><strong>Roofing materials:</strong> 20–30 squares of asphalt shingles, underlayment, and nails</li>
-          <li><strong>Furniture:</strong> 10–15 pieces including sofas, tables, chairs, dressers, and mattresses</li>
-          <li><strong>Flooring:</strong> Carpet, padding, hardwood, or tile from ~1,500–2,000 sq ft</li>
-          <li><strong>Drywall & framing:</strong> Demo debris from 2–3 rooms including studs, drywall, and insulation</li>
-          <li><strong>Deck or fence:</strong> A 12×16 deck or 150–200 linear feet of fencing</li>
+          <li><strong>Roofing materials:</strong> 20—30 squares of asphalt shingles, underlayment, and nails</li>
+          <li><strong>Furniture:</strong> 10—15 pieces including sofas, tables, chairs, dressers, and mattresses</li>
+          <li><strong>Flooring:</strong> Carpet, padding, hardwood, or tile from ~1,500—2,000 sq ft</li>
+          <li><strong>Drywall & framing:</strong> Demo debris from 2—3 rooms including studs, drywall, and insulation</li>
+          <li><strong>Deck or fence:</strong> A 12×16 deck or 150—200 linear feet of fencing</li>
           <li><strong>Yard waste:</strong> Brush, branches, leaves, and shrubs from extensive landscaping projects</li>
         </ul>
         <h3>Loading Tips</h3>
@@ -268,7 +268,7 @@ function WhyPopular({ city }: { city: CityData }) {
             or extending into the street.
           </li>
           <li>
-            <strong>Cost-effective:</strong> You get significantly more capacity than a 15 yard for only a modest price increase—typically $50–$75 more—while
+            <strong>Cost-effective:</strong> You get significantly more capacity than a 15 yard for only a modest price increase—typically $50—$75 more—while
             avoiding the premium of a 30 yard container.
           </li>
           <li>
@@ -351,13 +351,13 @@ function buildFaq(city: CityData) {
   }
 
   // 20-yard specific FAQs
-  q(`How big is a 20 yard dumpster?`, `A 20 yard dumpster is approximately 22 feet long, 7.5 feet wide, and 4.5 feet high. It holds 20 cubic yards or about 8–10 pickup truck loads.`)
-  q(`How much does a 20 yard dumpster cost in ${city.city}?`, `Typical pricing for a 20 yard dumpster in ${city.city} ranges from $400–$500 including delivery and pickup. Weight is billed separately at $55 per ton based on actual weight.`)
+  q(`How big is a 20 yard dumpster?`, `A 20 yard dumpster is approximately 22 feet long, 7.5 feet wide, and 4.5 feet high. It holds 20 cubic yards or about 8—10 pickup truck loads.`)
+  q(`How much does a 20 yard dumpster cost in ${city.city}?`, `Typical pricing for a 20 yard dumpster in ${city.city} ranges from $400—$500 including delivery and pickup. Weight is billed separately at $55 per ton based on actual weight.`)
   q(`How soon can I get a 20 yard dumpster in ${city.city}?`, `Most 20 yard dumpster deliveries in ${city.city} arrive within ${city.avg_delivery_eta_hours || 4} hours when ordered before ${to12h(city.cutoff_time)}. Same-day delivery is often available.`)
   q(`What can I put in a 20 yard dumpster?`, `General construction debris, household junk, furniture, appliances, roofing shingles, flooring, drywall, yard waste, and more. No hazardous materials, liquids, or electronics.`)
   q(`How is weight billed for a 20 yard dumpster?`, `Weight is always billed separately at $55 per ton based on actual weight at disposal. No free tons are included with any dumpster size.`)
-  q(`Will a 20 yard dumpster fit in my driveway?`, `Most standard driveways in ${city.city} accommodate a 20 yard dumpster (22 ft long). We need about 45–50 feet of clearance including truck positioning.`)
-  q(`Can I use a 20 yard dumpster for a roof tear-off?`, `Yes—a 20 yard dumpster is perfect for roofing projects of 20–30 squares. Make sure to communicate the square footage when booking so we can confirm capacity.`)
+  q(`Will a 20 yard dumpster fit in my driveway?`, `Most standard driveways in ${city.city} accommodate a 20 yard dumpster (22 ft long). We need about 45—50 feet of clearance including truck positioning.`)
+  q(`Can I use a 20 yard dumpster for a roof tear-off?`, `Yes—a 20 yard dumpster is perfect for roofing projects of 20—30 squares. Make sure to communicate the square footage when booking so we can confirm capacity.`)
   q(`What is the best dumpster size for a kitchen remodel?`, `A 20 yard dumpster is the most popular choice for full kitchen remodels in ${city.city}. It holds all cabinets, countertops, appliances, flooring, and drywall from a typical kitchen gut.`)
   q(`Do I need a permit for a 20 yard dumpster in ${city.city}?`, city.permit_required ? `Street placements may require a right-of-way permit in ${city.city}. Driveway placements typically do not.` : `Driveway placements usually do not require permits. Street placements may—check with the city beforehand.`)
   q(`How long can I keep a 20 yard dumpster?`, `Standard rental periods include several days. Extensions are available—let us know ahead of time to avoid daily fees and ensure the container stays scheduled for your project.`)
@@ -373,7 +373,7 @@ function buildFaq(city: CityData) {
   q(`What if I need to move the 20 yard dumpster?`, `Please do not attempt to move the container yourself. Call us and we'll reposition it safely using proper equipment.`)
   q(`Can I put a mattress in a 20 yard dumpster?`, `Yes—most facilities accept mattresses but may charge a handling fee. Let us know when booking if you'll be disposing of mattresses.`)
   q(`Can I put appliances in a 20 yard dumpster?`, `Yes—refrigerators, stoves, washers, and dryers are accepted. Some facilities charge extra for freon removal from refrigerators and AC units.`)
-  q(`How many shingle layers fit in a 20 yard dumpster?`, `A 20 yard container typically handles a 20–30 square roof with one layer of shingles. Multi-layer tear-offs or larger roofs may require a 30 yard or swap service.`)
+  q(`How many shingle layers fit in a 20 yard dumpster?`, `A 20 yard container typically handles a 20—30 square roof with one layer of shingles. Multi-layer tear-offs or larger roofs may require a 30 yard or swap service.`)
   q(`What's the difference between a 20 yard and 30 yard dumpster?`, `A 30 yard dumpster is larger (22×8×6 ft vs 22×7.5×4.5 ft) and holds 50% more debris. Choose 20 yard for most remodels; upgrade to 30 yard for whole-home or commercial projects.`)
   q(`What's the difference between a 15 yard and 20 yard dumpster?`, `A 20 yard dumpster holds about 33% more than a 15 yard and costs only slightly more. If your project is borderline, the 20 yard offers better value and prevents needing a second haul.`)
   q(`Can I put concrete in a 20 yard dumpster?`, `Concrete and dirt require dedicated containers filled to lower heights due to weight. Do not mix concrete with general debris—call for a special heavy-debris dumpster.`)
@@ -454,3 +454,5 @@ export default async function TwentyYardDumpsterPage({ params }: PageProps) {
     </main>
   )
 }
+
+

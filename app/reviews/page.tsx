@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description:
     'Read reviews for TNT Dumpsters. Local roll-off dumpster rentals with fast delivery, clear pricing, and friendly support across Salt Lake & Utah County.',
   alternates: { canonical: 'https://tntdump.com/reviews' },
-,
     openGraph: {
       title: 'TNT Dumpsters Reviews | Dumpster Rental in Utah',
       description: 'Read reviews for TNT Dumpsters. Local roll-off dumpster rentals with fast delivery, clear pricing, and friendly support across Salt Lake & Utah County.',
@@ -334,4 +333,5 @@ export default function ReviewsPage() {
     </main>
   )
 }
+
 

@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Event Cleanup Dumpster Rental | TNT Dumpsters',
   description: 'Event cleanup dumpster rentals for festivals, community events, and large gatherings. Schedule delivery and pickup fast.',
   alternates: { canonical: 'https://tntdump.com/services/event-cleanup' },
-,
     openGraph: {
       title: 'Event Cleanup Dumpster Rental | TNT Dumpsters',
       description: 'Event cleanup dumpster rentals for festivals, community events, and large gatherings. Schedule delivery and pickup fast.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function EventCleanupPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Event Cleanup Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Event Cleanup Dumpster Rental"
       subtitle="Keep venues clean with scheduled delivery and pickup before and after your event."
       description="We help event planners manage cleanup with reliable dumpsters sized to match attendance and waste volume."
@@ -49,3 +47,5 @@ export default function EventCleanupPage() {
     />
   )
 }
+
+

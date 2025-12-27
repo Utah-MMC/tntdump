@@ -1,13 +1,13 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Transparent Dumpster Pricing: What’s Included | TNT Dumpsters',
-  description: 'Our transparent pricing approach explains what’s included in your rental and how to avoid surprise fees.',
+  title: 'Transparent Dumpster Pricing: What\'s Included | TNT Dumpsters',
+  description: 'Our transparent pricing approach explains what\'s included in your rental and how to avoid surprise fees.',
   keywords: 'transparent dumpster pricing, dumpster pricing included, roll off pricing, dumpster rental cost clarity',
   alternates: { canonical: 'https://tntdump.com/transparent-pricing' },
   openGraph: {
-    title: 'Transparent Dumpster Pricing: What’s Included | TNT Dumpsters',
-    description: 'Our transparent pricing approach explains what’s included in your rental and how to avoid surprise fees.',
+    title: 'Transparent Dumpster Pricing: What\'s Included | TNT Dumpsters',
+    description: 'Our transparent pricing approach explains what\'s included in your rental and how to avoid surprise fees.',
     url: 'https://tntdump.com/transparent-pricing',
     siteName: 'TNT Dumpsters',
     type: 'website',
@@ -22,7 +22,7 @@ export default function Page() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-            Transparent Dumpster Pricing: What’s Included
+            Transparent Dumpster Pricing: What's Included
           </h1>
           <p className="mt-4 text-lg text-gray-600">
             Transparent pricing means you know what to expect up front. We outline size,
@@ -34,7 +34,7 @@ export default function Page() {
 
       <section className="pb-16 bg-white">
         <div className="container-custom prose max-w-4xl">
-          <h2>What’s included</h2>
+          <h2>What's included</h2>
           <p>
             Your rental includes delivery, pickup, a set rental period, and a weight
             allowance. For pricing details, see our <a href="/pricing">pricing overview</a>.

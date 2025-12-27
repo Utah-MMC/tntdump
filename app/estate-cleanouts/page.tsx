@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   description:
     'Compassionate estate cleanout help in Utah. We sort, donate, haul away, and prepare properties for sale with clear pricing and flexible scheduling.',
   alternates: { canonical: 'https://tntdump.com/estate-cleanouts' },
-,
     openGraph: {
       title: 'Estate Cleanouts in Utah | Compassionate Cleanout Help |...',
       description: 'Compassionate estate cleanout help in Utah. We sort, donate, haul away, and prepare properties for sale with clear pricing and flexible scheduling.',
@@ -423,3 +422,4 @@ export default function EstateCleanoutsPage() {
     </main>
   )
 }
+

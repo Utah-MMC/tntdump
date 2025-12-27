@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   description:
     'Meet trusted local partners we recommend for project planning and home services across Utah. Reliable pros who align with TNT Dumpsters quality.',
   alternates: { canonical: 'https://tntdump.com/partners' },
-,
     openGraph: {
       title: 'Trusted Partners | TNT Dumpsters',
       description: 'Meet trusted local partners we recommend for project planning and home services across Utah. Reliable pros who align with TNT Dumpsters quality.',
@@ -164,3 +163,4 @@ export default function PartnersPage() {
     </main>
   )
 }
+

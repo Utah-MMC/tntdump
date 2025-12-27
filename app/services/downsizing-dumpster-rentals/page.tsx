@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Downsizing Dumpster Rentals | TNT Dumpsters',
   description: 'Downsizing dumpster rentals for estate cleanouts, moves, and decluttering. Flexible loading time and quick pickup. Get f',
   alternates: { canonical: 'https://tntdump.com/services/downsizing-dumpster-rentals' },
-,
     openGraph: {
       title: 'Downsizing Dumpster Rentals | TNT Dumpsters',
       description: 'Downsizing dumpster rentals for estate cleanouts, moves, and decluttering. Flexible loading time and quick pickup.',
@@ -48,3 +47,4 @@ export default function DownsizingDumpsterRentalsPage() {
     />
   )
 }
+

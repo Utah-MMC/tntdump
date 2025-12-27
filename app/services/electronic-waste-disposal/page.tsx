@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Electronic Waste Disposal | TNT Dumpsters',
   description: 'Electronic waste disposal support for cleanouts and upgrades. Ask about approved e-waste handling before loading. Get fa',
   alternates: { canonical: 'https://tntdump.com/services/electronic-waste-disposal' },
-,
     openGraph: {
       title: 'Electronic Waste Disposal | TNT Dumpsters',
       description: 'Electronic waste disposal support for cleanouts and upgrades. Ask about approved e-waste handling before loading.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function ElectronicWasteDisposalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Electronic Waste Disposal</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Electronic Waste Disposal"
       subtitle="Plan e-waste disposal the right way with guidance from TNT Dumpsters."
       description="Electronics often require special handling. We help you plan e-waste disposal alongside your dumpster rental."
@@ -49,3 +47,5 @@ export default function ElectronicWasteDisposalPage() {
     />
   )
 }
+
+

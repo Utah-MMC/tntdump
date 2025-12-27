@@ -118,7 +118,7 @@ const Hero = () => {
         <div className="container-custom">
           <div className="max-w-6xl mx-auto">
             <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white text-center mb-6 leading-tight whitespace-nowrap">
-              Roll-Off Container Rental in Salt Lake County
+              Dumpster Rental & Roll-Off Containers in Salt Lake County
             </h1>
           </div>
           <div className="grid lg:grid-cols-2 gap-8 items-start max-w-6xl mx-auto">

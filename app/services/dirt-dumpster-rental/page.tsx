@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Dirt Dumpster Rental | TNT Dumpsters',
   description: 'Dirt dumpster rentals for soil, rock, and heavy debris. Dedicated containers with clear weight guidance. Get fast delive',
   alternates: { canonical: 'https://tntdump.com/services/dirt-dumpster-rental' },
-,
     openGraph: {
       title: 'Dirt Dumpster Rental | TNT Dumpsters',
       description: 'Dirt dumpster rentals for soil, rock, and heavy debris. Dedicated containers with clear weight guidance.',
@@ -48,3 +47,4 @@ export default function DirtDumpsterRentalPage() {
     />
   )
 }
+

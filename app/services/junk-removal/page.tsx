@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Junk Removal Dumpster Rental | TNT Dumpsters',
   description: 'Junk removal dumpster rentals for cleanouts and bulk disposal. Quick delivery, clear pricing, and simple pickup. Get fas',
   alternates: { canonical: 'https://tntdump.com/services/junk-removal' },
-,
     openGraph: {
       title: 'Junk Removal Dumpster Rental | TNT Dumpsters',
       description: 'Junk removal dumpster rentals for cleanouts and bulk disposal. Quick delivery, clear pricing, and simple pickup.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function JunkRemovalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Junk Removal Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Junk Removal Dumpster Rental"
       subtitle="Simplify junk removal with a roll-off delivered when you need it."
       description="Perfect for garage cleanouts, downsizing, or bulk disposal projects where flexible loading time matters."
@@ -49,3 +47,5 @@ export default function JunkRemovalPage() {
     />
   )
 }
+
+

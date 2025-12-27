@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Demolition Waste Disposal | TNT Dumpsters',
   description: 'Demolition waste disposal dumpsters for teardown and renovation debris. Reliable delivery, swaps, and clear pricing. Get',
   alternates: { canonical: 'https://tntdump.com/services/demolition-waste-disposal' },
-,
     openGraph: {
       title: 'Demolition Waste Disposal | TNT Dumpsters',
       description: 'Demolition waste disposal dumpsters for teardown and renovation debris. Reliable delivery, swaps, and clear pricing.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function DemolitionWasteDisposalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Demolition Waste Disposal</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Demolition Waste Disposal"
       subtitle="Handle teardown debris with dependable roll-off delivery and pickup."
       description="Demolition work moves fast. We coordinate dumpsters sized for heavy debris and keep swaps on schedule."
@@ -49,3 +47,5 @@ export default function DemolitionWasteDisposalPage() {
     />
   )
 }
+
+

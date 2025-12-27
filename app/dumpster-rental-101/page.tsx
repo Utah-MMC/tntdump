@@ -3,12 +3,12 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental 101: Quick Start Guide | TNT Dumpsters',
-  description: 'A beginner friendly dumpster rental guide with size tips, placement basics, and loading do’s and don’ts.',
+  description: 'A beginner friendly dumpster rental guide with size tips, placement basics, and loading do\'s and don\'ts.',
   keywords: 'dumpster rental 101, how to rent a dumpster, roll off dumpster basics, dumpster rental guide',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-101' },
   openGraph: {
     title: 'Dumpster Rental 101: Quick Start Guide | TNT Dumpsters',
-    description: 'A beginner friendly dumpster rental guide with size tips, placement basics, and loading do’s and don’ts.',
+    description: 'A beginner friendly dumpster rental guide with size tips, placement basics, and loading do\'s and don\'ts.',
     url: 'https://tntdump.com/dumpster-rental-101',
     siteName: 'TNT Dumpsters',
     type: 'website',

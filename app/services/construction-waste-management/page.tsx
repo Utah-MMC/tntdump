@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Construction Waste Management | TNT Dumpsters',
   description: 'Construction waste management with roll-off dumpsters, reliable swaps, and clear disposal guidance. Get fast delivery an',
   alternates: { canonical: 'https://tntdump.com/services/construction-waste-management' },
-,
     openGraph: {
       title: 'Construction Waste Management | TNT Dumpsters',
       description: 'Construction waste management with roll-off dumpsters, reliable swaps, and clear disposal guidance.',
@@ -48,3 +47,4 @@ export default function ConstructionWasteManagementPage() {
     />
   )
 }
+

@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Roll-Off Dumpster Rental | TNT Dumpsters',
   description: 'Roll-off dumpster rentals for remodels, construction, and cleanouts across Utah. Fast delivery, clear pricing, and easy pickup.',
   alternates: { canonical: 'https://tntdump.com/services/roll-off-dumpster-rental' },
-,
     openGraph: {
       title: 'Roll-Off Dumpster Rental | TNT Dumpsters',
       description: 'Roll-off dumpster rentals for remodels, construction, and cleanouts across Utah. Fast delivery, clear pricing, and easy pickup.',
@@ -19,8 +18,7 @@ export const metadata: Metadata = {
 
 export default function RollOffDumpsterRentalPage() {
   return (
-    
-      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Roll-Off Dumpster Rental</h1><ServicePageTemplate
+    <ServicePageTemplate
       title="Roll-Off Dumpster Rental"
       subtitle="Flexible roll-off containers delivered fast for residential and commercial projects across Utah."
       description="Roll-off dumpsters are the most versatile option for cleanouts, remodels, and construction debris."
@@ -49,3 +47,5 @@ export default function RollOffDumpsterRentalPage() {
     />
   )
 }
+
+

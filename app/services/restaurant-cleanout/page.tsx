@@ -5,7 +5,6 @@ export const metadata: Metadata = {
   title: 'Restaurant Cleanout Dumpster Rental | TNT Dumpsters',
   description: 'Restaurant cleanout dumpsters for renovations, closures, and equipment upgrades. Fast delivery and simple pickup. Get fa',
   alternates: { canonical: 'https://tntdump.com/services/restaurant-cleanout' },
-,
     openGraph: {
       title: 'Restaurant Cleanout Dumpster Rental | TNT Dumpsters',
       description: 'Restaurant cleanout dumpsters for renovations, closures, and equipment upgrades. Fast delivery and simple pickup.',
@@ -48,3 +47,4 @@ export default function RestaurantCleanoutPage() {
     />
   )
 }
+

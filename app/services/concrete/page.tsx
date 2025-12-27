@@ -7,7 +7,6 @@ export const metadata: Metadata = {
   description:
     'Concrete dumpster rental for driveways, patios, brick, and masonry in Utah. Heavy-debris disposal with clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/concrete' },
-,
     openGraph: {
       title: 'Concrete Dumpster Rental | Heavy Debris Disposal | TNT...',
       description: 'Concrete dumpster rental for driveways, patios, brick, and masonry in Utah. Heavy-debris disposal with clear pricing—call (801) 209-9013.',
@@ -343,4 +342,5 @@ export default function ConcreteServicePage() {
     </main>
   )
 }
+
 

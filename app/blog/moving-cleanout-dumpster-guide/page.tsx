@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Moving Cleanout Dumpster Guide: Pack, Purge, and Save | TNT Dumpsters',
   description: 'A moving cleanout dumpster guide with sorting tips, size planning, and ways to reduce clutter before moving day.',
   keywords: 'moving cleanout dumpster, moving dumpster rental, relocation dumpster, moving waste disposal, moving cleanup dumpster, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/moving-cleanout-dumpster-guide' },
     openGraph: {
       title: 'Moving Cleanout Dumpster Guide: Pack, Purge, and Save | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+

@@ -4,7 +4,6 @@ export const metadata: Metadata = {
   title: 'Construction Dumpster Size Guide: Plan the Right Fit | TNT Dumpsters',
   description: 'A construction dumpster size guide with project examples, debris planning, and tips to avoid overage fees on job sites.',
   keywords: 'construction dumpster size, construction waste dumpster, contractor dumpster rental, construction debris disposal, commercial dumpster rental, utah dumpster rental',
-,
   alternates: { canonical: 'https://tntdump.com/blog/construction-dumpster-size-guide' },
     openGraph: {
       title: 'Construction Dumpster Size Guide: Plan the Right Fit | TNT Dumpsters',
@@ -31,3 +30,4 @@ export default function Page() {
     </main>
   )
 }
+
