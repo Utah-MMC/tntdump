@@ -10,7 +10,6 @@
     "lint": "next lint",
     "test": "vitest run",
     "test:watch": "vitest",
-<<<<<<< HEAD
     "sitemap": "run-s sitemap:index sitemap:types sitemap:indexnow",
     "sitemap:types": "node scripts/automation/generate-type-sitemaps.mjs",
     "sitemap:index": "next-sitemap --config next-sitemap.config.js",
