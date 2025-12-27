@@ -13,6 +13,7 @@ export const dynamic = 'force-static'
 export default function Home() {
   return (
     <main className="min-h-screen">
+      <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">Page.Tsx</h1>
       {/* Comprehensive Structured Data for AI Overview */}
       <script
         type="application/ld+json"
@@ -228,7 +229,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/dumpster-rental-dropoff.png"
+                    src="/images/dumpster-delivery-service.png"
                     alt="Professional roll-off container delivery service with truck dropping off container at job site"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -243,7 +244,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/dumpster-rental-driveway.jpeg"
+                    src="/images/residential-dumpster-driveway.jpeg"
                     alt="Residential roll-off container placed on driveway for home renovation and construction debris removal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -258,7 +259,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/open-dumpster.png"
+                    src="/images/open-dumpster-rental.png"
                     alt="Open roll-off container at construction site for efficient waste management and debris disposal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -298,7 +299,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto mb-12">
             <a href="/cities" className="block">
               <Image
-                src="/images/service_areas.png"
+                src="/images/utah-dumpster-service-areas.png"
                 alt="Utah container rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
                 width={1200}
                 height={400}

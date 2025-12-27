@@ -84,9 +84,9 @@
     "/images/dumpsterSmallBanner.jpeg",
     "/images/dumpsterSmallBanner2.jpeg",
     "/images/dumpsterSmallBanner3.jpeg",
-    "/images/construction-site-3688252_1280.jpg",
-    "/images/construction-site-3688262_1280.jpg",
-    "/images/pexels-pamelamariephoto-2625896.jpg",
+    "/images/construction-site-3688252-1280.jpg",
+    "/images/construction-site-3688262-1280.jpg",
+    "/images/dumpster-rental-contact.jpg",
     "/images/pexels-rodrigo-eder-1347087-2846205.jpg",
     "/images/pexels-cottonbro-4551310.jpg"
   ],

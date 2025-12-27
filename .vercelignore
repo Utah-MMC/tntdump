@@ -1,0 +1,3 @@
+# Vercel - Only deploy from main/master branch
+# This file helps ensure only production deployments
+

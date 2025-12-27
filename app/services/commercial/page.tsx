@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Building } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental | Businesses & Job Sites | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental | Businesses & Job Sites |...',
   description:
     'Commercial dumpster rentals for offices, retail, restaurants, and job sites in Utah. Reliable service, flexible scheduling, clear pricing.',
   alternates: { canonical: 'https://tntdump.com/services/commercial' },

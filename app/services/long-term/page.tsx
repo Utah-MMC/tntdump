@@ -3,7 +3,7 @@ import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from 'lucide-react'
 
 export const metadata: Metadata = {
-  title: 'Long-Term Dumpster Rental | Extended Projects | TNT Dumpsters',
+  title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
   description:
     'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/long-term' },

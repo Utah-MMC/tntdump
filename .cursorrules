@@ -1,0 +1,35 @@
+# Cursor AI Rules - "Don't make a mess" defaults
+
+## Context Preferences
+- Use workspace context when available
+- Use git diff context for better understanding of changes
+- Prefer open files + relevant files (avoid whole-repo guessing)
+- Focus on files that are actually being worked on
+
+## Surgical Prompts (Default Approach)
+**Always use surgical prompts for changes:**
+- Make the smallest safe change
+- Keep existing patterns
+- Output a unified diff
+- No refactor
+
+When making changes, follow this template:
+```
+Make the smallest safe change. Keep existing patterns. Output a unified diff. No refactor.
+```
+
+## Code Quality
+- Write clean, maintainable code
+- Follow existing patterns and conventions
+- Don't create unnecessary files or changes
+- Keep changes focused and minimal
+- Test changes before suggesting them
+- Prefer incremental changes over large refactors
+
+## File Management
+- Don't create duplicate files
+- Don't modify files unnecessarily
+- Ask before making large refactors
+- Respect existing code structure
+- Make surgical, targeted changes only
+

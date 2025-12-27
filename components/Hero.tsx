@@ -325,7 +325,7 @@ const Hero = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
                 <Image
-                  src="/images/construction-dumpster-for-rent.png"
+                  src="/images/construction-dumpster-rental.png"
                   alt="Construction dumpster for rent"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"
@@ -336,7 +336,7 @@ const Hero = () => {
               </div>
               <div className="relative w-full h-56 sm:h-64 md:h-72 rounded-lg overflow-hidden shadow">
                 <Image
-                  src="/images/residential-dumpster-for-rent.png"
+                  src="/images/residential-dumpster-rental.png"
                   alt="Residential dumpster for rent"
                   fill
                   sizes="(min-width: 1024px) 50vw, 100vw"

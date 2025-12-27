@@ -1,0 +1,1977 @@
+{
+  "timestamp": "2025-12-27T02:59:22.599Z",
+  "site": "https://tntdump.com",
+  "summary": {
+    "h1-missing": 11,
+    "title-too-long": 35,
+    "title-too-short": 3,
+    "desc-too-short": 12,
+    "desc-too-long": 1,
+    "title-serb-mismatch": 0,
+    "h1-changed": 63,
+    "og-url-mismatch": 0,
+    "og-incomplete": 84,
+    "duplicate-canonical": 0,
+    "missing-canonical": 62,
+    "image-too-large": 40,
+    "image-broken": 24,
+    "broken-image-page": 22,
+    "not-in-sitemap": 84,
+    "structured-data-errors": 0
+  },
+  "issues": {
+    "h1-missing": [
+      {
+        "route": "about",
+        "file": "about"
+      },
+      {
+        "route": "calculator/cost",
+        "file": "calculator/cost"
+      },
+      {
+        "route": "calculator",
+        "file": "calculator"
+      },
+      {
+        "route": "calculator/volume",
+        "file": "calculator/volume"
+      },
+      {
+        "route": "contact",
+        "file": "contact"
+      },
+      {
+        "route": "faqs",
+        "file": "faqs"
+      },
+      {
+        "route": "page.tsx",
+        "file": "page.tsx"
+      },
+      {
+        "route": "quote",
+        "file": "quote"
+      },
+      {
+        "route": "services/all",
+        "file": "services/all"
+      },
+      {
+        "route": "services",
+        "file": "services"
+      },
+      {
+        "route": "test-email",
+        "file": "test-email"
+      }
+    ],
+    "title-too-long": [
+      {
+        "route": "blog/10-vs-15-yard-dumpster-comparison",
+        "title": "10 vs 15 Yard Dumpster: Which Size Do You Need? | TNT Dumpsters",
+        "length": 63,
+        "max": 60
+      },
+      {
+        "route": "blog/15-yard-dumpster-complete-guide",
+        "title": "15 Yard Dumpster: Complete Guide, Dimensions, Uses & Cost in 2025",
+        "length": 65,
+        "max": 60
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison",
+        "title": "20 vs 30 Yard Dumpster: Which Size for Your Project? | TNT Dumpsters",
+        "length": 68,
+        "max": 60
+      },
+      {
+        "route": "blog/30-yard-dumpster-guide",
+        "title": "30 Yard Dumpster: When to Use & What Fits | Complete Guide 2025",
+        "length": 63,
+        "max": 60
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide",
+        "title": "Basement Cleanout: How to Choose the Right Dumpster Size 2025 | Complete Guide",
+        "length": 78,
+        "max": 60
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide",
+        "title": "Bathroom Remodel Dumpster Guide: Size, Cost & What Fits | TNT Dumpsters",
+        "length": 71,
+        "max": 60
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide",
+        "title": "Bathroom Renovation Dumpster: Size & Cost Guide 2025 | What You Need to Know",
+        "length": 76,
+        "max": 60
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide",
+        "title": "Concrete Disposal: Dumpster Guide & Weight Limits 2025 | Complete Cost Breakdown",
+        "length": 80,
+        "max": 60
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide",
+        "title": "Construction Dumpster Size Guide: Choosing the Right Size | TNT Dumpsters",
+        "length": 73,
+        "max": 60
+      },
+      {
+        "route": "blog/construction-waste-management",
+        "title": "Construction Waste Management: Best Practices | TNT Dumpsters",
+        "length": 61,
+        "max": 60
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide",
+        "title": "Deck Demolition Dumpster Guide: Size, Cost & Disposal | TNT Dumpsters",
+        "length": 69,
+        "max": 60
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025",
+        "title": "How Much Does a Dumpster Rental Cost in 2025? | Complete Price Guide",
+        "length": 68,
+        "max": 60
+      },
+      {
+        "route": "blog/dumpster-rental-costs",
+        "title": "Dumpster Rental Costs: Complete Pricing Guide | TNT Dumpsters",
+        "length": 61,
+        "max": 60
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size",
+        "title": "Dumpster Rental Prices by Size: Complete Cost Comparison 2025",
+        "length": 61,
+        "max": 60
+      },
+      {
+        "route": "blog/dumpster-rentals-2025-guide",
+        "title": "Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits | TNT Dumpsters",
+        "length": 71,
+        "max": 60
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide",
+        "title": "Estate Cleanout: Complete Family Guide (2025) | TNT Dumpsters",
+        "length": 61,
+        "max": 60
+      },
+      {
+        "route": "blog/garage-cleanout-dumpster-guide",
+        "title": "Garage Cleanout Dumpster Size Guide: What You Need to Know 2025",
+        "length": 63,
+        "max": 60
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide",
+        "title": "Home Renovation Dumpster Guide: Complete Planning Guide | TNT Dumpsters",
+        "length": 71,
+        "max": 60
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide",
+        "title": "Kitchen Remodel Dumpster: Size Guide, Costs & What Fits | Complete Planning",
+        "length": 75,
+        "max": 60
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide",
+        "title": "Moving Cleanout Dumpster Guide: Size, Cost & Tips | TNT Dumpsters",
+        "length": 65,
+        "max": 60
+      },
+      {
+        "route": "blog/moving-out-dumpster-guide",
+        "title": "Moving Out? Complete Dumpster Rental Guide for Relocations 2025",
+        "length": 63,
+        "max": 60
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide",
+        "title": "Office Cleanout Dumpster Guide: Size, Cost & Planning | TNT Dumpsters",
+        "length": 69,
+        "max": 60
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide",
+        "title": "Roofing Project Dumpster Guide: Sizing for Shingle Disposal 2025 | Complete Roof Tear-Off Guide",
+        "length": 95,
+        "max": 60
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison",
+        "title": "Small vs Large Dumpster: Complete Comparison Guide | TNT Dumpsters",
+        "length": 66,
+        "max": 60
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide",
+        "title": "Yard Waste Dumpster Guide: Size, Cost & Disposal Tips | TNT Dumpsters",
+        "length": 69,
+        "max": 60
+      },
+      {
+        "route": "calculator/cost",
+        "title": "Dumpster Rental Cost Calculator | Estimate Pricing | TNT Dumpsters",
+        "length": 66,
+        "max": 60
+      },
+      {
+        "route": "calculator",
+        "title": "Dumpster Size Calculator | Find the Right Size | TNT Dumpsters",
+        "length": 62,
+        "max": 60
+      },
+      {
+        "route": "calculator/volume",
+        "title": "Dumpster Volume Calculator | Calculate Debris Size | TNT Dumpsters",
+        "length": 66,
+        "max": 60
+      },
+      {
+        "route": "demolition-dumpster",
+        "title": "Demolition Dumpster Rental | Commercial & Construction | TNT Dump",
+        "length": 65,
+        "max": 60
+      },
+      {
+        "route": "estate-cleanouts",
+        "title": "Estate Cleanouts in Utah | Compassionate Cleanout Help | TNT Dumpsters",
+        "length": 70,
+        "max": 60
+      },
+      {
+        "route": "faqs",
+        "title": "Dumpster Rental FAQs | Pricing, Sizes, Permits | TNT Dumpsters",
+        "length": 62,
+        "max": 60
+      },
+      {
+        "route": "layout.tsx",
+        "title": "Dumpster Rental & Roll-Off Container Services | TNT Dumpsters",
+        "length": 61,
+        "max": 60
+      },
+      {
+        "route": "services/commercial",
+        "title": "Commercial Dumpster Rental | Businesses & Job Sites | TNT Dumpsters",
+        "length": 67,
+        "max": 60
+      },
+      {
+        "route": "services/concrete",
+        "title": "Concrete Dumpster Rental | Heavy Debris Disposal | TNT Dumpsters",
+        "length": 64,
+        "max": 60
+      },
+      {
+        "route": "services/long-term",
+        "title": "Long-Term Dumpster Rental | Extended Projects | TNT Dumpsters",
+        "length": 61,
+        "max": 60
+      }
+    ],
+    "title-too-short": [
+      {
+        "route": "test",
+        "title": "Test | TNT Dumpsters",
+        "length": 20,
+        "min": 30
+      },
+      {
+        "route": "test-email",
+        "title": "Test Email | TNT Dumpsters",
+        "length": 26,
+        "min": 30
+      },
+      {
+        "route": "test-form",
+        "title": "Test Form | TNT Dumpsters",
+        "length": 25,
+        "min": 30
+      }
+    ],
+    "desc-too-short": [
+      {
+        "route": "accessibility-policy",
+        "description": "Accessibility policy for TNT Dumpsters. Our commitment to making our services accessible to all customers.",
+        "length": 106,
+        "min": 120
+      },
+      {
+        "route": "blog/15-vs-20-yard-dumpster",
+        "description": "15 vs 20 yard dumpsters: capacity, pricing, and best projects. Learn when to size up to avoid extra hauls or overages.",
+        "length": 118,
+        "min": 120
+      },
+      {
+        "route": "calculator/volume",
+        "description": "Estimate debris volume and get a recommended dumpster size. Room-by-room and material calculators—call (801) 209-9013.",
+        "length": 118,
+        "min": 120
+      },
+      {
+        "route": "order-confirmation",
+        "description": "Your dumpster rental order is confirmed. Save your order ID and contact us if you need to change delivery details.",
+        "length": 114,
+        "min": 120
+      },
+      {
+        "route": "privacy-policy",
+        "description": "Privacy policy for TNT Dumpsters. Learn how we collect, use, and protect your personal information.",
+        "length": 99,
+        "min": 120
+      },
+      {
+        "route": "services/all",
+        "description": "Legacy services grid for TNT Dumpsters",
+        "length": 38,
+        "min": 120
+      },
+      {
+        "route": "services/same-day-dumpster-rental",
+        "description": "Same-day dumpster rental in Utah for urgent cleanups and remodels. Fast delivery—call (801) 209-9013 to book.",
+        "length": 109,
+        "min": 120
+      },
+      {
+        "route": "terms-of-service",
+        "description": "Terms of service for TNT Dumpsters. Learn about our service terms and conditions.",
+        "length": 81,
+        "min": 120
+      },
+      {
+        "route": "test",
+        "description": "Internal test page for deployment verification. Not intended for public search results.",
+        "length": 87,
+        "min": 120
+      },
+      {
+        "route": "test-email",
+        "description": "Internal test route for email verification. Not intended for public search results.",
+        "length": 83,
+        "min": 120
+      },
+      {
+        "route": "test-form",
+        "description": "Internal test form for verifying contact submissions. Not intended for public search results.",
+        "length": 93,
+        "min": 120
+      },
+      {
+        "route": "ut/service-areas",
+        "description": "Browse all Utah cities we serve. Find local dumpster rental details, pricing, and same-day delivery options by city.",
+        "length": 116,
+        "min": 120
+      }
+    ],
+    "desc-too-long": [
+      {
+        "route": "blog/dumpster-rental-costs",
+        "description": "Complete guide to dumpster rental costs: average pricing by size, transparent weight billing at $55/ton, rental periods, and money-saving tips for Utah customers.",
+        "length": 162,
+        "max": 160
+      }
+    ],
+    "title-serb-mismatch": [],
+    "h1-changed": [
+      {
+        "route": "accessibility-policy",
+        "h1": "Accessibility Policy",
+        "title": "Accessibility Policy | TNT Dumpsters"
+      },
+      {
+        "route": "blog/10-vs-15-yard-dumpster-comparison",
+        "h1": "10 vs 15 Yard Dumpster: Which Size Do You Need?",
+        "title": "10 vs 15 Yard Dumpster: Which Size Do You Need? | TNT Dumpsters"
+      },
+      {
+        "route": "blog/15-vs-20-yard-dumpster",
+        "h1": "15 Yard vs 20 Yard Dumpster: Which Size Do You Need?",
+        "title": "15 Yard vs 20 Yard Dumpster: Which Size Do You Need? 2025"
+      },
+      {
+        "route": "blog/15-yard-dumpster-complete-guide",
+        "h1": "15 Yard Dumpster: Complete Guide, Dimensions, Uses & Cost",
+        "title": "15 Yard Dumpster: Complete Guide, Dimensions, Uses & Cost in 2025"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster",
+        "h1": "20 Yard vs 30 Yard Dumpster: Complete Comparison",
+        "title": "20 Yard vs 30 Yard Dumpster: Complete Comparison 2025"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison",
+        "h1": "20 vs 30 Yard Dumpster: Which Size for Your Project?",
+        "title": "20 vs 30 Yard Dumpster: Which Size for Your Project? | TNT Dumpsters"
+      },
+      {
+        "route": "blog/20-yard-dumpster-complete-guide",
+        "h1": "20 Yard Dumpster: The Complete Guide to Utah's Most Popular Size",
+        "title": "20 Yard Dumpster: The Complete Guide to Utah\\"
+      },
+      {
+        "route": "blog/30-yard-dumpster-guide",
+        "h1": "30 Yard Dumpster: When to Use & What Fits",
+        "title": "30 Yard Dumpster: When to Use & What Fits | Complete Guide 2025"
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide",
+        "h1": "Basement Cleanout: How to Choose the Right Dumpster Size 2025",
+        "title": "Basement Cleanout: How to Choose the Right Dumpster Size 2025 | Complete Guide"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide",
+        "h1": "Bathroom Remodel Dumpster Guide: Size, Cost & What Fits",
+        "title": "Bathroom Remodel Dumpster Guide: Size, Cost & What Fits | TNT Dumpsters"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide",
+        "h1": "Bathroom Renovation Dumpster: Size & Cost Guide 2025",
+        "title": "Bathroom Renovation Dumpster: Size & Cost Guide 2025 | What You Need to Know"
+      },
+      {
+        "route": "blog/choose-right-dumpster-size",
+        "h1": "Dumpster Sizes: Yards, Dimensions, Capacity",
+        "title": "Dumpster Sizes: Yards, Dimensions, Capacity | TNT Dumpsters"
+      },
+      {
+        "route": "blog/commercial-dumpster-rental-guide",
+        "h1": "Commercial Dumpster Rental: Business Guide",
+        "title": "Commercial Dumpster Rental: Business Guide | TNT Dumpsters"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide",
+        "h1": "Concrete Disposal: Dumpster Guide & Weight Limits 2025",
+        "title": "Concrete Disposal: Dumpster Guide & Weight Limits 2025 | Complete Cost Breakdown"
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide",
+        "h1": "Construction Dumpster Size Guide: Choosing the Right Size",
+        "title": "Construction Dumpster Size Guide: Choosing the Right Size | TNT Dumpsters"
+      },
+      {
+        "route": "blog/construction-waste-management",
+        "h1": "Construction Waste Management: Best Practices",
+        "title": "Construction Waste Management: Best Practices | TNT Dumpsters"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide",
+        "h1": "Deck Demolition Dumpster Guide: Size, Cost & Disposal",
+        "title": "Deck Demolition Dumpster Guide: Size, Cost & Disposal | TNT Dumpsters"
+      },
+      {
+        "route": "blog/dumpster-prohibited-items",
+        "h1": "What Can and Cannot Go in a Dumpster",
+        "title": "What Can and Cannot Go in a Dumpster | TNT Dumpsters"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025",
+        "h1": "How Much Does a Dumpster Rental Cost in 2025?",
+        "title": "How Much Does a Dumpster Rental Cost in 2025? | Complete Price Guide"
+      },
+      {
+        "route": "blog/dumpster-rental-costs",
+        "h1": "Dumpster Rental Costs: Complete Pricing Guide",
+        "title": "Dumpster Rental Costs: Complete Pricing Guide | TNT Dumpsters"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size",
+        "h1": "Dumpster Rental Prices by Size: Complete Cost Comparison",
+        "title": "Dumpster Rental Prices by Size: Complete Cost Comparison 2025"
+      },
+      {
+        "route": "blog/dumpster-rentals-2025-guide",
+        "h1": "Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits",
+        "title": "Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits | TNT Dumpsters"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide",
+        "h1": "Estate Cleanout: Complete Family Guide (2025)",
+        "title": "Estate Cleanout: Complete Family Guide (2025) | TNT Dumpsters"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide",
+        "h1": "Home Renovation Dumpster Guide: Complete Planning Guide",
+        "title": "Home Renovation Dumpster Guide: Complete Planning Guide | TNT Dumpsters"
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide",
+        "h1": "Kitchen Remodel Dumpster: Size Guide, Costs & What Fits",
+        "title": "Kitchen Remodel Dumpster: Size Guide, Costs & What Fits | Complete Planning"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide",
+        "h1": "Moving Cleanout Dumpster Guide: Size, Cost & Tips",
+        "title": "Moving Cleanout Dumpster Guide: Size, Cost & Tips | TNT Dumpsters"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide",
+        "h1": "Office Cleanout Dumpster Guide: Size, Cost & Planning",
+        "title": "Office Cleanout Dumpster Guide: Size, Cost & Planning | TNT Dumpsters"
+      },
+      {
+        "route": "blog",
+        "h1": "Dumpster Rental Blog",
+        "title": "Dumpster Rental Blog | TNT Dumpsters | Tips, Guides & News"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide",
+        "h1": "Roofing Project Dumpster Guide: Sizing for Shingle Disposal 2025",
+        "title": "Roofing Project Dumpster Guide: Sizing for Shingle Disposal 2025 | Complete Roof Tear-Off Guide"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison",
+        "h1": "Small vs Large Dumpster: Complete Comparison Guide",
+        "title": "Small vs Large Dumpster: Complete Comparison Guide | TNT Dumpsters"
+      },
+      {
+        "route": "blog/what-size-dumpster-do-i-need",
+        "h1": "What Size Dumpster Do I Need? Complete Selection Guide",
+        "title": "What Size Dumpster Do I Need? Complete Selection Guide 2025"
+      },
+      {
+        "route": "blog/winter-dumpster-rental-tips",
+        "h1": "Winter Dumpster Rental Tips for Cold Weather",
+        "title": "Winter Dumpster Rental Tips for Cold Weather | TNT Dumpsters"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide",
+        "h1": "Yard Waste Dumpster Guide: Size, Cost & Disposal Tips",
+        "title": "Yard Waste Dumpster Guide: Size, Cost & Disposal Tips | TNT Dumpsters"
+      },
+      {
+        "route": "cities",
+        "h1": "Cities We Serve",
+        "title": "Cities We Serve | Dumpster Rental in Utah | TNT Dumpsters"
+      },
+      {
+        "route": "demolition-dumpster",
+        "h1": "Demolition Dumpster Rental for{' '}\r\n                Commercial & Construction",
+        "title": "Demolition Dumpster Rental | Commercial & Construction | TNT Dump"
+      },
+      {
+        "route": "dumpsters/commercial",
+        "h1": "Commercial Dumpster Rental",
+        "title": "Commercial Dumpster Rental | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters/concrete",
+        "h1": "Concrete Dumpsters for{' '}\r\n                Heavy Materials",
+        "title": "Concrete Dumpsters | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters/industrial",
+        "h1": "Industrial Dumpster{' '}\r\n                Rental Service",
+        "title": "Industrial Dumpster Rental | Utah | TNT Dumpsters"
+      },
+      {
+        "route": "dumpsters/long-term",
+        "h1": "Long-Term Dumpster Programs",
+        "title": "Long-Term Dumpster Rental | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters",
+        "h1": "Dumpster Rental Services on the{' '}\n              Wasatch Front",
+        "title": "Dumpster Services | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters/residential",
+        "h1": "Residential Dumpster Rental",
+        "title": "Residential Dumpster Rental | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters/short-term",
+        "h1": "Short-Term Dumpster Rental",
+        "title": "Short-Term Dumpster Rental | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "dumpsters/vendor",
+        "h1": "Vendor & Contractor Dumpster Rentals",
+        "title": "Vendor Dumpster Rental | Dumpster Rental | TNT Dump"
+      },
+      {
+        "route": "estate-cleanouts",
+        "h1": "Estate Cleanout{' '}\r\n                Services",
+        "title": "Estate Cleanouts in Utah | Compassionate Cleanout Help | TNT Dumpsters"
+      },
+      {
+        "route": "partners",
+        "h1": "Trusted Partners",
+        "title": "Trusted Partners | TNT Dumpsters"
+      },
+      {
+        "route": "privacy-policy",
+        "h1": "Privacy Policy",
+        "title": "Privacy Policy | TNT Dumpsters"
+      },
+      {
+        "route": "reviews",
+        "h1": "Customer{' '}\r\n              Reviews",
+        "title": "TNT Dumpsters Reviews | Dumpster Rental in Utah"
+      },
+      {
+        "route": "services/basement-cleanout-service",
+        "h1": "Basement Cleanout Service",
+        "title": "Basement Cleanout Service | TNT Dumpsters | Utah"
+      },
+      {
+        "route": "services/commercial",
+        "h1": "Commercial Dumpster Rental Service",
+        "title": "Commercial Dumpster Rental | Businesses & Job Sites | TNT Dumpsters"
+      },
+      {
+        "route": "services/concrete",
+        "h1": "Concrete Dumpsters",
+        "title": "Concrete Dumpster Rental | Heavy Debris Disposal | TNT Dumpsters"
+      },
+      {
+        "route": "services/estate-cleanout",
+        "h1": "Estate Cleanout Services",
+        "title": "Estate Cleanout Service | Utah | TNT Dumpsters"
+      },
+      {
+        "route": "services/garage-cleanout-service",
+        "h1": "Garage Cleanout Service",
+        "title": "Garage Cleanout Service | TNT Dumpsters | Utah"
+      },
+      {
+        "route": "services/industrial",
+        "h1": "Industrial Dumpster Rental Service",
+        "title": "Industrial Dumpster Rental | Large Projects | TNT Dumpsters"
+      },
+      {
+        "route": "services/kitchen-remodel-dumpster",
+        "h1": "Kitchen Remodel Dumpster Rental",
+        "title": "Kitchen Remodel Dumpster Rental | TNT Dumpsters | Utah"
+      },
+      {
+        "route": "services/long-term",
+        "h1": "Long-Term Dumpster Rental Service",
+        "title": "Long-Term Dumpster Rental | Extended Projects | TNT Dumpsters"
+      },
+      {
+        "route": "services/residential",
+        "h1": "Residential Dumpster Rental Service",
+        "title": "Residential Dumpster Rental | Home Projects | TNT Dumpsters"
+      },
+      {
+        "route": "services/roofing-dumpster-rental",
+        "h1": "Roofing Dumpster Rental",
+        "title": "Roofing Dumpster Rental | TNT Dumpsters | Utah"
+      },
+      {
+        "route": "services/same-day-dumpster-rental",
+        "h1": "Same Day Dumpster Rental",
+        "title": "Same Day Dumpster Rental | TNT Dumpsters | Utah"
+      },
+      {
+        "route": "services/short-term",
+        "h1": "Short-Term Dumpster Rental Service",
+        "title": "Short-Term Dumpster Rental | Quick Projects | TNT Dumpsters"
+      },
+      {
+        "route": "services/vendor",
+        "h1": "Vendor Dumpster Rental Service",
+        "title": "Vendor & Contractor Dumpster Service | TNT Dumpsters"
+      },
+      {
+        "route": "terms-of-service",
+        "h1": "Terms of Service",
+        "title": "Terms of Service | TNT Dumpsters"
+      },
+      {
+        "route": "test",
+        "h1": "Test Page Working!",
+        "title": "Test | TNT Dumpsters"
+      },
+      {
+        "route": "ut/service-areas",
+        "h1": "Utah Service Areas",
+        "title": "Utah Service Areas | TNT Dumpsters"
+      }
+    ],
+    "og-url-mismatch": [],
+    "og-incomplete": [
+      {
+        "route": "about",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "accessibility-policy",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/10-vs-15-yard-dumpster-comparison",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/15-vs-20-yard-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/15-yard-dumpster-complete-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/20-yard-dumpster-complete-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/30-yard-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/choose-right-dumpster-size",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/commercial-dumpster-rental-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/construction-waste-management",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/dumpster-prohibited-items",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/dumpster-rental-costs",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/dumpster-rentals-2025-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/garage-cleanout-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/moving-out-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/what-size-dumpster-do-i-need",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/winter-dumpster-rental-tips",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "calculator/cost",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "calculator",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "calculator/volume",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "cart",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "cities",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "contact",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "demolition-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/commercial",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/concrete",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/industrial",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/long-term",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/residential",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/short-term",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "dumpsters/vendor",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "estate-cleanouts",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "faqs",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "layout.tsx",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "order-confirmation",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "partners",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "privacy-policy",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "quote",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "reviews",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/all",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/basement-cleanout-service",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/commercial",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/concrete",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/estate-cleanout",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/garage-cleanout-service",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/industrial",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/kitchen-remodel-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/long-term",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/residential",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/roofing-dumpster-rental",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/same-day-dumpster-rental",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/short-term",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "services/vendor",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "terms-of-service",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "test",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "test-email",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "test-form",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "ut/service-areas",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": "ut/:city/dumpster-rental",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/15-yard-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/20-yard-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/30-yard-dumpster",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      },
+      {
+        "route": ":cityBase/service-areas/:city",
+        "missing": "ogUrl, ogTitle, ogDescription, ogImage"
+      }
+    ],
+    "duplicate-canonical": [],
+    "missing-canonical": [
+      {
+        "route": "accessibility-policy"
+      },
+      {
+        "route": "blog/10-vs-15-yard-dumpster-comparison"
+      },
+      {
+        "route": "blog/15-vs-20-yard-dumpster"
+      },
+      {
+        "route": "blog/15-yard-dumpster-complete-guide"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison"
+      },
+      {
+        "route": "blog/20-yard-dumpster-complete-guide"
+      },
+      {
+        "route": "blog/30-yard-dumpster-guide"
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/choose-right-dumpster-size"
+      },
+      {
+        "route": "blog/commercial-dumpster-rental-guide"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide"
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide"
+      },
+      {
+        "route": "blog/construction-waste-management"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide"
+      },
+      {
+        "route": "blog/dumpster-prohibited-items"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025"
+      },
+      {
+        "route": "blog/dumpster-rental-costs"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide"
+      },
+      {
+        "route": "blog/garage-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/moving-out-dumpster-guide"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison"
+      },
+      {
+        "route": "blog/what-size-dumpster-do-i-need"
+      },
+      {
+        "route": "blog/winter-dumpster-rental-tips"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide"
+      },
+      {
+        "route": "calculator/cost"
+      },
+      {
+        "route": "calculator"
+      },
+      {
+        "route": "calculator/volume"
+      },
+      {
+        "route": "cities"
+      },
+      {
+        "route": "dumpsters/commercial"
+      },
+      {
+        "route": "dumpsters/concrete"
+      },
+      {
+        "route": "dumpsters/long-term"
+      },
+      {
+        "route": "dumpsters"
+      },
+      {
+        "route": "dumpsters/residential"
+      },
+      {
+        "route": "dumpsters/short-term"
+      },
+      {
+        "route": "dumpsters/vendor"
+      },
+      {
+        "route": "layout.tsx"
+      },
+      {
+        "route": "privacy-policy"
+      },
+      {
+        "route": "services/all"
+      },
+      {
+        "route": "services/basement-cleanout-service"
+      },
+      {
+        "route": "services/garage-cleanout-service"
+      },
+      {
+        "route": "services/kitchen-remodel-dumpster"
+      },
+      {
+        "route": "services"
+      },
+      {
+        "route": "services/roofing-dumpster-rental"
+      },
+      {
+        "route": "services/same-day-dumpster-rental"
+      },
+      {
+        "route": "terms-of-service"
+      },
+      {
+        "route": "test-email"
+      },
+      {
+        "route": "ut/service-areas"
+      },
+      {
+        "route": "ut/:city/dumpster-rental"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/15-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/20-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/30-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city"
+      }
+    ],
+    "image-too-large": [
+      {
+        "route": "blog/15-vs-20-yard-dumpster",
+        "image": "images/dumpster-rental-service.jpg",
+        "size": "5476.0KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide",
+        "image": "images/dumpsterSmallBanner2.jpeg",
+        "size": "241.7KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/choose-right-dumpster-size",
+        "image": "images/dumpsters.jpeg",
+        "size": "583.5KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/commercial-dumpster-rental-guide",
+        "image": "images/construction-site-3688252-1280.jpg",
+        "size": "603.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide",
+        "image": "images/construction-dumpster-sizes.jpg",
+        "size": "640.1KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/construction-waste-management",
+        "image": "images/construction-site-3688262-1280.jpg",
+        "size": "527.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/dumpster-prohibited-items",
+        "image": "images/dumpster3-500x500-1.jpeg",
+        "size": "396.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide",
+        "image": "images/dumpster-rental-contact.jpg",
+        "size": "5636.5KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/moving-out-dumpster-guide",
+        "image": "images/residential-dumpster-driveway.jpeg",
+        "size": "983.6KB",
+        "max": "200KB"
+      },
+      {
+        "route": "blog/what-size-dumpster-do-i-need",
+        "image": "images/dumpsters2.jpeg",
+        "size": "642.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/commercial",
+        "image": "images/construction-dumpster-rental.png",
+        "size": "1352.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/commercial",
+        "image": "images/construction-dumpster-sizes.jpg",
+        "size": "640.1KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/industrial",
+        "image": "images/construction-site-3688252-1280.jpg",
+        "size": "603.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/long-term",
+        "image": "images/dumpsters2.jpeg",
+        "size": "642.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/long-term",
+        "image": "images/construction-site-3688262-1280.jpg",
+        "size": "527.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters",
+        "image": "images/15-NEW-01.png",
+        "size": "511.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/residential",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/residential",
+        "image": "images/residential-dumpster-sizes.jpg",
+        "size": "701.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/short-term",
+        "image": "images/construction-dumpster-rental.png",
+        "size": "1352.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/short-term",
+        "image": "images/residential-dumpster-rental.png",
+        "size": "1339.2KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/vendor",
+        "image": "images/construction-site-3688252-1280.jpg",
+        "size": "603.3KB",
+        "max": "200KB"
+      },
+      {
+        "route": "dumpsters/vendor",
+        "image": "images/dumpster3-500x500-1.jpeg",
+        "size": "396.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "estate-cleanouts",
+        "image": "images/dumpster-rental-contact.jpg",
+        "size": "5636.5KB",
+        "max": "200KB"
+      },
+      {
+        "route": "page.tsx",
+        "image": "images/dumpster-delivery-service.png",
+        "size": "1456.7KB",
+        "max": "200KB"
+      },
+      {
+        "route": "page.tsx",
+        "image": "images/residential-dumpster-driveway.jpeg",
+        "size": "983.6KB",
+        "max": "200KB"
+      },
+      {
+        "route": "page.tsx",
+        "image": "images/open-dumpster-rental.png",
+        "size": "5927.5KB",
+        "max": "200KB"
+      },
+      {
+        "route": "page.tsx",
+        "image": "images/utah-dumpster-service-areas.png",
+        "size": "4469.0KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/basement-cleanout-service",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/commercial",
+        "image": "images/dumpster3-500x500-1.jpeg",
+        "size": "396.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/concrete",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/estate-cleanout",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/garage-cleanout-service",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/industrial",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/kitchen-remodel-dumpster",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/long-term",
+        "image": "images/dumpster3-500x500-1.jpeg",
+        "size": "396.4KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/residential",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/roofing-dumpster-rental",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/same-day-dumpster-rental",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/short-term",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      },
+      {
+        "route": "services/vendor",
+        "image": "images/dumpster2-500x500-2.jpeg",
+        "size": "237.9KB",
+        "max": "200KB"
+      }
+    ],
+    "image-broken": [
+      {
+        "route": "about",
+        "image": "images/IMG_3190.jpg"
+      },
+      {
+        "route": "about",
+        "image": "images/IMG_0350.jpg"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster",
+        "image": "images/pexels-rodrigo-eder-1347087-2846205.jpg"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison",
+        "image": "images/pexels-rodrigo-eder-1347087-2846205.jpg"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide",
+        "image": "images/pexels-ihsanaditya-28196491.jpg"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide",
+        "image": "images/pexels-jplenio-2566826.jpg"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide",
+        "image": "images/demolition-167738_1280.jpg"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide",
+        "image": "images/pexels-stijn-dijkstra-1306815-2583836.jpg"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025",
+        "image": "images/pexels-cottonbro-4888489.jpg"
+      },
+      {
+        "route": "blog/dumpster-rental-costs",
+        "image": "images/pexels-cottonbro-4888489.jpg"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size",
+        "image": "images/pexels-cottonbro-4551310.jpg"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide",
+        "image": "images/pexels-wendelinjacober-1411392.jpg"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide",
+        "image": "images/pexels-rstephens-33501308.jpg"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide",
+        "image": "images/pexels-olly-3760529.jpg"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide",
+        "image": "images/pexels-olly-3771111.jpg"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide",
+        "image": "images/roof-truss-3339206_1280.jpg"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison",
+        "image": "images/pexels-triemli-33520761.jpg"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide",
+        "image": "images/pexels-paggiarofrancesco-938044.jpg"
+      },
+      {
+        "route": "demolition-dumpster",
+        "image": "images/pexels-cottonbro-4551310.jpg"
+      },
+      {
+        "route": "dumpsters/concrete",
+        "image": "images/pexels-cottonbro-4551310.jpg"
+      },
+      {
+        "route": "dumpsters/residential",
+        "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+      },
+      {
+        "route": "estate-cleanouts",
+        "image": "images/pexels-triemli-33520761.jpg"
+      },
+      {
+        "route": "estate-cleanouts",
+        "image": "images/pexels-wendelinjacober-1411392.jpg"
+      },
+      {
+        "route": "reviews",
+        "image": "https://images.unsplash.com/photo-1581578731548-c64695cc6952"
+      }
+    ],
+    "broken-image-page": [
+      {
+        "route": "about"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025"
+      },
+      {
+        "route": "blog/dumpster-rental-costs"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide"
+      },
+      {
+        "route": "demolition-dumpster"
+      },
+      {
+        "route": "dumpsters/concrete"
+      },
+      {
+        "route": "dumpsters/residential"
+      },
+      {
+        "route": "estate-cleanouts"
+      },
+      {
+        "route": "reviews"
+      }
+    ],
+    "not-in-sitemap": [
+      {
+        "route": "about",
+        "url": "https://tntdump.comabout"
+      },
+      {
+        "route": "accessibility-policy",
+        "url": "https://tntdump.comaccessibility-policy"
+      },
+      {
+        "route": "blog/10-vs-15-yard-dumpster-comparison",
+        "url": "https://tntdump.comblog/10-vs-15-yard-dumpster-comparison"
+      },
+      {
+        "route": "blog/15-vs-20-yard-dumpster",
+        "url": "https://tntdump.comblog/15-vs-20-yard-dumpster"
+      },
+      {
+        "route": "blog/15-yard-dumpster-complete-guide",
+        "url": "https://tntdump.comblog/15-yard-dumpster-complete-guide"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster",
+        "url": "https://tntdump.comblog/20-vs-30-yard-dumpster"
+      },
+      {
+        "route": "blog/20-vs-30-yard-dumpster-comparison",
+        "url": "https://tntdump.comblog/20-vs-30-yard-dumpster-comparison"
+      },
+      {
+        "route": "blog/20-yard-dumpster-complete-guide",
+        "url": "https://tntdump.comblog/20-yard-dumpster-complete-guide"
+      },
+      {
+        "route": "blog/30-yard-dumpster-guide",
+        "url": "https://tntdump.comblog/30-yard-dumpster-guide"
+      },
+      {
+        "route": "blog/basement-cleanout-dumpster-guide",
+        "url": "https://tntdump.comblog/basement-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/bathroom-remodel-dumpster-guide",
+        "url": "https://tntdump.comblog/bathroom-remodel-dumpster-guide"
+      },
+      {
+        "route": "blog/bathroom-renovation-dumpster-guide",
+        "url": "https://tntdump.comblog/bathroom-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/choose-right-dumpster-size",
+        "url": "https://tntdump.comblog/choose-right-dumpster-size"
+      },
+      {
+        "route": "blog/commercial-dumpster-rental-guide",
+        "url": "https://tntdump.comblog/commercial-dumpster-rental-guide"
+      },
+      {
+        "route": "blog/concrete-disposal-dumpster-guide",
+        "url": "https://tntdump.comblog/concrete-disposal-dumpster-guide"
+      },
+      {
+        "route": "blog/construction-dumpster-size-guide",
+        "url": "https://tntdump.comblog/construction-dumpster-size-guide"
+      },
+      {
+        "route": "blog/construction-waste-management",
+        "url": "https://tntdump.comblog/construction-waste-management"
+      },
+      {
+        "route": "blog/deck-demolition-dumpster-guide",
+        "url": "https://tntdump.comblog/deck-demolition-dumpster-guide"
+      },
+      {
+        "route": "blog/dumpster-prohibited-items",
+        "url": "https://tntdump.comblog/dumpster-prohibited-items"
+      },
+      {
+        "route": "blog/dumpster-rental-cost-2025",
+        "url": "https://tntdump.comblog/dumpster-rental-cost-2025"
+      },
+      {
+        "route": "blog/dumpster-rental-costs",
+        "url": "https://tntdump.comblog/dumpster-rental-costs"
+      },
+      {
+        "route": "blog/dumpster-rental-prices-by-size",
+        "url": "https://tntdump.comblog/dumpster-rental-prices-by-size"
+      },
+      {
+        "route": "blog/dumpster-rentals-2025-guide",
+        "url": "https://tntdump.comblog/dumpster-rentals-2025-guide"
+      },
+      {
+        "route": "blog/estate-cleanout-complete-guide",
+        "url": "https://tntdump.comblog/estate-cleanout-complete-guide"
+      },
+      {
+        "route": "blog/garage-cleanout-dumpster-guide",
+        "url": "https://tntdump.comblog/garage-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/home-renovation-dumpster-guide",
+        "url": "https://tntdump.comblog/home-renovation-dumpster-guide"
+      },
+      {
+        "route": "blog/kitchen-remodel-dumpster-guide",
+        "url": "https://tntdump.comblog/kitchen-remodel-dumpster-guide"
+      },
+      {
+        "route": "blog/moving-cleanout-dumpster-guide",
+        "url": "https://tntdump.comblog/moving-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog/moving-out-dumpster-guide",
+        "url": "https://tntdump.comblog/moving-out-dumpster-guide"
+      },
+      {
+        "route": "blog/office-cleanout-dumpster-guide",
+        "url": "https://tntdump.comblog/office-cleanout-dumpster-guide"
+      },
+      {
+        "route": "blog",
+        "url": "https://tntdump.comblog"
+      },
+      {
+        "route": "blog/roofing-project-dumpster-guide",
+        "url": "https://tntdump.comblog/roofing-project-dumpster-guide"
+      },
+      {
+        "route": "blog/small-vs-large-dumpster-comparison",
+        "url": "https://tntdump.comblog/small-vs-large-dumpster-comparison"
+      },
+      {
+        "route": "blog/what-size-dumpster-do-i-need",
+        "url": "https://tntdump.comblog/what-size-dumpster-do-i-need"
+      },
+      {
+        "route": "blog/winter-dumpster-rental-tips",
+        "url": "https://tntdump.comblog/winter-dumpster-rental-tips"
+      },
+      {
+        "route": "blog/yard-waste-dumpster-guide",
+        "url": "https://tntdump.comblog/yard-waste-dumpster-guide"
+      },
+      {
+        "route": "calculator/cost",
+        "url": "https://tntdump.comcalculator/cost"
+      },
+      {
+        "route": "calculator",
+        "url": "https://tntdump.comcalculator"
+      },
+      {
+        "route": "calculator/volume",
+        "url": "https://tntdump.comcalculator/volume"
+      },
+      {
+        "route": "cart",
+        "url": "https://tntdump.comcart"
+      },
+      {
+        "route": "cities",
+        "url": "https://tntdump.comcities"
+      },
+      {
+        "route": "contact",
+        "url": "https://tntdump.comcontact"
+      },
+      {
+        "route": "demolition-dumpster",
+        "url": "https://tntdump.comdemolition-dumpster"
+      },
+      {
+        "route": "dumpsters/commercial",
+        "url": "https://tntdump.comdumpsters/commercial"
+      },
+      {
+        "route": "dumpsters/concrete",
+        "url": "https://tntdump.comdumpsters/concrete"
+      },
+      {
+        "route": "dumpsters/industrial",
+        "url": "https://tntdump.comdumpsters/industrial"
+      },
+      {
+        "route": "dumpsters/long-term",
+        "url": "https://tntdump.comdumpsters/long-term"
+      },
+      {
+        "route": "dumpsters",
+        "url": "https://tntdump.comdumpsters"
+      },
+      {
+        "route": "dumpsters/residential",
+        "url": "https://tntdump.comdumpsters/residential"
+      },
+      {
+        "route": "dumpsters/short-term",
+        "url": "https://tntdump.comdumpsters/short-term"
+      },
+      {
+        "route": "dumpsters/vendor",
+        "url": "https://tntdump.comdumpsters/vendor"
+      },
+      {
+        "route": "estate-cleanouts",
+        "url": "https://tntdump.comestate-cleanouts"
+      },
+      {
+        "route": "faqs",
+        "url": "https://tntdump.comfaqs"
+      },
+      {
+        "route": "order-confirmation",
+        "url": "https://tntdump.comorder-confirmation"
+      },
+      {
+        "route": "page.tsx",
+        "url": "https://tntdump.compage.tsx"
+      },
+      {
+        "route": "partners",
+        "url": "https://tntdump.compartners"
+      },
+      {
+        "route": "privacy-policy",
+        "url": "https://tntdump.comprivacy-policy"
+      },
+      {
+        "route": "quote",
+        "url": "https://tntdump.comquote"
+      },
+      {
+        "route": "reviews",
+        "url": "https://tntdump.comreviews"
+      },
+      {
+        "route": "services/all",
+        "url": "https://tntdump.comservices/all"
+      },
+      {
+        "route": "services/basement-cleanout-service",
+        "url": "https://tntdump.comservices/basement-cleanout-service"
+      },
+      {
+        "route": "services/commercial",
+        "url": "https://tntdump.comservices/commercial"
+      },
+      {
+        "route": "services/concrete",
+        "url": "https://tntdump.comservices/concrete"
+      },
+      {
+        "route": "services/estate-cleanout",
+        "url": "https://tntdump.comservices/estate-cleanout"
+      },
+      {
+        "route": "services/garage-cleanout-service",
+        "url": "https://tntdump.comservices/garage-cleanout-service"
+      },
+      {
+        "route": "services/industrial",
+        "url": "https://tntdump.comservices/industrial"
+      },
+      {
+        "route": "services/kitchen-remodel-dumpster",
+        "url": "https://tntdump.comservices/kitchen-remodel-dumpster"
+      },
+      {
+        "route": "services/long-term",
+        "url": "https://tntdump.comservices/long-term"
+      },
+      {
+        "route": "services",
+        "url": "https://tntdump.comservices"
+      },
+      {
+        "route": "services/residential",
+        "url": "https://tntdump.comservices/residential"
+      },
+      {
+        "route": "services/roofing-dumpster-rental",
+        "url": "https://tntdump.comservices/roofing-dumpster-rental"
+      },
+      {
+        "route": "services/same-day-dumpster-rental",
+        "url": "https://tntdump.comservices/same-day-dumpster-rental"
+      },
+      {
+        "route": "services/short-term",
+        "url": "https://tntdump.comservices/short-term"
+      },
+      {
+        "route": "services/vendor",
+        "url": "https://tntdump.comservices/vendor"
+      },
+      {
+        "route": "terms-of-service",
+        "url": "https://tntdump.comterms-of-service"
+      },
+      {
+        "route": "test",
+        "url": "https://tntdump.comtest"
+      },
+      {
+        "route": "test-email",
+        "url": "https://tntdump.comtest-email"
+      },
+      {
+        "route": "test-form",
+        "url": "https://tntdump.comtest-form"
+      },
+      {
+        "route": "ut/service-areas",
+        "url": "https://tntdump.comut/service-areas"
+      },
+      {
+        "route": "ut/:city/dumpster-rental",
+        "url": "https://tntdump.comut/:city/dumpster-rental"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/15-yard-dumpster",
+        "url": "https://tntdump.com:cityBase/service-areas/:city/15-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/20-yard-dumpster",
+        "url": "https://tntdump.com:cityBase/service-areas/:city/20-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city/30-yard-dumpster",
+        "url": "https://tntdump.com:cityBase/service-areas/:city/30-yard-dumpster"
+      },
+      {
+        "route": ":cityBase/service-areas/:city",
+        "url": "https://tntdump.com:cityBase/service-areas/:city"
+      }
+    ],
+    "structured-data-errors": []
+  }
+}

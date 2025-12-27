@@ -6,7 +6,7 @@ import QuickContactForm from '@/components/QuickContactForm'
 import DumpsterCalculator from '@/components/DumpsterCalculator'
 
 export const metadata: Metadata = {
-  title: 'Demolition Dumpster Rental | Commercial & Construction | TNT Dump',
+  title: 'Demolition Dumpster Rental | Commercial & Construction |...',
   description:
     'Demolition dumpster rental for construction, roofing, and heavy debris in Salt Lake & Utah County. Concrete and dirt dumpsters available—call (801) 209-9013.',
   keywords: [
@@ -35,7 +35,8 @@ export const metadata: Metadata = {
     description: 'Specialized demolition dumpster rental for commercial construction, roofing, and heavy demolition projects. Concrete and dirt dumpsters available.',
     url: 'https://tntdump.com/demolition-dumpster',
     type: 'website',
-  },
+  
+      images: [{ url: '/images/tand-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],},
 }
 
 export default function DemolitionDumpsterPage() {

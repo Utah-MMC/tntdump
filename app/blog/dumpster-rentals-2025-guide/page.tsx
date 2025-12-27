@@ -3,7 +3,7 @@ import Link from 'next/link'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits | TNT Dumpsters',
+  title: 'Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits...',
   description:
     'Dumpster rentals 2025 guide: sizes, prices, permits, weight limits, and tips to avoid fees. Written for Utah homeowners and contractors.',
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-rentals-2025-guide' },

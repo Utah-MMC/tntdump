@@ -167,7 +167,7 @@ export default function IndustrialDumpsterPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/construction-site-3688252_1280.jpg"
+                  src="/images/construction-site-3688252-1280.jpg"
                   alt="Industrial dumpster rental service for heavy-duty waste management"
                   fill
                   className="object-cover"
