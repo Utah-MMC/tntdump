@@ -6,12 +6,11 @@ export async function POST(request: NextRequest) {
     if (!stripe) {
       return NextResponse.json(
         {
-          error: 'Payment processing is not configured',
-          message:
-            'Stripe is not set up on this environment. Please contact support or try again later.',
+          error: 'Payment processing is disabled',
+          message: 'Stripe is currently disabled. Please contact us to place your order.',
         },
-        { status: 500 },
-      );
+        { status: 503 },
+      )
     }
 
     const body = await request.json();

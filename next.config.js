@@ -38,6 +38,10 @@ const nextConfig = {
   compress: true,
   poweredByHeader: false,
   generateEtags: true, // Enable ETags for better caching
+
+  // Workaround for a Vercel-only build crash in Next's micromatch/picomatch stack.
+  // Disabling tracing avoids the problematic glob matching during build.
+  outputFileTracing: false,
   async headers() {
     return [
       {
