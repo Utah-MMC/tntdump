@@ -39,7 +39,13 @@ const Header = () => {
   ]
 
   const toolsServices = [
-    { name: 'Size Calculator', href: '/calculator' },
+    { name: 'Size Calculator', href: '/dumpster-size-calculator' },
+    { name: 'Cost Calculator', href: '/dumpster-rental-cost-calculator' },
+    { name: 'Tonnage Calculator', href: '/tonnage-calculator' },
+    { name: 'Roofing Calculator', href: '/roofing-calculator' },
+    { name: 'Demolition Calculator', href: '/demolition-calculator' },
+    { name: 'Concrete Calculator', href: '/concrete-calculator' },
+    { name: 'All Calculators', href: '/calculator' },
     { name: 'Get Free Quote', href: '/quote' },
     { name: 'Order Online', href: '/cart' },
     { name: 'Request Call Back', href: '/quote' },

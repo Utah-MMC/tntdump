@@ -1,17 +1,30 @@
+import type { Metadata } from 'next'
+import BlogPostSchema from '@/components/BlogPostSchema'
 import { Metadata } from 'next'
 import Link from 'next/link'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits...',
-  description:
-    'Dumpster rentals 2025 guide: sizes, prices, permits, weight limits, and tips to avoid fees. Written for Utah homeowners and contractors.',
+  title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips | TNT Dumpsters',
+  description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects.',
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-rentals-2025-guide' },
-}
+,
+    openGraph: {
+      title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips | TNT Dumpsters',
+      description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects.',
+      url: 'https://tntdump.com/blog/dumpster-rentals-2025-guide',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function DumpsterRentals2025GuidePage() {
   return (
     <main className="min-h-screen">
+      <BlogPostSchema slug={"blog/dumpster-rentals-2025-guide"} title={"Dumpster Rentals: 2025 Guide to Sizes, Prices & Permits..."} description={"Dumpster rentals 2025 guide: sizes, prices, permits, weight limits, and tips to avoid fees. Written for Utah homeowners and contractors."} url="https://tntdump.com/blog/dumpster-rentals-2025-guide" />
+
       {/* Back Navigation */}
       <section className="py-4 bg-gray-50">
         <div className="container-custom">
@@ -55,7 +68,7 @@ export default function DumpsterRentals2025GuidePage() {
                         "height": 176
                       }
                     },
-                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/blog/dumpster-rentals-2025-guide" }
+                    "mainEntityOfPage": { "@type": "WebPage", "@id": "https://tntdump.com/dumpster-rentals-2025-guide" }
                   })
                 }}
               />
@@ -351,9 +364,9 @@ export default function DumpsterRentals2025GuidePage() {
           <div className="max-w-4xl mx-auto">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Related articles</h2>
             <ul className="list-disc pl-5 space-y-2 text-lg">
-              <li><Link href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:text-blue-700">Dumpster Sizes: Yards, Dimensions, Capacity</Link></li>
-              <li><Link href="/blog/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
-              <li><Link href="/blog/winter-dumpster-rental-tips" className="text-blue-600 hover:text-blue-700">Winter Dumpster Rental Tips for Cold Weather</Link></li>
+              <li><Link href="/choose-right-dumpster-size" className="text-blue-600 hover:text-blue-700">Dumpster Sizes: Yards, Dimensions, Capacity</Link></li>
+              <li><Link href="/dumpster-prohibited-items" className="text-blue-600 hover:text-blue-700">What Can and Cannot Go in a Dumpster</Link></li>
+              <li><Link href="/winter-dumpster-rental-tips" className="text-blue-600 hover:text-blue-700">Winter Dumpster Rental Tips for Cold Weather</Link></li>
             </ul>
           </div>
         </div>

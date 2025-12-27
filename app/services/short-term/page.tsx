@@ -7,7 +7,17 @@ export const metadata: Metadata = {
   description:
     'Short-term dumpster rentals for cleanouts, remodels, and moves in Utah. Fast delivery, flexible pickup, and clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/short-term' },
-}
+,
+    openGraph: {
+      title: 'Short-Term Dumpster Rental | Quick Projects | TNT Dumpsters',
+      description: 'Short-term dumpster rentals for cleanouts, remodels, and moves in Utah. Fast delivery, flexible pickup, and clear pricing—call (801) 209-9013.',
+      url: 'https://tntdump.com/services/short-term',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function ShortTermServicePage() {
   const features = [

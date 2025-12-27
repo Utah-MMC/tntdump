@@ -445,7 +445,7 @@ export default function DemolitionDumpsterPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/images/pexels-cottonbro-4551310.jpg"
+                  src="/images/4551310.jpg"
                   alt="Heavy-duty demolition dumpster for construction and demolition projects"
                   fill
                   className="object-cover"

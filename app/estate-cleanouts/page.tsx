@@ -8,7 +8,17 @@ export const metadata: Metadata = {
   description:
     'Compassionate estate cleanout help in Utah. We sort, donate, haul away, and prepare properties for sale with clear pricing and flexible scheduling.',
   alternates: { canonical: 'https://tntdump.com/estate-cleanouts' },
-}
+,
+    openGraph: {
+      title: 'Estate Cleanouts in Utah | Compassionate Cleanout Help |...',
+      description: 'Compassionate estate cleanout help in Utah. We sort, donate, haul away, and prepare properties for sale with clear pricing and flexible scheduling.',
+      url: 'https://tntdump.com/estate-cleanouts',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function EstateCleanoutsPage() {
   const services = [
@@ -255,7 +265,7 @@ export default function EstateCleanoutsPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pexels-triemli-33520761.jpg"
+                  src="/images/33520761.jpg"
                   alt="Estate cleanout services handling all types of household items and belongings"
                   fill
                   className="object-cover"
@@ -273,7 +283,7 @@ export default function EstateCleanoutsPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/pexels-wendelinjacober-1411392.jpg"
+                  src="/images/1411392.jpg"
                   alt="Estate cleanout services with donation coordination for usable items"
                   fill
                   className="object-cover"
@@ -379,7 +389,7 @@ export default function EstateCleanoutsPage() {
               <h3 className="font-bold text-blue-600 mb-2">Residential Dumpsters</h3>
               <p className="text-sm text-gray-600">Home dumpster rental for cleanouts</p>
             </a>
-            <a href="/blog/estate-cleanout-complete-guide" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
+            <a href="/estate-cleanout-complete-guide" className="bg-gray-50 rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow">
               <h3 className="font-bold text-blue-600 mb-2">Estate Cleanout Guide</h3>
               <p className="text-sm text-gray-600">Complete guide to estate cleanouts</p>
             </a>

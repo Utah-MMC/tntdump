@@ -8,7 +8,17 @@ export const metadata: Metadata = {
   description:
     'Industrial dumpster rentals for manufacturing, construction, and facility cleanouts in Utah. Heavy-duty service with clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/dumpsters/industrial' },
-}
+,
+    openGraph: {
+      title: 'Industrial Dumpster Rental | Utah | TNT Dumpsters',
+      description: 'Industrial dumpster rentals for manufacturing, construction, and facility cleanouts in Utah. Heavy-duty service with clear pricing—call (801) 209-9013.',
+      url: 'https://tntdump.com/dumpsters/industrial',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function IndustrialDumpsterPage() {
   const features = [

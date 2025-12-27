@@ -1,13 +1,23 @@
-ï»¿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Truck, Calendar, DollarSign } from 'lucide-react'
 
 export const metadata: Metadata = {
   title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
   description:
-    'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricingâ€”call (801) 209-9013.',
+    'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/long-term' },
-}
+,
+    openGraph: {
+      title: 'Long-Term Dumpster Rental | Extended Projects | TNT...',
+      description: 'Long-term dumpster rentals for ongoing construction and business waste in Utah. Flexible terms, scheduled pickups, and clear pricing—call (801) 209-9013.',
+      url: 'https://tntdump.com/services/long-term',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function LongTermServicePage() {
   const features = [
@@ -102,7 +112,7 @@ export default function LongTermServicePage() {
           <div className="space-y-3 text-sm">
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Do you offer scheduled pickups?</summary>
-              <div className="mt-2">Yesâ€”recurring pickups and swaps based on your operation.</div>
+              <div className="mt-2">Yes—recurring pickups and swaps based on your operation.</div>
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">How is pricing structured?</summary>
@@ -110,7 +120,7 @@ export default function LongTermServicePage() {
             </details>
             <details className="border rounded p-4 bg-gray-50">
               <summary className="font-semibold cursor-pointer">Can you handle multi-site accounts?</summary>
-              <div className="mt-2">Yesâ€”one point of contact for scheduling and billing.</div>
+              <div className="mt-2">Yes—one point of contact for scheduling and billing.</div>
             </details>
           </div>
         </div>
@@ -218,7 +228,7 @@ export default function LongTermServicePage() {
                       ))}
                     </ul>
                     {(size as any).pricing.some((p: any) => p.note) && (
-                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Ã‚Â· ')}</p>
+                      <p className="text-xs text-gray-500 mt-2 text-center">Notes: {(size as any).pricing.filter((p: any) => p.note).map((p: any) => `${p.label} ${p.note}`).join(' Â· ')}</p>
                     )}
                   </div>
                 )}

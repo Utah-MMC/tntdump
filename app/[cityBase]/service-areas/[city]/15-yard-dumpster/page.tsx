@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getCityData, getAllCities, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
+import { summarizeNeighborhoods, summarizeZipCodes } from '@/lib/cityText'
 import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
 
 // Generate static params for all cities with /15-yard-dumpster routes
@@ -217,7 +218,7 @@ function LocalContext({ city }: { city: CityData }) {
         <h2>Renting a 15 Yard Dumpster in {city.city}: What to Expect</h2>
         <p>
           We've streamlined 15 yard dumpster delivery across {city.city} to make your mid-sized project as smooth as possible.
-          Our service area includes {city.neighborhoods_served?.slice(0, 3).join(', ')}, and throughout {city.county} County.
+          Our service area includes {summarizeNeighborhoods(city.neighborhoods_served)}, and throughout {city.county} County.
           Most deliveries arrive within {city.avg_delivery_eta_hours || 4} hours when ordered before our {to12h(city.cutoff_time)} cutoff,
           and same-day service is frequently available.
         </p>
@@ -357,7 +358,7 @@ function ResourcesBlock({ city }: { city: CityData }) {
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Helpful Resources for {city.city} Residents</h2>
         <div className="grid md:grid-cols-3 gap-6">
           <a
-            href="/blog/15-yard-dumpster-complete-guide"
+            href="/15-yard-dumpster-complete-guide"
             className="block p-6 bg-gray-50 border border-gray-200 rounded-lg hover:border-blue-500 hover:shadow-md transition"
           >
             <div className="text-blue-600 font-semibold mb-2">Complete Guide</div>
@@ -436,7 +437,7 @@ function buildFaq(city: CityData) {
   q('Will the 15 yard dumpster damage my driveway?', 'We place protective boards to distribute weight and prevent damage to asphalt or concrete driveways.')
 
   // General city FAQs
-  q(`What areas do you serve in ${city.city}?`, `We deliver 15 yard dumpsters throughout ${city.city}, including ${city.neighborhoods_served?.slice(0,3).join(', ')} and all ${city.primary_zips?.join(', ')} ZIP codes.`)
+  q(`What areas do you serve in ${city.city}?`, `We deliver 15 yard dumpsters throughout ${city.city}, including ${summarizeNeighborhoods(city.neighborhoods_served)} and all ${summarizeZipCodes(city.primary_zips)}.`)
   q('What payment methods do you accept?', 'We accept major credit cards and offer business accounts upon approval. Invoicing available for contractors.')
   q('How do I schedule a pickup?', 'Text or call when you\'re ready for pickup. We often retrieve the same day or next morning.')
   q('Do you recycle materials?', 'Where facilities allow, we route clean loads such as green waste or metal to suitable recyclers.')

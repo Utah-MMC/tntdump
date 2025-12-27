@@ -16,14 +16,14 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL
 
 export const metadata: Metadata = {
   metadataBase: new URL(baseUrl),
-  title: 'Dumpster Rental & Roll-Off Container Services | TNT Dumpsters',
+  title: 'Dumpster Rental & Roll-Off Services | TNT Dumpsters',
   description: 'Local container rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
   keywords: 'dumpster rental, roll off container, container rental price, dumpster quote, delivery container, construction container, local dumpster service',
   authors: [{ name: 'TNT Dumpsters' }],
   creator: 'TNT Dumpsters',
   publisher: 'TNT Dumpsters',
   openGraph: {
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
+    title: 'Dumpster Rental & Roll-Off Services | TNT Dumpsters',
     description: 'Local dumpster rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing. Get a free quote today.',
     url: 'https://tntdump.com',
     siteName: 'TNT Dumpsters',
@@ -40,7 +40,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Dumpster Rental & Roll Off Dumpster Rental | TNT Dumpsters',
+    title: 'Dumpster Rental & Roll-Off Services | TNT Dumpsters',
     description: 'Local dumpster rental in Salt Lake & Utah County. Fast delivery, clear pricing, easy pickup. Get a free quote today.',
     images: ['https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp'],
   },
@@ -145,6 +145,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
+              "@id": "https://tntdump.com/#organization",
               "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "logo": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
@@ -172,6 +173,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "WebSite",
+              "@id": "https://tntdump.com/#website",
               "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "description": "Dumpster rental services in Salt Lake & Utah County. 15/20/30 yard roll-off containers with fast delivery and clear pricing.",
@@ -194,6 +196,32 @@ export default function RootLayout({
             })
           }}
         />
+        {/* Site Navigation Schema */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "SiteNavigationElement",
+              "name": [
+                "Dumpster Services",
+                "Dumpster Sizes",
+                "Calculator",
+                "Blog",
+                "Contact",
+                "Get a Quote"
+              ],
+              "url": [
+                "https://tntdump.com/dumpsters",
+                "https://tntdump.com/dumpsters/short-term",
+                "https://tntdump.com/calculator",
+                "https://tntdump.com/blog",
+                "https://tntdump.com/contact",
+                "https://tntdump.com/quote"
+              ]
+            })
+          }}
+        />
         {/* LocalBusiness Schema */}
         <script
           type="application/ld+json"
@@ -201,6 +229,7 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "LocalBusiness",
+              "@id": "https://tntdump.com/#localbusiness",
               "name": "TNT Dumpsters",
               "url": "https://tntdump.com",
               "telephone": "(801) 209-9013",
@@ -334,4 +363,3 @@ export default function RootLayout({
     </html>
   )
 }
-

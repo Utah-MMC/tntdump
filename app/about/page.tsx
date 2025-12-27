@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import { CheckCircle, Phone, Clock, MapPin, Users, Award } from 'lucide-react'
 import HeroSection from '@/components/HeroSection'
@@ -8,7 +8,17 @@ export const metadata: Metadata = {
   description:
     'Family-owned dumpster rental serving Salt Lake & Utah County. Learn our story, service values, and what to expect from delivery to pickup.',
   alternates: { canonical: 'https://tntdump.com/about' },
-}
+,
+    openGraph: {
+      title: 'About TNT Dumpsters | Local Dumpster Rental in Utah',
+      description: 'Family-owned dumpster rental serving Salt Lake & Utah County. Learn our story, service values, and what to expect from delivery to pickup.',
+      url: 'https://tntdump.com/about',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function AboutPage() {
   const values = [
@@ -85,7 +95,7 @@ export default function AboutPage() {
           href: "/contact"
         }}
         showPhoneButton={false}
-        backgroundImage="/images/IMG_3190.jpg"
+        backgroundImage="/images/img-3190.jpg"
       />
 
       {/* Our Story */}
@@ -109,7 +119,7 @@ export default function AboutPage() {
                 </p>
                 <p>
                   We are proud to be locally owned and operated, which allows us to understand and serve the unique 
-                  needs of our community. Our deep roots in the area mean we're not just a service provider â€“ 
+                  needs of our community. Our deep roots in the area mean we're not just a service provider – 
                   we're your neighbors, committed to keeping our community clean and beautiful.
                 </p>
               </div>
@@ -118,7 +128,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/IMG_3190.jpg"
+                  src="/images/img-3190.jpg"
                   alt="TNT Dumpsters serving the Wasatch Front community with reliable waste management services"
                   fill
                   className="object-cover"
@@ -259,7 +269,7 @@ export default function AboutPage() {
             <div className="relative">
               <div className="relative h-96 rounded-lg overflow-hidden">
                 <Image
-                  src="/images/IMG_0350.jpg"
+                  src="/images/img-0350.jpg"
                   alt="TNT Dumpsters professional team providing reliable waste management services"
                   fill
                   className="object-cover"

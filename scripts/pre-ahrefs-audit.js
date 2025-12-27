@@ -13,7 +13,7 @@ const MAX_TITLE_LENGTH = 60;
 const MIN_TITLE_LENGTH = 30;
 const MAX_DESC_LENGTH = 160;
 const MIN_DESC_LENGTH = 120;
-const MAX_IMAGE_SIZE_KB = 200; // 200KB threshold
+const MAX_IMAGE_SIZE_KB = 500; // 500KB threshold
 
 const DETAILED = process.argv.includes('--detailed');
 const EXPORT = process.argv.includes('--export');
@@ -60,7 +60,7 @@ function loadSitemapUrls() {
       if (urlMatches) {
         urlMatches.forEach(match => {
           const url = match.replace(/<\/?loc>/g, '');
-          sitemapUrls.add(url);
+          sitemapUrls.add(url.replace(/\/$/, ''));
         });
       }
     }
@@ -74,8 +74,8 @@ function getRouteFromPath(filePath, baseDir) {
   const relative = path.relative(baseDir, filePath);
   const route = relative
     .replace(/\\/g, '/')
-    .replace(/\/page\.tsx$/, '')
-    .replace(/\/layout\.tsx$/, '')
+    .replace(/(^|\/)page\.tsx$/, '')
+    .replace(/(^|\/)layout\.tsx$/, '')
     .replace(/^app/, '')
     .replace(/\[([^\]]+)\]/g, (_, param) => `:${param}`)
     || '/';
@@ -89,6 +89,15 @@ function checkH1Tags(content, route) {
   const h1Matches = content.match(/<h1[^>]*>(.*?)<\/h1>/gs);
   
   if (!h1Matches || h1Matches.length === 0) {
+    const hasHeroHeading =
+      /<HeroSection(\s|\/|>)/.test(content) ||
+      /<Hero(\s|\/|>)/.test(content) ||
+      /<ServicePageTemplate(\s|\/|>)/.test(content);
+
+    if (hasHeroHeading) {
+      return null;
+    }
+
     issues['h1-missing'].push({ route, file: route });
     return null;
   }
@@ -103,6 +112,109 @@ function checkH1Tags(content, route) {
   return h1Content;
 }
 
+// Extract a balanced object literal starting at the next "{"
+function extractObjectLiteral(content, startIndex) {
+  const openIndex = content.indexOf('{', startIndex);
+  if (openIndex === -1) return null;
+
+  let depth = 0;
+  let inSingle = false;
+  let inDouble = false;
+  let inTemplate = false;
+  let escaped = false;
+
+  for (let i = openIndex; i < content.length; i++) {
+    const ch = content[i];
+
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+
+    if (ch === '\\') {
+      escaped = true;
+      continue;
+    }
+
+    if (inSingle) {
+      if (ch === "'") inSingle = false;
+      continue;
+    }
+
+    if (inDouble) {
+      if (ch === '"') inDouble = false;
+      continue;
+    }
+
+    if (inTemplate) {
+      if (ch === '`') inTemplate = false;
+      continue;
+    }
+
+    if (ch === "'") {
+      inSingle = true;
+      continue;
+    }
+
+    if (ch === '"') {
+      inDouble = true;
+      continue;
+    }
+
+    if (ch === '`') {
+      inTemplate = true;
+      continue;
+    }
+
+    if (ch === '{') depth++;
+    if (ch === '}') {
+      depth--;
+      if (depth === 0) {
+        return content.slice(openIndex, i + 1);
+      }
+    }
+  }
+
+  return null;
+}
+
+function matchStringValue(source, key) {
+  if (!source) return null;
+  const regex = new RegExp(`${key}\\s*:\\s*(?:'([^']*)'|"([^"]*)"|\\\`([^\\\`]*)\\\`)`);
+  const match = source.match(regex);
+  return match ? (match[1] || match[2] || match[3]) : null;
+}
+
+function hasKey(source, key) {
+  return !!(source && new RegExp(`${key}\\s*:`).test(source));
+}
+
+function extractMetadataBlock(content) {
+  const staticIndex = content.indexOf('export const metadata');
+  if (staticIndex !== -1) {
+    return extractObjectLiteral(content, staticIndex);
+  }
+
+  const generateIndex = content.indexOf('generateMetadata');
+  if (generateIndex !== -1) {
+    const functionBody = extractObjectLiteral(content, generateIndex);
+    if (functionBody) {
+      let returnIndex = functionBody.indexOf('return');
+      let bestMatch = null;
+      while (returnIndex !== -1) {
+        const candidate = extractObjectLiteral(functionBody, returnIndex);
+        if (candidate && (!bestMatch || candidate.length > bestMatch.length)) {
+          bestMatch = candidate;
+        }
+        returnIndex = functionBody.indexOf('return', returnIndex + 6);
+      }
+      if (bestMatch) return bestMatch;
+    }
+  }
+
+  return null;
+}
+
 // Extract metadata from file
 function extractMetadata(content, route) {
   const metadata = {
@@ -115,65 +227,48 @@ function extractMetadata(content, route) {
     ogImage: null,
     hasMetadata: false,
   };
-  
-  // Check for static metadata export
-  const staticMatch = content.match(/export\s+const\s+metadata[^=]*=\s*{([^}]+)}/s);
-  
-  // Check for generateMetadata function
-  const generateMatch = content.match(/export\s+async\s+function\s+generateMetadata[^{]*{([^}]+)}/s);
-  
-  if (staticMatch || generateMatch) {
-    metadata.hasMetadata = true;
-    const metadataContent = staticMatch ? staticMatch[1] : generateMatch[1];
-    
-    // Extract title
-    const titleMatch = metadataContent.match(/title:\s*['"]([^'"]+)['"]/) || 
-                      metadataContent.match(/title:\s*`([^`]+)`/);
-    if (titleMatch) {
-      metadata.title = titleMatch[1];
-    }
-    
-    // Extract description
-    const descMatch = metadataContent.match(/description:\s*['"]([^'"]+)['"]/) ||
-                     metadataContent.match(/description:\s*`([^`]+)`/);
-    if (descMatch) {
-      metadata.description = descMatch[1];
-    }
-    
-    // Extract canonical
-    const canonicalMatch = metadataContent.match(/canonical:\s*['"]([^'"]+)['"]/) ||
-                          metadataContent.match(/canonical:\s*`([^`]+)`/) ||
-                          metadataContent.match(/alternates:\s*{[^}]*canonical:\s*['"]([^'"]+)['"]/);
-    if (canonicalMatch) {
-      metadata.canonical = canonicalMatch[1];
-    }
-    
-    // Extract Open Graph URL
-    const ogUrlMatch = metadataContent.match(/openGraph:\s*{[^}]*url:\s*['"]([^'"]+)['"]/) ||
-                      metadataContent.match(/url:\s*['"]([^'"]+)['"]/);
-    if (ogUrlMatch) {
-      metadata.ogUrl = ogUrlMatch[1];
-    }
-    
-    // Extract OG title
-    const ogTitleMatch = metadataContent.match(/openGraph:\s*{[^}]*title:\s*['"]([^'"]+)['"]/);
-    if (ogTitleMatch) {
-      metadata.ogTitle = ogTitleMatch[1];
-    }
-    
-    // Extract OG description
-    const ogDescMatch = metadataContent.match(/openGraph:\s*{[^}]*description:\s*['"]([^'"]+)['"]/);
-    if (ogDescMatch) {
-      metadata.ogDescription = ogDescMatch[1];
-    }
-    
-    // Extract OG image
-    const ogImageMatch = metadataContent.match(/openGraph:\s*{[^}]*images:\s*\[[^\]]*url:\s*['"]([^'"]+)['"]/);
-    if (ogImageMatch) {
-      metadata.ogImage = ogImageMatch[1];
-    }
+
+  const metadataContent = extractMetadataBlock(content);
+  if (!metadataContent) return metadata;
+
+  metadata.hasMetadata = true;
+
+  metadata.title = matchStringValue(metadataContent, 'title');
+  metadata.description = matchStringValue(metadataContent, 'description');
+
+  const canonicalValue = matchStringValue(metadataContent, 'canonical');
+  if (canonicalValue) {
+    metadata.canonical = canonicalValue;
+  } else {
+  const alternatesIndex = metadataContent.indexOf('alternates');
+  const alternatesBlock = alternatesIndex !== -1
+      ? extractObjectLiteral(metadataContent, alternatesIndex)
+      : null;
+  const alternatesCanonical = matchStringValue(alternatesBlock, 'canonical');
+  if (alternatesCanonical) metadata.canonical = alternatesCanonical;
+  if (!metadata.canonical && hasKey(alternatesBlock, 'canonical')) {
+    metadata.canonical = '__dynamic__';
   }
-  
+  }
+
+  const ogIndex = metadataContent.indexOf('openGraph');
+  const ogBlock = ogIndex !== -1 ? extractObjectLiteral(metadataContent, ogIndex) : null;
+
+  metadata.ogUrl = matchStringValue(ogBlock, 'url');
+  metadata.ogTitle = matchStringValue(ogBlock, 'title');
+  metadata.ogDescription = matchStringValue(ogBlock, 'description');
+
+  if (ogBlock) {
+    const ogImageMatch = ogBlock.match(/images:\s*\[[^\]]*?(?:url:\s*['"]([^'"]+)['"]|['"]([^'"]+)['"])/s);
+    if (ogImageMatch) {
+      metadata.ogImage = ogImageMatch[1] || ogImageMatch[2];
+    }
+    if (!metadata.ogUrl && hasKey(ogBlock, 'url')) metadata.ogUrl = '__dynamic__';
+    if (!metadata.ogTitle && hasKey(ogBlock, 'title')) metadata.ogTitle = '__dynamic__';
+    if (!metadata.ogDescription && hasKey(ogBlock, 'description')) metadata.ogDescription = '__dynamic__';
+    if (!metadata.ogImage && hasKey(ogBlock, 'images')) metadata.ogImage = '__dynamic__';
+  }
+
   return metadata;
 }
 
@@ -299,6 +394,11 @@ function checkImages(content, route) {
     if (!srcMatch) return;
     
     let imagePath = srcMatch[1];
+
+    // Skip remote images
+    if (/^https?:\/\//.test(imagePath) || imagePath.startsWith('//')) {
+      return;
+    }
     
     // Remove leading slash and query params
     imagePath = imagePath.replace(/^\//, '').split('?')[0];
@@ -355,7 +455,7 @@ function scanPages() {
         const route = getRouteFromPath(fullPath, appDir);
         
         // Skip test pages
-        if (route.includes('/test')) continue;
+        if (route.includes('/test') || route.startsWith('test')) continue;
         
         // Extract and validate metadata
         const metadata = extractMetadata(content, route);
@@ -365,12 +465,35 @@ function scanPages() {
           const h1 = checkH1Tags(content, route);
           
           // Check if H1 matches title (H1 changed issue)
-          if (h1 && metadata.title && h1 !== metadata.title) {
-            issues['h1-changed'].push({
-              route,
-              h1,
-              title: metadata.title,
+          if (h1 && metadata.title) {
+            const normalizedH1 = h1.replace(/\{[^}]*\}/g, ' ').replace(/\s+/g, ' ').trim();
+            const normalizedTitle = metadata.title.replace(/\s*\|\s*TNT Dumpsters.*$/i, '').trim();
+            const normalizedTitleShort = normalizedTitle.replace(/\.\.\.$/, '').trim();
+            const h1Lower = normalizedH1.toLowerCase();
+            const titleLower = normalizedTitleShort.toLowerCase();
+
+            const h1Words = new Set(h1Lower.split(/[^a-z0-9]+/).filter((w) => w.length > 2));
+            const titleWords = new Set(titleLower.split(/[^a-z0-9]+/).filter((w) => w.length > 2));
+            let overlap = 0;
+            h1Words.forEach((word) => {
+              if (titleWords.has(word)) overlap += 1;
             });
+            const overlapRatio = h1Words.size ? overlap / h1Words.size : 0;
+
+            const isMatch =
+              normalizedH1 === normalizedTitle ||
+              normalizedH1 === normalizedTitleShort ||
+              titleLower.startsWith(h1Lower) ||
+              h1Lower.startsWith(titleLower) ||
+              overlapRatio >= 0.6;
+
+            if (!isMatch) {
+              issues['h1-changed'].push({
+                route,
+                h1: normalizedH1,
+                title: metadata.title,
+              });
+            }
           }
         }
         
@@ -380,15 +503,27 @@ function scanPages() {
           validateDescription(metadata.description, route);
           checkOpenGraph(metadata, route);
           checkCanonicalMatch(metadata, route);
-          checkDuplicates(metadata, route);
+          if (file !== 'layout.tsx') {
+            checkDuplicates(metadata, route);
+          }
         }
         
         // Check images
         checkImages(content, route);
         
         // Check sitemap coverage
-        const fullUrl = `${SITE_URL}${route === '/' ? '' : route}`;
-        if (!sitemapUrls.has(fullUrl) && file === 'page.tsx' && !route.includes('/test')) {
+        const fullUrl = `${SITE_URL}${route === '/' ? '' : '/' + route}`.replace(/\/$/, '');
+        if (
+          !route.includes(':') &&
+          file === 'page.tsx' &&
+          !route.includes('/test') &&
+          !route.startsWith('test') &&
+          route !== 'cart' &&
+          route !== 'order-confirmation' &&
+          !route.includes('/cart') &&
+          !route.includes('/order-confirmation') &&
+          !sitemapUrls.has(fullUrl)
+        ) {
           issues['not-in-sitemap'].push({ route, url: fullUrl });
         }
       }

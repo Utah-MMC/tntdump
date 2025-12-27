@@ -63,6 +63,67 @@ export default function Home() {
           })
         }}
       />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebPage",
+                "@id": "https://tntdump.com/#webpage",
+                "url": "https://tntdump.com/",
+                "name": "Dumpster Rental & Roll-Off Services | TNT Dumpsters",
+                "description": "Local container rental in Salt Lake & Utah County. 15/20/30 yard roll-offs, fast delivery, clear pricing.",
+                "isPartOf": { "@id": "https://tntdump.com/#website" },
+                "about": { "@id": "https://tntdump.com/#organization" },
+                "primaryImageOfPage": {
+                  "@type": "ImageObject",
+                  "url": "https://tntdump.com/images/t-and-t-dumpsters-logo-176w.webp",
+                  "width": 176,
+                  "height": 176
+                }
+              },
+              {
+                "@type": "BreadcrumbList",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://tntdump.com/" }
+                ]
+              },
+              {
+                "@type": "Service",
+                "name": "Dumpster Rental Service",
+                "serviceType": "Roll-off dumpster rental",
+                "provider": { "@id": "https://tntdump.com/#organization" },
+                "areaServed": "Utah",
+                "availableChannel": {
+                  "@type": "ServiceChannel",
+                  "servicePhone": "(801) 209-9013",
+                  "availableLanguage": "English"
+                }
+              },
+              {
+                "@type": "ItemList",
+                "name": "Core Dumpster Services",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "Residential Containers", "url": "https://tntdump.com/dumpsters/residential" },
+                  { "@type": "ListItem", "position": 2, "name": "Commercial Containers", "url": "https://tntdump.com/dumpsters/commercial" },
+                  { "@type": "ListItem", "position": 3, "name": "Construction & Concrete Containers", "url": "https://tntdump.com/dumpsters/concrete" }
+                ]
+              },
+              {
+                "@type": "ItemList",
+                "name": "Dumpster Sizes",
+                "itemListElement": [
+                  { "@type": "ListItem", "position": 1, "name": "15 Yard Dumpster", "url": "https://tntdump.com/15-yard-dumpster-rental" },
+                  { "@type": "ListItem", "position": 2, "name": "20 Yard Dumpster", "url": "https://tntdump.com/20-yard-dumpster-rental" },
+                  { "@type": "ListItem", "position": 3, "name": "30 Yard Dumpster", "url": "https://tntdump.com/30-yard-dumpster-rental" }
+                ]
+              }
+            ]
+          })
+        }}
+      />
       <Hero />
 
       {/* Core services quick links for strong internal routing */}
@@ -229,7 +290,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/dumpster-delivery-service.png"
+                    src="/images/dumpster-delivery-service.webp"
                     alt="Professional roll-off container delivery service with truck dropping off container at job site"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -259,7 +320,7 @@ export default function Home() {
               <div className="relative overflow-hidden rounded-lg shadow-lg group hover:shadow-xl transition-shadow">
                 <div className="relative aspect-[4/3]">
                   <Image
-                    src="/images/open-dumpster-rental.png"
+                    src="/images/open-dumpster-rental.webp"
                     alt="Open roll-off container at construction site for efficient waste management and debris disposal"
                     fill
                     sizes="(min-width: 768px) 33vw, 100vw"
@@ -299,7 +360,7 @@ export default function Home() {
           <div className="max-w-3xl mx-auto mb-12">
             <a href="/cities" className="block">
               <Image
-                src="/images/utah-dumpster-service-areas.png"
+                src="/images/utah-dumpster-service-areas.webp"
                 alt="Utah container rental service areas map showing TNT Dumpsters coverage along the Wasatch Front"
                 width={1200}
                 height={400}
@@ -434,6 +495,41 @@ export default function Home() {
             <a href="#what-we-take" className="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition-shadow text-center">
               <h3 className="font-bold text-blue-600 mb-2">What We Take</h3>
               <p className="text-sm text-gray-600">Materials and debris we accept</p>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-12 bg-white">
+        <div className="container-custom">
+          <div className="text-center mb-8">
+            <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">Helpful Guides & Tools</h2>
+            <p className="text-gray-600 max-w-3xl mx-auto">Plan your rental with these quick resources.</p>
+          </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+            <a href="/dumpster-rental-process" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Dumpster Rental Process</h3>
+              <p className="text-sm text-gray-600">Step-by-step delivery, loading, and pickup.</p>
+            </a>
+            <a href="/dumpster-rental-permits" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Permits & Placement</h3>
+              <p className="text-sm text-gray-600">When you need a permit and how to plan.</p>
+            </a>
+            <a href="/pricing" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Pricing Overview</h3>
+              <p className="text-sm text-gray-600">What affects cost and how to budget.</p>
+            </a>
+            <a href="/dumpster-size-calculator" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Size Calculator</h3>
+              <p className="text-sm text-gray-600">Estimate the right size for your job.</p>
+            </a>
+            <a href="/dumpster-rental-cost-calculator" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Cost Calculator</h3>
+              <p className="text-sm text-gray-600">Plan pricing based on size and weight.</p>
+            </a>
+            <a href="/responsible-disposal" className="bg-gray-50 rounded-lg border border-gray-200 p-6 hover:bg-gray-100 transition-colors">
+              <h3 className="font-bold text-gray-900 mb-2">Responsible Disposal</h3>
+              <p className="text-sm text-gray-600">Keep your load compliant and safe.</p>
             </a>
           </div>
         </div>

@@ -52,8 +52,8 @@ function getRouteFromPath(filePath, baseDir) {
   const relative = path.relative(baseDir, filePath);
   const route = relative
     .replace(/\\/g, '/')
-    .replace(/\/page\.tsx$/, '')
-    .replace(/\/layout\.tsx$/, '')
+    .replace(/(^|\/)page\.tsx$/, '')
+    .replace(/(^|\/)layout\.tsx$/, '')
     .replace(/^app/, '')
     .replace(/\[([^\]]+)\]/g, (_, param) => `:${param}`)
     || '/';
@@ -66,8 +66,13 @@ function fixMissingH1(filePath, route, metadata) {
   const content = fs.readFileSync(filePath, 'utf8');
   
   // Check if H1 already exists (including in components)
-  if (content.match(/<h1[^>]*>.*?<\/h1>/s) || content.includes('HeroSection')) {
-    // HeroSection component likely has H1, skip
+  if (
+    content.match(/<h1[^>]*>.*?<\/h1>/s) ||
+    /<HeroSection(\s|\/|>)/.test(content) ||
+    /<Hero(\s|\/|>)/.test(content) ||
+    /<ServicePageTemplate(\s|\/|>)/.test(content)
+  ) {
+    // Hero-based components already include H1, skip
     return false;
   }
   
@@ -124,6 +129,20 @@ function fixMissingH1(filePath, route, metadata) {
     }
   }
   
+  if (!content.includes('export default')) {
+    const description = metadata?.description
+      ? `\n            <p className="mt-4 text-lg text-gray-600">${metadata.description}</p>`
+      : '';
+    const pageStub = `\n\nexport default function Page() {\n  return (\n    <main className="min-h-screen">\n      <section className="py-16 bg-white">\n        <div className="container-custom">\n          <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">${h1Text}</h1>${description}\n        </div>\n      </section>\n    </main>\n  )\n}\n`;
+
+    if (!DRY_RUN) {
+      fs.writeFileSync(filePath, content + pageStub, 'utf8');
+    }
+
+    fixLog.push(`ƒo. Added page template with H1 to ${route}: "${h1Text}"`);
+    return true;
+  }
+
   return false;
 }
 
@@ -196,6 +215,7 @@ function fixDescriptionLength(filePath, route, metadata) {
 // Fix missing canonical
 function fixMissingCanonical(filePath, route, metadata) {
   if (metadata?.canonical) return false;
+  if (route === 'layout.tsx') return false;
   
   const canonical = generateCanonical(route);
   const content = fs.readFileSync(filePath, 'utf8');
@@ -262,6 +282,8 @@ function fixIncompleteOG(filePath, route, metadata) {
   
   let newContent = content;
   let changed = false;
+  const isStaticMetadata = content.includes('export const metadata');
+  const ogImageBlock = "images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],";
   
   // Check what's missing
   const hasOG = content.includes('openGraph:');
@@ -272,12 +294,19 @@ function fixIncompleteOG(filePath, route, metadata) {
   
   if (!hasOG) {
     // Add complete openGraph object
-    const ogBlock = `,\n    openGraph: {\n      title: ${metadata?.title ? `'${metadata.title}'` : 'title'},\n      description: ${metadata?.description ? `'${metadata.description}'` : 'description'},\n      url: '${canonical}',\n      siteName: 'TNT Dumpsters',\n      type: 'website',\n      locale: 'en_US',\n      images: [{ url: '/images/tand-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],\n    }`;
+    const ogBlock = `,\n    openGraph: {\n      title: ${metadata?.title ? `'${metadata.title}'` : 'title'},\n      description: ${metadata?.description ? `'${metadata.description}'` : 'description'},\n      url: '${canonical}',\n      siteName: 'TNT Dumpsters',\n      type: 'website',\n      locale: 'en_US',\n      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],\n    }`;
     
     // Add to metadata return
     if (content.includes('return {')) {
       newContent = content.replace(/(return\s*{)([^}]+)(})/s, `$1$2${ogBlock}$3`);
       changed = true;
+    } else if (isStaticMetadata) {
+      const metadataBlock = extractMetadataBlock(content);
+      if (metadataBlock) {
+        const updatedBlock = metadataBlock.replace(/\}\s*$/, `${ogBlock}\n  }`);
+        newContent = content.replace(metadataBlock, updatedBlock);
+        changed = true;
+      }
     }
   } else {
     // Complete missing OG fields
@@ -308,7 +337,7 @@ function fixIncompleteOG(filePath, route, metadata) {
     if (!hasOGImage) {
       newContent = newContent.replace(
         /(openGraph:\s*{)([^}]*)(})/s,
-        `$1$2\n      images: [{ url: '/images/tand-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],$3`
+        `$1$2\n      ${ogImageBlock}$3`
       );
       changed = true;
     }
@@ -326,6 +355,96 @@ function fixIncompleteOG(filePath, route, metadata) {
   return false;
 }
 
+// Helper: Extract a balanced object literal starting at the next "{"
+function extractObjectLiteral(content, startIndex) {
+  const openIndex = content.indexOf('{', startIndex);
+  if (openIndex === -1) return null;
+
+  let depth = 0;
+  let inSingle = false;
+  let inDouble = false;
+  let inTemplate = false;
+  let escaped = false;
+
+  for (let i = openIndex; i < content.length; i++) {
+    const ch = content[i];
+
+    if (escaped) {
+      escaped = false;
+      continue;
+    }
+
+    if (ch === '\\') {
+      escaped = true;
+      continue;
+    }
+
+    if (inSingle) {
+      if (ch === "'") inSingle = false;
+      continue;
+    }
+
+    if (inDouble) {
+      if (ch === '"') inDouble = false;
+      continue;
+    }
+
+    if (inTemplate) {
+      if (ch === '`') inTemplate = false;
+      continue;
+    }
+
+    if (ch === "'") {
+      inSingle = true;
+      continue;
+    }
+
+    if (ch === '"') {
+      inDouble = true;
+      continue;
+    }
+
+    if (ch === '`') {
+      inTemplate = true;
+      continue;
+    }
+
+    if (ch === '{') depth++;
+    if (ch === '}') {
+      depth--;
+      if (depth === 0) {
+        return content.slice(openIndex, i + 1);
+      }
+    }
+  }
+
+  return null;
+}
+
+function matchStringValue(source, key) {
+  if (!source) return null;
+  const regex = new RegExp(`${key}\\s*:\\s*(?:'([^']*)'|"([^"]*)"|\\\`([^\\\`]*)\\\`)`);
+  const match = source.match(regex);
+  return match ? (match[1] || match[2] || match[3]) : null;
+}
+
+function extractMetadataBlock(content) {
+  const staticIndex = content.indexOf('export const metadata');
+  if (staticIndex !== -1) {
+    return extractObjectLiteral(content, staticIndex);
+  }
+
+  const generateIndex = content.indexOf('generateMetadata');
+  if (generateIndex !== -1) {
+    const returnIndex = content.indexOf('return', generateIndex);
+    if (returnIndex !== -1) {
+      return extractObjectLiteral(content, returnIndex);
+    }
+  }
+
+  return null;
+}
+
 // Extract metadata from file
 function extractMetadata(content) {
   const metadata = {
@@ -333,26 +452,25 @@ function extractMetadata(content) {
     description: null,
     canonical: null,
   };
-  
-  const staticMatch = content.match(/export\s+const\s+metadata[^=]*=\s*{([^}]+)}/s);
-  const generateMatch = content.match(/export\s+async\s+function\s+generateMetadata[^{]*{([^}]+return\s*{([^}]+)})/s);
-  
-  const metadataContent = staticMatch ? staticMatch[1] : (generateMatch ? generateMatch[2] : '');
-  
-  if (metadataContent) {
-    const titleMatch = metadataContent.match(/title:\s*['"]([^'"]+)['"]/) || 
-                      metadataContent.match(/title:\s*`([^`]+)`/);
-    if (titleMatch) metadata.title = titleMatch[1];
-    
-    const descMatch = metadataContent.match(/description:\s*['"]([^'"]+)['"]/) ||
-                     metadataContent.match(/description:\s*`([^`]+)`/);
-    if (descMatch) metadata.description = descMatch[1];
-    
-    const canonicalMatch = metadataContent.match(/canonical:\s*['"]([^'"]+)['"]/) ||
-                          metadataContent.match(/alternates:\s*{[^}]*canonical:\s*['"]([^'"]+)['"]/);
-    if (canonicalMatch) metadata.canonical = canonicalMatch[1];
+
+  const metadataContent = extractMetadataBlock(content);
+  if (!metadataContent) return metadata;
+
+  metadata.title = matchStringValue(metadataContent, 'title');
+  metadata.description = matchStringValue(metadataContent, 'description');
+
+  const canonicalValue = matchStringValue(metadataContent, 'canonical');
+  if (canonicalValue) {
+    metadata.canonical = canonicalValue;
+  } else {
+    const alternatesIndex = metadataContent.indexOf('alternates');
+    const alternatesBlock = alternatesIndex !== -1
+      ? extractObjectLiteral(metadataContent, alternatesIndex)
+      : null;
+    const alternatesCanonical = matchStringValue(alternatesBlock, 'canonical');
+    if (alternatesCanonical) metadata.canonical = alternatesCanonical;
   }
-  
+
   return metadata;
 }
 
@@ -371,17 +489,18 @@ function scanAndFix() {
       
       if (stat.isDirectory()) {
         scanDirectory(fullPath, path.join(relativePath, file));
-      } else if (file === 'page.tsx') {
+      } else if (file === 'page.tsx' || file === 'layout.tsx') {
         const route = getRouteFromPath(fullPath, appDir);
+        const isPage = file === 'page.tsx';
         
         // Skip test pages
-        if (route.includes('/test')) continue;
+        if (route.includes('/test') || route.startsWith('test')) continue;
         
         const content = fs.readFileSync(fullPath, 'utf8');
         const metadata = extractMetadata(content);
         
         // Apply fixes
-        if (fixMissingH1(fullPath, route, metadata)) fixesApplied++;
+        if (isPage && fixMissingH1(fullPath, route, metadata)) fixesApplied++;
         if (fixTitleLength(fullPath, route, metadata)) fixesApplied++;
         if (fixDescriptionLength(fullPath, route, metadata)) fixesApplied++;
         if (fixMissingCanonical(fullPath, route, metadata)) fixesApplied++;

@@ -87,8 +87,8 @@
     "/images/construction-site-3688252-1280.jpg",
     "/images/construction-site-3688262-1280.jpg",
     "/images/dumpster-rental-contact.jpg",
-    "/images/pexels-rodrigo-eder-1347087-2846205.jpg",
-    "/images/pexels-cottonbro-4551310.jpg"
+    "/images/eder-1347087-2846205.jpg",
+    "/images/4551310.jpg"
   ],
 
   citySpecific: {

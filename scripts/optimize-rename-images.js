@@ -11,6 +11,7 @@ const path = require('path');
 const IMAGES_DIR = path.join(process.cwd(), 'public', 'images');
 const MAX_SIZE_KB = 500;
 const MAX_SIZE_BYTES = MAX_SIZE_KB * 1024;
+const OPTIMIZE_ONLY = process.argv.includes('--optimize-only');
 
 // SEO-friendly name mapping
 const nameMap = {
@@ -162,7 +163,7 @@ async function processImage(filePath, relativePath) {
     let wasOptimized = false;
 
     // Rename if needed
-    if (needsRename) {
+    if (needsRename && !OPTIMIZE_ONLY) {
       newPath = path.join(dir, seoName);
       if (!fs.existsSync(newPath)) {
         fs.renameSync(filePath, newPath);

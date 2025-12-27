@@ -1,11 +1,21 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Test | TNT Dumpsters test',
+  title: 'Test | TNT Dumpsters test test',
   description: 'Internal test page for deployment verification. Not intended for public search results. Get fast delivery and clear pric',
   alternates: { canonical: 'https://tntdump.com/test' },
   robots: { index: false, follow: false },
-}
+,
+    openGraph: {
+      title: 'Test | TNT Dumpsters test test',
+      description: 'Internal test page for deployment verification. Not intended for public search results. Get fast delivery and clear pric',
+      url: 'https://tntdump.com/test',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function TestPage() {
   return (

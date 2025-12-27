@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getCityData, getAllCities, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
+import { getNeighborhoodPair, summarizeNeighborhoods, summarizeZipCodes } from '@/lib/cityText'
 import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
 
 // Generate static params for all cities - 30 yard routes
@@ -254,7 +255,7 @@ function LocalContext({ city }: { city: CityData }) {
         <h2>30 Yard Dumpster Delivery in {city.city}</h2>
         <p>
           Renting a 30 yard dumpster in {city.city} is straightforward when you work with a local operator who understands
-          your area. {BRAND.name} delivers across {city.county} including {city.neighborhoods_served?.slice(0, 3).join(', ')} and beyond.
+          your area. {BRAND.name} delivers across {city.county} including {summarizeNeighborhoods(city.neighborhoods_served)} and beyond.
           We coordinate drop-off times, help with placement strategy, and manage pickup as soon as you're ready.
         </p>
         <p>
@@ -347,9 +348,9 @@ function SizeComparisonSection({ city }: { city: CityData }) {
             <strong>Still unsure?</strong> Use our{' '}
             <a href="/calculator/volume" className="text-blue-600 hover:underline">volume calculator</a> to estimate your
             debris, or check out our guide on{' '}
-            <a href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:underline">choosing the right dumpster size</a>.
+            <a href="/choose-right-dumpster-size" className="text-blue-600 hover:underline">choosing the right dumpster size</a>.
             For pricing comparisons, see our{' '}
-            <a href="/blog/dumpster-rental-prices-by-size" className="text-blue-600 hover:underline">pricing by size breakdown</a>.
+            <a href="/dumpster-rental-prices-by-size" className="text-blue-600 hover:underline">pricing by size breakdown</a>.
           </p>
           <p>
             Need commercial capacity or frequent swaps? Explore our{' '}
@@ -420,7 +421,8 @@ function buildFaq(city: CityData) {
   q('How do swaps work for 30 yard dumpsters?', 'When full, we remove the loaded container and deliver a fresh one. Each swap incurs a new haul fee plus tonnage. Ask about project pricing for multiple turns.')
   q('Can I extend my rental period?', 'Yes—daily or weekly extensions are available. Contact us early to reserve the time slot and avoid daily fees.')
   q('Do you offer contractor or volume pricing?', 'Yes—frequent users and contractors can negotiate rates. Ask our team about commercial accounts and project-based pricing.')
-  q(`Do you serve my neighborhood in ${city.city}?`, `Yes—from ${city.neighborhoods_served?.[0] || 'downtown'} to ${city.neighborhoods_served?.[1] || 'surrounding areas'} and the ${city.primary_zips?.join(', ')} ZIPs. Call if unsure—we likely deliver to your area.`)
+  const hoodPair = getNeighborhoodPair(city.neighborhoods_served)
+  q(`Do you serve my neighborhood in ${city.city}?`, `Yes—from ${hoodPair.first} to ${hoodPair.second} and the ${summarizeZipCodes(city.primary_zips)}. Call if unsure—we likely deliver to your area.`)
   q('How do I book a 30 yard dumpster?', 'Call, text, or request a quote online. We confirm details, delivery window, and placement—then deliver on schedule.')
   q('What if I need the dumpster longer than expected?', 'Extensions are simple—just let us know. We charge daily or weekly rates and adjust your pickup date accordingly.')
   q(`What happens if it snows in ${city.city}?`, city.winter_notes || 'We monitor weather and coordinate safe delivery and pickup around storms. Chocks and boards prevent sliding on inclines.')
@@ -477,7 +479,7 @@ export default async function ThirtyYardDumpsterPage({ params }: PageProps) {
             Explore Utah service areas
           </Link>
           {' | '}
-          <a href="/blog/choose-right-dumpster-size" className="text-blue-600 hover:underline">
+          <a href="/choose-right-dumpster-size" className="text-blue-600 hover:underline">
             Sizing guide
           </a>
         </div>

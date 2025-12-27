@@ -17,7 +17,13 @@ const Footer = () => {
     company: [
       { name: 'About Us', href: '/about' },
       { name: 'Reviews', href: '/reviews' },
+      { name: 'Pricing', href: '/pricing' },
+      { name: 'Fees', href: '/fees' },
       { name: 'Partners', href: '/partners' },
+      { name: 'Dumpster Rental Process', href: '/dumpster-rental-process' },
+      { name: 'Dumpster Rental Permits', href: '/dumpster-rental-permits' },
+      { name: 'Dumpster Size Calculator', href: '/dumpster-size-calculator' },
+      { name: 'Cost Calculator', href: '/dumpster-rental-cost-calculator' },
       { name: 'FAQs', href: '/faqs' },
       { name: 'Contact', href: '/contact' },
       { name: 'Estate Cleanouts', href: '/estate-cleanouts' },

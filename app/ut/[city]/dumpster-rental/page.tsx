@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Image from 'next/image'
 import { getCityData, getCitySlugParams, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
+import { getNeighborhoodPair, summarizeNeighborhoods, summarizeZipCodes } from '@/lib/cityText'
 import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
 
 export async function generateStaticParams() {
@@ -20,11 +21,12 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!data) return {}
   const title = `Dumpster Rentals in ${data.city}, Utah | ${BRAND.name}`
   const description = `Local dumpster rental in ${data.city}, UT—${[15, 20, 30].join('/')} yard roll-offs with fast delivery and clear pricing. Call ${BRAND.telephone}.`
-  const canonical = `${BRAND.url}/ut/${data.slug}/dumpster-rental`
+  const canonical = `${BRAND.url}/${data.slug}-dumpster-rentals/service-areas/${data.slug}`
   return {
     title,
     description,
     alternates: { canonical },
+    robots: { index: false, follow: false },
     openGraph: {
       title,
       description,
@@ -98,7 +100,7 @@ function LocalContext({ city }: { city: CityData }) {
         <p>
           Renting a dumpster in {city.city} should feel straightforward and predictable. We tailored our service around the
           way local homeowners, contractors, and community managers actually work: clear terms, dependable drop windows,
-          and easy communication. We deliver across the {city.county} area including {city.neighborhoods_served?.slice(0, 3).join(', ')} and beyond.
+          and easy communication. We deliver across the {city.county} area including {summarizeNeighborhoods(city.neighborhoods_served)} and beyond.
         </p>
         <p>
           Disposal for {city.city} generally runs through nearby facilities such as {city.transfer_station_name || 'the local transfer station'} at
@@ -196,7 +198,8 @@ function buildFaq(city: CityData) {
   q('Is there a tonnage cap?', 'Road limits apply. For heavy debris, we use smaller containers to stay legal and safe.')
   q('Where should I place it?', 'Near the work area without blocking garages or mailboxes. On-street can work if permitted and visible.')
   q('What if access is tight?', 'We have skilled drivers and can advise based on photos—be honest about clearances for safety.')
-  q('Do you serve my neighborhood?', `Yes—from ${city.neighborhoods_served?.[0] || 'downtown'} to ${city.neighborhoods_served?.[1] || 'surrounding areas'} and the ${city.primary_zips?.join(', ')} ZIPs.`)
+  const hoodPair = getNeighborhoodPair(city.neighborhoods_served)
+  q('Do you serve my neighborhood?', `Yes—from ${hoodPair.first} to ${hoodPair.second} and the ${summarizeZipCodes(city.primary_zips)}.`)
   q('How do I book?', 'Call, text, or request a quote online. We’ll confirm details and delivery window.')
   q('Can I keep it longer?', 'Yes—daily extensions are available. Let us know early to reserve the slot.')
   q('Do you offer contractor pricing?', 'Yes—frequent users can get negotiated rates; ask our team.')

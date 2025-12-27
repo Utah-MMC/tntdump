@@ -17,6 +17,28 @@ const PAGE_FILENAMES = new Set([
   'page.tsx', 'page.jsx', 'page.js', 'page.ts', 'page.mdx'
 ]);
 
+function readJsonIfExists(p) {
+  try {
+    if (fs.existsSync(p)) {
+      const raw = fs.readFileSync(p, 'utf8');
+      return JSON.parse(raw);
+    }
+  } catch {}
+  return null;
+}
+
+function ensureLeadingSlash(urlPath) {
+  if (!urlPath.startsWith('/')) return '/' + urlPath;
+  return urlPath;
+}
+
+const POSTS_LIST = readJsonIfExists(path.join(DATA_DIR, 'posts.json'));
+const POSTS_SET = new Set(
+  Array.isArray(POSTS_LIST)
+    ? POSTS_LIST.map((slugOrPath) => ensureLeadingSlash(String(slugOrPath).trim())).filter(Boolean)
+    : []
+);
+
 function toISO(d) {
   try { return new Date(d).toISOString(); } catch { return new Date().toISOString(); }
 }
@@ -63,7 +85,11 @@ function shouldSkipRoute(rel) {
     return true;
   }
   // Skip blog posts (they're in sitemap-posts.xml)
-  if (rel.startsWith('/blog/') && rel !== '/blog') {
+  if (POSTS_SET.has(rel)) {
+    return true;
+  }
+  // Skip legacy /blog paths (redirected to root)
+  if (rel.startsWith('/blog')) {
     return true;
   }
   return false;
@@ -108,21 +134,6 @@ function collectStaticRoutes(dir = APP_DIR) {
   return out;
 }
 
-function readJsonIfExists(p) {
-  try {
-    if (fs.existsSync(p)) {
-      const raw = fs.readFileSync(p, 'utf8');
-      return JSON.parse(raw);
-    }
-  } catch {}
-  return null;
-}
-
-function ensureLeadingSlash(urlPath) {
-  if (!urlPath.startsWith('/')) return '/' + urlPath;
-  return urlPath;
-}
-
 async function getPages() {
   // Purely from filesystem
   return collectStaticRoutes();
@@ -137,18 +148,19 @@ async function getCities() {
     const now = toISO(Date.now());
     const cityRoutes = list
       .map(slugOrPath => ensureLeadingSlash(String(slugOrPath).trim()))
-      .filter(p => p.startsWith('/ut/'));
+      .filter(p => p);
     
     // Extract city slugs from routes like /ut/midvale/dumpster-rental
+    // or /midvale-dumpster-rentals/service-areas/midvale
     const citySlugs = cityRoutes
-      .map(route => {
-        const match = route.match(/^\/ut\/([^\/]+)\/dumpster-rental$/);
-        return match ? match[1] : null;
+      .map((route) => {
+        const utMatch = route.match(/^\/ut\/([^\/]+)\/dumpster-rental$/);
+        if (utMatch) return utMatch[1];
+        const canonicalMatch = route.match(/^\/([^\/]+)-dumpster-rentals\/service-areas\/([^\/]+)$/);
+        if (canonicalMatch && canonicalMatch[1] === canonicalMatch[2]) return canonicalMatch[1];
+        return null;
       })
       .filter(Boolean);
-    
-    // Generate city dumpster rental pages
-    const cityPages = cityRoutes.map(p => ({ loc: `${SITE}${p}`, lastmod: now }));
     
     // Generate city service area pages: /{city-slug}-dumpster-rentals/service-areas/{city-slug}
     const serviceAreaPages = citySlugs.map(slug => ({
@@ -157,7 +169,7 @@ async function getCities() {
     }));
     
     // Generate size-specific service area pages
-    const sizes = ['15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster'];
+    const sizes = ['10-yard-dumpster', '15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster', '40-yard-dumpster'];
     const sizePages = citySlugs.flatMap(slug =>
       sizes.map(size => ({
         loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}/${size}`,
@@ -165,7 +177,7 @@ async function getCities() {
       }))
     );
     
-    return [...cityPages, ...serviceAreaPages, ...sizePages];
+    return [...serviceAreaPages, ...sizePages];
   }
 
   // Fallback: derive from data/cities/ut/*.yml filenames
@@ -177,12 +189,11 @@ async function getCities() {
     .filter(e => e.isFile() && e.name.endsWith('.yml'))
     .map(e => e.name.replace(/\.yml$/, ''));
   
-  const cities = citySlugs.map(slug => ({ loc: `${SITE}/ut/${slug}/dumpster-rental`, lastmod: now }));
   const serviceAreaPages = citySlugs.map(slug => ({
     loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}`,
     lastmod: now
   }));
-  const sizes = ['15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster'];
+  const sizes = ['10-yard-dumpster', '15-yard-dumpster', '20-yard-dumpster', '30-yard-dumpster', '40-yard-dumpster'];
   const sizePages = citySlugs.flatMap(slug =>
     sizes.map(size => ({
       loc: `${SITE}/${slug}-dumpster-rentals/service-areas/${slug}/${size}`,
@@ -190,19 +201,27 @@ async function getCities() {
     }))
   );
   
-  return [...cities, ...serviceAreaPages, ...sizePages];
+  return [...serviceAreaPages, ...sizePages];
 }
 
 async function getPosts() {
-  // Optional: data/posts.json = ["blog/how-to-choose-dumpster-size", "/blog/dumpster-permits", ...]
-  const postsPath = path.join(DATA_DIR, 'posts.json');
-  const list = readJsonIfExists(postsPath);
-  if (!Array.isArray(list)) return [];
-  const now = toISO(Date.now());
-  return list.map(slugOrPath => {
-    const p = ensureLeadingSlash(String(slugOrPath).trim());
-    return { loc: `${SITE}${p}`, lastmod: now };
-  });
+  // Optional: data/posts.json = ["/how-to-choose-dumpster-size", "/dumpster-permits", ...]
+  const list = POSTS_LIST;
+  const out = new Map();
+
+  if (Array.isArray(list) && list.length > 0) {
+    list.forEach((slugOrPath) => {
+      const p = ensureLeadingSlash(String(slugOrPath).trim());
+      const rel = p.replace(/^\//, '');
+      const filePath = path.join(APP_DIR, rel, 'page.tsx');
+      out.set(`${SITE}${p}`, {
+        loc: `${SITE}${p}`,
+        lastmod: safeStatISO(filePath)
+      });
+    });
+  }
+
+  return Array.from(out.values());
 }
 
 function urlset(urls) {

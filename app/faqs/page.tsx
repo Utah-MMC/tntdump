@@ -1,4 +1,4 @@
-﻿'use client'
+'use client'
 
 import { useState } from 'react'
 import { ChevronDown, ChevronUp, Phone, Clock, MapPin } from 'lucide-react'
@@ -76,7 +76,7 @@ export default function FAQsPage() {
           href: "/contact"
         }}
         showPhoneButton={false}
-        backgroundImage="/images/pexels-rodrigo-eder-1347087-2846205.jpg"
+        backgroundImage="/images/eder-1347087-2846205.jpg"
       />
 
       {/* FAQs Section */}

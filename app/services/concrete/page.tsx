@@ -7,7 +7,17 @@ export const metadata: Metadata = {
   description:
     'Concrete dumpster rental for driveways, patios, brick, and masonry in Utah. Heavy-debris disposal with clear pricing—call (801) 209-9013.',
   alternates: { canonical: 'https://tntdump.com/services/concrete' },
-}
+,
+    openGraph: {
+      title: 'Concrete Dumpster Rental | Heavy Debris Disposal | TNT...',
+      description: 'Concrete dumpster rental for driveways, patios, brick, and masonry in Utah. Heavy-debris disposal with clear pricing—call (801) 209-9013.',
+      url: 'https://tntdump.com/services/concrete',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function ConcreteServicePage() {
   const features = [
@@ -75,7 +85,7 @@ export default function ConcreteServicePage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
-              Concrete Dumpsters
+              Concrete Dumpster Rental
             </h1>
             <p className="text-xl text-blue-100 mb-8">
               Our concrete dumpsters are specifically designed to handle heavy materials such as concrete, brick, and asphalt. This service is ideal for construction and demolition projects, ensuring efficient and safe waste disposal, every single time.

@@ -1,4 +1,4 @@
-﻿import type { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { Star } from 'lucide-react'
 import Image from 'next/image'
 import QuickContactForm from '@/components/QuickContactForm'
@@ -8,7 +8,17 @@ export const metadata: Metadata = {
   description:
     'Read reviews for TNT Dumpsters. Local roll-off dumpster rentals with fast delivery, clear pricing, and friendly support across Salt Lake & Utah County.',
   alternates: { canonical: 'https://tntdump.com/reviews' },
-}
+,
+    openGraph: {
+      title: 'TNT Dumpsters Reviews | Dumpster Rental in Utah',
+      description: 'Read reviews for TNT Dumpsters. Local roll-off dumpster rentals with fast delivery, clear pricing, and friendly support across Salt Lake & Utah County.',
+      url: 'https://tntdump.com/reviews',
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    }
+  }
 
 export default function ReviewsPage() {
   const reviews = [
@@ -103,7 +113,7 @@ export default function ReviewsPage() {
         <div className="container-custom">
           <div className="text-center max-w-4xl mx-auto">
             <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-              Customer{' '}
+              TNT Dumpsters{' '}
               <span className="text-primary-600">Reviews</span>
             </h1>
             <p className="text-xl text-gray-600 mb-8">

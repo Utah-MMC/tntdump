@@ -3,6 +3,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { getCityData, getAllCities, type CityData } from '@/lib/cities'
 import { buildAllLD } from '@/lib/schema'
+import { getNeighborhoodPair, summarizeNeighborhoods, summarizeZipCodes } from '@/lib/cityText'
 import { SizesTable, PermitBlock, DisposalBlock, Neighborhoods, Testimonials, FAQ, CTA, NearbyCities } from '@/components/city'
 
 // Generate static params for all cities - 20-yard dumpster routes
@@ -195,11 +196,11 @@ function BestProjects({ city }: { city: CityData }) {
               30 yard dumpster page
             </Link>{' '}
             for whole-home or commercial projects. You can also read our{' '}
-            <Link href="/blog/20-yard-dumpster-complete-guide" className="text-blue-600 hover:underline">
+            <Link href="/20-yard-dumpster-complete-guide" className="text-blue-600 hover:underline">
               complete 20 yard dumpster guide
             </Link>{' '}
             or{' '}
-            <Link href="/blog/kitchen-remodel-dumpster-guide" className="text-blue-600 hover:underline">
+            <Link href="/kitchen-remodel-dumpster-guide" className="text-blue-600 hover:underline">
               kitchen remodel dumpster guide
             </Link>{' '}
             for more details.
@@ -294,7 +295,7 @@ function LocalContext({ city }: { city: CityData }) {
         <h2>Renting a 20 Yard Dumpster in {city.city}: Local Details</h2>
         <p>
           When you rent a 20 yard dumpster in {city.city}, here's what to expect. We operate throughout {city.county} including neighborhoods
-          like {city.neighborhoods_served?.slice(0, 3).join(', ')} and deliver to ZIP codes {city.primary_zips?.join(', ')}.
+          like {summarizeNeighborhoods(city.neighborhoods_served)} and deliver to {summarizeZipCodes(city.primary_zips)}.
         </p>
         <p>
           Your dumpster will be hauled to {city.transfer_station_name || 'an approved local transfer station'}
@@ -389,7 +390,8 @@ function buildFaq(city: CityData) {
   q(`What payment methods do you accept?`, `We accept all major credit cards and offer invoicing for approved business accounts. Payment is typically due upon delivery or pickup.`)
   q(`Can I extend my 20 yard dumpster rental?`, `Yes—daily extensions are available. Let us know early to reserve the slot and avoid automatic pickup.`)
   q(`Where does the debris go from ${city.city}?`, `We use approved facilities such as ${city.transfer_station_name || 'the local landfill/transfer station'}. Disposal regulations vary by material type.`)
-  q(`Do you deliver 20 yard dumpsters to all neighborhoods in ${city.city}?`, `Yes—we serve ${city.neighborhoods_served?.[0] || 'downtown'}, ${city.neighborhoods_served?.[1] || 'surrounding areas'}, and all ZIP codes including ${city.primary_zips?.join(', ')}.`)
+  const hoodPair = getNeighborhoodPair(city.neighborhoods_served)
+  q(`Do you deliver 20 yard dumpsters to all neighborhoods in ${city.city}?`, `Yes—we serve ${hoodPair.first}, ${hoodPair.second}, and all ${summarizeZipCodes(city.primary_zips)}.`)
   q(`How do I book a 20 yard dumpster in ${city.city}?`, `Call ${BRAND.telephone}, text, or request a quote online. We'll confirm size, placement, delivery window, and pricing—then get you scheduled.`)
   q(`Can I put drywall in a 20 yard dumpster?`, `Yes—drywall and framing debris from remodels are common loads. Avoid soaking drywall, as wet material adds significant weight and may incur overage fees.`)
   q(`Can I put carpet in a 20 yard dumpster?`, `Yes—carpet, padding, and tack strips from flooring removal fit well in 20 yard containers. Roll or fold carpet to maximize space.`)

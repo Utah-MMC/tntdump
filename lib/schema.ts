@@ -68,6 +68,7 @@ export function buildServiceLD(brand: Brand, city: CityData) {
 
 export function buildProductLD(size: number, city: CityData, brand: Brand) {
   const basePrice = size === 15 ? 325 : size === 20 ? 375 : 400
+  const canonicalCityUrl = `${brand.url}/${city.slug}-dumpster-rentals/service-areas/${city.slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Product',
@@ -77,7 +78,7 @@ export function buildProductLD(size: number, city: CityData, brand: Brand) {
     category: 'Dumpster Rental',
     offers: {
       '@type': 'Offer',
-      url: `${brand.url}/ut/${city.slug}/dumpster-rental`,
+      url: canonicalCityUrl,
       availability: 'https://schema.org/InStock',
       priceCurrency: 'USD',
       price: basePrice,
@@ -154,6 +155,7 @@ export function buildHowToLD(city: CityData, brand: Brand) {
 }
 
 export function buildBreadcrumbListLD(city: CityData, brand: Brand) {
+  const canonicalCityUrl = `${brand.url}/${city.slug}-dumpster-rentals/service-areas/${city.slug}`
   return {
     '@context': 'https://schema.org',
     '@type': 'BreadcrumbList',
@@ -174,7 +176,7 @@ export function buildBreadcrumbListLD(city: CityData, brand: Brand) {
         '@type': 'ListItem',
         position: 3,
         name: `${city.city} Dumpster Rentals`,
-        item: `${brand.url}/ut/${city.slug}/dumpster-rental`,
+        item: canonicalCityUrl,
       },
     ],
   }
