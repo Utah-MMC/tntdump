@@ -14,7 +14,7 @@ const SITE_URL = 'https://tntdump.com';
 const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow';
 const INDEXNOW_KEY = '2aaa5122b98a4ce09d1e45535e18b50b';
 const INDEXNOW_KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`;
-const MAX_URLS_PER_REQUEST = 10000;
+const MAX_URLS_PER_REQUEST = 50;
 
 // Track submitted URLs to avoid duplicates
 const SUBMITTED_URLS_FILE = path.join(__dirname, '..', '.indexnow-submitted.json');
@@ -172,7 +172,7 @@ async function main() {
     process.exit(0);
   }
   
-  console.log(`📤 Submitting ${urlsToSubmit.length} URL(s) to IndexNow...`);
+  console.log(`📤 Submitting ${urlsToSubmit.length} URL(s) to IndexNow in small batches...`);
   
   if (FORCE_ALL && urlsToSubmit.length > 100) {
     console.log(`⚠️  Submitting all ${urlsToSubmit.length} URLs (this may take a moment)...`);
