@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips | TNT Dumpsters',
-  description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects.',
+  title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips |...',
+  description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects. G',
   keywords: 'dumpster rentals 2025, dumpster rental guide, roll off dumpster tips, dumpster size guide, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rentals-2025-guide' },
   openGraph: {

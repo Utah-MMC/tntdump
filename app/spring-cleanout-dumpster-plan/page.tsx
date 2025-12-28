@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Spring Cleanout Dumpster Plan: A Fresh Start Guide | TNT Dumpsters',
+  title: 'Spring Cleanout Dumpster Plan: A Fresh Start Guide | TNT...',
   description: 'A spring cleanout dumpster plan with room by room steps, size guidance, and tips to keep the cleanup fast and organized.',
   keywords: 'spring cleanout dumpster plan, spring cleaning dumpster, cleanout checklist, dumpster rental for spring cleanout',
   alternates: { canonical: 'https://tntdump.com/spring-cleanout-dumpster-plan' },

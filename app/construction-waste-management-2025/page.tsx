@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Construction Waste Management 2025 | TNT Dumpsters',
-  description: 'A 2025 update on construction waste planning, dumpster sizing, and swap scheduling for job sites.',
+  description: 'A 2025 update on construction waste planning, dumpster sizing, and swap scheduling for job sites. Get fast delivery and ',
   keywords: 'construction waste management 2025, job site waste, dumpster planning, construction dumpsters',
   alternates: { canonical: 'https://tntdump.com/construction-waste-management-2025' },
   openGraph: {

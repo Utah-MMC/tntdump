@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Storm Cleanup Dumpster Guide: Safe and Fast Recovery | TNT Dumpsters',
+  title: 'Storm Cleanup Dumpster Guide: Safe and Fast Recovery |...',
   description: 'A storm cleanup dumpster guide with safety steps, size planning, and tips to remove debris quickly after severe weather.',
   keywords: 'storm cleanup dumpster guide, storm debris removal, dumpster rental for storm cleanup, disaster cleanup tips',
   alternates: { canonical: 'https://tntdump.com/storm-cleanup-dumpster-guide' },

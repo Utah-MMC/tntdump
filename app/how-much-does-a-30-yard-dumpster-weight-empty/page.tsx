@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How Much Does a 30 Yard Dumpster Weigh Empty? | TNT Dumpsters',
-  description: 'Typical empty weight guidance for a 30 yard dumpster and how weight limits affect rentals.',
+  title: 'How Much Does a 30 Yard Dumpster Weigh Empty? | TNT...',
+  description: 'Typical empty weight guidance for a 30 yard dumpster and how weight limits affect rentals. Get fast delivery and clear p',
   keywords: '30 yard dumpster weight empty, empty dumpster weight, dumpster weight limits',
   alternates: { canonical: 'https://tntdump.com/how-much-does-a-30-yard-dumpster-weight-empty' },
   openGraph: {

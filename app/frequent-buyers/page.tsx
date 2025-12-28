@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Frequent Buyers Program | Contractor & Business Support | TNT Dumpsters',
+  title: 'Frequent Buyers Program | Contractor & Business Support...',
   description:
     'A simple way for frequent buyers to streamline dumpster rentals. Priority scheduling, consistent pricing, and dedicated support.',
   keywords:

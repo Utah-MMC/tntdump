@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Retail Renovation Guide: Waste Planning Tips | TNT Dumpsters',
-  description: 'A retail renovation waste planning guide with dumpster sizing and scheduling tips for smooth remodels.',
+  description: 'A retail renovation waste planning guide with dumpster sizing and scheduling tips for smooth remodels. Get fast delivery',
   keywords: 'retail renovation guide, retail remodel dumpster, commercial renovation waste, dumpster rental retail',
   alternates: { canonical: 'https://tntdump.com/retail-renovation-guide' },
   openGraph: {

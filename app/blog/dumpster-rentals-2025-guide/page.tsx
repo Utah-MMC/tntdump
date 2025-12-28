@@ -1,12 +1,11 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
-import { Metadata } from 'next'
 import Link from 'next/link'
 import BlogServiceLinks from '@/components/BlogServiceLinks'
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips | TNT Dumpsters',
-  description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects.',
+  title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips |...',
+  description: 'A complete 2025 dumpster rentals guide covering sizes, pricing factors, permits, and loading tips for smooth projects. G',
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-rentals-2025-guide' },
     openGraph: {
       title: 'Dumpster Rentals 2025 Guide: Sizes, Costs, and Tips | TNT Dumpsters',

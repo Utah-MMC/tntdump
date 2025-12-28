@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Shed Demolition Dumpster Guide: Safe Removal Tips | TNT Dumpsters',
-  description: 'A shed demolition dumpster guide with size recommendations, loading tips, and safety steps for tearing down old sheds.',
+  title: 'Shed Demolition Dumpster Guide: Safe Removal Tips | TNT...',
+  description: 'A shed demolition dumpster guide with size recommendations, loading tips, and safety steps for tearing down old sheds. G',
   keywords: 'shed demolition dumpster, shed removal dumpster rental, shed teardown, dumpster size for shed demo, junk removal',
   alternates: { canonical: 'https://tntdump.com/shed-demolition-dumpster' },
   openGraph: {

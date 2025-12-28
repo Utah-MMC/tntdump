@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Deck Demolition Dumpster Guide: Size, Tips, and Safety | TNT Dumpsters',
+  title: 'Deck Demolition Dumpster Guide: Size, Tips, and Safety |...',
   description: 'A deck demolition dumpster guide with size recommendations, loading tips, and safety advice for clean, efficient tear-outs.',
   keywords: 'deck demolition dumpster, deck removal dumpster rental, roll off dumpster for deck demo, lumber disposal, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/deck-demolition-dumpster-guide' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'On Time Dumpster Delivery: What to Expect | TNT Dumpsters',
-  description: 'How TNT Dumpsters plans deliveries to keep your project on schedule, with simple prep steps for smooth drop off.',
+  description: 'How TNT Dumpsters plans deliveries to keep your project on schedule, with simple prep steps for smooth drop off. Get fas',
   keywords: 'on time dumpster delivery, dumpster delivery schedule, roll off delivery, dumpster drop off',
   alternates: { canonical: 'https://tntdump.com/on-time-delivery' },
   openGraph: {

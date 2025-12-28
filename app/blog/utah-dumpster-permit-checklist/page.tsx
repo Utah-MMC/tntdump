@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Utah Dumpster Permit Checklist: Street Placement Made Easy | TNT Dumpsters',
+  title: 'Utah Dumpster Permit Checklist: Street Placement Made...',
   description: 'A clear Utah dumpster permit checklist with steps for street placement, city contacts, and tips to avoid fines or delays.',
   alternates: { canonical: 'https://tntdump.com/blog/utah-dumpster-permit-checklist' },
   openGraph: {

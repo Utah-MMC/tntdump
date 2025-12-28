@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Concrete Disposal Dumpster Tips: Heavy Debris Done Right | TNT Dumpsters',
+  title: 'Concrete Disposal Dumpster Tips: Heavy Debris Done Right...',
   description: 'Concrete disposal dumpster tips with size guidance, weight limit advice, and safe loading practices to avoid overage fees.',
   keywords: 'concrete disposal dumpster tips, concrete dumpster rental, heavy debris dumpster, dispose of concrete, dumpster weight limit',
   alternates: { canonical: 'https://tntdump.com/concrete-disposal-dumpster-tips' },

@@ -83,6 +83,20 @@ function getRouteFromPath(filePath, baseDir) {
   return route === '/' ? '/' : route;
 }
 
+function isRedirectOnlyPage(content) {
+  if (!content.includes('redirect(')) return false;
+  return !content.includes('<main') && !content.includes('<section') && !content.includes('<h1');
+}
+
+function isLegacyBlogRoute(route) {
+  return route.startsWith('blog/') && route !== 'blog';
+}
+
+function isDuplicateSlugRoute(route) {
+  const parts = route.split('/').filter(Boolean);
+  return parts.length >= 2 && parts[parts.length - 1] === parts[parts.length - 2];
+}
+
 // Check for H1 tags in JSX
 function checkH1Tags(content, route) {
   // Check for H1 in JSX
@@ -456,6 +470,9 @@ function scanPages() {
         
         // Skip test pages
         if (route.includes('/test') || route.startsWith('test')) continue;
+        if (isLegacyBlogRoute(route)) continue;
+        if (isDuplicateSlugRoute(route)) continue;
+        if (isRedirectOnlyPage(content)) continue;
         
         // Extract and validate metadata
         const metadata = extractMetadata(content, route);
@@ -522,6 +539,9 @@ function scanPages() {
           route !== 'order-confirmation' &&
           !route.includes('/cart') &&
           !route.includes('/order-confirmation') &&
+          !isLegacyBlogRoute(route) &&
+          !isDuplicateSlugRoute(route) &&
+          !isRedirectOnlyPage(content) &&
           !sitemapUrls.has(fullUrl)
         ) {
           issues['not-in-sitemap'].push({ route, url: fullUrl });

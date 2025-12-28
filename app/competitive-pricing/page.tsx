@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Competitive Dumpster Pricing: How We Stay Fair | TNT Dumpsters',
-  description: 'Our competitive pricing approach focuses on fair rates, clear terms, and reliable service.',
+  title: 'Competitive Dumpster Pricing: How We Stay Fair | TNT...',
+  description: 'Our competitive pricing approach focuses on fair rates, clear terms, and reliable service. Get fast delivery and clear p',
   keywords: 'competitive dumpster pricing, fair dumpster rates, roll off pricing, dumpster rental value',
   alternates: { canonical: 'https://tntdump.com/competitive-pricing' },
   openGraph: {

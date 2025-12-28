@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Basement Cleanout Dumpster Tips: Size, Safety, and Speed | TNT Dumpsters',
+  title: 'Basement Cleanout Dumpster Tips: Size, Safety, and Speed...',
   description: 'Practical basement cleanout dumpster tips with size guidance, loading order, and ways to keep the job safe and efficient.',
   keywords: 'basement cleanout dumpster tips, basement cleanout dumpster, basement junk removal, dumpster size for basement cleanout',
   alternates: { canonical: 'https://tntdump.com/basement-cleanout-dumpster-tips' },

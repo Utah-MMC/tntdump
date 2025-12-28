@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: 'Dumpster Volume Calculator | Calculate Debris Size | TNT...',
   description: 'Estimate debris volume and get a recommended dumpster size. Room-by-room and material calculators—call (801) 209-9013. G',

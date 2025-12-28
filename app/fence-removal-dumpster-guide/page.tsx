@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Fence Removal Dumpster Guide: Plan, Load, and Clean Up | TNT Dumpsters',
-  description: 'A fence removal dumpster guide with size recommendations, loading tips, and safe cleanup advice for old fencing.',
+  title: 'Fence Removal Dumpster Guide: Plan, Load, and Clean Up |...',
+  description: 'A fence removal dumpster guide with size recommendations, loading tips, and safe cleanup advice for old fencing. Get fas',
   keywords: 'fence removal dumpster guide, fence disposal, dumpster rental for fence removal, wood fence removal, junk removal',
   alternates: { canonical: 'https://tntdump.com/fence-removal-dumpster-guide' },
   openGraph: {

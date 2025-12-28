@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: 'Accessibility Policy | TNT Dumpsters',
   description: 'Accessibility policy for TNT Dumpsters. Our commitment to making our services accessible to all customers. Get fast deli',

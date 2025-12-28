@@ -3,7 +3,7 @@ import type { Metadata } from 'next'
 export const metadata: Metadata = {
   title: 'Trusted Partners | TNT Dumpsters',
   description:
-    'Meet trusted local partners we recommend for dumpster rental and waste management services across Utah. Reliable professionals who align with TNT Dumpsters quality.',
+    'Meet trusted local partners we recommend for dumpster rental and waste management services across Utah. Reliable professionals who align with TNT Dumpsters...',
   alternates: { canonical: 'https://tntdump.com/partners' },
   openGraph: {
     title: 'Trusted Partners | TNT Dumpsters',

@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Permits: When You Need One | TNT Dumpsters',
-  description: 'A clear guide to dumpster rental permits, when they are required, and how to stay compliant with city rules.',
+  description: 'A clear guide to dumpster rental permits, when they are required, and how to stay compliant with city rules. Get fast de',
   keywords: 'dumpster rental permits, street dumpster permit, roll off dumpster permit, dumpster permit utah, dumpster placement rules',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-permits' },
   openGraph: {

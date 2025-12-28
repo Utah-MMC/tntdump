@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Roofing Dumpster Weight Guide: Avoid Heavy Load Fees | TNT Dumpsters',
-  description: 'A roofing dumpster weight guide with shingle weight tips, size planning, and ways to avoid overage fees on tear offs.',
+  title: 'Roofing Dumpster Weight Guide: Avoid Heavy Load Fees |...',
+  description: 'A roofing dumpster weight guide with shingle weight tips, size planning, and ways to avoid overage fees on tear offs. Ge',
   alternates: { canonical: 'https://tntdump.com/blog/roofing-dumpster-weight-guide' },
   openGraph: {
     title: 'Roofing Dumpster Weight Guide: Avoid Heavy Load Fees | TNT Dumpsters',

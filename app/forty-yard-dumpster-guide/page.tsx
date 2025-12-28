@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '40 Yard Dumpster Guide: Size, Uses, and Best Projects | TNT Dumpsters',
-  description: 'A 40 yard dumpster guide with size details, common uses, and tips to plan large cleanouts or construction projects.',
+  title: '40 Yard Dumpster Guide: Size, Uses, and Best Projects |...',
+  description: 'A 40 yard dumpster guide with size details, common uses, and tips to plan large cleanouts or construction projects. Get ',
   keywords: '40 yard dumpster guide, 40 yard dumpster size, large dumpster rental, construction dumpster, roll off dumpster 40 yard',
   alternates: { canonical: 'https://tntdump.com/forty-yard-dumpster-guide' },
   openGraph: {

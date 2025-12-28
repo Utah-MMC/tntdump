@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Demolition Calculator: Plan Dumpster Size | TNT Dumpsters',
-  description: 'A demolition calculator guide to estimate dumpster size and weight for demo projects.',
+  description: 'A demolition calculator guide to estimate dumpster size and weight for demo projects. Get fast delivery and clear pricin',
   keywords: 'demolition calculator, dumpster size for demolition, demo debris estimate, demolition dumpster',
   alternates: { canonical: 'https://tntdump.com/demolition-calculator' },
   openGraph: {

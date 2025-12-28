@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Yard Waste Dumpster Guide: Clean Up Faster | TNT Dumpsters',
-  description: 'A yard waste dumpster guide with size recommendations, loading tips, and ways to handle branches, brush, and debris.',
+  description: 'A yard waste dumpster guide with size recommendations, loading tips, and ways to handle branches, brush, and debris. Get',
   keywords: 'yard waste dumpster guide, yard debris dumpster, landscaping debris removal, dumpster rental for yard waste',
   alternates: { canonical: 'https://tntdump.com/yard-waste-dumpster-guide' },
   openGraph: {

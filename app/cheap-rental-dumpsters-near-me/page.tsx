@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cheap Rental Dumpsters Near Me | TNT Dumpsters',
-  description: 'Budget friendly dumpster rentals with clear terms, reliable delivery, and size recommendations.',
+  description: 'Budget friendly dumpster rentals with clear terms, reliable delivery, and size recommendations. Get fast delivery and cl',
   keywords: 'cheap rental dumpsters near me, affordable dumpster rental, roll off dumpster prices',
   alternates: { canonical: 'https://tntdump.com/cheap-rental-dumpsters-near-me' },
   openGraph: {

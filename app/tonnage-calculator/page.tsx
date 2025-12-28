@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Tonnage Calculator: Estimate Dumpster Weight | TNT Dumpsters',
-  description: 'A simple tonnage calculator guide to estimate debris weight and stay under dumpster weight limits.',
+  description: 'A simple tonnage calculator guide to estimate debris weight and stay under dumpster weight limits. Get fast delivery and',
   keywords: 'tonnage calculator, dumpster weight estimate, debris weight, weight limit dumpster, heavy debris',
   alternates: { canonical: 'https://tntdump.com/tonnage-calculator' },
   openGraph: {

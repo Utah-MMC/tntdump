@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Cost 2025: What Affects Price | TNT Dumpsters',
-  description: 'A clear 2025 dumpster rental cost guide with pricing factors, common fees, and tips to keep your project on budget.',
+  title: 'Dumpster Rental Cost 2025: What Affects Price | TNT...',
+  description: 'A clear 2025 dumpster rental cost guide with pricing factors, common fees, and tips to keep your project on budget. Get ',
   keywords: 'dumpster rental cost 2025, dumpster rental pricing, roll off dumpster cost, dumpster rental fees, utah dumpster rental cost',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-cost-2025' },
   openGraph: {

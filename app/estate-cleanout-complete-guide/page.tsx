@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Estate Cleanout Complete Guide: A Calm, Step by Step Plan | TNT Dumpsters',
-  description: 'A complete estate cleanout guide with planning steps, sorting tips, and dumpster advice to keep the process manageable.',
+  title: 'Estate Cleanout Complete Guide: A Calm, Step by Step...',
+  description: 'A complete estate cleanout guide with planning steps, sorting tips, and dumpster advice to keep the process manageable. ',
   keywords: 'estate cleanout guide, estate cleanout dumpster, estate cleanout checklist, cleanout planning, dumpster rental for estate',
   alternates: { canonical: 'https://tntdump.com/estate-cleanout-complete-guide' },
   openGraph: {

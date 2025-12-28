@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental for Residential Use | Home Projects | TNT Dumpsters',
+  title: 'Dumpster Rental for Residential Use | Home Projects |...',
   description:
-    'Rent a dumpster for residential cleanouts, remodels, and yard projects. Compare sizes, placement tips, and pricing.',
+    'Rent a dumpster for residential cleanouts, remodels, and yard projects. Compare sizes, placement tips, and pricing. Get ',
   keywords:
     'residential dumpster rental, home dumpster rental, driveway dumpster, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-for-residential-use' },

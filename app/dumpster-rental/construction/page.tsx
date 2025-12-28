@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Construction Dumpster Rental | TNT Dumpsters',
-  description: 'Construction dumpster rentals for demo, remodels, and job site cleanup across Utah.',
+  description: 'Construction dumpster rentals for demo, remodels, and job site cleanup across Utah. Get fast delivery and clear pricing.',
   keywords: 'construction dumpster rental, job site dumpster, roll off for construction, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental/construction' },
   openGraph: {

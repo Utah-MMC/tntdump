@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Placement and Driveway Protection Tips | TNT Dumpsters',
+  title: 'Dumpster Placement and Driveway Protection Tips | TNT...',
   description: 'Learn how to place a dumpster safely on your driveway, protect the surface, and avoid common delivery and pickup problems.',
   keywords: 'dumpster placement, driveway protection, roll off dumpster placement, protect driveway from dumpster, dumpster rental tips, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-placement-driveway-protection' },

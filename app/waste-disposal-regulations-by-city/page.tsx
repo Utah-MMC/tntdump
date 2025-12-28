@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Waste Disposal Regulations by City in Utah | TNT Dumpsters',
-  description: 'Learn how local waste disposal regulations vary by city, including permits, placement rules, and common restrictions.',
+  description: 'Learn how local waste disposal regulations vary by city, including permits, placement rules, and common restrictions. Ge',
   keywords: 'waste disposal regulations by city, utah dumpster rules, local disposal rules, dumpster permit rules',
   alternates: { canonical: 'https://tntdump.com/waste-disposal-regulations-by-city' },
   openGraph: {

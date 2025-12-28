@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'How to Choose the Right Dumpster Size | TNT Dumpsters',
   description:
-    'Simple steps for choosing the right dumpster size based on project type, debris weight, and space constraints.',
+    'Simple steps for choosing the right dumpster size based on project type, debris weight, and space constraints. Get fast ',
   keywords:
     'how to choose dumpster size, dumpster sizing tips, roll off size guide, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/how-to-choose-dumpster-size-3' },

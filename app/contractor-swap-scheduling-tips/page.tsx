@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Contractor Swap Scheduling Tips for Roll Off Dumpsters | TNT Dumpsters',
-  description: 'Smart contractor swap scheduling tips to reduce downtime, keep job sites clean, and avoid delays during big projects.',
+  title: 'Contractor Swap Scheduling Tips for Roll Off Dumpsters |...',
+  description: 'Smart contractor swap scheduling tips to reduce downtime, keep job sites clean, and avoid delays during big projects. Ge',
   keywords: 'contractor swap scheduling, dumpster swap tips, roll off swap schedule, construction dumpster swaps, job site planning',
   alternates: { canonical: 'https://tntdump.com/contractor-swap-scheduling-tips' },
   openGraph: {

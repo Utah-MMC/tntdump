@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home Cleanout Timeline: A Simple Week by Week Plan | TNT Dumpsters',
-  description: 'A home cleanout timeline with week by week steps, sorting tips, and dumpster planning to keep the process manageable.',
+  title: 'Home Cleanout Timeline: A Simple Week by Week Plan | TNT...',
+  description: 'A home cleanout timeline with week by week steps, sorting tips, and dumpster planning to keep the process manageable. Ge',
   keywords: 'home cleanout timeline, home cleanout plan, whole house cleanout, dumpster rental for cleanout',
   alternates: { canonical: 'https://tntdump.com/home-cleanout-timeline' },
   openGraph: {

@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '15 Yard Dumpster Complete Guide: Size, Uses, and Tips | TNT Dumpsters',
+  title: '15 Yard Dumpster Complete Guide: Size, Uses, and Tips |...',
   description: 'A complete 15 yard dumpster guide covering size, capacity, common projects, weight limits, and loading tips for Utah rentals.',
   keywords: '15 yard dumpster rental, 15 yard dumpster size, what fits in 15 yard dumpster, 15 yard dumpster dimensions, 15 yard dumpster cost, 15 yard dumpster capacity, 15 yard dumpster weight limit',
   alternates: { canonical: 'https://tntdump.com/15-yard-dumpster-complete-guide' },

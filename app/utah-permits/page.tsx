@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Utah Dumpster Permits Guide: Quick Local Overview | TNT Dumpsters',
-  description: 'A Utah focused permit overview for dumpster rentals, including street placement basics and links to local guidance.',
+  title: 'Utah Dumpster Permits Guide: Quick Local Overview | TNT...',
+  description: 'A Utah focused permit overview for dumpster rentals, including street placement basics and links to local guidance. Get ',
   keywords: 'utah dumpster permits, dumpster permit utah, street placement permit, roll off permit utah',
   alternates: { canonical: 'https://tntdump.com/utah-permits' },
   openGraph: {

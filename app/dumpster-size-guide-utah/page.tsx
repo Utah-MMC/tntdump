@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Size Guide Utah: Choose the Right Fit | TNT Dumpsters',
-  description: 'A Utah focused dumpster size guide with common project matches, capacity tips, and links to size resources.',
+  title: 'Dumpster Size Guide Utah: Choose the Right Fit | TNT...',
+  description: 'A Utah focused dumpster size guide with common project matches, capacity tips, and links to size resources. Get fast del',
   keywords: 'dumpster size guide utah, utah dumpster sizes, roll off size guide, choose dumpster size, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-size-guide-utah' },
   openGraph: {

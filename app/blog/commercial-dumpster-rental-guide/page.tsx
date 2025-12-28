@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental Guide: Sizes, Costs, and Tips | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental Guide: Sizes, Costs, and Tips...',
   description: 'A practical commercial dumpster rental guide with size planning, waste types, scheduling tips, and cost-saving advice for businesses.',
   keywords: 'commercial dumpster rental, business waste service, roll-off dumpsters for business, commercial trash solutions',
   alternates: { canonical: 'https://tntdump.com/blog/commercial-dumpster-rental-guide' },

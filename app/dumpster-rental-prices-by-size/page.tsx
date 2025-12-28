@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Prices by Size: A Clear Breakdown | TNT Dumpsters',
-  description: 'A clear breakdown of dumpster rental prices by size with what each size fits and how to avoid extra fees.',
+  title: 'Dumpster Rental Prices by Size: A Clear Breakdown | TNT...',
+  description: 'A clear breakdown of dumpster rental prices by size with what each size fits and how to avoid extra fees. Get fast deliv',
   keywords: 'dumpster rental prices by size, dumpster rental pricing, roll off dumpster sizes, 10 yard dumpster cost, 20 yard dumpster cost',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-prices-by-size' },
   openGraph: {

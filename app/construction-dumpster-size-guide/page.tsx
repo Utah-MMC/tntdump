@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Construction Dumpster Size Guide: Plan the Right Fit | TNT Dumpsters',
-  description: 'A construction dumpster size guide with project examples, debris planning, and tips to avoid overage fees on job sites.',
+  title: 'Construction Dumpster Size Guide: Plan the Right Fit |...',
+  description: 'A construction dumpster size guide with project examples, debris planning, and tips to avoid overage fees on job sites. ',
   keywords: 'construction dumpster size guide, construction dumpster rental, roll off dumpster sizes, job site dumpster, contractor dumpster rental',
   alternates: { canonical: 'https://tntdump.com/construction-dumpster-size-guide' },
   openGraph: {

@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: 'Dumpster Prohibited Items: What You Cannot Throw Away | TNT Dumpsters',
-  description: 'A clear list of dumpster prohibited items with reasons, safe alternatives, and tips to avoid fees or rejected loads.',
+  title: 'Dumpster Prohibited Items: What You Cannot Throw Away |...',
+  description: 'A clear list of dumpster prohibited items with reasons, safe alternatives, and tips to avoid fees or rejected loads. Get',
   keywords: 'dumpster prohibited items, what cannot go in dumpster, hazardous waste disposal, dumpster rules',
   alternates: { canonical: 'https://tntdump.com/blog/dumpster-prohibited-items' },
     openGraph: {

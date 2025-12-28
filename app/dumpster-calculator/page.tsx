@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dumpster Calculator: Plan Size and Cost | TNT Dumpsters',
-  description: 'A simple dumpster calculator guide for planning size and budget based on project type and debris volume.',
+  description: 'A simple dumpster calculator guide for planning size and budget based on project type and debris volume. Get fast delive',
   keywords: 'dumpster calculator, size estimate, dumpster cost estimate, roll off calculator',
   alternates: { canonical: 'https://tntdump.com/dumpster-calculator' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Cheap Dumpster Rentals Near Me in Utah | TNT Dumpsters',
-  description: 'Affordable dumpster rental options in Utah with reliable delivery and clear pricing guidance.',
+  description: 'Affordable dumpster rental options in Utah with reliable delivery and clear pricing guidance. Get fast delivery and clea',
   keywords: 'cheap dumpster rentals near me, affordable dumpster rental, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/cheap-dumpster-rentals-near-me' },
   openGraph: {

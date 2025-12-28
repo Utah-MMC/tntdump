@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Tips: Save Time and Avoid Fees | TNT Dumpsters',
-  description: 'Practical dumpster rental tips to help you choose the right size, load efficiently, and avoid common fees.',
+  title: 'Dumpster Rental Tips: Save Time and Avoid Fees | TNT...',
+  description: 'Practical dumpster rental tips to help you choose the right size, load efficiently, and avoid common fees. Get fast deli',
   keywords: 'dumpster rental tips, roll off dumpster tips, avoid dumpster fees, dumpster loading tips',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-tips' },
   openGraph: {

@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Estimate the Right Dumpster Size for a Home Cleanout | TNT Dumpsters',
+  title: 'Estimate the Right Dumpster Size for a Home Cleanout |...',
   description:
-    'A quick guide to estimating dumpster size for a home cleanout, with tips on volume, weight, and common project types.',
+    'A quick guide to estimating dumpster size for a home cleanout, with tips on volume, weight, and common project types. Ge',
   keywords:
     'estimate dumpster size, home cleanout dumpster, dumpster size guide, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/estimate-right-dumpster-size-home-cleanout' },

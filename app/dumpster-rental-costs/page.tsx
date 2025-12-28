@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Costs: What to Expect | TNT Dumpsters',
-  description: 'A simple overview of dumpster rental costs, including size, weight, and rental length factors.',
+  description: 'A simple overview of dumpster rental costs, including size, weight, and rental length factors. Get fast delivery and cle',
   keywords: 'dumpster rental costs, dumpster cost, roll off pricing, dumpster rental fees',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-costs' },
   openGraph: {

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental FAQ: Common Questions Answered | TNT Dumpsters',
-  description: 'Quick answers to common dumpster rental questions about size, permits, prohibited items, and scheduling.',
+  title: 'Dumpster Rental FAQ: Common Questions Answered | TNT...',
+  description: 'Quick answers to common dumpster rental questions about size, permits, prohibited items, and scheduling. Get fast delive',
   keywords: 'dumpster rental faq, dumpster questions, roll off dumpster faq, dumpster rental help',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-faq' },
   openGraph: {

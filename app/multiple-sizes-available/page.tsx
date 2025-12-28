@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Multiple Dumpster Sizes Available | TNT Dumpsters',
-  description: 'We offer multiple dumpster sizes to match cleanouts, remodels, and construction projects across Utah.',
+  description: 'We offer multiple dumpster sizes to match cleanouts, remodels, and construction projects across Utah. Get fast delivery ',
   keywords: 'multiple dumpster sizes, roll off sizes, dumpster options, utah dumpster rental sizes',
   alternates: { canonical: 'https://tntdump.com/multiple-sizes-available' },
   openGraph: {

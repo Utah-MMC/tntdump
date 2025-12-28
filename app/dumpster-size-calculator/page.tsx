@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Size Calculator: Estimate the Right Fit | TNT Dumpsters',
+  title: 'Dumpster Size Calculator: Estimate the Right Fit | TNT...',
   description: 'Use this dumpster size calculator guide to estimate the right size based on project type, room count, and debris volume.',
   keywords: 'dumpster size calculator, size estimate, choose dumpster size, roll off size guide, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-size-calculator' },

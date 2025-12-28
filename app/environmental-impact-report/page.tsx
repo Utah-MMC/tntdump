@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Environmental Impact Report: Responsible Disposal | TNT Dumpsters',
-  description: 'Our approach to responsible disposal, recycling, and safe handling to reduce environmental impact.',
+  title: 'Environmental Impact Report: Responsible Disposal | TNT...',
+  description: 'Our approach to responsible disposal, recycling, and safe handling to reduce environmental impact. Get fast delivery and',
   keywords: 'environmental impact report, responsible disposal, recycling, dumpster rental sustainability',
   alternates: { canonical: 'https://tntdump.com/environmental-impact-report' },
   openGraph: {

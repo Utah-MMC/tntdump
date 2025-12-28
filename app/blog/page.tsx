@@ -73,6 +73,26 @@ export default function Page() {
             <p className="mt-4 text-lg text-gray-600">Expert tips, guides, and news about dumpster rental services. Learn about waste management, project planning, and get the latest updates from TNT Dumpsters.</p>
         </div>
       </section>
+      <section className="py-12 bg-gray-50">
+        <div className="container-custom">
+          <h2 className="text-2xl font-bold text-gray-900 mb-6">All Blog Posts</h2>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {(posts as string[]).map((slug) => {
+              const path = slug.startsWith('/') ? slug : `/${slug}`
+              return (
+                <a
+                  key={path}
+                  href={path}
+                  className="block rounded-lg border border-gray-200 bg-white p-4 text-gray-900 shadow-sm transition hover:border-blue-400 hover:shadow-md"
+                >
+                  <span className="font-semibold">{toTitle(path.split('/').pop() || '')}</span>
+                  <span className="mt-2 block text-sm text-gray-600">{path.replace('/', '')}</span>
+                </a>
+              )
+            })}
+          </div>
+        </div>
+      </section>
     </main>
   )
 }

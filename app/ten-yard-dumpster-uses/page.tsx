@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: '10 Yard Dumpster Uses: Best Projects and Fit | TNT Dumpsters',
-  description: 'A guide to 10 yard dumpster uses with common projects, capacity tips, and ways to avoid overloading.',
+  description: 'A guide to 10 yard dumpster uses with common projects, capacity tips, and ways to avoid overloading. Get fast delivery a',
   keywords: '10 yard dumpster uses, 10 yard dumpster projects, small dumpster rental, what fits in a 10 yard dumpster',
   alternates: { canonical: 'https://tntdump.com/ten-yard-dumpster-uses' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Construction Project Planning Guide: Waste and Scheduling | TNT Dumpsters',
+  title: 'Construction Project Planning Guide: Waste and...',
   description: 'A construction project planning guide focused on waste staging, dumpster sizing, and swap scheduling to reduce downtime.',
   keywords: 'construction project planning, dumpster planning, job site waste plan, swap scheduling, construction waste management',
   alternates: { canonical: 'https://tntdump.com/construction-project-planning-guide' },

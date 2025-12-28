@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: '20 vs 30 Yard Dumpster Comparison: Pick the Right Size | TNT Dumpsters',
+  title: '20 vs 30 Yard Dumpster Comparison: Pick the Right Size |...',
   description: 'A practical 20 vs 30 yard dumpster comparison with size, capacity, costs, and real project fit so you avoid overpaying or running out of space.',
   keywords: '20 vs 30 yard dumpster, 20 yard vs 30 yard, medium dumpster comparison, kitchen remodel dumpster, roof tear-off dumpster, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/blog/20-vs-30-yard-dumpster-comparison' },

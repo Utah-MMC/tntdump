@@ -74,6 +74,10 @@ export default function CityPageTemplate({
   const [activeTab, setActiveTab] = useState(contentSections.dumpsterSizes?.[0]?.size || '15')
 
   const canonicalUrl = `https://tntdump.com/${citySlug}-dumpster-rentals/service-areas/${citySlug}`
+  const sizeLinks = contentSections.dumpsterSizes.map((size) => ({
+    label: `${size.size} Yard Dumpster`,
+    href: `/${citySlug}-dumpster-rentals/service-areas/${citySlug}/${size.size}-yard-dumpster`,
+  }))
 
   const summaryCandidates = [
     `Same-day dumpster rentals across ${cityName}, ${state} with driveway-safe placement`,
@@ -101,7 +105,7 @@ export default function CityPageTemplate({
       <section className="relative h-[80vh] min-h-[560px] flex items-center overflow-hidden">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/images/dumpster2-500x500-1.jpeg"
+            src="/images/dumpster2-500x500-2.jpeg"
             alt={`Roll-off dumpster rental in ${cityName}, UT`}
             fill
             className="object-cover"
@@ -142,7 +146,7 @@ export default function CityPageTemplate({
               <div className="bg-white rounded-lg shadow-xl p-6 max-w-xs">
                 <div className="mb-4">
                   <Image
-                    src="/images/dumpster1-500x500-1.jpeg"
+                    src="/images/dumpster3-500x500-1.jpeg"
                     alt={`Dumpster size chart for ${cityName}`}
                     width={220}
                     height={130}
@@ -264,6 +268,18 @@ export default function CityPageTemplate({
                 </ul>
                 <p className="mt-6 text-gray-600">{size.description}</p>
               </div>
+            ))}
+          </div>
+
+          <div className="mt-6 flex flex-wrap justify-center gap-3 text-sm text-gray-700">
+            {sizeLinks.map((link) => (
+              <a
+                key={link.href}
+                href={link.href}
+                className="rounded-full border border-gray-300 bg-white px-4 py-2 transition hover:border-teal-600 hover:text-teal-700"
+              >
+                {link.label}
+              </a>
             ))}
           </div>
 

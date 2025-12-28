@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Utah Waste Management Regulations | TNT Dumpsters',
-  description: 'A simple overview of Utah waste management regulations that affect dumpster rentals and disposal.',
+  description: 'A simple overview of Utah waste management regulations that affect dumpster rentals and disposal. Get fast delivery and ',
   keywords: 'utah waste management regulations, utah disposal rules, dumpster rules utah',
   alternates: { canonical: 'https://tntdump.com/utah-waste-management-regulations' },
   openGraph: {

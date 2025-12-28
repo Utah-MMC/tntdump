@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Cost in Salt Lake City | TNT Dumpsters',
-  description: 'Salt Lake City dumpster rental cost factors, including size, weight limits, and permit considerations.',
+  description: 'Salt Lake City dumpster rental cost factors, including size, weight limits, and permit considerations. Get fast delivery',
   keywords: 'dumpster rental cost salt lake city, salt lake dumpster prices, utah dumpster pricing',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-cost-salt-lake-city' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Professional Waste Removal Services | TNT Dumpsters',
-  description: 'Professional waste removal for cleanouts, remodels, and construction projects across Utah.',
+  description: 'Professional waste removal for cleanouts, remodels, and construction projects across Utah. Get fast delivery and clear p',
   keywords: 'professional waste removal, dumpster rental service, debris removal, utah waste removal',
   alternates: { canonical: 'https://tntdump.com/professional-waste-removal' },
   openGraph: {

@@ -2,12 +2,12 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Transparent Dumpster Pricing: What\'s Included | TNT Dumpsters',
-  description: 'Our transparent pricing approach explains what\'s included in your rental and how to avoid surprise fees.',
+  description: "Our transparent pricing approach explains what's included in your rental, how weight is billed, and how to avoid surprise fees before you book.",
   keywords: 'transparent dumpster pricing, dumpster pricing included, roll off pricing, dumpster rental cost clarity',
   alternates: { canonical: 'https://tntdump.com/transparent-pricing' },
   openGraph: {
     title: 'Transparent Dumpster Pricing: What\'s Included | TNT Dumpsters',
-    description: 'Our transparent pricing approach explains what\'s included in your rental and how to avoid surprise fees.',
+    description: "Our transparent pricing approach explains what's included in your rental, how weight is billed, and how to avoid surprise fees.",
     url: 'https://tntdump.com/transparent-pricing',
     siteName: 'TNT Dumpsters',
     type: 'website',

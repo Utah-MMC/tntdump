@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: 'Dumpster Rental Cost Calculator | Estimate Pricing | TNT...',
   description: 'Estimate dumpster rental pricing in Utah by size and rental period. Transparent rates for 10–30 yard roll-offs—call (801) 209-9013.',

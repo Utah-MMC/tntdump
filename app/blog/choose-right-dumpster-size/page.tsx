@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: 'How to Choose the Right Dumpster Size: A Simple Guide | TNT Dumpsters',
+  title: 'How to Choose the Right Dumpster Size: A Simple Guide |...',
   description: 'A simple, practical guide for choosing the right dumpster size with real project examples, volume tips, and cost-saving advice.',
   keywords: 'dumpster sizes explained, cubic yards, dumpster dimensions, dumpster capacity, choose dumpster size, weight limits, debris tonnage, dumpster pricing fees',
   alternates: { canonical: 'https://tntdump.com/blog/choose-right-dumpster-size' },

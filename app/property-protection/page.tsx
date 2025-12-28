@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Property Protection Tips for Dumpster Rentals | TNT Dumpsters',
-  description: 'Property protection tips for dumpster placement, driveway safety, and preventing surface damage during rentals.',
+  title: 'Property Protection Tips for Dumpster Rentals | TNT...',
+  description: 'Property protection tips for dumpster placement, driveway safety, and preventing surface damage during rentals. Get fast',
   keywords: 'property protection dumpster, driveway protection, dumpster placement tips, prevent driveway damage',
   alternates: { canonical: 'https://tntdump.com/property-protection' },
   openGraph: {

@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Fees: Common Surcharges Explained | TNT Dumpsters',
-  description: 'A simple guide to common dumpster rental fees, including overweight charges, trip fees, and prohibited item surcharges.',
+  title: 'Dumpster Rental Fees: Common Surcharges Explained | TNT...',
+  description: 'A simple guide to common dumpster rental fees, including overweight charges, trip fees, and prohibited item surcharges. ',
   keywords: 'dumpster rental fees, overweight fee dumpster, trip fee dumpster, prohibited items fee, dumpster surcharges',
   alternates: { canonical: 'https://tntdump.com/fees' },
   openGraph: {

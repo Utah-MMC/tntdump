@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: 'Basement Cleanout Service | TNT Dumpsters | Utah',
   description: 'Basement cleanout service in Utah for junk, furniture, and storage clutter. Fast scheduling and clear pricing—call (801) 209-9013.',

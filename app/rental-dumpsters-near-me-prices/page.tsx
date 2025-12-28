@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Rental Dumpsters Near Me Prices | TNT Dumpsters',
-  description: 'Local dumpster price factors, including size, weight limits, and rental length for Utah projects.',
+  description: 'Local dumpster price factors, including size, weight limits, and rental length for Utah projects. Get fast delivery and ',
   keywords: 'rental dumpsters near me prices, dumpster rental prices, roll off dumpster cost',
   alternates: { canonical: 'https://tntdump.com/rental-dumpsters-near-me-prices' },
   openGraph: {

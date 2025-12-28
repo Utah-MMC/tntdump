@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Estate Cleanout Steps: A Simple, Respectful Process | TNT Dumpsters',
+  title: 'Estate Cleanout Steps: A Simple, Respectful Process |...',
   description: 'A step by step estate cleanout process with sorting tips, timeline advice, and dumpster planning to keep the job organized.',
   keywords: 'estate cleanout steps, estate cleanout process, estate cleanout checklist, dumpster rental for estate cleanout',
   alternates: { canonical: 'https://tntdump.com/estate-cleanout-steps' },

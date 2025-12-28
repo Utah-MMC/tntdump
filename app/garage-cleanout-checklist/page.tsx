@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Garage Cleanout Checklist: Dumpster Plan and Tips | TNT Dumpsters',
-  description: 'A practical garage cleanout checklist with sorting steps, dumpster sizing advice, and tips to keep the job moving.',
+  title: 'Garage Cleanout Checklist: Dumpster Plan and Tips | TNT...',
+  description: 'A practical garage cleanout checklist with sorting steps, dumpster sizing advice, and tips to keep the job moving. Get f',
   keywords: 'garage cleanout checklist, garage cleanout dumpster, garage junk removal, dumpster rental for garage cleanout',
   alternates: { canonical: 'https://tntdump.com/garage-cleanout-checklist' },
   openGraph: {

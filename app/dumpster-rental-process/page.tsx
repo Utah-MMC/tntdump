@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Process: How It Works Step by Step | TNT Dumpsters',
+  title: 'Dumpster Rental Process: How It Works Step by Step | TNT...',
   description: 'A simple dumpster rental process guide from choosing a size to scheduling pickup, with tips to keep your project smooth.',
   keywords: 'dumpster rental process, how to rent a dumpster, roll off dumpster delivery, dumpster pickup scheduling, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-process' },

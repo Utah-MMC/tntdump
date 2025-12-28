@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Local Pros We Work With: Contractors and Partners | TNT Dumpsters',
-  description: 'Learn how TNT Dumpsters supports local pros with reliable delivery, fast swaps, and project friendly service.',
+  title: 'Local Pros We Work With: Contractors and Partners | TNT...',
+  description: 'Learn how TNT Dumpsters supports local pros with reliable delivery, fast swaps, and project friendly service. Get fast d',
   keywords: 'local pros, contractor partners, dumpster rental for contractors, hauling partners, utah contractors',
   alternates: { canonical: 'https://tntdump.com/local-pros' },
   openGraph: {

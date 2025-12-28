@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '20 Yard Dumpster Complete Guide: Size, Uses, and Costs | TNT Dumpsters',
+  title: '20 Yard Dumpster Complete Guide: Size, Uses, and Costs |...',
   description: 'A full 20 yard dumpster guide with size, capacity, typical projects, loading tips, and how to avoid overage fees in Utah rentals.',
   keywords: '20 yard dumpster, 20 yard dumpster size, 20 yard dumpster dimensions, 20 yard dumpster cost, what fits in a 20 yard dumpster, roll off dumpster rental',
   alternates: { canonical: 'https://tntdump.com/20-yard-dumpster-complete-guide' },

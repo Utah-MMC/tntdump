@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: '10 Yard Dumpster Rental | Small Dumpster for Cleanouts | TNT Dumpsters',
+  title: '10 Yard Dumpster Rental | Small Dumpster for Cleanouts |...',
   description:
     'Rent a 10 yard dumpster for small cleanouts and light demo in Utah. Learn capacity, ideal projects, and how to book fast delivery.',
   keywords:

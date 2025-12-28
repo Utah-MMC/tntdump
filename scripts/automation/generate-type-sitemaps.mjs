@@ -88,8 +88,13 @@ function shouldSkipRoute(rel) {
   if (POSTS_SET.has(rel)) {
     return true;
   }
-  // Skip legacy /blog paths (redirected to root)
-  if (rel.startsWith('/blog')) {
+  // Skip legacy /blog post paths (redirected to root); keep /blog index
+  if (rel.startsWith('/blog/')) {
+    return true;
+  }
+  const parts = rel.split('/').filter(Boolean);
+  if (parts.length >= 2 && parts[parts.length - 1] === parts[parts.length - 2]) {
+    // Skip duplicated /slug/slug redirect routes
     return true;
   }
   return false;
@@ -160,7 +165,8 @@ async function getCities() {
         if (canonicalMatch && canonicalMatch[1] === canonicalMatch[2]) return canonicalMatch[1];
         return null;
       })
-      .filter(Boolean);
+      .filter(Boolean)
+      .filter((slug) => !slug.startsWith('near-me-'));
     
     // Generate city service area pages: /{city-slug}-dumpster-rentals/service-areas/{city-slug}
     const serviceAreaPages = citySlugs.map(slug => ({

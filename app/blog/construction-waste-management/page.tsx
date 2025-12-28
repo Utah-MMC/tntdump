@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: 'Construction Waste Management: A Practical Dumpster Plan | TNT Dumpsters',
+  title: 'Construction Waste Management: A Practical Dumpster Plan...',
   description: 'A clear construction waste management guide with dumpster sizing, sorting tips, and ways to keep job sites clean and compliant.',
   keywords: 'construction waste management, jobsite dumpsters, recycling construction debris, construction dumpster tips',
   alternates: { canonical: 'https://tntdump.com/blog/construction-waste-management' },

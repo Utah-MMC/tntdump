@@ -1,8 +1,8 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: 'Moving Cleanout Dumpster Guide: Pack, Purge, and Save | TNT Dumpsters',
-  description: 'A moving cleanout dumpster guide with sorting tips, size planning, and ways to reduce clutter before moving day.',
+  title: 'Moving Cleanout Dumpster Guide: Pack, Purge, and Save |...',
+  description: 'A moving cleanout dumpster guide with sorting tips, size planning, and ways to reduce clutter before moving day. Get fas',
   keywords: 'moving cleanout dumpster, moving dumpster rental, relocation dumpster, moving waste disposal, moving cleanup dumpster, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/blog/moving-cleanout-dumpster-guide' },
     openGraph: {

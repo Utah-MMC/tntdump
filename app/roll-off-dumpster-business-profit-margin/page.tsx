@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Roll-Off Dumpster Business Profit Margin | TNT Dumpsters',
   description:
-    'A practical look at roll-off dumpster business margins, common cost drivers, and how to price jobs responsibly.',
+    'A practical look at roll-off dumpster business margins, common cost drivers, and how to price jobs responsibly. Get fast',
   keywords:
     'roll off dumpster business profit margin, dumpster business costs, dumpster pricing strategy, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/roll-off-dumpster-business-profit-margin' },

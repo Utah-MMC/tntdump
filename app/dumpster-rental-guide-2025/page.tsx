@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Guide 2025: Plan Your Project | TNT Dumpsters',
-  description: 'A 2025 dumpster rental guide covering size choices, pricing factors, and loading tips for Utah projects.',
+  title: 'Dumpster Rental Guide 2025: Plan Your Project | TNT...',
+  description: 'A 2025 dumpster rental guide covering size choices, pricing factors, and loading tips for Utah projects. Get fast delive',
   keywords: 'dumpster rental guide 2025, dumpster rentals 2025, roll off rental tips, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-guide-2025' },
   openGraph: {

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: '20 Yard Dumpster Rental | Most Popular Size | TNT Dumpsters',
   description:
-    'Our 20 yard dumpster is the most popular size for remodels, roofing, and cleanouts. Learn capacity and book delivery.',
+    'Our 20 yard dumpster is the most popular size for remodels, roofing, and cleanouts. Learn capacity and book delivery. Ge',
   keywords:
     '20 yard dumpster rental, roll off dumpster 20 yard, construction dumpster, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/20-yard-dumpster-rental' },

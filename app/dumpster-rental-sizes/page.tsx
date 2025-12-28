@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Sizes | Compare 10-40 Yard Options | TNT Dumpsters',
+  title: 'Dumpster Rental Sizes | Compare 10-40 Yard Options | TNT...',
   description:
-    'Compare dumpster rental sizes from 10 to 40 yards. Learn what fits your project and get a fast quote in Utah.',
+    'Compare dumpster rental sizes from 10 to 40 yards. Learn what fits your project and get a fast quote in Utah. Get fast d',
   keywords:
     'dumpster rental sizes, dumpster size chart, 10 yard 20 yard 30 yard 40 yard dumpsters, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-sizes' },

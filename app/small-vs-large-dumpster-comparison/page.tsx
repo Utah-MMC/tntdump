@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Small vs Large Dumpster Comparison: Which Size Wins? | TNT Dumpsters',
-  description: 'A practical small vs large dumpster comparison with cost, capacity, and project fit to help you choose the right size.',
+  title: 'Small vs Large Dumpster Comparison: Which Size Wins? |...',
+  description: 'A practical small vs large dumpster comparison with cost, capacity, and project fit to help you choose the right size. G',
   keywords: 'small vs large dumpster, dumpster size comparison, roll off dumpster sizes, 10 yard vs 30 yard dumpster, dumpster rental guide',
   alternates: { canonical: 'https://tntdump.com/small-vs-large-dumpster-comparison' },
   openGraph: {

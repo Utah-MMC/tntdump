@@ -2,8 +2,8 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Kitchen Remodel Dumpster Guide: Size, Cost, and Tips | TNT Dumpsters',
-  description: 'A kitchen remodel dumpster guide with size recommendations, loading tips, and ways to keep demo debris under control.',
+  title: 'Kitchen Remodel Dumpster Guide: Size, Cost, and Tips |...',
+  description: 'A kitchen remodel dumpster guide with size recommendations, loading tips, and ways to keep demo debris under control. Ge',
   keywords: 'kitchen remodel dumpster, kitchen renovation dumpster rental, roll off dumpster for kitchen demo, dumpster size for kitchen remodel',
   alternates: { canonical: 'https://tntdump.com/kitchen-remodel-dumpster-guide' },
   openGraph: {

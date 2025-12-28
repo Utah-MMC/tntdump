@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Garage Cleanout Dumpster Rental | TNT Dumpsters',
   description:
-    'Fast dumpster rentals for garage cleanouts. Pick the right size, protect your driveway, and get quick pickup.',
+    'Fast dumpster rentals for garage cleanouts. Pick the right size, protect your driveway, and get quick pickup. Get fast d',
   keywords:
     'garage cleanout dumpster rental, garage cleanup dumpster, small dumpster rental, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/services/garage-cleanout' },

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Responsible Disposal: Keep Your Project Compliant | TNT Dumpsters',
+  title: 'Responsible Disposal: Keep Your Project Compliant | TNT...',
   description: 'Responsible disposal tips for dumpster rentals, including prohibited items, recycling ideas, and safe handling guidance.',
   keywords: 'responsible disposal, dumpster disposal rules, prohibited items, recycling tips, dumpster rental safety',
   alternates: { canonical: 'https://tntdump.com/responsible-disposal' },

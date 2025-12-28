@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Home Renovation Waste Disposal Guide | TNT Dumpsters',
-  description: 'A home renovation waste disposal guide covering size selection, loading tips, and safe handling for remodel debris.',
+  description: 'A home renovation waste disposal guide covering size selection, loading tips, and safe handling for remodel debris. Get ',
   keywords: 'home renovation waste disposal, remodel dumpster, renovation debris removal, dumpster rental guide',
   alternates: { canonical: 'https://tntdump.com/home-renovation-waste-disposal-guide' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Friendly Live Help: Talk to a Local Expert | TNT Dumpsters',
-  description: 'Call or text for friendly local help with dumpster sizing, scheduling, and project questions.',
+  description: 'Call or text for friendly local help with dumpster sizing, scheduling, and project questions. Get fast delivery and clea',
   keywords: 'friendly live help, dumpster support, local dumpster help, call for dumpster rental',
   alternates: { canonical: 'https://tntdump.com/friendly-live-help' },
   openGraph: {

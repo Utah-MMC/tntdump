@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Home Renovation Dumpster Guide: Plan, Size, and Save | TNT Dumpsters',
+  title: 'Home Renovation Dumpster Guide: Plan, Size, and Save |...',
   description: 'A home renovation dumpster guide with size planning, loading tips, and cost control advice to keep your remodel on track.',
   keywords: 'home renovation dumpster, remodel dumpster rental, roll off dumpster for renovation, dumpster size for remodel, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/home-renovation-dumpster-guide' },

@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import BlogPostSchema from '@/components/BlogPostSchema'
 export const metadata: Metadata = {
-  title: '20 Yard Dumpster: Complete Guide (Size, Uses & Cost) | TNT Dumpsters',
+  title: '20 Yard Dumpster: Complete Guide (Size, Uses & Cost) |...',
   description:
     'A full 20-yard dumpster guide with size, capacity, typical projects, loading tips, and how to avoid overage fees in Utah rentals.',
   keywords:

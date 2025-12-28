@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Resources | Guides, Tools, and Calculators | TNT Dumpsters',
+  title: 'Dumpster Rental Resources | Guides, Tools, and...',
   description:
-    'Helpful dumpster rental resources including size guides, calculators, pricing info, and permit tips for Utah projects.',
+    'Helpful dumpster rental resources including size guides, calculators, pricing info, and permit tips for Utah projects. G',
   keywords:
     'dumpster rental resources, dumpster guides, dumpster calculators, utah dumpster rental tips',
   alternates: { canonical: 'https://tntdump.com/resources' },

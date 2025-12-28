@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Cost Calculator: Budget Your Project | TNT Dumpsters',
-  description: 'A dumpster rental cost calculator guide explaining size, weight, and rental length factors that impact price.',
+  title: 'Dumpster Rental Cost Calculator: Budget Your Project |...',
+  description: 'A dumpster rental cost calculator guide explaining size, weight, and rental length factors that impact price. Get fast d',
   keywords: 'dumpster rental cost calculator, dumpster cost estimate, roll off rental price, dumpster pricing',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-cost-calculator' },
   openGraph: {

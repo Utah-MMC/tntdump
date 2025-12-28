@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Dumpster Prices in Utah: What Affects Cost | TNT Dumpsters',
-  description: 'A quick overview of dumpster prices in Utah and the factors that affect total rental cost.',
+  description: 'A quick overview of dumpster prices in Utah and the factors that affect total rental cost. Get fast delivery and clear p',
   keywords: 'dumpster prices, utah dumpster prices, roll off pricing, dumpster rental cost',
   alternates: { canonical: 'https://tntdump.com/dumpster-prices' },
   openGraph: {

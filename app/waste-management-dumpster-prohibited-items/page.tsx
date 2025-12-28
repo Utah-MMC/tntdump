@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Prohibited Items | What You Cannot Throw Away | TNT Dumpsters',
+  title: 'Dumpster Prohibited Items | What You Cannot Throw Away |...',
   description:
-    'A clear list of prohibited items for dumpster rentals, plus safer disposal options. Stay compliant and avoid trip fees.',
+    'A clear list of prohibited items for dumpster rentals, plus safer disposal options. Stay compliant and avoid trip fees. ',
   keywords:
     'dumpster prohibited items, hazardous waste disposal, what cannot go in a dumpster, utah dumpster rental rules',
   alternates: { canonical: 'https://tntdump.com/waste-management-dumpster-prohibited-items' },

@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Residential Dumpster Rentals | Home Projects | TNT Dumpsters',
   description:
-    'Residential dumpster rentals for cleanouts, remodels, and yard debris. Compare sizes, pricing, and delivery options.',
+    'Residential dumpster rentals for cleanouts, remodels, and yard debris. Compare sizes, pricing, and delivery options. Get',
   keywords:
     'residential dumpster rentals, home dumpster rental, driveway roll off dumpster, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/services/residential-dumpster-rentals' },

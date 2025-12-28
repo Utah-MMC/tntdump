@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Holiday Cleanup Dumpster Tips: Fast, Safe, and Easy | TNT Dumpsters',
+  title: 'Holiday Cleanup Dumpster Tips: Fast, Safe, and Easy |...',
   description: 'Holiday cleanup dumpster tips with size guidance, loading order, and ways to clear clutter quickly after big gatherings.',
   keywords: 'holiday cleanup dumpster tips, holiday cleanout dumpster, post holiday cleanup, dumpster rental for cleanup',
   alternates: { canonical: 'https://tntdump.com/holiday-cleanup-dumpster-tips' },

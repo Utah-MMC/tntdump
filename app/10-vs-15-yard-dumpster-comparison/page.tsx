@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: '10 vs 15 Yard Dumpster: Which Size Do You Need? | TNT Dumpsters',
+  title: '10 vs 15 Yard Dumpster: Which Size Do You Need? | TNT...',
   description: 'A clear 10 vs 15 yard dumpster comparison with capacity, footprint, costs, and real project examples to help you pick the right size.',
   keywords: '10 vs 15 yard dumpster, 10 yard vs 15 yard, small dumpster comparison, dumpster size comparison, residential dumpster rental, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/10-vs-15-yard-dumpster-comparison' },

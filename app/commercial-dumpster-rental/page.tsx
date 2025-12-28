@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental | Business-Ready Service | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental | Business-Ready Service |...',
   description:
     'Commercial dumpster rental for retail, offices, and property managers in Utah. Reliable scheduling, clear pricing, and responsive support.',
   keywords:

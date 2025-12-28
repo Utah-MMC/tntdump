@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Ultimate Guide to Dumpster Rental in Utah | TNT Dumpsters',
-  description: 'A complete Utah dumpster rental guide with sizing, pricing, permits, and loading best practices.',
+  description: 'A complete Utah dumpster rental guide with sizing, pricing, permits, and loading best practices. Get fast delivery and c',
   keywords: 'ultimate guide dumpster rental utah, utah dumpster guide, roll off dumpster utah, dumpster rental tips',
   alternates: { canonical: 'https://tntdump.com/ultimate-guide-dumpster-rental-utah' },
   openGraph: {

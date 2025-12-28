@@ -2,9 +2,9 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Concrete Dumpster Rental | Heavy Debris Solutions | TNT Dumpsters',
+  title: 'Concrete Dumpster Rental | Heavy Debris Solutions | TNT...',
   description:
-    'Concrete dumpster rental for driveways, patios, and demolition projects. Learn weight limits and safe loading tips.',
+    'Concrete dumpster rental for driveways, patios, and demolition projects. Learn weight limits and safe loading tips. Get ',
   keywords:
     'concrete dumpster rental, heavy debris dumpster, concrete disposal, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/services/concrete-dumpster-rental' },

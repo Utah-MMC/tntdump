@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Winter Dumpster Rental Tips: Safe, Clean, and On Time | TNT Dumpsters',
-  description: 'Practical winter dumpster rental tips for snow, ice, access, and safe loading so your project stays on schedule.',
+  title: 'Winter Dumpster Rental Tips: Safe, Clean, and On Time |...',
+  description: 'Practical winter dumpster rental tips for snow, ice, access, and safe loading so your project stays on schedule. Get fas',
   keywords: 'winter dumpster rental tips, dumpster rental in winter, snow and ice dumpster, cold weather dumpster delivery',
   alternates: { canonical: 'https://tntdump.com/winter-dumpster-rental-tips' },
   openGraph: {

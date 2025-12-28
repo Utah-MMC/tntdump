@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'No Hidden Fees: What to Expect from TNT Dumpsters',
-  description: 'Learn how we avoid hidden fees with clear quotes, weight limits, and upfront guidance.',
+  description: 'Learn how we avoid hidden fees with clear quotes, weight limits, and upfront guidance. Get fast delivery and clear prici',
   keywords: 'no hidden fees dumpster, dumpster pricing honesty, roll off dumpster fees, dumpster rental transparency',
   alternates: { canonical: 'https://tntdump.com/no-hidden-fees' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Accurate Weight Based Billing: What It Means | TNT Dumpsters',
-  description: 'Learn how weight based billing works for dumpsters and how to plan loads to avoid overage fees.',
+  description: 'Learn how weight based billing works for dumpsters and how to plan loads to avoid overage fees. Get fast delivery and cl',
   keywords: 'weight based billing, dumpster weight limits, overage fees, heavy debris dumpster',
   alternates: { canonical: 'https://tntdump.com/accurate-weight-based-billing' },
   openGraph: {

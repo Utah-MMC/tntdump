@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Load Your Dumpster and Schedule Pickup | TNT Dumpsters',
   description:
-    'Tips for loading your dumpster safely and scheduling pickup on time. Avoid trip fees and keep your project moving.',
+    'Tips for loading your dumpster safely and scheduling pickup on time. Avoid trip fees and keep your project moving. Get f',
   keywords:
     'dumpster pickup scheduling, how to load a dumpster, roll off pickup tips, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/load-dumpster-and-schedule-pickup' },

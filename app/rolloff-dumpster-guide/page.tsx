@@ -2,8 +2,8 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Roll Off Dumpster Guide: Sizes, Uses, and Rules | TNT Dumpsters',
-  description: 'A roll off dumpster guide covering size options, common uses, placement rules, and loading tips for Utah projects.',
+  title: 'Roll Off Dumpster Guide: Sizes, Uses, and Rules | TNT...',
+  description: 'A roll off dumpster guide covering size options, common uses, placement rules, and loading tips for Utah projects. Get f',
   keywords: 'roll off dumpster guide, roll off dumpster sizes, roll off rental, roll off dumpster rules',
   alternates: { canonical: 'https://tntdump.com/rolloff-dumpster-guide' },
   openGraph: {

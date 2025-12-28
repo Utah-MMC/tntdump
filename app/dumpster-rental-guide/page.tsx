@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Dumpster Rental Guide: Plan, Size, and Save | TNT Dumpsters',
-  description: 'A complete dumpster rental guide with size planning, placement tips, and loading basics to keep your project smooth.',
+  description: 'A complete dumpster rental guide with size planning, placement tips, and loading basics to keep your project smooth. Get',
   keywords: 'dumpster rental guide, roll off dumpster guide, how to rent a dumpster, dumpster size guide',
   alternates: { canonical: 'https://tntdump.com/dumpster-rental-guide' },
   openGraph: {

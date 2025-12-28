@@ -4,7 +4,7 @@ import Link from 'next/link';
 export const metadata: Metadata = {
   title: 'Utah Dumpster Rental Locations | TNT Dumpsters',
   description:
-    'Find TNT Dumpsters service areas across Utah. Browse city and county pages to see local availability.',
+    'Find TNT Dumpsters service areas across Utah. Browse city and county pages to see local availability. Get fast delivery ',
   keywords: 'utah dumpster rental locations, utah service areas, dumpster rental cities, tnt dumpsters',
   alternates: { canonical: 'https://tntdump.com/utahlocations' },
   openGraph: {

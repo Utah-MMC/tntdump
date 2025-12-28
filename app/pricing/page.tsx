@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Dumpster Rental Pricing: What to Expect in Utah | TNT Dumpsters',
+  title: 'Dumpster Rental Pricing: What to Expect in Utah | TNT...',
   description: 'Clear dumpster rental pricing guidance with factors that affect cost, weight limits, and tips to keep your budget steady.',
   keywords: 'dumpster rental pricing, dumpster rental cost utah, roll off dumpster prices, dumpster rates, dumpster rental fees',
   alternates: { canonical: 'https://tntdump.com/pricing' },

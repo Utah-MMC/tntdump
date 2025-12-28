@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'Dumpster Sizes: Compare Capacity and Uses | TNT Dumpsters',
-  description: 'A quick overview of dumpster sizes with common project matches and links to size resources.',
+  description: 'A quick overview of dumpster sizes with common project matches and links to size resources. Get fast delivery and clear ',
   keywords: 'dumpster sizes, roll off dumpster sizes, dumpster size comparison, dumpster capacity',
   alternates: { canonical: 'https://tntdump.com/dumpster-sizes' },
   openGraph: {

@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Roofing Calculator: Estimate Dumpster Needs | TNT Dumpsters',
-  description: 'A roofing calculator guide to estimate dumpster size and weight for roof tear offs.',
+  description: 'A roofing calculator guide to estimate dumpster size and weight for roof tear offs. Get fast delivery and clear pricing.',
   keywords: 'roofing calculator, dumpster size for roofing, roof tear off dumpster, roofing weight estimate',
   alternates: { canonical: 'https://tntdump.com/roofing-calculator' },
   openGraph: {

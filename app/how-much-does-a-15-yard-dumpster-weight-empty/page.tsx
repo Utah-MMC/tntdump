@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'How Much Does a 15 Yard Dumpster Weigh Empty? | TNT Dumpsters',
-  description: 'Typical empty weight guidance for a 15 yard dumpster and how weight limits affect rentals.',
+  title: 'How Much Does a 15 Yard Dumpster Weigh Empty? | TNT...',
+  description: 'Typical empty weight guidance for a 15 yard dumpster and how weight limits affect rentals. Get fast delivery and clear p',
   keywords: '15 yard dumpster weight empty, empty dumpster weight, dumpster weight limits',
   alternates: { canonical: 'https://tntdump.com/how-much-does-a-15-yard-dumpster-weight-empty' },
   openGraph: {

@@ -2,7 +2,7 @@ import BlogPostSchema from '@/components/BlogPostSchema'
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Basement Cleanout Dumpster Tips: Size, Safety, and Speed | TNT Dumpsters',
+  title: 'Basement Cleanout Dumpster Tips: Size, Safety, and Speed...',
   description: 'Practical basement cleanout dumpster tips with size guidance, loading order, and ways to keep the job safe and efficient.',
   alternates: { canonical: 'https://tntdump.com/blog/basement-cleanout-dumpster-tips' },
   openGraph: {

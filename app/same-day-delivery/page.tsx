@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Same Day Dumpster Delivery in Utah | TNT Dumpsters',
-  description: 'Same day dumpster delivery options for Utah projects, including scheduling tips and availability guidance.',
+  description: 'Same day dumpster delivery options for Utah projects, including scheduling tips and availability guidance. Get fast deli',
   keywords: 'same day dumpster delivery, same day dumpster rental, fast dumpster delivery, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/same-day-delivery' },
   openGraph: {

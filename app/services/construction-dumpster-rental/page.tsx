@@ -2,11 +2,11 @@ import type { Metadata } from 'next'
 import ServicePageTemplate from '@/components/ServicePageTemplate'
 
 export const metadata: Metadata = {
-  title: 'Construction Dumpster Rental | TNT Dumpsters',
+  title: 'Construction Dumpster Rental Service | TNT Dumpsters',
   description: 'Construction dumpster rentals for job sites, renovations, and demolition. Fast delivery, clear pricing, and reliable swaps.',
   alternates: { canonical: 'https://tntdump.com/services/construction-dumpster-rental' },
     openGraph: {
-      title: 'Construction Dumpster Rental | TNT Dumpsters',
+      title: 'Construction Dumpster Rental Service | TNT Dumpsters',
       description: 'Construction dumpster rentals for job sites, renovations, and demolition. Fast delivery, clear pricing, and reliable swaps.',
       url: 'https://tntdump.com/services/construction-dumpster-rental',
       siteName: 'TNT Dumpsters',

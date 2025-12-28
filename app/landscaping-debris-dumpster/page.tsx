@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Landscaping Debris Dumpster Guide: Brush, Dirt, and More | TNT Dumpsters',
-  description: 'A landscaping debris dumpster guide with size tips, loading advice, and ways to handle brush, sod, and soil safely.',
+  title: 'Landscaping Debris Dumpster Guide: Brush, Dirt, and More...',
+  description: 'A landscaping debris dumpster guide with size tips, loading advice, and ways to handle brush, sod, and soil safely. Get ',
   keywords: 'landscaping debris dumpster, landscaping waste removal, brush disposal, yard debris dumpster rental',
   alternates: { canonical: 'https://tntdump.com/landscaping-debris-dumpster' },
   openGraph: {

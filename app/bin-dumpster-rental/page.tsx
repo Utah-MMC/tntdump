@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Bin Dumpster Rental: Flexible Options in Utah | TNT Dumpsters',
-  description: 'Bin dumpster rental options for cleanouts and remodels across Utah, with reliable delivery and pickup.',
+  title: 'Bin Dumpster Rental: Flexible Options in Utah | TNT...',
+  description: 'Bin dumpster rental options for cleanouts and remodels across Utah, with reliable delivery and pickup. Get fast delivery',
   keywords: 'bin dumpster rental, dumpster bin rental, roll off bin, utah dumpster rental',
   alternates: { canonical: 'https://tntdump.com/bin-dumpster-rental' },
   openGraph: {

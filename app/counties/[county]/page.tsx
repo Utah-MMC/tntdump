@@ -35,6 +35,15 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
     title: `${countyName} Dumpster Rental | TNT Dumpsters`,
     description: `Dumpster rental coverage across ${countyName}. Fast delivery, clear pricing, and reliable pickups.`,
     alternates: { canonical: `https://tntdump.com/counties/${params.county}` },
+    openGraph: {
+      title: `${countyName} Dumpster Rental | TNT Dumpsters`,
+      description: `Dumpster rental coverage across ${countyName}. Fast delivery, clear pricing, and reliable pickups.`,
+      url: `https://tntdump.com/counties/${params.county}`,
+      siteName: 'TNT Dumpsters',
+      type: 'website',
+      locale: 'en_US',
+      images: [{ url: '/images/t-and-t-dumpsters-logo-176w.webp', width: 1200, height: 630 }],
+    },
   }
 }
 

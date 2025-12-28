@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Office Cleanout Dumpster Guide: Plan, Sort, and Clear | TNT Dumpsters',
-  description: 'An office cleanout dumpster guide with sorting tips, size recommendations, and ways to keep business disruption low.',
+  title: 'Office Cleanout Dumpster Guide: Plan, Sort, and Clear |...',
+  description: 'An office cleanout dumpster guide with sorting tips, size recommendations, and ways to keep business disruption low. Get',
   keywords: 'office cleanout dumpster, office cleanout guide, business junk removal, dumpster rental for office cleanout',
   alternates: { canonical: 'https://tntdump.com/office-cleanout-dumpster-guide' },
   openGraph: {

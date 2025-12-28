@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Concrete Calculator: Plan Heavy Debris Loads | TNT Dumpsters',
-  description: 'A concrete calculator guide to estimate debris weight and choose the right dumpster for heavy materials.',
+  description: 'A concrete calculator guide to estimate debris weight and choose the right dumpster for heavy materials. Get fast delive',
   keywords: 'concrete calculator, concrete weight estimate, concrete dumpster size, heavy debris dumpster',
   alternates: { canonical: 'https://tntdump.com/concrete-calculator' },
   openGraph: {

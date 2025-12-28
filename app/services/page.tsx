@@ -1,3 +1,5 @@
+import type { Metadata } from 'next'
+
 export const metadata: Metadata = {
   title: 'Dumpster Rental Services | Dumpster Rental | TNT Dump',
   description:

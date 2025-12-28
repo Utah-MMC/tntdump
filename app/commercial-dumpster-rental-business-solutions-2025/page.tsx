@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 
 export const metadata: Metadata = {
-  title: 'Commercial Dumpster Rental Business Solutions 2025 | TNT Dumpsters',
+  title: 'Commercial Dumpster Rental Business Solutions 2025 | TNT...',
   description:
     'Planning commercial projects in 2025? Explore dumpster rental solutions for retail, offices, and property managers across Utah.',
   keywords:
