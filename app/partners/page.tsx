@@ -43,23 +43,33 @@ export default function PartnersPage() {
         <div className="grid gap-10 lg:grid-cols-2">
           {/* Icon Dumpsters - Sister Company */}
           <article className="h-full rounded-2xl border border-gray-200 bg-white shadow-sm p-8 flex flex-col">
-            <div className="mb-6">
-              <span className="inline-flex items-center text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
-                Sister Company - Dumpster Rental Partner
-              </span>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Icon Dumpsters
-              </h2>
-              <p className="text-gray-600">
-                Icon Dumpsters provides modern, residential-friendly dumpster rental services with same-day delivery and transparent pricing for homeowners and contractors across Utah.
-              </p>
+            <div className="mb-6 flex items-start justify-between gap-4">
+              <div className="flex-1 min-w-0">
+                <span className="inline-flex items-center text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
+                  Sister Company - Dumpster Rental Partner
+                </span>
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                  Icon Dumpsters
+                </h2>
+                <p className="text-gray-600">
+                  Icon Dumpsters provides modern, residential-friendly dumpster rental services with same-day delivery and transparent pricing for homeowners and contractors across Utah.
+                </p>
+              </div>
+              <div className="flex-shrink-0 w-16 h-16 flex items-center justify-center">
+                <img
+                  src="/images/icon-dumpsters-logo.png"
+                  alt="Icon Dumpsters logo"
+                  className="max-w-full max-h-full object-contain"
+                  loading="lazy"
+                />
+              </div>
             </div>
             <ul className="space-y-2 text-gray-700 flex-1">
               <li>&bull; Modern, residential-friendly dumpster rental service</li>
               <li>&bull; Same-day delivery options with flexible scheduling</li>
               <li>&bull; Transparent pricing with no hidden fees</li>
               <li>&bull; Specialized in home cleanouts, renovations, and small construction projects</li>
-              <li>&bull; Contact: <a className="text-teal-600 hover:underline" href="tel:+18012099013">(801) 209-9013</a> &middot; <span className="text-gray-600">info@icondumpsters.com</span></li>
+              <li>&bull; Contact: <a className="text-teal-600 hover:underline" href="tel:+18019186000">(801) 918-6000</a> &middot; <span className="text-gray-600">info@icondumpsters.com</span></li>
             </ul>
             <div className="mt-6">
               <a
@@ -78,16 +88,24 @@ export default function PartnersPage() {
 
           {/* Utah Water Gardens */}
           <article className="h-full rounded-2xl border border-gray-200 bg-white shadow-sm p-8 flex flex-col">
-            <div className="mb-6">
-              <span className="inline-flex items-center text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
-                Pond &amp; Water Feature Partner
-              </span>
-              <h2 className="text-3xl font-bold text-gray-900 mb-3">
-                Utah Water Gardens
-              </h2>
-              <p className="text-gray-600">
-                Utah Water Gardens delivers complete pond and water feature solutions throughout the Wasatch Front—from custom construction to routine maintenance and water quality care.
-              </p>
+            <div className="mb-6 flex items-start justify-between gap-6">
+              <div>
+                <span className="inline-flex items-center text-sm font-semibold text-teal-700 uppercase tracking-wide mb-2">
+                  Pond &amp; Water Feature Partner
+                </span>
+                <h2 className="text-3xl font-bold text-gray-900 mb-3">
+                  Utah Water Gardens
+                </h2>
+                <p className="text-gray-600">
+                  Utah Water Gardens delivers complete pond and water feature solutions throughout the Wasatch Front-from custom construction to routine maintenance and water quality care.
+                </p>
+              </div>
+              <img
+                src="/images/utahwatergardens_logo_ogimage.webp"
+                alt="Utah Water Gardens logo"
+                className="h-12 w-auto object-contain"
+                loading="lazy"
+              />
             </div>
             <ul className="space-y-2 text-gray-700 flex-1">
               <li>&bull; Established in 1989 and still family operated in Salt Lake City</li>
@@ -125,7 +143,7 @@ export default function PartnersPage() {
                 </p>
               </div>
               <img
-                src="/images/waterraptor-logo.png"
+                src="https://waterraptor.com/images/logo/waterraptorlogo.png"
                 alt="WaterRaptor logo"
                 className="h-12 w-auto object-contain"
                 loading="lazy"
