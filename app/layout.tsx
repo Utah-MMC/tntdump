@@ -6,6 +6,8 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PerformanceMonitor from '@/components/PerformanceMonitor'
 import DeferredChatWidget from '@/components/DeferredChatWidget'
+import WebVitals from '@/components/WebVitals'
+import { SpeedInsights } from '@vercel/speed-insights/react'
 
 const inter = Inter({ subsets: ['latin'], display: 'swap' })
 
@@ -280,6 +282,8 @@ export default function RootLayout({
           <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WFJHM33W" height="0" width="0" style={{display:'none',visibility:'hidden'}} />
         </noscript>
         <PerformanceMonitor />
+        <WebVitals />
+        <SpeedInsights />
         <Header />
         {children}
         <Footer />
