@@ -33,7 +33,12 @@
       "Bash(git switch:*)",
       "Bash(ls:*)",
       "Bash(mkdir:*)",
-      "Bash(dir:*)"
+      "Bash(dir:*)",
+      "Bash(timeout:*)",
+      "Bash(npm run dev:*)",
+      "Bash(del:*)",
+      "Bash(npx svgo:*)",
+      "Bash(node scripts/optimize-logo.js:*)"
     ],
     "deny": [],
     "ask": []
