@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react'
 import { Phone, Menu, X, ChevronDown, Star } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -127,7 +128,7 @@ const Header = () => {
        {/* Single Blue Header */}
       <header id="site-header" className="bg-gray-900 text-yellow-400 shadow-lg sticky top-0 z-50">
          <div className="container-custom">
-                      <div className="flex items-center justify-between h-[80px]">
+                      <div className="flex items-center justify-between h-[140px]">
               {/* Left Side - Contact Info */}
               <div className="flex items-center space-x-8">
                 <div className="text-yellow-400">
@@ -141,8 +142,17 @@ const Header = () => {
                 </div>
               </div>
 
-              {/* Center spacer to balance layout after removing logo */}
-              <div className="flex-1" />
+              {/* Logo */}
+              <Link href="/" className="flex items-center">
+                <Image
+                  src="/images/logo/logo.png"
+                  alt="TNT Dumpsters Logo"
+                  width={591}
+                  height={192}
+                  priority
+                  className="h-48 w-auto"
+                />
+              </Link>
 
               {/* Navigation - Right */}
               <nav className="hidden lg:flex items-center space-x-8">
