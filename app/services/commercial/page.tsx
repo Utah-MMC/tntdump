@@ -107,7 +107,7 @@ export default function CommercialServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Commercial Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Comprehensive waste management solutions for businesses of all sizes. Professional service, competitive pricing, and flexible scheduling to keep your business running smoothly.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -295,7 +295,7 @@ export default function CommercialServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Professional Commercial Service
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Trusted by Utah businesses for over 55 years
             </p>
           </div>
@@ -306,28 +306,28 @@ export default function CommercialServicePage() {
                 <Building className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Business Focused</h3>
-              <p className="text-blue-100">Designed specifically for commercial needs</p>
+              <p className="text-blue-50">Designed specifically for commercial needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Flexible Scheduling</h3>
-              <p className="text-blue-100">Work around your business hours</p>
+              <p className="text-blue-50">Work around your business hours</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Reliable Service</h3>
-              <p className="text-blue-100">Consistent delivery and pickup</p>
+              <p className="text-blue-50">Consistent delivery and pickup</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Account Management</h3>
-              <p className="text-blue-100">Dedicated support for regular customers</p>
+              <p className="text-blue-50">Dedicated support for regular customers</p>
             </div>
           </div>
         </div>

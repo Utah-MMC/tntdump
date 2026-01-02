@@ -107,7 +107,7 @@ export default function IndustrialServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Industrial Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Heavy-duty waste disposal solutions for industrial operations. Our industrial dumpster service is designed to handle the toughest waste management challenges with professional expertise and regulatory compliance.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -295,7 +295,7 @@ export default function IndustrialServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Industrial-Grade Service
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Built for heavy-duty operations and regulatory compliance
             </p>
           </div>
@@ -306,28 +306,28 @@ export default function IndustrialServicePage() {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Compliance Focused</h3>
-              <p className="text-blue-100">Full regulatory compliance and documentation</p>
+              <p className="text-blue-50">Full regulatory compliance and documentation</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Zap className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Emergency Response</h3>
-              <p className="text-blue-100">24/7 availability for urgent situations</p>
+              <p className="text-blue-50">24/7 availability for urgent situations</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Heavy Equipment</h3>
-              <p className="text-blue-100">Specialized equipment for industrial waste</p>
+              <p className="text-blue-50">Specialized equipment for industrial waste</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Project Management</h3>
-              <p className="text-blue-100">Dedicated support for complex operations</p>
+              <p className="text-blue-50">Dedicated support for complex operations</p>
             </div>
           </div>
         </div>

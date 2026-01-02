@@ -424,38 +424,38 @@ export default function VolumeCalculator() {
                       {result.totalCubicYards}
                       <span className="text-lg font-normal ml-1">cu. yds</span>
                     </div>
-                    <p className="text-blue-100 text-sm">
+                    <p className="text-blue-50 text-sm">
                       ({convertCubicYards(result.totalCubicYards).cubicFeet} cubic feet)
                     </p>
                   </div>
 
                   <div className="bg-white/10 rounded-lg p-4 mb-4">
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-sm text-blue-100">Recommended Size</span>
-                      <CheckCircle className="w-5 h-5 text-green-300" />
+                      <span className="text-sm text-blue-50">Recommended Size</span>
+                      <CheckCircle className="w-5 h-5 text-green-200" />
                     </div>
                     <div className="text-3xl font-bold mb-1">{result.recommendedSize}-Yard</div>
                     {result.sizeRange && (
-                      <p className="text-sm text-blue-100">Range: {result.sizeRange}</p>
+                      <p className="text-sm text-blue-50">Range: {result.sizeRange}</p>
                     )}
-                    <p className="text-xs text-blue-100 mt-2">
+                    <p className="text-xs text-blue-50 mt-2">
                       {getDumpsterSizeDescription(result.recommendedSize)}
                     </p>
                   </div>
 
                   <div className="space-y-3 mb-4">
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-blue-100">Equivalent:</span>
+                      <span className="text-blue-50">Equivalent:</span>
                       <span className="font-semibold">
                         {result.pickupTruckLoads} pickup truck loads
                       </span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-blue-100">Est. Weight:</span>
+                      <span className="text-blue-50">Est. Weight:</span>
                       <span className="font-semibold">{result.estimatedWeight} tons</span>
                     </div>
                     <div className="flex items-center justify-between text-sm">
-                      <span className="text-blue-100">Material Density:</span>
+                      <span className="text-blue-50">Material Density:</span>
                       <span className="font-semibold capitalize">{result.materialDensity}</span>
                     </div>
                   </div>
@@ -463,7 +463,7 @@ export default function VolumeCalculator() {
                   {result.warnings.length > 0 && (
                     <div className="bg-yellow-500/20 border border-yellow-400/30 rounded-lg p-3 mb-4">
                       <div className="flex items-start">
-                        <AlertTriangle className="w-5 h-5 text-yellow-300 mt-0.5 mr-2 flex-shrink-0" />
+                        <AlertTriangle className="w-5 h-5 text-yellow-200 mt-0.5 mr-2 flex-shrink-0" />
                         <div>
                           <h4 className="font-semibold text-sm mb-2">Important Warnings</h4>
                           <ul className="text-xs space-y-1">
@@ -482,7 +482,7 @@ export default function VolumeCalculator() {
                         <Layers className="w-4 h-4 mr-2" />
                         Calculation Breakdown
                       </h4>
-                      <ul className="text-xs space-y-1 text-blue-100">
+                      <ul className="text-xs space-y-1 text-blue-50">
                         {result.reasoning.map((reason, idx) => (
                           <li key={idx}>• {reason}</li>
                         ))}

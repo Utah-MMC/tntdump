@@ -73,7 +73,7 @@ export default function VendorServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Vendor Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               We offer a hassle-free solution for vendors needing waste management for their operations. If you're looking for reliable services, we deliver and pick up the dumpster according to your schedule, providing a seamless service experience.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -218,7 +218,7 @@ export default function VendorServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Your Trusted Vendor Partner
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Reliable waste management solutions for your business operations
             </p>
           </div>
@@ -229,28 +229,28 @@ export default function VendorServicePage() {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Partnership Focus</h3>
-              <p className="text-blue-100">Built for vendor relationships</p>
+              <p className="text-blue-50">Built for vendor relationships</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Users className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Dedicated Support</h3>
-              <p className="text-blue-100">Vendor-specific account management</p>
+              <p className="text-blue-50">Vendor-specific account management</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Flexible Service</h3>
-              <p className="text-blue-100">Scheduled to match your operations</p>
+              <p className="text-blue-50">Scheduled to match your operations</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Reliable Service</h3>
-              <p className="text-blue-100">Consistent delivery and pickup</p>
+              <p className="text-blue-50">Consistent delivery and pickup</p>
             </div>
           </div>
         </div>

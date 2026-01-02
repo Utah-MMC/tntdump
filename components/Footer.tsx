@@ -42,16 +42,16 @@ const Footer = () => {
                      {/* Company Info */}
            <div className="space-y-4">
              <h3 className="text-lg sm:text-xl font-bold text-yellow-400">TNT Dumpsters</h3>
-            <p className="text-gray-300">
+            <p className="text-gray-200">
               Over 55 years of experience in dumpster rental services. Serving the Wasatch Front area with reliable, affordable waste management solutions.
             </p>
-            <p className="text-gray-300 text-sm">
+            <p className="text-gray-200 text-sm">
               Sister company:{' '}
               <a
                 href="https://icondumpsters.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-yellow-400 hover:text-yellow-300 underline"
+                className="text-yellow-400 hover:text-yellow-200 underline"
               >
                 Icon Dumpsters
               </a>
@@ -59,19 +59,19 @@ const Footer = () => {
             <div className="space-y-2">
                             <div className="flex items-center space-x-2">
                 <Phone className="h-4 w-4 text-green-500" />
-                               <a href="tel:+18012099013" className="text-yellow-400 hover:text-yellow-300">
+                               <a href="tel:+18012099013" className="text-yellow-400 hover:text-yellow-200">
                  (801) 209-9013
                </a>
                </div>
               <div className="flex items-center space-x-2">
                 <Mail className="h-4 w-4 text-green-500" />
-                <a href="mailto:sales@tntdump.com" className="text-yellow-400 hover:text-yellow-300">
+                <a href="mailto:sales@tntdump.com" className="text-yellow-400 hover:text-yellow-200">
                   sales@tntdump.com
                 </a>
               </div>
               <div className="flex items-center space-x-2">
                 <MapPin className="h-4 w-4 text-green-500" />
-                <span className="text-gray-300">Wasatch Front, UT</span>
+                <span className="text-gray-200">Wasatch Front, UT</span>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ const Footer = () => {
                 <li key={item.name}>
                   <Link
                     href={item.href}
-                    className="text-yellow-400 hover:text-yellow-300 transition-colors"
+                    className="text-yellow-400 hover:text-yellow-200 transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -96,7 +96,7 @@ const Footer = () => {
           {/* Business Hours */}
           <div>
             <h3 className="text-lg font-semibold mb-4 text-yellow-400">Business Hours</h3>
-            <div className="space-y-2 text-gray-300">
+            <div className="space-y-2 text-gray-200">
               <p><strong>Monday - Friday:</strong></p>
               <p>7:00 am - 9:00 pm</p>
               <p className="mt-4"><strong>Saturday - Sunday:</strong></p>
@@ -111,7 +111,7 @@ const Footer = () => {
                  {/* Bottom Section */}
          <div className="border-t border-gray-800 mt-6 sm:mt-8 pt-6 sm:pt-8">
            <div className="flex flex-col sm:flex-row justify-between items-center space-y-4 sm:space-y-0">
-            <div className="text-gray-300 text-xs sm:text-sm text-center sm:text-left">
+            <div className="text-gray-200 text-xs sm:text-sm text-center sm:text-left">
                &copy; {currentYear} TNT Dumpsters. All rights reserved.
              </div>
             <div className="flex flex-wrap justify-center sm:justify-end gap-4 sm:gap-6">
@@ -119,7 +119,7 @@ const Footer = () => {
                  <Link
                    key={item.name}
                    href={item.href}
-                  className="text-yellow-400 hover:text-yellow-300 text-xs sm:text-sm transition-colors"
+                  className="text-yellow-400 hover:text-yellow-200 text-xs sm:text-sm transition-colors"
                  >
                    {item.name}
                  </Link>

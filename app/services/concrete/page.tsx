@@ -86,7 +86,7 @@ export default function ConcreteServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Concrete Dumpster Rental
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Our concrete dumpsters are specifically designed to handle heavy materials such as concrete, brick, and asphalt. This service is ideal for construction and demolition projects, ensuring efficient and safe waste disposal, every single time.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -274,7 +274,7 @@ export default function ConcreteServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Heavy-Duty Concrete Service
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Built for the toughest construction and demolition projects
             </p>
           </div>
@@ -285,28 +285,28 @@ export default function ConcreteServicePage() {
                 <Shield className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Heavy-Duty Design</h3>
-              <p className="text-blue-100">Built to handle concrete and heavy materials</p>
+              <p className="text-blue-50">Built to handle concrete and heavy materials</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Wrench className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Specialized Equipment</h3>
-              <p className="text-blue-100">Proper tools for heavy material handling</p>
+              <p className="text-blue-50">Proper tools for heavy material handling</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Construction Focus</h3>
-              <p className="text-blue-100">Designed for construction projects</p>
+              <p className="text-blue-50">Designed for construction projects</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Expert Guidance</h3>
-              <p className="text-blue-100">Professional advice for concrete disposal</p>
+              <p className="text-blue-50">Professional advice for concrete disposal</p>
             </div>
           </div>
         </div>

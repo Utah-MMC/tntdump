@@ -301,7 +301,7 @@ export default function CityPageTemplate({
       <section className="py-16 bg-blue-700 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold mb-4">Why Choose TNT Dumpsters in {cityName}?</h2>
-          <p className="text-xl text-blue-100 mb-10">{contentSections.whyChooseUs}</p>
+          <p className="text-xl text-blue-50 mb-10">{contentSections.whyChooseUs}</p>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {['Fast Delivery', 'Clear Pricing', 'Local Support', 'Flexible Scheduling'].map((item) => (
               <div key={item} className="bg-white/10 rounded-lg p-4">

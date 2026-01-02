@@ -89,7 +89,7 @@ export default function ServicePageTemplate({
         <div className="container-custom">
           <div className="max-w-4xl mx-auto text-center">
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">{title}</h1>
-            <p className="text-xl text-blue-100 mb-8">{subtitle}</p>
+            <p className="text-xl text-blue-50 mb-8">{subtitle}</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
                 href={primaryCta.href}

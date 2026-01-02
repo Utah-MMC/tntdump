@@ -86,7 +86,7 @@ export default function ResidentialServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Residential Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Perfect for home renovations, cleanouts, and DIY projects. Fast delivery, competitive pricing, and reliable service for all your residential waste management needs.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -256,7 +256,7 @@ export default function ResidentialServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Why Choose TNT Dumpsters for Your Residential Needs?
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Over 55 years of experience serving Utah homeowners
             </p>
           </div>
@@ -267,28 +267,28 @@ export default function ResidentialServicePage() {
                 <Clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Fast Delivery</h3>
-              <p className="text-blue-100">Same-day delivery available for most areas</p>
+              <p className="text-blue-50">Same-day delivery available for most areas</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <MapPin className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Local Service</h3>
-              <p className="text-blue-100">Family-owned business serving Utah since 1965</p>
+              <p className="text-blue-50">Family-owned business serving Utah since 1965</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Reliable Pickup</h3>
-              <p className="text-blue-100">Flexible scheduling and prompt pickup service</p>
+              <p className="text-blue-50">Flexible scheduling and prompt pickup service</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Expert Support</h3>
-              <p className="text-blue-100">Friendly customer service and project guidance</p>
+              <p className="text-blue-50">Friendly customer service and project guidance</p>
             </div>
           </div>
         </div>

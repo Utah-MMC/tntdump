@@ -83,7 +83,7 @@ export default function LongTermServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Long-Term Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               For ongoing projects or businesses with consistent waste disposal needs, TNT Dumpsters long-term dumpster service is the ideal choice. We provide reliable, regular pick-ups to ensure your site remains clean and safe.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -244,7 +244,7 @@ export default function LongTermServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Reliable Long-Term Partnership
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Your trusted waste management partner for ongoing operations
             </p>
           </div>
@@ -255,28 +255,28 @@ export default function LongTermServicePage() {
                 <DollarSign className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Volume Discounts</h3>
-              <p className="text-blue-100">Better rates for longer contracts</p>
+              <p className="text-blue-50">Better rates for longer contracts</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Regular Pickups</h3>
-              <p className="text-blue-100">Scheduled service to keep you clean</p>
+              <p className="text-blue-50">Scheduled service to keep you clean</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Dedicated Service</h3>
-              <p className="text-blue-100">Account management for your needs</p>
+              <p className="text-blue-50">Account management for your needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Priority Support</h3>
-              <p className="text-blue-100">Fast response for your business</p>
+              <p className="text-blue-50">Fast response for your business</p>
             </div>
           </div>
         </div>

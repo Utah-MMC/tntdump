@@ -125,14 +125,14 @@ const Hero = () => {
             {/* Left Column - Content */}
             <div className="text-white">
               <div className="mb-6">
-                <p className="text-lg lg:text-xl text-blue-100 mb-3 leading-relaxed">
+                <p className="text-lg lg:text-xl text-blue-50 mb-3 leading-relaxed">
                   Over 55 years delivering reliable, affordable container services across the Wasatch Front.
                 </p>
                 {/* Introductory SEO copy */}
-                <p className="text-sm sm:text-base text-blue-100 mb-2 leading-relaxed">
-                  Need a roll-off container you can count on? We deliver with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-300">pricing</a> overview, then call for a firm quote.
+                <p className="text-sm sm:text-base text-blue-50 mb-2 leading-relaxed">
+                  Need a roll-off container you can count on? We deliver with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-200">pricing</a> overview, then call for a firm quote.
                 </p>
-                <p className="text-sm sm:text-base text-blue-100 leading-relaxed">
+                <p className="text-sm sm:text-base text-blue-50 leading-relaxed">
                   Whether you need a container for a weekend cleanout or a roll-off for a busy construction site, our local team keeps it simple: on-time drop-offs, careful placement, and easy pickups.
                 </p>
               </div>
@@ -145,7 +145,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <h2 className="font-bold text-base">Fast Delivery</h2>
-                    <p className="text-blue-100 text-xs">Same-day service available</p>
+                    <p className="text-blue-50 text-xs">Same-day service available</p>
                   </div>
                 </div>
                 
@@ -155,7 +155,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <h2 className="font-bold text-base">Reliable Service</h2>
-                    <p className="text-blue-100 text-xs">55+ years experience</p>
+                    <p className="text-blue-50 text-xs">55+ years experience</p>
                   </div>
                 </div>
                 
@@ -165,7 +165,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <h2 className="font-bold text-base">5-Star Rated</h2>
-                    <p className="text-blue-100 text-xs">Customer satisfaction</p>
+                    <p className="text-blue-50 text-xs">Customer satisfaction</p>
                   </div>
                 </div>
                 
@@ -175,7 +175,7 @@ const Hero = () => {
                   </div>
                   <div>
                     <h2 className="font-bold text-base">Quick Response</h2>
-                    <p className="text-blue-100 text-xs">15min response time</p>
+                    <p className="text-blue-50 text-xs">15min response time</p>
                   </div>
                 </div>
               </div>
@@ -197,12 +197,12 @@ const Hero = () => {
                 </a>
               </div>
               {/* Same-day ribbon/CTA microcopy near hero */}
-              <p className="text-blue-100 text-xs opacity-90 mb-2" data-cta-variants="Same day service available today — request delivery ›|Need a roll off today? Ask about same day delivery ›|Urgent project? Same day service when routes allow ›">
+              <p className="text-blue-50 text-xs opacity-90 mb-2" data-cta-variants="Same day service available today — request delivery ›|Need a roll off today? Ask about same day delivery ›|Urgent project? Same day service when routes allow ›">
                 Ask about same day delivery; tap Get Free Quote to check today's schedule.
               </p>
 
               {/* Trust Indicators */}
-              <div className="flex items-center space-x-6 text-sm text-blue-100">
+              <div className="flex items-center space-x-6 text-sm text-blue-50">
                 <div className="flex items-center">
                   <Clock className="h-4 w-4 text-yellow-500" />
                   <span className="font-medium">15min Response</span>
@@ -212,8 +212,8 @@ const Hero = () => {
 
             {/* Right Column - Contact/Quote Form */}
             <div id="quote" className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-yellow-300 mb-1">Get a Quote</h3>
-              <p className="text-blue-100 text-xs mb-3">Fast delivery from a local team. We'll confirm pricing and timing ASAP.</p>
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-200 mb-1">Get a Quote</h3>
+              <p className="text-blue-50 text-xs mb-3">Fast delivery from a local team. We'll confirm pricing and timing ASAP.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
                 {/* Row 1: Name + Phone */}

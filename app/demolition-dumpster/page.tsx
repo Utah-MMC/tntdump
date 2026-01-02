@@ -535,7 +535,7 @@ export default function DemolitionDumpsterPage() {
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
             Ready to Start Your Demolition Project?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 max-w-3xl mx-auto">
+          <p className="text-xl text-blue-50 mb-8 max-w-3xl mx-auto">
             Contact us today for a free consultation on your demolition dumpster needs. Our team specializes in commercial construction, roofing, and heavy demolition projects. We'll help you choose the right specialized dumpster for your materials.
           </p>
           
@@ -554,7 +554,7 @@ export default function DemolitionDumpsterPage() {
             </a>
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-6 justify-center text-blue-100">
+          <div className="flex flex-col sm:flex-row gap-6 justify-center text-blue-50">
             <div className="flex items-center space-x-2">
               <Phone className="h-5 w-5" />
               <span>Call or Text</span>

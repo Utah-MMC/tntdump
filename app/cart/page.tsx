@@ -9,7 +9,7 @@ export default function CartPage() {
       <div className="bg-gradient-to-r from-blue-700 to-blue-600 text-white py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-3xl md:text-4xl font-bold mb-2">Order Your Dumpster Rental Online</h1>
-          <p className="text-lg text-blue-100">
+          <p className="text-lg text-blue-50">
             Our online dumpster rental experience is just one of the many ways TNT Dump makes roll off dumpster rental simpler and more affordable. 
             In just a few clicks, you can schedule a dumpster delivery to your home, business or job site to make cleaning up a breeze.
           </p>

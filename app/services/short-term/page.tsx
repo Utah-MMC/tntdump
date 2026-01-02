@@ -114,7 +114,7 @@ export default function ShortTermServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Short-Term Dumpster Rental Service
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Perfect for projects with a defined timeline. Whether you're undertaking a home renovation or organizing a one-off event, our short-term dumpster service provides flexible and convenient waste management.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -304,7 +304,7 @@ export default function ShortTermServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Fast & Flexible Short-Term Service
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Quick delivery, flexible scheduling, no long-term commitment
             </p>
           </div>
@@ -315,28 +315,28 @@ export default function ShortTermServicePage() {
                 <Calendar className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Flexible Duration</h3>
-              <p className="text-blue-100">1-7 day rental periods</p>
+              <p className="text-blue-50">1-7 day rental periods</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Clock className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Quick Delivery</h3>
-              <p className="text-blue-100">Same-day delivery available</p>
+              <p className="text-blue-50">Same-day delivery available</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Easy Pickup</h3>
-              <p className="text-blue-100">Scheduled pickup when you're done</p>
+              <p className="text-blue-50">Scheduled pickup when you're done</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">No Commitment</h3>
-              <p className="text-blue-100">Perfect for one-time projects</p>
+              <p className="text-blue-50">Perfect for one-time projects</p>
             </div>
           </div>
         </div>

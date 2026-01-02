@@ -74,7 +74,7 @@ const Reviews = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
             Here's what our satisfied customers are saying...
           </h2>
-          <p className="text-lg text-blue-100 max-w-3xl mx-auto">
+          <p className="text-lg text-blue-50 max-w-3xl mx-auto">
             At TNT Dumpsters, we take pride in providing exceptional dumpster services to our customers. We would be grateful if you could share your thoughts about our business with others. Your feedback helps us improve and helps others make informed decisions.
           </p>
         </div>
@@ -110,7 +110,7 @@ const Reviews = () => {
         </div>
 
         <div className="text-center mt-12">
-          <p className="text-lg text-blue-100 mb-6">
+          <p className="text-lg text-blue-50 mb-6">
             Please take a moment to leave a review of TNT Dumpsters and let others know what you think.
           </p>
           <a href="/reviews" className="btn-primary">

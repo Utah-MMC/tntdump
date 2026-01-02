@@ -84,7 +84,7 @@ export default function EstateCleanoutServicePage() {
             <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6">
               Estate Cleanout Services
             </h1>
-            <p className="text-xl text-blue-100 mb-8">
+            <p className="text-xl text-blue-50 mb-8">
               Looking for estate cleanout services? TNT Dumpsters offers efficient and reliable solutions for your estate cleanout needs. Choose our tailored residential dumpster rentals for managing inherited estates and let us do all the work for you.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -251,7 +251,7 @@ export default function EstateCleanoutServicePage() {
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">
               Compassionate Estate Cleanout Service
             </h2>
-            <p className="text-xl text-blue-100">
+            <p className="text-xl text-blue-50">
               Serving families with care, respect, and professionalism
             </p>
           </div>
@@ -262,28 +262,28 @@ export default function EstateCleanoutServicePage() {
                 <Heart className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Compassionate Service</h3>
-              <p className="text-blue-100">Sensitive handling during difficult times</p>
+              <p className="text-blue-50">Sensitive handling during difficult times</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Home className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Complete Service</h3>
-              <p className="text-blue-100">Full property cleanout from start to finish</p>
+              <p className="text-blue-50">Full property cleanout from start to finish</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Truck className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Flexible Scheduling</h3>
-              <p className="text-blue-100">Work around your family's needs</p>
+              <p className="text-blue-50">Work around your family's needs</p>
             </div>
             <div className="text-center">
               <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Phone className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-xl font-bold mb-2">Professional Support</h3>
-              <p className="text-blue-100">Expert guidance throughout the process</p>
+              <p className="text-blue-50">Expert guidance throughout the process</p>
             </div>
           </div>
         </div>
