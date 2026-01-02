@@ -338,7 +338,7 @@ export default function ChatWidget() {
               </div>
               <div className="grid grid-cols-2 gap-2">
                 <input value={lead.zip} onChange={(e) => setLead({ ...lead, zip: e.target.value })} placeholder="Zip code" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
-                <select value={lead.dumpsterSize} onChange={(e) => setLead({ ...lead, dumpsterSize: e.target.value as Lead['dumpsterSize'] })} className="border border-gray-300 rounded-lg px-2 py-2 text-sm">
+                <select aria-label="Dumpster size" value={lead.dumpsterSize} onChange={(e) => setLead({ ...lead, dumpsterSize: e.target.value as Lead['dumpsterSize'] })} className="border border-gray-300 rounded-lg px-2 py-2 text-sm">
                   <option value="">Size</option>
                   <option value="15">15 Yard</option>
                   <option value="20">20 Yard</option>
@@ -372,7 +372,7 @@ export default function ChatWidget() {
           <div className="p-3 border-t border-gray-200">
             <div className="flex gap-2">
               <input
-                value={input}
+                aria-label="Type your message" value={input}
                 onChange={(e) => setInput(e.target.value)}
                 onKeyDown={(e) => { if (e.key === 'Enter') send(); if (e.key === 'Escape') setIsOpen(false) }}
                 ref={inputRef}

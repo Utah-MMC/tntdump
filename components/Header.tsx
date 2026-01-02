@@ -127,6 +127,7 @@ const Header = () => {
      <>
        {/* Single Blue Header */}
       <header id="site-header" className="bg-gray-900 text-yellow-400 shadow-lg sticky top-0 z-50">
+        <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:top-0 focus:left-0 focus:z-50 focus:p-4 focus:bg-blue-600 focus:text-white">Skip to main content</a>
          <div className="container-custom">
                       <div className="flex items-center justify-between h-[140px]">
               {/* Left Side - Contact Info */}

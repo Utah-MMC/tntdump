@@ -133,7 +133,7 @@ export default function QuotePage() {
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
+                    <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
                     <input
                       type="text"
                       name="firstName"
@@ -144,7 +144,7 @@ export default function QuotePage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
+                    <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
                     <input
                       type="text"
                       name="lastName"
@@ -158,7 +158,7 @@ export default function QuotePage() {
 
                 <div className="grid md:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
+                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                     <input
                       type="tel"
                       name="phone"
@@ -169,7 +169,7 @@ export default function QuotePage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                     <input
                       type="email"
                       name="email"
@@ -179,7 +179,7 @@ export default function QuotePage() {
                     />
                   </div>
                   <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
+                    <label htmlFor="zip" className="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
                     <input
                       type="text"
                       name="zip"
@@ -193,7 +193,7 @@ export default function QuotePage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
+                  <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
                   <select
                     name="serviceType"
                     value={formData.serviceType}
@@ -214,7 +214,7 @@ export default function QuotePage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Dumpster Size</label>
+                  <label htmlFor="dumpsterSize" className="block text-sm font-medium text-gray-700 mb-2">Dumpster Size</label>
                   <select
                     name="dumpsterSize"
                     value={formData.dumpsterSize}
@@ -231,7 +231,7 @@ export default function QuotePage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
+                  <label htmlFor="projectDescription" className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
                   <textarea
                     name="projectDescription"
                     value={formData.projectDescription}
@@ -243,7 +243,7 @@ export default function QuotePage() {
                 </div>
 
                 <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-2">Preferred Delivery Date</label>
+                  <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">Preferred Delivery Date</label>
                   <input
                     type="date"
                     name="preferredDate"

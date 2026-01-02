@@ -144,7 +144,7 @@ export default function DumpsterFinder() {
             <div className="flex flex-col gap-2" role="group" aria-label="Amount">
               {(['Pickup load','Small room','Whole house','Major remodel'] as AmountType[]).map((a) => (
                 <label key={a} className={`flex items-center gap-2 p-2 rounded-lg border ${amount===a?'border-primary-500':'border-gray-300'}`}>
-                  <input type="radio" name="amount" value={a} checked={amount===a} onChange={() => setAmount(a)} className="h-4 w-4" />
+                  <input type="radio" name="amount" value={a} checked={amount===a} aria-label={`Select ${a} amount`} onChange={() => setAmount(a)} className="h-4 w-4" />
                   <span>{a}</span>
                 </label>
               ))}

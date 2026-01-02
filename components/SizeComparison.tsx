@@ -26,7 +26,7 @@ export default function SizeComparison({ zip = '' }: { zip?: string }) {
       <div className="flex items-center justify-between gap-4">
         <h2 className="text-2xl font-bold">Compare dumpster sizes</h2>
         <label className="text-sm flex items-center gap-2">
-          <input type="checkbox" checked={showWhatFits} onChange={() => setShowWhatFits((v) => !v)} />
+          <input type="checkbox" checked={showWhatFits} aria-label="Toggle what fits view" onChange={() => setShowWhatFits((v) => !v)} />
           Show what fits
         </label>
       </div>

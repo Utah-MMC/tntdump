@@ -285,7 +285,9 @@ export default function RootLayout({
         <WebVitals />
         <SpeedInsights />
         <Header />
-        {children}
+        <main id="main-content">
+          {children}
+        </main>
         <Footer />
         <DeferredChatWidget />
       </body>

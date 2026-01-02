@@ -147,7 +147,7 @@ export default function CostCalculator() {
                   id="city-select"
                   value={inputs.city}
                   onChange={(e) => updateCity(e.target.value)}
-                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none"
+                  className="w-full px-4 py-3 border-2 border-gray-200 rounded-lg focus:border-blue-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2"
                 >
                   {UTAH_CITIES.map((city) => (
                     <option key={city} value={city}>
