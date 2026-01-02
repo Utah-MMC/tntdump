@@ -27,7 +27,8 @@
     "optimize:performance": "node scripts/optimize-performance.js",
     "audit:ahrefs": "node scripts/pre-ahrefs-audit.js",
     "fix:audit": "node scripts/fix-audit-issues.js",
-    "images:optimize-rename": "node scripts/optimize-rename-images.js"
+    "images:optimize-rename": "node scripts/optimize-rename-images.js",
+    "audit:wcag": "node scripts/fix-wcag-issues.mjs"
   },
   "dependencies": {
     "@stripe/stripe-js": "^8.4.0",

@@ -38,7 +38,11 @@
       "Bash(npm run dev:*)",
       "Bash(del:*)",
       "Bash(npx svgo:*)",
-      "Bash(node scripts/optimize-logo.js:*)"
+      "Bash(node scripts/optimize-logo.js:*)",
+      "Bash(node scripts/auto-fix-accessibility.mjs:*)",
+      "Bash(node scripts/fix-all-accessibility.mjs:*)",
+      "Bash(node:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []
