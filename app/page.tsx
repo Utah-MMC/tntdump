@@ -199,7 +199,7 @@ export default function Home() {
         <div className="container-custom">
           <div className="text-center mb-8">
             <p className="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Core Services</p>
-            <h2 className="text-2xl font-bold text-gray-900">Find the Right Dumpster Service</h2>
+            <h1 className="text-2xl font-bold text-gray-900">Find the Right Dumpster Service</h1>
             <p className="text-sm text-gray-600 max-w-3xl mx-auto">Jump straight into our most-requested services.</p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">

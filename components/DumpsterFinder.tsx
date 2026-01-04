@@ -100,9 +100,9 @@ export default function DumpsterFinder() {
 
       <div className="mt-4 text-sm text-gray-700 flex items-center gap-2 flex-wrap">
         <span>Same-day delivery*</span>
-        <span className="text-gray-200">•</span>
+        <span className="text-gray-100">•</span>
         <span>Driveway protection</span>
-        <span className="text-gray-200">•</span>
+        <span className="text-gray-100">•</span>
         <span>SMS updates</span>
       </div>
       <div className="text-xs text-gray-600 mt-1">*Order by 10am for most ZIP codes.</div>

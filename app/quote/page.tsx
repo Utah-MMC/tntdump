@@ -102,7 +102,7 @@ export default function QuotePage() {
       {/* SEO SWEEP START [/quote-intro] */}
       <section className="py-6 bg-white">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Get a dumpster rental quote</h2>
+          <h1 className="text-xl font-bold text-gray-900 mb-2">Get a dumpster rental quote</h1>
           <p className="text-sm text-gray-700">
             Delivery dumpster rental with local support. See <a href="/#pricing" className="text-blue-600 hover:underline">dumpster rental cost</a> basics or ask about <a href="/#same-day" className="text-blue-600 hover:underline">same day dumpster rental</a> timing. Browse our <a href="/dumpsters" className="text-blue-600 hover:underline">dumpster types</a> or use our <a href="/calculator" className="text-blue-600 hover:underline">size calculator</a>.
           </p>
@@ -136,6 +136,7 @@ export default function QuotePage() {
                     <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-2">First Name *</label>
                     <input
                       type="text"
+                      id="firstName"
                       name="firstName"
                       value={formData.firstName}
                       onChange={handleChange}
@@ -147,6 +148,7 @@ export default function QuotePage() {
                     <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-2">Last Name *</label>
                     <input
                       type="text"
+                      id="lastName"
                       name="lastName"
                       value={formData.lastName}
                       onChange={handleChange}
@@ -161,6 +163,7 @@ export default function QuotePage() {
                     <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">Phone Number *</label>
                     <input
                       type="tel"
+                      id="phone"
                       name="phone"
                       value={formData.phone}
                       onChange={handleChange}
@@ -172,6 +175,7 @@ export default function QuotePage() {
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">Email</label>
                     <input
                       type="email"
+                      id="email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -182,6 +186,7 @@ export default function QuotePage() {
                     <label htmlFor="zip" className="block text-sm font-medium text-gray-700 mb-2">ZIP Code</label>
                     <input
                       type="text"
+                      id="zip"
                       name="zip"
                       value={formData.zip}
                       onChange={handleChange}
@@ -195,6 +200,7 @@ export default function QuotePage() {
                 <div>
                   <label htmlFor="serviceType" className="block text-sm font-medium text-gray-700 mb-2">Service Type *</label>
                   <select
+                    id="serviceType"
                     name="serviceType"
                     value={formData.serviceType}
                     onChange={handleChange}
@@ -216,6 +222,7 @@ export default function QuotePage() {
                 <div>
                   <label htmlFor="dumpsterSize" className="block text-sm font-medium text-gray-700 mb-2">Dumpster Size</label>
                   <select
+                    id="dumpsterSize"
                     name="dumpsterSize"
                     value={formData.dumpsterSize}
                     onChange={handleChange}
@@ -233,6 +240,7 @@ export default function QuotePage() {
                 <div>
                   <label htmlFor="projectDescription" className="block text-sm font-medium text-gray-700 mb-2">Project Description</label>
                   <textarea
+                    id="projectDescription"
                     name="projectDescription"
                     value={formData.projectDescription}
                     onChange={handleChange}
@@ -246,6 +254,7 @@ export default function QuotePage() {
                   <label htmlFor="preferredDate" className="block text-sm font-medium text-gray-700 mb-2">Preferred Delivery Date</label>
                   <input
                     type="date"
+                    id="preferredDate"
                     name="preferredDate"
                     value={formData.preferredDate}
                     onChange={handleChange}

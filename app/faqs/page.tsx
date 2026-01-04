@@ -84,9 +84,9 @@ export default function FAQsPage() {
         <div className="container-custom">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-16">
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
                 Common Questions About Dumpster Rentals
-              </h2>
+              </h1>
               <p className="text-lg text-gray-600">
                 We've compiled answers to the most frequently asked questions about our dumpster rental services. 
                 If you have additional questions, please don't hesitate to contact us.

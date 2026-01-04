@@ -165,7 +165,7 @@ export default function CartClient() {
             </svg>
             Back to Order Details
           </button>
-          <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Your Payment</h2>
+          <h1 className="text-2xl font-bold text-gray-900 mb-4">Complete Your Payment</h1>
           <div className="bg-gray-50 p-4 rounded-lg mb-6">
             <h3 className="font-semibold text-gray-900 mb-2">Order Summary</h3>
             <div className="space-y-1 text-sm text-gray-700">

@@ -102,9 +102,9 @@ export default function AboutPage() {
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
                 Our Story
-              </h2>
+              </h1>
               <div className="space-y-6 text-lg text-gray-600">
                 <p>
                   TNT Dumpsters was founded in 1965 as a family-owned waste management business in West Jordan, Utah. 

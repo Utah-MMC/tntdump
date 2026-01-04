@@ -97,9 +97,9 @@ export default function CostCalculator() {
             <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-4">
               <Calculator className="w-8 h-8 text-white" aria-hidden="true" />
             </div>
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h1 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Dumpster Rental Cost Calculator
-            </h2>
+            </h1>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">
               Get an instant estimate for your dumpster rental. Customize your options and see real-time pricing breakdown.
             </p>
@@ -197,6 +197,7 @@ export default function CostCalculator() {
                   <label className="flex items-start cursor-pointer group">
                     <input
                       type="checkbox"
+                      id="sameDayDelivery"
                       checked={inputs.options.sameDayDelivery || false}
                       onChange={(e) => updateOption('sameDayDelivery', e.target.checked)}
                       className="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -214,6 +215,7 @@ export default function CostCalculator() {
                   <label className="flex items-start cursor-pointer group">
                     <input
                       type="checkbox"
+                      id="permitAssistance"
                       checked={inputs.options.permitAssistance || false}
                       onChange={(e) => updateOption('permitAssistance', e.target.checked)}
                       className="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"
@@ -231,6 +233,7 @@ export default function CostCalculator() {
                   <label className="flex items-start cursor-pointer group">
                     <input
                       type="checkbox"
+                      id="heavyDebris"
                       checked={inputs.options.heavyDebris || false}
                       onChange={(e) => updateOption('heavyDebris', e.target.checked)}
                       className="mt-1 w-5 h-5 text-blue-600 border-gray-300 rounded focus:ring-blue-500"

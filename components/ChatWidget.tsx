@@ -329,15 +329,30 @@ export default function ChatWidget() {
               <button aria-label="Close quick quote" onClick={() => setShowLeadForm(false)} className="absolute top-2 right-2 text-gray-400 hover:text-gray-600">✕</button>
               <div className="font-medium text-gray-800 mb-1 pr-6">Quick Quote</div>
               <div className="grid grid-cols-2 gap-2">
-                <input value={lead.firstName} onChange={(e) => setLead({ ...lead, firstName: e.target.value })} placeholder="First name" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
-                <input value={lead.lastName} onChange={(e) => setLead({ ...lead, lastName: e.target.value })} placeholder="Last name" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                <div>
+                  <label htmlFor="chat-firstName" className="sr-only">First name</label>
+                  <input id="chat-firstName" value={lead.firstName} onChange={(e) => setLead({ ...lead, firstName: e.target.value })} placeholder="First name" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                </div>
+                <div>
+                  <label htmlFor="chat-lastName" className="sr-only">Last name</label>
+                  <input id="chat-lastName" value={lead.lastName} onChange={(e) => setLead({ ...lead, lastName: e.target.value })} placeholder="Last name" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <input value={lead.phone} onChange={(e) => setLead({ ...lead, phone: e.target.value })} placeholder="Phone" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
-                <input value={lead.email} onChange={(e) => setLead({ ...lead, email: e.target.value })} placeholder="Email (optional)" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                <div>
+                  <label htmlFor="chat-phone" className="sr-only">Phone</label>
+                  <input id="chat-phone" value={lead.phone} onChange={(e) => setLead({ ...lead, phone: e.target.value })} placeholder="Phone" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                </div>
+                <div>
+                  <label htmlFor="chat-email" className="sr-only">Email (optional)</label>
+                  <input id="chat-email" value={lead.email} onChange={(e) => setLead({ ...lead, email: e.target.value })} placeholder="Email (optional)" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                </div>
               </div>
               <div className="grid grid-cols-2 gap-2">
-                <input value={lead.zip} onChange={(e) => setLead({ ...lead, zip: e.target.value })} placeholder="Zip code" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                <div>
+                  <label htmlFor="chat-zip" className="sr-only">Zip code</label>
+                  <input id="chat-zip" value={lead.zip} onChange={(e) => setLead({ ...lead, zip: e.target.value })} placeholder="Zip code" className="border border-gray-300 rounded-lg px-2 py-2 text-sm" />
+                </div>
                 <select aria-label="Dumpster size" value={lead.dumpsterSize} onChange={(e) => setLead({ ...lead, dumpsterSize: e.target.value as Lead['dumpsterSize'] })} className="border border-gray-300 rounded-lg px-2 py-2 text-sm">
                   <option value="">Size</option>
                   <option value="15">15 Yard</option>

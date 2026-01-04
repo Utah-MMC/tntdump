@@ -165,12 +165,12 @@ export default function DemolitionDumpsterPage() {
                 Demolition Dumpster Rental for{' '}
                 <span className="text-yellow-400">Commercial & Construction</span>
               </h1>
-              <p className="text-xl text-gray-200">
+              <p className="text-xl text-gray-100">
                 Specialized dumpster rental for demolition, construction, and roofing projects. Heavy-duty concrete and dirt dumpsters designed for commercial contractors, roofers, and construction professionals.
               </p>
               
               {/* SEO Content */}
-              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-sm text-gray-200">
+              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 text-sm text-gray-100">
                 <p>
                   <strong>Commercial demolition dumpster rental</strong> for construction sites, roofing projects, and heavy demolition. We offer specialized <a href="/dumpsters/concrete" className="text-yellow-400 hover:underline">concrete dumpsters</a> and <a href="/dumpsters" className="text-yellow-400 hover:underline">dirt dumpsters</a> designed for heavy materials. Serving Salt Lake & Utah County with fast delivery and competitive pricing. Call <a href="tel:+18012099013" className="text-yellow-400 hover:underline font-semibold">(801) 209-9013</a> for a quote.
                 </p>

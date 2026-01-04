@@ -31,15 +31,17 @@ export default function CitySearch({ cities }: CitySearchProps) {
         <div className="container-custom">
           <div className="max-w-2xl mx-auto">
             <div className="relative">
+              <label htmlFor="city-search" className="sr-only">Search for your city</label>
               <input
                 type="text"
+                id="city-search"
                 placeholder="Search for your city..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
                 className="w-full px-4 py-3 pl-12 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
               />
               <div className="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <span className="text-gray-400">🔍</span>
+                <span className="text-gray-400" aria-hidden="true">🔍</span>
               </div>
             </div>
             {searchTerm && (
@@ -55,7 +57,7 @@ export default function CitySearch({ cities }: CitySearchProps) {
       {filteredCities.length === 0 ? (
         <div className="text-center py-12">
           <div className="text-6xl mb-4">🔍</div>
-          <h3 className="text-xl font-semibold text-gray-900 mb-2">No cities found</h3>
+          <h2 className="text-xl font-semibold text-gray-900 mb-2">No cities found</h2>
           <p className="text-gray-600 mb-4">Try adjusting your search terms</p>
           <button 
             onClick={() => setSearchTerm('')}

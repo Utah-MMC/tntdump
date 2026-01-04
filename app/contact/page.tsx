@@ -82,7 +82,7 @@ export default function ContactPage() {
       {/* SEO SWEEP START [/contact-intro] */}
       <section className="py-6 bg-white">
         <div className="container-custom max-w-3xl">
-          <h2 className="text-xl font-bold text-gray-900 mb-2">Get a dumpster rental quote</h2>
+          <h1 className="text-xl font-bold text-gray-900 mb-2">Get a dumpster rental quote</h1>
           <p className="text-sm text-gray-700">
             Fast delivery, clear pricing, and local support. Serving Salt Lake & Utah County.
           </p>

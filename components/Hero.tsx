@@ -130,7 +130,7 @@ const Hero = () => {
                 </p>
                 {/* Introductory SEO copy */}
                 <p className="text-sm sm:text-base text-blue-50 mb-2 leading-relaxed">
-                  Need a roll-off container you can count on? We deliver with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-200">pricing</a> overview, then call for a firm quote.
+                  Need a roll-off container you can count on? We deliver with clear scheduling and fast turnarounds across Salt Lake & Utah County. Get a quick <a href="#pricing" className="underline hover:text-yellow-100">pricing</a> overview, then call for a firm quote.
                 </p>
                 <p className="text-sm sm:text-base text-blue-50 leading-relaxed">
                   Whether you need a container for a weekend cleanout or a roll-off for a busy construction site, our local team keeps it simple: on-time drop-offs, careful placement, and easy pickups.
@@ -212,7 +212,7 @@ const Hero = () => {
 
             {/* Right Column - Contact/Quote Form */}
             <div id="quote" className="bg-gray-900/40 backdrop-blur-sm rounded-xl shadow-xl p-4 sm:p-6">
-              <h3 className="text-lg sm:text-xl font-bold text-yellow-200 mb-1">Get a Quote</h3>
+              <h3 className="text-lg sm:text-xl font-bold text-yellow-100 mb-1">Get a Quote</h3>
               <p className="text-blue-50 text-xs mb-3">Fast delivery from a local team. We'll confirm pricing and timing ASAP.</p>
 
               <form onSubmit={handleSubmit} className="space-y-4">
@@ -275,7 +275,7 @@ const Hero = () => {
                       <option value="Concrete Dumpsters">Concrete Dumpsters</option>
                       <option value="Estate Cleanout Services">Estate Cleanout Services</option>
                     </select>
-                    <small className="text-blue-200 text-xs">Not sure on size? Think kitchen remodel vs. garage cleanout and we’ll guide you.</small>
+                    <small className="text-blue-100 text-xs">Not sure on size? Think kitchen remodel vs. garage cleanout and we'll guide you.</small>
                   </div>
                 </div>
 
